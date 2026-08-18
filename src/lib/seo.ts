@@ -495,10 +495,23 @@ export function title(main: string, withBrand = true): string {
   return main.length <= budget ? main : main.slice(0, budget - 1).trimEnd() + '…';
 }
 
-/** Descriptions are clipped on a word boundary, never mid word. */
-export function description(text: string, max = 155): string {
+/**
+ * Descriptions, clipped where a reader would not notice.
+ *
+ * Order of preference: it already fits, then the last full sentence inside the
+ * budget, then a word boundary with an ellipsis. Six hundred pages were ending
+ * mid clause because only the third case existed, and a snippet that stops at
+ * "so operators who cross the…" reads as broken rather than as truncated.
+ */
+export function description(text: string, max = 158): string {
   const clean = text.replace(/\s+/g, ' ').trim();
   if (clean.length <= max) return clean;
+
+  const window = clean.slice(0, max);
+  const lastStop = Math.max(window.lastIndexOf('. '), window.lastIndexOf('! '), window.lastIndexOf('? '));
+  // Only take the sentence break if it leaves a description worth having.
+  if (lastStop >= 90) return window.slice(0, lastStop + 1).trim();
+
   const cut = clean.slice(0, max - 1);
   return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,.;:]$/, '') + '…';
 }

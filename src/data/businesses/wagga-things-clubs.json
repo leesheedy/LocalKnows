@@ -1,0 +1,1656 @@
+[
+  {
+    "name": "Wagga Wagga Botanic Gardens",
+    "slug": "wagga-wagga-botanic-gardens",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Macleay Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/botanic-gardens",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Botanic%20Gardens%20Wagga%20Wagga%20NSW",
+    "description": "The Wagga Wagga Botanic Gardens sit at the base of Willans Hill and cover 22 acres. Within the grounds are a mini zoo, a free flight aviary, a children's adventure playground and a rainforest section, plus the Tree Chapel and a Chinese Pavilion. Garden areas showcase camellias, cacti and succulents, proteas, Australian natives and roses. Covered barbecues are available and the Willans Hill Miniature Railway runs through the gardens on the first and third Sunday of each month.",
+    "highlights": [
+      "Mini zoo and free flight aviary",
+      "Children's adventure playground",
+      "Tree Chapel and Chinese Pavilion",
+      "Camellia, cactus, protea, native and rose gardens",
+      "Covered barbecues and picnic areas"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "parking": "yes",
+      "playground": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/botanic-gardens",
+      "https://visitwagga.com/discover/seendo/product?productId=56b240682661405945684108"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Museum of the Riverina - Botanic Gardens Site",
+    "slug": "museum-of-the-riverina-botanic-gardens-site",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Turvey Park",
+    "state": "NSW",
+    "addressLine": "127 Lord Baden Powell Drive",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "phone": "02 6926 9650",
+    "website": "https://museumriverina.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Museum%20of%20the%20Riverina%20-%20Botanic%20Gardens%20Site%20Turvey%20Park%20NSW",
+    "facebook": "https://www.facebook.com/museumriverina/",
+    "instagram": "https://www.instagram.com/museumriverina/",
+    "description": "The Botanic Gardens site is one of the Museum of the Riverina's two venues, sitting beside the Wagga Wagga Botanic Gardens. It runs changing exhibitions along with workshops, events and school programs, and includes a historic schoolhouse in its grounds. General admission is free and all public spaces are wheelchair accessible by lift and pathway.",
+    "highlights": [
+      "Free general admission",
+      "Changing exhibitions, workshops and events",
+      "Historic schoolhouse on site",
+      "Accessible parking bay near the entrance",
+      "Free tea, coffee and water in the Community Education Space"
+    ],
+    "hours": [
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "wheelchair_accessible": "yes",
+      "parking": "yes",
+      "toilets": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://museumriverina.com.au/visit",
+      "https://museumriverina.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Museum of the Riverina - Historic Council Chambers",
+    "slug": "museum-of-the-riverina-historic-council-chambers",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "243 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6926 9650",
+    "website": "https://museumriverina.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Museum%20of%20the%20Riverina%20-%20Historic%20Council%20Chambers%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/museumriverina",
+    "instagram": "https://www.instagram.com/museumriverina/",
+    "description": "The Historic Council Chambers on Baylis Street is the Museum of the Riverina's city-centre site. The museum is a social history museum combining touring shows of national significance with local stories, and across its two sites it cares for more than 15,000 objects, photographs, textiles and paper-based materials.",
+    "highlights": [
+      "City-centre site in the historic council chambers",
+      "Touring exhibitions of national significance",
+      "Collection of more than 15,000 objects",
+      "Wheelchair accessible"
+    ],
+    "attributes": {
+      "wheelchair_accessible": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=6243d10c7cc555b3297d5bfa",
+      "https://museumriverina.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Art Gallery",
+    "slug": "wagga-wagga-art-gallery",
+    "categorySlug": "art-galleries",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Morrow Street, Civic Centre corner Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6926 9660",
+    "website": "https://waggaartgallery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Art%20Gallery%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/WaggaWaggaArtGallery/",
+    "instagram": "https://www.instagram.com/waggawaggaartgallery/",
+    "description": "Wagga Wagga Art Gallery shows work by Riverina artists alongside touring exhibitions from around Australia, with about forty exhibitions and displays each year. Its showpiece is the National Art Glass Gallery, home to Australia's largest and most significant collection of contemporary art glass, holding roughly 400 pieces.",
+    "highlights": [
+      "National Art Glass Gallery and the National Art Glass Collection",
+      "Around 40 exhibitions and displays a year",
+      "Gallery shop",
+      "Wheelchair accessible with support for vision and hearing loss"
+    ],
+    "attributes": {
+      "wheelchair_accessible": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b24075d5f1565045d85ddc",
+      "https://waggaartgallery.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Willans Hill Miniature Railway",
+    "slug": "willans-hill-miniature-railway",
+    "categorySlug": "heritage-sites",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Macleay Street, Botanic Gardens",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0466 603 032",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Willans%20Hill%20Miniature%20Railway%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/WHMRail/",
+    "description": "The Willans Hill Miniature Railway runs inside the Wagga Wagga Botanic Gardens, with an authentic station and booking office. The track weaves through a garden setting, woodlands, a tunnel and over a bridge. Trains run on the first and third Sunday of each month, and covered footwear is essential to ride. An invitation run each November brings model train enthusiasts from around Australia.",
+    "highlights": [
+      "Runs the first and third Sunday of each month",
+      "Track through woodlands, a tunnel and over a bridge",
+      "Authentic station and booking office",
+      "Annual invitation run each November",
+      "Covered footwear required to ride"
+    ],
+    "attributes": {
+      "kid_friendly": "yes",
+      "parking": "yes",
+      "toilets": "yes",
+      "bbq": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b240f4d5f1565045d866a4"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Rail Heritage Station Museum",
+    "slug": "wagga-wagga-rail-heritage-station-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Station Place",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0421 590 252",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Rail%20Heritage%20Station%20Museum%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/waggawaggarailwaymuseum/",
+    "description": "Set on the platform of the historic Wagga Wagga Railway Station, this museum displays photographs and railway memorabilia covering the local history of the railway. Across the railway pedestrian bridge are the Rail Heritage Gang Sheds, holding railway trikes, tools and photographs in two sheds once used by track maintenance gangs, and a model trains display with several working HO and N scale layouts. The three locations keep different opening times.",
+    "highlights": [
+      "On the historic Wagga Wagga Railway Station platform",
+      "Gang Sheds display of railway trikes and tools",
+      "Working HO and N scale model railway layouts",
+      "Three separate display locations"
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b243d9b042386245d4ca14"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Steam and Vintage Engine Museum",
+    "slug": "wagga-steam-and-vintage-engine-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Lord Baden Powell Drive, Willans Hill",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Steam%20and%20Vintage%20Engine%20Museum%20Wagga%20Wagga%20NSW",
+    "description": "Operated by the Wagga Historic Engine Club Inc, this museum displays working engines including shearing machines and all types of stationary engines, along with vintage steam and oil engines. It opens on the first and third Sunday of the month, or by appointment, for a gold coin donation.",
+    "highlights": [
+      "Run by the Wagga Historic Engine Club Inc",
+      "Working steam, oil and stationary engines",
+      "Shearing machinery on display",
+      "Open first and third Sunday of the month, or by appointment",
+      "Gold coin donation entry"
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b248a6266140594568cbcf"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "RAAF Wagga Aviation Heritage Centre",
+    "slug": "raaf-wagga-aviation-heritage-centre",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Forest Hill",
+    "state": "NSW",
+    "addressLine": "Sturt Highway",
+    "suburb": "Forest Hill",
+    "postcode": "2651",
+    "phone": "02 5950 7238",
+    "website": "https://www.airforce.gov.au/displays/heritage-centre",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=RAAF%20Wagga%20Aviation%20Heritage%20Centre%20Forest%20Hill%20NSW",
+    "facebook": "https://www.facebook.com/pages/RAAF-Wagga-Heritage-Centre/130744180298273",
+    "description": "The RAAF Wagga Aviation Heritage Centre covers Air Force history and the RAAF's involvement in the Riverina. Static display aircraft beside the centre represent more than 50 years of RAAF flying history and can be viewed and photographed up close. Inside, heritage artefacts are set out in themed rooms including a Community Room with a rotating display on military history and the contribution of people from Wagga Wagga and the Riverina.",
+    "highlights": [
+      "Static display aircraft spanning over 50 years of RAAF flying",
+      "Themed display rooms of Air Force artefacts",
+      "Community Room with rotating regional displays",
+      "Last remaining Riverina World War II base of its network",
+      "Car park and public toilets"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b23df1d270154b4553eee0",
+      "https://www.airforce.gov.au/displays/heritage-centre"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Albert",
+    "slug": "lake-albert",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Lake Albert",
+    "state": "NSW",
+    "addressLine": "Eastlake Drive",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "website": "https://visitwagga.com/discover/seendo/trails/lake-albert",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Albert%20Lake%20Albert%20NSW",
+    "description": "Lake Albert is one of Wagga's most used recreational areas, catering for boating, fishing, swimming and other aquatic activities. A five-and-a-half kilometre circuit walking track rings the lake and is popular with walkers, joggers and bike riders, with eight fitness stations set over 800 metres on the eastern side. Boat ramps are at Bosley Park next to the Wagga Wagga Boat Club and at Apex Park, which also has a children's playground with a separate fenced area for smaller children.",
+    "highlights": [
+      "5.5 km circuit walking and cycling track",
+      "Eight outdoor fitness stations on the eastern side",
+      "Boat ramps at Bosley Park and Apex Park",
+      "Playground with fenced area for small children",
+      "Dog friendly on leads"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "dog_friendly": "yes",
+      "parking": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b24cb72661405945690750"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverside Wagga Beach",
+    "slug": "riverside-wagga-beach",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Cabarita Park, Johnson Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/wagga-beach",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverside%20Wagga%20Beach%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/VisitWaggaWagga/",
+    "instagram": "https://www.instagram.com/visitwaggawagga",
+    "description": "Riverside Wagga Beach is a sandy river beach on the Murrumbidgee about five minutes from the CBD, with grassed shady picnic areas, sheltered barbecues, sculptures and event spaces. Swimmers cool off in the river during the warmer months and paddlers launch kayaks and canoes from here. It also has a large destination playground catering for all ages and abilities, food and drink vans nearby, and forms part of the Wiradjuri Walking Track.",
+    "highlights": [
+      "Sandy beach on the Murrumbidgee River",
+      "Large destination playground for all ages and abilities",
+      "Sheltered barbecue and picnic areas",
+      "Kayak and canoe launching point",
+      "On the Wiradjuri Walking Track"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "parking": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b240ed2661405945684a5f"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Oasis Aquatic Centre",
+    "slug": "oasis-aquatic-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "50 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6926 9300",
+    "website": "https://waggaleisure.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oasis%20Aquatic%20Centre%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/pages/Oasis-Regional-Aquatic-Centre/219372354796365",
+    "instagram": "https://www.instagram.com/oasiswagga/",
+    "description": "The Oasis Aquatic Centre in the middle of Wagga runs year round. Indoors there is a 25-metre pool, leisure pools including the Turbo Pool and mushrooms, toddler pools and a program pool used for swimming lessons and hydrotherapy. Outdoors there is a 50-metre pool and a diving pool with one-metre and three-metre springboards and a five-metre platform. The centre has free barbecues, a children's playground and accessible change rooms, and is used by water polo, diving and triathlon groups.",
+    "highlights": [
+      "Indoor 25 m pool and outdoor 50 m pool",
+      "Diving pool with springboards and a 5 m platform",
+      "Turbo Pool, mushrooms and toddler pools",
+      "Learn to Swim classes for adults and children",
+      "Free barbecues and a children's playground"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "kid_friendly": "yes",
+      "wheelchair_accessible": "yes",
+      "bbq": "yes",
+      "playground": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b23f8bb042386245d47c98",
+      "https://waggaleisure.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wiradjuri Trail",
+    "slug": "wiradjuri-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wiradjuri%20Trail%20Wagga%20Wagga%20NSW",
+    "description": "The Wiradjuri Trail is a walking and cycling route of about 42 kilometres that circles much of Wagga Wagga, taking in riverbanks and hilltops. It winds through the Birramal Conservation Area, Silvalite Reserve and Pomingalarna Reserve. The Wollundry Loop, a 12.1 kilometre section, follows part of the Murrumbidgee River and the perimeter of the Wollundry Lagoon, and a popular return route starts at the Visitor Information Centre and takes in Wagga Beach, the Cadell Place laneway murals, Wiradjuri Reserve and Marrambidya Wetland.",
+    "highlights": [
+      "About 42 km of walking and cycling trail",
+      "12.1 km Wollundry Loop section",
+      "Passes Birramal, Silvalite and Pomingalarna reserves",
+      "Links Wagga Beach, Cadell Place murals and Marrambidya Wetland"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b240f42661405945684ac8"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Marrambidya Wetland",
+    "slug": "marrambidya-wetland",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "100 Narrung Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "website": "https://wagga.nsw.gov.au/wetland",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Marrambidya%20Wetland%20Wagga%20Wagga%20NSW",
+    "description": "Marrambidya Wetland is a 20-hectare reserve beside the Murrumbidgee River a few minutes from the city centre. It has two kilometres of connected Grade 2 walking tracks, bird hides for watching waterbirds and an elevated viewing platform over the whole wetland. There is a cultural demonstration area with a Wiradjuri campsite, gunyahs and a bora ring, a Wiradjuri Healing Place, and an outdoor art gallery of works at the car park entry. Dogs on leads are welcome.",
+    "highlights": [
+      "Two kilometres of Grade 2 walking tracks",
+      "Bird hides and an elevated viewing platform",
+      "Wiradjuri cultural demonstration area and Healing Place",
+      "Outdoor art gallery at the entry",
+      "Dogs welcome on leads"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "dog_friendly": "yes",
+      "parking": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=5818043cc9687c6d1a0c031d"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pomingalarna Reserve",
+    "slug": "pomingalarna-reserve",
+    "categorySlug": "mountain-bike-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Bagley Drive, off McNickle Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pomingalarna%20Reserve%20Wagga%20Wagga%20NSW",
+    "description": "Pomingalarna Reserve sits on part of the Wiradjuri Trail about ten minutes from the Wagga Wagga CBD and is used by bushwalkers, runners and riders. A marked 13-kilometre bushland mountain bike trail runs through native bushland where kangaroos, wallabies, lizards and birds are common. The reserve is also home to Wagga Wagga's Multisport Cycling Complex, with a criterium track, BMX track, jump tracks, pump tracks, a cycling education area, a velodrome and a mountain bike playground loop. The climb to the top gives some of the best views back over the city.",
+    "highlights": [
+      "13 km marked bushland mountain bike trail",
+      "Multisport Cycling Complex with criterium and BMX tracks",
+      "Velodrome, pump tracks and jump tracks",
+      "Cycling education area and mountain bike playground loop",
+      "Lookout over Wagga Wagga from the summit"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "parking": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=58181dc4d9e6e21a1da0d418"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Birramal Conservation Area",
+    "slug": "birramal-conservation-area",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Lloyd",
+    "state": "NSW",
+    "addressLine": "Ross Smith Road",
+    "suburb": "Lloyd",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Birramal%20Conservation%20Area%20Lloyd%20NSW",
+    "description": "Birramal Conservation Area is a 128-hectare site set aside for environmental conservation, taking in the section of the Wiradjuri Trail between the Olympic Highway and Holbrook Road. It can be explored on foot or by bike and offers views over Wagga Wagga and surrounds. The site protects an endangered White Box Woodland community that supports the locally endangered squirrel glider, and glider poles, new tree plantings and artificial nest boxes are visible along the way.",
+    "highlights": [
+      "128-hectare conservation area on the Wiradjuri Trail",
+      "Endangered White Box Woodland",
+      "Squirrel glider habitat with glider poles and nest boxes",
+      "Walking and mountain biking with views over the city"
+    ],
+    "attributes": {
+      "free_entry": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=5f1fc41f7c7bfcc65621aeef"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Victory Memorial Gardens",
+    "slug": "victory-memorial-gardens",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Morrow Street, corner Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 100 122",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Victory%20Memorial%20Gardens%20Wagga%20Wagga%20NSW",
+    "description": "The Victory Memorial Gardens were established in 1925 as a tribute to those who fought and died in the First World War, and were designed by Thomas Kerr, designer of the Sydney Botanic Gardens. They run along the banks of the Wollundry Lagoon in the heart of Wagga Wagga. Visitors commonly feed the ducks and water birds, and the geese cross Ivan Jack Drive with right of way. The land was formerly the site of the Old Police Barracks and its police paddocks.",
+    "highlights": [
+      "Established 1925 as a First World War memorial",
+      "Designed by Thomas Kerr",
+      "On the banks of Wollundry Lagoon in the CBD",
+      "Ducks, geese and water birds",
+      "Public toilets and picnic area"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "toilets": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b240ecb042386245d494a6"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Forum 6 Cinemas Wagga Wagga",
+    "slug": "forum-6-cinemas-wagga-wagga",
+    "categorySlug": "cinemas",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "77 Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6863",
+    "website": "https://forum6.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Forum%206%20Cinemas%20Wagga%20Wagga%20Wagga%20Wagga%20NSW",
+    "description": "Forum 6 is a six-cinema complex in the heart of Wagga Wagga. The programme runs from big blockbusters through to art house features, and also includes classic silver screen movies, operas from the MET, special events and midnight premieres. Session times, trading hours and pricing are published on the cinema's website and Facebook page.",
+    "highlights": [
+      "Six screens in the Wagga CBD",
+      "Blockbusters, art house and classic films",
+      "MET opera screenings and special events",
+      "Wheelchair accessible with vision and hearing support"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=57d5ebe1c8b9daf11eb6ac35",
+      "https://forum6.com.au/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Bowl",
+    "slug": "wagga-bowl",
+    "categorySlug": "bowling-alleys",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "65A Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 9410",
+    "website": "http://www.waggabowl.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Bowl%20Wagga%20Wagga%20NSW",
+    "description": "Wagga Bowl is a ten pin bowling and entertainment centre on Trail Street, trading seven days. It runs birthday and party packages, sells gift vouchers and has a large media screen over the lanes. A movie and bowl deal runs during the school holidays. Bookings are recommended on Saturdays, Sundays and during school and public holidays.",
+    "highlights": [
+      "Ten pin bowling seven days a week",
+      "Birthday and party packages",
+      "Gift vouchers available",
+      "Movie and bowl deal in school holidays",
+      "Bookings recommended on weekends and holidays"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "10:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "18:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes",
+      "kid_friendly": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "http://www.waggabowl.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Vortex Entertainment",
+    "slug": "vortex-entertainment",
+    "categorySlug": "indoor-play-centres",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "77 Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 2235",
+    "website": "https://www.vortexwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vortex%20Entertainment%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/VortexWagga",
+    "instagram": "https://www.instagram.com/vortexwagga/",
+    "description": "Vortex Entertainment is an indoor entertainment centre in the Wagga CBD. Attractions include six-metre rock climbing walls, a high ropes course, a ninja course, dedicated toddler play areas, bumper cars, virtual reality experiences and 18 holes of mini golf. It also has private party rooms and a cafe serving hot and cold food and drinks, and runs quiet sessions.",
+    "highlights": [
+      "Six-metre rock climbing walls",
+      "High ropes and ninja courses",
+      "18 holes of indoor mini golf",
+      "Bumper cars and virtual reality",
+      "Toddler play areas and private party rooms"
+    ],
+    "attributes": {
+      "kid_friendly": "yes",
+      "parking": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=65cea4670414a960137196c3",
+      "https://www.vortexwagga.com.au/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Noah's Ark Indoor Play Centre",
+    "slug": "noahs-ark-indoor-play-centre",
+    "categorySlug": "indoor-play-centres",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "111 Hammond Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 9999",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noah's%20Ark%20Indoor%20Play%20Centre%20Wagga%20Wagga%20NSW",
+    "description": "Noah's Ark is an indoor play and party centre on Hammond Avenue for children under 12, air-conditioned year round. Equipment includes slides, ball pools, flying foxes, crawl tunnels, squeeze rollers and a cosy coupe car track, and plaster painting is also available. The cafe serves hot and cold food along with kids' meals. Socks are required.",
+    "highlights": [
+      "Play and party centre for children under 12",
+      "Slides, ball pools, flying foxes and crawl tunnels",
+      "Cosy coupe car track and plaster painting",
+      "Cafe with kids' meals",
+      "Air-conditioned year round"
+    ],
+    "attributes": {
+      "kid_friendly": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b23ee8d270154b455403fc"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Sailing Club",
+    "slug": "wagga-wagga-sailing-club",
+    "categorySlug": "sailing-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Lake Albert",
+    "state": "NSW",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "website": "https://www.waggawaggasailingclub.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Sailing%20Club%20Lake%20Albert%20NSW",
+    "facebook": "https://www.facebook.com/Waggawaggasailingclub/",
+    "description": "The Wagga Wagga Sailing Club races on Lake Albert and has around 40 members, with twenty to twenty-five sailors racing regularly. Racing is each Saturday through the season, with briefing at 2pm and the start at 2.30pm. Visitors are welcome to bring their own boat or use a club boat, and crew positions are available. The club runs learn to sail courses through the warmer months and has a radio-controlled sailing section.",
+    "highlights": [
+      "Saturday racing on Lake Albert, briefing 2pm",
+      "Around 40 members",
+      "Club boats available for visitors",
+      "Learn to sail courses in the warmer months",
+      "Radio-controlled yacht sailing section"
+    ],
+    "attributes": {
+      "come_and_try": "yes"
+    },
+    "sources": [
+      "https://www.waggawaggasailingclub.com.au/about",
+      "https://www.waggawaggasailingclub.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga City Aero Club",
+    "slug": "wagga-city-aero-club",
+    "categorySlug": "aero-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "General Aviation Precinct, Elizabeth Avenue, Wagga Wagga Airport",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.waggacityaeroclub.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20City%20Aero%20Club%20Wagga%20Wagga%20NSW",
+    "description": "The Wagga City Aero Club has its clubhouse in the General Aviation Precinct on Elizabeth Avenue at Wagga Wagga Airport. Members include pilots of all ages and experience, aircraft owners and non-pilots, drawn from general aviation, airlines, commercial and recreational flying and the military. Social evenings run every Friday from 5.30pm, and a barbecue with flying competitions is held on the first Sunday of each month from noon. The club also runs a Young Eagles program for young people.",
+    "highlights": [
+      "Clubhouse at Wagga Wagga Airport's general aviation precinct",
+      "Social evenings every Friday from 5.30pm",
+      "Barbecue and flying competitions first Sunday of the month",
+      "Young Eagles program for young people",
+      "New members and non-pilots welcome"
+    ],
+    "attributes": {
+      "come_and_try": "yes",
+      "junior_program": "yes"
+    },
+    "sources": [
+      "https://www.waggacityaeroclub.com.au/",
+      "https://www.waggacityaeroclub.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Men's Shed Wagga Wagga",
+    "slug": "mens-shed-wagga-wagga",
+    "categorySlug": "mens-sheds",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Best Reserve, corner of Veale Street and Ashmont Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6931 5165",
+    "website": "https://msww.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Men's%20Shed%20Wagga%20Wagga%20Wagga%20Wagga%20NSW",
+    "description": "Men's Shed Wagga Wagga Inc operates from Best Reserve on the corner of Veale Street and Ashmont Avenue. The shed runs a garage sale from Monday to Thursday between 8.15am and 11.45am, with items for sale changing regularly. The phone is answered between 8am and noon on weekdays.",
+    "highlights": [
+      "Based at Best Reserve, Veale Street and Ashmont Avenue",
+      "Garage sale Monday to Thursday, 8.15am to 11.45am",
+      "Stock for sale changes regularly",
+      "Phone answered 8am to noon weekdays"
+    ],
+    "sources": [
+      "https://msww.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga & District Family History Society",
+    "slug": "wagga-wagga-district-family-history-society",
+    "categorySlug": "historical-societies",
+    "vertical": "clubs_hobbies",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "addressLine": "24 Tarakan Avenue",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "phone": "02 5925 7217",
+    "website": "http://waggafamilyhistory.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20%26%20District%20Family%20History%20Society%20Ashmont%20NSW",
+    "description": "The Wagga Wagga & District Family History Society runs a library and research rooms at 24 Tarakan Avenue, Ashmont, open to the public and staffed by volunteers. Its collections include the Pastoral Review journals from 1891 to 1977, which contain photographs of First World War servicemen and nurses contributed by families. The society publishes research CDs, including a Wagga Wagga and district births, deaths, marriages and in memoriams index with more than 49,500 entries.",
+    "highlights": [
+      "Public research rooms and library at Ashmont",
+      "Pastoral Review journal collection 1891-1977",
+      "Wagga Wagga and district BDM index on CD",
+      "Volunteer staffed, phone ahead to confirm opening",
+      "Extended hours to 4pm Mondays and Wednesdays during daylight saving"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "10:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "13:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "http://waggafamilyhistory.org.au/index.html"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga & District Historical Society",
+    "slug": "wagga-wagga-district-historical-society",
+    "categorySlug": "historical-societies",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.wwdhs.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20%26%20District%20Historical%20Society%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/wagga.history/",
+    "description": "The Wagga Wagga & District Historical Society researches and publishes local history and takes enquiries through its website and Facebook page. It does not keep a public room; its historical material is held by Charles Sturt University Regional Archives, the Museum of the Riverina and the Wagga Wagga City Library local history collection. The society was one of the local partners that funded the digitisation of the Wagga Wagga Rate and Valuation books now available through NSW State Archives, and it publishes the Bidgee Whaler articles written by Sylvia Walsh.",
+    "highlights": [
+      "Local history research and publishing",
+      "Collections held at CSU Regional Archives, Museum of the Riverina and the city library",
+      "Partner in digitising the Wagga Wagga Rate and Valuation books",
+      "Bidgee Whaler article archive online",
+      "Enquiries by email and through the website"
+    ],
+    "sources": [
+      "https://www.wwdhs.org.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Cycling Club",
+    "slug": "wagga-cycling-club",
+    "categorySlug": "cycling-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://waggacyclingclub.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Cycling%20Club%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/wwcycleclub/",
+    "description": "Wagga Cycling Club is a family orientated club focused on track, criterium and road racing. Its coaches run rider development programs for all ages at training nights across the summer and winter seasons. The club holds road racing events in winter and the Golden Wheel two day track carnival in summer.",
+    "highlights": [
+      "Track, criterium and road disciplines",
+      "Coached rider development programs for all ages",
+      "Training nights in summer and winter seasons",
+      "Winter road racing program",
+      "Golden Wheel two day track carnival in summer"
+    ],
+    "sources": [
+      "https://waggacyclingclub.com/",
+      "https://waggacyclingclub.com/joinwwcc/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Combined Hockey Association",
+    "slug": "wagga-wagga-combined-hockey-association",
+    "categorySlug": "hockey-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.waggahockey.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Combined%20Hockey%20Association%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/waggahockey/",
+    "description": "Wagga Hockey runs the local hockey competitions at the Jubilee Park Hockey Complex on artificial playing surfaces. Junior competitions are mixed and start at Under 9, Under 11, Under 13 and Under 16, all played on Friday nights. There are three divisions each of men's and women's competition, with senior matches on Saturday afternoons from 11am and lights on both fields allowing play into the evening. The association was formed after the 2005 season when the separate men's and women's associations merged.",
+    "highlights": [
+      "Games at the Jubilee Park Hockey Complex",
+      "Mixed junior competitions from Under 9 to Under 16 on Friday nights",
+      "Three divisions each of men's and women's competition",
+      "Senior matches Saturday afternoons from 11am",
+      "Formed in 2005 from the men's and women's associations"
+    ],
+    "attributes": {
+      "junior_program": "yes"
+    },
+    "sources": [
+      "https://www.waggahockey.com.au/about",
+      "https://www.waggahockey.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Football Wagga",
+    "slug": "football-wagga",
+    "categorySlug": "soccer-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.footballwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Football%20Wagga%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/footballwagga/",
+    "instagram": "https://www.instagram.com/footballwwagga/",
+    "description": "Football Wagga is the association that runs organised football in Wagga Wagga, covering MiniRoos, junior and senior competitions along with a Football4All AllStars competition and a skill acquisition development program. It publishes fixtures and results, manages referees and coordinates ground availability and closures, with Rawlings Park as the main venue.",
+    "highlights": [
+      "MiniRoos, junior and senior competitions",
+      "Football4All AllStars inclusive competition",
+      "Skill acquisition and development programs",
+      "Referee appointments and development",
+      "Fixtures, results and ground closures published online"
+    ],
+    "attributes": {
+      "junior_program": "yes"
+    },
+    "sources": [
+      "https://www.footballwagga.com.au/home",
+      "https://sites.google.com/view/football-wagga-wagga/home"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Bridge Club",
+    "slug": "wagga-wagga-bridge-club",
+    "categorySlug": "bridge-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "7 Bolton Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://waggawagga.bridgeaustralia.org/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Bridge%20Club%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/waggabridgeclub/",
+    "description": "The Wagga Wagga Bridge Club plays at 7 Bolton Street and runs sessions each week spread between daytime and evening time slots. It offers free beginner classes and welcomes visitors and new members. The club is affiliated with the Australian Bridge Federation and awards ABF masterpoints, and it hosts congresses that draw players from other clubs.",
+    "highlights": [
+      "Clubrooms at 7 Bolton Street",
+      "Weekly daytime and evening sessions",
+      "Free beginner classes",
+      "Affiliated with the Australian Bridge Federation",
+      "Hosts the annual Wagga Wagga Congress"
+    ],
+    "attributes": {
+      "come_and_try": "yes"
+    },
+    "sources": [
+      "https://waggawagga.bridgeaustralia.org/",
+      "https://waggawagga.bridgeaustralia.org/contactpage.asp"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga City Golf Club",
+    "slug": "wagga-city-golf-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "5 McNickle Road",
+    "suburb": "Moorong",
+    "postcode": "2650",
+    "phone": "02 6931 6275",
+    "website": "https://www.waggagolf.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20City%20Golf%20Club%20Moorong%20NSW",
+    "facebook": "https://www.facebook.com/waggacitygolf/",
+    "description": "Wagga City Golf Club is about five minutes west of the Wagga Wagga CBD off the Sturt Highway at 5 McNickle Road, Moorong. The course is open every day except Christmas Day from 6am to 6pm, and there is no requirement to be a member to play, with social golfers welcome. The club has a pro shop, offers lessons and vouchers, and hosts corporate golf days and functions. Light refreshments including sandwiches, pies and sausages are available, along with soft drinks and mid strength beers. There is no driving range.",
+    "highlights": [
+      "Open every day except Christmas Day, 6am to 6pm",
+      "Social golfers welcome without membership",
+      "Pro shop and golf lessons",
+      "Corporate golf days and functions",
+      "Five minutes west of the CBD off the Sturt Highway"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.waggagolf.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Country Club",
+    "slug": "wagga-wagga-country-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "57 Plumpton Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6922 6444",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Country%20Club%20Wagga%20Wagga%20NSW",
+    "description": "The Wagga Wagga Country Club sits on the shores of Lake Albert and is included in Australia's top 100 country courses. The tree-lined 18-hole championship course measures 6054 metres from the back markers and has bent greens and all-weather fairways. The club also caters for functions and dining and has a bar and conference facilities.",
+    "highlights": [
+      "18-hole championship course of 6054 metres from the back markers",
+      "Bent greens and all-weather fairways",
+      "On the shores of Lake Albert",
+      "Bar, dining and function facilities",
+      "Listed among Australia's top 100 country courses"
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=57e348d0f816d1735ff369f1"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga School of Arts Community Theatre",
+    "slug": "wagga-wagga-school-of-arts-community-theatre",
+    "categorySlug": "theatre-companies",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://soact.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20School%20of%20Arts%20Community%20Theatre%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/soact.wagga/",
+    "description": "SoACT, the Wagga Wagga School of Arts Community Theatre, is a community theatre company that stages a season of plays and musicals each year and posts audition notices for each production. Recent seasons have included The Sound of Music, The Pirates of Penzance, And Then There Were None, A Broadcast Coup and The Female of the Species, along with the Riverina Water Ten x 10 Playfest of short plays. The company sells memberships and show gift vouchers.",
+    "highlights": [
+      "Community theatre company staging a full season each year",
+      "Riverina Water Ten x 10 Playfest of short plays",
+      "Open audition notices for each production",
+      "Memberships and show gift vouchers",
+      "Archive of past production videos for members"
+    ],
+    "sources": [
+      "https://soact.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Swim Club",
+    "slug": "wagga-wagga-swim-club",
+    "categorySlug": "swimming-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://waggawagga.swimmingclub.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Swim%20Club%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/WaggaWaggaSwimClub/",
+    "instagram": "https://www.instagram.com/wagga_swim_club/",
+    "description": "Established in 1897, the Wagga Wagga Swim Club is one of the oldest swimming clubs in New South Wales. It runs five squads from Development through to National, plus a Masters and recreational squad, and is led by head coach Gennadiy Labara with a committee and technical officials. The club holds club nights and club championships, enters carnivals and representative meets, and welcomes visiting swimmers.",
+    "highlights": [
+      "Established in 1897",
+      "Five squads from Development to National level",
+      "Masters and recreational squad",
+      "Club nights and club championships",
+      "Visiting swimmers welcome"
+    ],
+    "attributes": {
+      "junior_program": "yes"
+    },
+    "sources": [
+      "https://waggawagga.swimmingclub.org.au/",
+      "https://waggawagga.swimmingclub.org.au/join-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murrumbidgee Landcare",
+    "slug": "murrumbidgee-landcare",
+    "categorySlug": "landcare-groups",
+    "vertical": "clubs_hobbies",
+    "localityName": "Turvey Park",
+    "state": "NSW",
+    "addressLine": "Tulloch Business Offices, 66 Coleman Street",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "website": "https://mli.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murrumbidgee%20Landcare%20Turvey%20Park%20NSW",
+    "facebook": "https://www.facebook.com/MurrumbidgeeLandcare/",
+    "description": "Murrumbidgee Landcare Inc is a natural resource management organisation with its office in the Tulloch Business Offices at 66 Coleman Street, Turvey Park. Its staff include a chief executive officer, a manager of projects and partnerships, a regional Landcare coordinator and a regional Aboriginal Landcare coordinator, working from the Wagga Wagga office through the week. It runs projects, events and resources for Landcare groups across the Murrumbidgee.",
+    "highlights": [
+      "Wagga Wagga office in the Tulloch Business Offices",
+      "Regional Landcare coordination across the Murrumbidgee",
+      "Regional Aboriginal Landcare coordinator",
+      "Projects, events and resources for member groups"
+    ],
+    "sources": [
+      "https://mli.org.au/home/contacts/",
+      "https://mli.org.au/home/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "ErinEarth",
+    "slug": "erinearth",
+    "categorySlug": "community-gardens",
+    "vertical": "clubs_hobbies",
+    "localityName": "Turvey Park",
+    "state": "NSW",
+    "addressLine": "1 Kildare Street",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "phone": "02 6925 7150",
+    "website": "https://www.erinearth.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=ErinEarth%20Turvey%20Park%20NSW",
+    "facebook": "https://www.facebook.com/erinearthwagga/",
+    "instagram": "https://www.instagram.com/erinearthwagga/",
+    "description": "ErinEarth is a sustainable living education centre and volunteering community on Kildare Street in Turvey Park. The garden demonstrates organic vegetable growing and a water-efficient native plant garden, and is set up as a quiet space for nature connection, reflection and nature play. It hosts regular community open days, education sessions and a weekly garden volunteering program on Thursday mornings.",
+    "highlights": [
+      "Organic vegetable growing demonstration garden",
+      "Water-efficient native plant garden",
+      "Weekly volunteering program on Thursday mornings",
+      "Regular community open days",
+      "Education and community engagement programs"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "toilets": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=599667d2555a10b30fca3dac",
+      "https://www.erinearth.org.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Basketball",
+    "slug": "wagga-basketball",
+    "categorySlug": "basketball-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0447 663 925",
+    "website": "https://www.basketballwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Basketball%20Wagga%20Wagga%20NSW",
+    "facebook": "https://www.facebook.com/basketballwaggawagga/",
+    "instagram": "https://www.instagram.com/wagga_basketball/",
+    "description": "Wagga Basketball, home of the Heat, runs junior and senior competitions for around 1000 members at PCYC Wagga Wagga. It fields representative teams in junior and senior leagues from Under 12s through to open divisions in the Waratah State League and other competitions. Programs include Aussie Hoops, an academy program and Blazing Hoops, a free girls program, and the association is run by a volunteer board.",
+    "highlights": [
+      "Junior and senior competitions at PCYC Wagga Wagga",
+      "Around 1000 members",
+      "Representative teams from Under 12s to open age",
+      "Waratah State League representation",
+      "Aussie Hoops, academy and free Blazing Hoops girls programs"
+    ],
+    "attributes": {
+      "junior_program": "yes",
+      "come_and_try": "yes"
+    },
+    "sources": [
+      "https://www.basketballwagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Temora Aviation Museum",
+    "slug": "temora-aviation-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Temora",
+    "state": "NSW",
+    "addressLine": "1 Tom Moon Avenue",
+    "suburb": "Temora",
+    "postcode": "2666",
+    "phone": "02 6977 1088",
+    "website": "https://aviationmuseum.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Temora%20Aviation%20Museum%20Temora%20NSW",
+    "facebook": "https://www.facebook.com/temoraaviationmuseum/",
+    "instagram": "https://www.instagram.com/aviationmuseum/",
+    "description": "The Temora Aviation Museum is built on the site of the former No. 10 Elementary Flying Training School, established by the RAAF in May 1941, and holds a flying collection of Australian ex-military aircraft. Visitors can take a guided tour with a volunteer or explore at their own pace with audio-visual presentations, watch a film in the 38-seat surround sound theatre, and see engineers at work from the viewing platform. There are landscaped gardens, picnic areas, an aviation themed playground, flight simulators and a cafe, and Aircraft Showcase flying days are held through the year.",
+    "highlights": [
+      "Flying collection of Australian ex-military aircraft",
+      "Guided tours by volunteers and an audio tour",
+      "38-seat surround sound theatre",
+      "Aviation themed children's playground",
+      "Aircraft Showcase flying days and flight simulators"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "tours": "yes",
+      "kid_friendly": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://aviationmuseum.com.au/",
+      "https://visitwagga.com/discover/seendo/product?productId=56171"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Centenary",
+    "slug": "lake-centenary",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Temora",
+    "state": "NSW",
+    "addressLine": "420 Goldfields Way",
+    "suburb": "Temora",
+    "postcode": "2666",
+    "phone": "02 6977 5921",
+    "website": "https://temora.com.au/see-do/lake-centenary",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Centenary%20Temora%20NSW",
+    "description": "Lake Centenary is four kilometres north of Temora and is used for power boating, water skiing, sailing, canoeing, swimming and fishing. A path circumnavigates the lake for walkers. The precinct also has a playground, self-weighted gym equipment, landscaped picnic areas and free barbecue facilities.",
+    "highlights": [
+      "Power boating, water skiing and canoeing",
+      "Swimming and fishing",
+      "Path circling the lake",
+      "Playground and outdoor gym equipment",
+      "Free barbecues and landscaped picnic areas"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "parking": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=5c109d1132586d92564dd611"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Junee Licorice & Chocolate Factory",
+    "slug": "junee-licorice-and-chocolate-factory",
+    "categorySlug": "heritage-sites",
+    "vertical": "things_to_do",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "45-61 Lord Street",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 3574",
+    "website": "https://juneelicoriceandchocolate.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Junee%20Licorice%20%26%20Chocolate%20Factory%20Junee%20NSW",
+    "description": "The Junee Licorice & Chocolate Factory makes organic licorice and chocolate in a historic Junee flour mill and sells it across Australia and overseas. Visitors can take a guided tour of the factory, eat at The Mill Room Cafe and shop the retail range, and the site runs an events program through the year. It opens seven days a week from 9am to 4pm, every day except Anzac Day.",
+    "highlights": [
+      "Organic licorice and chocolate made on site",
+      "Guided factory tours",
+      "The Mill Room Cafe",
+      "Housed in a historic Junee flour mill",
+      "Open seven days, 9am to 4pm, except Anzac Day"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "tours": "yes",
+      "open_sunday": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://juneelicoriceandchocolate.com/pages/contact",
+      "https://juneelicoriceandchocolate.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Junee Roundhouse Railway Museum",
+    "slug": "junee-roundhouse-railway-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "92 Harold Street",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "website": "https://roundhousemuseum.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Junee%20Roundhouse%20Railway%20Museum%20Junee%20NSW",
+    "description": "The Junee Roundhouse is one of the few surviving working railway roundhouses in the Southern Hemisphere, unique in Australia for its size, fully circular form and 100 foot turntable. Opened in 1947 as the last steam locomotive depot built for New South Wales Railways, half the building is now a museum while the other half still services locomotives. Exhibits include steam and diesel locomotives, passenger carriages, a sleeping car, a rail motor, a mail van, the only workable steam driven accident crane in New South Wales and a large working model railway. Guided tour information is available at the admissions desk and self-guided tours are welcome.",
+    "highlights": [
+      "Working railway roundhouse with a 100 foot turntable",
+      "Steam and diesel locomotives and heritage carriages",
+      "The only workable steam driven accident crane in NSW",
+      "Large working model railway",
+      "Guided and self-guided tours, last admission 3.30pm"
+    ],
+    "hours": [
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "tours": "yes",
+      "kid_friendly": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://roundhousemuseum.com.au/",
+      "https://roundhousemuseum.com.au/museum"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Junee Golf Club",
+    "slug": "junee-golf-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "clubs_hobbies",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "Golf Avenue",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 3371",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Junee%20Golf%20Club%20Junee%20NSW",
+    "facebook": "https://www.facebook.com/juneegolfclub/",
+    "description": "Junee Golf Club plays an 18 hole, par 72 course. There are no bunkers but a couple of holes have out of bounds and other hazards, so club selection and accuracy matter. The course suits both average and longer hitters and is used for social rounds and competition. The clubhouse is managed by volunteers, has a bar and barbecue, and the club hosts regular events and private functions. Campsites are available at the grounds.",
+    "highlights": [
+      "18 hole, par 72 course",
+      "No bunkers but several out of bounds holes",
+      "Volunteer managed clubhouse with a bar",
+      "Barbecue and camping sites on site",
+      "Available for private functions"
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "bbq": "yes",
+      "parking": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=5eeada7092236fa75d58cc0f"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Dog on the Tuckerbox",
+    "slug": "dog-on-the-tuckerbox",
+    "categorySlug": "heritage-sites",
+    "vertical": "things_to_do",
+    "localityName": "Gundagai",
+    "state": "NSW",
+    "suburb": "Gundagai",
+    "postcode": "2722",
+    "website": "https://www.visitgundagai.com.au/discovergundagai/dog-on-the-tuckerbox",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dog%20on%20the%20Tuckerbox%20Gundagai%20NSW",
+    "description": "The Dog on the Tuckerbox pioneer monument stands five miles, or eight kilometres, north of Gundagai just off the Hume Highway. The statue was unveiled on 28 November 1932, honouring the bullock drivers who opened up the country and the dogs that travelled with them, a legend carried further by Jack O'Hagan's song. The precinct today has maintained gardens, Australian animal figurines, picnic areas and parking for cars, caravans and coaches, plus a kiosk and farm shop selling food, coffee, local produce and gifts. The Dog's Birthday is celebrated each November.",
+    "highlights": [
+      "Pioneer monument unveiled 28 November 1932",
+      "Eight kilometres north of Gundagai off the Hume Highway",
+      "Kiosk and farm shop open seven days",
+      "Gardens, animal figurines and picnic areas",
+      "Parking for cars, caravans and coaches"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "parking": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.visitgundagai.com.au/discovergundagai/dog-on-the-tuckerbox"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Talbot Water Park",
+    "slug": "lake-talbot-water-park",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "1 Lake Drive",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 1990",
+    "website": "https://tourism.narrandera.nsw.gov.au/see-and-do/lake-talbot-water-park",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Talbot%20Water%20Park%20Narrandera%20NSW",
+    "description": "Lake Talbot Water Park at Narrandera has pools and three water slides, including an enclosed high-speed racer slide, plus a splash-and-play park. The lawned pool surrounds have shady picnic spots, barbecues and pool-level change rooms, and there is wheelchair access into the pools. A Skywalk off the car park gives views over Lake Talbot itself.",
+    "highlights": [
+      "Three water slides including an enclosed racer slide",
+      "Splash-and-play park",
+      "Wheelchair access into the pools",
+      "Lawned surrounds with barbecues and picnic spots",
+      "Skywalk with views over Lake Talbot"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "bbq": "yes",
+      "kid_friendly": "yes",
+      "wheelchair_accessible": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/seendo/product?productId=56b24139d5f1565045d86c07"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Calabria Family Wines Riverina Cellar Door",
+    "slug": "calabria-family-wines-riverina-cellar-door",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Griffith",
+    "state": "NSW",
+    "addressLine": "1283 Brayne Road",
+    "suburb": "Griffith",
+    "postcode": "2680",
+    "website": "https://www.calabriawines.com.au/visit-us/riverina",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Calabria%20Family%20Wines%20Riverina%20Cellar%20Door%20Griffith%20NSW",
+    "description": "The Calabria Family Wines Riverina cellar door is a Tuscan-style tasting room at Griffith, open seven days. It offers classic and premium wine flights, a 45-minute seated tasting of up to eight wines at the cellar door bar poured in Spiegelau glasses with a light platter, and a Sip and Unwind session. An Italian bar menu with antipasto, arancini and focaccia is served between 11am and 2pm, and the site includes a winery museum and an interactive sensory wall. Bookings are strongly recommended and walk-ins are taken if time permits.",
+    "highlights": [
+      "Tuscan-style cellar door open seven days",
+      "Classic, premium and Sip and Unwind tasting experiences",
+      "45-minute seated flight of up to eight wines",
+      "Italian bar menu served 11am to 2pm",
+      "Winery museum and interactive sensory wall"
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.calabriawines.com.au/visit-us/riverina/cellar-door-tastings",
+      "https://visitgriffith.com.au/listing/calabria-family-wines-riverina-cellar-door/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

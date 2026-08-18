@@ -1153,7 +1153,10 @@
   background: var(--ink);
   color: rgba(239, 237, 228, 0.65);
   padding: 52px 0 0;
-  margin-top: 40px;
+  /* No margin. The preceding section already carries 56px of bottom padding and
+     the two together left about a hundred pixels of dead paper above the
+     footer, which reads as a page that stopped rather than ended. */
+  margin-top: 0;
 }
 .foot-grid {
   display: grid;

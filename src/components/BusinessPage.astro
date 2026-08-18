@@ -26,6 +26,7 @@ import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import { outboundRel } from '~/lib/indexability';
+import { description as fitDescription } from '~/lib/seo';
 import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
 import { humanDate } from '~/lib/build';
 import {
@@ -218,8 +219,18 @@ const faqs = [
   },
 ];
 
-const description =
-  listing.description.length > 150 ? listing.description.slice(0, 147).trimEnd() + '…' : listing.description;
+/**
+ * Description, clipped on a sentence boundary by the shared helper rather than
+ * chopped at 147 characters. Researched descriptions are two to four sentences
+ * and the naive cut was ending nearly four hundred of them mid clause.
+ *
+ * The first sentence of a researched listing is almost always the one that says
+ * what the business is, so a clean single sentence beats a truncated one and a
+ * half every time.
+ */
+const description = fitDescription(
+  listing.description + (listing.addressLine ? ' ' + listing.addressLine + ', ' + locality.name + ' ' + locality.state + ' ' + listing.postcode + '.' : ''),
+);
 
 const jsonLd = graph([
   organisationNode(),

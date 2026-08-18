@@ -158,6 +158,17 @@ export function moneyPageTitle(locality: Locality, category: Category): string {
   return category.name + ' in ' + locality.name + ', ' + locality.state;
 }
 
+/**
+ * Money page description.
+ *
+ * Aim for 140 to 155 characters. The audit found these coming in at 44, which
+ * leaves Google to write its own snippet out of whatever is on the page, and
+ * the count is the one thing this site has that competitors do not.
+ *
+ * Built by adding proof clauses in order of usefulness until the budget is
+ * spent, so a page with a lot to say uses the space and a sparse one still ends
+ * on a complete sentence.
+ */
 export function moneyPageDescription(
   locality: Locality,
   category: Category,
@@ -171,13 +182,32 @@ export function moneyPageDescription(
     locality.name +
     ' ' +
     locality.state +
-    '. ';
+    ' ' +
+    locality.postcode +
+    '.';
+
   const proof: string[] = [];
-  if (stats.licencedCount) proof.push(stats.licencedCount + ' licence checked');
-  if (stats.openSaturdayCount) proof.push(stats.openSaturdayCount + ' open Saturday');
-  if (stats.crossBorderCount) proof.push(stats.crossBorderCount + ' cross the border');
-  if (stats.avgCalloutFee) proof.push('average call out ' + money(stats.avgCalloutFee));
-  return (lead + proof.join(', ') + '.').trim();
+  if (stats.licencedCount) proof.push(stats.licencedCount + ' with a licence we checked');
+  if (stats.crossBorderCount) proof.push(stats.crossBorderCount + ' crossing the border to get here');
+  if (stats.openSaturdayCount) proof.push(stats.openSaturdayCount + ' trading Saturdays');
+  if (stats.emergencyCount) proof.push(stats.emergencyCount + ' taking after hours work');
+  if (stats.avgCalloutFee) proof.push('call out averaging ' + money(stats.avgCalloutFee));
+  if (stats.fromOtherLocality) proof.push(stats.fromOtherLocality + ' travelling in');
+
+  let out = lead;
+  for (const clause of proof) {
+    const next = out + ' ' + clause[0].toUpperCase() + clause.slice(1) + '.';
+    if (next.length > 155) break;
+    out = next;
+  }
+
+  // Still short because the page has little to say about itself. Close with the
+  // thing that is true of every page on the site rather than leave it stubby.
+  if (out.length < 110) {
+    const tail = ' Contact details, hours and sources on every listing.';
+    if (out.length + tail.length <= 158) out += tail;
+  }
+  return out;
 }
 
 /** Region and state hub intro sentences, built from counts rather than adjectives. */

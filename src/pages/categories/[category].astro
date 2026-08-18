@@ -105,17 +105,37 @@ const topLocalities = liveLocalities()
   .slice(0, 8);
 
 const h1 = category.name + ' in NSW and Victoria';
-const description =
-  n(rows.length) +
-  ' ' +
-  noun +
-  ' listed across ' +
-  places.length +
-  ' ' +
-  plural(places.length, 'town', 'towns') +
-  ' in New South Wales and Victoria' +
-  (verified > 0 ? ', ' + verified + ' of them verified' : '') +
-  '. Service area is stored separately from address, so operators who cross the border show up on both sides of it.';
+/**
+ * Description, built per category rather than from a shared sentence.
+ *
+ * The audit found 191 category pages ending on the same clipped boilerplate,
+ * which is a near duplicate snippet across a fifth of the indexable site. This
+ * leads with the counts, which are the part only this site has, then names the
+ * two biggest towns, then spends whatever budget is left on the border line.
+ */
+const topTwo = places.slice(0, 2).map((x: any) => x.locality.name);
+const description = (() => {
+  let out =
+    n(rows.length) +
+    ' ' +
+    noun +
+    ' across ' +
+    places.length +
+    ' ' +
+    plural(places.length, 'town', 'towns') +
+    ' in NSW and Victoria';
+  out += topTwo.length ? ', most of them in ' + topTwo.join(' and ') + '.' : '.';
+  const extras = [
+    verified > 0 ? verified + ' verified.' : '',
+    'Contact details, hours and the source of every fact.',
+    'Service area is held separately from address, so operators who cross the border appear on both sides.',
+  ].filter(Boolean);
+  for (const e of extras) {
+    if ((out + ' ' + e).length > 155) break;
+    out += ' ' + e;
+  }
+  return out;
+})();
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
