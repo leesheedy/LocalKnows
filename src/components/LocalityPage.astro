@@ -69,21 +69,29 @@ const guides = allGuides
   .slice(0, 4);
 
 const h1 = 'Businesses in ' + locality.name + ', ' + locality.state;
-const description =
-  n(rows.length) +
-  ' businesses and places in ' +
-  locality.name +
-  ' ' +
-  locality.state +
-  ' ' +
-  locality.postcode +
-  ' across ' +
-  active.length +
-  ' categories. ' +
-  (travelIn ? travelIn + ' travel in from nearby. ' : '') +
-  'Checked ' +
-  buildDate +
-  '.';
+const description = (() => {
+  let out =
+    n(rows.length) +
+    ' businesses and places in ' +
+    locality.name +
+    ' ' +
+    locality.state +
+    ' ' +
+    locality.postcode +
+    ', across ' +
+    active.length +
+    ' categories.';
+  const extras = [
+    travelIn ? travelIn + ' of them travel in from nearby towns.' : '',
+    verified > 0 ? verified + ' verified.' : '',
+    'Contact details, hours and the source of every fact.',
+  ].filter(Boolean);
+  for (const e of extras) {
+    if ((out + ' ' + e).length > 155) break;
+    out += ' ' + e;
+  }
+  return out;
+})();
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },

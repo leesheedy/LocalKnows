@@ -1,0 +1,1538 @@
+[
+  {
+    "name": "Magpies Nest Restaurant",
+    "slug": "magpies-nest-restaurant",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "20 Pine Gully Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6933 1523",
+    "website": "https://magpiesnestwagga.com/",
+    "facebook": "https://www.facebook.com/MagpiesNestWagga/",
+    "instagram": "https://www.instagram.com/magpiesnestwagga/",
+    "description": "Magpies Nest is set in a stone stable dating from first settlement in the 1860s, about five minutes from the Wagga Wagga CBD and overlooking the Murrumbidgee River across 20 acres of vineyard and olive groves. The restaurant offers a set-priced menu with regularly changing selections built around local farm-direct produce, starting with an antipasto selection of house-made breads, olive oil, olives and dips. It has been family owned and operated since opening in 1998 and bookings are essential.",
+    "highlights": [
+      "Stone stable building from the 1860s",
+      "Set-priced, regularly changing menu",
+      "Vineyard and olive grove setting",
+      "Caters for allergies and intolerances",
+      "Bookings essential"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "licensed": "yes",
+      "kid_friendly": "yes",
+      "function_room": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=56e89e0c15f781c563e889b7",
+      "https://magpiesnestwagga.com/contact"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Magpies%20Nest%20Restaurant%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "The Oakroom Kitchen and Bar",
+    "slug": "the-oakroom-kitchen-and-bar",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "Townhouse Hotel, 70 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4337",
+    "website": "https://townhousewagga.com/the-oakroom/",
+    "facebook": "https://www.facebook.com/TheOakroomKitchenBar",
+    "instagram": "https://www.instagram.com/the_oakroom",
+    "description": "The Oakroom Kitchen and Bar is the restaurant of the Townhouse Hotel on Morgan Street in central Wagga Wagga. The menu is built around small plates to share, mains and a wine list chosen to match the kitchen, with a focus on seasonal eating and fresh local ingredients. Breakfast runs Tuesday to Sunday, lunch Wednesday to Saturday and dinner Tuesday to Saturday.",
+    "highlights": [
+      "Restaurant inside the Townhouse Hotel",
+      "Small plates to share plus mains",
+      "Seasonal menu using local ingredients",
+      "Breakfast, lunch and dinner service",
+      "Private dining area available"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "licensed": "yes",
+      "function_room": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=56e89bff4ed168e907b0804b",
+      "https://townhousewagga.com/the-oakroom/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Oakroom%20Kitchen%20and%20Bar%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "The Charles Dining Room",
+    "slug": "the-charles-dining-room",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "82 Tarcutta Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0408 542 481",
+    "website": "https://thecharleswagga.com.au/dine",
+    "description": "The Charles Dining Room is the restaurant at The Charles boutique hotel on Tarcutta Street. It works to a paddock-to-plate philosophy with seasonal produce sourced from local farms and growers, offering three-course and five-course tasting menus with optional matched wines. An a la carte menu runs Tuesday to Thursday and the kitchen caters for gluten-free, lactose-free, vegetarian and vegan requirements.",
+    "highlights": [
+      "Three-course and five-course tasting menus",
+      "Optional matched wines",
+      "A la carte menu Tuesday to Thursday",
+      "Paddock-to-plate sourcing from local farms",
+      "Gluten-free, lactose-free and vegan options"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "licensed": "yes",
+      "bookings": "yes",
+      "dine_in": "yes",
+      "gluten_free": "yes",
+      "vegan_options": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=6340b5da0b69053e3fd1cf16",
+      "https://thecharleswagga.com.au/dine"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Charles%20Dining%20Room%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Mr. Lawrence",
+    "slug": "mr-lawrence",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "187 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5938 2838",
+    "description": "Mr. Lawrence on Fitzmaurice Street serves morning coffee and dishes such as baked ricotta and berry hotcakes, moving through lunch plates including roast pork belly ramen and a fried chicken burger. At night chefs Jamie Shelpley and Luke Kerlin run a chef's tasting menu. The venue has an outside dining area and a sleek industrial interior.",
+    "highlights": [
+      "Coffee and hotcakes in the morning",
+      "Lunch dishes including pork belly ramen",
+      "Chef's tasting menu at night",
+      "Outdoor dining area",
+      "Industrial-style interior"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "dine_in": "yes",
+      "bookings": "yes",
+      "breakfast": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=61b81616db58403b22bf60c3"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mr.%20Lawrence%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Pinnacle's Restaurant and Bar",
+    "slug": "pinnacles-restaurant-and-bar",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "2 Lake Albert Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 7007",
+    "website": "https://intlhotelwagga.com.au/pinnacles-restaurant-bar/",
+    "description": "Pinnacle's Restaurant and Bar sits on site at the International Hotel Wagga Wagga and showcases local Riverina foods and ingredients. Breakfast is served from a hot buffet and continental cold bar with barista coffee available all day, and the executive chef writes seasonal menus around regional ingredients. Tuesday to Saturday evenings the bar serves handmade cocktails and local beer and wine, with a terrace looking over the city.",
+    "highlights": [
+      "Restaurant at the International Hotel Wagga Wagga",
+      "Hot buffet and continental breakfast",
+      "Seasonal menus using Riverina produce",
+      "Handmade cocktails Tuesday to Saturday",
+      "City views from the terrace"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "licensed": "yes",
+      "kid_friendly": "yes",
+      "function_room": "yes",
+      "breakfast": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=66d7c7ccae0c04e22ac50cea",
+      "https://intlhotelwagga.com.au/pinnacles-restaurant-bar/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pinnacle's%20Restaurant%20and%20Bar%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Astor Bar and Grill",
+    "slug": "astor-bar-and-grill",
+    "categorySlug": "restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "104 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4328",
+    "website": "https://www.astorinn.com.au/astor-inn-bar-and-grill",
+    "facebook": "https://www.facebook.com/astorinnwagga/",
+    "instagram": "https://www.instagram.com/astorinn/",
+    "description": "The Astor Bar and Grill is a Mallee Grill steakhouse at the Astor on Edward Street, cooking its steaks over charcoal. The menu also covers classic pub meals and pizzas, with pizzas available from the bar outside restaurant hours from 10am daily. The bar is open daily from 10am with happy hour 4pm to 6pm Monday to Saturday.",
+    "highlights": [
+      "Charcoal-cooked Mallee Grill steaks",
+      "Pub classics and pizzas",
+      "Pizzas from the bar outside restaurant hours",
+      "Happy hour 4pm to 6pm Monday to Saturday",
+      "Accommodation on site"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "parking": "yes",
+      "licensed": "yes",
+      "function_room": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "17:30",
+        "closes": "20:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "17:30",
+        "closes": "20:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "12:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "12:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=64dab94b0944842e6abfeb9d",
+      "https://www.astorinn.com.au/astor-inn-bar-and-grill"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Astor%20Bar%20and%20Grill%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Giuseppe's Restaurant and Bar",
+    "slug": "giuseppes-restaurant-and-bar",
+    "categorySlug": "italian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "31 Kincaid Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 8800",
+    "description": "Giuseppe's Restaurant and Bar serves Italian food in the centre of Wagga Wagga on Kincaid Street. The menu covers antipasti, panini, pizza, pasta and a range of main meals, with takeaway, delivery and online ordering available. There is plenty of parking nearby and group bookings and parties are welcome.",
+    "highlights": [
+      "Antipasti, panini, pizza and pasta",
+      "Takeaway and delivery available",
+      "Online ordering",
+      "Group bookings and parties welcome",
+      "Licensed bar"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "parking": "yes",
+      "licensed": "yes",
+      "takeaway": "yes",
+      "function_room": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=599675851699adf15294f6bc",
+      "https://www.openstreetmap.org/node/1871564394"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Giuseppe's%20Restaurant%20and%20Bar%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Indian Tavern Tandoori",
+    "slug": "indian-tavern-tandoori",
+    "categorySlug": "indian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "81 Peter Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3121",
+    "website": "https://indiantavern.com.au/",
+    "description": "The Indian Tavern Tandoori has been serving tandoori and curry dishes in Wagga Wagga for more than 32 years and describes itself as the city's only multi award winning Indian restaurant. The menu draws on cuisine from all regions of India and ranges from hot to mild. Both dine-in and takeaway are available and gift vouchers can be arranged by phone.",
+    "highlights": [
+      "Tandoori and curry dishes",
+      "Serving Wagga Wagga for over 32 years",
+      "Dishes from all regions of India",
+      "Dine in and takeaway",
+      "Closed Mondays"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes",
+      "bookings": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "opens": "17:30",
+        "closes": "20:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "closed": true
+      },
+      {
+        "day": 2,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5817ffc18091cee67ca9f2db",
+      "https://indiantavern.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Indian%20Tavern%20Tandoori%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Indian Rasoi",
+    "slug": "indian-rasoi",
+    "categorySlug": "indian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "Shop 10, Turvey Tops Shopping Centre, 66 Fernleigh Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 7336",
+    "description": "Indian Rasoi is an Indian restaurant in the Turvey Tops Shopping Centre on Fernleigh Road. The kitchen focuses on northern Indian cooking and Mughal-era gourmet dishes with elaborate masalas and preparations. The stated philosophy is a complete package of food, service, value and an enjoyable dining experience.",
+    "highlights": [
+      "Northern Indian and Mughal-era dishes",
+      "Located in Turvey Tops Shopping Centre",
+      "Rich and diverse menu",
+      "Dine in"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "dine_in": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=599b85940fce7e8319ed298a"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Indian%20Rasoi%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Thaigga",
+    "slug": "thaigga",
+    "categorySlug": "thai-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "107 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 7371",
+    "website": "https://www.thaigga.com.au/",
+    "facebook": "https://www.facebook.com/thaigga",
+    "instagram": "https://www.instagram.com/thaigga_wagga/",
+    "description": "Thaigga on Fitzmaurice Street serves modern Thai fusion alongside traditional Thai dishes, giving a twist to the familiar favourites. Diners can watch their meal being prepared in the open kitchen. Bookings are essential.",
+    "highlights": [
+      "Modern Thai fusion and traditional dishes",
+      "Open kitchen",
+      "Fitzmaurice Street location",
+      "Bookings essential"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "dine_in": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=58181a11ba06165d7a2096ae"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Thaigga%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Tammy's Thai Kitchen",
+    "slug": "tammys-thai-kitchen",
+    "categorySlug": "thai-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Kooringal",
+    "addressLine": "Shop 43, Kooringal Mall, 269 Lake Albert Road",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "1300 826 697",
+    "website": "https://www.tammysthaikitchen.com.au/",
+    "facebook": "https://www.facebook.com/tammysthaikitchen/",
+    "description": "Tammy's Thai Kitchen is in Kooringal Mall opposite the Australia Post office and serves authentic Thai food with a modern twist. The chefs trained in Sydney Thai restaurants and the kitchen offers dine in, takeaway and home delivery, with minimum order and fees applying to delivery. Separate lunch and dinner menus are published on the website and online ordering is available.",
+    "highlights": [
+      "Modern Thai cooking",
+      "Dine in, takeaway and home delivery",
+      "Separate lunch and dinner menus",
+      "Online ordering",
+      "Open seven days"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes",
+      "parking": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 0,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "11:30",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "17:00",
+        "closes": "21:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=59718e474018c3b81764fc6f",
+      "https://www.tammysthaikitchen.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tammy's%20Thai%20Kitchen%20Kooringal%20NSW"
+  },
+  {
+    "name": "Bahn Thai",
+    "slug": "bahn-thai",
+    "categorySlug": "thai-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "73 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4177",
+    "description": "Bahn Thai is a Thai restaurant at 73 Morgan Street in central Wagga Wagga. It is listed as serving Thai cuisine for dine in and takeaway.",
+    "highlights": [
+      "Thai cuisine",
+      "Morgan Street, central Wagga Wagga",
+      "Takeaway available"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.openstreetmap.org/node/2312262586",
+      "https://www.yelp.com.au/biz/bahn-thai-restaurant-wagga-wagga"
+    ],
+    "confidence": "medium",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bahn%20Thai%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Uneke Lounge",
+    "slug": "uneke-lounge",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "140 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 8143",
+    "website": "https://www.unekelounge.com.au/",
+    "facebook": "https://www.facebook.com/unekelounge/",
+    "instagram": "https://www.instagram.com/unekewagga/",
+    "description": "Uneke Lounge is a cafe on Fitzmaurice Street serving all day breakfast, lunch and refreshments. It pours 7 Miles Coffee Gusto Blend, a Latin American espresso blend. Behind the cafe is Uneke Warehouse, a function space with high timber ceilings and original brickwork that caters for up to 120 guests.",
+    "highlights": [
+      "All day breakfast and lunch",
+      "7 Miles Coffee Gusto Blend espresso",
+      "Uneke Warehouse function space behind the cafe",
+      "Weddings and corporate events catered",
+      "Open seven days"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "function_room": "yes",
+      "bookings": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=581804c983e391501bcec3ac",
+      "https://www.unekelounge.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Uneke%20Lounge%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Trail St Cafe",
+    "slug": "trail-st-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "34 Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6937 4180",
+    "description": "Trail St Cafe has been serving coffee and breakfast in Wagga Wagga since 1999. The coffee is roasted by Premium Coffee Roasters and the menu mixes healthy food, Mexican dishes, iced drinks and breakfast favourites. There is alfresco seating out the front.",
+    "highlights": [
+      "Trading since 1999",
+      "Coffee roasted by Premium Coffee Roasters",
+      "Breakfast and brunch menu",
+      "Mexican dishes and iced drinks",
+      "Outdoor seating"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=58180af87254df3a52f35d21",
+      "https://www.openstreetmap.org/node/362337841"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Trail%20St%20Cafe%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Jardine's Cafe",
+    "slug": "jardines-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "2/68 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 8897",
+    "description": "Jardine's Cafe on Baylis Street specialises in coffee sourced from around the world and homemade meals made with locally sourced ingredients. Breakfast covers granola, smashed avocado, bacon and eggs and a big breakfast, while lunch runs to soups, toasties and burgers. Staff will remake a coffee if it is not served the way you like it.",
+    "highlights": [
+      "Specialty coffee from around the world",
+      "Breakfast classics and big breakfast",
+      "Soups, toasties and burgers at lunch",
+      "Locally sourced ingredients",
+      "Baylis Street CBD location"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=589bdf38271e2eeb4820a453"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jardine's%20Cafe%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Fitz Cafe",
+    "slug": "fitz-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "84-86 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5908 3436",
+    "description": "Fitz Cafe sits in the heart of Wagga Wagga on Fitzmaurice Street and serves all-day breakfast, coffee and super shakes. Vegan and gluten free meals are available and there is free wifi for customers. Alfresco seating is available out the front.",
+    "highlights": [
+      "All-day breakfast",
+      "Super shakes",
+      "Vegan and gluten free meals",
+      "Free wifi",
+      "Outdoor seating"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "breakfast": "yes",
+      "vegan_options": "yes",
+      "gluten_free": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5817fc8e6fccb75d18f46d31"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fitz%20Cafe%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Meccanico Espresso + Wine",
+    "slug": "meccanico-espresso-and-wine",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "171 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0418 608 427",
+    "website": "https://meccanicowagga.com.au/",
+    "facebook": "https://www.facebook.com/meccanicowagga/",
+    "instagram": "https://www.instagram.com/meccanico_wagga/",
+    "description": "Meccanico Espresso + Wine is at the front of the Cadell Place community space on Fitzmaurice Street, near the Murrumbidgee River. It serves coffee by day and wine by night, with separate breakfast, lunch and evening menus plus a wine list. The food is designed to share, using simple methods and premium ingredients, and a private space is available for small functions.",
+    "highlights": [
+      "Coffee by day and wine at night",
+      "Breakfast, lunch and evening menus",
+      "Located at Cadell Place on Fitzmaurice Street",
+      "Shared plates with European influence",
+      "Private space for small functions"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "bookings": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5eed64908e7caab8122f42e0",
+      "https://meccanicowagga.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Meccanico%20Espresso%20%2B%20Wine%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "The Perennial",
+    "slug": "the-perennial",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Kooringal",
+    "addressLine": "Shop 1, 203 Lake Albert Road",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "02 6933 1828",
+    "website": "https://www.theperennialwagga.com/",
+    "instagram": "https://www.instagram.com/theperennialwagga/",
+    "description": "The Perennial is a modern Australian cafe on Lake Albert Road at Kooringal serving brunch dishes such as bacon and egg rolls, hotcakes, corn fritters and eggs benedict. It pours ST. ALi coffee, using the Orthodox blend for all in-house espresso, delivered weekly from Melbourne. The cafe is closed Sundays and public holidays.",
+    "highlights": [
+      "Modern Australian brunch menu",
+      "ST. ALi Orthodox espresso",
+      "Bacon and egg rolls, hotcakes and corn fritters",
+      "Kooringal shopfront on Lake Albert Road",
+      "Closed Sundays and public holidays"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "06:30",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:30",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:30",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:30",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:30",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=68808d15ffab8fbb094a7483",
+      "https://www.theperennialwagga.com/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Perennial%20Kooringal%20NSW"
+  },
+  {
+    "name": "The Brew",
+    "slug": "the-brew-wagga",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Kooringal",
+    "addressLine": "67 Coleman Street",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "0499 800 347",
+    "website": "https://www.thebrewwagga.com/",
+    "facebook": "https://www.facebook.com/The-Brew-115881496833491/",
+    "instagram": "https://www.instagram.com/thebrew_wagga/",
+    "description": "The Brew is a coffee shop and eatery on Coleman Street that aims to bring people together over coffee and food in a spacious, relaxed setting. It supports local products and produce and encourages sustainable living. Reservations and online ordering are available through its website.",
+    "highlights": [
+      "Coffee and full food menu",
+      "Spacious, relaxed room",
+      "Supports local products and produce",
+      "Online ordering available",
+      "Closed Sundays"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "bookings": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "06:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "13:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=636af61efce2db640f4f075a",
+      "https://www.thebrewwagga.com/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Brew%20Kooringal%20NSW"
+  },
+  {
+    "name": "Infuso",
+    "slug": "infuso",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "Shop 3a, Turvey Tops Shopping Centre, 44-66 Fernleigh Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 2176",
+    "description": "Infuso is a cafe in the Turvey Tops Shopping Centre, minutes from the Wagga Wagga CBD, serving all-day breakfast, lunch and coffee with takeaway available. It uses award-winning BeanRoasters coffee beans. The business also runs a mobile food and drink van that can be hired for conferences, weddings, corporate and sporting events.",
+    "highlights": [
+      "All-day breakfast and lunch",
+      "BeanRoasters coffee beans",
+      "Takeaway available",
+      "Mobile coffee van for hire",
+      "Carpark on site"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "mobile_service": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=599a2e5eb44fd918663fc8f7"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Infuso%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "The Gardens Wagga",
+    "slug": "the-gardens-wagga",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Turvey Park",
+    "addressLine": "Wagga Wagga Botanic Gardens, 43 Tom Wood Drive",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "phone": "02 6925 1767",
+    "website": "https://www.thegardenswagga.com.au/",
+    "description": "The Gardens Wagga is a cafe and function centre inside the Wagga Wagga Botanic Gardens. The cafe serves coffee, brunch and lunch surrounded by the gardens, and the venue also hosts weddings, milestone birthdays, corporate events and school formals. An online store sells platters, grazing boxes and corporate catering.",
+    "highlights": [
+      "Cafe inside the Wagga Wagga Botanic Gardens",
+      "Coffee, brunch and lunch",
+      "Wedding and function venue",
+      "Platters and grazing boxes to order",
+      "Onsite parking"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "function_room": "yes",
+      "kid_friendly": "yes",
+      "breakfast": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=6139a1c81b4d6e1a1f0c3db8",
+      "https://www.thegardenswagga.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Gardens%20Wagga%20Turvey%20Park%20NSW"
+  },
+  {
+    "name": "The Fast Lane Drive-Thru Coffee Wagga",
+    "slug": "the-fast-lane-drive-thru-coffee-wagga",
+    "categorySlug": "coffee-roasters",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "120 Hammond Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0418 553 332",
+    "website": "https://tfl.coffee/locations-wagga-wagga",
+    "facebook": "https://www.facebook.com/thefastlanedrivethru",
+    "instagram": "https://www.instagram.com/thefastlanewagga/",
+    "description": "The Fast Lane Drive-Thru Coffee on Hammond Avenue is a drive-through cafe aimed at commuters, serving coffee plus on-the-go breakfast, lunch and travel snacks. The business roasts its own signature coffee blend and sources food and drinks from local suppliers where it can.",
+    "highlights": [
+      "Drive-through coffee",
+      "Roasts its own signature blend",
+      "Breakfast, lunch and travel snacks",
+      "Hammond Avenue location",
+      "Sources food from local suppliers"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=59715d07f5e955d24eb8fb43",
+      "https://tfl.coffee/locations-wagga-wagga"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Fast%20Lane%20Drive-Thru%20Coffee%20Wagga%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Artisan Baker - So French, So Fresh",
+    "slug": "artisan-baker-so-french-so-fresh",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "2/189 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 7180",
+    "facebook": "https://www.facebook.com/artisanbakerwagga/",
+    "instagram": "https://instagram.com/artisanbakerwagga",
+    "description": "Artisan Baker is a French-owned and operated boulangerie and patisserie on Morgan Street with cafe seating and barista coffee. It specialises in sourdough and French-style breads, with patisserie items including opera cake, mille feuille and frangipane tarts. In-house pies, sausage rolls and a soup of the day are also available.",
+    "highlights": [
+      "French-owned boulangerie and patisserie",
+      "Sourdough and French-style breads",
+      "Opera cake, mille feuille and frangipane tarts",
+      "In-house pies and sausage rolls",
+      "Cafe seating with barista coffee"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "parking": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=596ffdb350505a3734b137b9"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Artisan%20Baker%20-%20So%20French%2C%20So%20Fresh%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Mock Orange",
+    "slug": "mock-orange",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Lake Albert",
+    "addressLine": "Shop 1, 39 Gregory Crescent",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "02 6922 3347",
+    "facebook": "https://www.facebook.com/MockOrangeWagga/",
+    "description": "Mock Orange is a cafe in the Lake Village shops on Gregory Crescent at Lake Albert. It has outdoor seating.",
+    "highlights": [
+      "Cafe at the Lake Village shops",
+      "Outdoor seating",
+      "Lake Albert location"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://www.openstreetmap.org/node/816747060"
+    ],
+    "confidence": "medium",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mock%20Orange%20Lake%20Albert%20NSW"
+  },
+  {
+    "name": "Lake Village Bakery",
+    "slug": "lake-village-bakery",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Lake Albert",
+    "addressLine": "Shop 10, 39 Gregory Crescent",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "description": "Lake Village Bakery is a bakery and cafe in the Lake Village shops on Gregory Crescent at Lake Albert. It offers takeaway and has outdoor seating.",
+    "highlights": [
+      "Bakery and cafe",
+      "Takeaway available",
+      "Outdoor seating",
+      "Lake Village shops, Lake Albert"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.openstreetmap.org/node/816749036"
+    ],
+    "confidence": "medium",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Village%20Bakery%20Lake%20Albert%20NSW"
+  },
+  {
+    "name": "Lake Village Takeaway",
+    "slug": "lake-village-takeaway",
+    "categorySlug": "takeaway",
+    "vertical": "eat_drink",
+    "localityName": "Lake Albert",
+    "addressLine": "Shop 3, 39 Gregory Crescent",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "02 6922 6880",
+    "facebook": "https://www.facebook.com/lakevillagetakeaway/",
+    "description": "Lake Village Takeaway is a takeaway food shop in the Lake Village shops on Gregory Crescent at Lake Albert. It trades alongside the Lake Village Bakery and the Mock Orange cafe in the same block.",
+    "highlights": [
+      "Takeaway food shop",
+      "Lake Village shops, Lake Albert",
+      "Gregory Crescent location"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.openstreetmap.org/node/13517956387"
+    ],
+    "confidence": "medium",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Village%20Takeaway%20Lake%20Albert%20NSW"
+  },
+  {
+    "name": "Cafe Phoenix",
+    "slug": "cafe-phoenix",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "Shop 2B, 23 Hammond Avenue",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0426 764 541",
+    "facebook": "https://m.facebook.com/Cafe-Phoenix-100187228600737/",
+    "description": "Cafe Phoenix is a cafe on Hammond Avenue in East Wagga Wagga. It has outdoor seating.",
+    "highlights": [
+      "Cafe on Hammond Avenue",
+      "Outdoor seating",
+      "East Wagga Wagga"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://www.openstreetmap.org/node/8976839460"
+    ],
+    "confidence": "medium",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe%20Phoenix%20East%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Knights Deli",
+    "slug": "knights-deli",
+    "categorySlug": "takeaway",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "addressLine": "183 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3725",
+    "website": "https://knightsriverina.com.au/",
+    "facebook": "https://www.facebook.com/KnightsRiverina/",
+    "instagram": "https://instagram.com/knightsriverina",
+    "description": "Knights Deli on Fitzmaurice Street is a delicatessen and food providore stocking local Riverina produce along with a large range of Australian and international artisan cheese and gourmet goods. Its own products include toffee apples, choc dipped oranges, hazelnut biscotti and Riverina Smokehouse jerky. The shop also sells fresh foods, pies and pastries, salads and heat-and-eat meals, with online ordering and in-store pickup, and puts together gift hampers.",
+    "highlights": [
+      "Delicatessen and food providore",
+      "Large artisan cheese range",
+      "Riverina Smokehouse jerky and toffee apples",
+      "Pies, salads and heat-and-eat meals",
+      "Online ordering with in-store pickup",
+      "Gift hampers"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "parking": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5a2a2a8c8bfb0c663146a07a",
+      "https://knightsriverina.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Knights%20Deli%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Table and Graze",
+    "slug": "table-and-graze",
+    "categorySlug": "caterers",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://tableandgraze.com.au/",
+    "description": "Table and Graze is a family-run Wagga Wagga catering business established in 2017 that builds grazing tables, grazing boxes, platters and breakfast boxes for weddings, parties, corporate events and festivals. It covers much of the Riverina and also travels interstate for larger events. The business sources from local suppliers including Wollundry Grove Olives, Junee Licorice and Chocolate Factory, Riverina Grove and Three Hives Beekeeping.",
+    "highlights": [
+      "Grazing tables, boxes and platters",
+      "Weddings, parties and corporate events",
+      "Established 2017, family operated",
+      "Covers Wagga Wagga and much of the Riverina",
+      "Uses local Riverina suppliers"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "booking_required": "yes",
+      "mobile_service": "yes"
+    },
+    "sources": [
+      "https://tableandgraze.com.au/",
+      "https://visitwagga.com/campaigns/back-to-our-roots/table-and-graze"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Table%20and%20Graze%20Wagga%20Wagga%20NSW"
+  },
+  {
+    "name": "Quinty Bakehouse",
+    "slug": "quinty-bakehouse",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Uranquinty",
+    "addressLine": "42 Morgan Street",
+    "suburb": "Uranquinty",
+    "postcode": "2652",
+    "phone": "02 6922 9119",
+    "description": "Quinty Bakehouse in Uranquinty bakes sourdough, cobbs and baguettes along with handcrafted tarts, cookies and cakes. It also serves cooked breakfast, a wide lunch selection and barista coffee with latte art. High tea is available at the Uranquinty store by booking, and the bakehouse runs school holiday classes for children.",
+    "highlights": [
+      "Sourdough, cobbs and baguettes",
+      "Handcrafted tarts, cookies and cakes",
+      "Cooked breakfast and lunch menu",
+      "High tea by booking",
+      "School holiday classes for kids",
+      "Takeaway available"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "booking_required": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5818105d53ef1e0f66d7e596",
+      "https://www.openstreetmap.org/node/2312266650"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quinty%20Bakehouse%20Uranquinty%20NSW"
+  },
+  {
+    "name": "The Ten Mile",
+    "slug": "the-ten-mile",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Holbrook",
+    "addressLine": "120 Albury Street",
+    "suburb": "Holbrook",
+    "postcode": "2644",
+    "phone": "02 6086 4800",
+    "website": "https://www.thetenmile.com.au/",
+    "facebook": "https://www.facebook.com/thetenmile",
+    "description": "The Ten Mile is a licensed eatery in central Holbrook run by regional chef Sarah King, set inside a 100-year-old building that once operated as the local garage and mechanic's workshop. The kitchen works with farm gate produce including Holbrook Paddock Eggs, Bicycle Baker breads from Albury and Mansfield Coffee Merchants, with local wines from Borambola and Fowles and craft beer from Bridge Road Brewers. A retail store on site stocks cookbooks, food items and kitchenware, and group bookings and functions can be catered.",
+    "highlights": [
+      "Set in a renovated 100-year-old garage",
+      "Farm gate produce and local wines",
+      "Breakfast and lunch service",
+      "Retail store with cookbooks and kitchenware",
+      "Licensed venue",
+      "Closed Tuesdays"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "licensed": "yes",
+      "function_room": "yes",
+      "breakfast": "yes",
+      "bookings": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "opens": "09:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "closed": true
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5ad3e173f4f52c5305883ead",
+      "https://www.thetenmile.com.au/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Ten%20Mile%20Holbrook%20NSW"
+  },
+  {
+    "name": "Nest Cinema Cafe Books",
+    "slug": "nest-cinema-cafe-books",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Tumbarumba",
+    "addressLine": "56 Winton Street",
+    "suburb": "Tumbarumba",
+    "postcode": "2653",
+    "phone": "02 6948 2950",
+    "website": "https://cafe-nest.com/",
+    "instagram": "https://www.instagram.com/nestcinemacafe",
+    "description": "Nest is a licensed cafe and restaurant, boutique armchair cinema and bookstore in one building on Winton Street, Tumbarumba. The seasonal menu draws on produce from its own food garden and from nearby orchards, vineyards, mountain streams and paddocks, with dishes such as fresh fig pizza and smoked trout salad plus cool climate wines, cider and craft beer. Guests can eat in the gardens, inside the licensed cafe or in the cinema while watching a film. The historic building was originally a Masonic Lodge.",
+    "highlights": [
+      "Licensed cafe with boutique cinema and bookstore",
+      "Seasonal menu from its own food garden",
+      "Cool climate wines, cider and craft beer",
+      "Dine in the gardens, cafe or cinema",
+      "Live music and year-round events",
+      "Housed in a former Masonic Lodge"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "licensed": "yes",
+      "kid_friendly": "yes",
+      "live_music": "yes",
+      "function_room": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=5caebe46bdbc0ce95a09ac19",
+      "https://cafe-nest.com/"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nest%20Cinema%20Cafe%20Books%20Tumbarumba%20NSW"
+  },
+  {
+    "name": "Coolamon Cheese Co.",
+    "slug": "coolamon-cheese-co",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Coolamon",
+    "addressLine": "87 Cowabbie Street",
+    "suburb": "Coolamon",
+    "postcode": "2701",
+    "phone": "02 6927 3757",
+    "website": "https://www.coolamoncheese.com.au/",
+    "facebook": "https://www.facebook.com/coolamoncheese",
+    "instagram": "https://www.instagram.com/coolamoncheese/",
+    "description": "Coolamon Cheese Co. occupies a 1920s co-op building on Coolamon's main street, with a modern cheese factory at the rear designed so visitors can watch the cheese-making and maturation process. The front of house serves cheese with local wine and tasty morsels, and the retail space sells regional produce. It is open every day from 8am to 3pm.",
+    "highlights": [
+      "Handcrafted cheese made on site",
+      "Visitors can view the cheese-making process",
+      "Housed in a 1920s co-op building",
+      "Local wine and cheese tastings",
+      "Retail space with regional produce",
+      "Open seven days"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "licensed": "yes",
+      "kid_friendly": "yes",
+      "takeaway": "yes",
+      "tastings": "yes",
+      "cellar_door": "yes"
+    },
+    "hours": [
+      {
+        "day": 0,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=60d18a1877a7b3d356e367b9",
+      "https://www.coolamoncheese.com.au/pages/contact"
+    ],
+    "confidence": "high",
+    "state": "NSW",
+    "lastCheckedAt": "2026-08-18",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon%20Cheese%20Co.%20Coolamon%20NSW"
+  }
+]

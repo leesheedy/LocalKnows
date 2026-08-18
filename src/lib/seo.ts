@@ -509,8 +509,13 @@ export function description(text: string, max = 158): string {
 
   const window = clean.slice(0, max);
   const lastStop = Math.max(window.lastIndexOf('. '), window.lastIndexOf('! '), window.lastIndexOf('? '));
-  // Only take the sentence break if it leaves a description worth having.
-  if (lastStop >= 90) return window.slice(0, lastStop + 1).trim();
+  // Only take the sentence break if it leaves a description worth having. The
+  // floor started at 90 and that was too generous: the homepage has a 93
+  // character opening sentence, so it threw away the half that carried the
+  // listing count. 110 is the compromise: long enough to be worth showing,
+  // short enough that most real descriptions land on a full stop rather than
+  // an ellipsis.
+  if (lastStop >= 110) return window.slice(0, lastStop + 1).trim();
 
   const cut = clean.slice(0, max - 1);
   return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,.;:]$/, '') + '…';
