@@ -240,9 +240,36 @@ if (fs.existsSync(path.join(DATA, 'listings.json'))) {
   const badScore = listings.filter((l) => l.qualityScore < 0 || l.qualityScore > 100);
   eq('every quality score is between 0 and 100', badScore.length, 0);
 
+  // One business, one page. The same venue arriving from two research clusters
+  // produced two URLs with the same H1 and the same address, which is the exact
+  // duplicate content this site is otherwise careful about.
+  const fold = (x) => x.toLowerCase().replace(/[^a-z0-9]+/g, '');
+  const byIdentity = new Map();
+  let duplicateBusinesses = 0;
+  for (const l of listings) {
+    const home = byId.get(l.localityId);
+    const phone = String(l.phone || '').replace(/[^0-9]/g, '');
+    let site = '';
+    try { site = l.website ? new URL(l.website).hostname.replace(/^www\./, '') : ''; } catch {}
+    const key = fold(l.name);
+    const prior = byIdentity.get(key) || [];
+    for (const p of prior) {
+      const other = byId.get(p.localityId);
+      const samePhone = phone && phone === String(p.phone || '').replace(/[^0-9]/g, '');
+      let pSite = '';
+      try { pSite = p.website ? new URL(p.website).hostname.replace(/^www\./, '') : ''; } catch {}
+      const sameSite = site && site === pSite;
+      const near = home && other && kmBetween(home, other) <= 3;
+      if (samePhone || sameSite || p.localityId === l.localityId || near) duplicateBusinesses++;
+    }
+    prior.push(l);
+    byIdentity.set(key, prior);
+  }
+  eq('no business is listed twice', duplicateBusinesses, 0);
+
   // Inference rule: same state and under 12km should never appear as an
   // inferred service area, because that is the same town.
-  const km = (a, b) => {
+  const kmBetween = (a, b) => {
     const R = 6371, tr = Math.PI / 180;
     const dLat = (b.lat - a.lat) * tr, dLng = (b.lng - a.lng) * tr;
     const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLng / 2) ** 2 * Math.cos(a.lat * tr) * Math.cos(b.lat * tr);
@@ -256,7 +283,7 @@ if (fs.existsSync(path.join(DATA, 'listings.json'))) {
       if (id === l.localityId) continue;
       const other = byId.get(id);
       if (!other) continue;
-      if (other.state === home.state && km(home, other) < 12) violations++;
+      if (other.state === home.state && kmBetween(home, other) < 12) violations++;
       if (other.tier >= 4) violations++;
     }
   }

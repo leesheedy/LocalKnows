@@ -7728,56 +7728,63 @@
   ]
  },
  {
-  "id": "biz-the-thirsty-devil-brewery",
-  "slug": "the-thirsty-devil-brewery",
+  "id": "biz-the-thirsty-devil-brewery-south-albury",
+  "slug": "the-thirsty-devil-brewery-south-albury",
   "name": "The Thirsty Devil Brewery",
   "status": "scraped",
-  "vertical": "pubs_clubs",
+  "vertical": "things_to_do",
   "categoryIds": [
+   "cat-breweries",
    "cat-bars"
   ],
-  "description": "A micro brewery on Townsend Street that brews on site and pours from a 14-tap bar. There are two beer gardens, a large function room and the Hungry Devil food van operating during peak times. The bar also serves cocktails such as espresso martinis, Aperol spritzes and ginger mules and produces its own spirits. Dogs are welcome on leads and live music runs seasonally in the warmer months.",
-  "phone": "0428 769 126",
-  "website": "https://thethirstydevil.com.au/",
+  "description": "The Thirsty Devil brews its beers on site in South Albury's industrial area and runs a 14 tap lineup covering pale ale, IPA, red ale, mid strength, porter and ginger beer. The bar also pours in house spirits and vodka RTDs, local wines, ciders, cocktails and non alcoholic drinks. Food comes from an indoor food van serving pizzas, burgers, chicken wings and sides. There are two outdoor beer gardens which are dog friendly, live music in the warmer months, and a function room for up to 100 people.",
+  "phone": "02 6021 1112",
+  "website": "https://www.thethirstydevil.com.au/",
   "addressLine": "289 Townsend Street",
-  "localityId": "loc-nsw-albury",
+  "localityId": "loc-nsw-south-albury",
   "postcode": "2640",
   "isMobile": false,
   "serviceAreaIds": [
+   "loc-nsw-south-albury",
    "loc-nsw-albury"
   ],
   "serviceAreaInferred": false,
   "logoText": "TD",
-  "logoTheme": "c",
+  "logoTheme": "a",
   "attributes": {
    "beer_garden": "yes",
    "outdoor_seating": "yes",
    "dog_friendly": "yes",
    "live_music": "yes",
-   "function_room": "yes"
+   "function_room": "yes",
+   "meals": "yes",
+   "wheelchair_accessible": "yes"
   },
   "licences": [],
   "hours": [],
   "reviews": [],
-  "qualityScore": 80,
+  "qualityScore": 88,
   "isSample": false,
   "sources": [
+   "https://www.thethirstydevil.com.au/",
+   "https://www.visitalburywodonga.com/operator/the-thirsty-devil-brewery/",
    "https://thethirstydevil.com.au/",
-   "https://www.alburywodongaaustralia.com.au/17198/the-thirsty-devil-brewery/",
-   "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+   "https://www.alburywodongaaustralia.com.au/17198/the-thirsty-devil-brewery/"
   ],
-  "confidence": "medium",
+  "confidence": "high",
   "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Thirsty+Devil+Brewery+Albury+NSW",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Thirsty%20Devil%20Brewery%20South%20Albury%20NSW",
   "facebook": "https://www.facebook.com/TheThirstyDevilBrewery",
   "instagram": "https://www.instagram.com/the_thirsty_devil_brewery/",
   "highlights": [
+   "Beers brewed on site, 14 taps",
+   "House made vodka RTDs and in house spirits",
+   "Indoor food van serving pizzas, burgers and wings",
+   "Two dog friendly outdoor beer gardens",
+   "Live music in the warmer months",
+   "Function room for up to 100 people",
    "Beer brewed on site, 14 taps",
-   "Two beer gardens",
-   "Hungry Devil food van at peak times",
-   "Large function room",
-   "Dogs welcome on leads",
-   "Seasonal live music in the warmer months"
+   "Two beer gardens"
   ]
  },
  {
@@ -8699,17 +8706,18 @@
   ]
  },
  {
-  "id": "biz-bridge-road-brewers",
-  "slug": "bridge-road-brewers",
+  "id": "biz-bridge-road-brewers-beechworth",
+  "slug": "bridge-road-brewers-beechworth",
   "name": "Bridge Road Brewers",
   "status": "scraped",
-  "vertical": "pubs_clubs",
+  "vertical": "things_to_do",
   "categoryIds": [
+   "cat-breweries",
    "cat-bars"
   ],
-  "description": "A brewery and taproom on Ford Street, Beechworth, with a second venue in Brunswick East and an outlet at Melbourne Airport. The Beechworth venue serves pizza alongside the brewery's beers, sells packaged beer to take away, and runs tastings, events and venue bookings.",
+  "description": "Bridge Road Brewers has operated from a 150 year old coach house and stables in the centre of Beechworth since 2005. The taproom pours 20 house brewed beers on tap plus curated local wines, and the kitchen serves pizza. There is a sunny beer garden, a children's play area, complimentary bike hire and daily insider brewery tours. Beers include the Beechworth Pale Ale, Bling IPA, Little Hazy, alcohol free options and a ginger beer.",
   "phone": "03 5728 2703",
-  "website": "https://bridgeroadbrewers.com.au/",
+  "website": "https://www.bridgeroadbrewers.com.au/",
   "addressLine": "42 Ford Street",
   "localityId": "loc-vic-beechworth",
   "postcode": "3747",
@@ -8719,34 +8727,88 @@
   ],
   "serviceAreaInferred": false,
   "logoText": "BR",
-  "logoTheme": "e",
+  "logoTheme": "a",
   "attributes": {
    "tastings": "yes",
    "meals": "yes",
    "dine_in": "yes",
    "takeaway": "yes",
-   "bookings": "yes"
+   "bookings": "yes",
+   "tours": "yes",
+   "beer_garden": "yes",
+   "outdoor_seating": "yes",
+   "kid_friendly": "yes",
+   "playground": "yes",
+   "open_sunday": "yes"
   },
   "licences": [],
-  "hours": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "11:00",
+    "closes": "23:00",
+    "closed": false
+   }
+  ],
   "reviews": [],
-  "qualityScore": 88,
+  "qualityScore": 100,
   "isSample": false,
   "sources": [
+   "https://www.bridgeroadbrewers.com.au/",
+   "https://www.explorebeechworth.com.au/listing/bridge-road-brewers-beechworth/",
    "https://bridgeroadbrewers.com.au/",
    "https://www.explorebeechworth.com.au/things-to-do/eat-drink/"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge+Road+Brewers+Beechworth+VIC",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge%20Road%20Brewers%20Beechworth%20VIC",
   "facebook": "https://www.facebook.com/BridgeRoadBrewers",
   "instagram": "https://www.instagram.com/bridgeroadbrewers/",
   "highlights": [
+   "20 house brewed beers on tap",
+   "Set in a 150 year old coach house and stables",
+   "Pizza kitchen",
+   "Beer garden and children's play area",
+   "Complimentary bike hire",
+   "Daily insider brewery tours",
    "Brewery and taproom in Beechworth",
-   "Pizza served with the beer range",
-   "Packaged beer to take away",
-   "Beer tastings and events",
-   "Venue bookings"
+   "Pizza served with the beer range"
   ]
  },
  {
@@ -26312,15 +26374,16 @@
   "priceBand": "$$"
  },
  {
-  "id": "biz-knights-deli",
-  "slug": "knights-deli",
+  "id": "biz-knights-deli-wagga-wagga",
+  "slug": "knights-deli-wagga-wagga",
   "name": "Knights Deli",
   "status": "scraped",
-  "vertical": "eat_drink",
+  "vertical": "trades",
   "categoryIds": [
+   "cat-butchers",
    "cat-takeaway"
   ],
-  "description": "Knights Deli on Fitzmaurice Street is a delicatessen and food providore stocking local Riverina produce along with a large range of Australian and international artisan cheese and gourmet goods. Its own products include toffee apples, choc dipped oranges, hazelnut biscotti and Riverina Smokehouse jerky. The shop also sells fresh foods, pies and pastries, salads and heat-and-eat meals, with online ordering and in-store pickup, and puts together gift hampers.",
+  "description": "Delicatessen and food providore on Fitzmaurice Street selling meats and smallgoods, artisan cheeses, cured meats, antipasto, salads and pies, plus pantry lines and a house-made Knights Own range. The shop also does catering, grazing boxes, platters and gift hampers, and trades Monday to Friday 8am to 6pm and Saturday 9am to 4pm.",
   "phone": "02 6921 3725",
   "website": "https://knightsriverina.com.au/",
   "addressLine": "183 Fitzmaurice Street",
@@ -26328,9 +26391,10 @@
   "postcode": "2650",
   "isMobile": false,
   "serviceAreaIds": [
-   "loc-nsw-wagga-wagga"
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
   ],
-  "serviceAreaInferred": false,
+  "serviceAreaInferred": true,
   "logoText": "KD",
   "logoTheme": "c",
   "attributes": {
@@ -26339,26 +26403,66 @@
    "price_band": "$$"
   },
   "licences": [],
-  "hours": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "16:00",
+    "closed": false
+   }
+  ],
   "reviews": [],
-  "qualityScore": 88,
+  "qualityScore": 94,
   "isSample": false,
   "sources": [
-   "https://visitwagga.com/discover/eat-drink/product?productId=5a2a2a8c8bfb0c663146a07a",
-   "https://knightsriverina.com.au/"
+   "https://knightsriverina.com.au/",
+   "https://www.localsearch.com.au/find/butchers/wagga-wagga-nsw-2650",
+   "https://visitwagga.com/discover/eat-drink/product?productId=5a2a2a8c8bfb0c663146a07a"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Knights%20Deli%20Wagga%20Wagga%20NSW",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Knights+Deli+Wagga+Wagga+NSW",
   "facebook": "https://www.facebook.com/KnightsRiverina/",
-  "instagram": "https://instagram.com/knightsriverina",
+  "instagram": "https://www.instagram.com/knightsriverina",
   "highlights": [
+   "Meats, smallgoods and cured meats",
+   "Artisan cheeses and antipasto",
+   "House-made Knights Own range",
+   "Grazing boxes, platters and hampers",
+   "Catering service",
+   "Open Saturdays 9am to 4pm",
    "Delicatessen and food providore",
-   "Large artisan cheese range",
-   "Riverina Smokehouse jerky and toffee apples",
-   "Pies, salads and heat-and-eat meals",
-   "Online ordering with in-store pickup",
-   "Gift hampers"
+   "Large artisan cheese range"
   ],
   "priceBand": "$$"
  },
@@ -27148,7 +27252,8 @@
   "status": "scraped",
   "vertical": "pubs_clubs",
   "categoryIds": [
-   "cat-pubs"
+   "cat-pubs",
+   "cat-hotels"
   ],
   "description": "Accommodation, restaurant and bar on Edward Street near the CBD and the railway station. The Mallee Grill restaurant serves steaks and pub classics Monday to Saturday evenings, with pizzas available in the bar and restaurant from 10am daily and lunch on Friday and Saturday. There is a happy hour Thursday to Saturday and function facilities for conferences and private events.",
   "phone": "02 6921 4328",
@@ -27166,10 +27271,11 @@
   "attributes": {
    "licensed": "yes",
    "meals": "yes",
-   "dine_in": "yes",
-   "accommodation": "yes",
+   "parking": "yes",
    "function_room": "yes",
-   "price_band": "$$"
+   "price_band": "$$",
+   "dine_in": "yes",
+   "accommodation": "yes"
   },
   "licences": [],
   "hours": [],
@@ -27177,11 +27283,13 @@
   "qualityScore": 88,
   "isSample": false,
   "sources": [
-   "https://www.astorinn.com.au/"
+   "https://www.astorinn.com.au/",
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/astor-hotel-and-bar"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-18",
   "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Astor+Hotel+%26+Bar+Wagga+Wagga+NSW",
+  "facebook": "https://www.facebook.com/Astor-Inn-158545801250628/",
   "instagram": "https://www.instagram.com/astorinn",
   "highlights": [
    "Boutique rooms near the CBD and railway station",
@@ -27189,7 +27297,9 @@
    "Pizzas from 10am daily",
    "Friday and Saturday lunch",
    "Happy hour Thursday to Saturday",
-   "Conference and private function facilities"
+   "Conference and private function facilities",
+   "43 rooms near the CBD and railway station",
+   "Mallee Grill restaurant on site"
   ],
   "priceBand": "$$"
  },
@@ -28569,16 +28679,17 @@
   "postcode": "2650",
   "isMobile": false,
   "serviceAreaIds": [
-   "loc-nsw-lake-albert"
+   "loc-nsw-lake-albert",
+   "loc-nsw-wagga-wagga"
   ],
   "serviceAreaInferred": false,
   "logoText": "WW",
   "logoTheme": "c",
   "attributes": {
    "licensed": "yes",
+   "function_room": "yes",
    "meals": "yes",
    "dine_in": "yes",
-   "function_room": "yes",
    "parking": "yes",
    "price_band": "$$"
   },
@@ -28588,7 +28699,8 @@
   "qualityScore": 88,
   "isSample": false,
   "sources": [
-   "https://wwcc.com.au/"
+   "https://wwcc.com.au/",
+   "https://visitwagga.com/discover/seendo/product?productId=57e348d0f816d1735ff369f1"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-18",
@@ -28601,7 +28713,9 @@
    "Bent greens and all-weather fairways",
    "Lakeview Eatery for lunch and dinner",
    "Pro shop with coaching",
-   "Functions for up to 200 people"
+   "Functions for up to 200 people",
+   "18-hole championship course of 6054 metres from the back markers",
+   "On the shores of Lake Albert"
   ],
   "priceBand": "$$"
  },
@@ -31059,90 +31173,6 @@
   ]
  },
  {
-  "id": "biz-knights-deli-wagga-wagga",
-  "slug": "knights-deli-wagga-wagga",
-  "name": "Knights Deli",
-  "status": "scraped",
-  "vertical": "trades",
-  "categoryIds": [
-   "cat-butchers"
-  ],
-  "description": "Delicatessen and food providore on Fitzmaurice Street selling meats and smallgoods, artisan cheeses, cured meats, antipasto, salads and pies, plus pantry lines and a house-made Knights Own range. The shop also does catering, grazing boxes, platters and gift hampers, and trades Monday to Friday 8am to 6pm and Saturday 9am to 4pm.",
-  "phone": "02 6921 3725",
-  "website": "https://knightsriverina.com.au/",
-  "addressLine": "183 Fitzmaurice Street",
-  "localityId": "loc-nsw-wagga-wagga",
-  "postcode": "2650",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-wagga-wagga",
-   "loc-nsw-the-rock"
-  ],
-  "serviceAreaInferred": true,
-  "logoText": "KD",
-  "logoTheme": "c",
-  "attributes": {},
-  "licences": [],
-  "hours": [
-   {
-    "day": 1,
-    "opens": "08:00",
-    "closes": "18:00",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "08:00",
-    "closes": "18:00",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "08:00",
-    "closes": "18:00",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "08:00",
-    "closes": "18:00",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "08:00",
-    "closes": "18:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "09:00",
-    "closes": "16:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 94,
-  "isSample": false,
-  "sources": [
-   "https://knightsriverina.com.au/",
-   "https://www.localsearch.com.au/find/butchers/wagga-wagga-nsw-2650"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Knights+Deli+Wagga+Wagga+NSW",
-  "facebook": "https://www.facebook.com/KnightsRiverina/",
-  "instagram": "https://www.instagram.com/knightsriverina",
-  "highlights": [
-   "Meats, smallgoods and cured meats",
-   "Artisan cheeses and antipasto",
-   "House-made Knights Own range",
-   "Grazing boxes, platters and hampers",
-   "Catering service",
-   "Open Saturdays 9am to 4pm"
-  ]
- },
- {
   "id": "biz-cbm-meats",
   "slug": "cbm-meats",
   "name": "CBM Meats",
@@ -32252,59 +32282,6 @@
    "Walking distance to Baylis Street"
   ],
   "priceBand": "$$$"
- },
- {
-  "id": "biz-the-astor-hotel-and-bar",
-  "slug": "the-astor-hotel-and-bar",
-  "name": "The Astor Hotel & Bar",
-  "status": "scraped",
-  "vertical": "stay",
-  "categoryIds": [
-   "cat-hotels"
-  ],
-  "description": "A 43-room hotel on Edward Street close to the Wagga Wagga CBD and railway station. Rooms have air conditioning, televisions, tea and coffee facilities, private bathrooms and mini bars, with daily housekeeping and on-site parking. The Mallee Grill serves grill meals Monday to Saturday evenings and pizzas daily, and the bar opens from 10am, with function rooms available for conferences and private events.",
-  "phone": "02 6921 4328",
-  "website": "https://www.astorinn.com.au/",
-  "addressLine": "104 Edward Street",
-  "localityId": "loc-nsw-wagga-wagga",
-  "postcode": "2650",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-wagga-wagga"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "AH",
-  "logoTheme": "f",
-  "attributes": {
-   "licensed": "yes",
-   "meals": "yes",
-   "parking": "yes",
-   "function_room": "yes",
-   "price_band": "$$"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 88,
-  "isSample": false,
-  "sources": [
-   "https://www.astorinn.com.au/",
-   "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/astor-hotel-and-bar"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Astor+Hotel+and+Bar+Wagga+Wagga+NSW",
-  "facebook": "https://www.facebook.com/Astor-Inn-158545801250628/",
-  "instagram": "https://www.instagram.com/astorinn/",
-  "highlights": [
-   "43 rooms near the CBD and railway station",
-   "Mallee Grill restaurant on site",
-   "Bar open daily from 10am",
-   "Function rooms for conferences and private events",
-   "On-site parking",
-   "10 minute drive to the airport and RAAF Base"
-  ],
-  "priceBand": "$$"
  },
  {
   "id": "biz-quality-hotel-rules-club-wagga",
@@ -34973,50 +34950,6 @@
    "Pro shop and golf lessons",
    "Corporate golf days and functions",
    "Five minutes west of the CBD off the Sturt Highway"
-  ]
- },
- {
-  "id": "biz-wagga-wagga-country-club-wagga-wagga",
-  "slug": "wagga-wagga-country-club-wagga-wagga",
-  "name": "Wagga Wagga Country Club",
-  "status": "scraped",
-  "vertical": "clubs_hobbies",
-  "categoryIds": [
-   "cat-golf-clubs"
-  ],
-  "description": "The Wagga Wagga Country Club sits on the shores of Lake Albert and is included in Australia's top 100 country courses. The tree-lined 18-hole championship course measures 6054 metres from the back markers and has bent greens and all-weather fairways. The club also caters for functions and dining and has a bar and conference facilities.",
-  "phone": "02 6922 6444",
-  "addressLine": "57 Plumpton Road",
-  "localityId": "loc-nsw-wagga-wagga",
-  "postcode": "2650",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-wagga-wagga"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "WW",
-  "logoTheme": "e",
-  "attributes": {
-   "licensed": "yes",
-   "function_room": "yes"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 64,
-  "isSample": false,
-  "sources": [
-   "https://visitwagga.com/discover/seendo/product?productId=57e348d0f816d1735ff369f1"
-  ],
-  "confidence": "medium",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Wagga%20Country%20Club%20Wagga%20Wagga%20NSW",
-  "highlights": [
-   "18-hole championship course of 6054 metres from the back markers",
-   "Bent greens and all-weather fairways",
-   "On the shores of Lake Albert",
-   "Bar, dining and function facilities",
-   "Listed among Australia's top 100 country courses"
   ]
  },
  {
@@ -41876,104 +41809,6 @@
   ]
  },
  {
-  "id": "biz-bridge-road-brewers-beechworth",
-  "slug": "bridge-road-brewers-beechworth",
-  "name": "Bridge Road Brewers",
-  "status": "scraped",
-  "vertical": "things_to_do",
-  "categoryIds": [
-   "cat-breweries"
-  ],
-  "description": "Bridge Road Brewers has operated from a 150 year old coach house and stables in the centre of Beechworth since 2005. The taproom pours 20 house brewed beers on tap plus curated local wines, and the kitchen serves pizza. There is a sunny beer garden, a children's play area, complimentary bike hire and daily insider brewery tours. Beers include the Beechworth Pale Ale, Bling IPA, Little Hazy, alcohol free options and a ginger beer.",
-  "phone": "03 5728 2703",
-  "website": "https://www.bridgeroadbrewers.com.au/",
-  "addressLine": "42 Ford Street",
-  "localityId": "loc-vic-beechworth",
-  "postcode": "3747",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-vic-beechworth"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "BR",
-  "logoTheme": "a",
-  "attributes": {
-   "tastings": "yes",
-   "tours": "yes",
-   "meals": "yes",
-   "beer_garden": "yes",
-   "outdoor_seating": "yes",
-   "kid_friendly": "yes",
-   "playground": "yes",
-   "open_sunday": "yes"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 0,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 1,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "11:00",
-    "closes": "23:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 100,
-  "isSample": false,
-  "sources": [
-   "https://www.bridgeroadbrewers.com.au/",
-   "https://www.explorebeechworth.com.au/listing/bridge-road-brewers-beechworth/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge%20Road%20Brewers%20Beechworth%20VIC",
-  "facebook": "https://www.facebook.com/BridgeRoadBrewers",
-  "instagram": "https://www.instagram.com/bridgeroadbrewers/",
-  "highlights": [
-   "20 house brewed beers on tap",
-   "Set in a 150 year old coach house and stables",
-   "Pizza kitchen",
-   "Beer garden and children's play area",
-   "Complimentary bike hire",
-   "Daily insider brewery tours"
-  ]
- },
- {
   "id": "biz-last-st-brewery",
   "slug": "last-st-brewery",
   "name": "Last St Brewery",
@@ -42494,60 +42329,6 @@
    "Live acoustic music",
    "Two private event spaces",
    "Open Wednesday to Sunday"
-  ]
- },
- {
-  "id": "biz-the-thirsty-devil-brewery-south-albury",
-  "slug": "the-thirsty-devil-brewery-south-albury",
-  "name": "The Thirsty Devil Brewery",
-  "status": "scraped",
-  "vertical": "things_to_do",
-  "categoryIds": [
-   "cat-breweries"
-  ],
-  "description": "The Thirsty Devil brews its beers on site in South Albury's industrial area and runs a 14 tap lineup covering pale ale, IPA, red ale, mid strength, porter and ginger beer. The bar also pours in house spirits and vodka RTDs, local wines, ciders, cocktails and non alcoholic drinks. Food comes from an indoor food van serving pizzas, burgers, chicken wings and sides. There are two outdoor beer gardens which are dog friendly, live music in the warmer months, and a function room for up to 100 people.",
-  "phone": "02 6021 1112",
-  "website": "https://www.thethirstydevil.com.au/",
-  "addressLine": "289 Townsend Street",
-  "localityId": "loc-nsw-south-albury",
-  "postcode": "2640",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-south-albury"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "TD",
-  "logoTheme": "a",
-  "attributes": {
-   "beer_garden": "yes",
-   "outdoor_seating": "yes",
-   "dog_friendly": "yes",
-   "live_music": "yes",
-   "function_room": "yes",
-   "meals": "yes",
-   "wheelchair_accessible": "yes"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 88,
-  "isSample": false,
-  "sources": [
-   "https://www.thethirstydevil.com.au/",
-   "https://www.visitalburywodonga.com/operator/the-thirsty-devil-brewery/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Thirsty%20Devil%20Brewery%20South%20Albury%20NSW",
-  "facebook": "https://www.facebook.com/TheThirstyDevilBrewery",
-  "instagram": "https://www.instagram.com/the_thirsty_devil_brewery/",
-  "highlights": [
-   "Beers brewed on site, 14 taps",
-   "House made vodka RTDs and in house spirits",
-   "Indoor food van serving pizzas, burgers and wings",
-   "Two dog friendly outdoor beer gardens",
-   "Live music in the warmer months",
-   "Function room for up to 100 people"
   ]
  }
 ]

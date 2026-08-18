@@ -201,7 +201,11 @@ export function listingNode(
       '@type': 'PostalAddress',
       streetAddress: l.addressLine,
       addressLocality: ctx.locality.name,
-      addressRegion: l.postcode ? ctx.locality.state : undefined,
+      // The state does not depend on whether we have a postcode. This read
+      // `l.postcode ? state : undefined`, which would have emitted an address
+      // with no region for any listing missing a postcode. None currently are,
+      // so it never fired, but the condition was meaningless either way.
+      addressRegion: ctx.locality.state,
       postalCode: l.postcode,
       addressCountry: 'AU',
     };

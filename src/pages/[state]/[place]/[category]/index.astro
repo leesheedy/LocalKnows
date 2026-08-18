@@ -15,10 +15,9 @@ import {
   listingsInLocality,
   listingsInLocalityCategory,
   localityCategoryStats,
-  getCategory,
+  themesFor,
   POLICY,
 } from '~/lib/repo';
-import { THEMES } from '~/lib/themes';
 import { BUILD_DATE, chunk } from '~/lib/build';
 
 export async function getStaticPaths() {
@@ -46,12 +45,10 @@ export async function getStaticPaths() {
       });
     }
 
-    // Themed pages. Below a theme's own threshold the page is not generated at
-    // all: a nightlife page with two pubs on it is worse than none.
-    const all = listingsInLocality(locality.id);
-    for (const theme of THEMES) {
-      const matched = all.filter((l) => theme.matches(l, getCategory(l.categoryIds[0])));
-      if (matched.length < theme.min) continue;
+    // Themed pages. themesFor() owns the thresholds so the route and every link
+    // to it ask the same question, which is the bug class that has bitten this
+    // codebase four times now.
+    for (const theme of themesFor(locality.id)) {
       paths.push({
         params: {
           state: STATES[locality.state].slug,

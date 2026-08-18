@@ -570,7 +570,12 @@ export const isLiveLocality = (localityId: string): boolean => LIVE_IDS.has(loca
  * them, for the same reason as isLiveLocality.
  */
 export const hasGuidePages = (localityId: string): boolean =>
-  listingsInLocality(localityId).length >= 12 && activeCategoriesInLocality(localityId).length >= 6;
+  listingsInLocality(localityId).length >= 12 &&
+  activeCategoriesInLocality(localityId).length >= 6 &&
+  // Coverage is not the same as content. A suburb reaches twelve listings on
+  // the strength of trades that drive through it, and a guide built from those
+  // is a copy of the next town's guide. It needs businesses of its own.
+  listingsBasedIn(localityId).length >= POLICY.minBasedForGuidePages;
 
 export const guidePageLocalities = () => liveLocalities().filter((l) => hasGuidePages(l.id));
 
@@ -641,7 +646,21 @@ export const COMMUNITY_TYPE_LABEL: Record<CommunityLink['type'], string> = {
  */
 export function themesFor(localityId: string) {
   const rows = listingsInLocality(localityId);
-  return THEMES.filter(
-    (t) => rows.filter((l) => t.matches(l, categoryById.get(l.categoryIds[0]))).length >= t.min,
-  );
+  return THEMES.filter((t) => {
+    const matched = rows.filter((l) => t.matches(l, categoryById.get(l.categoryIds[0])));
+    if (matched.length < t.min) return false;
+    // At least one of them has to actually be here. Without this,
+    // /nsw/west-albury/with-kids/ was five listings and all five were Albury's.
+    const here = matched.filter((l) => l.localityId === localityId).length;
+    return here >= POLICY.minBasedForThemePage;
+  });
+}
+
+/** The listings a theme page shows, in page order. Used by the route and the page. */
+export function listingsForTheme(localityId: string, themeSlug: string): Listing[] {
+  const theme = THEMES.find((t) => t.slug === themeSlug);
+  if (!theme) return [];
+  return listingsInLocality(localityId)
+    .filter((l) => theme.matches(l, categoryById.get(l.categoryIds[0])))
+    .sort((a, b) => b.qualityScore - a.qualityScore);
 }

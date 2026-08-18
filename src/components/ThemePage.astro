@@ -23,7 +23,8 @@ import ListingCard from '~/components/ListingCard.astro';
 import {
   url,
   STATES,
-  listingsInLocality,
+  listingsForTheme,
+  themesFor,
   getCategory,
   getRegion,
   neighboursOf,
@@ -57,9 +58,7 @@ const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const canonicalPath = url.locality(locality) + theme.slug + '/';
 
-const matched = listingsInLocality(locality.id)
-  .filter((l) => theme.matches(l, getCategory(l.categoryIds[0])))
-  .sort((a, b) => b.qualityScore - a.qualityScore);
+const matched = listingsForTheme(locality.id, theme.slug);
 
 /** A listing lands in the first group it matches, so nothing is listed twice. */
 const groups = theme.groups
@@ -93,21 +92,13 @@ const crumbs: Crumb[] = [
 
 const faqs = theme.faqs(locality.name, state.name, matched.length);
 
-// Sibling themes that actually exist for this town, so nothing links to a page
-// that fell under its own threshold.
-const rows = listingsInLocality(locality.id);
-const siblings = THEMES.filter(
-  (t) =>
-    t.slug !== theme.slug &&
-    rows.filter((l) => t.matches(l, getCategory(l.categoryIds[0]))).length >= t.min,
-);
+// Both of these ask themesFor(), the same function the route asks. Computing
+// the threshold a second time here is precisely how two of these pages ended up
+// linked from eight places and built from none.
+const siblings = themesFor(locality.id).filter((t) => t.slug !== theme.slug);
 
-// Same theme, nearby towns, again only where the page exists.
 const nearby = neighboursOf(locality, 12)
-  .filter((nb) => {
-    const r = listingsInLocality(nb.locality.id);
-    return r.filter((l) => theme.matches(l, getCategory(l.categoryIds[0]))).length >= theme.min;
-  })
+  .filter((nb) => themesFor(nb.locality.id).some((t) => t.slug === theme.slug))
   .slice(0, 6);
 
 const jsonLd = graph([

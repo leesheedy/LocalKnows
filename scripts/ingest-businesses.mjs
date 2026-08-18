@@ -175,6 +175,7 @@ console.log('read ' + raw.length + ' records from ' + files.length + ' files');
 const problems = [];
 const autoCategories = new Map();
 const seenSlug = new Map();
+const mergedPairs = [];
 const out = [];
 
 for (const r of raw) {
@@ -345,6 +346,89 @@ for (const r of raw) {
   });
 }
 
+// ------------------------------------------------------------------ dedupe
+
+/**
+ * The same business turns up in two research clusters.
+ *
+ * Bridge Road Brewers is a bar and a brewery, Knights Deli is a takeaway and a
+ * butcher, and each was written down by both researchers. Left alone that
+ * produces two URLs with the same H1 and the same address, which is duplicate
+ * content the site is otherwise careful to avoid.
+ *
+ * A business is the same business when the name matches after folding and it is
+ * in the same locality, or within 3km of it. That distance is deliberate: it
+ * catches the record filed under Albury and the record filed under South Albury,
+ * without merging two genuinely separate branches in different towns.
+ *
+ * The merge keeps the more complete record and unions the categories, so the
+ * business gets one page and appears under both.
+ */
+const fold = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+const completeness = (r) =>
+  [r.addressLine, r.phone, r.website, r.description, r.hours?.length, r.highlights?.length]
+    .filter(Boolean).length + (r.confidence === 'high' ? 2 : 0);
+
+const merged = [];
+const byName = new Map();
+
+for (const row of out) {
+  const k = fold(row.name);
+  const candidates = byName.get(k) || [];
+  const home = localities.find((l) => l.id === row.localityId);
+  const digits = (v) => String(v || '').replace(/[^0-9]/g, '');
+  const host = (v) => {
+    try {
+      return new URL(v).hostname.replace(/^www\./, '');
+    } catch {
+      return '';
+    }
+  };
+
+  const twin = candidates.find((c) => {
+    // Same phone or same website is the strong signal, and it holds at any
+    // distance. The Wagga Wagga Country Club was filed under both Lake Albert
+    // and Wagga Wagga, 5km apart, which no distance rule catches without also
+    // merging genuinely separate branches in neighbouring suburbs.
+    if (digits(c.phone) && digits(c.phone) === digits(row.phone)) return true;
+    if (host(c.website) && host(c.website) === host(row.website)) return true;
+    if (c.localityId === row.localityId) return true;
+    const other = localities.find((l) => l.id === c.localityId);
+    return home && other && distanceKm(home, other) <= 3;
+  });
+
+  if (!twin) {
+    candidates.push(row);
+    byName.set(k, candidates);
+    merged.push(row);
+    continue;
+  }
+
+  // Keep whichever record says more, then fold the other one into it.
+  const [keep, drop] = completeness(row) > completeness(twin) ? [row, twin] : [twin, row];
+  if (keep !== twin) {
+    merged[merged.indexOf(twin)] = keep;
+    candidates[candidates.indexOf(twin)] = keep;
+  }
+
+  for (const cid of drop.categoryIds) {
+    if (!keep.categoryIds.includes(cid)) keep.categoryIds.push(cid);
+  }
+  keep.attributes = { ...drop.attributes, ...keep.attributes };
+  keep.highlights = [...new Set([...(keep.highlights || []), ...(drop.highlights || [])])].slice(0, 8);
+  keep.sources = [...new Set([...(keep.sources || []), ...(drop.sources || [])])].slice(0, 4);
+  keep.serviceAreaIds = [...new Set([...keep.serviceAreaIds, ...drop.serviceAreaIds])];
+  if (!keep.hours?.length && drop.hours?.length) keep.hours = drop.hours;
+  for (const f of ['phone', 'website', 'addressLine', 'email', 'bookingUrl', 'facebook', 'instagram', 'priceBand']) {
+    if (!keep[f] && drop[f]) keep[f] = drop[f];
+  }
+  if (drop.confidence === 'high') keep.confidence = 'high';
+  mergedPairs.push(drop.slug + ' -> ' + keep.slug);
+}
+
+out.length = 0;
+out.push(...merged);
+
 // ------------------------------------------------------------------ write
 
 fs.writeFileSync(path.join(DATA, 'listings.json'), JSON.stringify(out, null, 1));
@@ -371,6 +455,10 @@ const byState = out.reduce((acc, l) => {
 
 console.log('');
 console.log('wrote ' + out.length + ' listings');
+if (mergedPairs.length) {
+  console.log('  merged ' + mergedPairs.length + ' duplicate records:');
+  for (const m of mergedPairs) console.log('    ' + m);
+}
 console.log('  by state: ' + JSON.stringify(byState));
 console.log('  high confidence: ' + out.filter((l) => l.confidence === 'high').length);
 console.log('  with a phone: ' + out.filter((l) => l.phone).length);
