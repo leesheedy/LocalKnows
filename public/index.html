@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LocalKnows | Business directory for NSW and Victoria</title>
+<meta name="description" content="Find trusted plumbers, cafes, mechanics and trades across Albury, Wodonga and the border. Real listings, real reviews, both sides of the river.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#EFEDE4;
+  --paper-2:#F7F6F1;
+  --white:#FFFDF8;
+  --ink:#131E19;
+  --ink-60:rgba(19,30,25,.62);
+  --ink-40:rgba(19,30,25,.4);
+  --river:#1F6B5C;
+  --river-dark:#134A40;
+  --river-10:rgba(31,107,92,.09);
+  --wattle:#E8B21F;
+  --gum:#A8B6A0;
+  --line:rgba(19,30,25,.13);
+  --r:4px;
+  --pad:clamp(20px,5vw,64px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:0}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.mono{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:var(--pad)}
+:focus-visible{outline:2.5px solid var(--river);outline-offset:3px}
+[hidden]{display:none!important}
+
+.btn{background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:var(--r);font-size:14.5px;font-weight:500;border:0;cursor:pointer;font-family:inherit;transition:background .15s,transform .15s}
+.btn:hover{background:var(--river-dark)}
+.btn:active{transform:translateY(1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--white);color:var(--ink)}
+.btn-gold{background:var(--wattle);color:var(--ink);font-weight:600}
+.btn-gold:hover{background:#F5C33C}
+
+.logo{width:54px;height:54px;border-radius:var(--r);display:grid;place-items:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:19px;letter-spacing:-.04em;flex:none;overflow:hidden;border:1px solid rgba(19,30,25,.08);background-size:cover;background-position:center}
+.logo.sm{width:38px;height:38px;font-size:14px}
+.logo.lg{width:88px;height:88px;font-size:30px;border-radius:6px}
+.lg-a{background:#0E4C5A;color:#8FE3D6}
+.lg-b{background:#F0E4C8;color:#7A4B12}
+.lg-c{background:#1B2A36;color:#E8B21F}
+.lg-d{background:#7C1F2E;color:#FFE7D0}
+.lg-e{background:#E8EDE2;color:#2C5C2A}
+.lg-f{background:#2B2140;color:#C9B6FF}
+
+.verif{display:inline-flex;align-items:center;gap:5px;color:var(--river);font-size:13px;font-weight:500}
+.verif svg{flex:none}
+
+.bar{position:sticky;top:0;z-index:60;background:rgba(239,237,228,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar-in{display:flex;align-items:center;gap:22px;height:66px}
+.mark{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px;letter-spacing:-.045em;display:flex;align-items:center;gap:9px}
+.mark i{width:3px;height:20px;background:var(--wattle);display:block;transform:skewX(-14deg)}
+.nav{display:flex;gap:24px;margin-left:auto;font-size:14.5px;color:var(--ink-60)}
+.nav a:hover,.nav a.on{color:var(--ink)}
+@media(max-width:860px){.nav{display:none}}
+
+.hero{padding:clamp(46px,6.5vw,80px) 0 42px}
+.eyebrow{color:var(--river);margin:0 0 18px}
+h1{font-size:clamp(40px,7vw,80px);max-width:15ch}
+h1 em{font-style:normal;color:var(--river)}
+.sub{margin:20px 0 0;max-width:46ch;font-size:clamp(16px,1.6vw,18px);color:var(--ink-60)}
+.search{margin-top:32px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);display:flex;max-width:860px;box-shadow:0 1px 0 rgba(19,30,25,.05)}
+.field{flex:1;display:flex;align-items:center;gap:10px;padding:15px 18px;min-width:0}
+.field+.field{border-left:1px solid var(--line)}
+.field svg{flex:none;stroke:var(--river)}
+.field input{border:0;background:none;font:inherit;font-size:15.5px;width:100%;color:var(--ink);outline:none}
+.field input::placeholder{color:var(--ink-40)}
+.search .btn{border-radius:0 var(--r) var(--r) 0;padding-inline:26px;background:var(--river)}
+@media(max-width:700px){.search{flex-wrap:wrap}.field+.field{border-left:0;border-top:1px solid var(--line)}.field{flex-basis:100%}.search .btn{width:100%;border-radius:0 0 var(--r) var(--r)}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{border:1px solid var(--line);background:var(--white);padding:6px 12px;border-radius:100px;font-size:13.5px;color:var(--ink-60);transition:.15s}
+.chip:hover{border-color:var(--river);color:var(--river)}
+
+.wall{margin-top:44px;padding-top:26px;border-top:1px solid var(--line)}
+.wall p{margin:0 0 16px;color:var(--ink-40)}
+.wall-row{display:flex;gap:10px;flex-wrap:wrap}
+
+.split{position:relative;padding:70px 0;border-top:1px solid var(--line)}
+.split-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
+.split-head h2{font-size:clamp(26px,3.4vw,38px)}
+.river{position:relative;display:grid;grid-template-columns:1fr 64px 1fr}
+.river-line{position:relative}
+.river-line:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;transform:translateX(-50%);background:repeating-linear-gradient(180deg,var(--river) 0 7px,transparent 7px 14px);opacity:.55}
+.river-line span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(90deg);background:var(--paper);padding:6px 4px;color:var(--river);white-space:nowrap}
+.side h3{font-size:20px;margin-bottom:4px}
+.side .tag{display:inline-block;margin:0 0 14px}
+.side.nsw .tag{color:var(--river)}
+.side.vic .tag{color:#8A6A00}
+.side ul{list-style:none;margin:0;padding:0;columns:2;column-gap:24px}
+.side li{margin-bottom:9px;break-inside:avoid}
+.side li a{font-size:14.5px;color:var(--ink-60);border-bottom:1px solid transparent}
+.side li a:hover{color:var(--ink);border-color:var(--wattle)}
+@media(max-width:760px){
+  .river{grid-template-columns:1fr;gap:36px}
+  .river-line{height:1px}
+  .river-line:before{left:0;right:0;top:50%;bottom:auto;width:auto;height:2px;transform:none;background:repeating-linear-gradient(90deg,var(--river) 0 7px,transparent 7px 14px)}
+  .river-line span{transform:translate(-50%,-50%)}
+}
+
+.sec{padding:70px 0;border-top:1px solid var(--line)}
+.sec-head{margin-bottom:28px}
+.sec-head h2{font-size:clamp(26px,3.4vw,38px)}
+.sec-head p{color:var(--ink-60);margin:10px 0 0;max-width:52ch}
+.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.cat{background:var(--paper);padding:20px 18px;display:flex;flex-direction:column;gap:5px;transition:background .15s}
+.cat:hover{background:var(--white)}
+.cat strong{font-weight:600;font-size:16px}
+.cat .n{color:var(--ink-60)}
+.cat:hover .n{color:var(--river)}
+
+.filters{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.pill{border:1px solid var(--line);background:var(--white);padding:7px 13px;border-radius:100px;font-size:13.5px;color:var(--ink-60);cursor:pointer;font-family:inherit;transition:.15s}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.filters .sortby{margin-left:auto;color:var(--ink-40);font-size:13.5px}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:18px;transition:transform .18s,box-shadow .18s,border-color .18s;position:relative}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(19,30,25,.08);border-color:rgba(19,30,25,.22)}
+.card-top{display:flex;gap:14px;align-items:flex-start}
+.card-top h3{font-size:18px;letter-spacing:-.02em;padding-right:56px}
+.card .cat-line{color:var(--ink-40);font-size:13.5px;margin:3px 0 0}
+.state{position:absolute;top:18px;right:18px;background:var(--river-10);color:var(--river);padding:4px 8px;border-radius:2px}
+.card .meta{display:flex;align-items:center;gap:8px;margin:14px 0 10px;font-size:14px;color:var(--ink-60);flex-wrap:wrap}
+.rate{color:var(--ink);font-weight:600}
+.star{color:var(--wattle);letter-spacing:-1px}
+.card p.desc{margin:0 0 14px;font-size:14.5px;color:var(--ink-60)}
+.card-foot{display:flex;gap:10px;align-items:center;padding-top:13px;border-top:1px solid var(--line)}
+.open{color:var(--river);font-weight:500;font-size:13.5px}
+.open:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--river);margin-right:7px;vertical-align:middle}
+.shut{color:var(--ink-40)}
+.shut:before{background:var(--ink-40)}
+.card-foot .btn{margin-left:auto;padding:7px 13px;font-size:13.5px}
+
+.seo{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px}
+.seo h4{margin:0 0 12px;color:var(--ink-60);font-family:"JetBrains Mono",monospace;font-weight:500;font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+.seo ul{list-style:none;margin:0;padding:0}
+.seo li{margin-bottom:8px}
+.seo a{font-size:14.5px;color:var(--ink-60)}
+.seo a:hover{color:var(--river)}
+
+.claim{background:var(--ink);color:var(--paper);padding:62px 0}
+.claim-in{display:flex;gap:34px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.claim h2{font-size:clamp(26px,3.6vw,40px);max-width:16ch}
+.claim p{color:rgba(239,237,228,.65);max-width:40ch;margin:12px 0 0}
+.claim .btn{padding:14px 22px}
+
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--ink-60);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.dash{padding:38px 0 80px}
+.dash-head{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.dash-head h1{font-size:clamp(28px,3.6vw,40px);max-width:none}
+.dash-sub{color:var(--ink-60);margin:0 0 30px}
+.dash-grid{display:grid;grid-template-columns:1fr 350px;gap:26px;align-items:start}
+@media(max-width:940px){.dash-grid{grid-template-columns:1fr}}
+
+.panel{background:var(--white);border:1px solid var(--line);border-radius:var(--r)}
+.panel+.panel{margin-top:18px}
+.panel-head{padding:16px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:12px}
+.panel-head h3{font-size:16px;letter-spacing:-.02em}
+.panel-head .mono{color:var(--ink-40);margin-left:auto}
+.panel-body{padding:20px}
+
+.uploader{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.drop{border:1.5px dashed rgba(19,30,25,.24);border-radius:6px;padding:18px;flex:1;min-width:230px;text-align:center;cursor:pointer;transition:.15s;background:var(--paper-2)}
+.drop:hover,.drop.over{border-color:var(--river);background:var(--river-10)}
+.drop strong{display:block;font-weight:600;font-size:14.5px;margin-bottom:3px}
+.drop span{font-size:13px;color:var(--ink-40)}
+.logo-note{font-size:12.5px;color:var(--ink-40);margin:12px 0 0}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.grid2{grid-template-columns:1fr}}
+.f{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.f label{font-size:13.5px;font-weight:500}
+.f input,.f textarea,.f select{font:inherit;font-size:14.5px;padding:11px 13px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper-2);color:var(--ink);outline:none;transition:.15s;width:100%}
+.f input:focus,.f textarea:focus,.f select:focus{border-color:var(--river);background:var(--white)}
+.f textarea{resize:vertical;min-height:92px}
+.f .hint{font-size:12.5px;color:var(--ink-40)}
+.f .hint.warn{color:#8A6A00}
+
+.hours{display:flex;flex-direction:column;gap:0}
+.hrow{display:grid;grid-template-columns:96px 1fr auto;gap:12px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}
+.hrow:last-child{border-bottom:0}
+.hrow .day{font-size:14px;font-weight:500}
+.hrow .times{display:flex;gap:8px;align-items:center;color:var(--ink-60);font-size:14px;flex-wrap:wrap}
+.hrow input[type=time]{font:inherit;font-size:13.5px;padding:6px 9px;border:1px solid var(--line);border-radius:var(--r);background:var(--paper-2);width:auto}
+.sw{position:relative;width:40px;height:22px;flex:none}
+.sw input{position:absolute;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}
+.sw i{position:absolute;inset:0;background:rgba(19,30,25,.18);border-radius:100px;transition:.18s;pointer-events:none}
+.sw i:after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:var(--white);border-radius:50%;transition:.18s}
+.sw input:checked+i{background:var(--river)}
+.sw input:checked+i:after{transform:translateX(18px)}
+.sw input:focus-visible+i{outline:2.5px solid var(--river);outline-offset:3px}
+
+.meter{height:6px;background:rgba(19,30,25,.1);border-radius:100px;overflow:hidden;margin:12px 0 16px}
+.meter b{display:block;height:100%;width:72%;background:var(--wattle);border-radius:100px;transition:width .4s}
+.todo{list-style:none;margin:0;padding:0}
+.todo li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.todo li:last-child{border-bottom:0}
+.todo .tick{width:16px;height:16px;border-radius:50%;flex:none;margin-top:3px;border:1.5px solid var(--ink-40)}
+.todo .done .tick{background:var(--river);border-color:var(--river)}
+.todo .done{color:var(--ink-40);text-decoration:line-through}
+
+.preview .card{box-shadow:none;transform:none}
+.preview .card:hover{transform:none;box-shadow:none}
+
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+@media(max-width:640px){.kpis{grid-template-columns:1fr}}
+.kpi{background:var(--white);padding:16px}
+.kpi b{display:block;font-family:"JetBrains Mono",monospace;font-size:22px;font-weight:500;letter-spacing:-.02em}
+.kpi span{font-size:12.5px;color:var(--ink-40)}
+
+.savebar{position:sticky;bottom:0;background:rgba(239,237,228,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:14px 0;margin-top:26px;z-index:40}
+.savebar-in{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.savebar .mono{color:var(--ink-40);margin-right:auto}
+
+/* vertical tabs */
+.verts{display:flex;gap:2px;margin-top:34px;border-bottom:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.verts::-webkit-scrollbar{display:none}
+.vert{background:none;border:0;border-bottom:2px solid transparent;padding:12px 16px;font:inherit;font-size:14.5px;color:var(--ink-40);cursor:pointer;white-space:nowrap;transition:.15s;font-family:inherit}
+.vert:hover{color:var(--ink)}
+.vert[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--wattle);font-weight:600}
+.vert small{display:block;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--ink-40);margin-top:2px}
+
+/* region browse */
+.regions{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+@media(max-width:820px){.regions{grid-template-columns:1fr}}
+.reg-state{border-top:2px solid var(--river);padding-top:18px}
+.reg-state.vic{border-top-color:var(--wattle)}
+.reg-state h3{font-size:22px;margin-bottom:4px}
+.reg-state .n{color:var(--ink-40);margin-bottom:18px;display:block}
+.reg-list{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+@media(max-width:520px){.reg-list{grid-template-columns:1fr}}
+.reg{padding:10px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:8px}
+.reg strong{font-weight:500;font-size:15px}
+.reg span{margin-left:auto;color:var(--ink-40);font-family:"JetBrains Mono",monospace;font-size:11px}
+.reg:hover strong{color:var(--river)}
+.reg.soon{opacity:.45}
+.reg.soon span{color:var(--wattle)}
+
+/* partners page */
+.hero-sm{padding:52px 0 34px}
+.hero-sm h1{font-size:clamp(32px,5vw,58px);max-width:18ch}
+.two{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+.tier{display:grid;grid-template-columns:1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:center}
+.tier:last-child{border-bottom:0}
+.tier b{font-weight:600;font-size:15px;display:block}
+.tier p{margin:3px 0 0;font-size:13.5px;color:var(--ink-60)}
+.rel{font-family:"JetBrains Mono",monospace;font-size:11px;padding:5px 9px;border-radius:2px;white-space:nowrap}
+.rel.follow{background:var(--river-10);color:var(--river)}
+.rel.no{background:rgba(19,30,25,.06);color:var(--ink-40)}
+.badge-demo{border:1px solid var(--line);border-radius:6px;padding:14px;background:var(--white);display:flex;gap:12px;align-items:center;max-width:300px}
+.badge-demo .logo{width:42px;height:42px;font-size:15px}
+.badge-demo b{display:block;font-size:14px;font-weight:600;line-height:1.25}
+.badge-demo span{font-size:12px;color:var(--ink-60)}
+.code{background:#101A16;color:#B9D8CF;font-family:"JetBrains Mono",monospace;font-size:11.5px;line-height:1.7;padding:16px;border-radius:var(--r);overflow-x:auto;margin:14px 0 0;white-space:pre}
+.code .c{color:#5F7D74}
+.code .s{color:var(--wattle)}
+.note{border-left:2px solid var(--wattle);padding:2px 0 2px 14px;margin:18px 0;font-size:14px;color:var(--ink-60)}
+.crawl{font-family:"JetBrains Mono",monospace;font-size:12px}
+.crawl div{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:center}
+.crawl div:last-child{border-bottom:0}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--river);flex:none}
+.dot.off{background:var(--ink-40)}
+.crawl em{margin-left:auto;font-style:normal;color:var(--ink-40)}
+
+/* ============ portal additions ============ */
+.util{background:var(--ink);color:rgba(239,237,228,.7);font-size:13px}
+.util-in{display:flex;align-items:center;gap:20px;height:38px}
+.util a{color:rgba(239,237,228,.7)}
+.util a:hover{color:var(--paper)}
+.util .right{margin-left:auto;display:flex;gap:18px;align-items:center}
+.util .live{color:var(--wattle)}
+.util .live:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--wattle);margin-right:7px;vertical-align:middle}
+@media(max-width:760px){.util .hide-s{display:none}}
+
+.bar-search{margin-left:auto;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:100px;padding:6px 14px;background:var(--white);min-width:190px}
+.bar-search input{border:0;background:none;font:inherit;font-size:14px;outline:none;width:100%}
+@media(max-width:980px){.bar-search{display:none}}
+
+/* hero */
+.hero-grid{display:grid;grid-template-columns:1fr 316px;gap:40px;align-items:start}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:30px}}
+
+.panel-search{background:var(--ink);border-radius:6px;padding:24px;margin-top:30px;position:relative;overflow:hidden}
+.panel-search:after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(31,107,92,.5),transparent 70%)}
+.panel-search h2{color:var(--paper);font-size:20px;margin-bottom:18px;position:relative}
+.ps-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;position:relative}
+@media(max-width:760px){.ps-grid{grid-template-columns:1fr}}
+.ps-f{display:flex;flex-direction:column;gap:6px}
+.ps-f label{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:rgba(239,237,228,.5)}
+.ps-f input,.ps-f select{font:inherit;font-size:14.5px;padding:11px 13px;border-radius:var(--r);border:1px solid rgba(239,237,228,.16);background:rgba(255,255,255,.06);color:var(--paper);outline:none;width:100%}
+.ps-f input::placeholder{color:rgba(239,237,228,.38)}
+.ps-f select option{color:var(--ink)}
+.ps-f input:focus,.ps-f select:focus{border-color:var(--wattle);background:rgba(255,255,255,.1)}
+.ps-foot{display:flex;gap:14px;align-items:center;margin-top:16px;flex-wrap:wrap;position:relative}
+.ps-foot .btn{background:var(--wattle);color:var(--ink);font-weight:600;padding:12px 26px}
+.ps-foot .btn:hover{background:#F5C33C}
+.ps-check{display:flex;align-items:center;gap:8px;color:rgba(239,237,228,.7);font-size:13.5px;cursor:pointer}
+.ps-check input{accent-color:var(--wattle);width:15px;height:15px}
+.ps-links{margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;font-size:13.5px}
+.ps-links a{color:var(--river);border-bottom:1px solid transparent}
+.ps-links a:hover{border-color:var(--wattle)}
+
+/* trust rail */
+.rail{border:1px solid var(--line);border-radius:6px;background:var(--white);overflow:hidden}
+.rail-h{padding:14px 18px;border-bottom:1px solid var(--line);background:var(--paper-2)}
+.rail-b{padding:18px}
+.rail-stat{padding:12px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px}
+.rail-stat:last-child{border-bottom:0}
+.rail-stat b{font-family:"JetBrains Mono",monospace;font-size:19px;font-weight:500;letter-spacing:-.02em}
+.rail-stat span{font-size:13px;color:var(--ink-60)}
+.rail-note{font-size:12.5px;color:var(--ink-40);padding:14px 18px;border-top:1px solid var(--line);background:var(--paper-2)}
+
+/* tools */
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.tool{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px;transition:.18s;position:relative}
+.tool:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(19,30,25,.08);border-color:rgba(19,30,25,.22)}
+.tool .ico{width:34px;height:34px;border-radius:var(--r);background:var(--river-10);display:grid;place-items:center;color:var(--river);margin-bottom:4px}
+.tool h3{font-size:16.5px;letter-spacing:-.02em}
+.tool p{margin:0;font-size:14px;color:var(--ink-60)}
+.tool .go{margin-top:auto;padding-top:12px;color:var(--river);font-size:13.5px;font-weight:500}
+.tool .free{position:absolute;top:18px;right:18px;background:var(--wattle);color:var(--ink);padding:3px 8px;border-radius:2px;font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em}
+
+/* events + wire */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+@media(max-width:900px){.duo{grid-template-columns:1fr;gap:50px}}
+.duo h2{font-size:26px;margin-bottom:6px}
+.duo .lead{color:var(--ink-60);font-size:14.5px;margin:0 0 20px}
+
+.ev{display:grid;grid-template-columns:58px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.ev:last-of-type{border-bottom:0}
+.ev-date{border:1px solid var(--line);border-radius:var(--r);text-align:center;padding:8px 0;background:var(--white)}
+.ev-date b{display:block;font-family:"JetBrains Mono",monospace;font-size:18px;font-weight:500;line-height:1}
+.ev-date span{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40)}
+.ev h3{font-size:16px;letter-spacing:-.02em}
+.ev p{margin:4px 0 0;font-size:13.5px;color:var(--ink-60)}
+.ev .where{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--river);margin-top:7px;display:block}
+
+.wire{list-style:none;margin:0;padding:0}
+.wire li{padding:15px 0;border-bottom:1px solid var(--line)}
+.wire li:last-child{border-bottom:0}
+.wire time{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-40);display:block;margin-bottom:5px}
+.wire h3{font-size:16px;letter-spacing:-.02em;font-weight:600;font-family:"Instrument Sans",sans-serif}
+.wire a:hover h3{color:var(--river)}
+.wire p{margin:4px 0 0;font-size:13.5px;color:var(--ink-60)}
+
+/* guides */
+.guides{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.guide{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px;transition:.18s}
+.guide:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(19,30,25,.08)}
+.guide .kicker{color:var(--river);margin-bottom:10px;display:block}
+.guide h3{font-size:17.5px;letter-spacing:-.02em;margin-bottom:8px}
+.guide p{margin:0;font-size:14px;color:var(--ink-60)}
+.guide .by{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:12.5px;color:var(--ink-40)}
+
+/* newsletter */
+.news-band{background:var(--river);color:var(--paper);padding:52px 0}
+.news-in{display:grid;grid-template-columns:1fr 400px;gap:36px;align-items:center}
+@media(max-width:860px){.news-in{grid-template-columns:1fr}}
+.news-in h2{font-size:clamp(24px,3.2vw,34px);max-width:18ch}
+.news-in p{color:rgba(239,237,228,.75);margin:12px 0 0;max-width:44ch}
+.nl{display:flex;gap:0;background:var(--white);border-radius:var(--r);overflow:hidden}
+.nl input{flex:1;border:0;font:inherit;font-size:15px;padding:14px 16px;outline:none;color:var(--ink);min-width:0}
+.nl .btn{border-radius:0;background:var(--ink);padding-inline:22px}
+.nl-note{color:rgba(239,237,228,.6);font-size:12.5px;margin:10px 0 0}
+
+/* footer expanded */
+.foot{background:var(--ink);color:rgba(239,237,228,.65);padding:56px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px}
+@media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot h4{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:rgba(239,237,228,.45);margin:0 0 14px;font-weight:500}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li{margin-bottom:9px}
+.foot a{color:rgba(239,237,228,.65);font-size:14px}
+.foot a:hover{color:var(--paper)}
+.foot .mark{color:var(--paper);margin-bottom:14px}
+.foot .blurb{font-size:14px;max-width:34ch;margin:0}
+.foot-base{margin-top:44px;border-top:1px solid rgba(239,237,228,.14);padding:22px 0;display:flex;gap:18px;flex-wrap:wrap;font-size:13px}
+.foot-base .right{margin-left:auto;display:flex;gap:18px}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="util">
+  <div class="wrap util-in">
+    <span class="live hide-s">45,310 listings indexed</span>
+    <a href="#" class="hide-s">Border Wire newsletter</a>
+    <span class="right">
+      <a href="#" onclick="show('partners');return false" class="hide-s">Link partners</a>
+      <a href="#" onclick="show('dash');return false">Sign in</a>
+      <a href="#" onclick="show('dash');return false">Add your business</a>
+    </span>
+  </div>
+</div>
+
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="mark" href="#" onclick="show('site');return false"><i></i>LocalKnows</a>
+    <nav class="nav">
+      <a href="#" onclick="show('site');return false" id="nav-site" class="on">Find a business</a>
+      <a href="#regions" onclick="show('site')">NSW &amp; VIC</a>
+      <a href="#tools" onclick="show('site')">Guides &amp; tools</a>
+      <a href="#" onclick="show('site');return false">Events</a>
+      <a href="#" onclick="show('partners');return false" id="nav-part">Partners</a>
+      <a href="#" onclick="show('dash');return false" id="nav-dash">MemberZone</a>
+    </nav>
+    <label class="bar-search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" placeholder="Search" aria-label="Search the site">
+    </label>
+  </div>
+</header>
+
+<main id="view-site">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="mono eyebrow">New South Wales · Victoria</p>
+        <h1>The good ones, on <em>both sides</em> of the river.</h1>
+        <p class="sub">Trades, pubs, clubs, places to stay and things to do. Every licence checked against the state register. No paid rankings, no fake reviews.</p>
+
+        <div class="panel-search">
+          <h2>Find a local business</h2>
+          <div class="ps-grid">
+            <div class="ps-f">
+              <label for="q">Keyword or name</label>
+              <input id="q" type="search" placeholder="Plumber, beer garden, motel...">
+            </div>
+            <div class="ps-f">
+              <label for="qcat">Category</label>
+              <select id="qcat">
+                <option>All categories</option>
+                <option>Trades and services</option>
+                <option>Eat and drink</option>
+                <option>Pubs and clubs</option>
+                <option>Stay</option>
+                <option>Things to do</option>
+                <option>Clubs and hobbies</option>
+              </select>
+            </div>
+            <div class="ps-f">
+              <label for="qloc">Where</label>
+              <input id="qloc" type="search" placeholder="Albury NSW 2640">
+            </div>
+          </div>
+          <div class="ps-foot">
+            <button class="btn">Find</button>
+            <label class="ps-check"><input type="checkbox" checked> Open now</label>
+            <label class="ps-check"><input type="checkbox" checked> Licence verified</label>
+            <label class="ps-check"><input type="checkbox"> Services both states</label>
+          </div>
+          <div class="ps-links">
+            <a href="#" onclick="show('dash');return false">Add your business</a>
+            <a href="#" onclick="show('dash');return false">Manage your listing</a>
+            <a href="#" onclick="show('partners');return false">Link partner program</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="rail">
+        <div class="rail-h"><span class="mono" style="color:var(--ink-60)">Live index</span></div>
+        <div class="rail-b">
+          <div class="rail-stat"><b>45,310</b><span>businesses and places</span></div>
+          <div class="rail-stat"><b>1,160</b><span>towns and suburbs</span></div>
+          <div class="rail-stat"><b>8,940</b><span>licences verified this quarter</span></div>
+          <div class="rail-stat"><b>612</b><span>servicing both states</span></div>
+          <div class="rail-stat"><b>2,840</b><span>hours checked this week</span></div>
+        </div>
+        <p class="rail-note">Licence data cross checked against NSW Fair Trading and the Victorian Building Authority registers. Last sync 6 hours ago.</p>
+      </aside>
+    </div>
+
+    <div class="verts" role="tablist">
+      <button class="vert" role="tab" aria-selected="true" onclick="vert(this,0)">Trades &amp; services<small>18,400</small></button>
+      <button class="vert" role="tab" aria-selected="false" onclick="vert(this,1)">Eat &amp; drink<small>9,120</small></button>
+      <button class="vert" role="tab" aria-selected="false" onclick="vert(this,2)">Pubs &amp; clubs<small>3,860</small></button>
+      <button class="vert" role="tab" aria-selected="false" onclick="vert(this,3)">Stay<small>4,210</small></button>
+      <button class="vert" role="tab" aria-selected="false" onclick="vert(this,4)">Things to do<small>6,740</small></button>
+      <button class="vert" role="tab" aria-selected="false" onclick="vert(this,5)">Clubs &amp; hobbies<small>2,980</small></button>
+    </div>
+
+    <div class="chips" style="margin-top:18px" id="heroChips"></div>
+  </div>
+</section>
+
+<section class="sec" id="cats" style="padding-top:48px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="catHead">What do you need done?</h2>
+      <p id="catSub"></p>
+    </div>
+    <div class="cats" id="catGrid"></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Busy this week</h2>
+      <p>Highest rated across the border in the last 30 days. Ranked on reviews and verification, never on payment.</p>
+    </div>
+
+    <div class="filters">
+      <button class="pill" aria-pressed="true" onclick="tog(this)">All</button>
+      <button class="pill" aria-pressed="false" onclick="tog(this)">NSW side</button>
+      <button class="pill" aria-pressed="false" onclick="tog(this)">VIC side</button>
+      <button class="pill" aria-pressed="false" onclick="tog(this)">Open now</button>
+      <button class="pill" aria-pressed="false" onclick="tog(this)">Licence verified</button>
+      <span class="sortby mono">Sorted by rating</span>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="state mono">NSW · Lavington</span>
+        <div class="card-top">
+          <div class="logo lg-a">RP</div>
+          <div><h3>Riverside Plumbing Co</h3><p class="cat-line">Plumber · Gasfitter</p></div>
+        </div>
+        <div class="meta">
+          <span class="rate">4.9</span><span class="star">★★★★★</span><span>112 reviews</span>
+          <span class="verif"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Licence checked</span>
+        </div>
+        <p class="desc">Blocked drains, hot water and gas fitting. Same day callouts across Albury and Wodonga.</p>
+        <div class="card-foot"><span class="open">Open until 5pm</span><button class="btn">View</button></div>
+      </article>
+
+      <article class="card">
+        <span class="state mono">VIC · Wodonga</span>
+        <div class="card-top">
+          <div class="logo lg-b">DH</div>
+          <div><h3>Dean and Hovell Coffee</h3><p class="cat-line">Cafe · Roastery</p></div>
+        </div>
+        <div class="meta">
+          <span class="rate">4.8</span><span class="star">★★★★★</span><span>340 reviews</span>
+          <span class="verif"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Verified</span>
+        </div>
+        <p class="desc">Single origin roasted on site. Big table, fast wifi, dogs welcome out front.</p>
+        <div class="card-foot"><span class="open">Open until 3pm</span><button class="btn">View</button></div>
+      </article>
+
+      <article class="card">
+        <span class="state mono">VIC · Beechworth</span>
+        <div class="card-top">
+          <div class="logo lg-c">TH</div>
+          <div><h3>Tanswells Commercial Hotel</h3><p class="cat-line">Country pub · Rooms</p></div>
+        </div>
+        <div class="meta">
+          <span class="rate">4.6</span><span class="star">★★★★★</span><span>512 reviews</span>
+          <span class="verif"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Verified</span>
+        </div>
+        <p class="desc">Beer garden out back, kitchen until 8:30pm, twelve rooms upstairs. Live music Fridays.</p>
+        <div class="card-foot"><span class="open">Open until 11pm</span><button class="btn">View</button></div>
+      </article>
+
+      <article class="card">
+        <span class="state mono">NSW · Thurgoona</span>
+        <div class="card-top">
+          <div class="logo lg-d">BA</div>
+          <div><h3>Border Auto Electrical</h3><p class="cat-line">Auto electrician · 4WD</p></div>
+        </div>
+        <div class="meta">
+          <span class="rate">4.9</span><span class="star">★★★★★</span><span>87 reviews</span>
+          <span class="verif"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Licence checked</span>
+        </div>
+        <p class="desc">Diagnostics, dual battery and caravan wiring. Euro and 4WD specialists.</p>
+        <div class="card-foot"><span class="open">Open until 5:30pm</span><button class="btn">View</button></div>
+      </article>
+
+      <article class="card">
+        <span class="state mono">VIC · Yackandandah</span>
+        <div class="card-top">
+          <div class="logo lg-e">YV</div>
+          <div><h3>Yack Valley Landscapes</h3><p class="cat-line">Landscaping · Retaining walls</p></div>
+        </div>
+        <div class="meta">
+          <span class="rate">5.0</span><span class="star">★★★★★</span><span>46 reviews</span>
+          <span class="verif"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Licence checked</span>
+        </div>
+        <p class="desc">Native gardens, dry stone and irrigation. Books out three months ahead.</p>
+        <div class="card-foot"><span class="open">Open until 4pm</span><button class="btn">View</button></div>
+      </article>
+
+      <article class="card">
+        <span class="state mono">NSW · Albury</span>
+        <div class="card-top">
+          <div class="logo lg-f">AM</div>
+          <div><h3>Albury Model Railway Club</h3><p class="cat-line">Hobby club · Open days</p></div>
+        </div>
+        <div class="meta"><span class="rate">4.8</span><span class="star">★★★★★</span><span>34 reviews</span></div>
+        <p class="desc">Meets Wednesday nights and second Sunday. Juniors welcome, first three visits free.</p>
+        <div class="card-foot"><span class="open shut">Next meet Wed 7pm</span><button class="btn">View</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="regions">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Every region, both states</h2>
+      <p>Rolling out region by region. Each one gets the full build before we move on, so no town sits here as an empty page waiting for listings.</p>
+    </div>
+    <div class="regions">
+      <div class="reg-state">
+        <h3>New South Wales</h3>
+        <span class="mono n">14 regions · 612 localities</span>
+        <div class="reg-list">
+          <a class="reg" href="/nsw/riverina/"><strong>Riverina</strong><span>2,180</span></a>
+          <a class="reg" href="/nsw/murray/"><strong>Murray</strong><span>1,640</span></a>
+          <a class="reg" href="/nsw/south-west-slopes/"><strong>South West Slopes</strong><span>890</span></a>
+          <a class="reg" href="/nsw/snowy-monaro/"><strong>Snowy Monaro</strong><span>740</span></a>
+          <a class="reg soon" href="#"><strong>Central West</strong><span>Q4</span></a>
+          <a class="reg soon" href="#"><strong>Hunter</strong><span>Q4</span></a>
+          <a class="reg soon" href="#"><strong>Illawarra</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>New England</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>Northern Rivers</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>Sydney</strong><span>Q2 27</span></a>
+        </div>
+      </div>
+      <div class="reg-state vic">
+        <h3>Victoria</h3>
+        <span class="mono n">11 regions · 548 localities</span>
+        <div class="reg-list">
+          <a class="reg" href="/vic/hume/"><strong>Hume</strong><span>2,410</span></a>
+          <a class="reg" href="/vic/high-country/"><strong>High Country</strong><span>1,120</span></a>
+          <a class="reg" href="/vic/goulburn-valley/"><strong>Goulburn Valley</strong><span>960</span></a>
+          <a class="reg" href="/vic/king-valley/"><strong>King Valley</strong><span>410</span></a>
+          <a class="reg soon" href="#"><strong>Bendigo &amp; Loddon</strong><span>Q4</span></a>
+          <a class="reg soon" href="#"><strong>Ballarat &amp; Grampians</strong><span>Q4</span></a>
+          <a class="reg soon" href="#"><strong>Gippsland</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>Geelong &amp; Bellarine</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>Mornington Peninsula</strong><span>Q1 27</span></a>
+          <a class="reg soon" href="#"><strong>Melbourne</strong><span>Q2 27</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tools">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Free tools</h2>
+      <p>Built off our own data. These are the pages that earn links without asking anyone for one.</p>
+    </div>
+    <div class="tools">
+      <a class="tool" href="/tools/licence-check/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>Licence checker</h3>
+        <p>Type a builder or plumber licence number and we check it live against the NSW and VIC registers. Class, expiry, and whether the name matches.</p>
+        <span class="go">Check a licence →</span>
+      </a>
+      <a class="tool" href="/tools/what-should-this-cost/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></span>
+        <h3>What should this cost?</h3>
+        <p>Median quoted price by job type and region, from real quotes submitted through the site. Updated monthly, not scraped from a US site.</p>
+        <span class="go">Check a price →</span>
+      </a>
+      <a class="tool" href="/tools/abn-lookup/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></span>
+        <h3>ABN and GST lookup</h3>
+        <p>Check an ABN is active and GST registered before you pay a deposit. Shows entity type, registration date and trading names.</p>
+        <span class="go">Look up an ABN →</span>
+      </a>
+      <a class="tool" href="/tools/public-holidays/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+        <h3>NSW vs VIC holiday calendar</h3>
+        <p>Border towns run two sets of public holidays. See which side is trading, plus penalty rate implications for callouts.</p>
+        <span class="go">See the calendar →</span>
+      </a>
+      <a class="tool" href="/tools/quote-comparison/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <h3>Quote comparison sheet</h3>
+        <p>Send one job description to up to five verified trades and get quotes back in one place. No lead selling, no reselling your number.</p>
+        <span class="go">Start a request →</span>
+      </a>
+      <a class="tool" href="/tools/business-name-check/">
+        <span class="free mono">Free</span>
+        <span class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span>
+        <h3>Business name availability</h3>
+        <p>Checks ASIC business names, domain availability and whether the handle is free on the main socials, in one go.</p>
+        <span class="go">Check a name →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap duo">
+    <div>
+      <h2>What's on</h2>
+      <p class="lead">Markets, trade nights, club open days and business events across the border.</p>
+
+      <div class="ev">
+        <div class="ev-date"><b>22</b><span>Aug</span></div>
+        <div>
+          <h3>Albury Wodonga Business Expo</h3>
+          <p>120 exhibitors, free entry, panel sessions on hiring across two states.</p>
+          <span class="where">Albury Entertainment Centre · 9am</span>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date"><b>24</b><span>Aug</span></div>
+        <div>
+          <h3>Yackandandah Farmers Market</h3>
+          <p>Second last Sunday. Produce, coffee, live music from 9.</p>
+          <span class="where">Yackandandah Public Hall · 8am</span>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date"><b>27</b><span>Aug</span></div>
+        <div>
+          <h3>Model Railway Club open night</h3>
+          <p>Come and try, juniors welcome, layout running all evening.</p>
+          <span class="where">North Albury Scout Hall · 7pm</span>
+        </div>
+      </div>
+      <div class="ev">
+        <div class="ev-date"><b>03</b><span>Sep</span></div>
+        <div>
+          <h3>Trade night: new VIC plumbing regs</h3>
+          <p>What changes in October and what it means if you work both sides.</p>
+          <span class="where">Wodonga Reece branch · 5:30pm</span>
+        </div>
+      </div>
+      <p style="margin-top:20px"><a href="/events/" style="color:var(--river);border-bottom:1px solid var(--wattle);font-size:14.5px">All events across NSW and VIC →</a></p>
+    </div>
+
+    <div>
+      <h2>Border wire</h2>
+      <p class="lead">Local business news, written by us, not syndicated.</p>
+      <ul class="wire">
+        <li><a href="#"><time>18 Aug 2026</time><h3>Albury council opens applications for the shopfront activation grant</h3><p>Up to $15,000 for fitouts in the Dean Street precinct. Applications close 30 September.</p></a></li>
+        <li><a href="#"><time>15 Aug 2026</time><h3>What tradies charged across the border in FY26</h3><p>Our annual report from 41,000 quotes. Callout fees up 8%, but VIC side is now cheaper for electrical.</p></a></li>
+        <li><a href="#"><time>12 Aug 2026</time><h3>Victorian plumbing registration changes land in October</h3><p>What the new classes mean for NSW licence holders working in Wodonga.</p></a></li>
+        <li><a href="#"><time>08 Aug 2026</time><h3>Hume region hospitality vacancies down for the third quarter</h3><p>Pubs report easier hiring, but chefs remain the hardest role to fill.</p></a></li>
+      </ul>
+      <p style="margin-top:20px"><a href="/wire/" style="color:var(--river);border-bottom:1px solid var(--wattle);font-size:14.5px">More from the wire →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Guides worth reading</h2>
+      <p>Written by people who live here, reviewed every six months, with the last reviewed date shown so you know it is current.</p>
+    </div>
+    <div class="guides">
+      <a class="guide" href="#">
+        <span class="mono kicker">Hiring a trade</span>
+        <h3>What a plumber should actually cost in regional NSW</h3>
+        <p>Callout fees, hourly rates, after hours loading and the five line items that mean you are being overcharged.</p>
+        <span class="by">Reviewed Jul 2026 · 9 min read</span>
+      </a>
+      <a class="guide" href="#">
+        <span class="mono kicker">Cross border</span>
+        <h3>NSW and VIC licence rules, explained for border businesses</h3>
+        <p>Which licences carry across, which need a second registration, and what mutual recognition actually covers.</p>
+        <span class="by">Reviewed Aug 2026 · 12 min read</span>
+      </a>
+      <a class="guide" href="#">
+        <span class="mono kicker">Starting up</span>
+        <h3>Registering a business that trades in two states</h3>
+        <p>ABN, payroll tax thresholds, workers comp in both schemes, and the bits that catch people out in year two.</p>
+        <span class="by">Reviewed Jun 2026 · 15 min read</span>
+      </a>
+      <a class="guide" href="#">
+        <span class="mono kicker">Weekend</span>
+        <h3>The best country pubs within an hour of Albury</h3>
+        <p>Ranked, with kitchen closing times, whether the rooms upstairs are worth it, and which ones do a real parma.</p>
+        <span class="by">Reviewed Aug 2026 · 7 min read</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head"><h2>People near you searched for</h2></div>
+    <div class="seo">
+      <div>
+        <h4>Trades</h4>
+        <ul>
+          <li><a href="#">Emergency plumber Albury</a></li>
+          <li><a href="#">Electrician Lavington</a></li>
+          <li><a href="#">Solar installer Wodonga</a></li>
+          <li><a href="#">Concreter Thurgoona</a></li>
+          <li><a href="#">Fencing Baranduda</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pubs and clubs</h4>
+        <ul>
+          <li><a href="#">Pubs with a beer garden Albury</a></li>
+          <li><a href="#">Live music Wodonga this week</a></li>
+          <li><a href="#">Bowls clubs Riverina</a></li>
+          <li><a href="#">Pub meals after 8pm</a></li>
+          <li><a href="#">RSL clubs near me</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Stay and do</h4>
+        <ul>
+          <li><a href="#">Pet friendly motels Albury</a></li>
+          <li><a href="#">Caravan parks Murray River</a></li>
+          <li><a href="#">Rail trails High Country</a></li>
+          <li><a href="#">Wineries King Valley</a></li>
+          <li><a href="#">Things to do Beechworth</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clubs and hobbies</h4>
+        <ul>
+          <li><a href="#">Sporting clubs Wodonga</a></li>
+          <li><a href="#">Mens shed Albury</a></li>
+          <li><a href="#">Car clubs Riverina</a></li>
+          <li><a href="#">Junior sport Thurgoona</a></li>
+          <li><a href="#">Community groups Corowa</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="news-band">
+  <div class="wrap news-in">
+    <div>
+      <h2>The Border Wire, every Thursday</h2>
+      <p>New listings, grant deadlines, what changed in the regs, and the pub we ate at this week. Free, and we do not sell the list.</p>
+    </div>
+    <div>
+      <div class="nl">
+        <input type="email" placeholder="you@yourbusiness.com.au" aria-label="Email address">
+        <button class="btn">Subscribe</button>
+      </div>
+      <p class="nl-note">9,400 subscribers across NSW and VIC. Unsubscribe in one click.</p>
+    </div>
+  </div>
+</section>
+
+<section class="claim">
+  <div class="wrap claim-in">
+    <div>
+      <h2>Own one of these businesses?</h2>
+      <p>Claim your listing, upload your logo, verify your licence and reply to reviews. Free forever for the basics.</p>
+    </div>
+    <button class="btn btn-gold" onclick="show('dash')">Claim your listing</button>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="mark"><i></i>LocalKnows</div>
+        <p class="blurb">An independent directory for New South Wales and Victoria. We check licences, we do not sell rankings, and we say when we are wrong.</p>
+      </div>
+      <div>
+        <h4>Directory</h4>
+        <ul>
+          <li><a href="#">Trades and services</a></li>
+          <li><a href="#">Eat and drink</a></li>
+          <li><a href="#">Pubs and clubs</a></li>
+          <li><a href="#">Places to stay</a></li>
+          <li><a href="#">Things to do</a></li>
+          <li><a href="#">Clubs and hobbies</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Browse</h4>
+        <ul>
+          <li><a href="#">All NSW regions</a></li>
+          <li><a href="#">All VIC regions</a></li>
+          <li><a href="#">A to Z of towns</a></li>
+          <li><a href="#">Curated best-of lists</a></li>
+          <li><a href="#">Events calendar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="#">Licence checker</a></li>
+          <li><a href="#">What should this cost</a></li>
+          <li><a href="#">ABN lookup</a></li>
+          <li><a href="#">Holiday calendar</a></li>
+          <li><a href="#">Quote comparison</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For business</h4>
+        <ul>
+          <li><a href="#" onclick="show('dash');return false">Add your business</a></li>
+          <li><a href="#" onclick="show('dash');return false">Manage your listing</a></li>
+          <li><a href="#" onclick="show('partners');return false">Link partner program</a></li>
+          <li><a href="#">How ranking works</a></li>
+          <li><a href="#">Report a listing</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>LocalKnows, a product of Automatrix Digital Pty Ltd. ACN 700 072 608.</span>
+      <span class="right">
+        <a href="#">Editorial policy</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </span>
+    </div>
+  </div>
+</footer>
+</main>
+
+
+<main id="view-partners" hidden>
+<section class="hero-sm">
+  <div class="wrap">
+    <p class="mono eyebrow">Link partner program</p>
+    <h1>Earn a dofollow link by being verified, not by linking back.</h1>
+    <p class="sub">We used to run this as a straight swap. We stopped, because Google names that exact arrangement as link spam and it was hurting the businesses it was meant to help. Here is what replaced it.</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:20px">
+  <div class="wrap two">
+    <div>
+      <div class="panel">
+        <div class="panel-head"><h3>How your outbound link is treated</h3><span class="mono">Automatic</span></div>
+        <div class="panel-body">
+          <div class="tier">
+            <div><b>Scraped, unclaimed</b><p>We built the listing from public records. Nobody has confirmed it.</p></div>
+            <span class="rel no">rel="nofollow"</span>
+          </div>
+          <div class="tier">
+            <div><b>Claimed, profile incomplete</b><p>Owner has logged in but the listing is under 80% complete.</p></div>
+            <span class="rel no">rel="nofollow"</span>
+          </div>
+          <div class="tier">
+            <div><b>Claimed, ABN verified, 80%+ complete</b><p>Real business, real details, logo and hours in place.</p></div>
+            <span class="rel follow">dofollow</span>
+          </div>
+          <div class="tier">
+            <div><b>Licence verified against the state register</b><p>Checked against NSW Fair Trading or the VIC Building Authority in the last 90 days.</p></div>
+            <span class="rel follow">dofollow + badge</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>The badge</h3><span class="mono">Optional</span></div>
+        <div class="panel-body">
+          <p style="margin:0 0 16px;color:var(--ink-60);font-size:14.5px">Pulls your live rating and verification state from our API, so it is never stale. Put it in your footer or on your about page.</p>
+          <div class="badge-demo">
+            <div class="logo lg-a">RP</div>
+            <div>
+              <b>Verified on LocalKnows</b>
+              <span>4.9 ★ · Licence NSW 264881C checked</span>
+            </div>
+          </div>
+          <div class="code"><span class="c">&lt;!-- LocalKnows verification badge --&gt;</span>
+&lt;a href=<span class="s">"https://localknows.au/business/riverside-plumbing-co/"</span>
+   rel=<span class="s">"nofollow"</span>&gt;
+  &lt;img src=<span class="s">"https://cdn.localknows.au/badge/riverside-plumbing-co.svg"</span>
+       alt=<span class="s">"Verified on LocalKnows"</span> width=<span class="s">"200"</span> height=<span class="s">"64"</span>&gt;
+&lt;/a&gt;</div>
+          <div class="note">The badge carries rel="nofollow" on purpose. It is there to send you customers and show visitors your licence is checked, not to pass ranking credit. If it passed credit in exchange for placement, both our sites would be running a link scheme.</div>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <div class="panel-head"><h3>Badge monitor</h3><span class="mono">Weekly crawl</span></div>
+        <div class="panel-body crawl">
+          <div><span class="dot"></span>riversideplumbing.com.au<em>live 94d</em></div>
+          <div><span class="dot"></span>deanandhovell.com.au<em>live 61d</em></div>
+          <div><span class="dot"></span>borderauto.net.au<em>live 40d</em></div>
+          <div><span class="dot off"></span>yackvalley.com.au<em>lapsed 12d</em></div>
+          <div><span class="dot"></span>barandudaphysio.com.au<em>live 8d</em></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h3>Where our links come from</h3></div>
+        <div class="panel-body">
+          <ul class="todo">
+            <li><span class="tick"></span>Curated best-of lists, businesses share them</li>
+            <li><span class="tick"></span>Sporting and hobby club sites</li>
+            <li><span class="tick"></span>Council and tourism resource pages</li>
+            <li><span class="tick"></span>Local press citing our pricing data</li>
+            <li><span class="tick"></span>Annual tradie rates report</li>
+          </ul>
+          <p class="logo-note">None of these are swaps. That is the point.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+
+<main id="view-dash" hidden>
+<section class="dash">
+  <div class="wrap">
+    <div class="dash-head">
+      <div class="logo lg lg-a" id="bigLogo">RP</div>
+      <div>
+        <p class="mono" style="color:var(--river);margin:0 0 8px">Your listing</p>
+        <h1>Riverside Plumbing Co</h1>
+      </div>
+    </div>
+    <p class="dash-sub">Last edited 4 days ago · <a href="#" onclick="show('site');return false" style="color:var(--river);border-bottom:1px solid var(--wattle)">View public page</a></p>
+
+    <div class="kpis" style="margin-bottom:26px">
+      <div class="kpi"><b>1,842</b><span>Listing views, 30 days</span></div>
+      <div class="kpi"><b>216</b><span>Calls and direction taps</span></div>
+      <div class="kpi"><b>#3</b><span>Ranking for plumbers Albury</span></div>
+    </div>
+
+    <div class="dash-grid">
+      <div>
+        <div class="panel">
+          <div class="panel-head"><h3>Logo and photos</h3><span class="mono">Shown everywhere</span></div>
+          <div class="panel-body">
+            <div class="uploader">
+              <div class="logo lg lg-a" id="logoPreview">RP</div>
+              <label class="drop" id="drop">
+                <input type="file" accept="image/png,image/jpeg,image/svg+xml,image/webp" hidden id="logoInput">
+                <strong>Drop your logo here, or browse</strong>
+                <span>PNG, SVG or JPG. Square works best. Up to 5 MB.</span>
+              </label>
+            </div>
+            <p class="logo-note">We crop to a square and generate the sizes for search results, category pages and the map pin. Transparent PNG or SVG looks sharpest.</p>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Business details</h3></div>
+          <div class="panel-body">
+            <div class="f">
+              <label for="bn">Business name</label>
+              <input id="bn" value="Riverside Plumbing Co" oninput="sync()">
+              <span class="hint">Use the name on your van and your invoices, not a keyword stuffed version.</span>
+            </div>
+            <div class="grid2">
+              <div class="f">
+                <label for="cat">Main category</label>
+                <select id="cat" onchange="sync()">
+                  <option>Plumber</option><option>Electrician</option><option>Mechanic</option><option>Builder</option><option>Cafe</option>
+                </select>
+              </div>
+              <div class="f">
+                <label for="cat2">Second category</label>
+                <select id="cat2" onchange="sync()">
+                  <option>Gasfitter</option><option>Drainer</option><option>Roof plumber</option><option>None</option>
+                </select>
+              </div>
+            </div>
+            <div class="f">
+              <label for="desc">What you do</label>
+              <textarea id="desc" oninput="sync()">Blocked drains, hot water and gas fitting. Same day callouts across Albury.</textarea>
+              <span class="hint">One or two plain sentences. This is what shows on category pages and in AI answers.</span>
+            </div>
+            <div class="grid2">
+              <div class="f">
+                <label for="ph">Phone</label>
+                <input id="ph" value="02 6021 4488">
+              </div>
+              <div class="f">
+                <label for="web">Website</label>
+                <input id="web" value="riversideplumbing.com.au">
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="f">
+                <label for="addr">Street address</label>
+                <input id="addr" value="14 Kaitlers Road">
+              </div>
+              <div class="f">
+                <label for="sub">Suburb</label>
+                <input id="sub" value="Lavington NSW 2641" oninput="sync()">
+              </div>
+            </div>
+            <div class="f">
+              <label for="lic">Licence number</label>
+              <input id="lic" value="NSW 264881C">
+              <span class="hint warn">Working both sides of the border? Add your VIC licence too so you show on Wodonga pages.</span>
+            </div>
+            <div class="f">
+              <label for="area">Areas you service</label>
+              <input id="area" value="Albury, Lavington, Thurgoona, Jindera, Wodonga">
+              <span class="hint">This decides which suburb pages you appear on. Be honest, we track callout complaints.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Opening hours</h3><span class="mono">Checked weekly</span></div>
+          <div class="panel-body hours">
+            <div class="hrow"><span class="day">Monday</span><span class="times"><input type="time" value="07:00"> to <input type="time" value="17:00"></span><label class="sw"><input type="checkbox" checked aria-label="Open Monday"><i></i></label></div>
+            <div class="hrow"><span class="day">Tuesday</span><span class="times"><input type="time" value="07:00"> to <input type="time" value="17:00"></span><label class="sw"><input type="checkbox" checked aria-label="Open Tuesday"><i></i></label></div>
+            <div class="hrow"><span class="day">Wednesday</span><span class="times"><input type="time" value="07:00"> to <input type="time" value="17:00"></span><label class="sw"><input type="checkbox" checked aria-label="Open Wednesday"><i></i></label></div>
+            <div class="hrow"><span class="day">Thursday</span><span class="times"><input type="time" value="07:00"> to <input type="time" value="17:00"></span><label class="sw"><input type="checkbox" checked aria-label="Open Thursday"><i></i></label></div>
+            <div class="hrow"><span class="day">Friday</span><span class="times"><input type="time" value="07:00"> to <input type="time" value="16:00"></span><label class="sw"><input type="checkbox" checked aria-label="Open Friday"><i></i></label></div>
+            <div class="hrow"><span class="day">Saturday</span><span class="times">Emergency callouts only</span><label class="sw"><input type="checkbox" aria-label="Open Saturday"><i></i></label></div>
+            <div class="hrow"><span class="day">Sunday</span><span class="times">Closed</span><label class="sw"><input type="checkbox" aria-label="Open Sunday"><i></i></label></div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <div class="panel-head"><h3>Listing strength</h3><span class="mono">72%</span></div>
+          <div class="panel-body">
+            <div class="meter"><b></b></div>
+            <ul class="todo">
+              <li class="done"><span class="tick"></span>Logo uploaded</li>
+              <li class="done"><span class="tick"></span>Phone and address verified</li>
+              <li class="done"><span class="tick"></span>Hours set</li>
+              <li><span class="tick"></span>Add 4 more photos of your work</li>
+              <li><span class="tick"></span>Add your VIC licence number</li>
+              <li><span class="tick"></span>Reply to 3 unanswered reviews</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="panel preview">
+          <div class="panel-head"><h3>Live preview</h3><span class="mono">Category page</span></div>
+          <div class="panel-body" style="background:var(--paper)">
+            <article class="card">
+              <span class="state mono" id="pvState">NSW · Lavington</span>
+              <div class="card-top">
+                <div class="logo lg-a" id="pvLogo">RP</div>
+                <div>
+                  <h3 id="pvName">Riverside Plumbing Co</h3>
+                  <p class="cat-line" id="pvCat">Plumber · Gasfitter</p>
+                </div>
+              </div>
+              <div class="meta">
+                <span class="rate">4.9</span><span class="star">★★★★★</span><span>112 reviews</span>
+              </div>
+              <p class="desc" id="pvDesc">Blocked drains, hot water and gas fitting. Same day callouts across Albury.</p>
+              <div class="card-foot"><span class="open">Open until 5pm</span><button class="btn">View</button></div>
+            </article>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="savebar">
+      <div class="wrap savebar-in" style="padding-inline:0;max-width:none">
+        <span class="mono">Unsaved changes</span>
+        <button class="btn btn-ghost">Discard</button>
+        <button class="btn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<script>
+function show(v){
+  ['site','partners','dash'].forEach(function(k){
+    document.getElementById('view-'+k).hidden = (k!==v);
+  });
+  document.getElementById('nav-site').classList.toggle('on', v==='site');
+  document.getElementById('nav-part').classList.toggle('on', v==='partners');
+  document.getElementById('nav-dash').classList.toggle('on', v==='dash');
+  window.scrollTo(0,0);
+}
+
+/* vertical switching */
+var VERTICALS = [
+  { head:'What do you need done?',
+    sub:'Every trade category has its own page in every town, with licence checks, real callout fees and reviews from jobs booked through the site.',
+    chips:['Emergency plumbers','Open right now','Auto electricians','Licensed builders','Servicing both states'],
+    cats:[['Plumbers',1840],['Electricians',1620],['Builders',1290],['Mechanics',1410],['Painters',780],['Landscaping',690],['Roofing',540],['Concreters',610]] },
+  { head:'Where to eat',
+    sub:'Cafes, restaurants, bakeries and takeaway across both states. Filter by dietary needs, opening hours and whether they actually take bookings.',
+    chips:['Open now','Breakfast','Gluten free','Dog friendly','Takeaway'],
+    cats:[['Cafes',2140],['Restaurants',1880],['Bakeries',620],['Takeaway',1410],['Pizza',480],['Asian',760],['Pub meals',890],['Wineries & cellar doors',420]] },
+  { head:'Pubs and clubs',
+    sub:'Country pubs, RSLs, bowls clubs and live music rooms. The only directory that tells you what time the kitchen actually closes.',
+    chips:['Beer garden','Live music this week','Meals after 8pm','Courtesy bus','Rooms upstairs'],
+    cats:[['Country pubs',940],['RSL clubs',210],['Bowls clubs',380],['Sports clubs',460],['Live music venues',290],['Bars',520],['Golf clubs',340],['Function venues',420]] },
+  { head:'Somewhere to stay',
+    sub:'Motels, pubs with rooms, farm stays, caravan parks and cabins. Pet policies and cancellation terms stated up front.',
+    chips:['Pet friendly','Family rooms','Free parking','EV charging','Cabins'],
+    cats:[['Motels',1180],['Hotels',640],['Pub accommodation',410],['Caravan parks',530],['Farm stays',290],['B&Bs',380],['Cabins',460],['Camping',320]] },
+  { head:'Things to do',
+    sub:'Walks, wineries, galleries, snow, lakes and rail trails. Seasonal, so we mark what is actually worth doing this month.',
+    chips:['This weekend','Free','Kid friendly','Wet weather','Dog allowed'],
+    cats:[['Walks & hikes',890],['Wineries',640],['Galleries & museums',410],['Rail trails',180],['Lakes & rivers',520],['Snow',140],['Markets',380],['Kids activities',460]] },
+  { head:'Clubs and hobbies',
+    sub:'Sporting clubs, mens sheds, car clubs, choirs, model railways and everything else. Meeting times, membership fees and who to call.',
+    chips:['Come and try','Juniors welcome','Meets weeknights','No membership fee','Accessible'],
+    cats:[['Sporting clubs',940],['Car & motorcycle clubs',260],['Mens sheds',180],['Music & choirs',210],['Craft & sewing',190],['Model & rail',90],['Fishing & boating',280],['Community groups',830]] }
+];
+
+function vert(btn, i){
+  document.querySelectorAll('.vert').forEach(function(b){ b.setAttribute('aria-selected','false'); });
+  btn.setAttribute('aria-selected','true');
+  var v = VERTICALS[i];
+  document.getElementById('catHead').textContent = v.head;
+  document.getElementById('catSub').textContent = v.sub;
+  document.getElementById('heroChips').innerHTML = v.chips.map(function(c){
+    return '<a class="chip" href="#">'+c+'</a>';
+  }).join('');
+  document.getElementById('catGrid').innerHTML = v.cats.map(function(c){
+    return '<a class="cat" href="#"><strong>'+c[0]+'</strong><span class="mono n">'+
+      c[1].toLocaleString()+' listed</span></a>';
+  }).join('');
+}
+vert(document.querySelector('.vert'), 0);
+function tog(b){
+  b.setAttribute('aria-pressed', b.getAttribute('aria-pressed')==='true' ? 'false':'true');
+}
+function initials(s){
+  return s.trim().split(/\s+/).slice(0,2).map(function(w){return w[0]||''}).join('').toUpperCase();
+}
+var logoSet = false;
+function sync(){
+  var name = document.getElementById('bn').value || 'Your business';
+  var desc = document.getElementById('desc').value;
+  var c1 = document.getElementById('cat').value, c2 = document.getElementById('cat2').value;
+  var sub = document.getElementById('sub').value;
+  document.getElementById('pvName').textContent = name;
+  document.getElementById('pvDesc').textContent = desc;
+  document.getElementById('pvCat').textContent = (c2==='None') ? c1 : c1+' · '+c2;
+  var st = sub.indexOf('VIC') > -1 ? 'VIC' : 'NSW';
+  document.getElementById('pvState').textContent = st+' · '+sub.split(/\s+/)[0];
+  if(!logoSet){
+    var i = initials(name);
+    ['pvLogo','logoPreview','bigLogo'].forEach(function(id){ document.getElementById(id).textContent = i; });
+  }
+}
+var drop = document.getElementById('drop');
+var input = document.getElementById('logoInput');
+function applyLogo(file){
+  if(!file || file.type.indexOf('image/') !== 0) return;
+  var url = URL.createObjectURL(file);
+  ['pvLogo','logoPreview','bigLogo'].forEach(function(id){
+    var el = document.getElementById(id);
+    el.textContent = '';
+    el.className = el.className.replace(/lg-[a-f]/,'');
+    el.style.background = 'var(--white) url('+url+') center/cover no-repeat';
+  });
+  logoSet = true;
+}
+input.addEventListener('change', function(e){ applyLogo(e.target.files[0]); });
+['dragenter','dragover'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.add('over'); }); });
+['dragleave','drop'].forEach(function(ev){ drop.addEventListener(ev, function(e){ e.preventDefault(); drop.classList.remove('over'); }); });
+drop.addEventListener('drop', function(e){ applyLogo(e.dataTransfer.files[0]); });
+</script>
+</body>
+</html>
