@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/preflight.mjs && astro build && node scripts/postbuild.mjs",
+    "build": "node scripts/selftest.mjs && node scripts/preflight.mjs && astro build && node scripts/postbuild.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "verify": "node scripts/verify-build.mjs",
@@ -22,7 +22,9 @@
     "scrape": "node scripts/scrape.mjs",
     "indexnow": "node scripts/indexnow.mjs",
     "refresh": "node scripts/generate-wire.mjs && node scripts/ingest-businesses.mjs && npm run build && npm run verify",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "test": "node scripts/selftest.mjs",
+    "audit": "node scripts/audit-seo.mjs"
   },
   "dependencies": {
     "astro": "^5.18.2"
