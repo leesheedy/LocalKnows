@@ -1,0 +1,1443 @@
+[
+  {
+    "name": "Romano's Hotel",
+    "slug": "romanos-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "81 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2013",
+    "website": "https://www.romanoshotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Romano%27s+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/RomanosWagga/",
+    "instagram": "https://www.instagram.com/romanoshotel",
+    "description": "A Fitzmaurice Street pub trading since 1857 and run by the Oates family. The site takes in several distinct spaces: the public bar and kitchen, The Hampden cocktail bar, The Barcade with arcade games, and The Laneway outdoor area with a children's play space. Pub-style rooms and The Hampden Suites are available upstairs, and the function spaces seat up to 120 for a sit-down dinner or 200 cocktail style.",
+    "highlights": [
+      "Trading on Fitzmaurice Street since 1857",
+      "The Hampden cocktail bar",
+      "The Barcade arcade-games bar",
+      "The Laneway outdoor area with children's play area",
+      "Pub rooms and Hampden Suites upstairs",
+      "Functions for up to 120 seated or 200 cocktail style"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "kid_friendly": "yes",
+      "accommodation": "yes",
+      "function_room": "yes",
+      "live_music": "yes"
+    },
+    "sources": [
+      "https://www.romanoshotel.com.au/",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Victoria Hotel",
+    "slug": "victoria-hotel-wagga-wagga",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "55 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 5233",
+    "website": "https://vichotelwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Victoria+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/vicwagga/",
+    "instagram": "https://www.instagram.com/vicwagga/",
+    "description": "A Baylis Street pub in the Wagga CBD with a bistro serving pub classics and grilled meats for lunch and dinner. The venue shows live sport, runs gaming and TAB facilities, and puts on live music, DJs and karaoke nights. Functions and events can be booked, and the hotel runs the Harvest Gold membership program.",
+    "highlights": [
+      "On Baylis Street in the CBD",
+      "Bistro lunch and dinner seven days",
+      "Live music, DJs and karaoke",
+      "Gaming and TAB",
+      "Live sport on screen",
+      "Function bookings"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "pokies": "yes",
+      "tab": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://vichotelwagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Union Club Hotel",
+    "slug": "union-club-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "122 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 9387",
+    "website": "https://unionhotelwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Union+Club+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/unionclubhotelwagga",
+    "instagram": "https://www.instagram.com/unionclubhotel",
+    "description": "A Baylis Street hotel with four bars built in jarrah wood, 15 tap beers plus bottled beer, wine and spirits, and a wraparound balcony. The bistro seats up to 120 across indoor and alfresco areas and offers gluten free, vegetarian and vegan options. There is a sports bar with TAB terminals and KENO, a Bottlemart bottle shop, live music, trivia nights and themed dinner specials including schnitzel, burger and pizza nights.",
+    "highlights": [
+      "Four bars with jarrah timber counters",
+      "15 beers on tap",
+      "Bistro seating up to 120 indoor and alfresco",
+      "Sports bar with TAB and KENO",
+      "Bottlemart bottle shop with deliveries",
+      "Live music and trivia nights"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "tab": "yes",
+      "live_music": "yes",
+      "gluten_free": "yes",
+      "vegan_options": "yes"
+    },
+    "sources": [
+      "https://unionhotelwagga.com.au/",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "William Farrer Hotel",
+    "slug": "william-farrer-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "1 Peter Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3631",
+    "website": "https://www.williamfarrerhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=William+Farrer+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/WilliamFarrerHotelWagga",
+    "instagram": "https://www.instagram.com/williamfarrerhotelwagga/",
+    "description": "A CBD pub and bistro on Peter Street, known locally as The Faz. The bistro serves lunch and dinner using locally sourced produce and grilled dishes, and there is a beer garden plus accommodation upstairs. The hotel shows live sport and hosts functions and regular promotions.",
+    "highlights": [
+      "CBD pub known as The Faz",
+      "Bistro lunch and dinner",
+      "Beer garden",
+      "Accommodation upstairs",
+      "Live sport on screen",
+      "Function bookings"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.williamfarrerhotel.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverina Hotel",
+    "slug": "riverina-hotel-wagga-wagga",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "188 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.riverinahotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverina+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/theRIVHotel/",
+    "instagram": "https://www.instagram.com/theriverinawagga/",
+    "description": "A heritage Fitzmaurice Street pub, known as The Riv, that has been trading since 1851. It runs a family friendly bistro with pub classics, chef's specials and a kids menu, plus a drive-thru bottle shop. Live sport plays on big screens, there are TAB facilities, Thursday steak night and Wednesday trivia.",
+    "highlights": [
+      "Operating since 1851",
+      "Family friendly bistro with kids meals",
+      "Drive-thru bottle shop",
+      "Live sport on big screens and TAB",
+      "Thursday steak night",
+      "Wednesday trivia"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "01:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "01:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "tab": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.riverinahotel.com.au/",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Astor Hotel & Bar",
+    "slug": "the-astor-hotel-bar",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "104 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4328",
+    "website": "https://www.astorinn.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Astor+Hotel+%26+Bar+Wagga+Wagga+NSW",
+    "instagram": "https://www.instagram.com/astorinn",
+    "description": "Accommodation, restaurant and bar on Edward Street near the CBD and the railway station. The Mallee Grill restaurant serves steaks and pub classics Monday to Saturday evenings, with pizzas available in the bar and restaurant from 10am daily and lunch on Friday and Saturday. There is a happy hour Thursday to Saturday and function facilities for conferences and private events.",
+    "highlights": [
+      "Boutique rooms near the CBD and railway station",
+      "Mallee Grill steak restaurant",
+      "Pizzas from 10am daily",
+      "Friday and Saturday lunch",
+      "Happy hour Thursday to Saturday",
+      "Conference and private function facilities"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.astorinn.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Sportsmens Club Hotel",
+    "slug": "sportsmens-club-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "107 Kincaid Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3245",
+    "website": "https://www.sportsmensclubhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sportsmens+Club+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/sportieshotelwagga",
+    "description": "A Kincaid Street pub near the Murrumbidgee Turf Club racecourse, known locally as the Sporties. It has a spacious beer garden, a bistro with alfresco seating, weekday lunch specials and nightly dinner specials. Six refurbished pub-style rooms are available upstairs and the venue takes function bookings.",
+    "highlights": [
+      "Near the MTC racecourse",
+      "Spacious beer garden",
+      "Bistro with alfresco dining",
+      "Weekday lunch and nightly dinner specials",
+      "Six refurbished pub-style rooms upstairs",
+      "Function spaces"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "02:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "02:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "02:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.sportsmensclubhotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=678ad99f622fbb9542ab143a"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Jungle Duke Hotel",
+    "slug": "jungle-duke-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "125 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5950 9342",
+    "website": "https://jungledukehotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jungle+Duke+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/profile.php?id=100086193355059",
+    "instagram": "https://www.instagram.com/jungledukehotel/",
+    "description": "A family owned hotel on Fitzmaurice Street overlooking the Murrumbidgee River, open seven days for lunch and dinner from 11.30am. The renovated venue serves cocktails including margaritas alongside dishes such as ginger beer battered fish and chips and schnitzel, with lunch specials on the board. There is outdoor seating and the hotel is wheelchair accessible.",
+    "highlights": [
+      "Family owned, overlooking the Murrumbidgee River",
+      "Open seven days for lunch and dinner",
+      "Cocktail list including margaritas",
+      "Outdoor seating",
+      "Wheelchair accessible",
+      "Function bookings"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "wheelchair_accessible": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://jungledukehotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=5817f95686f54bd86ad24363"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Bar Olivette",
+    "slug": "bar-olivette",
+    "categorySlug": "bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "The Basement, 24 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://www.barolivette.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bar+Olivette+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/weareolivette/",
+    "instagram": "https://www.instagram.com/barolivette/",
+    "description": "A basement speakeasy-style bar on Fitzmaurice Street built around a 1920s prohibition theme. It pours prohibition-style cocktails and keeps an extensive whiskey and spirits collection including rare blends sourced from overseas, alongside bar food. Walk-ins are welcome but reservations are preferred, and the bar runs occasional Sunday Smuggler's Compass events.",
+    "highlights": [
+      "Subterranean 1920s-themed bar",
+      "Prohibition-style cocktail list",
+      "Extensive whiskey and rare spirits selection",
+      "Bar food menu",
+      "Walk-ins welcome, bookings preferred"
+    ],
+    "hours": [
+      { "day": 3, "opens": "16:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "16:00", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "15:00", "closes": "02:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "02:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.barolivette.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Tilly's Wagga",
+    "slug": "tillys-wagga",
+    "categorySlug": "bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "109 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5925 5305",
+    "website": "https://www.tillyswagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tilly%27s+Wagga+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/tillyswagga/",
+    "instagram": "https://www.instagram.com/tillysww",
+    "description": "A restaurant and cocktail bar on Baylis Street serving share plates and main meals alongside an extensive cocktail list of seasonal signatures and classics. The venue has a rooftop deck and several function spaces including the Parlour Room, and runs karaoke and DJ nights. A nightclub operates on Saturday nights from 10pm.",
+    "highlights": [
+      "Restaurant and cocktail bar on Baylis Street",
+      "Rooftop deck",
+      "Share plates and main meals",
+      "Seasonal and classic cocktail menu",
+      "Karaoke and DJ nights",
+      "Function spaces including the Parlour Room"
+    ],
+    "hours": [
+      { "day": 4, "opens": "17:00", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "16:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "04:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "function_room": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.tillyswagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Thirsty Crow Brewing Co",
+    "slug": "thirsty-crow-brewing-co",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "153 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 7470",
+    "website": "https://www.thirstycrow.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Thirsty+Crow+Brewing+Co+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/thirstycrowbrewery",
+    "description": "A family owned, independent brewpub on Fitzmaurice Street with the working brewery visible from the front bar. It pours its own beers including stouts, rice lagers and ales, plus cider and regional wines, and the kitchen sends out tacos, nachos, salads, pizzas and burgers. There is outdoor seating, function space and live music on weekends.",
+    "highlights": [
+      "Working microbrewery visible from the front bar",
+      "Family owned and independent",
+      "House-brewed stouts, rice lagers and ales",
+      "Kitchen serving tacos, nachos, pizzas and burgers",
+      "Live music on weekends",
+      "Outdoor seating and function spaces"
+    ],
+    "hours": [
+      { "day": 0, "opens": "12:00", "closes": "16:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "12:00", "closes": "23:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "23:00", "closed": false }
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "live_music": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://visitwagga.com/discover/eat-drink/product?productId=56b244703ed14ca7453222f7",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/",
+      "https://www.thirstycrow.com.au/operating-hours"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga RSL Club",
+    "slug": "wagga-rsl-club",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Corner of Kincaid Street and Dobbs Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6923 7200",
+    "website": "https://www.waggarsl.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+RSL+Club+Wagga+Wagga+NSW",
+    "description": "A licensed RSL club on the corner of Kincaid and Dobbs Streets in the Wagga CBD, open from 10am to 3am every day and closed only on Christmas Day. Breakfast is served from 8am daily, and the club runs dining venues, bars, a sports bar, gaming and weekly raffles. It hosts entertainment, kids dining and functions, and members get access to club deals and social events. The club also runs the Wagga RSL Bowling Club, which has two championship greens and offers barefoot bowls bookings.",
+    "highlights": [
+      "Open 10am to 3am every day, closed Christmas Day",
+      "Breakfast served from 8am daily",
+      "Sports bar and live entertainment",
+      "Gaming room",
+      "Weekly raffles and member draws",
+      "Two championship bowling greens and barefoot bowls"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "breakfast": "yes",
+      "pokies": "yes",
+      "kid_friendly": "yes",
+      "function_room": "yes",
+      "live_music": "yes"
+    },
+    "sources": [
+      "https://www.waggarsl.com.au/",
+      "https://waggarsl.com.au/bowling/",
+      "https://waggarsl.bowls.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Farmers Home Hotel",
+    "slug": "farmers-home-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "2-6 Hammond Avenue",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3346",
+    "website": "https://www.farmershomehotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Farmers+Home+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/FarmersHomeHotel/",
+    "instagram": "https://www.instagram.com/farmershomehotel/",
+    "description": "A Hammond Avenue pub just over the bridge from the Wagga CBD, with an outdoor beer garden and a bistro serving lunch and dinner seven days. The venue is family friendly, has on-site parking and takes function bookings. Trading runs to 3am Monday to Saturday.",
+    "highlights": [
+      "Outdoor beer garden",
+      "Bistro lunch and dinner seven days",
+      "Family friendly",
+      "On-site parking",
+      "Function bookings",
+      "Open until 3am Monday to Saturday"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "kid_friendly": "yes",
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.farmershomehotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=6785fa5b10fabec859657206"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Palm & Pawn Motor Inn & Tavern",
+    "slug": "palm-and-pawn-motor-inn-tavern",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "68 Hampden Avenue",
+    "suburb": "North Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6688",
+    "website": "https://www.palmandpawn.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm+%26+Pawn+Motor+Inn+%26+Tavern+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/palmandpawn",
+    "instagram": "https://www.instagram.com/palmandpawn",
+    "description": "A tavern and motor inn on Hampden Avenue at North Wagga, established in 1976. It has an extensive beer garden with a children's playground and a bistro serving lunch and dinner daily, with steaks, burgers and weeknight specials. A courtesy bus runs Wednesday to Sunday nights and the venue hosts functions and events.",
+    "highlights": [
+      "Established 1976",
+      "Extensive beer garden with kids playground",
+      "Bistro lunch and dinner daily",
+      "Courtesy bus Wednesday to Sunday nights",
+      "Motel accommodation on site",
+      "Function and event hosting"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes",
+      "courtesy_bus": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.palmandpawn.com.au/",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Black Swan Hotel",
+    "slug": "black-swan-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "37 Gardiner Street",
+    "suburb": "North Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2279",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Black+Swan+Hotel+North+Wagga+Wagga+NSW",
+    "description": "A small country pub on Gardiner Street at North Wagga Wagga, listed as trading daily from 10am to midnight. It serves cold beer and spirits along with bar and light meals, and the venue is used for functions and receptions.",
+    "highlights": [
+      "Country pub at North Wagga Wagga",
+      "Open daily from 10am",
+      "Bar and light meals",
+      "Function and reception bookings"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://clubsandpubsnearme.com.au/pubs/black-swan-hotel-north-wagga-wagga-nsw"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Tolland Hotel",
+    "slug": "tolland-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "245 Bourke Street",
+    "suburb": "Tolland",
+    "postcode": "2650",
+    "phone": "02 6922 6266",
+    "website": "https://www.tollandhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tolland+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/TollandHotel",
+    "instagram": "https://www.instagram.com/tollandhotel/",
+    "description": "A family friendly local hotel at Tolland, about 4km from the Wagga CBD. It runs a family bistro with a kids menu and indoor play area, a TAB and sports bar with large projector screens, and an outside deck. There is live music on Friday nights, plus function facilities with a courtesy bus and food and beverage packages.",
+    "highlights": [
+      "Family bistro with kids menu and indoor play area",
+      "TAB and sports bar with projector screens",
+      "Outside deck",
+      "Live music Friday nights",
+      "Courtesy bus for functions",
+      "Function packages available"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "outdoor_seating": "yes",
+      "tab": "yes",
+      "live_music": "yes",
+      "courtesy_bus": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.tollandhotel.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kooringal Hotel",
+    "slug": "kooringal-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Kooringal",
+    "state": "NSW",
+    "addressLine": "88 Fay Avenue",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "02 6922 6370",
+    "website": "https://kooringalhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kooringal+Hotel+Kooringal+NSW",
+    "facebook": "https://www.facebook.com/KooringalHotel",
+    "instagram": "https://www.instagram.com/kooringal_hotel",
+    "description": "A suburban hotel on Fay Avenue that has been trading since 1967 under the line \"your local since 1967\". Facilities include a bar, bistro open daily for lunch and dinner, TAB, a VIP lounge, multiple beer gardens and a children's playground. The venue caters for functions from casual gatherings to formal events and runs a loyalty membership program.",
+    "highlights": [
+      "Trading since 1967",
+      "Multiple beer gardens",
+      "Children's playground",
+      "TAB and VIP lounge",
+      "Bistro open daily for lunch and dinner",
+      "Function packages"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes",
+      "tab": "yes",
+      "pokies": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://kooringalhotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=6a5d822556b917c236136b84"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Turvey Park Hotel",
+    "slug": "turvey-park-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Mount Austin",
+    "state": "NSW",
+    "addressLine": "71 Bolger Avenue",
+    "suburb": "Mount Austin",
+    "postcode": "2650",
+    "phone": "02 6925 1177",
+    "website": "https://turveyparkhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Turvey+Park+Hotel+Mount+Austin+NSW",
+    "facebook": "https://www.facebook.com/Turveyparkhotel",
+    "instagram": "https://www.instagram.com/theturveyparkhotel",
+    "description": "A renovated local pub on Bolger Avenue with a courtyard, dining room and betting lounge. The bistro serves lunch and dinner daily with weekday lunch specials and nightly dinner deals, and there is a drive-through bottle shop. Live music plays on weekends and the venue takes function bookings.",
+    "highlights": [
+      "Courtyard, dining room and betting lounge",
+      "Drive-through bottle shop",
+      "Weekday lunch specials and nightly dinner deals",
+      "Live music on weekends",
+      "Function bookings",
+      "Car park on site"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://turveyparkhotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=6785f352c3a689352bcf1abe",
+      "https://www.australiantraveller.com/nsw/riverina/wagga-wagga/a-guide-to-wagga-pubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Ashmont Inn Hotel",
+    "slug": "ashmont-inn-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "addressLine": "55 Tobruk Street",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "phone": "02 6931 1899",
+    "website": "https://www.ashmontinnhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ashmont+Inn+Hotel+Ashmont+NSW",
+    "facebook": "https://www.facebook.com/ashmontinnhotel/",
+    "description": "A recently renovated, family friendly hotel on Tobruk Street in Ashmont, close to the Pomingalarna bicycle park. It serves food and drinks and has an attached bottle shop. Trading is 10am to midnight Monday to Saturday and 10am to 10pm Sunday.",
+    "highlights": [
+      "Recently renovated family friendly pub",
+      "Bottle shop on site",
+      "Close to Pomingalarna bicycle park",
+      "Open seven days from 10am"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.ashmontinnhotel.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Rules Club Wagga",
+    "slug": "rules-club-wagga",
+    "categorySlug": "sports-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Glenfield Park",
+    "state": "NSW",
+    "addressLine": "188 Fernleigh Road",
+    "suburb": "Glenfield Park",
+    "postcode": "2650",
+    "phone": "02 6931 1511",
+    "website": "https://www.rulesclubwagga.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rules+Club+Wagga+Glenfield+Park+NSW",
+    "facebook": "https://www.facebook.com/rulesclubwagga",
+    "instagram": "https://www.instagram.com/rulesclubwagga/",
+    "description": "A large licensed club on Fernleigh Road with a bistro serving wood-fired pizzas, a cafe, a sports bar, a gaming room and multiple function rooms including a boardroom and bridal room. Outside there are bowling greens with barefoot bowls, a sports oval, netball courts and tennis courts. A courtesy bus runs, the club holds bingo and raffles, and the adjoining 79-room Quality Hotel provides accommodation with secure parking.",
+    "highlights": [
+      "Bistro with wood-fired pizzas and a cafe",
+      "Sports bar and gaming room",
+      "Bowling greens and barefoot bowls",
+      "Sports oval, netball and tennis courts",
+      "Courtesy bus",
+      "Adjoining 79-room Quality Hotel"
+    ],
+    "hours": [
+      { "day": 1, "opens": "10:00", "closes": "23:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "23:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "23:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "23:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "pokies": "yes",
+      "courtesy_bus": "yes",
+      "function_room": "yes",
+      "accommodation": "yes",
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "live_music": "yes"
+    },
+    "sources": [
+      "https://www.rulesclubwagga.com/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=652387b70eac65533c29e837"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Blamey Hotel",
+    "slug": "the-blamey-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Lake Albert",
+    "state": "NSW",
+    "addressLine": "55 Main Street",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "02 6922 6677",
+    "website": "https://theblameyhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Blamey+Hotel+Lake+Albert+NSW",
+    "facebook": "https://www.facebook.com/theblamey/",
+    "instagram": "https://www.instagram.com/theblamey",
+    "description": "A family friendly pub and bistro on Main Street at Lake Albert with a free courtesy bus. The bistro serves lunch and dinner daily, sport plays on large screens, and there is a bottle shop with a delivery service. Live entertainment runs Friday and Saturday evenings, and the venue has gaming and TAB plus function space.",
+    "highlights": [
+      "Free courtesy bus",
+      "Bistro lunch and dinner daily",
+      "Bottle shop with delivery",
+      "Sport on large screens",
+      "Live entertainment Friday and Saturday",
+      "Gaming and TAB"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "kid_friendly": "yes",
+      "courtesy_bus": "yes",
+      "live_music": "yes",
+      "pokies": "yes",
+      "tab": "yes",
+      "function_room": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://theblameyhotel.com.au/",
+      "https://visitwagga.com/discover/eat-drink/product?productId=678adfc95a5709640f882465"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Wagga Country Club",
+    "slug": "wagga-wagga-country-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Lake Albert",
+    "state": "NSW",
+    "addressLine": "57 Plumpton Road",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "02 6922 6444",
+    "website": "https://wwcc.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Wagga+Country+Club+Lake+Albert+NSW",
+    "facebook": "https://www.facebook.com/waggawaggacountryclub",
+    "instagram": "https://www.instagram.com/waggawaggacountryclub",
+    "description": "A golf club on Plumpton Road set along the banks of Lake Albert, with an 18-hole championship course of 6,054 metres off the back markers, bent greens and all-weather fairways. The clubhouse holds the Lakeview Eatery, open for lunch and dinner, and a pro shop offering equipment and coaching. Function facilities cater for up to 200 people and the club offers golf memberships and reciprocal club access.",
+    "highlights": [
+      "18-hole championship course beside Lake Albert",
+      "6,054 metres from the back markers",
+      "Bent greens and all-weather fairways",
+      "Lakeview Eatery for lunch and dinner",
+      "Pro shop with coaching",
+      "Functions for up to 200 people"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "function_room": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://wwcc.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Uranquinty Hotel",
+    "slug": "uranquinty-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Uranquinty",
+    "state": "NSW",
+    "addressLine": "34 Morgan Street",
+    "suburb": "Uranquinty",
+    "phone": "02 6922 9123",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Uranquinty+Hotel+Uranquinty+NSW",
+    "facebook": "https://www.facebook.com/uranquintyhotel/",
+    "description": "A village pub on Morgan Street at Uranquinty, open Monday to Sunday from midday. It has a public bar with TAB and gaming machines, a bottle shop with takeaway, and bistro meals for dine-in or takeaway Wednesday to Sunday. The pub runs a courtesy bus, offers free camping and a children's play area, and displays historical memorabilia, with regular raffles and pub draws through the week.",
+    "highlights": [
+      "Public bar with TAB and gaming machines",
+      "Bistro meals Wednesday to Sunday, dine-in or takeaway",
+      "Courtesy bus",
+      "Free camping",
+      "Children's play area",
+      "Weekly raffles and pub draws"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "tab": "yes",
+      "pokies": "yes",
+      "courtesy_bus": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://uranquinty.com.au/business_directory/uranquinty-hotel-2/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Junee Hotel",
+    "slug": "junee-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "21 Seignior Street",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 2227",
+    "website": "https://www.juneehotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Junee+Hotel+Junee+NSW",
+    "facebook": "https://www.facebook.com/thejuneehotel",
+    "instagram": "https://www.instagram.com/juneehotel/",
+    "description": "A heritage country hotel on Seignior Street, trading since 1878 when it opened as the Railway Hotel, with Federation Filigree and Art Nouveau detailing. The kitchen serves lunch from midday and dinner from 6pm using Riverina produce, and there is a bar, beer garden and bottle shop. Heritage guest rooms are available upstairs, dogs are welcome in the outdoor areas, and the hotel takes function bookings.",
+    "highlights": [
+      "Operating since 1878, originally the Railway Hotel",
+      "Federation Filigree and Art Nouveau building",
+      "Lunch and dinner using Riverina produce",
+      "Beer garden",
+      "Heritage accommodation rooms",
+      "Dog friendly outdoor areas"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "dog_friendly": "yes",
+      "accommodation": "yes",
+      "takeaway": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.juneehotel.com.au/",
+      "https://www.juneehotel.com.au/about-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Criterion Hotel Gundagai",
+    "slug": "criterion-hotel-gundagai",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Gundagai",
+    "state": "NSW",
+    "addressLine": "172 Sheridan Street",
+    "suburb": "Gundagai",
+    "postcode": "2722",
+    "phone": "02 6944 1048",
+    "website": "https://www.criterionhotelgundagai.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Criterion+Hotel+Gundagai+Gundagai+NSW",
+    "facebook": "https://www.facebook.com/criterionhotelgundagai/",
+    "instagram": "https://www.instagram.com/criteriongundagai/",
+    "description": "A Sheridan Street pub in Gundagai whose bar carries original oil-painted murals depicting bushrangers and the 1852 flood. Meals and pizzas are served seven nights a week in a family friendly setting. The hotel has King Single, Queen and Family accommodation rooms, and runs live music, happy hour, pool competitions and sport on screen.",
+    "highlights": [
+      "Bar with original oil-painted historical murals",
+      "Meals and pizzas seven nights",
+      "King Single, Queen and Family rooms",
+      "Live music events",
+      "Happy hour and pool competitions",
+      "Family friendly dining"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes",
+      "live_music": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.criterionhotelgundagai.com.au/",
+      "https://www.criterionhotelgundagai.com.au/accommodation"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Temora Ex-Services Memorial Club",
+    "slug": "temora-ex-services-memorial-club",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Temora",
+    "state": "NSW",
+    "addressLine": "130 Baker Street",
+    "suburb": "Temora",
+    "postcode": "2666",
+    "phone": "02 6977 4177",
+    "website": "https://temoraexservices.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Temora+Ex-Services+Memorial+Club+Temora+NSW",
+    "facebook": "https://www.facebook.com/temoraexservices",
+    "description": "A licensed memorial club on Baker Street in Temora with three bars, the Main Bar, the Cec Macauley Bar and the Frank Matthews Lounge. Dining is at the Gallery Bistro featuring Vinnie's Cuisines, and there are five function rooms for events and meetings plus a bowling green. The club runs raffles, footy tipping, a poker league and entertainment, and a courtesy bus operates Tuesday, Friday and Saturday from 5pm. Two associated motor inns, the Goldtera and Koreela Park, provide accommodation.",
+    "highlights": [
+      "Three bars including the Frank Matthews Lounge",
+      "Gallery Bistro serving Vinnie's Cuisines",
+      "Five function rooms",
+      "Bowling green",
+      "Courtesy bus Tuesday, Friday and Saturday from 5pm",
+      "Associated Goldtera and Koreela Park motor inns"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "23:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "23:30", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "23:30", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "23:30", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "23:30", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "courtesy_bus": "yes",
+      "function_room": "yes",
+      "accommodation": "yes",
+      "live_music": "yes"
+    },
+    "sources": [
+      "https://temoraexservices.com.au/",
+      "https://temoraexservices.com.au/Entertainment"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Narrandera Ex-Servicemen's Club",
+    "slug": "narrandera-ex-servicemens-club",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "39-45 Bolton Street",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 1266",
+    "website": "https://narranderaexies.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Narrandera+Ex-Servicemen%27s+Club+Narrandera+NSW",
+    "description": "A licensed club on Bolton Street in Narrandera describing itself as a venue for dining, entertainment and community. The Riverina Wok N Grill restaurant operates on site alongside the bar. The club runs weekly raffles, member badge draws, live entertainment, social dancing classes, trivia, bingo and poker, and takes function bookings.",
+    "highlights": [
+      "Riverina Wok N Grill restaurant on site",
+      "Weekly raffles and member badge draws",
+      "Live entertainment",
+      "Social dancing classes",
+      "Trivia, bingo and poker nights",
+      "Function venue hire"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "00:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://narranderaexies.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Coolamon Hotel",
+    "slug": "coolamon-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Coolamon",
+    "state": "NSW",
+    "addressLine": "73 Cowabbie Street",
+    "suburb": "Coolamon",
+    "postcode": "2701",
+    "phone": "02 6927 2290",
+    "website": "https://coolamonhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon+Hotel+Coolamon+NSW",
+    "facebook": "https://www.facebook.com/p/Coolamon-Hotel-61573891122621/",
+    "instagram": "https://www.instagram.com/coolamonhotel/",
+    "description": "A historic pub on Cowabbie Street in Coolamon, established in 1880, split into several distinct spaces: The Garden outdoor bar, The Dining Room, The Front Bar for cocktails and casual drinks, The Glasshouse covered dining area, The Lounge and The Long Room for functions. The pub is open daily from 11.30am with the kitchen running 11.30am to 2.30pm and 5.30pm to 8.30pm, and pizza available seven days. Accommodation, weddings, functions and online ordering are all offered.",
+    "highlights": [
+      "Established 1880",
+      "The Garden outdoor bar",
+      "The Glasshouse covered dining area",
+      "The Long Room for functions and weddings",
+      "Pizza seven days a week",
+      "Pub accommodation"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "accommodation": "yes",
+      "function_room": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://coolamonhotel.com.au/",
+      "https://coolamonhotel.com.au/accommodation/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lockhart Ex-Servicemen's Club",
+    "slug": "lockhart-ex-servicemens-club",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Lockhart",
+    "state": "NSW",
+    "addressLine": "87 Green Street",
+    "suburb": "Lockhart",
+    "postcode": "2656",
+    "phone": "02 6920 5291",
+    "website": "https://www.lockhartex-servicemens.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lockhart+Ex-Servicemen%27s+Club+Lockhart+NSW",
+    "facebook": "https://www.facebook.com/LockhartExies/",
+    "description": "A community club on Green Street in Lockhart, open seven days from 10.30am until late. Food and beverage service runs from published menus, and the club holds weekly trivia nights. Thursday raffles sell from 6pm and are drawn at 7.30pm with a members draw between 6pm and 8pm, and Sunday raffles sell from 11am and are drawn at 1pm.",
+    "highlights": [
+      "Open seven days from 10.30am",
+      "Weekly trivia nights",
+      "Thursday raffles and members cash draw",
+      "Sunday raffles drawn at 1pm",
+      "Club menu for meals"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.lockhartex-servicemens.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Rock Memorial Bowling Club",
+    "slug": "the-rock-memorial-bowling-club",
+    "categorySlug": "bowls-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "The Rock",
+    "state": "NSW",
+    "addressLine": "86 Urana Street",
+    "suburb": "The Rock",
+    "postcode": "2655",
+    "phone": "02 6920 2185",
+    "website": "https://therockbowlo.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Rock+Memorial+Bowling+Club+The+Rock+NSW",
+    "description": "A lawn bowls club on Urana Street at The Rock that has been operating since 1939. Dining is at Crystal's Restaurant with an Australian menu, and there is a bar alongside the greens. The club programs live music, bingo and trivia nights, and offers membership with discounts and access to club events.",
+    "highlights": [
+      "Lawn bowls club operating since 1939",
+      "Crystal's Restaurant on site",
+      "Live music performances",
+      "Bingo and trivia nights",
+      "Membership with event access"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "23:30", "closed": false },
+      { "day": 1, "opens": "16:00", "closes": "20:30", "closed": false },
+      { "day": 2, "opens": "16:00", "closes": "20:30", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "21:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "23:30", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "23:30", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "23:30", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes"
+    },
+    "sources": [
+      "https://therockbowlo.com.au/",
+      "https://clubsandpubsnearme.com.au/clubs/the-rock-memorial-bowling-club-the-rock-nsw"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Culcairn Hotel",
+    "slug": "culcairn-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Culcairn",
+    "state": "NSW",
+    "addressLine": "37 Railway Parade",
+    "suburb": "Culcairn",
+    "postcode": "2660",
+    "phone": "02 6029 8501",
+    "website": "https://culcairnhotel.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Culcairn+Hotel+Culcairn+NSW",
+    "description": "A country hotel on Railway Parade in Culcairn offering budget accommodation in Queen, Single, Twin Share and Family rooms, all with shared bathrooms upstairs and flat-screen smart TVs. The venue also runs a bistro, a beer garden and a playground. Extended stay discounts are available and accommodation reception is closed on Christmas Day.",
+    "highlights": [
+      "Budget pub accommodation with shared bathrooms",
+      "Queen, Single, Twin Share and Family rooms",
+      "Bistro",
+      "Beer garden",
+      "Playground",
+      "Extended stay discounts"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "beer_garden": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes",
+      "accommodation": "yes"
+    },
+    "sources": [
+      "https://culcairnhotel.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Holbrook Returned Servicemen's Club",
+    "slug": "holbrook-returned-servicemens-club",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Holbrook",
+    "state": "NSW",
+    "addressLine": "38 Swift Street",
+    "suburb": "Holbrook",
+    "postcode": "2644",
+    "phone": "02 6036 2199",
+    "website": "https://www.holbrookrsclub.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holbrook+Returned+Servicemen%27s+Club+Holbrook+NSW",
+    "description": "A returned servicemen's club on Swift Street in Holbrook with a restaurant, bar, and Keno and TAB betting. The club takes in a golf club and a bowls club, along with boating and angling sections. It offers memberships and hosts functions, trading 10am to 9pm Saturday to Thursday and until 10.30pm on Friday.",
+    "highlights": [
+      "Restaurant and bar",
+      "Keno and TAB",
+      "Golf club section",
+      "Bowls club section",
+      "Boating and angling sections",
+      "Function hosting"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "21:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "21:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "21:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "21:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "21:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "22:30", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "21:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "tab": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.holbrookrsclub.com.au/",
+      "https://www.holbrookrsclub.com.au/bowls-club"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

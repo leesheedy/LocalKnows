@@ -155,6 +155,285 @@
     ]
   },
   {
+    "slug": "gst-calculator",
+    "title": "GST calculator",
+    "description": "Add GST to a price or pull it back out of one. Australian GST is 10%, so adding it multiplies by 1.1 and removing it divides by 11.",
+    "standfirst": "Add 10% or take it back out. The second one is where people go wrong.",
+    "isApplication": true,
+    "status": "live",
+    "body": "GST in Australia is 10%. That makes adding it easy and removing it slightly less easy, which is why almost every GST mistake runs in the same direction.\n\n## Adding GST\n\nMultiply by 1.1. A job priced at $1,000 before GST invoices at $1,100, of which $100 is GST.\n\n## Removing GST\n\nDivide the total by 11 to get the GST, or by 1.1 to get the price before GST. A $1,100 invoice contains $100 of GST and $1,000 of work.\n\nThe mistake is dividing by 10 instead of 11. Ten per cent of $1,100 is $110, but the GST in that invoice is $100, because the 10% was added to $1,000 and not to $1,100. Taking 10% off a GST inclusive figure overstates the GST every time, and on a large invoice it is not a rounding error.\n\n## Quick reference\n\n| You have | You want | Do this |\n|---|---|---|\n| Price before GST | GST amount | Multiply by 0.1 |\n| Price before GST | Total including GST | Multiply by 1.1 |\n| Total including GST | GST amount | Divide by 11 |\n| Total including GST | Price before GST | Divide by 1.1 |\n\n## What is not subject to GST\n\nSome things are GST free rather than taxed at zero, and the distinction matters on a BAS. Basic food, most health and medical services, most education, and some childcare are GST free. Residential rent and most financial supplies are input taxed, which is different again.\n\nFor the trades and services in this directory, almost everything is taxable at 10%, so the calculator above covers it. If you are working out GST on something unusual, the Australian Taxation Office publishes the categories and that is the source to use.\n\n## Whether the business should be charging it at all\n\nA business only charges GST if it is registered for GST. Registration is compulsory once turnover reaches the threshold the ATO sets, and optional below it, so plenty of smaller sole traders are legitimately not registered and legitimately do not add a GST line.\n\nIf an invoice has a GST line on it, the business should be registered and the ABN on the invoice should show as registered for GST. That is worth thirty seconds on the [ABN checker](/tools/abn-lookup/), because a GST line charged by a business that is not registered is not something you can claim, and it is not something they are entitled to keep.\n\n## Tax invoices\n\nTo claim a GST credit you generally need a valid tax invoice from the supplier. Above a low threshold set by the ATO it has to carry the words \"tax invoice\", the seller name and ABN, the date, what was supplied, and the GST amount or a statement that the total includes GST. A handwritten total on a docket is not a tax invoice.",
+    "faqs": [
+      {
+        "q": "How do I remove GST from a price?",
+        "a": "Divide the GST inclusive total by 11 to get the GST, and by 1.1 to get the price before GST. A $1,100 total contains $100 of GST. Do not take 10% off the inclusive figure, because that gives $110 and overstates the GST."
+      },
+      {
+        "q": "Why divide by 11 and not by 10?",
+        "a": "Because the 10% was added to the pre GST price, not to the total. If the price before GST is 10 parts, the GST is 1 part and the total is 11 parts. So the GST is one eleventh of the total, which is a division by 11."
+      },
+      {
+        "q": "What is the GST rate in Australia?",
+        "a": "10%, and it has been 10% since GST started in July 2000. It applies to most goods and services, with GST free categories including basic food, most health and medical services and most education."
+      },
+      {
+        "q": "Does every business have to charge GST?",
+        "a": "No. A business only charges GST if it is registered for GST, and registration is compulsory only once turnover reaches the ATO threshold. Below that it is optional, so a smaller sole trader may legitimately not charge it. If there is a GST line on the invoice, the ABN should show as registered for GST."
+      },
+      {
+        "q": "Is this calculator sending my figures anywhere?",
+        "a": "No. It is arithmetic that runs in your browser. Nothing leaves the page, there is no request, and there is nothing to log."
+      }
+    ]
+  },
+  {
+    "slug": "job-cost-calculator",
+    "title": "Hourly rate and job cost calculator",
+    "description": "Work out what a job costs from an hourly rate, hours, call out fee and materials, with GST added or removed. Every line itemised.",
+    "standfirst": "An hourly rate, the hours, and everything else that lands on the invoice.",
+    "isApplication": true,
+    "status": "live",
+    "body": "An hourly rate on its own tells you very little. What arrives on the invoice is the rate times the hours, plus whatever it cost to turn up, plus materials, plus a loading if the work happened outside ordinary hours, plus GST on all of it.\n\nPut the pieces in above and it shows you each line and the total, and it works in both directions: if the figures you were quoted already include GST, switch the toggle and it pulls the GST back out rather than adding a second lot.\n\n## The four lines a quote should have\n\n**Call out or attendance.** What it costs for someone to turn up, before any work happens. It covers the drive, the vehicle and the time. Ask whether it is waived, credited or charged on top when the job goes ahead, because all three arrangements are normal and only one of them is in your favour.\n\n**Labour.** A rate and a minimum. A one hour minimum on a domestic job is standard, half hour increments after that are common. A four hour minimum to change a tap is a business telling you it does not want small jobs, which is fine, but it should be said rather than discovered.\n\n**Materials.** Either itemised with a markup or as a single line. A markup on parts is how a trade business funds carrying stock so your hot water service gets fixed today rather than Thursday. What to watch for is materials not appearing at all on a job that obviously used some.\n\n**Loadings.** After hours, weekend, public holiday, emergency. This is where the surprises live. Ask what triggers the loading and what the rate is before you agree to the visit, not after.\n\n## The border complication\n\nOn the New South Wales and Victorian border there is a second layer, because the two states do not share a public holiday calendar. Melbourne Cup Day is a holiday rate in Wodonga and an ordinary Tuesday in Albury. Labour Day is March on one side and October on the other. A business that works both sides has two of each.\n\nIf you are being charged a public holiday loading, the calendar that applies is the one for the state the work is in. The [public holiday comparison](/tools/public-holidays/) lays both states out for any year, and the [border check](/tools/border-check/) tells you which calendar applies to a given town.\n\n## GST on top or already in\n\nTrade quotes to householders are usually given GST inclusive and quotes to businesses are usually given ex GST, which is exactly how the same job ends up looking like two different prices. Set the toggle to match the quote you were given and the breakdown will agree with the piece of paper in front of you.\n\nA business that is not registered for GST cannot charge a GST line at all. If there is one on the invoice, the [ABN checker](/tools/abn-lookup/) will take you to the register that says whether they are entitled to it.\n\n## If you are the one quoting\n\nThis calculator answers what a job costs at a given rate. The harder question is what your rate should be in the first place, and that is a different sum: income target, plus superannuation, plus overheads, divided by the hours you can actually bill. The [contractor rate calculator](/tools/contractor-rate-calculator/) does that one.",
+    "faqs": [
+      {
+        "q": "What is a reasonable call out fee?",
+        "a": "It varies by trade and by how far they are travelling, and on this border twenty minutes each way is common. What is not reasonable is finding out about it on the invoice. Ask whether the call out is waived, credited or charged on top when the job proceeds."
+      },
+      {
+        "q": "Should the quote include GST?",
+        "a": "A quote to a householder is normally GST inclusive and a quote to a business is normally ex GST. Neither is wrong, but they are not comparable, so check which one you are looking at before you compare two quotes. The toggle above handles both."
+      },
+      {
+        "q": "What is a normal after hours loading?",
+        "a": "It depends on the trade and how far outside hours the job is. The thing to establish is what triggers it: after hours starting at 4pm and after hours starting at 6pm are different products at the same headline rate."
+      },
+      {
+        "q": "Why is the effective hourly rate different from the quoted hourly rate?",
+        "a": "Because the call out fee, the materials and any loading are spread over the same hours. A two hour job at $105 an hour with a $90 call out is really $150 an hour for the time you get. That is not a rip off, it is what attending costs, but it is the number that makes two quotes comparable."
+      },
+      {
+        "q": "Are these figures sent anywhere?",
+        "a": "No. The calculation runs in your browser. Nothing is transmitted and nothing is stored."
+      }
+    ]
+  },
+  {
+    "slug": "concrete-calculator",
+    "title": "Concrete calculator",
+    "description": "Work out how many cubic metres of concrete a slab, footing or post hole needs, with a waste allowance and the equivalent count of 20kg premix bags.",
+    "standfirst": "Length, width and depth in, cubic metres and bag count out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Concrete is sold by the cubic metre and measured in millimetres, which is where most of the arithmetic errors come from. Put the dimensions in above and it converts, adds an allowance, and tells you whether the job is a bag job or a truck job.\n\n## The sum\n\nVolume is length times width times depth, all in metres. A 6m by 4m slab at 100mm is 6 x 4 x 0.1, which is 2.4 cubic metres. The trap is the depth: 100mm is 0.1m, not 100.\n\n## Why the allowance matters\n\nGround is never as flat as the plan. Formwork bows, sub base dips, and some of the load stays in the barrow and the chute. Ten per cent is the usual allowance on a domestic slab and it is the difference between finishing the pour and standing in a half finished slab ringing a supplier who has gone home.\n\nRunning out is far worse than having a little over. A cold joint through the middle of a slab because the second load arrived an hour later is a permanent weakness, not a cosmetic one.\n\n## Bags or a truck\n\nA 20kg bag of premix makes about 9 litres of wet concrete, so it takes roughly 111 bags to make a cubic metre. That maths turns most people off bags quickly.\n\nUnder about a third of a cubic metre, bags are sensible: post holes, a small pad, a set of steps. Past that, the bag count, the mixing time and the cost all point at a truck, and most suppliers have a minimum load with a short load fee below it. Ring them with the volume rather than the dimensions and they will tell you.\n\n## Depths that are normal\n\n| Job | Typical depth |\n|---|---|\n| Garden path or small pad | 75 to 100mm |\n| Domestic driveway, cars only | 100mm |\n| Driveway with truck or caravan access | 125 to 150mm |\n| Shed or garage slab | 100mm on a prepared base |\n| Fence post hole | 600mm deep, 300mm wide, as a starting point |\n\nAnything structural, anything on reactive clay, and anything a building surveyor will look at is a job for an engineer rather than a table on a website. Both states require certain concrete work to be done or supervised by a licensed practitioner, and the [licence check](/tools/licence-check/) opens the right register.\n\n## Getting it delivered on the border\n\nBatching plants serve a radius and concrete has a working life measured in a couple of hours, so how far you are from the plant matters more than it does for other materials. Suppliers on the Albury Wodonga corridor deliver both sides of the river, but the travel time comes out of the working time, and a late Friday pour in summer is a different proposition to a Tuesday morning one.",
+    "faqs": [
+      {
+        "q": "How much concrete do I need for a 6m by 4m slab?",
+        "a": "At 100mm deep, 2.4 cubic metres before any allowance, and about 2.64 with a 10% allowance. Multiply length by width by depth in metres, so 6 x 4 x 0.1. The calculator above does it for any dimensions."
+      },
+      {
+        "q": "How many 20kg bags of concrete make a cubic metre?",
+        "a": "About 111. Each 20kg bag yields roughly 9 litres of wet concrete. That is why bagged premix only makes sense under about a third of a cubic metre, and why anything larger is a truck job."
+      },
+      {
+        "q": "How much extra concrete should I order?",
+        "a": "Ten per cent is the usual allowance on a domestic pour, for uneven ground, formwork movement and what stays in the barrow. Running out mid pour creates a cold joint, which is a permanent weakness rather than a cosmetic one, so over ordering slightly is the cheap option."
+      },
+      {
+        "q": "How deep should a concrete driveway be?",
+        "a": "Around 100mm for cars, and 125 to 150mm where a truck, caravan or boat trailer will run over it. Depth is only half the story: what is under the slab matters as much, and reactive clay soils change the answer entirely."
+      },
+      {
+        "q": "Do I need a licensed concreter?",
+        "a": "It depends on the value and nature of the work and which state it is in. Both New South Wales and Victoria set a threshold above which residential building work needs a licensed practitioner, and structural work is a different question again. The licence check tool opens the relevant register."
+      }
+    ]
+  },
+  {
+    "slug": "paint-calculator",
+    "title": "Paint calculator",
+    "description": "Work out how many litres of paint a room or a wall needs, allowing for doors, windows, the number of coats and the spread rate on the tin.",
+    "standfirst": "Wall area, minus the holes, times the coats, divided by the spread rate.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Paint coverage is quoted on the tin as a spread rate in square metres per litre, and that figure assumes a sealed, smooth, similarly coloured surface. Most of the reasons people run out come from the surface rather than the arithmetic.\n\n## The sum\n\nAdd up the length of every wall you are painting, multiply by the height, take off the doors and windows, multiply by the number of coats, and divide by the spread rate on the tin.\n\nA standard internal door is about 1.6 m² and an average window about 1.5 m², so a room with one door and two windows is around 4.6 m² of openings. Being precise about that matters less than being roughly right, because the deductions are small next to the wall area.\n\n## What eats more paint than the tin says\n\n- **Bare plasterboard.** Drinks the first coat. Seal it first and the topcoats then behave like the tin says.\n- **Render, brick and texture.** More surface than the flat measurement suggests, sometimes half as much again.\n- **A dark colour going lighter.** Three coats, sometimes four, and a tinted undercoat saves a topcoat.\n- **Roller nap and technique.** A thick nap holds more paint and lays more of it on.\n\nUndercoat and sealer are not counted above. If the surface needs them, work them out as a separate quantity at their own spread rate.\n\n## Ceilings\n\nA ceiling is length times width and it takes about the same per square metre as a wall, sometimes a little more because ceiling white is usually flat and applied generously. Add it as a separate calculation rather than folding it into the wall figure.\n\n## Buy slightly over, in one batch\n\nPaint is tinted in batches and two tins of the same colour mixed weeks apart can differ enough to see on a long wall. Buying the whole job at once from the same batch is worth more than saving the price of a half tin, and the leftover is what you touch up with in three years.\n\n## Getting a painter instead\n\nA quote from a painter should separate preparation from painting, because preparation is where the hours actually go and where quotes diverge most. Two quotes that look far apart are often quoting different amounts of filling and sanding rather than different rates. The [job cost calculator](/tools/job-cost-calculator/) is useful for pulling the labour apart from the materials.",
+    "faqs": [
+      {
+        "q": "How much paint do I need for a room?",
+        "a": "Add the length of the walls, multiply by the height, subtract the doors and windows, multiply by the coats, and divide by the spread rate on the tin. A typical 4m by 3m room with 2.4m ceilings is about 34 m² of wall, so around 4 litres for two coats at 16 m² per litre."
+      },
+      {
+        "q": "How many square metres does a litre of paint cover?",
+        "a": "Around 16 m² per litre is typical for a topcoat on a sealed, smooth wall, but the figure is on the tin and it varies by product. Bare plasterboard, render, texture and dark to light colour changes all reduce it, sometimes considerably."
+      },
+      {
+        "q": "How many coats of paint do I need?",
+        "a": "Two over a sealed surface in a similar colour. Three when you are going from dark to light, painting bare plasterboard without a sealer, or using a strong colour with poor opacity. A tinted undercoat often saves a topcoat and costs less than one."
+      },
+      {
+        "q": "Does the calculator include undercoat?",
+        "a": "No. It works out topcoat only. Sealer and undercoat have their own spread rates and are usually a single coat, so calculate them separately using the same wall area."
+      },
+      {
+        "q": "Should I buy all the paint at once?",
+        "a": "Yes. Tinted paint is mixed in batches and two tins of the same colour tinted weeks apart can differ enough to show on a long wall. Buy the job in one go and keep the leftover for touch ups."
+      }
+    ]
+  },
+  {
+    "slug": "soil-and-mulch-calculator",
+    "title": "Soil and mulch calculator",
+    "description": "Work out how many cubic metres of soil, mulch or garden mix a bed needs, and how that converts to bags or trailer loads.",
+    "standfirst": "Area and depth in, cubic metres, bags and trailer loads out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Landscape supplies are sold by the cubic metre in bulk and by the bag at a hardware store, and the two are hard to compare in your head. One cubic metre is forty 25 litre bags, which is usually the moment people decide to order bulk.\n\n## The sum\n\nArea times depth. A 5m by 3m bed at 75mm is 5 x 3 x 0.075, which is 1.125 cubic metres. As with concrete, the trap is the depth: 75mm is 0.075m.\n\n## Depths that work\n\n| Job | Depth |\n|---|---|\n| Mulch on an established garden bed | 50 to 75mm |\n| Mulch on a new bed, for weed suppression | 75 to 100mm |\n| Topsoil for a new garden bed | 200 to 300mm |\n| Underlay before laying turf | 100mm |\n| Topdressing an existing lawn | 10 to 20mm |\n\nMulch deeper than about 100mm starts working against you. It keeps water off the root zone rather than in it, and piled against a trunk it holds moisture where the plant least wants it. Keep it clear of stems.\n\n## Bags, bulk or a trailer\n\nForty 25 litre bags to the cubic metre, twenty 50 litre bags. Past about half a cubic metre, bulk is cheaper per unit and much less carrying.\n\nA standard 6x4 box trailer holds roughly 0.7 of a cubic metre loaded level with the sides. Heaped it will hold more, but soil is heavy: a cubic metre of damp garden mix runs well over a tonne, which is past what most box trailers and plenty of tow vehicles are rated for. Two trips is cheaper than a spring.\n\n## It settles\n\nMulch drops noticeably in the first few months and garden mix compacts as it wets in. Order for the depth you want after it has settled rather than the depth on the day, or plan to top up in autumn.\n\n## Delivery on the border\n\nLandscape yards on the Albury Wodonga corridor deliver both sides of the river and most have a minimum load, usually a cubic metre or two, with a flat delivery fee that makes small orders poor value. If you are under a cubic metre, bags or a trailer usually win.",
+    "faqs": [
+      {
+        "q": "How much mulch do I need?",
+        "a": "Multiply the bed area in square metres by the depth in metres. A 5m by 3m bed at 75mm needs 1.125 cubic metres. For an established bed, 50 to 75mm is the usual depth; for a new bed being mulched for weed suppression, 75 to 100mm."
+      },
+      {
+        "q": "How many bags of mulch are in a cubic metre?",
+        "a": "Forty 25 litre bags, or twenty 50 litre bags. Past about half a cubic metre, buying bulk is cheaper and a great deal less carrying."
+      },
+      {
+        "q": "How much soil fits in a 6x4 trailer?",
+        "a": "Roughly 0.7 of a cubic metre loaded level with the sides. Be careful heaping it: a cubic metre of damp garden mix weighs well over a tonne, which is beyond the rating of most box trailers and many tow vehicles."
+      },
+      {
+        "q": "How deep should mulch be?",
+        "a": "50 to 75mm on an established bed, up to 100mm on a new one where you want weed suppression. Deeper than that starts shedding water away from the root zone rather than holding it, and it should always be kept clear of trunks and stems."
+      },
+      {
+        "q": "How much topsoil do I need before laying turf?",
+        "a": "About 100mm of underlay over a prepared base. For a new garden bed rather than lawn, 200 to 300mm of topsoil is the usual range depending on what is going in it."
+      }
+    ]
+  },
+  {
+    "slug": "fence-calculator",
+    "title": "Fence calculator",
+    "description": "Work out posts, rails, palings and post hole concrete for a timber paling fence from the run length and post spacing.",
+    "standfirst": "A run length in, a materials list out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "A paling fence is four things: posts in the ground, rails between them, palings on the rails, and concrete holding the posts. The counts all follow from the run length and the post spacing.\n\n## The sums\n\n**Bays** are the run length divided by the post spacing, rounded up. **Posts** are always one more than the bays, because the run has two ends. That off by one is the most common ordering mistake.\n\n**Rails** are the bay count times the rails per bay, usually two on a 1.5m fence and three on a 1.8m one. **Palings** are the run length in millimetres divided by the paling width plus whatever gap you are leaving.\n\n## Post spacing\n\nTwo point four metres between post centres is the usual maximum for a domestic paling fence. Wider and the rails start to sag, particularly in the sun on a long north facing run. Closer spacing costs more posts and less trouble later.\n\nEvery corner needs a post, every gate needs two, and a gate post carries a load an ordinary post does not, so it wants to be heavier and set deeper.\n\n## Post holes\n\nA 300mm wide hole at 600mm deep is a normal starting point for a 1.8m fence, and it takes about 20 litres of concrete a hole, so a 20 post fence is about 0.4 of a cubic metre. That is right at the line where bagged premix stops being sensible. The [concrete calculator](/tools/concrete-calculator/) will do the volume.\n\nCorner and gate posts go deeper. Sandy or reactive soil changes the answer, and so does a fence acting as a pool barrier, which has its own rules in both states and is not a job to eyeball.\n\n## Dividing fences and the neighbour\n\nA fence on a boundary between two properties is a dividing fence, and both New South Wales and Victoria have legislation covering how the cost is shared and what notice has to be given before work starts. In broad terms the cost of a sufficient dividing fence is shared, and anything above that standard is at the cost of whoever wants it.\n\nThe practical version: talk to the neighbour and agree in writing before you order materials, not after. Getting that wrong is the single most common way a straightforward fence becomes a tribunal matter. Both states publish the process, and a fencing contractor who works the area will have been through it many times.\n\n## On the border\n\nAlbury and Wodonga are covered by different fencing legislation, which is worth knowing if you own on one side and live on the other. The [border check](/tools/border-check/) tells you which state a given address falls in.",
+    "faqs": [
+      {
+        "q": "How many fence posts do I need?",
+        "a": "Divide the run length by the post spacing, round up, and add one. A 20m fence at 2.4m spacing is 9 bays and therefore 10 posts. Add a post for every corner and two for every gate."
+      },
+      {
+        "q": "How far apart should fence posts be?",
+        "a": "2.4m between centres is the usual maximum for a domestic timber paling fence. Going wider lets the rails sag, especially on long sunny runs. Closer spacing costs more posts and causes fewer problems."
+      },
+      {
+        "q": "How deep should a fence post go?",
+        "a": "Around 600mm deep in a 300mm wide hole is a normal starting point for a 1.8m fence. Corner posts, gate posts and anything in sandy or reactive soil go deeper. A pool barrier fence has its own requirements in both states."
+      },
+      {
+        "q": "How much concrete per fence post?",
+        "a": "About 20 litres for a 300mm by 600mm hole, so roughly 0.02 of a cubic metre per post. Twenty posts comes to about 0.4 of a cubic metre, which is right at the point where bagged premix stops being practical."
+      },
+      {
+        "q": "Does my neighbour have to pay half the fence?",
+        "a": "Both New South Wales and Victoria have dividing fence legislation covering cost sharing and the notice that has to be given before work starts. In broad terms the cost of a sufficient dividing fence is shared and anything beyond that standard is at the cost of whoever wants it. Agree it in writing before ordering materials."
+      }
+    ]
+  },
+  {
+    "slug": "decking-calculator",
+    "title": "Decking calculator",
+    "description": "Work out lineal metres of decking board, the number of joists and the waste allowance from the deck dimensions, board width and gap.",
+    "standfirst": "Deck size in, lineal metres and joist count out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Decking is sold by the lineal metre, not the square metre, so the first thing to work out is how many rows of board the deck takes and how long each row is.\n\n## The sums\n\n**Rows** are the deck width in millimetres divided by the board width plus the gap. A 4m wide deck in 90mm boards at 4mm gaps is 4000 divided by 94, which is 43 rows.\n\n**Lineal metres** are the rows times the deck length. Forty three rows across a 6m deck is 258 lineal metres before waste.\n\n**Joists** are the deck length divided by the joist spacing, plus one. Same off by one as fence posts, same reason.\n\n## Waste\n\nTen per cent is the usual allowance and it is not generosity. Boards come in fixed lengths, the offcut from a 5.4m board on a 4m deck is not always usable, and you will reject some for splits, wane and bad grain. On a deck with angles or a wrapped edge, allow more.\n\n## Joist spacing is set by the board, not by preference\n\nMost 19mm hardwood decking is rated to 450mm joist centres. Thinner boards, softwood and most composite decking want 400mm or sometimes less, and getting this wrong shows up as bounce underfoot that cannot be fixed without lifting the deck.\n\nCheck what the board manufacturer specifies before you set out the frame, because the frame is what you cannot change afterwards.\n\n## Gaps\n\nThree to five millimetres suits seasoned hardwood, which is roughly stable. Unseasoned timber is laid tight or nearly tight because it shrinks as it dries and the gap opens up on its own. Composite has its own spec and it is usually wider than timber, for expansion rather than shrinkage.\n\nGaps matter for drainage as much as appearance. A deck laid with no gap holds water and rots from the top down.\n\n## What this does not cover\n\nBearers, posts, footings, stairs, balustrade and fixings. Anything raised more than a nominated height above ground triggers building approval requirements in both states, and a deck attached to the house is structural work. That is a conversation with the council or a private surveyor before it is a materials list.\n\nPost footing concrete is on the [concrete calculator](/tools/concrete-calculator/).",
+    "faqs": [
+      {
+        "q": "How many lineal metres of decking do I need?",
+        "a": "Divide the deck width in millimetres by the board width plus the gap to get the number of rows, then multiply by the deck length. A 6m by 4m deck in 90mm boards at 4mm gaps is about 43 rows, so 258 lineal metres before waste."
+      },
+      {
+        "q": "How far apart should decking joists be?",
+        "a": "It is set by the board, not by preference. Most 19mm hardwood decking is rated to 450mm centres, while thinner boards, softwood and most composite want 400mm or less. Check the manufacturer specification before you build the frame, because the frame is the part you cannot change later."
+      },
+      {
+        "q": "What gap should I leave between decking boards?",
+        "a": "3 to 5mm for seasoned hardwood. Unseasoned timber is laid tight or nearly tight because it shrinks as it dries. Composite has its own specified gap, usually wider, for expansion. Some gap is essential for drainage regardless."
+      },
+      {
+        "q": "How much waste should I allow on decking?",
+        "a": "Ten per cent for a straightforward rectangular deck. Boards come in fixed lengths so offcuts are not always reusable, and you will reject some for splits and bad grain. Allow more for angles, a wrapped edge or a complicated shape."
+      },
+      {
+        "q": "Do I need approval to build a deck?",
+        "a": "Often, yes. Both New South Wales and Victoria trigger building approval requirements above a nominated height above ground, and a deck attached to the house is structural work. Check with the council or a private building surveyor before ordering materials."
+      }
+    ]
+  },
+  {
+    "slug": "contractor-rate-calculator",
+    "title": "What should I charge an hour",
+    "description": "Work out the minimum hourly rate a sole trader needs from an income target, overheads, superannuation and the hours you can actually bill.",
+    "standfirst": "The rate that covers what you want to earn and what it costs to earn it.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Most sole traders set their rate by asking what the person down the road charges. That tells you what the market bears; it does not tell you whether the number works. This does the other calculation: what you need to charge for the year to add up.\n\n## The sum\n\nIncome target, plus superannuation, plus overheads, divided by the hours you can actually bill in a year.\n\nThat is it. The arithmetic is trivial and the inputs are where it gets interesting, because two of them are almost always wrong.\n\n## Billable hours is the input people get wrong\n\nA 45 hour working week is not 45 billable hours. Quoting, invoicing, chasing payment, ordering materials, driving between jobs, cleaning the ute, doing the BAS and answering the phone are all real work and none of it is on an invoice.\n\nFor most sole trader trades the billable share of a full week lands somewhere between 20 and 30 hours. If you plug 40 into the calculator above you will get a rate that quietly loses money all year.\n\nHalving the billable hours roughly doubles the rate you need. That is why an hourly rate that looks high next to an employee wage usually is not, and it is worth being able to explain that to a customer who asks.\n\n## Weeks worked is the other one\n\nFifty two weeks is not available. Take out four weeks of holiday, the public holidays, and some allowance for the weeks you lose to weather, illness or a quiet patch. Forty six is a realistic starting point and forty four is not pessimistic.\n\nYou do not get annual leave, sick leave or public holiday pay. Those come out of the rate or they do not happen.\n\n## Overheads add up faster than people expect\n\nPublic liability and professional indemnity insurance, income protection, vehicle running and depreciation, fuel, tools and their replacement, phone and internet, accounting and bookkeeping, licence and registration renewals, advertising, bank and payment fees, software, workwear, and a shed or yard if you have one.\n\nAdd them up honestly once a year. The figure is usually larger than the guess.\n\n## Superannuation\n\nAs a sole trader you are not required to pay yourself superannuation, and that is exactly why so many do not. It is still part of the cost of your labour, and leaving it out of the rate means the rate is subsidised by your retirement. The calculator includes it as a percentage of the income target so you can see what it costs to include.\n\n## Tax\n\nThe income figure above is before income tax. What you actually keep depends on your structure, your deductions and the rates for the year, and that is a question for an accountant rather than a web page.\n\nGST sits on top of the rate rather than inside it if you are registered. The [GST calculator](/tools/gst-calculator/) handles that, and the [job cost calculator](/tools/job-cost-calculator/) shows what a quote at your rate looks like to the customer.\n\n## Then check it against the market\n\nThe rate this produces is a floor, not a price. If it comes out well above what your area pays, the answer is usually not to drop the rate but to look at the billable hours and the overheads, because one of those is where the problem is.",
+    "faqs": [
+      {
+        "q": "How do I work out my hourly rate as a sole trader?",
+        "a": "Add your income target, the superannuation you want to pay yourself and your annual overheads, then divide by the hours you can actually bill in a year. Billable hours, not hours worked. For most sole trader trades that is 20 to 30 hours a week over about 46 weeks."
+      },
+      {
+        "q": "How many hours a week can a tradesperson actually bill?",
+        "a": "Usually 20 to 30 out of a 45 hour week. Quoting, invoicing, chasing payment, ordering materials, driving, cleaning up and paperwork are all unpaid. Assuming 40 billable hours is the single most common reason a rate that looked fine does not work over a year."
+      },
+      {
+        "q": "Should my rate include superannuation?",
+        "a": "A sole trader is not required to pay themselves superannuation, which is why many do not. It is still part of what your labour costs, and leaving it out means the rate is being subsidised by your retirement. The calculator lets you see the difference including it makes."
+      },
+      {
+        "q": "Does this rate include GST?",
+        "a": "No. It gives the rate before GST, and shows the GST inclusive equivalent alongside it. If you are registered for GST it goes on top of the rate rather than coming out of it."
+      },
+      {
+        "q": "My rate comes out higher than everyone else charges. What now?",
+        "a": "The rate is a floor, and if it is well above the market the answer is usually not to drop it. Look at the two inputs that are most often wrong: the billable hours and the overheads. One of those is generally where the gap is."
+      }
+    ]
+  },
+  {
+    "slug": "markup-and-margin-calculator",
+    "title": "Markup and margin calculator",
+    "description": "Convert between markup and margin, and work out a sell price from a cost. A 30% markup is a 23% margin, and mixing them up costs money.",
+    "standfirst": "They are not the same number, and the difference is where profit goes missing.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Markup is calculated on what something cost you. Margin is calculated on what you sold it for. They describe the same transaction from opposite ends and they never produce the same percentage.\n\nA 30% markup is a 23% margin. To actually make a 30% margin you need a 43% markup. If your supplier talks in markup and your accountant talks in margin, one of those conversations is being misunderstood.\n\n## The sums\n\n**Markup** is profit divided by cost. Buy at $100, sell at $130, the markup is $30 on $100, which is 30%.\n\n**Margin** is profit divided by the sell price. Same transaction: $30 on $130, which is 23%.\n\nTo go from a target margin to the markup you need, divide the margin by one minus the margin. A 30% margin needs 0.3 divided by 0.7, which is 42.9% markup.\n\n## The table worth remembering\n\n| Markup on cost | Resulting margin |\n|---|---|\n| 10% | 9.1% |\n| 20% | 16.7% |\n| 25% | 20% |\n| 30% | 23.1% |\n| 50% | 33.3% |\n| 66.7% | 40% |\n| 100% | 50% |\n\nThe gap widens as the numbers grow, which is why the mistake is expensive on the jobs that matter most.\n\n## Where it bites in a trade business\n\nMaterials markup is the usual place. A business that decides it needs a 25% margin on materials and applies a 25% markup is making 20%, and on a year of material purchases that difference is real money.\n\nIt also shows up when a customer asks for a discount. Taking 10% off the price of something sold at a 23% margin does not leave 13% margin, it leaves about 15% of a smaller number, and the profit falls by more than a third.\n\n## Markup on materials is not a rort\n\nA markup on parts funds carrying stock, the trip to the supplier, the warranty when the part fails, and the working capital tied up between paying for it and being paid for it. A trade business that passed materials through at cost would be lending you money and running errands for free.\n\nWhat matters is that the quote makes it visible, one way or the other. The [job cost calculator](/tools/job-cost-calculator/) pulls a quote apart into labour and materials so you can see the shape of it.",
+    "faqs": [
+      {
+        "q": "What is the difference between markup and margin?",
+        "a": "Markup is profit as a percentage of what it cost you. Margin is profit as a percentage of what you sold it for. Buy at $100 and sell at $130 and that is a 30% markup and a 23% margin. Same transaction, two different numbers."
+      },
+      {
+        "q": "What markup do I need for a 30% margin?",
+        "a": "42.9%. Divide the target margin by one minus the target margin: 0.3 divided by 0.7. Applying a 30% markup when you wanted a 30% margin leaves you with 23%, which is a shortfall of nearly a quarter of the profit you expected."
+      },
+      {
+        "q": "Is a 50% markup the same as a 50% margin?",
+        "a": "No. A 50% markup is a 33.3% margin. To get a 50% margin you need a 100% markup, which is to say doubling the cost. The gap between the two widens as the percentages grow."
+      },
+      {
+        "q": "What happens to my margin if I give a 10% discount?",
+        "a": "It falls by much more than 10%. On something sold at a 23% margin, a 10% discount takes roughly a third to a half of the profit out, because the discount comes entirely off the profit and not off the cost. Work it out before you offer it."
+      },
+      {
+        "q": "Is marking up materials fair?",
+        "a": "It is how a trade business funds carrying stock, the trip to the supplier, the warranty when a part fails, and the money tied up between buying the part and being paid for it. Passing materials through at cost would mean lending you money and running errands for nothing. What matters is that the quote makes it visible."
+      }
+    ]
+  },
+  {
     "slug": "quote-comparison",
     "title": "Get three quotes at once",
     "description": "Send one job brief to several verified trades across the Albury Wodonga border and compare what comes back.",

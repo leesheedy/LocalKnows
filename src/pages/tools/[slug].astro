@@ -10,6 +10,7 @@
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import ToolWidget from '~/components/ToolWidget.astro';
+import CalcWidget from '~/components/CalcWidget.astro';
 import { tools, url,
   pageExists,
 } from '~/lib/repo';
@@ -236,6 +237,7 @@ const jsonLd = graph(nodes);
         there is no key to leak. See src/components/ToolWidget.astro.
       */}
       {isLive && <ToolWidget slug={t.slug} />}
+      {isLive && <CalcWidget slug={t.slug} />}
 
       {showGenericSource && (
         <div class="notice">

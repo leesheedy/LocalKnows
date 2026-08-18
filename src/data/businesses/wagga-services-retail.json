@@ -1,0 +1,1398 @@
+[
+  {
+    "name": "Bush & Campbell",
+    "slug": "bush-and-campbell",
+    "categorySlug": "accountants",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "30 Blake Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6938 4600",
+    "website": "https://bushcampbell.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bush+%26+Campbell+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/BushCampbellAccountants",
+    "description": "Accounting and advisory firm at 30 Blake Street in central Wagga Wagga. The practice lists taxation and accounting, business advisory services, succession planning, CFO services, financial planning, audit and assurance, and self managed superannuation. Alongside the Wagga Wagga office the firm also has offices at Lockhart, Tumbarumba and Tumut.",
+    "highlights": [
+      "Taxation and accounting for individuals and businesses",
+      "Business advisory and succession planning",
+      "Audit and assurance services",
+      "Self managed superannuation administration",
+      "Also has Lockhart, Tumbarumba and Tumut offices"
+    ],
+    "sources": [
+      "https://bushcampbell.com.au/",
+      "https://www.localsearch.com.au/find/accountants/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "WDF Accounting + Advisory",
+    "slug": "wdf-accounting-advisory",
+    "categorySlug": "accountants",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "135-137 Peter Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 5444",
+    "website": "https://www.wdf.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=WDF+Accounting+%2B+Advisory+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/WDFProfessional.com.au",
+    "instagram": "https://www.instagram.com/wdfaccountingandadvisory",
+    "description": "Accounting and advisory practice at 135-137 Peter Street, Wagga Wagga. Service lines listed on their site are tax and compliance, business advisory, superannuation, smart accounting, bookkeeping and payroll, and an HR partner service. The office is open weekdays from 8:30am to 5:00pm.",
+    "highlights": [
+      "Tax and compliance work for businesses and individuals",
+      "Business advisory and superannuation",
+      "Bookkeeping and payroll services",
+      "HR partner service",
+      "Open weekdays 8:30am to 5pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:30", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "08:30", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "08:30", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "08:30", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "08:30", "closes": "17:00", "closed": false }
+    ],
+    "sources": [
+      "https://www.wdf.com.au/",
+      "https://www.localsearch.com.au/find/accountants/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Farrell Lusher Solicitors",
+    "slug": "farrell-lusher-solicitors",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "39 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2008",
+    "website": "https://www.farrell-lusher.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Farrell+Lusher+Solicitors+Wagga+Wagga+NSW",
+    "description": "Law firm at 39 Fitzmaurice Street that has practised in Wagga Wagga since 1910. Areas of work listed are family law including divorce, property settlements and parenting orders, criminal and driving matters, wills and estates, conveyancing, personal injury litigation and commercial law. Reception is open Monday to Friday from 9am to 5pm.",
+    "highlights": [
+      "Practising in Wagga Wagga since 1910",
+      "Family law, divorce and parenting matters",
+      "Criminal law, AVOs and driving offences",
+      "Wills, probate and powers of attorney",
+      "Residential and commercial conveyancing",
+      "Open Monday to Friday 9am to 5pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false }
+    ],
+    "sources": [
+      "https://www.farrell-lusher.com.au/",
+      "https://www.localsearch.com.au/find/lawyers-solicitors/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Tankard's Law",
+    "slug": "tankards-law",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Shop 6, 54 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3220",
+    "website": "https://tankardslaw.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tankard%27s+Law+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/tankardslaw/",
+    "description": "Criminal and traffic law practice in Shop 6 at 54 Fitzmaurice Street, Wagga Wagga. The firm's listed work covers drug offences, assaults, break and enter, fraud and firearms matters on the criminal side, and drink driving, drug driving, speeding, dangerous driving, licence appeals and heavy vehicle offences on the traffic side.",
+    "highlights": [
+      "Criminal defence work",
+      "Traffic and drink driving matters",
+      "Licence appeals",
+      "Heavy vehicle offences",
+      "Fitzmaurice Street office in the CBD"
+    ],
+    "sources": [
+      "https://tankardslaw.com.au/",
+      "https://www.localsearch.com.au/find/lawyers-solicitors/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Bower Wood Lawyers",
+    "slug": "bower-wood-lawyers",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "57 Gurwood Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6936 6940",
+    "website": "https://bowerwood.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bower+Wood+Lawyers+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/bowerwoodlawyers",
+    "instagram": "https://www.instagram.com/bowerwoodlawyers",
+    "description": "Law firm at 57 Gurwood Street, Wagga Wagga, with a second office at 54 The Parade, Tumbarumba. The practice works in business and commercial law, conveyancing and property development, and estate planning and administration.",
+    "highlights": [
+      "Business and commercial law",
+      "Conveyancing and property development",
+      "Estate planning and administration",
+      "Second office at Tumbarumba"
+    ],
+    "sources": [
+      "https://bowerwood.com.au/",
+      "https://www.localsearch.com.au/find/lawyers-solicitors/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Fitzpatricks Real Estate",
+    "slug": "fitzpatricks-real-estate",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "138 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 1555",
+    "website": "https://fitzpatricks.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fitzpatricks+Real+Estate+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/fitzpatricksre",
+    "instagram": "https://www.instagram.com/fitzpatricksre/",
+    "description": "Real estate agency on Baylis Street in the Wagga Wagga CBD. The agency handles residential sales and rentals, commercial property, property management, rural property and land sales, and offers free property appraisals along with maintenance request and e-alert services for owners and tenants.",
+    "highlights": [
+      "Residential sales and rentals",
+      "Commercial property sales and leasing",
+      "Rural property and land sales",
+      "Property management with online maintenance requests",
+      "Free property appraisals"
+    ],
+    "sources": [
+      "https://fitzpatricks.au/",
+      "https://www.localsearch.com.au/find/real-estate-agents/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kitson Property",
+    "slug": "kitson-property",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "66 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6923 3200",
+    "website": "https://kitsonproperty.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kitson+Property+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/kitsonproperty",
+    "description": "Wagga Wagga real estate agency at 66 Baylis Street handling sales, leasing and property management. The agency provides sales appraisals, investment advice, tenant forms and an online maintenance request system for renters.",
+    "highlights": [
+      "Residential sales and buyer support",
+      "Rental listings and property management",
+      "Sales appraisals",
+      "Online tenant maintenance requests"
+    ],
+    "sources": [
+      "https://kitsonproperty.com.au/",
+      "https://www.localsearch.com.au/find/real-estate-agents/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Ray White Wagga Wagga",
+    "slug": "ray-white-wagga-wagga",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "83 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6927 0900",
+    "website": "https://raywhitewagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ray+White+Wagga+Wagga+NSW",
+    "description": "Real estate office at 83 Morgan Street covering residential, land, commercial and rural sales plus rentals and property management. The office states it has been part of the Wagga real estate industry for over 30 years and also operates offices at Junee and Coolamon. Free in-person and desktop appraisals are offered.",
+    "highlights": [
+      "Residential, land and commercial sales",
+      "Rural property sales and appraisals",
+      "Rentals and property management",
+      "Auction services",
+      "Also operates Junee and Coolamon offices"
+    ],
+    "sources": [
+      "https://raywhitewagga.com.au/",
+      "https://www.localsearch.com.au/find/real-estate-agents/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Paper Plane Finance",
+    "slug": "paper-plane-finance",
+    "categorySlug": "mortgage-brokers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "222 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0451 850 896",
+    "website": "https://paperplanefinance.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Paper+Plane+Finance+Wagga+Wagga+NSW",
+    "description": "Mortgage broking business listed on Baylis Street, Wagga Wagga. The broker works across home loans, investment loans and refinancing, assisting first home buyers, repeat purchasers and property investors.",
+    "highlights": [
+      "Home loans and refinancing",
+      "Investment property lending",
+      "First home buyer assistance"
+    ],
+    "sources": [
+      "https://paperplanefinance.com.au/",
+      "https://www.localsearch.com.au/find/mortgage-brokers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Angry Ant Web Design",
+    "slug": "angry-ant-web-design",
+    "categorySlug": "web-design",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Suite 2, 32 Morrow Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "1300 856 285",
+    "website": "https://angryantweb.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Angry+Ant+Web+Design+Wagga+Wagga+NSW",
+    "description": "Web and design studio with offices in Wagga Wagga and the Shoalhaven. Services listed are web design, branding, graphic design and social media, with client work described across government, tourism, medical, hospitality, festival and agricultural sectors.",
+    "highlights": [
+      "Web design and development",
+      "Branding and graphic design",
+      "Social media management",
+      "Offices in Wagga Wagga and the Shoalhaven"
+    ],
+    "attributes": { "bookings": "yes" },
+    "sources": [
+      "https://angryantweb.com.au/",
+      "https://www.localsearch.com.au/find/web-design/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Quickprint Wagga",
+    "slug": "quickprint-wagga",
+    "categorySlug": "printers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "122 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 7366",
+    "website": "https://qpwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quickprint+Wagga+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/qpwagga/",
+    "instagram": "https://www.instagram.com/quick_print/",
+    "description": "Printing business on Fitzmaurice Street covering business stationery, promotional items, design, event and wedding printing, signage and labels. The shop trades weekdays from 8:30am to 4:30pm and is closed on weekends.",
+    "highlights": [
+      "Business stationery and business cards",
+      "Wedding and event printing",
+      "Promotional items",
+      "Signage and labels",
+      "In-house design service"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:30", "closes": "16:30", "closed": false },
+      { "day": 2, "opens": "08:30", "closes": "16:30", "closed": false },
+      { "day": 3, "opens": "08:30", "closes": "16:30", "closed": false },
+      { "day": 4, "opens": "08:30", "closes": "16:30", "closed": false },
+      { "day": 5, "opens": "08:30", "closes": "16:30", "closed": false }
+    ],
+    "sources": [
+      "https://qpwagga.com.au/",
+      "https://www.localsearch.com.au/find/printers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Khan Signs",
+    "slug": "khan-signs",
+    "categorySlug": "signage",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "4/28 Pearson Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 5588",
+    "website": "https://khansigns.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Khan+Signs+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/khansignss/",
+    "instagram": "https://www.instagram.com/khansigns/",
+    "description": "Locally owned signage business on Pearson Street that describes servicing Wagga and Australia for over 30 years. Work covers vehicle signage and wraps, fleet branding, illuminated and 3D lettering, shopfront and reception signage, safety and wayfinding signs, large format and digital printing, laser cutting and engraving, and paint protection film. The business is a 3M Select partner.",
+    "highlights": [
+      "Vehicle wraps and fleet branding",
+      "Illuminated and 3D lettering",
+      "Shopfront and reception signage",
+      "Large format and digital printing",
+      "Laser cutting and engraving",
+      "3M Select partner"
+    ],
+    "sources": [
+      "https://khansigns.com/",
+      "https://www.localsearch.com.au/find/printers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Best St. Dental",
+    "slug": "best-st-dental",
+    "categorySlug": "dentists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "122 Best Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 5799",
+    "website": "https://beststdental.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Best+St+Dental+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/beststdental/",
+    "instagram": "https://www.instagram.com/beststdental/",
+    "description": "Dental practice at 122 Best Street offering family and preventive dentistry, cosmetic and smile design work, orthodontics, dental implants, root canal treatment, periodontal treatment and hygiene, teeth whitening, sleep apnoea and snoring treatment, and emergency appointments. The practice offers CEREC same-day crowns and is open weekdays from 8am to 5pm.",
+    "highlights": [
+      "Family and preventive dentistry",
+      "CEREC same-day crowns",
+      "Dental implants and root canal treatment",
+      "Orthodontics and teeth whitening",
+      "Emergency dental appointments",
+      "Open weekdays 8am to 5pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "17:00", "closed": false }
+    ],
+    "sources": [
+      "https://beststdental.com.au/",
+      "https://www.localsearch.com.au/find/dentists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Shumack Dental & Implants",
+    "slug": "shumack-dental-and-implants",
+    "categorySlug": "dentists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "15-17 Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2333",
+    "website": "https://www.shumackdental.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Shumack+Dental+%26+Implants+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/shumackdental",
+    "instagram": "https://www.instagram.com/shumackdental/",
+    "description": "Dental practice on Trail Street covering family dentistry, restorative work such as fillings, crowns, bridges, dentures and veneers, and single and full arch dental implants. The practice also lists periodontics, sleep dentistry, orthodontics, mouthguards, a mobile dentistry service and same-day emergency appointments. It opens weekdays 8am to 5pm and every second Saturday morning.",
+    "highlights": [
+      "Single and full arch dental implants",
+      "Family and children's dentistry",
+      "Crowns, bridges, dentures and veneers",
+      "Sleep dentistry and orthodontics",
+      "Mobile dentistry service",
+      "Open every second Saturday 8am to 1pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": { "bookings": "yes", "mobile_service": "yes" },
+    "sources": [
+      "https://www.shumackdental.com.au/",
+      "https://www.localsearch.com.au/find/dentists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Physiotherapy and Sports Injury Centre",
+    "slug": "wagga-physiotherapy-and-sports-injury-centre",
+    "categorySlug": "physiotherapists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "45 Best Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 7021",
+    "website": "https://waggaphysio.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Physiotherapy+and+Sports+Injury+Centre+Wagga+Wagga+NSW",
+    "description": "Physiotherapy and sports injury rehabilitation practice at 45 Best Street. The centre states it has been operating for over 30 years and works alongside general practitioners, specialists, gyms and local sporting groups.",
+    "highlights": [
+      "Physiotherapy and rehabilitation",
+      "Sports injury treatment",
+      "Operating for over 30 years",
+      "Works with GPs, specialists and sporting clubs"
+    ],
+    "sources": [
+      "https://waggaphysio.com.au/",
+      "https://www.localsearch.com.au/find/physiotherapists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Body Dynamics Health",
+    "slug": "body-dynamics-health",
+    "categorySlug": "physiotherapists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "170 Kincaid Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 9080",
+    "website": "https://bodydynamicshealth.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Body+Dynamics+Health+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/bodydynamicshealth",
+    "instagram": "https://www.instagram.com/bodydynamicshealth",
+    "description": "Allied health clinic on Kincaid Street combining physiotherapy with exercise physiology and dietetics. The clinic runs an onsite exercise clinic, the Beat It diabetes program and sports performance consulting.",
+    "highlights": [
+      "Physiotherapy and exercise physiology",
+      "Dietetics",
+      "Onsite exercise clinic",
+      "Beat It diabetes program",
+      "Sports performance consulting"
+    ],
+    "sources": [
+      "https://bodydynamicshealth.com.au/",
+      "https://www.localsearch.com.au/find/physiotherapists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Granger Chiropractic",
+    "slug": "granger-chiropractic",
+    "categorySlug": "chiropractors",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "67 Johnston Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 8411",
+    "website": "https://www.grangerchiro.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Granger+Chiropractic+Wagga+Wagga+NSW",
+    "description": "Chiropractic clinic at 67 Johnston Street treating neck pain and headaches, arthritis and sports injuries, with care for families and children. Techniques listed include the Activator Method, Diversified Technique, Sacral Occipital Technique and the Thompson Technique. The practice is a member of the Australian Chiropractors Association.",
+    "highlights": [
+      "Neck pain and headache treatment",
+      "Sports injury rehabilitation",
+      "Paediatric and family chiropractic",
+      "Activator, Diversified, SOT and Thompson techniques",
+      "Australian Chiropractors Association member"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "17:00", "closed": false }
+    ],
+    "sources": [
+      "https://www.grangerchiro.com.au/",
+      "https://www.localsearch.com.au/find/chiropractors/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lightfoot Podiatry",
+    "slug": "lightfoot-podiatry",
+    "categorySlug": "podiatrists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Shop 6, Ground Floor, D'Hudson Arcade, 176-178 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6066",
+    "website": "https://lightfootpodiatry.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lightfoot+Podiatry+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/lightfootpodiatrywagga",
+    "description": "Locally owned podiatry clinic in the D'Hudson Arcade on Baylis Street. Treatments listed are general toenail care, corns and calluses, ingrown toenail removal using the BS Brace, advice on tinea and other foot infections, and diabetic foot assessments and complications. The clinic is on the ground floor for disability access and is Department of Veterans Affairs approved. It consults Tuesdays and Wednesdays, 9am to 4pm.",
+    "highlights": [
+      "General toenail, corn and callus care",
+      "Ingrown toenail treatment with BS Brace",
+      "Diabetic foot assessments",
+      "Department of Veterans Affairs approved",
+      "Ground floor arcade location with disability access"
+    ],
+    "hours": [
+      { "day": 2, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": { "wheelchair_accessible": "yes" },
+    "sources": [
+      "https://lightfootpodiatry.com.au/",
+      "https://www.localsearch.com.au/find/podiatrists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Zacharia Naumann Optometry",
+    "slug": "zacharia-naumann-optometry",
+    "categorySlug": "optometrists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "210 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 0044",
+    "website": "https://zacharianaumann.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Zacharia+Naumann+Optometry+Wagga+Wagga+NSW",
+    "instagram": "https://www.instagram.com/zacharia.naumann.optometry",
+    "description": "Independent optometry practice at 210 Baylis Street. Services include comprehensive eye examinations, children's vision assessments, myopia control and orthokeratology, dry eye treatment, computer vision care and emergency eye care. The dispensary carries frames, sunglasses, contact lenses, sports eyewear, safety specs and Rodenstock DNEye biometric lenses. Late consultations run on Thursdays and the practice opens Saturday mornings.",
+    "highlights": [
+      "Comprehensive eye examinations",
+      "Myopia control and orthokeratology",
+      "Dry eye treatment",
+      "Children's vision assessments",
+      "Frames, contact lenses, sports and safety eyewear",
+      "Open Saturday mornings"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:30", "closes": "17:30", "closed": false },
+      { "day": 2, "opens": "08:30", "closes": "17:30", "closed": false },
+      { "day": 3, "opens": "08:30", "closes": "17:30", "closed": false },
+      { "day": 4, "opens": "08:30", "closes": "18:30", "closed": false },
+      { "day": 5, "opens": "08:30", "closes": "17:30", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "13:00", "closed": false }
+    ],
+    "sources": [
+      "https://zacharianaumann.com.au/",
+      "https://www.localsearch.com.au/find/optometrists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Road Veterinary Hospital",
+    "slug": "lake-road-veterinary-hospital",
+    "categorySlug": "veterinary-clinics",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "60 Lake Albert Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6922 4659",
+    "website": "https://lakerdvet.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Road+Veterinary+Hospital+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/LakeRoadVet",
+    "instagram": "https://www.instagram.com/lake_road_vet",
+    "description": "Veterinary hospital on Lake Albert Road that states it is open 24 hours a day, 365 days a year. Services listed include consultations, diagnostics, advanced medical care, rehabilitation, grooming, puppy preschool, wildlife care and referral support for other veterinary practices.",
+    "highlights": [
+      "Open 24 hours a day, 365 days a year",
+      "Diagnostic and advanced medical services",
+      "Animal rehabilitation",
+      "Grooming and puppy preschool",
+      "Wildlife care"
+    ],
+    "attributes": { "after_hours": "yes", "pet_friendly": "yes" },
+    "sources": [
+      "https://lakerdvet.com.au/",
+      "https://www.localsearch.com.au/find/veterinary-surgeons/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kooringal Vet Hospital",
+    "slug": "kooringal-vet-hospital",
+    "categorySlug": "veterinary-clinics",
+    "vertical": "trades",
+    "localityName": "Tatton",
+    "state": "NSW",
+    "addressLine": "2 Kimberley Drive",
+    "suburb": "Tatton",
+    "postcode": "2650",
+    "phone": "02 6922 5375",
+    "website": "https://vetwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kooringal+Vet+Hospital+Tatton+NSW",
+    "facebook": "https://www.facebook.com/kooringalvet/",
+    "instagram": "https://www.instagram.com/kooringalvet/",
+    "description": "Veterinary hospital at 2 Kimberley Drive, Tatton. Healthcare services include vaccinations, health checks, microchipping, radiography, ultrasonography and parasite control, while surgical work covers dental, desexing, ophthalmology, orthopaedic, soft tissue and emergency procedures. The clinic also offers behavioural advice, grooming, nutrition guidance, puppy preschool and rabbit and reptile care, and lists a 24 hour emergency service.",
+    "highlights": [
+      "Vaccinations, health checks and microchipping",
+      "Radiography and ultrasonography",
+      "Dental, orthopaedic and soft tissue surgery",
+      "Puppy preschool and behavioural advice",
+      "Rabbit and reptile care",
+      "24 hour emergency availability"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "13:00", "closed": false }
+    ],
+    "attributes": { "after_hours": "yes", "pet_friendly": "yes" },
+    "sources": [
+      "https://vetwagga.com.au/",
+      "https://www.localsearch.com.au/find/veterinary-surgeons/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Michael O'Reilly Pharmacy",
+    "slug": "michael-oreilly-pharmacy",
+    "categorySlug": "pharmacies",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "67 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3315",
+    "website": "https://oreillypharmacy.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Michael+O%27Reilly+Pharmacy+Wagga+Wagga+NSW",
+    "description": "Pharmacy at 67 Baylis Street in the Wagga Wagga CBD. Services listed are PBS, concession and DVA dispensing, vaccinations including flu, whooping cough, MMR and COVID-19, sleep apnoea consultations and equipment, weekly medicines packs, MedsChecks, blood pressure and blood glucose monitoring, bowel cancer screening, baby weighing and absence from work certificates. Scripts can be uploaded online and appointments booked through the site.",
+    "highlights": [
+      "Prescription dispensing including DVA",
+      "Vaccination service",
+      "Sleep apnoea consultations and equipment",
+      "Weekly medicines packs and MedsChecks",
+      "Blood pressure and glucose monitoring",
+      "Open Saturday mornings"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:30", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "08:30", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "08:30", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "08:30", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "08:30", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "08:30", "closes": "14:00", "closed": false }
+    ],
+    "attributes": { "bookings": "yes" },
+    "sources": [
+      "https://oreillypharmacy.com.au/",
+      "https://www.localsearch.com.au/find/pharmacies/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Southcity Community Pharmacy",
+    "slug": "southcity-community-pharmacy",
+    "categorySlug": "pharmacies",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Shop 5A, South City Shopping Centre, 1-7 Tanda Place",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 3550",
+    "website": "https://southcitypharm.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Southcity+Community+Pharmacy+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/southcitypharmacywagga/",
+    "description": "Pharmacy in the South City Shopping Centre on Tanda Place. The pharmacy offers Webster packing, custom compounding, online prescriptions and delivery, vaccinations, sleep apnoea support, pharmacist consultations and Farm Door frozen meals. It trades seven days, 8am to 7pm on weekdays and 9am to 5pm on weekends.",
+    "highlights": [
+      "Open seven days",
+      "Webster packing and custom compounding",
+      "Vaccinations and pharmacist consultations",
+      "Sleep apnoea support",
+      "Online prescriptions and delivery"
+    ],
+    "hours": [
+      { "day": 0, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "08:00", "closes": "19:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "19:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "19:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "19:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "19:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": { "open_sunday": "yes", "parking": "yes" },
+    "sources": [
+      "https://southcitypharm.com.au/",
+      "https://www.localsearch.com.au/find/pharmacies/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lulu & Kit Haircutters",
+    "slug": "lulu-and-kit-haircutters",
+    "categorySlug": "hairdressers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "31 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 9119",
+    "website": "https://luluandkit.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lulu+%26+Kit+Haircutters+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/luluandkit/",
+    "instagram": "https://www.instagram.com/luluandkit/",
+    "description": "Fitzmaurice Street salon doing men's and women's cutting, colour work including highlights, foils, balayage, freehand placement, colour correction and toning, plus blow drying, curls, straightening and wedding and event styling. Treatments include O&M and Christophe Robin ranges, and the salon stocks Kevin Murphy, Eleven, O&M, GHD, Cloud Nine, Redken and K18. Late night trading on Thursdays.",
+    "highlights": [
+      "Cutting for men and women",
+      "Balayage, foils and colour correction",
+      "Wedding and event styling",
+      "Stocks Kevin Murphy, Eleven, O&M and K18",
+      "Open until 8pm Thursdays"
+    ],
+    "hours": [
+      { "day": 2, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "20:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "14:00", "closed": false }
+    ],
+    "attributes": { "bookings": "yes" },
+    "sources": [
+      "https://luluandkit.com/",
+      "https://www.localsearch.com.au/find/hairdressers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Plush Hairdressing",
+    "slug": "plush-hairdressing",
+    "categorySlug": "hairdressers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "9 Trail Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "website": "https://plushhairdressing.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Plush+Hairdressing+Wagga+Wagga+NSW",
+    "description": "Salon at 9 Trail Street offering precision cutting, bespoke colour including lightening and toning, blow-outs and special occasion styling, bridal work, and scalp and smoothing treatments with hair and scalp analysis. Bookings are taken through Fresha and the salon sells take-home hair care products.",
+    "highlights": [
+      "Precision cutting and bespoke colour",
+      "Scalp rituals and smoothing treatments",
+      "Bridal and occasion styling",
+      "Online booking through Fresha",
+      "Take-home hair care products"
+    ],
+    "attributes": { "bookings": "yes" },
+    "sources": [
+      "https://plushhairdressing.com.au/",
+      "https://www.localsearch.com.au/find/hairdressers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Big Barber Delux",
+    "slug": "big-barber-delux",
+    "categorySlug": "barbers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Sturt Mall, 135 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3809",
+    "website": "https://bigbarberdelux.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Big+Barber+Delux+Sturt+Mall+Wagga+Wagga+NSW",
+    "instagram": "https://www.instagram.com/bigbarberdelux",
+    "description": "Barber shop in Sturt Mall on Baylis Street, one of two Big Barber Delux shops in Wagga Wagga alongside the Marketplace store. The barbers do men's, seniors' and boys' haircuts, beard trims and styling, wet shaves and hair tattoos, and sell hair and beard care products. No appointment is needed and walk-ins are welcome.",
+    "highlights": [
+      "Walk-ins welcome, no appointment needed",
+      "Men's, seniors' and boys' haircuts",
+      "Beard trims and wet shaves",
+      "Hair tattoos",
+      "Second shop at Wagga Marketplace"
+    ],
+    "sources": [
+      "https://bigbarberdelux.com.au/",
+      "https://www.localsearch.com.au/find/hairdressers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "BY KIRRA Skin & Beauty",
+    "slug": "by-kirra-skin-and-beauty",
+    "categorySlug": "beauty-salons",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "105 Forsyth Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0460 966 660",
+    "website": "https://bykirra.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BY+KIRRA+Skin+%26+Beauty+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/BYKIRRA",
+    "instagram": "https://www.instagram.com/by_kirra",
+    "description": "Skin and beauty studio at 105 Forsyth Street offering facials aimed at hydration, brightening and ageing concerns, waxing and tinting, tanning, and professional makeup for special occasions, photoshoots and corporate events. Bridal makeup and gift vouchers are available, and the studio retails Medik8, iS Clinical, Vida Glow and ISSADA skincare. Appointments run Tuesday to Saturday.",
+    "highlights": [
+      "Facial treatments and skin consultations",
+      "Waxing, tinting and tanning",
+      "Special occasion and bridal makeup",
+      "Stocks Medik8, iS Clinical, Vida Glow and ISSADA",
+      "Open Tuesday to Saturday by appointment"
+    ],
+    "attributes": { "bookings": "yes" },
+    "sources": [
+      "https://bykirra.com.au/",
+      "https://www.localsearch.com.au/find/beauty-salons/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Conspiracy Tattoo",
+    "slug": "conspiracy-tattoo",
+    "categorySlug": "tattoo-studios",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "27 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6626",
+    "website": "https://www.conspiracytattoo.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Conspiracy+Tattoo+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/ConspiracyTattoo",
+    "description": "Tattoo studio at 27 Baylis Street doing custom designs as well as pre-existing artwork. The studio describes medical grade hygiene using single-use needles and autoclave sterilisation, and is a member of the Australian Tattooists Guild.",
+    "highlights": [
+      "Custom tattoo design",
+      "Single-use needles and autoclave sterilisation",
+      "Member of the Australian Tattooists Guild",
+      "Baylis Street CBD location"
+    ],
+    "sources": [
+      "https://www.conspiracytattoo.com.au/",
+      "https://www.localsearch.com.au/find/tattoo-parlours/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Possums Early Learning Centre",
+    "slug": "possums-early-learning-centre",
+    "categorySlug": "childcare",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "7 Forsyth Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6808",
+    "website": "https://possumselc.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Possums+Early+Learning+Centre+Wagga+Wagga+NSW",
+    "instagram": "https://www.instagram.com/possumselc",
+    "description": "Long day care centre at 7 Forsyth Street for children from six weeks to five years, running two rooms, Little Possums and the Preschool Room. The centre operates 8am to 6pm Monday to Friday, 52 weeks a year excluding public holidays, and families can access the Child Care Subsidy.",
+    "highlights": [
+      "Long day care from six weeks to five years",
+      "Little Possums and Preschool rooms",
+      "Open 8am to 6pm weekdays",
+      "Operates 52 weeks a year",
+      "Child Care Subsidy available"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "18:00", "closed": false }
+    ],
+    "attributes": { "kid_friendly": "yes" },
+    "sources": [
+      "https://possumselc.org.au/",
+      "https://www.localsearch.com.au/find/child-care-centres/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Knights Deli",
+    "slug": "knights-deli",
+    "categorySlug": "butchers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "183 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3725",
+    "website": "https://knightsriverina.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Knights+Deli+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/KnightsRiverina/",
+    "instagram": "https://www.instagram.com/knightsriverina",
+    "description": "Delicatessen and food providore on Fitzmaurice Street selling meats and smallgoods, artisan cheeses, cured meats, antipasto, salads and pies, plus pantry lines and a house-made Knights Own range. The shop also does catering, grazing boxes, platters and gift hampers, and trades Monday to Friday 8am to 6pm and Saturday 9am to 4pm.",
+    "highlights": [
+      "Meats, smallgoods and cured meats",
+      "Artisan cheeses and antipasto",
+      "House-made Knights Own range",
+      "Grazing boxes, platters and hampers",
+      "Catering service",
+      "Open Saturdays 9am to 4pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "16:00", "closed": false }
+    ],
+    "sources": [
+      "https://knightsriverina.com.au/",
+      "https://www.localsearch.com.au/find/butchers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "CBM Meats",
+    "slug": "cbm-meats",
+    "categorySlug": "butchers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Rear of 59-61 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0428 506 782",
+    "website": "https://www.cbmmeats.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=CBM+Meats+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/people/CBM-Meats/61555253022225/",
+    "instagram": "https://www.instagram.com/cbm_meats/",
+    "description": "Wholesale and retail butcher located at the rear of 61 Baylis Street, Wagga Wagga. The shop sells premium cuts, smallgoods and smoked meats, with a range built around Riverina Angus beef, Australian pork and Riverina lamb. It trades weekdays 9am to 6pm and weekends 9am to 3pm.",
+    "highlights": [
+      "Wholesale and retail butcher",
+      "Riverina Angus beef and Riverina lamb",
+      "Smallgoods and smoked meats",
+      "Open seven days",
+      "Behind the Victoria Hotel on Baylis Street"
+    ],
+    "hours": [
+      { "day": 0, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 1, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "15:00", "closed": false }
+    ],
+    "attributes": { "open_sunday": "yes" },
+    "sources": [
+      "https://www.cbmmeats.com.au/",
+      "https://www.localsearch.com.au/find/butchers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Little Triffids Flowers",
+    "slug": "little-triffids-flowers",
+    "categorySlug": "florists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "30 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6900 2181",
+    "website": "https://littletriffids.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Little+Triffids+Flowers+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/littletriffidsflowers",
+    "instagram": "https://www.instagram.com/littletriffidsflowers",
+    "description": "Florist and gift shop at 30 Fitzmaurice Street selling bouquets, potted plants and a gift range that takes in jewellery, baby items, beauty products, books, stationery, food and drink, garden wares and homewares. The shop does wedding and funeral flowers and runs workshops. Open Monday 9am to 2pm, Tuesday to Friday 9am to 5pm and Saturday 9am to 2pm.",
+    "highlights": [
+      "Bouquets and potted plants",
+      "Wedding and funeral flowers",
+      "Floral workshops",
+      "Gifts, homewares and stationery",
+      "Open Saturday mornings"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "14:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "14:00", "closed": false }
+    ],
+    "sources": [
+      "https://littletriffids.com.au/",
+      "https://www.localsearch.com.au/find/florists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kidsons Cycles",
+    "slug": "kidsons-cycles",
+    "categorySlug": "bike-shops",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "105 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4474",
+    "website": "https://kidsonscycles.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kidsons+Cycles+Wagga+Wagga+NSW",
+    "instagram": "https://www.instagram.com/kidsons_cycles",
+    "description": "Bike shop at 105 Fitzmaurice Street stocking road and mountain bikes from Merida, Cervelo, Specialized, Trek and Cannondale, BMX from DK, Fit Bike Co, GT and Kink, and kids bikes. The workshop offers repairs and a range of service packages from a deluxe bike wash to roadworthy, general, premium and platinum services, plus bike fitting sessions of about an hour. New bikes come with a free first service.",
+    "highlights": [
+      "Road, mountain, BMX and kids bikes",
+      "Merida, Cervelo, Specialized, Trek and Cannondale",
+      "Workshop repairs and service packages",
+      "Bike fitting appointments",
+      "Free first service with a new bike"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "13:00", "closed": false }
+    ],
+    "sources": [
+      "https://kidsonscycles.com.au/",
+      "https://www.localsearch.com.au/find/bicycle-shops/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Gateway Bookshop",
+    "slug": "gateway-bookshop",
+    "categorySlug": "bookshops",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "The Piazza, Shop 2/46 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5971 3254",
+    "website": "https://gatewaybookshop.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gateway+Bookshop+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/gatewaybookshop/",
+    "instagram": "https://www.instagram.com/gateway.bookshop/",
+    "description": "Independent bookshop in The Piazza on Baylis Street. The range covers children's and adult fiction, non-fiction, educational resources across several levels, special edition books and teacher diaries, and the shop also runs VR escape room experiences. Open Tuesday to Friday 10am to 5pm and Saturday 10am to 1pm.",
+    "highlights": [
+      "Independent bookshop in The Piazza",
+      "Children's and adult fiction",
+      "Educational resources and teacher diaries",
+      "VR escape room experiences",
+      "Open Saturday mornings"
+    ],
+    "hours": [
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "13:00", "closed": false }
+    ],
+    "sources": [
+      "https://gatewaybookshop.com.au/",
+      "https://www.localsearch.com.au/find/book-shops/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Diamonds on Baylis Jewellers",
+    "slug": "diamonds-on-baylis-jewellers",
+    "categorySlug": "jewellers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "80 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3369",
+    "website": "https://www.diamondsonbaylisjewellers.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Diamonds+on+Baylis+Jewellers+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/diamondsonbaylis1/",
+    "instagram": "https://www.instagram.com/diamonds_on_baylis_jewellers/",
+    "description": "Jewellery shop at 80 Baylis Street that has traded since 1984 and handcrafts rings, chains, pendants, earrings and bracelets in 9ct and 18ct yellow, white and rose gold. Stones used include diamonds, peridot, aquamarine, morganite, ruby and topaz, and the shop carries Adina and Citizen watches. On-site services cover custom design, repairs and restoration, ring resizing, stone resetting and appraisals.",
+    "highlights": [
+      "Trading in Wagga Wagga since 1984",
+      "Handcrafted rings and custom design",
+      "On-site repairs, resizing and stone resetting",
+      "Jewellery appraisals",
+      "Adina and Citizen watches"
+    ],
+    "sources": [
+      "https://www.diamondsonbaylisjewellers.com.au/",
+      "https://www.localsearch.com.au/find/jewellers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Allison Music Wagga",
+    "slug": "allison-music-wagga",
+    "categorySlug": "music-shops",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "85 Forsyth Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2696",
+    "website": "https://allisonmusic.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Allison+Music+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/allisonmusicwagga/",
+    "instagram": "https://www.instagram.com/allisonmusicwagga/",
+    "description": "Locally owned music shop at 85 Forsyth Street that says it has served Wagga Wagga and the Riverina for over 23 years. Stock covers acoustic, electric, classical and bass guitars, amplifiers, acoustic and digital drums, acoustic and digital pianos, keyboards, folk instruments such as banjo, mandolin, ukulele and harmonica, orchestral instruments, PA and recording gear, sheet music and apparel.",
+    "highlights": [
+      "Locally owned, trading over 23 years",
+      "Guitars, amps, drums and keyboards",
+      "Acoustic and digital pianos",
+      "PA and home recording equipment",
+      "Sheet music and orchestral instruments"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:30", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "14:00", "closed": false }
+    ],
+    "sources": [
+      "https://allisonmusic.com.au/pages/contact-us",
+      "https://www.localsearch.com.au/find/musical-instruments/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverina Driving Academy",
+    "slug": "riverina-driving-academy",
+    "categorySlug": "driving-schools",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0405 912 246",
+    "website": "https://riverinadrivingacademy.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverina+Driving+Academy+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/Riverina-Driving-Academy-674267445921161/",
+    "description": "Driving school teaching learner drivers across Wagga Wagga and district, including Ashmont, Bourkelands, Estella, Forest Hill, Glenfield Park, Gumly Gumly, Kooringal, Lake Albert, Lloyd, Mount Austin, Tatton, Tolland and Turvey Park. Lessons run 60 minutes in dual-control automatic Honda Jazz cars, with a package of five lessons plus a sixth at half price. The instructor is Keys2Drive accredited.",
+    "highlights": [
+      "60 minute lessons in dual-control automatics",
+      "Keys2Drive accredited instructor",
+      "Five lesson package with sixth at half price",
+      "Covers Wagga suburbs and nearby villages",
+      "Pick-up across Wagga Wagga and district"
+    ],
+    "attributes": { "mobile_service": "yes", "bookings": "yes" },
+    "sources": [
+      "https://riverinadrivingacademy.com.au/",
+      "https://www.localsearch.com.au/find/driving-schools/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Rapley's Nursery and Landscape Supplies",
+    "slug": "rapleys-nursery-and-landscape-supplies",
+    "categorySlug": "nurseries",
+    "vertical": "trades",
+    "localityName": "Lake Albert",
+    "state": "NSW",
+    "addressLine": "56 Cummins Road",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "phone": "02 6922 5746",
+    "website": "https://rapleyslandscapesupplies.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rapley%27s+Nursery+and+Landscape+Supplies+Lake+Albert+NSW",
+    "description": "Nursery and landscape supply yard at 56 Cummins Road, Lake Albert. The business sells locally grown plants and advanced trees alongside soils, mulches and landscape products, and offers planting advice, planning and design assistance, soil testing and delivery through Wagga Wagga and surrounding areas. Open weekdays 8am to 5pm and weekends 8:30am to 3pm.",
+    "highlights": [
+      "Locally grown plants and advanced trees",
+      "Soils, mulches and landscape products",
+      "Soil testing and planting advice",
+      "Delivery around Wagga Wagga",
+      "Open seven days"
+    ],
+    "hours": [
+      { "day": 0, "opens": "08:30", "closes": "15:00", "closed": false },
+      { "day": 1, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "08:30", "closes": "15:00", "closed": false }
+    ],
+    "attributes": { "open_sunday": "yes", "parking": "yes" },
+    "sources": [
+      "https://rapleyslandscapesupplies.com.au/",
+      "https://www.localsearch.com.au/find/garden-centres/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Storehouse Botanica",
+    "slug": "storehouse-botanica",
+    "categorySlug": "florists",
+    "vertical": "trades",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "1 Humphrys Street",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 2300",
+    "website": "https://storehousebotanica.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Storehouse+Botanica+Junee+NSW",
+    "facebook": "https://www.facebook.com/StorehouseBotanica",
+    "instagram": "https://www.instagram.com/storehousebotanica/",
+    "description": "Florist and gift store at 1 Humphrys Street, Junee. Arrangements are offered in pastel, tonal, bright and wildflower styles, and the shop also carries home fragrance, bath and body products, books, clothing and accessories. Next business day delivery is available in Junee and surrounding areas.",
+    "highlights": [
+      "Fresh bouquets in several styles",
+      "Home fragrance, bath and body gifts",
+      "Books, clothing and accessories",
+      "Next business day delivery in Junee and district"
+    ],
+    "sources": [
+      "https://storehousebotanica.com.au/",
+      "https://www.localsearch.com.au/find/florists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Monty & Moo",
+    "slug": "monty-and-moo",
+    "categorySlug": "clothing-stores",
+    "vertical": "trades",
+    "localityName": "Holbrook",
+    "state": "NSW",
+    "addressLine": "141 Albury Street",
+    "suburb": "Holbrook",
+    "postcode": "2644",
+    "website": "https://www.montyandmoo.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Monty+%26+Moo+Holbrook+NSW",
+    "facebook": "https://www.facebook.com/MontyandMoo/",
+    "instagram": "https://www.instagram.com/montyandmooclothing/",
+    "description": "Clothing, gifts and homewares store on Albury Street, Holbrook. The range covers dresses, shirts, knitwear and jackets, accessories including belts, jewellery, handbags and footwear, plus home and garden goods, bath and beauty products, greeting cards and stationery.",
+    "highlights": [
+      "Women's clothing and knitwear",
+      "Accessories, handbags and footwear",
+      "Home, garden and bath products",
+      "Cards, stationery and gifts",
+      "On the Holbrook main street"
+    ],
+    "sources": [
+      "https://www.montyandmoo.com.au/",
+      "https://www.localsearch.com.au/find/jewellers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Skinner & Associates",
+    "slug": "skinner-and-associates-culcairn",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Culcairn",
+    "state": "NSW",
+    "addressLine": "24 Balfour Street",
+    "suburb": "Culcairn",
+    "postcode": "2660",
+    "phone": "02 6058 0000",
+    "website": "https://www.skinner.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skinner+%26+Associates+Culcairn+NSW",
+    "description": "Law firm founded in 1969 with an office at 24 Balfour Street, Culcairn and a second office in Albury. Practice areas listed are commercial and corporate law, conveyancing and property law, family law, wills and estates, dispute resolution and litigation, employment law, public notary work and court and tribunal appearances.",
+    "highlights": [
+      "Founded in 1969",
+      "Conveyancing and property law",
+      "Family law and wills and estates",
+      "Commercial and employment law",
+      "Public notary service"
+    ],
+    "sources": [
+      "https://www.skinner.com.au/",
+      "https://www.localsearch.com.au/find/lawyers-solicitors/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Custom Music",
+    "slug": "custom-music-narrandera",
+    "categorySlug": "music-shops",
+    "vertical": "trades",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "153-155 East Street",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 2239",
+    "website": "https://custommusic.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Custom+Music+Narrandera+NSW",
+    "description": "Music store on East Street, Narrandera, one of three Custom Music stores along with Griffith and Wagga Wagga. Stock includes guitars, ukuleles, amplifiers, drums, pianos, brass and wind instruments, violins and home recording equipment, and the business sells, installs and services PA systems and lighting for schools, clubs and churches. The Narrandera store opens weekdays 10am to 5pm and Saturday 9am to noon.",
+    "highlights": [
+      "Guitars, drums, pianos and orchestral instruments",
+      "PA systems and lighting sales",
+      "Installation and service for schools, clubs and churches",
+      "Home recording equipment",
+      "Stores at Narrandera, Griffith and Wagga Wagga"
+    ],
+    "hours": [
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "12:00", "closed": false }
+    ],
+    "sources": [
+      "http://www.custommusic.com.au/index.html",
+      "https://www.localsearch.com.au/find/musical-instruments/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

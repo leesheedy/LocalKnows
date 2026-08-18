@@ -1,0 +1,1861 @@
+[
+  {
+    "name": "Mechanical World",
+    "slug": "mechanical-world",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "362 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 1040",
+    "website": "https://www.mechanicalworld.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mechanical+World+Wagga+Wagga+NSW",
+    "description": "Independent workshop on Edward Street handling logbook and general motor vehicle servicing, brakes, batteries, timing belts and transmission service. It also does pink slip vehicle inspections, air conditioning regas, cooling system maintenance, diesel care with BG cleaning, and wheel alignment and balancing. Suspension work includes Lovells GVM and GCM upgrades and Fulcrum lift kits and airbags, and the workshop takes RV servicing and vintage car repairs.",
+    "highlights": [
+      "Logbook and general servicing",
+      "Pink slip vehicle inspections",
+      "Wheel alignment and balancing",
+      "Lovells GVM/GCM and Fulcrum suspension upgrades",
+      "RV servicing and vintage car repairs"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://www.mechanicalworld.com.au/",
+      "https://www.localsearch.com.au/find/mechanics/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "COD Automotive",
+    "slug": "cod-automotive",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "addressLine": "3/218 Urana Street",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "phone": "02 6925 1593",
+    "website": "https://www.codautomotive.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=COD+Automotive+Ashmont+NSW",
+    "facebook": "https://www.facebook.com/people/COD-Automotive/100066382891746/",
+    "description": "Ashmont workshop doing logbook servicing on new and used vehicles, brake and clutch repairs, steering and suspension work and cooling system repairs. It also carries out registration pink slip checks, diesel and truck repairs and fleet maintenance. The business describes itself as providing car, 4WD and truck repairs with over 16 years of local experience.",
+    "highlights": [
+      "Warranty-safe logbook servicing",
+      "Brake and clutch repairs",
+      "Pink slip registration checks",
+      "Diesel and truck repairs",
+      "Fleet maintenance"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.codautomotive.com.au/",
+      "https://www.localsearch.com.au/find/mechanics/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Whitlock Automotive",
+    "slug": "whitlock-automotive",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "37 Bardo Lane",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2641",
+    "website": "https://whitlockautomotive.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Whitlock+Automotive+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/WhitlockAutomotive",
+    "description": "Bardo Lane workshop offering logbook servicing based on vehicle kilometres, and general servicing that covers inspections, oil and filter changes, greasing and tyre rotation. It issues pink slips through eSafety mechanical inspections for registration. Radiator servicing, wheel alignments and air conditioning regassing are handled through a partnership with Wagga Radiators.",
+    "highlights": [
+      "Log book servicing",
+      "Pink slip eSafety inspections",
+      "Radiator servicing",
+      "Wheel alignments",
+      "Air conditioning regassing"
+    ],
+    "sources": [
+      "https://whitlockautomotive.com.au/",
+      "https://www.localsearch.com.au/find/mechanics/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga City Auto Centre",
+    "slug": "wagga-city-auto-centre",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "2 Cheshire Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 5755",
+    "website": "https://www.wcac.net.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+City+Auto+Centre+Wagga+Wagga+NSW",
+    "description": "Cheshire Street workshop that services all makes and models including new cars while protecting the manufacturer warranty. Work covers complete computer diagnostics and safety analysis, oil changes, tyres, brake repair, steering and suspension and wheel alignments. Fleet servicing is also offered, and Saturdays are by appointment only.",
+    "highlights": [
+      "Servicing for all makes and models",
+      "Complete computer diagnostics",
+      "Brakes, steering and suspension",
+      "Wheel alignments and tyres",
+      "Fleet servicing"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.wcac.net.au/",
+      "https://www.localsearch.com.au/find/tyres/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Precision Auto Centre",
+    "slug": "precision-auto-centre",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "addressLine": "1/73 Dobney Avenue",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "phone": "02 6925 3749",
+    "website": "https://www.precisionautocentre.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Precision+Auto+Centre+Ashmont+NSW",
+    "facebook": "https://www.facebook.com/precisionautocentrewagga/",
+    "description": "Family-owned Ashmont workshop with more than 35 years of industry experience, diagnosing and repairing all makes and models of vehicle. The workshop is fitted out with current diagnostic and repair equipment and staffed by fully qualified mechanics who undertake ongoing training. Parts and consumables used include Valvoline, Ryco filters, NGK, KYB, Bendix, Dayco, Natrad, Century and Lion batteries.",
+    "highlights": [
+      "Family owned and operated",
+      "Over 35 years in the trade",
+      "Diagnostics and repair on all makes and models",
+      "Licensed motor vehicle repairer",
+      "Valvoline, Ryco, NGK and Bendix parts"
+    ],
+    "sources": [
+      "https://www.precisionautocentre.com.au/",
+      "https://www.localsearch.com.au/find/windscreens/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Skids Mechanical Services",
+    "slug": "skids-mechanical-services",
+    "categorySlug": "mechanics",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "3 Mortimer Place",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5954 9327",
+    "website": "https://www.skidsmechanicalservices.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skids+Mechanical+Services+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/Skids.com.au",
+    "instagram": "https://www.instagram.com/skid1971/",
+    "description": "Mortimer Place workshop doing logbook and general servicing, brake repairs, suspension and steering work and auto electrical diagnostics and repairs. It is an authorised inspection station and carries out pink and blue slip inspections, and also tests, replaces and fits batteries. The team services and repairs motorbikes as well, listing itself as a Harley-Davidson specialist.",
+    "highlights": [
+      "Logbook and general servicing",
+      "Pink and blue slip inspections",
+      "Authorised inspection station",
+      "Auto electrical diagnostics",
+      "Motorbike servicing and Harley-Davidson specialists"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.skidsmechanicalservices.com.au/",
+      "https://www.localsearch.com.au/find/mechanics/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Crockers Auto Electrical Services",
+    "slug": "crockers-auto-electrical-services",
+    "categorySlug": "auto-electricians",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "66 Chaston Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 4758",
+    "website": "https://www.crockersautoelectrical.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Crockers+Auto+Electrical+Services+Wagga+Wagga+NSW",
+    "description": "Auto electrical workshop on Chaston Street specialising in alternators and starter motors. It also supplies and fits lights and accessories, caravan brake controllers and dual battery conversions. The business says it finds the fault quickly and explains to the customer what it is doing and why.",
+    "highlights": [
+      "Alternators and starter motors",
+      "Lights and accessories",
+      "Caravan brake controllers",
+      "Dual battery conversions"
+    ],
+    "sources": [
+      "https://www.crockersautoelectrical.com.au/",
+      "https://www.localsearch.com.au/find/auto-electricians/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pat's Tyre Service",
+    "slug": "pats-tyre-service",
+    "categorySlug": "tyre-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "12 Jones Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2598",
+    "website": "https://www.patstyreservice.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pat%27s+Tyre+Service+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/people/Pats-tyre-service/100057699360173/",
+    "description": "Jones Street tyre shop doing tyre fitting and rotation, wheel balancing and alignments and puncture repairs, plus battery supply and installation. Tyre brands stocked include Yokohama, Michelin, BFGoodrich, Toyo, Falken, Maxxis and Continental, alongside wheels from Advanti, American Racing and Black Rhino. A 24/7 call-out service runs from equipped vehicles, and the shop takes online bookings and accepts Zip Pay and Afterpay.",
+    "highlights": [
+      "Tyre fitting, rotation and puncture repairs",
+      "Wheel balancing and alignments",
+      "Batteries supplied and installed",
+      "24/7 call-out service",
+      "Online booking, Zip Pay and Afterpay"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "mobile_service": "yes"
+    },
+    "sources": [
+      "https://www.patstyreservice.com.au/",
+      "https://www.localsearch.com.au/find/tyres/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Craig Glasson Smash Repairs",
+    "slug": "craig-glasson-smash-repairs",
+    "categorySlug": "panel-beaters",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "28 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3281",
+    "website": "https://www.craigglassonsmashrepairs.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Craig+Glasson+Smash+Repairs+Wagga+Wagga+NSW",
+    "description": "Edward Street smash repairer doing collision repairs and panel beating on all makes and models, custom resprays and paintless dent repair. It also repairs trucks and farm machinery, works on 4WDs and has car hire available while a vehicle is in the shop. Seven tilt tray trucks run a 24/7 towing, recovery and winch service, and the business offers a lifetime guarantee on its repairs and is a recommended repairer for NRMA, Lumley and Zurich.",
+    "highlights": [
+      "Collision repairs and panel beating",
+      "Custom resprays and paintless dent repair",
+      "24/7 towing with seven tilt tray trucks",
+      "Truck and farm machinery repairs",
+      "Lifetime guarantee on repairs",
+      "Recommended repairer for major insurers"
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "emergency_callout": "yes"
+    },
+    "sources": [
+      "https://www.craigglassonsmashrepairs.com.au/",
+      "https://www.localsearch.com.au/find/panel-beaters/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Glassons Body Works",
+    "slug": "glassons-body-works",
+    "categorySlug": "panel-beaters",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "24 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3281",
+    "website": "https://www.glassonsbodyworks.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Glassons+Body+Works+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/glassonsbodyworks",
+    "description": "Edward Street body shop established in 1953 and locally owned and operated, with owner Craig Glasson holding close to 40 years in the trade. Work covers custom ute tray design and fabrication, smash repairs and panel beating, horse float repairs, and general fabrication and restoration. The shop also carries out trailer and caravan registration checks.",
+    "highlights": [
+      "Established 1953",
+      "Custom ute tray design and fabrication",
+      "Smash repairs and panel beating",
+      "Horse float repairs",
+      "Trailer and caravan registration checks"
+    ],
+    "sources": [
+      "https://www.glassonsbodyworks.com.au/",
+      "https://www.localsearch.com.au/find/panel-beaters/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Windscreen Doctor",
+    "slug": "wagga-windscreen-doctor",
+    "categorySlug": "windscreen-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "35 Pearson Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 0322",
+    "website": "https://www.waggawindscreendoctor.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Windscreen+Doctor+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/pages/Wagga-Windscreen-Doctor/178281335533338",
+    "description": "Pearson Street auto glass business with more than 30 years behind it, repairing windscreen chips and cracks and replacing windscreens. Mobile vans take glass repair and replacement across the Riverina, covering cars, tractors, buses and excavators. It also handles residential and commercial glazing including window and door glass replacement.",
+    "highlights": [
+      "Windscreen chip and crack repair",
+      "Windscreen replacement",
+      "Mobile glass vans across the Riverina",
+      "Glass for tractors, buses and excavators",
+      "Residential and commercial glazing"
+    ],
+    "attributes": {
+      "mobile_service": "yes"
+    },
+    "sources": [
+      "https://www.waggawindscreendoctor.com.au/",
+      "https://www.localsearch.com.au/find/windscreens/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverina 4WD",
+    "slug": "riverina-4wd",
+    "categorySlug": "4wd-specialists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "1 Dobney Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 4770",
+    "website": "https://riverina4wd.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverina+4WD+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/riverina4wd/",
+    "instagram": "https://www.instagram.com/riv4wd/",
+    "description": "Dobney Avenue 4WD shop selling bull bars, roof racks, winches, suspension systems, dual battery systems and canopies. Mechanics on site fit accessories bought from the store. Payment plans through Zip Pay and Certegy Ezi-Pay are offered.",
+    "highlights": [
+      "Bull bars, roof racks and canopies",
+      "Winches and recovery gear",
+      "Suspension and dual battery systems",
+      "In-house installation by mechanics",
+      "Zip Pay and Certegy Ezi-Pay available"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://riverina4wd.com.au/",
+      "https://www.localsearch.com.au/find/four-wheel-drive-accessories/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "TJM Wagga Wagga",
+    "slug": "tjm-wagga-wagga",
+    "categorySlug": "4wd-specialists",
+    "vertical": "trades",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "addressLine": "3 Rabaul Place",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "phone": "02 5954 9955",
+    "website": "https://tjmwaggawagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TJM+Wagga+Wagga+Ashmont+NSW",
+    "facebook": "https://www.facebook.com/WyattTJMWaggaWagga",
+    "description": "Locally run TJM 4x4 store in Ashmont stocking a full range of four wheel drive accessories including bull bars, suspension, canopies, roof racks and platforms. It also supplies tow bars and rear protection, exterior accessories and recovery gear. Accessories are supplied and professionally fitted in house.",
+    "highlights": [
+      "Bull bars and rear protection",
+      "4x4 suspension",
+      "Canopies, roof racks and platforms",
+      "Recovery gear",
+      "In-house professional installation"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://tjmwaggawagga.com.au/",
+      "https://www.localsearch.com.au/find/four-wheel-drive-accessories/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "O'Reilly Trucks",
+    "slug": "oreilly-trucks",
+    "categorySlug": "truck-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "2-4 Say Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 5999 0900",
+    "website": "https://oreillytruckrepairs.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=O%27Reilly+Trucks+Wagga+Wagga+NSW",
+    "description": "Family owned truck workshop on Say Street, established in 2010 with a team of 12. It repairs and services trucks and trailers and runs a parts and accessories counter on its own phone line. The workshop is approved for Scania repair and maintenance warranty work and provides sales support and service for Western Star Trucks, MAN Truck & Bus and Dennis Eagle.",
+    "highlights": [
+      "Truck and trailer repairs and servicing",
+      "Parts and accessories counter",
+      "Scania repair and maintenance warranty work",
+      "Western Star, MAN and Dennis Eagle support",
+      "Local family owned, established 2010"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://oreillytruckrepairs.com.au/",
+      "https://www.localsearch.com.au/find/truck-repairs/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murrumbidgee Truck Wheel Alignment",
+    "slug": "murrumbidgee-truck-wheel-alignment",
+    "categorySlug": "truck-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Lot 1 Moorong Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 7822",
+    "website": "https://murrumbidgeetruckwheelalignment.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murrumbidgee+Truck+Wheel+Alignment+Wagga+Wagga+NSW",
+    "description": "Moorong Street specialist doing wheel alignments for trucks, trailers, buses, 4WDs and caravans using JOSAM laser aligning equipment. Wheel balancing and suspension repairs are also carried out, by qualified truck mechanics with over 32 years of experience. The business describes itself as the only truck alignment service in the Riverina and South West Slopes and prefers vehicles to be booked in by phone.",
+    "highlights": [
+      "Truck, trailer and bus wheel alignment",
+      "4WD and caravan alignment",
+      "JOSAM laser aligning equipment",
+      "Wheel balancing and suspension repairs",
+      "Over 32 years of experience"
+    ],
+    "attributes": {
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://murrumbidgeetruckwheelalignment.com.au/",
+      "https://www.localsearch.com.au/find/truck-repairs/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Motorcycles",
+    "slug": "wagga-motorcycles",
+    "categorySlug": "motorcycle-service",
+    "vertical": "trades",
+    "localityName": "Gumly Gumly",
+    "state": "NSW",
+    "addressLine": "3871 Sturt Highway",
+    "suburb": "Gumly Gumly",
+    "postcode": "2652",
+    "phone": "02 6922 7777",
+    "website": "https://www.waggamotorcycles.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Motorcycles+Gumly+Gumly+NSW",
+    "facebook": "https://www.facebook.com/WaggaMotorcycles/",
+    "instagram": "https://www.instagram.com/waggamotorcycles1",
+    "description": "Motorcycle dealership at Gumly Gumly on the Sturt Highway, selling new bikes and handling repairs, maintenance, full rebuilds, spare parts and accessories. Brands stocked are KTM, Honda, Kawasaki and Polaris. The range runs from kids bikes and LAMS-approved learner bikes through to cruisers and road bikes, dirt and enduro bikes, scooters, minibikes, side-by-sides and agricultural two-wheelers.",
+    "highlights": [
+      "KTM, Honda, Kawasaki and Polaris",
+      "Repairs, maintenance and full rebuilds",
+      "Spare parts and accessories",
+      "LAMS-approved learner bikes",
+      "Side-by-sides and ag bikes"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggamotorcycles.com.au/",
+      "https://www.localsearch.com.au/find/motorcycle-dealers/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Auto Image Centre",
+    "slug": "auto-image-centre",
+    "categorySlug": "car-detailing",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "11 Nagle Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 0670",
+    "website": "https://www.autoimagecentre.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Auto+Image+Centre+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/profile.php?id=100090886116420",
+    "instagram": "https://www.instagram.com/autoimagecentrewagga/",
+    "description": "Nagle Street detailing shop doing interior and exterior car detailing, paint correction and paint protection. It also cleans car carpet and upholstery and fits window tinting. A monthly detailing subscription is offered and Afterpay is accepted.",
+    "highlights": [
+      "Interior and exterior detailing",
+      "Paint correction and paint protection",
+      "Carpet and upholstery cleaning",
+      "Window tinting",
+      "Monthly detailing subscription"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://www.autoimagecentre.com/",
+      "https://www.localsearch.com.au/find/car-detailing/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Custom Car Care Wagga",
+    "slug": "custom-car-care-wagga",
+    "categorySlug": "car-detailing",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "6/73 Dobney Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 4741",
+    "website": "https://customcarcarewagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Custom+Car+Care+Wagga+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/customcarcarewagga/",
+    "instagram": "https://www.instagram.com/customcarcarewagga/",
+    "description": "Detailing business on Dobney Avenue established in 2003 and run by Cam Watson, who has more than 30 years in automotive detailing. Services cover detailing, paint correction and ceramic coating, with the shop working as a Modesta coating specialist. Motorbikes, boats, caravans and RVs are detailed as well as cars, and Saturdays are by appointment.",
+    "highlights": [
+      "Established 2003",
+      "Paint correction",
+      "Modesta ceramic coating specialist",
+      "Motorbike, boat, caravan and RV detailing",
+      "Saturday work by appointment"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://customcarcarewagga.com.au/",
+      "https://www.localsearch.com.au/find/car-detailing/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Truck Towing",
+    "slug": "wagga-truck-towing",
+    "categorySlug": "towing-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "320-330 Copland Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0419 693 369",
+    "website": "https://www.coolstowing.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Truck+Towing+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/waggatrucktowing",
+    "instagram": "https://www.instagram.com/waggatrucktowing/",
+    "description": "Family-run heavy towing and recovery operator on Copland Street, trading as Cools Truck Towing and led by Jimmy Cool. It handles accident recovery and road accident clean-ups, heavy vehicle breakdowns, heavy equipment recovery, off-road bog recovery, machinery transport and light breakdowns. Equipment includes a 75 tonne rotator, heavy recovery trucks, tilt trays, super tilt trailers, an excavator and telehandlers, working across southern NSW around the clock.",
+    "highlights": [
+      "24/7 heavy vehicle towing and recovery",
+      "75 tonne rotator",
+      "Accident recovery and road clean-ups",
+      "Off-road bog recovery",
+      "Machinery transport",
+      "Family run, servicing southern NSW"
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "emergency_callout": "yes"
+    },
+    "sources": [
+      "https://www.coolstowing.com.au/",
+      "https://www.localsearch.com.au/find/towing-services/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Elite Cleaning",
+    "slug": "elite-cleaning",
+    "categorySlug": "cleaners",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "171 Fitzmaurice Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0407 235 667",
+    "website": "https://elitecleaningwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elite+Cleaning+Wagga+Wagga+NSW",
+    "description": "Commercial and residential cleaning contractor on Fitzmaurice Street, operating since 1999 and servicing Wagga Wagga, Junee, Temora, Griffith, Tumut and the wider Riverina. Work covers house cleaning, window cleaning, carpet cleaning, floor polishing and sealing, high pressure cleaning and hygiene services. It also holds office maintenance contracts and does supermarket cleaning, construction site clean-up and graffiti removal, and is certified to ISO 9001, ISO 14001 and ISO 45001.",
+    "highlights": [
+      "Operating since 1999",
+      "Residential and commercial cleaning",
+      "Carpet cleaning and floor polishing",
+      "High pressure cleaning and graffiti removal",
+      "ISO 9001, 14001 and 45001 certified"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://elitecleaningwagga.com.au/",
+      "https://elitecleaningwagga.com.au/contact-us/",
+      "https://www.localsearch.com.au/find/carpet-cleaning/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Z Best Carpet Care",
+    "slug": "z-best-carpet-care",
+    "categorySlug": "carpet-cleaning",
+    "vertical": "trades",
+    "localityName": "Mount Austin",
+    "state": "NSW",
+    "suburb": "Mount Austin",
+    "postcode": "2650",
+    "phone": "0419 693 661",
+    "website": "https://zbestcarpetcare.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Z+Best+Carpet+Care+Mount+Austin+NSW",
+    "facebook": "https://www.facebook.com/Z-Best-Carpet-Care-149122621824943/",
+    "description": "Carpet cleaning business run by Matthew and Romola Lyons and based at Mount Austin. Services include carpet cleaning, advanced stain removal, upholstery cleaning, tile and grout cleaning, carpet colour repair and flood restoration. The owners also run Riverina Rug Wash, a separate facility for rug laundering.",
+    "highlights": [
+      "Carpet and upholstery cleaning",
+      "Advanced stain removal",
+      "Tile and grout cleaning",
+      "Carpet colour repair",
+      "Flood restoration",
+      "Rug laundry via Riverina Rug Wash"
+    ],
+    "sources": [
+      "https://zbestcarpetcare.com.au/",
+      "https://www.localsearch.com.au/find/carpet-cleaning/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Pest Solutions",
+    "slug": "wagga-pest-solutions",
+    "categorySlug": "pest-control",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0408 434 737",
+    "website": "https://www.waggapest.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Pest+Solutions+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/p/Wagga-Pest-Solutions-100067131151286/",
+    "instagram": "https://www.instagram.com/waggapestsolutions/",
+    "description": "Local pest control operator run by Brock, covering Wagga Wagga and the surrounding area. Services are pre-purchase pest inspections, termite inspections and treatments, and rodent and insect control. It also does bird proofing and possum removal.",
+    "highlights": [
+      "Pre-purchase pest inspections",
+      "Termite inspections and treatments",
+      "Rodent and insect control",
+      "Bird proofing",
+      "Possum removal"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggapest.com.au/",
+      "https://www.localsearch.com.au/find/pest-control/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "D & K Tree Surgery",
+    "slug": "d-and-k-tree-surgery",
+    "categorySlug": "tree-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0409 449 427",
+    "website": "https://dktreeremovals.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=D+%26+K+Tree+Surgery+Wagga+Wagga+NSW",
+    "description": "Tree service covering Wagga Wagga, the Riverina and surrounding areas within a 250 km radius. Work includes tree removal, tree pruning, stump grinding and general tree care. Weekend jobs are by appointment only.",
+    "highlights": [
+      "Tree removal",
+      "Tree pruning",
+      "Stump grinding",
+      "Services a 250 km radius of Wagga Wagga"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://dktreeremovals.com.au/",
+      "https://www.localsearch.com.au/find/tree-services/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverina Tree Fellas",
+    "slug": "riverina-tree-fellas",
+    "categorySlug": "tree-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0422 087 573",
+    "website": "https://riverinatreefellas.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverina+Tree+Fellas+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/riverinatreefellas/",
+    "description": "Family-owned arborist established in 1999 with more than 25 years of arboricultural experience, working for residential and commercial clients around Wagga Wagga. Services cover tree removals and felling, pruning and canopy management, stump grinding, hedging, and disease and pest management. Emergency tree removal is available 24/7 and firewood is sold by request.",
+    "highlights": [
+      "Established 1999, family owned",
+      "Tree removal and felling",
+      "Pruning and canopy management",
+      "Stump grinding and hedging",
+      "24/7 emergency tree removal",
+      "Firewood by request"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "emergency_callout": "yes"
+    },
+    "sources": [
+      "https://riverinatreefellas.com.au/",
+      "https://www.localsearch.com.au/find/tree-services/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "LakeSide Lawn Care",
+    "slug": "lakeside-lawn-care",
+    "categorySlug": "lawn-mowing",
+    "vertical": "trades",
+    "localityName": "Kooringal",
+    "state": "NSW",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "0418 495 395",
+    "website": "https://lakesidelawncare.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LakeSide+Lawn+Care+Kooringal+NSW",
+    "description": "Lawn mowing service for Wagga Wagga, run by proprietor Justin Webber and based at Kooringal. Enquiries and bookings are taken by phone or email.",
+    "highlights": [
+      "Lawn mowing across Wagga Wagga",
+      "Owner operated",
+      "Based at Kooringal"
+    ],
+    "sources": [
+      "https://lakesidelawncare.com.au/",
+      "https://www.localsearch.com.au/find/lawn-mowing/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Prices Furniture Deliveries",
+    "slug": "prices-furniture-deliveries",
+    "categorySlug": "removalists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "1/1 Schiller Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2430",
+    "website": "https://www.pricesfurnituredeliveries.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Prices+Furniture+Deliveries+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/pricesfurnituredeliveries/",
+    "description": "Schiller Street removalist handling furniture deliveries, house removals and office removals. Packing and unpacking, piano removals and long or short term storage are also offered. The business runs a fortnightly delivery run to Sydney.",
+    "highlights": [
+      "House and office removals",
+      "Furniture deliveries",
+      "Packing and unpacking",
+      "Piano removals",
+      "Long and short term storage",
+      "Fortnightly Sydney runs"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.pricesfurnituredeliveries.com.au/",
+      "https://www.localsearch.com.au/find/removalists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "R and B Removals",
+    "slug": "r-and-b-removals",
+    "categorySlug": "removalists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0402 564 079",
+    "website": "https://randbremovals.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=R+and+B+Removals+Wagga+Wagga+NSW",
+    "description": "Locally owned and operated Wagga Wagga removalist with 33 years of experience servicing the Wagga region and surrounding areas. It covers local, country and interstate removals, packing and unpacking, office removals and piano moving, and also offers storage. Cartons are bought and sold, and the business lists itself as available 24/7.",
+    "highlights": [
+      "Locally owned, 33 years experience",
+      "Local, country and interstate removals",
+      "Packing and unpacking",
+      "Office removals and piano moving",
+      "Removals and storage",
+      "Available 24/7"
+    ],
+    "attributes": {
+      "after_hours": "yes"
+    },
+    "sources": [
+      "https://randbremovals.com.au/",
+      "https://www.localsearch.com.au/find/removalists/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga Secure Storage",
+    "slug": "wagga-secure-storage",
+    "categorySlug": "self-storage",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "32 Jones Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0417 698 238",
+    "website": "https://www.securestoragewagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+Secure+Storage+Wagga+Wagga+NSW",
+    "description": "Storage complex on Jones Street with insulated units ranging from roughly 30 to 66 square metres, each with power and lights and roller door entry about 3.2 metres high. The site has a swipe card security gate and CCTV, and the units are described as suiting caravans, trailers, boats, hobbies, tradesmen and additional home or document storage. A three month minimum lease applies, with leasing handled by Raine & Horne on Fitzmaurice Street.",
+    "highlights": [
+      "Insulated units with power and lights",
+      "Units from about 30 to 66 square metres",
+      "Swipe card security gate and CCTV",
+      "High roller door access for caravans and boats",
+      "Three month minimum lease"
+    ],
+    "sources": [
+      "https://www.securestoragewagga.com.au/",
+      "https://www.localsearch.com.au/find/self-storage/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Smallmon Brothers Waste & Recycling",
+    "slug": "smallmon-brothers-waste-recycling",
+    "categorySlug": "skip-bins",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 7008",
+    "website": "https://smallmonbrotherswaste.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Smallmon+Brothers+Waste+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/SmallmonBrothersWaste",
+    "instagram": "https://www.instagram.com/smallmonbrotherswaste/",
+    "description": "Wagga Wagga waste contractor hiring skip bins, hook lift bins, bulk bins and 660 litre carts, along with rear lift and front lift bin systems for commercial, industrial and rural customers. It also handles liquid waste from septic tanks, grease traps and treatment plants, cooking oil and motor oil recycling, portable toilet hire and sanitary bin servicing. Other work includes junk and rubbish removal, land clearing and earthmoving, concrete crushing and recycling, and greenwaste and timber grinding.",
+    "highlights": [
+      "Skip bin, hook bin and bulk bin hire",
+      "Rear lift and front lift bin systems",
+      "Liquid waste, septic tanks and grease traps",
+      "Portable toilet and sanitary bin services",
+      "Land clearing, earthmoving and concrete crushing",
+      "Cooking oil and motor oil recycling"
+    ],
+    "sources": [
+      "https://smallmonbrotherswaste.com.au/",
+      "https://www.localsearch.com.au/find/skip-bins/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kurrajong Recycling",
+    "slug": "kurrajong-recycling",
+    "categorySlug": "rubbish-removal",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "131 Lord Baden Powell Drive",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 5004",
+    "website": "https://kurrajong.com.au/businesses/recycling/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kurrajong+Recycling+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/kurrajongwaratah",
+    "instagram": "https://www.instagram.com/kurrajongwaratah/",
+    "description": "Recycling operation on Lord Baden Powell Drive taking household and business drop-offs of cardboard, mixed recycling and e-waste including TVs, computers and printers. It runs business cardboard and office paper collections, secure document pick-up, destruction and shredding, Container Deposit Scheme processing and glass processing, and sells recovered plastics, glass, cardboard, paper and metal. Site tours and recycling workshops are also offered.",
+    "highlights": [
+      "Household and business recycling drop-off",
+      "E-waste recycling",
+      "Business cardboard and office paper collections",
+      "Secure document destruction and shredding",
+      "Container Deposit Scheme processing",
+      "Site tours and recycling workshops"
+    ],
+    "sources": [
+      "https://kurrajong.com.au/businesses/recycling/",
+      "https://www.localsearch.com.au/find/rubbish-removal/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Riverina Safes & Locks",
+    "slug": "riverina-safes-and-locks",
+    "categorySlug": "locksmiths",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "13 Berry Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 3517",
+    "website": "https://safesandlocks.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Riverina+Safes+%26+Locks+Wagga+Wagga+NSW",
+    "description": "Berry Street locksmith trading as Riverina LS Pty Ltd, with fully qualified and licensed locksmiths and over 30 years of experience in safes, locks and security. Work covers emergency lockout assistance, key replacement and lock system installation for homes, offices, factories, farms and vehicles. The shop number is listed as an emergency all hours line.",
+    "highlights": [
+      "Over 30 years in safes, locks and security",
+      "Fully qualified and licensed locksmiths",
+      "Emergency lockout assistance",
+      "Key replacement and lock installation",
+      "Home, office, factory, farm and vehicle work"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "emergency_callout": "yes"
+    },
+    "sources": [
+      "https://safesandlocks.com.au/",
+      "https://www.localsearch.com.au/find/locksmiths/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Freedom Pools & Spas Riverina",
+    "slug": "freedom-pools-and-spas-riverina",
+    "categorySlug": "pool-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "77 Copland Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 0818",
+    "website": "https://www.freedompoolswagga.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Freedom+Pools+%26+Spas+Riverina+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/FreedomPoolsWagga",
+    "instagram": "https://www.instagram.com/freedompoolsandspas/",
+    "description": "Family-owned pool builder on Copland Street, licensed since 2003, a SPASA member and with more than 30 years in the trade. It builds fibreglass and concrete pools, plunge pools and self-cleaning pools, and supplies spas and saunas, along with tennis court construction and landscaping. Pool servicing is offered and an online shop carries chemicals, equipment, pool cleaners, heating systems and plumbing supplies.",
+    "highlights": [
+      "Family owned, licensed since 2003",
+      "Fibreglass and concrete pools",
+      "Plunge pools and self-cleaning pools",
+      "Spas and saunas",
+      "Pool servicing",
+      "Online shop for chemicals and equipment"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.freedompoolswagga.com/",
+      "https://www.localsearch.com.au/find/swimming-pool-maintenance/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Countrywide Engineering",
+    "slug": "countrywide-engineering",
+    "categorySlug": "welding",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "10-12 Blaxland Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6923 0800",
+    "website": "https://countrywideengineering.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Countrywide+Engineering+Wagga+Wagga+NSW",
+    "description": "Blaxland Road engineering workshop covering design and manufacturing from drafting through to prototyping. Metal work includes plasma cutting, milling and machining, drilling, rolling and folding, and welding in aluminium, stainless steel and mild steel. The business also builds custom machinery and carries out machinery repairs and maintenance alongside a building and renovation arm.",
+    "highlights": [
+      "Design, drafting and prototyping",
+      "Plasma cutting, milling and machining",
+      "Aluminium, stainless and mild steel welding",
+      "Custom machinery manufacture",
+      "Machinery repairs and maintenance"
+    ],
+    "sources": [
+      "https://countrywideengineering.com.au/",
+      "https://www.localsearch.com.au/find/welding/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Hutcheon & Pearce Wagga Wagga",
+    "slug": "hutcheon-and-pearce-wagga-wagga",
+    "categorySlug": "farm-machinery-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "57 Moorong Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6933 7900",
+    "website": "https://www.hutcheonandpearce.com.au/locations/wagga-wagga",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hutcheon+%26+Pearce+Wagga+Wagga+NSW",
+    "description": "John Deere dealership branch on Moorong Street handling sales, parts and service for agricultural machinery including tractors, mowers, implements and construction equipment. The branch offers on-site machine servicing and parts delivery to farms, along with fixed-price servicing and machine inspections. A 24 hour emergency callout service supports farm equipment breakdowns.",
+    "highlights": [
+      "John Deere sales, parts and service",
+      "Tractors, mowers and implements",
+      "On-site machine servicing",
+      "Parts delivery to farms",
+      "Fixed-price servicing and inspections",
+      "24 hour emergency callout"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "emergency_callout": "yes"
+    },
+    "sources": [
+      "https://www.hutcheonandpearce.com.au/locations/wagga-wagga",
+      "https://www.localsearch.com.au/find/farm-machinery/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Crown Computers",
+    "slug": "crown-computers",
+    "categorySlug": "computer-repair",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "60 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 7008",
+    "website": "https://www.crowncomputers.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Crown+Computers+Wagga+Wagga+NSW",
+    "description": "Baylis Street computer store trading since 1995, designing and building custom gaming and graphics PCs as well as standard desktops, and selling laptops, notebooks and parts. It repairs PCs, notebooks and laptops and does data recovery. The shop states that no appointment is needed for repairs.",
+    "highlights": [
+      "Trading since 1995",
+      "Custom gaming and graphics PC builds",
+      "PC, notebook and laptop repairs",
+      "Computer parts sales",
+      "Data recovery",
+      "No appointment needed for repairs"
+    ],
+    "sources": [
+      "https://www.crowncomputers.com.au/",
+      "https://www.localsearch.com.au/find/computer-repairs/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Graham's Computers",
+    "slug": "grahams-computers",
+    "categorySlug": "computer-repair",
+    "vertical": "trades",
+    "localityName": "Kooringal",
+    "state": "NSW",
+    "addressLine": "15 Tinga Crescent",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "0468 312 481",
+    "website": "https://www.grahamscomputers.net/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Graham%27s+Computers+Kooringal+NSW",
+    "description": "Kooringal computer repairer handling PC and laptop repairs, laptop screen replacement, data recovery and data transfer, and malware removal. Other work covers SSD upgrades, backup management, email and wireless setup, on-site training and web design. The business states it does not repair MacBooks or any Apple products.",
+    "highlights": [
+      "PC and laptop repairs",
+      "Laptop screen repairs",
+      "Data recovery and transfer",
+      "Malware removal and SSD upgrades",
+      "On-site training",
+      "Open weekends"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.grahamscomputers.net/",
+      "https://www.localsearch.com.au/find/computer-repairs/wagga-wagga-nsw-2650"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

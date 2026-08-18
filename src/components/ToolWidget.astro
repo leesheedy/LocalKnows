@@ -527,6 +527,204 @@ const placePayload = JSON.stringify(
   </>
 )}
 
+{/* ---------------------------------------------------------------- job cost */}
+{slug === 'job-cost-calculator' && (
+  <>
+    <div class="tw" id="tw-job">
+      <div class="tw-cols">
+        <div>
+          <div class="tw-field">
+            <label class="mono" for="jc-rate">Hourly rate</label>
+            <div class="tw-money">
+              <span aria-hidden="true">$</span>
+              <input id="jc-rate" type="number" min="0" step="5" value="105" />
+            </div>
+          </div>
+          <div class="tw-field">
+            <label class="mono" for="jc-hours">Hours</label>
+            <input id="jc-hours" type="number" min="0" step="0.25" value="3" />
+          </div>
+          <div class="tw-field">
+            <label class="mono" for="jc-call">Call out fee</label>
+            <div class="tw-money">
+              <span aria-hidden="true">$</span>
+              <input id="jc-call" type="number" min="0" step="5" value="0" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="tw-field">
+            <label class="mono" for="jc-mat">Materials</label>
+            <div class="tw-money">
+              <span aria-hidden="true">$</span>
+              <input id="jc-mat" type="number" min="0" step="10" value="0" />
+            </div>
+          </div>
+          <div class="tw-field">
+            <label class="mono" for="jc-load">After hours loading</label>
+            <div class="tw-money suffix">
+              <input id="jc-load" type="number" min="0" max="300" step="5" value="0" />
+              <span aria-hidden="true">%</span>
+            </div>
+          </div>
+          <fieldset class="tw-field">
+            <legend class="mono">The figures above are</legend>
+            <div class="tw-radios">
+              <label class="tw-radio">
+                <input type="radio" name="jc-gst" value="ex" checked />
+                <span>Before GST</span>
+              </label>
+              <label class="tw-radio">
+                <input type="radio" name="jc-gst" value="inc" />
+                <span>GST included</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="tw-out">
+        <div class="tw-bigline">
+          <span class="mono">Total to pay</span>
+          <b id="jc-total">$0</b>
+        </div>
+        <table class="tw-table tw-break">
+          <tbody id="jc-rows"></tbody>
+        </table>
+        <p class="tw-note" id="jc-note"></p>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-job');
+        if (!root) return;
+        var GST = 0.1;
+        var num = function (id) { return Number(document.getElementById(id).value || 0); };
+        var money = function (v) {
+          return '$' + v.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        };
+
+        function run() {
+          var rate = num('jc-rate'), hours = num('jc-hours'), call = num('jc-call');
+          var mat = num('jc-mat'), load = num('jc-load');
+          var incMode = root.querySelector('input[name="jc-gst"]:checked').value === 'inc';
+
+          var labour = rate * hours;
+          var loading = labour * (load / 100);
+          var entered = labour + loading + call + mat;
+
+          // One rule, applied once. If the numbers typed in already contain GST,
+          // the ex GST figure is the total divided by 1.1 and the GST component is
+          // the total divided by 11. Both fall straight out of the 10% rate.
+          var ex = incMode ? entered / (1 + GST) : entered;
+          var gst = ex * GST;
+          var inc = ex + gst;
+
+          document.getElementById('jc-total').textContent = money(inc);
+
+          var scale = incMode ? 1 / (1 + GST) : 1;
+          var rows = [
+            ['Labour', labour * scale, hours > 0 ? money(rate * scale) + ' x ' + hours + (hours === 1 ? ' hour' : ' hours') : ''],
+            ['After hours loading', loading * scale, load > 0 ? load + '% on labour' : ''],
+            ['Call out', call * scale, ''],
+            ['Materials', mat * scale, ''],
+          ].filter(function (r) { return r[1] > 0; });
+
+          var html = rows
+            .map(function (r) {
+              return '<tr><th scope="row">' + r[0] + (r[2] ? '<span class="tw-sub">' + r[2] + '</span>' : '') +
+                '</th><td class="tw-num">' + money(r[1]) + '</td></tr>';
+            })
+            .join('');
+          html += '<tr class="tw-rule"><th scope="row">Subtotal, before GST</th><td class="tw-num">' + money(ex) + '</td></tr>';
+          html += '<tr><th scope="row">GST at 10%</th><td class="tw-num">' + money(gst) + '</td></tr>';
+          html += '<tr class="tw-total"><th scope="row">Total, GST included</th><td class="tw-num">' + money(inc) + '</td></tr>';
+          document.getElementById('jc-rows').innerHTML = html;
+
+          document.getElementById('jc-note').textContent = incMode
+            ? 'You said the figures already include GST, so ' + money(inc) + ' is what the quote said and ' + money(gst) + ' of it is GST. A business not registered for GST cannot charge that line at all.'
+            : 'You said the figures are before GST, so ' + money(gst) + ' is added and the invoice should read ' + money(inc) + '. If the quote said ' + money(ex) + ' and the invoice says ' + money(inc) + ', that is why.';
+        }
+
+        root.addEventListener('input', run);
+        root.addEventListener('change', run);
+        run();
+      })();
+    </script>
+  </>
+)}
+
+{/* ---------------------------------------------------------------- gst */}
+{slug === 'gst-calculator' && (
+  <>
+    <div class="tw" id="tw-gst">
+      <div class="tw-field">
+        <label class="mono" for="gst-amt">Amount</label>
+        <div class="tw-money big">
+          <span aria-hidden="true">$</span>
+          <input id="gst-amt" type="number" min="0" step="1" value="1000" />
+        </div>
+      </div>
+      <fieldset class="tw-field">
+        <legend class="mono">That amount</legend>
+        <div class="tw-radios">
+          <label class="tw-radio">
+            <input type="radio" name="gst-mode" value="add" checked />
+            <span>does not include GST</span>
+          </label>
+          <label class="tw-radio">
+            <input type="radio" name="gst-mode" value="remove" />
+            <span>already includes GST</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="tw-out">
+        <div class="tw-three" id="gst-three"></div>
+        <p class="tw-note" id="gst-note"></p>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-gst');
+        if (!root) return;
+        var RATE = 0.1;
+        var money = function (v) {
+          return '$' + v.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        };
+
+        function run() {
+          var amt = Number(document.getElementById('gst-amt').value || 0);
+          var add = root.querySelector('input[name="gst-mode"]:checked').value === 'add';
+          var ex, gst, inc;
+          if (add) { ex = amt; gst = amt * RATE; inc = amt + gst; }
+          else { inc = amt; ex = amt / (1 + RATE); gst = amt - ex; }
+
+          document.getElementById('gst-three').innerHTML = [
+            ['Before GST', money(ex)],
+            ['GST', money(gst)],
+            ['Total including GST', money(inc)],
+          ]
+            .map(function (r, i) {
+              return '<div' + (i === 2 ? ' class="hero"' : '') + '><span class="mono">' + r[0] + '</span><b>' + r[1] + '</b></div>';
+            })
+            .join('');
+
+          document.getElementById('gst-note').textContent = add
+            ? 'Adding GST is a multiplication by 1.1. ' + money(amt) + ' becomes ' + money(inc) + '.'
+            : 'To pull GST out of a figure that already contains it, divide by 11. ' + money(amt) + ' divided by 11 is ' + money(gst) + ', which is the GST, and the rest is ' + money(ex) + '. Dividing by 10 is the common mistake and it overstates the GST.';
+        }
+
+        root.addEventListener('input', run);
+        root.addEventListener('change', run);
+        run();
+      })();
+    </script>
+  </>
+)}
+
 {/* ---------------------------------------------------------------- border */}
 {slug === 'border-check' && (
   <>

@@ -1816,3 +1816,133 @@
     padding-block: 4px;
   }
 }
+
+/* ---------------------------------------------------------------- calculators */
+/* Two columns of inputs, one column of answers. The answer is the loud part. */
+.tw-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 26px;
+}
+@media (max-width: 620px) {
+  .tw-cols {
+    grid-template-columns: 1fr;
+  }
+}
+.tw-money {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r);
+  background: var(--paper-2);
+  overflow: hidden;
+  transition: border-color 0.15s, background 0.15s;
+}
+.tw-money:focus-within {
+  border-color: var(--river);
+  background: var(--white);
+}
+.tw-money span {
+  display: grid;
+  place-items: center;
+  padding-inline: 14px;
+  color: var(--ink-40);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  background: rgba(19, 30, 25, 0.04);
+  flex: none;
+}
+.tw-money input {
+  border: 0 !important;
+  background: none !important;
+  border-radius: 0 !important;
+}
+.tw-money.big input {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  padding-block: 14px;
+}
+.tw-money.big span {
+  font-size: 20px;
+}
+.tw-out {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+.tw-bigline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 16px;
+  flex-wrap: wrap;
+}
+.tw-bigline .mono {
+  color: var(--ink-40);
+}
+.tw-bigline b {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--river);
+  line-height: 1;
+}
+.tw-break th[scope='row'] {
+  font-weight: 400;
+  color: var(--ink-80);
+}
+.tw-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.tw-break .tw-rule th,
+.tw-break .tw-rule td {
+  border-top: 1px solid var(--line-strong);
+  padding-top: 14px;
+}
+.tw-break .tw-total th,
+.tw-break .tw-total td {
+  border-top: 2px solid var(--ink);
+  border-bottom: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  padding-top: 14px;
+}
+.tw-three {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.tw-three > div {
+  background: var(--white);
+  padding: 18px;
+}
+.tw-three > div.hero {
+  background: var(--river-10);
+}
+.tw-three span {
+  display: block;
+  color: var(--ink-40);
+  margin-bottom: 7px;
+}
+.tw-three b {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+.tw-three > div.hero b {
+  color: var(--river);
+}

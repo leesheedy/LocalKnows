@@ -1,0 +1,1055 @@
+[
+  {
+    "name": "International Hotel Wagga Wagga",
+    "slug": "international-hotel-wagga-wagga",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "Corner Sturt Highway and Lake Albert Road",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 7007",
+    "website": "https://www.intlhotelwagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=International+Hotel+Wagga+Wagga+Wagga+Wagga+NSW",
+    "description": "A hotel on the corner of the Sturt Highway and Lake Albert Road with 81 hotel rooms and suites, minutes from the Wagga Wagga CBD. Free Wi-Fi is provided and room service comes from Pinnacle's Restaurant and Bar, where the executive chef builds seasonal menus around regional produce. Apartment accommodation is also offered at the Mill Residence.",
+    "highlights": [
+      "81 hotel rooms and suites",
+      "Pinnacle's Restaurant and Bar on site",
+      "Room service available",
+      "Apartments at the Mill Residence",
+      "Wheelchair access and disability awareness trained staff"
+    ],
+    "attributes": {
+      "accommodation": "yes",
+      "licensed": "yes",
+      "meals": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/international-hotel-wagga-wagga"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Mercure Wagga Wagga",
+    "slug": "mercure-wagga-wagga",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "1 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6939 7200",
+    "website": "https://all.accor.com/hotel/8862/index.en.shtml",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mercure+Wagga+Wagga+Wagga+Wagga+NSW",
+    "description": "A central Morgan Street hotel with 86 rooms made up of hotel rooms and self-contained serviced apartments, the apartments taking up to nine guests. Rooms have flat-screen TVs with free Foxtel, free Wi-Fi, in-room safes and tea and coffee facilities. There is a swimming pool, free on-site parking, four meeting rooms and the One Morgan Street restaurant and bar, plus free pool passes to the Oasis Aquatic Centre across the road.",
+    "highlights": [
+      "86 hotel rooms and self-contained apartments",
+      "One Morgan Street restaurant and bar",
+      "Swimming pool",
+      "Free on-site parking",
+      "Four meeting rooms for events and weddings",
+      "Free pool passes to Oasis Aquatic Centre"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "parking": "yes",
+      "licensed": "yes",
+      "meals": "yes",
+      "function_room": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://all.accor.com/hotel/8862/index.en.shtml",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/mercure-wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Mantra Pavilion Hotel Wagga Wagga",
+    "slug": "mantra-pavilion-hotel-wagga-wagga",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "22-30 Kincaid Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6411",
+    "website": "https://www.pavilionhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mantra+Pavilion+Hotel+Wagga+Wagga+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/pavilionwagga/",
+    "description": "A Kincaid Street hotel built around a 109-foot fabric roof, the largest of its kind in the world. Rooms include marble bathrooms, spas, mini-bars and balcony access. The hotel provides free Wi-Fi throughout, an arrival and departure lounge, tour desk, conference and meeting facilities, on-site parking and guest laundry, and sits alongside the city's restaurants, cafes, microbrewery and shopping.",
+    "highlights": [
+      "109-foot fabric roof over the hotel",
+      "Rooms with marble bathrooms and spas",
+      "Conference and meeting facilities",
+      "On-site parking",
+      "Arrival and departure lounge"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "function_room": "yes",
+      "accommodation": "yes"
+    },
+    "sources": [
+      "https://www.pavilionhotel.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/mantra-pavilion-hotel-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Townhouse Hotel Wagga",
+    "slug": "townhouse-hotel-wagga",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "70 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4337",
+    "website": "https://www.townhousewagga.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Townhouse+Hotel+Wagga+Wagga+Wagga+NSW",
+    "description": "A Morgan Street hotel in downtown Wagga Wagga with several room types and separate apartments. Guests get free use of the indoor heated aquatic centre and gym directly across the road, plus free wireless internet throughout. The Oakroom Restaurant and Bar serves guests in the restaurant or by room service.",
+    "highlights": [
+      "Central Morgan Street location",
+      "Oakroom Restaurant and Bar on site",
+      "Room service to guest suites",
+      "Free entry to the aquatic centre and gym across the road",
+      "Apartments as well as hotel rooms"
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "accommodation": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/townhouse-hotel-wagga-and-apartments-townhouse"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "St Hugh Hotel",
+    "slug": "st-hugh-hotel",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "81-83 Forsyth Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6939 7800",
+    "website": "https://www.sthughwagga.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St+Hugh+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/sthughhotel",
+    "instagram": "https://www.instagram.com/sthughhotel/",
+    "description": "A Forsyth Street hotel in central Wagga Wagga with four room categories: St Hugh Signature, Family, Accessible and Luxury. Rooms have custom king beds, smart TVs and secured Wi-Fi, and guest services run seven days a week. The hotel lists wheelchair access, accessible bathrooms and parking, hearing loop systems and staff trained in disability awareness.",
+    "highlights": [
+      "Signature, Family, Accessible and Luxury rooms",
+      "Custom king beds and smart TVs",
+      "Hearing loop and accessible bathrooms",
+      "Accessible parking on site",
+      "Walking distance to the CBD"
+    ],
+    "attributes": {
+      "wheelchair_accessible": "yes",
+      "family_rooms": "yes",
+      "accommodation": "yes"
+    },
+    "sources": [
+      "https://www.sthughwagga.com/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/st-hugh-hotel-wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Charles Boutique Hotel & Dining",
+    "slug": "the-charles-boutique-hotel-and-dining",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "82 Tarcutta Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0408 542 481",
+    "website": "https://thecharleswagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Charles+Boutique+Hotel+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/TheCharlesHotelWagga",
+    "instagram": "https://www.instagram.com/the.charles.wagga/",
+    "description": "A boutique hotel on Tarcutta Street with boutique king rooms, hotel rooms, suites and self-contained apartments finished in modern interiors. The Charles Dining Room serves dinner Tuesday to Saturday from 5:30pm and breakfast Tuesday to Friday from 6:45am, with tasting menus and a la carte built on Riverina ingredients. Vegan and gluten free options are catered for.",
+    "highlights": [
+      "Boutique king rooms, suites and self-contained apartments",
+      "The Charles Dining Room open Tuesday to Saturday for dinner",
+      "Breakfast service Tuesday to Friday",
+      "Tasting menu and a la carte using Riverina produce",
+      "Vegan and gluten free options",
+      "Walking distance to Baylis Street"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "meals": "yes",
+      "breakfast": "yes",
+      "gluten_free": "yes",
+      "vegan_options": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://thecharleswagga.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/the-charles-boutique-hotel-and-dining"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Astor Hotel & Bar",
+    "slug": "the-astor-hotel-and-bar",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "104 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4328",
+    "website": "https://www.astorinn.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Astor+Hotel+and+Bar+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/Astor-Inn-158545801250628/",
+    "instagram": "https://www.instagram.com/astorinn/",
+    "description": "A 43-room hotel on Edward Street close to the Wagga Wagga CBD and railway station. Rooms have air conditioning, televisions, tea and coffee facilities, private bathrooms and mini bars, with daily housekeeping and on-site parking. The Mallee Grill serves grill meals Monday to Saturday evenings and pizzas daily, and the bar opens from 10am, with function rooms available for conferences and private events.",
+    "highlights": [
+      "43 rooms near the CBD and railway station",
+      "Mallee Grill restaurant on site",
+      "Bar open daily from 10am",
+      "Function rooms for conferences and private events",
+      "On-site parking",
+      "10 minute drive to the airport and RAAF Base"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "licensed": "yes",
+      "meals": "yes",
+      "parking": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.astorinn.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/astor-hotel-and-bar"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Quality Hotel Rules Club Wagga",
+    "slug": "quality-hotel-rules-club-wagga",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Glenfield Park",
+    "state": "NSW",
+    "addressLine": "188 Fernleigh Road",
+    "suburb": "Glenfield Park",
+    "postcode": "2650",
+    "phone": "02 6931 2000",
+    "website": "https://rulesclubwagga.com/qualityhotelwagga",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quality+Hotel+Rules+Club+Wagga+Glenfield+Park+NSW",
+    "facebook": "https://www.facebook.com/rulesclubwagga",
+    "instagram": "https://www.instagram.com/rulesclubwagga/",
+    "description": "A hotel of 79 units, four of them accessible, connected directly to the Rules Club precinct on Fernleigh Road. Rooms are soundproofed and air conditioned with 137cm smart TVs, free Wi-Fi or Ethernet and complimentary tea, coffee and biscuits. There is secure card-access parking, an electric vehicle charging station, conference and board rooms, fitness centre access and pushbikes for guests, with the club's cafe, restaurant and sports bar next door.",
+    "highlights": [
+      "79 units including four accessible rooms",
+      "Directly connected to the Rules Club",
+      "Secure card-access parking",
+      "Electric vehicle charging station",
+      "Conference and board rooms",
+      "Guest pushbikes and fitness centre access"
+    ],
+    "attributes": {
+      "wheelchair_accessible": "yes",
+      "parking": "yes",
+      "ev_charging": "yes",
+      "function_room": "yes",
+      "meals": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://rulesclubwagga.com/qualityhotelwagga",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/quality-hotel-rules-club-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagga RSL Motel & Apartments",
+    "slug": "wagga-rsl-motel-and-apartments",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "156 Kincaid Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6971 8888",
+    "website": "https://www.waggarslmotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga+RSL+Motel+and+Apartments+Wagga+Wagga+NSW",
+    "description": "Motel accommodation within the Wagga RSL Club on Kincaid Street. Room types run from Executive Suite and Easy Access Suite through Executive, Deluxe, Corner and Luxury Spa Suites, plus four self-contained two-bedroom apartments sleeping up to five. There is a solar heated pool, and guests have direct access to the club's dining venues, bars and live entertainment. The city centre is about a ten minute walk.",
+    "highlights": [
+      "Inside the Wagga RSL Club",
+      "Executive, Deluxe, Corner and Luxury Spa Suites",
+      "Four self-contained two-bedroom apartments",
+      "Solar heated pool",
+      "Club dining, bars and entertainment on site",
+      "About ten minutes walk to the city centre"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "pool": "yes",
+      "meals": "yes",
+      "licensed": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.waggarslmotel.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/wagga-rsl-motel-and-apartments"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Boulevarde Motor Inn",
+    "slug": "boulevarde-motor-inn",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "305-309 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 5388",
+    "website": "https://www.boulevardemotorinn.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Boulevarde+Motor+Inn+Wagga+Wagga+NSW",
+    "description": "An Edward Street motor inn where all rooms are ground floor, air conditioned and fully furnished, with 55 inch 4K Samsung TVs carrying Foxtel and free Netflix. The property has gardens, a barbecue area, an outdoor swimming pool and a guest laundry, and family rooms are available. It sits near the CBD and both the Wagga Wagga Rural Referral and Calvary hospitals.",
+    "highlights": [
+      "All rooms on the ground floor",
+      "Outdoor swimming pool",
+      "Barbecue area and gardens",
+      "Guest laundry",
+      "Foxtel and free Netflix in rooms",
+      "Close to both Wagga hospitals"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.boulevardemotorinn.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/boulevarde-motor-inn"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Best Western Ambassador Motor Inn & Apartments",
+    "slug": "best-western-ambassador-motor-inn-and-apartments",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "315 Edward Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6925 7722",
+    "website": "https://www.ambassadorinn.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Best+Western+Ambassador+Motor+Inn+and+Apartments+Wagga+Wagga+NSW",
+    "description": "A motor inn on Edward Street with Queen Rooms, Deluxe Twin, Accessible Twin, Family Suite, Signature Spa Suite and Two Bedroom Villa accommodation. Rooms carry 43 inch smart TVs, free wireless internet, electric blankets and work desks, with a kitchenette or full kitchen depending on the type. The property has an outdoor saltwater pool open October to April, a barbecue and garden area, free on-site parking and a self-service guest laundry, with continental breakfast seven days.",
+    "highlights": [
+      "Rooms, family suites, spa suite and two bedroom villas",
+      "Outdoor saltwater pool October to April",
+      "Barbecue and garden area",
+      "Free on-site parking",
+      "Continental breakfast seven days",
+      "Self-service guest laundry"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "parking": "yes",
+      "breakfast": "yes",
+      "family_rooms": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.ambassadorinn.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/best-western-ambassador-motor-inn-and-apartments"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Club Motel and Apartments",
+    "slug": "club-motel-and-apartments",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "73 Morgan Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 6966",
+    "website": "https://clubmotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Club+Motel+and+Apartments+Wagga+Wagga+NSW",
+    "description": "A Morgan Street motel with accommodation ranging from economy single rooms to larger deluxe rooms with small kitchens and two-bedroom family units. Free secure parking, Wi-Fi and 24 hour service are provided and late check-ins are accepted. There is a steakhouse and bar on site, with a pool and gym across the road and the main street shops and restaurants nearby.",
+    "highlights": [
+      "Economy singles through to two-bedroom family units",
+      "Steakhouse and bar on site",
+      "Free secure parking",
+      "Late check-in accepted",
+      "Pool and gym across the road"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "meals": "yes",
+      "licensed": "yes",
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/club-motel-and-apartments"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Seven Inn",
+    "slug": "seven-inn",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Gumly Gumly",
+    "state": "NSW",
+    "addressLine": "3935 Sturt Highway",
+    "suburb": "Gumly Gumly",
+    "postcode": "2652",
+    "phone": "02 6922 7210",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Seven+Inn+Gumly+Gumly+NSW",
+    "description": "A 26-room motor inn on the Sturt Highway at Gumly Gumly, just east of Wagga Wagga. Rooms have reverse cycle air conditioning, a 40 inch smart television, work desk, open wardrobe, blackout curtains, fridge, microwave and tea and coffee facilities. The grounds include a saltwater outdoor pool, barbecue facilities, gardens and outdoor seating. Wagga Airport and the RAAF base are about seven minutes away, and Lake Albert and the Botanic Gardens about eight.",
+    "highlights": [
+      "26 rooms on the Sturt Highway",
+      "Saltwater outdoor pool",
+      "Barbecue facilities and garden seating",
+      "Fridge and microwave in every room",
+      "About seven minutes to Wagga Airport and the RAAF base"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/seven-inn"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "BIG4 Ingenia Holidays Wagga Wagga",
+    "slug": "big4-ingenia-holidays-wagga-wagga",
+    "categorySlug": "holiday-parks",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "93 Hammond Avenue",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 4287",
+    "website": "https://www.ingeniaholidays.com.au/our-parks/new-south-wales/riverina/wagga-wagga/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BIG4+Ingenia+Holidays+Wagga+Wagga+Wagga+Wagga+NSW",
+    "description": "A riverside holiday park on Hammond Avenue about 2km from the Wagga Wagga town centre, backing onto the Murrumbidgee River. Accommodation covers cabins for different group sizes and budgets plus caravan and camping sites. Facilities include a swimming pool, adventure playground, camp kitchen, walking tracks, river access with a private boat launch, EV charging and a 24 hour service station. Some sites and cabins are pet friendly.",
+    "highlights": [
+      "Cabins plus caravan and camping sites",
+      "Swimming pool and adventure playground",
+      "Murrumbidgee River access and private boat launch",
+      "Camp kitchen and walking tracks",
+      "EV charging on site",
+      "Pet friendly options"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "playground": "yes",
+      "powered_sites": "yes",
+      "pet_friendly": "yes",
+      "ev_charging": "yes"
+    },
+    "sources": [
+      "https://www.ingeniaholidays.com.au/our-parks/new-south-wales/riverina/wagga-wagga/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/big4-ingenia-holidays-wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Horseshoe Tourist Park",
+    "slug": "horseshoe-tourist-park",
+    "categorySlug": "caravan-parks",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "23 Horseshoe Road, Cartwrights Hill",
+    "suburb": "Cartwrights Hill",
+    "postcode": "2650",
+    "phone": "02 6921 6033",
+    "website": "https://www.horseshoetouristpark.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Horseshoe+Tourist+Park+Cartwrights+Hill+NSW",
+    "description": "A caravan park in a lagoon setting about seven minutes north of the Wagga Wagga CBD. Sites include drive-thru powered sites, ensuite powered sites and big rig sites, with two-bedroom standard cabins, deluxe studios and deluxe villas for cabin stays. Facilities cover an outdoor swimming pool, free barbecues, free Wi-Fi and a function room with an outdoor barbecue area. All sites are gravel and not suited to tents, swags or soft floor campers, and pets are not permitted. Charles Sturt University is about four minutes away.",
+    "highlights": [
+      "Drive-thru, ensuite and big rig powered sites",
+      "Standard cabins, deluxe studios and deluxe villas",
+      "Outdoor swimming pool",
+      "Free barbecue facilities and Wi-Fi",
+      "Function room with outdoor barbecue area",
+      "Four minutes from Charles Sturt University"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "powered_sites": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.horseshoetouristpark.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/horseshoe-tourist-park"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Globe Apartments",
+    "slug": "globe-apartments",
+    "categorySlug": "serviced-apartments",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "52 Peter Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2388",
+    "website": "https://www.globeapartment.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Globe+Apartments+Wagga+Wagga+NSW",
+    "description": "Refurbished self-contained serviced apartments on the corner of Peter and Morgan Streets, one block from the main street. The building was the Globe Hotel in the 1880s. Apartments sleep up to six people, and the property has barbecue facilities and secure parking and takes both short and extended stays.",
+    "highlights": [
+      "Self-contained apartments sleeping up to six",
+      "One block from Baylis Street",
+      "Housed in the 1880s Globe Hotel building",
+      "Secure parking",
+      "Barbecue facilities"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "bbq": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/globe-apartments"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Civic Apartments",
+    "slug": "civic-apartments",
+    "categorySlug": "serviced-apartments",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "199 Baylis Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0435 915 639",
+    "website": "https://civicapartmentswagga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Civic+Apartments+Wagga+Wagga+NSW",
+    "description": "Self-contained apartments on Baylis Street running from a Queen Studio Suite with kitchenette through open plan, one-bedroom, two-bedroom and two-bedroom accessible suites with full kitchens. Check-in is self-directed using secure access codes and there is a gated, coded-access car park. Each stay includes Wi-Fi, streaming-capable televisions, tea, coffee, hot chocolate and local bottled water, and porta cots, highchairs, prams and a shared guest laundry are available.",
+    "highlights": [
+      "Studio through to two-bedroom accessible suites",
+      "Gated coded-access car park",
+      "Self check-in with access codes",
+      "Porta cots, highchairs and prams available",
+      "Shared guest laundry",
+      "Walking distance to the Riverwalk and galleries"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "kid_friendly": "yes",
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://civicapartmentswagga.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/civic-apartments"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Riverine Club",
+    "slug": "the-riverine-club",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "3 Sturt Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6921 2031",
+    "website": "https://riverineclub.com/accommodation",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Riverine+Club+Wagga+Wagga+NSW",
+    "facebook": "https://www.facebook.com/theriverineclub",
+    "instagram": "https://www.instagram.com/riverineclub/",
+    "description": "Wagga's private club, offering 13 guest rooms on the first floor for members, reciprocal members and their guests. Some rooms have balconies looking over the Murrumbidgee River. There are two large shared bathrooms, a sitting room and a breakfast area, with continental breakfast available on request and discounted rates for large groups and extended stays. Guests also get access to member facilities including the private members bar and billiards room.",
+    "highlights": [
+      "13 guest rooms in the Wagga CBD",
+      "Some rooms with river-view balconies",
+      "Continental breakfast on request",
+      "Members bar, billiards room and squash court",
+      "Discounts for groups and extended stays"
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "breakfast": "yes",
+      "booking_required": "yes"
+    },
+    "sources": [
+      "https://riverineclub.com/accommodation",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/the-riverine-club"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Brae View Villas 1 and 2",
+    "slug": "brae-view-villas-1-and-2",
+    "categorySlug": "cottages",
+    "vertical": "stay",
+    "localityName": "Kooringal",
+    "state": "NSW",
+    "addressLine": "3 Spokes Street",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "phone": "0438 262 396",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Brae+View+Villas+Kooringal+NSW",
+    "description": "Two self-contained two-bedroom villas in a quiet residential part of Kooringal, each sleeping five. Both have fully equipped kitchens, large dining areas, lounges with televisions, central heating and cooling and lock-up garages. Lake Albert and its walking and cycling tracks are close by, as is the Kooringal Shopping Centre.",
+    "highlights": [
+      "Two self-contained two-bedroom villas",
+      "Each sleeps five people",
+      "Fully equipped kitchens and lock-up garages",
+      "Central heating and cooling",
+      "Near Lake Albert and Kooringal Shopping Centre"
+    ],
+    "attributes": {
+      "parking": "yes",
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/brae-view-villas-1-and-2"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Rosewood Cottage",
+    "slug": "rosewood-cottage",
+    "categorySlug": "cottages",
+    "vertical": "stay",
+    "localityName": "Turvey Park",
+    "state": "NSW",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "phone": "0412 257 482",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rosewood+Cottage+Turvey+Park+NSW",
+    "description": "A holiday cottage in the leafy residential suburb of Turvey Park. It is a double brick post-war classic built by a local family in the forties, kept with its period detail and fitted out with restored vintage furnishings. It suits families and guests after a quiet location and retro character.",
+    "highlights": [
+      "Double brick post-war cottage from the 1940s",
+      "Period detail and restored vintage furnishings",
+      "Quiet residential Turvey Park location",
+      "Suited to families"
+    ],
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/rosewood-cottage"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Old Billiard Shop",
+    "slug": "the-old-billiard-shop",
+    "categorySlug": "cottages",
+    "vertical": "stay",
+    "localityName": "Turvey Park",
+    "state": "NSW",
+    "addressLine": "2 Halloran Street",
+    "suburb": "Turvey Park",
+    "postcode": "2650",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Old+Billiard+Shop+Turvey+Park+NSW",
+    "description": "A renovated corner shop in Turvey Park that was once a billiard store, now let as accommodation. The stay is one large room with brass sash windows and original floorboards, with blackout blinds on the oversized windows for privacy. The bathroom is reached through an enclosed outdoor area a few steps from the room, and all fixtures are newly installed.",
+    "highlights": [
+      "Converted corner billiard shop",
+      "Brass sash windows and original floorboards",
+      "Blackout blinds on the oversized windows",
+      "Bathroom via an enclosed outdoor area"
+    ],
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/the-old-billiard-shop"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Nice on Nilma",
+    "slug": "nice-on-nilma",
+    "categorySlug": "cottages",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "02 6922 3669",
+    "website": "https://www.hendersonshouses.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nice+on+Nilma+Wagga+Wagga+NSW",
+    "description": "A self-contained Wagga Wagga cottage let through Henderson's Houses and aimed at groups who want their own beds rather than shared sleeping. It has seven separate beds, one double and six singles, across three bedrooms, plus a fully enclosed sun room. Split system air conditioning runs in the lounge and bedrooms.",
+    "highlights": [
+      "Seven separate beds across three bedrooms",
+      "Fully enclosed sun room",
+      "Split system air conditioning throughout",
+      "Suited to families and larger groups"
+    ],
+    "attributes": {
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.hendersonshouses.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/nice-nilma"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Leagues",
+    "slug": "the-leagues-wagga-wagga",
+    "categorySlug": "bed-and-breakfast",
+    "vertical": "stay",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "addressLine": "231 Gurwood Street",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "phone": "0432 665 912",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Leagues+Wagga+Wagga+NSW",
+    "description": "A modern heritage-style three-storey home on Gurwood Street purpose built for overnight and short-term stays. Rooms take one to four people each and all have heating and cooling, with continental breakfast included. It is close to the Wagga Wagga CBD, the hospital, the RSL and the Murrumbidgee Turf Club, and within driving distance of Kapooka Army Base and the Forest Hill RAAF base.",
+    "highlights": [
+      "Purpose-built three-storey guest house",
+      "Rooms for one to four people",
+      "Continental breakfast included",
+      "Heating and cooling in all rooms",
+      "Near the CBD, hospital and Turf Club"
+    ],
+    "attributes": {
+      "breakfast": "yes",
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/wagga-wagga/accommodation/the-leagues"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Junee Tourist Park",
+    "slug": "junee-tourist-park",
+    "categorySlug": "caravan-parks",
+    "vertical": "stay",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "2 Sunnyside Road",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 1316",
+    "website": "https://juneetouristpark.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Junee+Tourist+Park+Junee+NSW",
+    "description": "A caravan and camping park within walking distance of the Junee Licorice and Chocolate Factory. It has two-bedroom self-contained cabins in budget and deluxe versions, plus powered, non-powered, tent and fifth wheeler sites and drive-through sites for caravans and motorhomes. Facilities include a camp kitchen, laundry and modern amenities. The park is pet friendly, has a dog agility park alongside it and looks out over Park Dam.",
+    "highlights": [
+      "Budget and deluxe two-bedroom self-contained cabins",
+      "Large powered, non-powered and drive-through sites",
+      "Camp kitchen and laundry",
+      "Pet friendly with a dog agility park alongside",
+      "Views over Park Dam",
+      "Walking distance to the Licorice and Chocolate Factory"
+    ],
+    "attributes": {
+      "pet_friendly": "yes",
+      "powered_sites": "yes"
+    },
+    "sources": [
+      "https://juneetouristpark.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/junee/accommodation/junee-tourist-park"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Crossing Motel",
+    "slug": "the-crossing-motel-junee",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Junee",
+    "state": "NSW",
+    "addressLine": "39 Seignior Street",
+    "suburb": "Junee",
+    "postcode": "2663",
+    "phone": "02 6924 3255",
+    "website": "https://www.thecrossingmotel.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Crossing+Motel+Junee+NSW",
+    "facebook": "https://www.facebook.com/www.thecrossingmotel/",
+    "instagram": "https://www.instagram.com/the_crossing_motel/",
+    "description": "A Junee motel on Seignior Street with air conditioned rooms, free Wi-Fi and smart TVs. The Roundhouse Restaurant serves seasonal a la carte meals using locally sourced produce and puts together luncheon hampers, with the restaurant and bar running 7am to 9pm. There is a guests-only saltwater outdoor pool, free guest laundry and on-site parking with room for large vehicles, coach groups, car clubs and motorcycle groups.",
+    "highlights": [
+      "Roundhouse Restaurant and bar on site",
+      "Saltwater outdoor pool for guests",
+      "Free guest laundry",
+      "Parking for large vehicles and coach groups",
+      "Halfway between Sydney and Melbourne"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "parking": "yes",
+      "meals": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://www.thecrossingmotel.com/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/junee/accommodation/the-crossing-motel-junee"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Fig Tree Motel",
+    "slug": "fig-tree-motel",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "9 Cadell Street",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 1888",
+    "website": "https://www.figtreemotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Fig+Tree+Motel+Narrandera+NSW",
+    "description": "A budget motel on Cadell Street about 150m from the Narrandera town centre. Room types run from budget units through to two-bedroom family suites that take up to seven guests. It is set up for both business travellers and people driving the Newell Highway, with shops, restaurants and sporting facilities close by.",
+    "highlights": [
+      "150m from the Narrandera town centre",
+      "Budget units through to two-bedroom family suites",
+      "Family suites sleeping up to seven",
+      "Handy to the Newell Highway"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/narrandera/accommodation/fig-tree-motel"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Talbot Tourist Park",
+    "slug": "lake-talbot-tourist-park",
+    "categorySlug": "holiday-parks",
+    "vertical": "stay",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "Gordon Street",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 1302",
+    "website": "https://www.laketalbot.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Talbot+Tourist+Park+Narrandera+NSW",
+    "description": "A caravan, camping and cabin park on Gordon Street set on the shores of Lake Talbot at Narrandera. Bookings can be made through the park's own online system. Accessible features listed include accessible parking, accessible bathroom fixtures, grab rails and slip-resistant pathways.",
+    "highlights": [
+      "On the shores of Lake Talbot",
+      "Caravan, camping and cabin accommodation",
+      "Online booking system",
+      "Accessible parking, grab rails and slip-resistant paths"
+    ],
+    "attributes": {
+      "wheelchair_accessible": "yes",
+      "powered_sites": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/narrandera/accommodation/lake-talbot-tourist-park-0"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Historic Star Lodge and Station Masters House",
+    "slug": "historic-star-lodge-and-station-masters-house",
+    "categorySlug": "bed-and-breakfast",
+    "vertical": "stay",
+    "localityName": "Narrandera",
+    "state": "NSW",
+    "addressLine": "64 Whitton Street",
+    "suburb": "Narrandera",
+    "postcode": "2700",
+    "phone": "02 6959 1768",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Historic+Star+Lodge+and+Station+Masters+House+Narrandera+NSW",
+    "description": "National Trust and heritage listed lodgings built beside the restored Narrandera Railway Station, in the town's early heritage district. Rooms are spacious and furnished with quality Australian and Anglo-European antiques in keeping with the buildings. The lodge featured on the Australian passport in 2009.",
+    "highlights": [
+      "National Trust and heritage listed",
+      "Purpose built beside the restored railway station",
+      "Australian and Anglo-European antique furnishings",
+      "Featured on the Australian passport in 2009"
+    ],
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/narrandera/accommodation/historic-star-lodge-and-station-masters-house"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Quest Griffith",
+    "slug": "quest-griffith",
+    "categorySlug": "serviced-apartments",
+    "vertical": "stay",
+    "localityName": "Griffith",
+    "state": "NSW",
+    "addressLine": "53 Railway Street",
+    "suburb": "Griffith",
+    "postcode": "2680",
+    "phone": "02 6969 2000",
+    "website": "https://www.questapartments.com.au/properties/nsw/griffith",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quest+Griffith+Griffith+NSW",
+    "description": "A complex of 68 serviced apartments on Railway Street in central Griffith. Studio apartments come with kitchenettes, while the one, two and three bedroom apartments have full kitchens and laundry facilities. The property is aimed at families, groups and business travellers on extended stays.",
+    "highlights": [
+      "68 serviced apartments",
+      "Studios with kitchenettes",
+      "One, two and three bedroom apartments with full kitchens",
+      "In-apartment laundry facilities",
+      "Central Railway Street location"
+    ],
+    "attributes": {
+      "family_rooms": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/griffith/accommodation/quest-griffith-0"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Leeton Heritage Motor Inn",
+    "slug": "the-leeton-heritage-motor-inn",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Leeton",
+    "state": "NSW",
+    "addressLine": "29 Yanco Avenue",
+    "suburb": "Leeton",
+    "postcode": "2705",
+    "phone": "02 6953 4100",
+    "website": "https://leetonheritage.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Leeton+Heritage+Motor+Inn+Leeton+NSW",
+    "description": "A Yanco Avenue motor inn with 33 spacious ground-floor rooms, all air conditioned and with WiFi, including two accessible rooms. There is an outdoor saltwater swimming pool, guest barbecue facilities, a picnic area, laundry and EV charging. Charley's is the licensed on-site restaurant and event space, cooked and continental breakfast is served seven days and in-room dining runs Monday to Thursday. Leeton's CBD, golf course, sporting complex and RSL club are nearby.",
+    "highlights": [
+      "33 ground-floor rooms including two accessible rooms",
+      "Outdoor saltwater swimming pool",
+      "Charley's licensed restaurant and event space",
+      "Cooked and continental breakfast seven days",
+      "Guest barbecue and picnic area",
+      "EV charging on site"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "breakfast": "yes",
+      "licensed": "yes",
+      "ev_charging": "yes",
+      "wheelchair_accessible": "yes",
+      "star_rating": "4"
+    },
+    "sources": [
+      "https://leetonheritage.com/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/leeton/accommodation/the-leeton-heritage-motor-inn"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Goldtera Motor Inn",
+    "slug": "goldtera-motor-inn",
+    "categorySlug": "motels",
+    "vertical": "stay",
+    "localityName": "Temora",
+    "state": "NSW",
+    "addressLine": "80 Loftus Street",
+    "suburb": "Temora",
+    "postcode": "2666",
+    "phone": "02 6977 2433",
+    "website": "https://temoraexservices.com.au/Motels/Goldtera-Motor-Inn",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Goldtera+Motor+Inn+Temora+NSW",
+    "description": "A 12-room motor inn in the Temora CBD, directly opposite the Temora Ex-Services Memorial Club which runs it. Rooms have queen beds, mini bars, reverse-cycle air conditioning, LCD televisions with DVD players, free WiFi, cutlery and crockery, and an iron and ironing board. There is a swimming pool and barbecue area, and one twin room is fully wheelchair accessible. The Aviation Museum, Rural Museum and Lake Centenary are a short drive away.",
+    "highlights": [
+      "12 rooms in the Temora CBD",
+      "Directly opposite the Temora Ex-Services Memorial Club",
+      "Swimming pool and barbecue area",
+      "Wheelchair accessible twin room",
+      "Walking distance to shops and restaurants"
+    ],
+    "attributes": {
+      "pool": "yes",
+      "bbq": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://temoraexservices.com.au/Motels/Goldtera-Motor-Inn",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/temora/accommodation/goldtera-motor-inn"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kimo Estate",
+    "slug": "kimo-estate",
+    "categorySlug": "farm-stays",
+    "vertical": "stay",
+    "localityName": "Gundagai",
+    "state": "NSW",
+    "addressLine": "1218 Nangus Road",
+    "suburb": "Gundagai",
+    "postcode": "2722",
+    "phone": "1300 618 461",
+    "website": "https://www.kimoestate.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kimo+Estate+Gundagai+NSW",
+    "facebook": "https://www.facebook.com/KimoEstateFJ",
+    "instagram": "https://www.instagram.com/kimoestate/",
+    "description": "A 7,000 acre working farm on Nangus Road about ten minutes from Gundagai. Accommodation covers three off-grid EcoHuts set on a hilltop above the Murrumbidgee River flats, each with a private hot tub, a set of renovated 100-year-old workers' cottages suited to families, and Shearers Quarters with six bedrooms for larger groups.",
+    "highlights": [
+      "7,000 acre working farm",
+      "Three off-grid EcoHuts with private hot tubs",
+      "Renovated 100-year-old workers' cottages",
+      "Six-bedroom Shearers Quarters for groups",
+      "About ten minutes from Gundagai"
+    ],
+    "sources": [
+      "https://www.kimoestate.com/",
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/gundagai/accommodation/kimo-estate"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

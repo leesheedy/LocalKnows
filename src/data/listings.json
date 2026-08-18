@@ -1,5 +1,1751 @@
 [
  {
+  "id": "biz-albury-wodonga-sailing-club",
+  "slug": "albury-wodonga-sailing-club",
+  "name": "Albury Wodonga Sailing Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-sailing-clubs"
+  ],
+  "description": "The Albury Wodonga Sailing Club sails on Lake Hume, about a 20 minute drive from Albury and Wodonga, and has been going since 1958. It is an Australian Sailing Accredited Discover Sailing Centre, running Discover Sailing Experiences, Tackers courses for 7 to 12 year olds, OutThere Sailing for 12 to 17 year olds, and dinghy, keelboat and powerboat courses. The club offers boat storage and boat registration for members, and each year hosts the Sail Country regatta on the weekend before the Melbourne Cup.",
+  "phone": "0406 856 458",
+  "website": "https://www.awyc.org.au/",
+  "addressLine": "Old Weir Road",
+  "localityId": "loc-vic-bonegilla",
+  "postcode": "3691",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-bonegilla",
+   "loc-nsw-east-albury",
+   "loc-nsw-south-albury",
+   "loc-nsw-albury",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "d",
+  "attributes": {
+   "come_and_try": "yes",
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 88,
+  "isSample": false,
+  "sources": [
+   "https://www.awyc.org.au/",
+   "https://www.awyc.org.au/our-club/how-to-find-us"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Sailing+Club+Bonegilla+VIC",
+  "instagram": "https://www.instagram.com/alburywodongayachtclub/",
+  "highlights": [
+   "On the shores of Lake Hume, about 20 minutes from Albury and Wodonga",
+   "Australian Sailing Accredited Discover Sailing Centre",
+   "Tackers courses for ages 7 to 12 and OutThere Sailing for ages 12 to 17",
+   "Dinghy learn to sail, keelboat and powerboat courses",
+   "Sail Country regatta held the weekend before the Melbourne Cup",
+   "SailPass temporary membership and boat storage available"
+  ]
+ },
+ {
+  "id": "biz-border-bushwalking-club",
+  "slug": "border-bushwalking-club",
+  "name": "Border Bushwalking Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-bushwalking-clubs"
+  ],
+  "description": "Border Bushwalking Club calls itself Albury Wodonga's outdoor recreation club and has more than 100 members after 40 years of operation, with several foundation members still active. As well as bushwalking, the program covers canoeing, cycling, snow activities and volunteering. Members receive free entry to all club events, and the club is affiliated with Bushwalking Victoria, Rail Trails Australia and the Victorian High Country Huts Association.",
+  "website": "https://borderbushwalkingclub.com.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BB",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 56,
+  "isSample": false,
+  "sources": [
+   "https://borderbushwalkingclub.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Border+Bushwalking+Club+Albury+NSW",
+  "highlights": [
+   "Albury Wodonga's outdoor recreation club, running more than 40 years",
+   "More than 100 members",
+   "Bushwalking, canoeing, cycling and snow trips",
+   "Members receive free entry to all club events",
+   "Membership $50 a year, $45 concession, $90 family",
+   "Affiliated with Bushwalking Victoria and Rail Trails Australia"
+  ]
+ },
+ {
+  "id": "biz-murray-railway-modellers",
+  "slug": "murray-railway-modellers",
+  "name": "Murray Railway Modellers",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-model-railway-clubs"
+  ],
+  "description": "Murray Railway Modellers is Albury Wodonga's model train club, with clubrooms at the Wodonga Showground off Wilson Street. Members meet every Wednesday night at 7pm and new members are always welcome. The club runs the annual Albury/Wodonga Model Train Show, held on 16 and 17 May 2026 at the Mirambeena Community Centre, with entry $10 adults, $5 children and $20 family.",
+  "website": "https://www.murrayrailwaymodellers.com.au/",
+  "addressLine": "Wodonga Showground, Wilson Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "MR",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://www.murrayrailwaymodellers.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray+Railway+Modellers+Wodonga+VIC",
+  "facebook": "https://www.facebook.com/MurrayRailwayModellers",
+  "highlights": [
+   "Clubrooms at the Wodonga Showground off Wilson Street",
+   "Meets every Wednesday night at 7pm",
+   "New members always welcome",
+   "Runs the annual Albury/Wodonga Model Train Show",
+   "2026 show at the Mirambeena Community Centre, 16 and 17 May"
+  ]
+ },
+ {
+  "id": "biz-twin-cities-model-aero-club",
+  "slug": "twin-cities-model-aero-club",
+  "name": "Twin Cities Model Aero Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-model-aero-clubs"
+  ],
+  "description": "The Twin Cities Model Aero Club has been the hub for model aircraft flying in the Albury-Wodonga region for more than 50 years. The field has a 130 metre concrete main runway with cross runways, an 80 metre concrete control line circle plus two grass circles, and dedicated areas for electric planes, helicopters, drones and free flight models. There is an air-conditioned clubhouse with kitchen, the field is open seven days a week and Sunday mornings are the busiest.",
+  "phone": "02 6067 2033",
+  "website": "https://www.tcmac.com.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "TC",
+  "logoTheme": "c",
+  "attributes": {
+   "come_and_try": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 68,
+  "isSample": false,
+  "sources": [
+   "https://www.tcmac.com.au/about-us",
+   "https://www.tcmac.com.au/contact-us"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Twin+Cities+Model+Aero+Club+Albury+NSW",
+  "highlights": [
+   "Flying field open seven days a week",
+   "130m concrete main runway plus cross runways",
+   "Control line circles and areas for helicopters, drones and free flight",
+   "Air-conditioned clubhouse with kitchen",
+   "Try n Fly introductory program",
+   "Busiest on Sunday mornings"
+  ]
+ },
+ {
+  "id": "biz-wodonga-mens-shed",
+  "slug": "wodonga-mens-shed",
+  "name": "Wodonga Men's Shed",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-mens-sheds"
+  ],
+  "description": "The Wodonga Men's Shed is a place for men to come together, to socialise and to share or develop their skills and relate their experiences. Members take on wood and metal projects for private clients, community organisations and pre-schools. The shed also makes handcrafted wooden pens turned from Australian and exotic timbers, marsupial sculptures and firebox kits for camping.",
+  "phone": "02 6059 8465",
+  "website": "https://wodongamensshed.com.au/",
+  "addressLine": "24 Jamieson Court",
+  "localityId": "loc-vic-west-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-west-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WM",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "12:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "12:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "12:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://wodongamensshed.com.au/",
+   "https://mensshed.org/sheds/wodonga-mens-shed/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Men%27s+Shed+West+Wodonga+VIC",
+  "highlights": [
+   "Open Monday, Wednesday and Friday mornings",
+   "Wood and metal work for community groups, pre-schools and private clients",
+   "Handcrafted wooden pens with engraving available",
+   "Marsupial sculptures and camping firebox kits",
+   "Men of any age welcome"
+  ]
+ },
+ {
+  "id": "biz-albury-mens-shed",
+  "slug": "albury-mens-shed",
+  "name": "Albury Men's Shed",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-mens-sheds"
+  ],
+  "description": "Albury Men's Shed is a community workshop at Lavington where members take on woodwork, metalwork, craft and laser cutting projects. The workshop holds a range of machines and PPE including enclosed footwear is required in those areas. Visitors are welcome to come in and wander through the site, and service and support animals are permitted on lead in the non-workshop areas.",
+  "phone": "02 6061 4562",
+  "website": "https://alburymensshed.com.au/",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AM",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "11:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "11:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "14:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "11:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 78,
+  "isSample": false,
+  "sources": [
+   "https://alburymensshed.com.au/",
+   "https://mensshed.org/sheds/albury-mens-shed-inc/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Men%27s+Shed+Lavington+NSW",
+  "facebook": "https://www.facebook.com/profile.php?id=100088568490602",
+  "highlights": [
+   "Open Monday, Tuesday and Friday mornings and Wednesdays until 2pm",
+   "Woodwork, metalwork, craft and laser cutting",
+   "Visitors welcome to walk through the site",
+   "PPE including enclosed footwear required in workshop areas",
+   "Member application form available to download"
+  ]
+ },
+ {
+  "id": "biz-albury-district-historical-society",
+  "slug": "albury-district-historical-society",
+  "name": "Albury & District Historical Society Inc",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-historical-societies"
+  ],
+  "description": "The Albury & District Historical Society works to collect, investigate, research, record, preserve, exhibit, discuss and publish material relevant to the region's heritage. It runs a program of meetings, research and publications and cooperates with the Albury LibraryMuseum. The society accepts research enquiries for an initial fee of $25 and publishes online photo galleries covering subjects such as the hundreds of homes demolished in Albury.",
+  "phone": "02 6021 3671",
+  "website": "https://www.alburyhistory.org.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "A&",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 72,
+  "isSample": false,
+  "sources": [
+   "https://www.alburyhistory.org.au/",
+   "https://www.alburyhistory.org.au/contact/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+%26+District+Historical+Society+Albury+NSW",
+  "facebook": "https://www.facebook.com/Albury.DHS/",
+  "highlights": [
+   "Collects and preserves Albury district heritage material",
+   "Program of meetings, research and publications",
+   "Research enquiries accepted for an initial $25 fee",
+   "Online photo galleries of historic Albury",
+   "Works with the Albury LibraryMuseum",
+   "Postal address PO Box 822, Albury NSW 2640"
+  ]
+ },
+ {
+  "id": "biz-wodonga-district-historical-society",
+  "slug": "wodonga-district-historical-society",
+  "name": "Wodonga & District Historical Society",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-historical-societies"
+  ],
+  "description": "The Wodonga & District Historical Society collects and conserves items and information telling the story of the birth and growth of Wodonga and its surrounds. The collection is held in Hut 97 at the Bonegilla Migrant Experience on Bonegilla Road and is open Wednesday, Saturday and Sunday from 10am to 3pm. Research covers subjects including the railways, migration and the effect of the Second World War on the district, and monthly meetings are held at the Wodonga Football Club rooms in Vermont Street.",
+  "phone": "02 6059 6473",
+  "website": "https://historywodonga.org.au/",
+  "addressLine": "Hut 97, Bonegilla Migrant Experience, 132 Bonegilla Road",
+  "localityId": "loc-vic-bonegilla",
+  "postcode": "3691",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-bonegilla",
+   "loc-nsw-east-albury",
+   "loc-nsw-south-albury",
+   "loc-nsw-albury",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "W&",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "10:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "10:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://historywodonga.org.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+%26+District+Historical+Society+Bonegilla+VIC",
+  "highlights": [
+   "Collection housed in Hut 97 at the Bonegilla Migrant Experience",
+   "Open Wednesday, Saturday and Sunday, 10am to 3pm",
+   "Research on railways, migration and wartime Wodonga",
+   "Monthly meetings at the Wodonga Football Club rooms, Vermont Street",
+   "Produces educational video content",
+   "Visitors and prospective members welcome"
+  ]
+ },
+ {
+  "id": "biz-wodonga-albury-camera-club",
+  "slug": "wodonga-albury-camera-club",
+  "name": "Wodonga/Albury Camera Club Inc.",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-camera-clubs"
+  ],
+  "description": "The Wodonga/Albury Camera Club is a group of keen photographers on the Victoria-New South Wales border who meet on the second Monday of each month at the Felltimber Community Centre in West Wodonga. Members work in both digital and film formats and the club runs competitions, workshops and outings. It is an incorporated body in Victoria operating under the Victorian Association of Photographic Societies.",
+  "website": "https://waccfoto.com/",
+  "addressLine": "Felltimber Community Centre",
+  "localityId": "loc-vic-west-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-west-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WA",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://waccfoto.com/",
+   "https://waccfoto.myphotoclub.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Albury+Camera+Club+West+Wodonga+VIC",
+  "facebook": "https://www.facebook.com/WACC.Photography/",
+  "highlights": [
+   "Meets the second Monday of the month at Felltimber Community Centre",
+   "Competitions, workshops and photography outings",
+   "Members shoot both digital and film",
+   "Affiliated with the Victorian Association of Photographic Societies",
+   "Annual Paatsch Shield Challenge against Bendigo Camera Club"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-amateur-radio-club",
+  "slug": "albury-wodonga-amateur-radio-club",
+  "name": "Albury Wodonga Amateur Radio Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-radio-clubs"
+  ],
+  "description": "The Albury Wodonga Amateur Radio Club holds the callsign VK2EWC and draws members from both sides of the Murray River. Meetings are held at the 1st Lavington Scout Hall in Mutsch Street, Lavington, on the first Tuesday of each month except January, starting at 7.30pm. The club runs a Thursday night net at 8.30pm on 3.555 MHz and a Monday night net at 8pm on the VK2RAY 2m linked repeater system.",
+  "phone": "0417 485 949",
+  "website": "http://www.awarc.org/",
+  "addressLine": "1st Lavington Scout Hall, Mutsch Street",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://www.wia.org.au/clubs/vk2/AlburyWodongaAmateurRadioClub/",
+   "http://www.awarc.org/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Amateur+Radio+Club+Lavington+NSW",
+  "facebook": "https://www.facebook.com/awarc.org/",
+  "highlights": [
+   "Club callsign VK2EWC",
+   "Meets the first Tuesday of the month (except January) at 7.30pm",
+   "Meeting venue is the 1st Lavington Scout Hall, Mutsch Street",
+   "Thursday night net at 8.30pm on 3.555 MHz",
+   "Monday night net at 8pm on the VK2RAY 2m linked repeater",
+   "Postal address PO Box 396, Albury NSW 2640"
+  ]
+ },
+ {
+  "id": "biz-wodonga-urban-landcare-network",
+  "slug": "wodonga-urban-landcare-network",
+  "name": "Wodonga Urban Landcare Network",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-landcare-groups"
+  ],
+  "description": "The Wodonga Urban Landcare Network has grown since 2012 to support member groups and hundreds of volunteers restoring waterways, hilltops and habitat around Wodonga. Its 18 member groups include Friends of Willow Park, Friends of Federation Hill, Friends of the Wodonga Rail Trail, the Multicultural Community Farm and Turtles Albury Wodonga. The network runs the Gardens for Wildlife and Healthy Hectares programs along with citizen science projects and community education events.",
+  "website": "https://wodongalandcare.org.au/",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WU",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 60,
+  "isSample": false,
+  "sources": [
+   "https://wodongalandcare.org.au/",
+   "https://wodongalandcare.org.au/member-groups/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Urban+Landcare+Network+Wodonga+VIC",
+  "facebook": "https://www.facebook.com/wodongalandcare",
+  "highlights": [
+   "Network of 18 local Landcare and friends groups",
+   "Operating since 2012",
+   "Gardens for Wildlife backyard biodiversity program",
+   "Healthy Hectares program",
+   "Citizen science projects and community education events",
+   "Volunteer opportunities across all member groups"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-theatre-company",
+  "slug": "albury-wodonga-theatre-company",
+  "name": "Albury Wodonga Theatre Company",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-theatre-companies"
+  ],
+  "description": "Albury Wodonga Theatre Company is a not for profit run entirely by volunteers, promoting involvement in the performing arts in Albury-Wodonga since 1967. It stages two major musicals a year at the Albury Entertainment Centre or The Cube Wodonga, and up to three plays a year in its own intimate theatre space at 234 Olive Street, South Albury. The company also presents small ensemble, solo and cabaret style performances and takes proposals for new shows.",
+  "website": "https://awtco.org.au/",
+  "addressLine": "234 Olive Street",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://awtco.org.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Theatre+Company+South+Albury+NSW",
+  "facebook": "https://www.facebook.com/awtco/",
+  "highlights": [
+   "Volunteer run since 1967",
+   "Two major musicals a year at the Albury Entertainment Centre or The Cube",
+   "Up to three plays a year at its South Albury theatre",
+   "Cabaret, solo and small ensemble performances",
+   "Memberships and volunteer registration open",
+   "Auditions advertised on the website"
+  ]
+ },
+ {
+  "id": "biz-murray-concert-choir",
+  "slug": "murray-concert-choir",
+  "name": "Murray Concert Choir",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-choirs"
+  ],
+  "description": "Murray Concert Choir rehearses on Monday nights from 7.30pm to 9.30pm at St David's Uniting Church in Wilson Street, Albury. The choir began in 1982 under local teacher, musician and composer John Ross as the Murray Conservatorium Choir, and changed its name in 2022 when it became an independent community choir. It describes itself as a learning choir and welcomes singers who love to sing, with Catherine Nash as music director.",
+  "website": "https://www.murrayconchoir.com/",
+  "addressLine": "St David's Uniting Church, Wilson Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "MC",
+  "logoTheme": "c",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://www.murrayconchoir.com/",
+   "https://www.murrayconchoir.com/join-us"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray+Concert+Choir+Albury+NSW",
+  "facebook": "https://www.facebook.com/profile.php?id=100087890107178",
+  "highlights": [
+   "Rehearses Mondays 7.30pm to 9.30pm at St David's Uniting Church",
+   "Formed in 1982, independent community choir since 2022",
+   "A learning choir open to new singers",
+   "Music director Catherine Nash",
+   "Performs in the Four Choirs Festival"
+  ]
+ },
+ {
+  "id": "biz-albury-and-border-kennel-club",
+  "slug": "albury-and-border-kennel-club",
+  "name": "Albury and Border Kennel Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-dog-clubs"
+  ],
+  "description": "The Albury and Border Kennel Club is a not for profit, 100% volunteer run dog club that has been going since the 1930s, based at grounds in Eames Street off North Street. It runs a six week beginners obedience course using positive reinforcement, plus advanced obedience, agility, competition training and seminars. The club holds competitions in obedience, rally, agility, sprintdog and conformation, and spectators are welcome on competition weekends.",
+  "website": "https://abkc.com.au/",
+  "addressLine": "Eames Street",
+  "localityId": "loc-nsw-north-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-north-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AA",
+  "logoTheme": "e",
+  "attributes": {
+   "dog_friendly": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 66,
+  "isSample": false,
+  "sources": [
+   "https://abkc.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+and+Border+Kennel+Club+North+Albury+NSW",
+  "highlights": [
+   "Volunteer run dog club operating since the 1930s",
+   "Six week beginners obedience course",
+   "Advanced obedience, agility and competition training",
+   "Competitions in obedience, rally, agility, sprintdog and conformation",
+   "Spectators welcome at competition weekends"
+  ]
+ },
+ {
+  "id": "biz-hockey-albury-wodonga",
+  "slug": "hockey-albury-wodonga",
+  "name": "Hockey Albury Wodonga",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-hockey-clubs"
+  ],
+  "description": "Hockey Albury Wodonga has been running hockey for Albury, Corowa, Rutherglen, Wangaratta, Wodonga and surrounding areas since 1953, playing out of the Albury Hockey Centre. It runs senior competitions, a twilight competition and masters hockey, plus Under 7s, Under 10s and Come & Try sessions for juniors. Representative teams play as the Spitfires and Junior Spitfires.",
+  "website": "https://www.haw.net.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "HA",
+  "logoTheme": "c",
+  "attributes": {
+   "junior_program": "yes",
+   "come_and_try": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 66,
+  "isSample": false,
+  "sources": [
+   "https://www.haw.net.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hockey+Albury+Wodonga+Albury+NSW",
+  "facebook": "https://www.facebook.com/hockeyalburywodonga",
+  "highlights": [
+   "Regional hockey association running since 1953",
+   "Based at the Albury Hockey Centre",
+   "Under 7s, Under 10s and Come & Try junior sessions",
+   "Senior, twilight and masters competitions",
+   "Spitfires and Junior Spitfires representative teams"
+  ]
+ },
+ {
+  "id": "biz-albury-little-athletics-centre",
+  "slug": "albury-little-athletics-centre",
+  "name": "Albury Little Athletics Centre",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-athletics-clubs"
+  ],
+  "description": "Albury Little Athletics Centre has been running since 1990 at the Les O'Brien Athletics Precinct in East Albury, on a 400 metre synthetic track with wheelchair access. Track and field competition is on Saturdays from 8.30am and training is on Wednesdays from 5pm to 6pm. The 2026/27 season runs from 26 September 2026 to 27 March 2027, and multi-class events are offered alongside the standard age groups.",
+  "phone": "0434 258 010",
+  "website": "https://alburylac.com.au/",
+  "addressLine": "Les O'Brien Athletics Precinct",
+  "localityId": "loc-nsw-east-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-east-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AL",
+  "logoTheme": "d",
+  "attributes": {
+   "junior_program": "yes",
+   "wheelchair_accessible": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://lavic.com.au/centres/albury/",
+   "https://alburylac.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Little+Athletics+Centre+East+Albury+NSW",
+  "highlights": [
+   "400m synthetic track at the Les O'Brien Athletics Precinct",
+   "Saturday competition from 8.30am",
+   "Wednesday training from 5pm to 6pm",
+   "Season runs 26 September 2026 to 27 March 2027",
+   "Multi-class events offered",
+   "Wheelchair accessible track"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-football-association",
+  "slug": "albury-wodonga-football-association",
+  "name": "Albury Wodonga Football Association",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-soccer-clubs"
+  ],
+  "description": "The Albury Wodonga Football Association is the major organisational body for non-professional soccer across the Albury Wodonga region, north east Victoria and the southern Riverina. Twelve member clubs play under it, including Albury City, Albury Hotspurs, Albury United, Boomers FC, Melrose, St Pats, Twin City Wanderers, Wodonga Diamonds and Wodonga Heart. Alongside the senior Main Draw it runs MiniRoos junior football, women's, masters and all abilities competitions and a summer Twilight Football season, using grounds including Ian Barker Fields, Jelbart Park, Willow Park and Lavington Sports Ground.",
+  "website": "https://www.awfa.asn.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "a",
+  "attributes": {
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 60,
+  "isSample": false,
+  "sources": [
+   "https://www.awfa.asn.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Football+Association+Albury+NSW",
+  "facebook": "https://www.facebook.com/AlbWodFA",
+  "highlights": [
+   "Governing body for local soccer across the border region",
+   "Twelve member clubs",
+   "MiniRoos junior program",
+   "Women's, masters and all abilities competitions",
+   "Summer Twilight Football season",
+   "Grounds include Ian Barker Fields, Jelbart Park and Willow Park"
+  ]
+ },
+ {
+  "id": "biz-albury-basketball-association",
+  "slug": "albury-basketball-association",
+  "name": "Albury Basketball Association",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-basketball-clubs"
+  ],
+  "description": "Albury Basketball Association runs basketball out of the Lauren Jackson Sports Centre on North Street East in Albury. Seven affiliated clubs feed its junior domestic competition, including CC Celtics, Panthers Basketball Albury, PCYC Basketball Albury, SSA Basketball Club, Wildcats Albury, The Scots School Albury and Trinity Basketball Club. The association also runs senior domestic competition, Junior and Senior Cougars representative teams and basketball development sessions.",
+  "phone": "0455 450 732",
+  "website": "https://www.alburybasketball.com.au/",
+  "addressLine": "Lauren Jackson Sports Centre, 229 North Street East",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AB",
+  "logoTheme": "c",
+  "attributes": {
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://www.alburybasketball.com.au/",
+   "https://www.alburybasketball.com.au/clubs"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Basketball+Association+Albury+NSW",
+  "facebook": "https://www.facebook.com/alburybasketball",
+  "instagram": "https://www.instagram.com/alburybasketball/",
+  "highlights": [
+   "Based at the Lauren Jackson Sports Centre, Albury",
+   "Seven affiliated clubs in the junior domestic competition",
+   "Junior and senior domestic competitions",
+   "Junior and Senior Cougars representative programs",
+   "Basketball development sessions"
+  ]
+ },
+ {
+  "id": "biz-albury-grass-courts",
+  "slug": "albury-grass-courts",
+  "name": "Albury Grass Courts",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-tennis-clubs"
+  ],
+  "description": "Albury Grass Courts on Townsend Street in South Albury has been part of the region's tennis community for more than 115 years and plays on grass courts. The club runs coaching programs, social tennis, competitions and tournaments, and junior events including the Rex Hartwig Junior Cup. Courts can be booked online through play.tennis.com.au.",
+  "phone": "02 6021 3514",
+  "website": "https://alburygrasscourts.com.au/",
+  "addressLine": "365 Townsend Street South",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AG",
+  "logoTheme": "c",
+  "attributes": {
+   "junior_program": "yes",
+   "bookings": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 88,
+  "isSample": false,
+  "sources": [
+   "https://alburygrasscourts.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Grass+Courts+South+Albury+NSW",
+  "facebook": "https://www.facebook.com/AlburyGrassCourts",
+  "highlights": [
+   "Grass courts in South Albury",
+   "More than 115 years of operation",
+   "Coaching programs for juniors and adults",
+   "Social tennis, competitions and tournaments",
+   "Rex Hartwig Junior Cup",
+   "Online court booking"
+  ]
+ },
+ {
+  "id": "biz-wodonga-bridge-club",
+  "slug": "wodonga-bridge-club",
+  "name": "Wodonga Bridge Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-bridge-clubs"
+  ],
+  "description": "Wodonga Bridge Club plays duplicate bridge at the Wodonga Senior Citizens Centre, 15 Havelock Street, Wodonga. Sessions are on Tuesday evenings, arriving 6.30pm for a 6.45pm start, and cost $4 for members and $6 for non-members including supper. Visitors are most welcome and a partner can be arranged on the day. The club also runs Learn and Play Saturday sessions through the year.",
+  "phone": "0407 471 944",
+  "website": "http://www.bridgewebs.com/wodonga/",
+  "addressLine": "Wodonga Senior Citizens Centre, 15 Havelock Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WB",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 78,
+  "isSample": false,
+  "sources": [
+   "http://www.bridgewebs.com/wodonga/",
+   "https://bridgevictoria.au/clubs/wodonga-bridge-club/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Bridge+Club+Wodonga+VIC",
+  "highlights": [
+   "Tuesday evening sessions, 6.30pm for a 6.45pm start",
+   "Played at the Wodonga Senior Citizens Centre, Havelock Street",
+   "$4 members, $6 non-members, including supper",
+   "Visitors most welcome",
+   "Partner can be arranged on the day",
+   "Learn and Play Saturday sessions"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-and-districts-car-club",
+  "slug": "albury-wodonga-and-districts-car-club",
+  "name": "Albury Wodonga and Districts Car Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-car-clubs"
+  ],
+  "description": "The Albury Wodonga and Districts Car Club runs grassroots motorsport events on both sides of the border, including Lapdash rounds held at Wodonga TAFE and Motokhana and Khanacross rounds at Villa Grove. Events run as numbered rounds through the year, and memberships, event entries and club merchandise are all handled through the club website.",
+  "website": "https://www.awdcc.com.au/",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 60,
+  "isSample": false,
+  "sources": [
+   "https://www.awdcc.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+and+Districts+Car+Club+Wodonga+VIC",
+  "facebook": "https://www.facebook.com/groups/awdcc/",
+  "highlights": [
+   "Lapdash rounds held at Wodonga TAFE",
+   "Motokhana and Khanacross rounds at Villa Grove",
+   "Multi-round motorsport calendar",
+   "Online membership and event entry",
+   "Club merchandise available"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-motorcycle-club",
+  "slug": "albury-wodonga-motorcycle-club",
+  "name": "Albury Wodonga Motorcycle Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-motorcycle-clubs"
+  ],
+  "description": "The Albury Wodonga Motorcycle Club is based on the Lincoln Causeway at Wodonga and is affiliated with Motorcycling Victoria. The club's listed disciplines are dirt track, motocross and speedway. Club contacts listed with Motorcycling Victoria are president Shane Clare and treasurer Kate Morey.",
+  "phone": "0407 955 932",
+  "addressLine": "Lincoln Causeway",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 62,
+  "isSample": false,
+  "sources": [
+   "https://www.motorcyclingvic.com.au/test/albury-wodonga-motorcycle-club/",
+   "https://www.facebook.com/AWMCClub/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Motorcycle+Club+Wodonga+VIC",
+  "facebook": "https://www.facebook.com/AWMCClub/",
+  "highlights": [
+   "Track on the Lincoln Causeway, Wodonga",
+   "Dirt track, motocross and speedway",
+   "Affiliated with Motorcycling Victoria"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-motorcycle-enthusiasts-club",
+  "slug": "albury-wodonga-motorcycle-enthusiasts-club",
+  "name": "Albury Wodonga Motorcycle Enthusiasts Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-motorcycle-clubs"
+  ],
+  "description": "The Albury Wodonga Motorcycle Enthusiasts Club is made up of riders who enjoy social get togethers, group rides and organised events through the year, and welcomes enthusiasts whatever they ride. It meets in the Wattle Room at the Commercial Club Albury, 618 Dean Street. The club provides conditional registration for NSW and Victorian motorcycles and restoration support, and runs regular Wednesday coffee runs, Sunday rides and the annual Butterball Rally.",
+  "website": "https://www.awmec.com.au/",
+  "addressLine": "Commercial Club Albury, Wattle Room, 618 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 66,
+  "isSample": false,
+  "sources": [
+   "https://www.awmec.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Motorcycle+Enthusiasts+Club+Albury+NSW",
+  "highlights": [
+   "Meets in the Wattle Room at the Commercial Club Albury",
+   "Wednesday coffee runs and Sunday rides",
+   "Conditional registration for NSW and Victorian motorcycles",
+   "Restoration support for members",
+   "Annual Butterball Rally",
+   "Ride participation leaderboard with an end of year raffle"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-cycling-club",
+  "slug": "albury-wodonga-cycling-club",
+  "name": "Albury Wodonga Cycling Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-cycling-clubs"
+  ],
+  "description": "Albury Wodonga Cycling Club runs graded circuit racing on the outskirts of Albury on Saturday afternoons and criterium racing on Sunday mornings. The club covers road and track cycling, and many members also ride mountain bikes or compete in triathlons. Its calendar includes the Geoff Dixon Memorial, the John Woodman Memorial and the Ian (Woofa) Davis Memorial Cycling Festival, and it runs a Learn to Ride program.",
+  "website": "https://alburywodongacyclingclub.org/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 52,
+  "isSample": false,
+  "sources": [
+   "https://alburywodongacyclingclub.org/",
+   "https://alburywodongacyclingclub.wordpress.com/racing/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Cycling+Club+Albury+NSW",
+  "facebook": "https://www.facebook.com/AWCycling/",
+  "highlights": [
+   "Graded circuit racing on Saturday afternoons",
+   "Criterium racing on Sunday mornings",
+   "Road and track cycling",
+   "Learn to Ride program",
+   "Hosts the Geoff Dixon and John Woodman memorial races",
+   "Ian (Woofa) Davis Memorial Cycling Festival"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-equestrian-centre",
+  "slug": "albury-wodonga-equestrian-centre",
+  "name": "Albury Wodonga Equestrian Centre",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-pony-clubs"
+  ],
+  "description": "The Albury Wodonga Equestrian Centre covers more than 97 hectares of purpose built equestrian grounds at the corner of Corrys Road and Roberts Road, Thurgoona, and reports more than 300 members. Facilities include an international cross country course, a main sand arena, a turf arena and polo X fields, the Roberts Road sand arena, a round yard, a stable complex with covered yards, and powered and unpowered camping. It hosts horse trials, showjumping, dressage, mounted games, polocrosse, clinics and training days for affiliate clubs and individual riders.",
+  "phone": "0427 540 467",
+  "website": "https://awec.net.au/",
+  "addressLine": "Corrys Road and Roberts Road",
+  "localityId": "loc-nsw-thurgoona",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "AW",
+  "logoTheme": "a",
+  "attributes": {
+   "powered_sites": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 78,
+  "isSample": false,
+  "sources": [
+   "https://awec.net.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+Equestrian+Centre+Thurgoona+NSW",
+  "highlights": [
+   "More than 97 hectares of equestrian grounds at Thurgoona",
+   "International cross country course",
+   "Main sand arena, turf arena and polo X fields",
+   "Stable complex and covered yards",
+   "Powered and unpowered camping on site",
+   "Horse trials, showjumping, dressage, mounted games and polocrosse"
+  ]
+ },
+ {
+  "id": "biz-albury-evening-cwa-branch",
+  "slug": "albury-evening-cwa-branch",
+  "name": "Albury Evening CWA Branch",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-cwa-branches"
+  ],
+  "description": "The Albury Evening CWA Branch was created to fit in with modern day women's busy schedules and is aimed at professional women in Albury, Wodonga and surrounding areas. It meets every fourth Wednesday at the 2nd Scout Hall in Eames Street, North Albury. Members work on Country Women's Association projects, campaign on issues affecting country women and children and join interest groups, while keeping the traditional values of the CWA.",
+  "website": "http://alburyeveningcwa.weebly.com/",
+  "addressLine": "2nd Scout Hall, Eames Street",
+  "localityId": "loc-nsw-north-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-north-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AE",
+  "logoTheme": "c",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "http://alburyeveningcwa.weebly.com/",
+   "https://www.facebook.com/AlburyEveningCWABranch/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Evening+CWA+Branch+North+Albury+NSW",
+  "facebook": "https://www.facebook.com/AlburyEveningCWABranch/",
+  "highlights": [
+   "Branch aimed at working and professional women",
+   "Meets every fourth Wednesday at the 2nd Scout Hall, Eames Street",
+   "Community projects and fundraising",
+   "Campaigns on issues affecting country women and children",
+   "Interest groups for members"
+  ]
+ },
+ {
+  "id": "biz-thurgoona-football-netball-club",
+  "slug": "thurgoona-football-netball-club",
+  "name": "Thurgoona Football & Netball Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-football-netball-clubs"
+  ],
+  "description": "The Thurgoona Football & Netball Club, the Bulldogs, plays out of Thurgoona Oval on Table Top Road, known locally as The Kennel. It fields five male football teams from Under 12s to open age in the Tallangatta & District Football League, eight netball teams from Under 11s to open age in the Tallangatta & District Netball Association, and four female football teams in the AFL North East Border competition. The club is a not for profit set up to give the community sporting, social and recreation opportunities, with a strong focus on junior development.",
+  "website": "https://www.thurgoonabulldogs.com.au/",
+  "addressLine": "Thurgoona Oval, 268 Table Top Road",
+  "localityId": "loc-nsw-thurgoona",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "TF",
+  "logoTheme": "c",
+  "attributes": {
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://www.thurgoonabulldogs.com.au/",
+   "https://tdfl.com.au/club/thurgoona-fnc/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Thurgoona+Football+%26+Netball+Club+Thurgoona+NSW",
+  "facebook": "https://www.facebook.com/thurgoonabulldogs/",
+  "highlights": [
+   "Home ground Thurgoona Oval, 268 Table Top Road",
+   "Five football teams from Under 12s to open age",
+   "Eight netball teams from Under 11s to open age",
+   "Four female football teams",
+   "Not for profit with a strong junior development focus"
+  ]
+ },
+ {
+  "id": "biz-jindera-football-netball-club",
+  "slug": "jindera-football-netball-club",
+  "name": "Jindera Football Netball Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-football-netball-clubs"
+  ],
+  "description": "Jindera Football Netball Club was established in 1899 and competes in the Hume Football Netball League. The club describes itself as community built, covering everything from Auskick to seniors, and fields seniors, seconds, Under 17 and Under 14 football sides alongside female football and netball teams. Memberships and club merchandise are sold through its website.",
+  "website": "https://jinderafnc.com.au/",
+  "localityId": "loc-nsw-jindera",
+  "postcode": "2642",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-jindera"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "JF",
+  "logoTheme": "e",
+  "attributes": {
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 56,
+  "isSample": false,
+  "sources": [
+   "https://jinderafnc.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jindera+Football+Netball+Club+Jindera+NSW",
+  "highlights": [
+   "Established 1899",
+   "Competes in the Hume Football Netball League",
+   "Auskick through to senior football",
+   "Under 14 and Under 17 junior grades",
+   "Female football and netball teams",
+   "Club memberships and merchandise online"
+  ]
+ },
+ {
+  "id": "biz-albury-tigers",
+  "slug": "albury-tigers",
+  "name": "Albury Tigers",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-football-netball-clubs"
+  ],
+  "description": "The Albury Tigers are Albury's football and netball club, established in 1876 and playing in the Ovens & Murray league. The club has grounds and rooms on Wodonga Place in central Albury which include a bar and function rooms. Memberships and club merchandise are sold through the club's online shop.",
+  "phone": "02 6021 1180",
+  "website": "https://www.alburytigers.com.au/",
+  "addressLine": "Wodonga Place",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AT",
+  "logoTheme": "d",
+  "attributes": {
+   "licensed": "yes",
+   "function_room": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 88,
+  "isSample": false,
+  "sources": [
+   "https://www.alburytigers.com.au/",
+   "https://omfnl.com.au/club/albury/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Tigers+Albury+NSW",
+  "facebook": "https://www.facebook.com/alburytigersclub/",
+  "instagram": "https://www.instagram.com/alburytigersfnc/",
+  "highlights": [
+   "Established 1876",
+   "Plays in the Ovens & Murray Football Netball League",
+   "Grounds and rooms on Wodonga Place in central Albury",
+   "Bar and function rooms on site",
+   "Football and netball teams",
+   "Online membership and merchandise shop"
+  ]
+ },
+ {
+  "id": "biz-wodonga-cricket-club",
+  "slug": "wodonga-cricket-club",
+  "name": "Wodonga Cricket Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-cricket-clubs"
+  ],
+  "description": "Wodonga Cricket Club was founded in 1869 and plays at Martin Park on Gordon Street, where it has two turf wicket ovals, Les Cheesley Oval and John Flower Oval, with electronic scoreboards, practice nets and clubrooms with a bar and kitchen. The club fields junior teams at Under 12, Under 14 and Under 16, senior sides in A Provincial, B Provincial and C Grade, and a women's team in the Cricket Albury Wodonga Thunder Stars league. It also runs an All Abilities program for ages 15 and over and Woolworths Cricket Blast for children from age 4.",
+  "website": "https://www.wodongacricket.au/",
+  "addressLine": "Martin Park, Gordon Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WC",
+  "logoTheme": "d",
+  "attributes": {
+   "junior_program": "yes",
+   "licensed": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 76,
+  "isSample": false,
+  "sources": [
+   "https://www.wodongacricket.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Cricket+Club+Wodonga+VIC",
+  "instagram": "https://www.instagram.com/wodongacricketclub/",
+  "highlights": [
+   "Founded 1869, based at Martin Park",
+   "Two turf wicket ovals with electronic scoreboards",
+   "Junior teams from Under 12 to Under 16",
+   "Women's team in the Thunder Stars league",
+   "All Abilities cricket for ages 15 and over",
+   "Woolworths Cricket Blast from age 4"
+  ]
+ },
+ {
+  "id": "biz-bungam-community-garden",
+  "slug": "bungam-community-garden",
+  "name": "Bungam Community Garden",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-community-gardens"
+  ],
+  "description": "Bungam Community Garden started in July 2015 on the corner of Engelhardt and Stanley Streets in Albury, where local residents from the surrounding neighbourhood adopt garden beds and grow produce in a shared space. It takes its name from its position near Bungambrawatha Creek, the area's largest waterway, and is easy to reach from the Bungambrawatha Creek Trail. Visitors are welcome to look around but are asked not to help themselves to produce grown by the volunteer gardeners.",
+  "phone": "02 6023 8111",
+  "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/community-gardens/bungam-community-garden",
+  "addressLine": "Corner Engelhardt Street and Stanley Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BC",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 78,
+  "isSample": false,
+  "sources": [
+   "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/community-gardens/bungam-community-garden"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bungam+Community+Garden+Albury+NSW",
+  "highlights": [
+   "Started in July 2015",
+   "Corner of Engelhardt and Stanley Streets, Albury",
+   "Residents adopt individual garden beds",
+   "Reached from the Bungambrawatha Creek Trail",
+   "Named after Bungambrawatha Creek",
+   "Enquiries through AlburyCity"
+  ]
+ },
+ {
+  "id": "biz-yackandandah-community-centre",
+  "slug": "yackandandah-community-centre",
+  "name": "Yackandandah Community Centre",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-neighbourhood-houses"
+  ],
+  "description": "The Yackandandah Community Centre is the town's neighbourhood house at 29 High Street, described as a space for the community to come together, learn from a range of courses, take part in activities and interest groups or browse the op shop. It runs the Yack Chat Cafe, a community garden and an op shop operated as a community social enterprise, and hires out rooms at $20 an hour along with equipment. The centre also runs a grants program for local initiatives and maintains a community directory.",
+  "phone": "02 6027 1743",
+  "website": "https://www.ycc.org.au/",
+  "addressLine": "29 High Street",
+  "localityId": "loc-vic-yackandandah",
+  "postcode": "3749",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-yackandandah"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "YC",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 78,
+  "isSample": false,
+  "sources": [
+   "https://www.ycc.org.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yackandandah+Community+Centre+Yackandandah+VIC",
+  "highlights": [
+   "Neighbourhood house at 29 High Street, Yackandandah",
+   "Op shop run as a community social enterprise",
+   "Yack Chat Cafe",
+   "Community garden",
+   "Room hire at $20 an hour, plus equipment hire",
+   "YCC Grants program for local initiatives"
+  ]
+ },
+ {
+  "id": "biz-albury-horticultural-society",
+  "slug": "albury-horticultural-society",
+  "name": "Albury Horticultural Society",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-garden-clubs"
+  ],
+  "description": "The Albury Horticultural Society has been operating for over 100 years and is a group of avid garden and plant lovers who may or may not have any formal qualifications. It meets on the first Thursday of the month at 7.30pm at the Albury Showground. The society is open to anyone interested in gardening and a little social outing.",
+  "addressLine": "Albury Showground",
+  "localityId": "loc-nsw-north-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-north-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AH",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 50,
+  "isSample": false,
+  "sources": [
+   "https://rhsv.zarzura.net/index.php/clubs/nsw/482-albury-horticultural-society",
+   "https://www.facebook.com/groups/382041647228354/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Horticultural+Society+North+Albury+NSW",
+  "facebook": "https://www.facebook.com/groups/382041647228354/",
+  "highlights": [
+   "Operating for more than 100 years",
+   "Meets the first Thursday of the month at 7.30pm",
+   "Meetings held at the Albury Showground",
+   "Open to gardeners of any experience level"
+  ]
+ },
+ {
+  "id": "biz-albury-chess-club",
+  "slug": "albury-chess-club",
+  "name": "Albury Chess Club",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-chess-clubs"
+  ],
+  "description": "The Albury Chess Club was established in 1977 and plays every Friday night from 8pm until all games finish, at Albury High School in Kiewa Street. The club welcomes players of all standards, from novices and beginners through to the strongest players. It also runs competitions that bring schools and junior players together for titles and trophies.",
+  "addressLine": "Albury High School, Kiewa Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AC",
+  "logoTheme": "c",
+  "attributes": {
+   "junior_program": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 50,
+  "isSample": false,
+  "sources": [
+   "https://www.chess.com/clubs/about/albury-chess-club22",
+   "https://www.facebook.com/alburychessclub/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Chess+Club+Albury+NSW",
+  "facebook": "https://www.facebook.com/alburychessclub/",
+  "highlights": [
+   "Established 1977",
+   "Plays Friday nights from 8pm",
+   "Meets at Albury High School, Kiewa Street",
+   "Open to players of all standards",
+   "Schools and junior competitions",
+   "Postal address PO Box 488, Lavington NSW 2641"
+  ]
+ },
+ {
+  "id": "biz-albury-wodonga-parkrun",
+  "slug": "albury-wodonga-parkrun",
+  "name": "Albury Wodonga parkrun",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-running-clubs"
+  ],
+  "description": "Albury Wodonga parkrun is a free, fun and friendly weekly 5km community event held every Saturday at 8am, starting from the Kremur Street Boat Ramp in West Albury. Participants can walk, jog, run, volunteer or spectate. The event is run entirely by volunteers, with weekly rosters and volunteer callouts posted through its Facebook page.",
+  "website": "https://www.parkrun.com.au/alburywodonga/",
+  "addressLine": "Kremur Street Boat Ramp",
+  "localityId": "loc-nsw-west-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-west-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "a",
+  "attributes": {
+   "free_entry": "yes",
+   "come_and_try": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 68,
+  "isSample": false,
+  "sources": [
+   "https://www.parkrun.com.au/alburywodonga/",
+   "https://www.facebook.com/alburywodongaparkrun/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Wodonga+parkrun+West+Albury+NSW",
+  "facebook": "https://www.facebook.com/alburywodongaparkrun/",
+  "highlights": [
+   "Free weekly 5km event",
+   "Every Saturday at 8am",
+   "Starts at the Kremur Street Boat Ramp, West Albury",
+   "Walk, jog, run, volunteer or spectate",
+   "Volunteer run, with rosters posted on Facebook"
+  ]
+ },
+ {
+  "id": "biz-hive-rotary-club-australia",
+  "slug": "hive-rotary-club-australia",
+  "name": "Hive Rotary Club Australia",
+  "status": "scraped",
+  "vertical": "clubs_hobbies",
+  "categoryIds": [
+   "cat-service-clubs"
+  ],
+  "description": "Hive Rotary Club is a project driven Rotary club that meets fortnightly by Zoom and gathers in person in the Albury-Wodonga area every six weeks. Its projects include Paying It Forward, which takes students to community service projects, Hive & Honey, a social enterprise addressing period poverty through menstrual health and employment, and an environmental education project on Nusa Penida. The club also runs monthly fundraising barbecues and seasonal gift wrapping at Myer Centrepoint.",
+  "website": "https://www.hiverotaryclub.com.au/",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "HR",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 60,
+  "isSample": false,
+  "sources": [
+   "https://www.hiverotaryclub.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hive+Rotary+Club+Australia+Albury+NSW",
+  "facebook": "https://www.facebook.com/profile.php?id=61557651254143",
+  "instagram": "https://www.instagram.com/hiverotaryclubaustralia",
+  "highlights": [
+   "Project driven Rotary club based in Albury-Wodonga",
+   "Fortnightly Zoom meetings with in person gatherings every six weeks",
+   "Paying It Forward youth service program",
+   "Hive & Honey social enterprise addressing period poverty",
+   "Nusa Penida environmental education project",
+   "Monthly fundraising barbecues"
+  ]
+ },
+ {
   "id": "biz-the-proprietor",
   "slug": "the-proprietor",
   "name": "The Proprietor",
@@ -7239,6 +8985,2567 @@
    "Lunch and dinner seven days",
    "Takeaway pizza",
    "14 boutique king suites, select rooms dog friendly"
+  ]
+ },
+ {
+  "id": "biz-borella-butchery",
+  "slug": "borella-butchery",
+  "name": "Borella Butchery",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-butchers"
+  ],
+  "description": "Family run butcher on Borella Road in East Albury selling grass fed beef, Angus, Wagyu, Tasmanian lamb, pork and chicken. Smallgoods are made on site in wood fired smokers, and the counter also carries dry aged beef, sausages, BBQ rubs and sauces, chef prepared meals and pastry items. Free local delivery is offered.",
+  "phone": "02 6021 5222",
+  "website": "https://borellabutchery.com.au/",
+  "addressLine": "206 Borella Road",
+  "localityId": "loc-nsw-east-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-east-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-tallangatta",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BB",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "07:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "07:00",
+    "closes": "14:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://borellabutchery.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Borella%20Butchery%20East%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/BorellaButchery",
+  "highlights": [
+   "Smallgoods made on site in wood fired smokers",
+   "Dry aged beef",
+   "Grass fed beef, Angus and Wagyu",
+   "Tasmanian lamb, pork and chicken",
+   "Chef prepared meals and pastries",
+   "Free local delivery"
+  ]
+ },
+ {
+  "id": "biz-lockys-countryside-meats",
+  "slug": "lockys-countryside-meats",
+  "name": "Locky's Countryside Meats",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-butchers"
+  ],
+  "description": "Butcher shop on Macauley Street in Albury stocking beef, pork, lamb and chicken. It carries a large selection of continental smallgoods including hams, salami and smoked meats, and supplies halal meat in a range of quantities. Retail and commercial packs are available with delivery.",
+  "phone": "02 6021 3283",
+  "website": "https://lockyscountrysidemeats.com.au/",
+  "addressLine": "514-516 Macauley Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "LS",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "07:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "07:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://lockyscountrysidemeats.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Locky's%20Countryside%20Meats%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/Lockys-Countryside-Meats-461148364066987/",
+  "highlights": [
+   "Continental smallgoods, hams, salami and smoked meats",
+   "Beef, pork, lamb and chicken",
+   "Halal meat available",
+   "Retail and commercial meat packs",
+   "Delivery available"
+  ]
+ },
+ {
+  "id": "biz-wolki-butchery",
+  "slug": "wolki-butchery",
+  "name": "Wolki Butchery",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-butchers"
+  ],
+  "description": "Self serve butchery on Urana Road selling grass fed and pasture raised beef, lamb and pork from Wolki Farm. The shop describes itself as Australia’s first 24/7 self serve butchery, with access open around the clock to members. Membership is free but places are limited.",
+  "phone": "0459 225 666",
+  "website": "https://wolkifarm.com.au/",
+  "addressLine": "317A Urana Road",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-nsw-walla-walla",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WB",
+  "logoTheme": "a",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://wolkifarm.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wolki%20Butchery%20Lavington%20NSW",
+  "facebook": "https://www.facebook.com/wolkifarm",
+  "instagram": "https://www.instagram.com/wolkifarm/",
+  "highlights": [
+   "Self serve butchery open 24/7 to members",
+   "Grass fed and pasture raised beef, lamb and pork",
+   "Meat from Wolki Farm",
+   "Free membership, limited places"
+  ]
+ },
+ {
+  "id": "biz-arnolds-fruit-market",
+  "slug": "arnolds-fruit-market",
+  "name": "Arnold's Fruit Market",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-greengrocers"
+  ],
+  "description": "Fruit and vegetable market on Osburn Street in Wodonga that also carries meat, groceries, bakery, dairy and confectionery. The business traces back to 1892 when J.G Arnold began selling fresh fruit and vegetables in Albury and is now in its fifth generation of family ownership. An online shop and delivery service covers Albury Wodonga and surrounding areas, and Brian’s Nursery operates within the store.",
+  "phone": "02 6024 5322",
+  "website": "https://www.arnoldsonline.com.au/",
+  "addressLine": "6 Osburn Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AS",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "08:00",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "07:00",
+    "closes": "17:45",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:00",
+    "closes": "17:45",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:00",
+    "closes": "17:45",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:00",
+    "closes": "17:45",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:00",
+    "closes": "17:45",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://www.arnoldsonline.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Arnold's%20Fruit%20Market%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/arnoldsfruitmarket",
+  "instagram": "https://www.instagram.com/arnoldsfruitmarket",
+  "highlights": [
+   "Trading since 1892, five generations of family ownership",
+   "Fresh fruit and vegetables plus groceries, meat, bakery and dairy",
+   "Online shop with delivery around Albury Wodonga",
+   "Brian’s Nursery operates in store",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-miss-amelie-gourmet",
+  "slug": "miss-amelie-gourmet",
+  "name": "Miss Amelie Gourmet",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-delis"
+  ],
+  "description": "Fine food provedore selling pies, heat and eat meals, desserts, pastries, deli items, seafood, pantry products and wine. The business won Australia’s Best Gourmet Pie in 2022 with its Chinese BBQ pork belly pie, and has stores in Wodonga, Albury, Beechworth and Prahran Market.",
+  "phone": "02 6024 4486",
+  "website": "https://missameliegourmet.com.au/",
+  "addressLine": "6 Michael Drive",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "MA",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 86,
+  "isSample": false,
+  "sources": [
+   "https://missameliegourmet.com.au/",
+   "https://au.search.yahoo.com/search?p=Miss+Amelie+Gourmet+Albury+Wodonga+store+address"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Miss%20Amelie%20Gourmet%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/missameliegourmet",
+  "instagram": "https://www.instagram.com/missameliegourmet",
+  "highlights": [
+   "Fine food provedore",
+   "Pies, heat and eat meals and desserts",
+   "Deli, seafood and pantry lines",
+   "Winner, Australia’s Best Gourmet Pie 2022",
+   "Stores in Wodonga, Albury, Beechworth and Prahran Market"
+  ]
+ },
+ {
+  "id": "biz-cellar-door-wine-store",
+  "slug": "cellar-door-wine-store",
+  "name": "Cellar Door Wine Store",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-bottle-shops"
+  ],
+  "description": "Boutique wine retailer and wine bar on the main street of Beechworth. It stocks an extensive selection of boutique Beechworth wines along with imported and rare wines and a range of spirits from around the world.",
+  "website": "https://cellardoorwinestore.com.au/",
+  "addressLine": "62 Ford Street",
+  "localityId": "loc-vic-beechworth",
+  "postcode": "3747",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-beechworth",
+   "loc-vic-yackandandah",
+   "loc-vic-myrtleford",
+   "loc-vic-chiltern",
+   "loc-vic-barnawartha",
+   "loc-vic-baranduda"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "CD",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 58,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=independent+bottle+shop+Beechworth+Yackandandah+wine+store+cellars",
+   "https://cellardoorwinestore.com.au/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cellar%20Door%20Wine%20Store%20Beechworth%20VIC",
+  "highlights": [
+   "Boutique Beechworth wines",
+   "Imported and rare wines",
+   "Spirits range",
+   "Wine bar as well as retail store",
+   "On Ford Street in the town centre"
+  ]
+ },
+ {
+  "id": "biz-olive-health-foods",
+  "slug": "olive-health-foods",
+  "name": "Olive Health Foods",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-health-food-stores"
+  ],
+  "description": "Health food store on Olive Street that describes itself as the largest health food store between Melbourne and Sydney. It stocks vitamins, minerals and herbs, natural makeup and skincare, water filters, eco friendly and allergy friendly products, local products and sports supplements. An in house clinic offers naturopathic consultations, allergy and intolerance testing and seminars.",
+  "phone": "02 6021 5626",
+  "website": "https://www.olivehealthfoods.com.au/",
+  "addressLine": "540 Olive Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "OH",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "14:30",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "14:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://www.olivehealthfoods.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Olive%20Health%20Foods%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/OliveHealthFoodsAlbury/",
+  "instagram": "https://www.instagram.com/olivehealthfoodsalbury/",
+  "highlights": [
+   "Vitamins, minerals and herbal supplements",
+   "Natural makeup and skincare",
+   "Allergy friendly and eco friendly products",
+   "In house naturopathy clinic",
+   "Allergy and intolerance testing",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-a-zesty-health",
+  "slug": "a-zesty-health",
+  "name": "A Zesty Health",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-health-food-stores"
+  ],
+  "description": "Health food shop on High Street Wodonga stocking organic, eco friendly and chemical free products alongside supplements and whole foods. Lines include nuts, seeds, legumes, grains, herbs and spices, dried fruit, sourdough bread, protein powders, essential oils, medicinal mushroom powders and skincare, with a focus on plant based, gluten free and dairy free diets. Nutrition consultations are also offered.",
+  "phone": "02 6056 5099",
+  "website": "https://azestyhealth.com.au/",
+  "addressLine": "194A High Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "ZH",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "closed": true
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://azestyhealth.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Zesty%20Health%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/AzestyHealth/",
+  "instagram": "https://www.instagram.com/azestyhealth/",
+  "highlights": [
+   "Bulk nuts, seeds, grains, herbs and spices",
+   "Gluten free, dairy free and plant based lines",
+   "Supplements and protein powders",
+   "Essential oils and skincare",
+   "Nutrition consultations"
+  ]
+ },
+ {
+  "id": "biz-wholefoods-wodonga",
+  "slug": "wholefoods-wodonga",
+  "name": "Wholefoods",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-health-food-stores"
+  ],
+  "description": "Organic grocery store on Romet Road in Wodonga stocking organic fresh produce, pantry staples, bread, eggs, frozen food, home and cleaning products, beauty items, beverages, wellness supplements, baby and kids products and pet food. Click and collect is available, and there is a second store in Wangaratta.",
+  "phone": "0412 552 335",
+  "website": "https://www.wholefoodsau.com/",
+  "addressLine": "2 Romet Road",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WH",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "14:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "18:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "14:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 90,
+  "isSample": false,
+  "sources": [
+   "https://www.wholefoodsau.com/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wholefoods%20Wodonga%20VIC",
+  "highlights": [
+   "Organic fresh produce",
+   "Pantry staples, bread and eggs",
+   "Wellness supplements",
+   "Home, cleaning and beauty products",
+   "Click and collect",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-booktique-albury",
+  "slug": "booktique-albury",
+  "name": "BOOKtique Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-bookshops"
+  ],
+  "description": "Independent bookshop in AMP Lane off Dean Street, Albury. Stock is spread across more than 60 categories including fiction, children’s books, crime and thrillers and science fiction, alongside journals, cards and gifts. Audiobooks are sold through a Libro.fm partnership.",
+  "phone": "02 5005 7865",
+  "website": "https://booktiquealbury.com.au/",
+  "addressLine": "Shop 7, AMP Lane, 569 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BA",
+  "logoTheme": "a",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://booktiquealbury.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BOOKtique%20Albury%20Albury%20NSW",
+  "instagram": "https://www.instagram.com/booktique_albury/",
+  "highlights": [
+   "Independent bookshop in AMP Lane",
+   "More than 60 book categories",
+   "Children’s books, crime and science fiction",
+   "Journals, cards and gifts",
+   "Audiobooks through Libro.fm"
+  ]
+ },
+ {
+  "id": "biz-thistle-and-fern",
+  "slug": "thistle-and-fern",
+  "name": "Thistle & Fern",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-florists"
+  ],
+  "description": "Florist with a shop in South Albury and a second location at Junction Square in Wodonga, selling seasonal fresh flowers, arrangements, gifts and greeting cards. Deliveries run Tuesday to Friday, with a flat delivery rate covering Wodonga, Albury, Lavington, Glenroy, Springdale Heights, Hamilton Valley, Thurgoona, Killara and Bandiana.",
+  "phone": "0447 844 785",
+  "website": "https://thistleandfern.com.au/",
+  "addressLine": "4/539 Hume Street",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong",
+   "loc-vic-chiltern",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "T&",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:30",
+    "closes": "13:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 88,
+  "isSample": false,
+  "sources": [
+   "https://thistleandfern.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Thistle%20%26%20Fern%20South%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/thistleandfern/",
+  "instagram": "https://www.instagram.com/thistleandfernflowers/",
+  "highlights": [
+   "Seasonal fresh flowers and arrangements",
+   "Shops in South Albury and Junction Square Wodonga",
+   "Deliveries Tuesday to Friday",
+   "Flat rate delivery across Albury Wodonga suburbs",
+   "Gifts and greeting cards"
+  ]
+ },
+ {
+  "id": "biz-jannoel-floral-co",
+  "slug": "jannoel-floral-co",
+  "name": "Jannoel Floral Co.",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-florists"
+  ],
+  "description": "Florist on High Street in Wodonga selling fresh flower bouquets and arrangements for a range of occasions, with delivery across Albury Wodonga and a same day delivery option.",
+  "website": "https://jannoelfloralco.com.au/",
+  "addressLine": "160 High Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "JF",
+  "logoTheme": "e",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 66,
+  "isSample": false,
+  "sources": [
+   "https://jannoelfloralco.com.au/",
+   "https://au.search.yahoo.com/search?p=florist+Wodonga+flower+shop"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jannoel%20Floral%20Co.%20Wodonga%20VIC",
+  "highlights": [
+   "Shopfront on High Street Wodonga",
+   "Fresh flower bouquets and arrangements",
+   "Delivery across Albury Wodonga",
+   "Same day delivery available"
+  ]
+ },
+ {
+  "id": "biz-peards-nursery-albury",
+  "slug": "peards-nursery-albury",
+  "name": "Peards Nursery Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-nurseries"
+  ],
+  "description": "Garden centre at the Peards site on Borella Road, Albury, selling plants, trees, pots and water features alongside giftware and homewares. The nursery opens every day from 8:00am and there is a cafe on site serving coffee and meals.",
+  "phone": "02 6023 7800",
+  "website": "https://peards.com.au/nursery/",
+  "addressLine": "119 Borella Road",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "PN",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://peards.com.au/nursery/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Peards%20Nursery%20Albury%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/peardsalbury",
+  "highlights": [
+   "Plants, trees and seedlings",
+   "Pots and water features",
+   "Giftware and homewares",
+   "Cafe on site",
+   "Open every day from 8am"
+  ]
+ },
+ {
+  "id": "biz-peards-nursery-wodonga",
+  "slug": "peards-nursery-wodonga",
+  "name": "Peards Nursery Wodonga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-nurseries"
+  ],
+  "description": "Nursery on Elgin Boulevard in Wodonga carrying a large range of indoor and outdoor shrubs, trees and seedlings, plus garden giftware and accessories. The business has been locally owned and operating for more than 40 years.",
+  "phone": "02 6056 2661",
+  "website": "https://www.peardswodonga.com.au/",
+  "addressLine": "90 Elgin Boulevard",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "PN",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://www.peardswodonga.com.au/",
+   "https://www.peardswodonga.com.au/contact-us"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Peards%20Nursery%20Wodonga%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/p/Peards-Nursery-Wodonga-100063491649540/",
+  "highlights": [
+   "Indoor and outdoor shrubs, trees and seedlings",
+   "Garden giftware and accessories",
+   "Locally owned for over 40 years",
+   "On Elgin Boulevard, Wodonga"
+  ]
+ },
+ {
+  "id": "biz-our-native-garden-nursery",
+  "slug": "our-native-garden-nursery",
+  "name": "Our Native Garden Nursery",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-nurseries"
+  ],
+  "description": "Nursery supplying native plants local to the Albury Wodonga region for revegetation projects, landscaping and home gardens, propagated from locally sourced seed. It sits next to the Re-use Shop at the Wodonga Transfer Station, with parking at the Re-use Shop, and opens Friday mornings and Saturday middays.",
+  "phone": "0418 579 331",
+  "website": "https://ournativegarden.com.au/",
+  "addressLine": "29 Kane Road",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "ON",
+  "logoTheme": "c",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 5,
+    "opens": "10:00",
+    "closes": "12:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "11:00",
+    "closes": "13:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://ournativegarden.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Our%20Native%20Garden%20Nursery%20Wodonga%20VIC",
+  "highlights": [
+   "Indigenous plants local to the Albury Wodonga region",
+   "Grown from locally sourced seed",
+   "Stock for revegetation, landscaping and home gardens",
+   "Next to the Re-use Shop at Wodonga Transfer Station",
+   "Open Friday and Saturday"
+  ]
+ },
+ {
+  "id": "biz-comet-cycles",
+  "slug": "comet-cycles",
+  "name": "Comet Cycles",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-bike-shops"
+  ],
+  "description": "Bike shop on Dean Street, Albury selling road, mountain, gravel, fitness, kids and e-bikes along with parts and cycling accessories. The workshop handles everything from tune ups to custom builds, aiming to complete repairs on the spot where possible and quoting in advance otherwise.",
+  "phone": "02 6021 6017",
+  "website": "https://www.cometcycles.com.au/",
+  "addressLine": "2/435 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "CC",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "11:00",
+    "closes": "14:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "10:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://www.cometcycles.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Comet%20Cycles%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/CometCyclesAlbury",
+  "instagram": "https://www.instagram.com/cometcyclesalbury",
+  "highlights": [
+   "Road, mountain, gravel, fitness and e-bikes",
+   "Workshop servicing and custom builds",
+   "Bike fitting",
+   "Parts and accessories",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-border-bikes-aw",
+  "slug": "border-bikes-aw",
+  "name": "Border Bikes AW",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-bike-shops"
+  ],
+  "description": "Bike shop on Chapple Street, Wodonga handling sales, servicing and repairs. It is a stockist for major bike brands and offers tune ups, custom part fitting, personal bike fitting, spare parts and help with delivery or pick up of bikes. The business started in 2014 as Cycle Station in the Albury CBD.",
+  "phone": "02 6041 4388",
+  "website": "https://borderbikesaw.com.au/",
+  "addressLine": "1/60 Chapple Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BB",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://borderbikesaw.com.au/",
+   "https://au.search.yahoo.com/search?p=bike+shop+Albury+Wodonga+bicycle+store"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Border%20Bikes%20AW%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/borderbikesaw/",
+  "instagram": "https://www.instagram.com/borderbikesaw",
+  "highlights": [
+   "Sales, servicing and repairs",
+   "Stockist for major bike brands",
+   "Personal bike fitting",
+   "Custom builds and parts fitting",
+   "Trading since 2014"
+  ]
+ },
+ {
+  "id": "biz-adventure-gear-albury",
+  "slug": "adventure-gear-albury",
+  "name": "Adventure Gear Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-outdoor-stores"
+  ],
+  "description": "Outdoor shop on Dean Street, Albury stocking hiking, camping and travel gear. Departments cover apparel, footwear, packs and bags, hydration, nutrition, navigation, optics and lighting, and repair and survival gear. Brands carried include Osprey, Fjällräven, Icebreaker, La Sportiva, Rab, Patagonia, Helinox, Lowa and Exped.",
+  "phone": "02 6021 6200",
+  "website": "https://adventuregearonline.com.au/",
+  "addressLine": "1/435 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AG",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://adventuregearonline.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Adventure%20Gear%20Albury%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/p/Adventure-Gear-Albury-61578929741868/",
+  "instagram": "https://www.instagram.com/adventuregearalbury/",
+  "highlights": [
+   "Hiking, camping and travel gear",
+   "Packs, footwear and technical apparel",
+   "Navigation, optics and lighting",
+   "Brands include Osprey, Fjällräven, Icebreaker and Rab",
+   "On Dean Street in central Albury"
+  ]
+ },
+ {
+  "id": "biz-great-outdoors-albury",
+  "slug": "great-outdoors-albury",
+  "name": "Great Outdoors Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-outdoor-stores"
+  ],
+  "description": "Outdoor and heating store on Wagga Road, Lavington selling barbecues and pizza ovens, wood heaters and gas heaters, outdoor furniture and umbrellas, camping equipment and prospecting gear, plus gas bottle refills. It is a Weber specialist dealer and calls itself the Border’s wood heater specialists.",
+  "phone": "02 6040 6344",
+  "website": "https://greatoutdoorsalbury.com.au/",
+  "addressLine": "415 Wagga Road",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-nsw-walla-walla",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "GO",
+  "logoTheme": "c",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "14:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://greatoutdoorsalbury.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Great%20Outdoors%20Albury%20Lavington%20NSW",
+  "facebook": "https://www.facebook.com/greatoutdoorsalbury",
+  "instagram": "https://www.instagram.com/great_outdoors_albury/",
+  "highlights": [
+   "Weber specialist dealer",
+   "Barbecues and pizza ovens",
+   "Wood heaters and gas heaters",
+   "Camping and prospecting equipment",
+   "Gas bottle refills",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-all-music-direct",
+  "slug": "all-music-direct",
+  "name": "All Music Direct",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-music-shops"
+  ],
+  "description": "Musical instrument shop on Dean Street, Albury selling acoustic, electric, bass and classical guitars, amplifiers, keyboards and pianos, orchestral and folk instruments and drums. It also carries studio and live equipment including microphones, mixers, cables and audio interfaces, and has a guitar technician on staff.",
+  "phone": "02 6041 1765",
+  "website": "https://www.allmusicdirect.com.au/",
+  "addressLine": "608 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AM",
+  "logoTheme": "a",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "10:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "10:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "10:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "10:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "10:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "10:00",
+    "closes": "13:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 90,
+  "isSample": false,
+  "sources": [
+   "https://www.allmusicdirect.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=All%20Music%20Direct%20Albury%20NSW",
+  "highlights": [
+   "Guitars, amplifiers, keyboards and pianos",
+   "Orchestral, folk and drum instruments",
+   "Studio and live sound equipment",
+   "Guitar technician on staff"
+  ]
+ },
+ {
+  "id": "biz-art-parts-fine-arts-supplies",
+  "slug": "art-parts-fine-arts-supplies",
+  "name": "Art Parts Fine Arts Supplies",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-art-supplies"
+  ],
+  "description": "Art supply shop on David Street, Albury stocking acrylic, gouache, oil and watercolour paint, stretched canvas, boards and rolls, mediums, brushes, easels, drawing tools, printmaking supplies, paper and journals. The shop also runs creative workshops and sells gift certificates.",
+  "phone": "0428 173 094",
+  "website": "https://artpartsfinearts.com.au/",
+  "addressLine": "488 David Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AP",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://artpartsfinearts.com.au/",
+   "https://artpartsfinearts.com.au/pages/contact"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Art%20Parts%20Fine%20Arts%20Supplies%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/ArtPartsFineArts/",
+  "instagram": "https://www.instagram.com/artpartsfinearts/",
+  "highlights": [
+   "Paint, canvas, brushes and mediums",
+   "Printmaking supplies",
+   "Paper, journals and drawing tools",
+   "Creative workshops",
+   "Gift certificates"
+  ]
+ },
+ {
+  "id": "biz-gemglow-jewellers",
+  "slug": "gemglow-jewellers",
+  "name": "Gemglow Jewellers",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-jewellers"
+  ],
+  "description": "Family jewellers in the City Walk Arcade off Dean Street, Albury, established in 1961. The business specialises in handmade bespoke jewellery, jewellery repairs and gifts, and carries pearl and silver jewellery.",
+  "phone": "02 6024 5219",
+  "addressLine": "Shop 10, City Walk Arcade, 515-519 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "GJ",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "09:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:30",
+    "closes": "14:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=%22Gemglow%22+jewellers+Albury+address+phone",
+   "https://www.facebook.com/gemglowjewellers/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gemglow%20Jewellers%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/gemglowjewellers/",
+  "highlights": [
+   "Family jewellers established in 1961",
+   "Handmade bespoke jewellery",
+   "Jewellery repairs",
+   "Pearl and silver jewellery",
+   "In City Walk Arcade off Dean Street"
+  ]
+ },
+ {
+  "id": "biz-armadio-style-collective",
+  "slug": "armadio-style-collective",
+  "name": "Armadio Style Collective",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-clothing-stores"
+  ],
+  "description": "Women’s fashion boutique on Olive Street, Albury stocking mid to high end clothing and accessories, including dresses, tops, bottoms, outerwear, jewellery, bags, footwear and scarves. The store also sells online.",
+  "phone": "0493 834 053",
+  "website": "https://armadiostyle.com.au/",
+  "addressLine": "494 Olive Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AS",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://armadiostyle.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Armadio%20Style%20Collective%20Albury%20NSW",
+  "instagram": "https://www.instagram.com/armadio_stylecollective/",
+  "highlights": [
+   "Mid to high end women’s clothing",
+   "Dresses, tops, bottoms and outerwear",
+   "Jewellery, bags, footwear and scarves",
+   "Shop on Olive Street plus online store"
+  ]
+ },
+ {
+  "id": "biz-beechworth-emporium",
+  "slug": "beechworth-emporium",
+  "name": "Beechworth Emporium",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-clothing-stores"
+  ],
+  "description": "Department store on Camp Street in Beechworth selling men’s and ladies clothing, accessories and footwear. It has traded for over 30 years and occupies a building dating back to the 1850s, describing itself as today’s department store with yesteryear’s service.",
+  "phone": "03 5728 2625",
+  "addressLine": "24 Camp Street",
+  "localityId": "loc-vic-beechworth",
+  "postcode": "3747",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-beechworth",
+   "loc-vic-yackandandah",
+   "loc-vic-myrtleford",
+   "loc-vic-chiltern",
+   "loc-vic-barnawartha",
+   "loc-vic-baranduda"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BE",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 62,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=%22Beechworth+Emporium%22+Ford+Street+Beechworth+address",
+   "https://www.facebook.com/beechworthemporium/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth%20Emporium%20Beechworth%20VIC",
+  "facebook": "https://www.facebook.com/beechworthemporium/",
+  "highlights": [
+   "Men’s and ladies clothing, accessories and footwear",
+   "Trading for more than 30 years",
+   "Housed in an 1850s building",
+   "On Camp Street in central Beechworth"
+  ]
+ },
+ {
+  "id": "biz-2-grey-birds",
+  "slug": "2-grey-birds",
+  "name": "2 Grey Birds",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-gift-shops"
+  ],
+  "description": "Family owned gift store on Olive Street, Albury describing itself as a treasure trove of gifts, curated hampers, homewares, paper goods and cards. Ranges cover cards, baby and wedding gifts and homewares, with a focus on independent designers and home grown brands.",
+  "phone": "02 6021 4426",
+  "website": "https://www.2greybirds.com.au/",
+  "addressLine": "558 Olive Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "2G",
+  "logoTheme": "a",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "14:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://www.2greybirds.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=2%20Grey%20Birds%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/2GreyBirds/",
+  "instagram": "https://www.instagram.com/2greybirdsalbury/",
+  "highlights": [
+   "Gifts, cards and paper goods",
+   "Curated hampers",
+   "Homewares",
+   "Baby and wedding gifts",
+   "Stocks independent designers and Australian brands"
+  ]
+ },
+ {
+  "id": "biz-the-yack-store",
+  "slug": "the-yack-store",
+  "name": "The Yack Store",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-gift-shops"
+  ],
+  "description": "Shop on High Street in Yackandandah described as an old fashioned emporium with the latest books and gifts. It stocks books, including classic Little Golden Books, and gifts for a range of occasions.",
+  "phone": "02 6027 1226",
+  "addressLine": "24 High Street",
+  "localityId": "loc-vic-yackandandah",
+  "postcode": "3749",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-yackandandah",
+   "loc-vic-beechworth",
+   "loc-vic-baranduda",
+   "loc-vic-west-wodonga",
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-vic-barnawartha",
+   "loc-nsw-west-albury",
+   "loc-nsw-east-albury",
+   "loc-vic-chiltern",
+   "loc-nsw-albury"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "YS",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 62,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=%22The+Yack+Store%22+Yackandandah+High+Street+books+gifts",
+   "https://www.facebook.com/TheYackStore/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Yack%20Store%20Yackandandah%20VIC",
+  "facebook": "https://www.facebook.com/TheYackStore/",
+  "highlights": [
+   "Books and gifts",
+   "Old fashioned emporium fit-out",
+   "Little Golden Books",
+   "On High Street in central Yackandandah"
+  ]
+ },
+ {
+  "id": "biz-giftwrapt-corowa",
+  "slug": "giftwrapt-corowa",
+  "name": "Giftwrapt Corowa",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-gift-shops"
+  ],
+  "description": "Gift shop on Sanger Street in Corowa selling giftware, hampers and gift vouchers.",
+  "phone": "02 6033 0100",
+  "addressLine": "102 Sanger Street",
+  "localityId": "loc-nsw-corowa",
+  "postcode": "2646",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-corowa",
+   "loc-vic-rutherglen",
+   "loc-nsw-howlong",
+   "loc-vic-chiltern",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "GC",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 62,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=Corowa+NSW+shops+Sanger+Street+gift+shop+retail",
+   "https://www.facebook.com/p/Giftwrapt-Corowa-100032074046944/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Giftwrapt%20Corowa%20Corowa%20NSW",
+  "facebook": "https://www.facebook.com/p/Giftwrapt-Corowa-100032074046944/",
+  "highlights": [
+   "Giftware and merchandise",
+   "Hampers",
+   "Gift vouchers",
+   "On Sanger Street, Corowa"
+  ]
+ },
+ {
+  "id": "biz-who-what-why",
+  "slug": "who-what-why",
+  "name": "Who What Why",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-toy-shops"
+  ],
+  "description": "Toy and gift shop on Dean Street, Albury trading under the line \"an education in toys\". It has been locally owned and operated since 1995 and stocks over 3000 items covering educational toys, games, puzzles, craft supplies and children’s gifts, with brands including Connetix, Schleich, Melissa & Doug and Ravensburger.",
+  "phone": "02 6041 1700",
+  "website": "https://whowhatwhy.com.au/",
+  "addressLine": "485 Dean Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WW",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://whowhatwhy.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Who%20What%20Why%20Albury%20NSW",
+  "facebook": "https://www.facebook.com/whowhatwhyalbury/",
+  "instagram": "https://www.instagram.com/whowhatwhytoys/",
+  "highlights": [
+   "Locally owned and operated since 1995",
+   "Over 3000 toys, games and puzzles",
+   "Educational and craft ranges",
+   "Brands include Connetix, Schleich and Ravensburger",
+   "Gifts from baby age up to teenagers"
+  ]
+ },
+ {
+  "id": "biz-blairs-produce",
+  "slug": "blairs-produce",
+  "name": "Blairs Produce",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-produce-stores"
+  ],
+  "description": "Rural and livestock supplies store on Wagga Road, Lavington. It carries pet food and animal health products, crop protection chemicals and seed, veterinary supplies, produce, garden lines and general merchandise, stocking brands including AgBoss, Blundstone and Bainbridge.",
+  "phone": "02 6025 4600",
+  "website": "https://blairsproduce.com.au/",
+  "addressLine": "341 Wagga Road",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-nsw-walla-walla",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BP",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:30",
+    "closes": "14:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 90,
+  "isSample": false,
+  "sources": [
+   "https://blairsproduce.com.au/pages/retail-store"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blairs%20Produce%20Lavington%20NSW",
+  "highlights": [
+   "Rural and livestock supplies",
+   "Animal health and veterinary products",
+   "Crop protection chemicals and seed",
+   "Pet food",
+   "Workwear and farm hardware brands"
+  ]
+ },
+ {
+  "id": "biz-parkside-produce",
+  "slug": "parkside-produce",
+  "name": "Parkside Produce",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-produce-stores"
+  ],
+  "description": "Family owned produce store on Osburn Street, Wodonga supplying stock feed, equine and poultry products, farm supplies and domestic pet food. The store has a drive through, which it describes as the only one in the region.",
+  "phone": "02 6024 7766",
+  "website": "https://www.parksideproduce.net.au/",
+  "addressLine": "13 Osburn Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "PP",
+  "logoTheme": "b",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=Parkside+Produce+Wodonga+stock+feed+farm+supplies+Osburn",
+   "https://www.parksideproduce.net.au/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parkside%20Produce%20Wodonga%20VIC",
+  "highlights": [
+   "Stock feed and farm supplies",
+   "Equine and poultry products",
+   "Domestic pet food",
+   "Drive through service",
+   "Family owned and locally operated"
+  ]
+ },
+ {
+  "id": "biz-kellys-mitre-10",
+  "slug": "kellys-mitre-10",
+  "name": "Kellys Mitre 10",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-hardware-stores"
+  ],
+  "description": "Locally owned family run hardware store on Elgin Boulevard, Wodonga. It runs a trade centre carrying building materials, is an authorised STIHL dealer for sales and servicing with genuine parts, and stocks rural and animal care products plus workwear and boots. Local delivery and equipment servicing are offered to builders, tradespeople and farmers across the Albury Wodonga region.",
+  "phone": "02 6055 3333",
+  "website": "https://kellysmitre10.com/",
+  "addressLine": "88 Elgin Boulevard",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "KM",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://kellysmitre10.com/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kellys%20Mitre%2010%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/kellyswodonga",
+  "instagram": "https://www.instagram.com/kellysmitre10/",
+  "highlights": [
+   "Locally owned and family run",
+   "Trade centre with building materials",
+   "Authorised STIHL sales and servicing",
+   "Rural and animal care products",
+   "Workwear and boots",
+   "Local delivery"
+  ]
+ },
+ {
+  "id": "biz-rutherglen-home-hardware",
+  "slug": "rutherglen-home-hardware",
+  "name": "Rutherglen Home Hardware",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-hardware-stores"
+  ],
+  "description": "Independent hardware store on Main Street, Rutherglen carrying a range of home improvement and hardware products for home and weekend projects, with in store shopping, delivery and same day service options.",
+  "phone": "02 6032 8513",
+  "addressLine": "79-81 Main Street",
+  "localityId": "loc-vic-rutherglen",
+  "postcode": "3685",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-rutherglen",
+   "loc-nsw-corowa",
+   "loc-vic-chiltern",
+   "loc-nsw-howlong",
+   "loc-vic-barnawartha"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "RH",
+  "logoTheme": "a",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 58,
+  "isSample": false,
+  "sources": [
+   "https://au.search.yahoo.com/search?p=Rutherglen+Hardware+Main+Street+Rutherglen+Victoria"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rutherglen%20Home%20Hardware%20Rutherglen%20VIC",
+  "highlights": [
+   "Independent local hardware store",
+   "Home improvement and hardware range",
+   "Delivery available",
+   "Same day service option",
+   "On Main Street, Rutherglen"
+  ]
+ },
+ {
+  "id": "biz-leather-and-thread",
+  "slug": "leather-and-thread",
+  "name": "Leather & Thread",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-furniture-stores"
+  ],
+  "description": "Furniture store at the corner of Romet Road and McKoy Street in West Wodonga, selling lounges, dining settings, bedroom suites, living room furniture and outdoor ranges. The site also houses Good Night Sleep and La-Z-Boy Albury Wodonga.",
+  "phone": "02 6056 6665",
+  "website": "https://leatherandthread.com.au/",
+  "addressLine": "2 Romet Road",
+  "localityId": "loc-vic-west-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-west-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-north-albury",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona",
+   "loc-vic-barnawartha",
+   "loc-nsw-jindera"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "L&",
+  "logoTheme": "f",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "14:30",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "09:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "14:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://leatherandthread.com.au/",
+   "https://au.search.yahoo.com/search?p=furniture+store+Albury+Wodonga+locally+owned+family"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Leather%20%26%20Thread%20West%20Wodonga%20VIC",
+  "facebook": "https://www.facebook.com/LeatherAndThreadFurniture",
+  "instagram": "https://www.instagram.com/leatherthreadco",
+  "highlights": [
+   "Lounges, dining and bedroom furniture",
+   "Outdoor furniture ranges",
+   "Good Night Sleep bedding on site",
+   "La-Z-Boy Albury Wodonga on site",
+   "Open seven days"
+  ]
+ },
+ {
+  "id": "biz-whatever-where-ever-craft",
+  "slug": "whatever-where-ever-craft",
+  "name": "Whatever Where-ever Craft",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-craft-stores"
+  ],
+  "description": "Patchwork, quilting and sewing shop in Howlong stocking over 2,000 bolts of fabric across brights, florals, reproductions and children’s prints. It also carries patterns, pre-cuts such as jelly rolls, layer cakes and charm squares, kits, books, templates, felt, yarn and notions, and sells online.",
+  "phone": "02 6026 5489",
+  "website": "https://whateverwhereever.com.au/",
+  "addressLine": "26 Fairway Close",
+  "localityId": "loc-nsw-howlong",
+  "postcode": "2643",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-howlong",
+   "loc-vic-barnawartha",
+   "loc-vic-rutherglen",
+   "loc-vic-chiltern",
+   "loc-nsw-jindera",
+   "loc-nsw-corowa",
+   "loc-nsw-west-albury",
+   "loc-vic-west-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-albury",
+   "loc-nsw-north-albury"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WW",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 2,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "10:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "13:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 94,
+  "isSample": false,
+  "sources": [
+   "https://whateverwhereever.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Whatever%20Where-ever%20Craft%20Howlong%20NSW",
+  "facebook": "https://www.facebook.com/Whatever-Where-ever-Crafts-280478668643632",
+  "instagram": "https://www.instagram.com/whatever_whereever_craft/",
+  "highlights": [
+   "Over 2,000 bolts of quilting fabric",
+   "Pre-cuts including jelly rolls and charm squares",
+   "Patterns, kits, books and templates",
+   "Felt, yarn and notions",
+   "Online store as well as shopfront"
   ]
  },
  {
