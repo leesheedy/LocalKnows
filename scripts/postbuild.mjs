@@ -304,7 +304,13 @@ if (fs.existsSync(listingsPath)) {
   );
   for (const l of listings) {
     const target = byPath.get(l.slug);
-    if (target) redirects.push('/business/' + l.slug + '/  ' + target + '  301');
+    if (!target) continue;
+    redirects.push('/business/' + l.slug + '/  ' + target + '  301');
+    // Slugs that were merged into this listing. Two research clusters found the
+    // same business, one record won, and the loser's URL still has to resolve.
+    for (const old of l.mergedFrom || []) {
+      redirects.push('/business/' + old + '/  ' + target + '  301');
+    }
   }
 }
 

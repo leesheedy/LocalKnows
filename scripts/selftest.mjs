@@ -318,6 +318,33 @@ eq('tokenise keeps digits', tokenise('4WD 24 hour').join(' '), '4wd 24 hour');
   eq('an ampersand in the query does not block a match', matchesQuery(apostrophe, 'plumbing & gas'), true);
 }
 
+// ---------------------------------------------------------------- community
+
+if (fs.existsSync(path.join(DATA, 'community.json'))) {
+  const community = read('community.json').entries;
+  const localities = ['geo-nsw.json', 'geo-vic.json'].flatMap((f) => read(f).localities);
+  const slugs = new Set(localities.map((l) => l.slug));
+  const TYPES = new Set(['council', 'community', 'buysell', 'events', 'news', 'emergency', 'tourism']);
+
+  let badSlug = 0;
+  let badUrl = 0;
+  let badType = 0;
+  let noSource = 0;
+  for (const e of community) {
+    for (const c of e.covers) if (!slugs.has(c)) badSlug++;
+    if (!/^https:\/\//.test(e.url)) badUrl++;
+    if (!TYPES.has(e.type)) badType++;
+    // Every entry has to say where the URL was read from, because the whole
+    // point is that none of them were constructed from a name.
+    if (!e.source || !e.checkedAt) noSource++;
+  }
+  eq('every community entry covers real localities', badSlug, 0);
+  eq('every community URL is https', badUrl, 0);
+  eq('every community entry has a known type', badType, 0);
+  eq('every community entry records where it was read from', noSource, 0);
+  eq('community data is not empty', community.length > 0, true);
+}
+
 // ---------------------------------------------------------------- report
 
 console.log('');

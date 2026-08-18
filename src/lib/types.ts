@@ -185,6 +185,12 @@ export interface Listing {
   confidence: 'high' | 'medium';
   /** ISO date the details were last read from a source. */
   lastCheckedAt: string;
+  /**
+   * Slugs of duplicate records merged into this one. Two research clusters
+   * finding the same business is normal; the loser's URL still has to resolve,
+   * so postbuild turns each of these into a 301.
+   */
+  mergedFrom?: string[];
 
   // ---------------------------------------------------------------- external
   googleMapsUrl?: string;

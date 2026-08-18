@@ -423,6 +423,10 @@ for (const row of out) {
     if (!keep[f] && drop[f]) keep[f] = drop[f];
   }
   if (drop.confidence === 'high') keep.confidence = 'high';
+  // The dropped slug is a URL that may already be linked. Keep it so postbuild
+  // can 301 it to the survivor, because nothing on this site is allowed to
+  // simply stop resolving.
+  keep.mergedFrom = [...new Set([...(keep.mergedFrom || []), ...(drop.mergedFrom || []), drop.slug])];
   mergedPairs.push(drop.slug + ' -> ' + keep.slug);
 }
 

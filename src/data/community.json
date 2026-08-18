@@ -1,5 +1,5 @@
 {
-  "_note": "Community and official pages per town. Every URL here was read off the organisation's own website, not guessed from a name pattern. `covers` lists the locality slugs an entry legitimately serves, because one council page serves a whole LGA and duplicating it per suburb would be noise. Add entries by fetching the organisation's own site and taking the URL from its footer. Never construct a Facebook URL from a name.",
+  "_note": "Community and official pages per town. Every URL here was read off the organisation's own website, never constructed from a name pattern: guessing facebook.com/<TownName> risks linking to somebody squatting it. `covers` lists the locality slugs an entry legitimately serves, because one council page serves a whole LGA and duplicating it per suburb would be noise. To extend this, open the organisation's own site and take the URL from its footer.",
   "entries": [
     {
       "name": "AlburyCity",
@@ -16,8 +16,7 @@
         "springdale-heights",
         "glenroy",
         "hamilton-valley",
-        "thurgoona",
-        "table-top"
+        "thurgoona"
       ],
       "source": "https://www.alburycity.nsw.gov.au/",
       "checkedAt": "2026-08-19"
@@ -26,7 +25,7 @@
       "name": "Wodonga Council",
       "url": "https://www.facebook.com/wodongacouncil",
       "type": "council",
-      "note": "The council's own page. Roadworks, waste and green waste, Junction Place events, and the council's consultation notices.",
+      "note": "The council's own page. Roadworks, waste and green waste, Junction Place events, and consultation notices.",
       "covers": ["wodonga", "west-wodonga", "baranduda", "bandiana", "bonegilla"],
       "source": "https://www.wodonga.vic.gov.au/",
       "checkedAt": "2026-08-19"
@@ -35,7 +34,7 @@
       "name": "Wagga Wagga City Council",
       "url": "https://facebook.com/waggacouncil",
       "type": "council",
-      "note": "The council's own page. Roadworks and river level notices, waste collection, the Civic Theatre and library programs, and consultation.",
+      "note": "The council's own page. Roadworks and river level notices, waste collection, Civic Theatre and library programs, and consultation.",
       "covers": [
         "wagga-wagga",
         "kooringal",
@@ -53,6 +52,42 @@
         "uranquinty"
       ],
       "source": "https://wagga.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Greater Hume Council",
+      "url": "https://www.facebook.com/greaterhumecouncil",
+      "type": "council",
+      "note": "Covers the villages north and east of Albury. Road and works notices, waste, pool season dates and grant rounds for the smaller towns.",
+      "covers": ["jindera", "culcairn", "holbrook", "walla-walla", "henty", "burrumbuttock", "gerogery"],
+      "source": "https://www.greaterhume.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Federation Council",
+      "url": "https://www.facebook.com/FederationCouncilNSW/",
+      "type": "council",
+      "note": "The council for the Murray river towns west of Albury. Works notices, waste, and what is on across the shire.",
+      "covers": ["corowa", "howlong", "mulwala"],
+      "source": "https://www.federationcouncil.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Junee Shire Council",
+      "url": "https://www.facebook.com/JuneeShireCouncil",
+      "type": "council",
+      "note": "Works and waste notices, the Junee pool and library, and shire events.",
+      "covers": ["junee"],
+      "source": "https://www.junee.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Junee Community Centre",
+      "url": "https://www.facebook.com/juneecommunitycentre/",
+      "type": "community",
+      "note": "The neighbourhood centre. Programs, groups and the sort of local notice that never reaches a website.",
+      "covers": ["junee"],
+      "source": "https://www.junee.nsw.gov.au/",
       "checkedAt": "2026-08-19"
     },
     {
@@ -80,6 +115,82 @@
         "rutherglen"
       ],
       "source": "https://www.visitalburywodonga.com/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Visit Greater Hume",
+      "url": "https://www.instagram.com/visitgreaterhume/",
+      "type": "tourism",
+      "note": "The shire's tourism account. Markets, shows and the village events that do not make the regional lists.",
+      "covers": ["jindera", "culcairn", "holbrook", "walla-walla", "henty"],
+      "source": "https://www.greaterhume.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "The Border Mail",
+      "url": "https://www.facebook.com/bordermail",
+      "type": "news",
+      "note": "The daily paper for Albury Wodonga and the border. Council decisions, court, sport and the closures nobody else reports.",
+      "covers": [
+        "albury",
+        "east-albury",
+        "north-albury",
+        "south-albury",
+        "west-albury",
+        "lavington",
+        "springdale-heights",
+        "thurgoona",
+        "jindera",
+        "howlong",
+        "corowa",
+        "culcairn",
+        "holbrook",
+        "wodonga",
+        "west-wodonga",
+        "baranduda",
+        "bandiana",
+        "bonegilla",
+        "barnawartha",
+        "chiltern",
+        "rutherglen",
+        "wahgunyah",
+        "yackandandah",
+        "beechworth",
+        "tallangatta"
+      ],
+      "source": "https://www.bordermail.com.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "The Daily Advertiser",
+      "url": "https://www.facebook.com/WaggaDailyAdvertiser",
+      "type": "news",
+      "note": "The Wagga paper, covering the city and the wider Riverina. Council, court, sport and river levels.",
+      "covers": [
+        "wagga-wagga",
+        "kooringal",
+        "turvey-park",
+        "ashmont",
+        "glenfield-park",
+        "mount-austin",
+        "lake-albert",
+        "bourkelands",
+        "estella",
+        "tatton",
+        "lloyd",
+        "forest-hill",
+        "gumly-gumly",
+        "uranquinty",
+        "junee",
+        "coolamon",
+        "lockhart",
+        "the-rock",
+        "temora",
+        "narrandera",
+        "leeton",
+        "gundagai"
+      ],
+      "source": "https://www.dailyadvertiser.com.au/",
       "checkedAt": "2026-08-19"
     }
   ]

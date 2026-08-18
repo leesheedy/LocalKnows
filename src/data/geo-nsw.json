@@ -2160,6 +2160,32 @@
    "population": 2200,
    "blurb": "A newer estate on the south western edge of Wagga beyond Bourkelands, still building out. Rolls up into Wagga Wagga.",
    "rollsUpTo": "loc-nsw-wagga-wagga"
+  },
+  {
+   "id": "loc-nsw-glenroy",
+   "regionId": "reg-nsw-riverina",
+   "state": "NSW",
+   "name": "Glenroy",
+   "slug": "glenroy",
+   "postcode": "2640",
+   "lat": -36.0567,
+   "lng": 146.8983,
+   "tier": 3,
+   "population": 3300,
+   "blurb": "A north western Albury suburb between the Hume Highway and Table Top Road, built out around the Glenroy shops and the primary school. Almost entirely residential, with most services drawn from Lavington and the Albury CBD."
+  },
+  {
+   "id": "loc-nsw-hamilton-valley",
+   "regionId": "reg-nsw-riverina",
+   "state": "NSW",
+   "name": "Hamilton Valley",
+   "slug": "hamilton-valley",
+   "postcode": "2641",
+   "lat": -36.045,
+   "lng": 146.92,
+   "tier": 3,
+   "population": 2400,
+   "blurb": "One of Albury newer residential suburbs, developed north of Lavington along Hamilton Valley Road. New build family housing with the shops and trades a few minutes south in Lavington."
   }
  ]
 }

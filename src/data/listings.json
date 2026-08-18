@@ -115,7 +115,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -211,8 +213,10 @@
    "loc-nsw-south-albury",
    "loc-nsw-west-albury",
    "loc-nsw-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-east-albury",
-   "loc-nsw-north-albury"
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley"
   ],
   "serviceAreaInferred": true,
   "logoText": "WM",
@@ -458,8 +462,10 @@
    "loc-nsw-south-albury",
    "loc-nsw-west-albury",
    "loc-nsw-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-east-albury",
-   "loc-nsw-north-albury"
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley"
   ],
   "serviceAreaInferred": true,
   "logoText": "WA",
@@ -552,7 +558,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -978,7 +986,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -1027,7 +1037,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -1076,7 +1088,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -1442,7 +1456,9 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights"
   ],
@@ -7785,6 +7801,9 @@
    "Function room for up to 100 people",
    "Beer brewed on site, 14 taps",
    "Two beer gardens"
+  ],
+  "mergedFrom": [
+   "the-thirsty-devil-brewery"
   ]
  },
  {
@@ -8809,6 +8828,9 @@
    "Daily insider brewery tours",
    "Brewery and taproom in Beechworth",
    "Pizza served with the beer range"
+  ],
+  "mergedFrom": [
+   "bridge-road-brewers"
   ]
  },
  {
@@ -9303,12 +9325,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "AS",
@@ -9400,12 +9422,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "MA",
@@ -9630,12 +9652,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "ZH",
@@ -9723,12 +9745,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WH",
@@ -9948,12 +9970,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "JF",
@@ -10052,12 +10074,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "PN",
@@ -10146,12 +10168,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "ON",
@@ -10307,12 +10329,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "BB",
@@ -11296,12 +11318,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "PP",
@@ -11349,12 +11371,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "KM",
@@ -11448,13 +11470,13 @@
    "loc-nsw-south-albury",
    "loc-nsw-west-albury",
    "loc-nsw-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-east-albury",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-vic-barnawartha",
-   "loc-nsw-jindera"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "L&",
@@ -11549,10 +11571,10 @@
    "loc-nsw-jindera",
    "loc-nsw-corowa",
    "loc-nsw-west-albury",
+   "loc-nsw-glenroy",
    "loc-vic-west-wodonga",
-   "loc-nsw-south-albury",
-   "loc-nsw-albury",
-   "loc-nsw-north-albury"
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-south-albury"
   ],
   "serviceAreaInferred": true,
   "logoText": "WW",
@@ -11684,12 +11706,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "HL",
@@ -11736,12 +11758,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "MS",
@@ -11901,12 +11923,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "AL",
@@ -12036,12 +12058,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "SW",
@@ -12086,12 +12108,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "MF",
@@ -12295,12 +12317,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "ER",
@@ -12533,12 +12555,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "SB",
@@ -12697,12 +12719,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "CD",
@@ -12781,12 +12803,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WF",
@@ -13059,12 +13081,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "CC",
@@ -13237,12 +13259,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WP",
@@ -13414,13 +13436,13 @@
    "loc-nsw-south-albury",
    "loc-nsw-west-albury",
    "loc-nsw-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-east-albury",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-vic-barnawartha",
-   "loc-nsw-jindera"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "MR",
@@ -13803,12 +13825,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "BB",
@@ -13950,12 +13972,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "TC",
@@ -14004,12 +14026,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "VE",
@@ -18500,12 +18522,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "A&",
@@ -18583,12 +18605,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "ON",
@@ -18667,13 +18689,13 @@
    "loc-nsw-south-albury",
    "loc-nsw-west-albury",
    "loc-nsw-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-east-albury",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-vic-barnawartha",
-   "loc-nsw-jindera"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "GS",
@@ -18748,12 +18770,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "GM",
@@ -19059,12 +19081,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "HS",
@@ -19203,12 +19225,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "TW",
@@ -19295,12 +19317,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "PP",
@@ -19378,12 +19400,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "JB",
@@ -19461,12 +19483,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WE",
@@ -19620,12 +19642,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WS",
@@ -19705,12 +19727,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "OL",
@@ -19798,12 +19820,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WM",
@@ -19892,12 +19914,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "NA",
@@ -20122,12 +20144,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "AN",
@@ -20575,12 +20597,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "MC",
@@ -20636,12 +20658,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "DN",
@@ -20835,12 +20857,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "AB",
@@ -21297,10 +21319,10 @@
    "loc-nsw-jindera",
    "loc-nsw-corowa",
    "loc-nsw-west-albury",
+   "loc-nsw-glenroy",
    "loc-vic-west-wodonga",
-   "loc-nsw-south-albury",
-   "loc-nsw-albury",
-   "loc-nsw-north-albury"
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-south-albury"
   ],
   "serviceAreaInferred": true,
   "logoText": "RT",
@@ -21390,12 +21412,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "BR",
@@ -21451,12 +21473,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "CC",
@@ -21838,12 +21860,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "EL",
@@ -22014,12 +22036,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WG",
@@ -22322,12 +22344,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "EE",
@@ -22379,11 +22401,11 @@
    "loc-nsw-albury",
    "loc-nsw-west-albury",
    "loc-nsw-north-albury",
+   "loc-nsw-glenroy",
    "loc-vic-yackandandah",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
-   "loc-nsw-thurgoona",
-   "loc-nsw-springdale-heights",
-   "loc-vic-tallangatta"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "TE",
@@ -22739,12 +22761,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "PS",
@@ -22977,12 +22999,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "CT",
@@ -23073,12 +23095,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "AW",
@@ -23888,12 +23910,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "NE",
@@ -23944,12 +23966,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "PB",
@@ -24048,12 +24070,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "CH",
@@ -24145,12 +24167,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "RH",
@@ -24199,12 +24221,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WF",
@@ -24380,12 +24402,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "WP",
@@ -24526,12 +24548,12 @@
    "loc-nsw-west-albury",
    "loc-nsw-albury",
    "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
    "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
    "loc-nsw-lavington",
    "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha"
+   "loc-nsw-thurgoona"
   ],
   "serviceAreaInferred": true,
   "logoText": "TS",
@@ -26464,7 +26486,10 @@
    "Delicatessen and food providore",
    "Large artisan cheese range"
   ],
-  "priceBand": "$$"
+  "priceBand": "$$",
+  "mergedFrom": [
+   "knights-deli"
+  ]
  },
  {
   "id": "biz-table-and-graze",
@@ -27301,7 +27326,10 @@
    "43 rooms near the CBD and railway station",
    "Mallee Grill restaurant on site"
   ],
-  "priceBand": "$$"
+  "priceBand": "$$",
+  "mergedFrom": [
+   "the-astor-hotel-and-bar"
+  ]
  },
  {
   "id": "biz-sportsmens-club-hotel",
@@ -28717,7 +28745,10 @@
    "18-hole championship course of 6054 metres from the back markers",
    "On the shores of Lake Albert"
   ],
-  "priceBand": "$$"
+  "priceBand": "$$",
+  "mergedFrom": [
+   "wagga-wagga-country-club-wagga-wagga"
+  ]
  },
  {
   "id": "biz-uranquinty-hotel",
