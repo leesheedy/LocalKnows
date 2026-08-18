@@ -120,6 +120,7 @@ const RESERVED = new Set([
   'tools',
   'categories',
   'sitemap',
+  'verified',
 ]);
 
 for (const c of categories) {

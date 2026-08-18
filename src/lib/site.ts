@@ -79,6 +79,64 @@ export const VERTICALS = [
 ] as const;
 
 /**
+ * The paid tier.
+ *
+ * A deliberate line runs through this. What is for sale is the verification
+ * WORK: pulling the licence, checking it against the state register, re-checking
+ * it every month, and warning the owner before it expires. The badge itself is
+ * not for sale, and a subscription that fails the check does not get one. If a
+ * licence lapses mid subscription the badge goes and the money keeps coming,
+ * which is the wrong way round for us and the right way round for the reader.
+ *
+ * Nothing in this object is an input to ranking. See src/lib/repo.ts rank().
+ *
+ * Prices are a business decision, not a code decision. Set them here and they
+ * change everywhere at once.
+ */
+export const PLANS = {
+  /** Set to true once Stripe is wired up and the page stops saying "opening soon". */
+  live: false,
+  free: {
+    name: 'Free',
+    price: 0,
+    period: 'forever',
+    blurb: 'Everything a listing needs to be found and to be right.',
+    features: [
+      'Claim the listing and correct every detail',
+      'Full week of opening hours, including the closed days',
+      'Logo, description, features and service area',
+      'Reply to reviews',
+      'See how many people looked you up',
+      'Outbound link to your site',
+    ],
+  },
+  verified: {
+    name: 'Verified',
+    /** Indicative. Confirm before the page goes live. */
+    price: 29,
+    priceAnnual: 290,
+    period: 'month',
+    blurb: 'We check your licence against the state register, and keep checking it.',
+    features: [
+      'Licence checked against NSW Fair Trading or the Victorian Building Authority',
+      'Re-checked every month, with the date shown publicly',
+      'Verified badge on your listing and on every results page you appear on',
+      'Warning by email 60 days before your licence expires',
+      'Dofollow link to your website',
+      'Enquiries routed to you by email and SMS',
+      'Up to five locations on one account',
+      'Photo gallery',
+    ],
+    excludes: [
+      'A higher position in any results list',
+      'Removal or demotion of a competitor',
+      'A badge if the licence does not check out',
+      'Anything at all in the structured data that a free listing does not get',
+    ],
+  },
+} as const;
+
+/**
  * Indexation policy, in one place, applied by `src/lib/indexability.ts`.
  * Changing a threshold here changes the sitemap, the robots meta and the
  * internal link graph together. That coupling is deliberate.

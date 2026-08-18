@@ -440,6 +440,7 @@ export const url = {
   advertisingPolicy: () => path('advertising-policy'),
   dataPolicy: () => path('data-and-corrections'),
   sitemapPage: () => path('sitemap'),
+  verified: () => path('verified'),
 };
 
 export { STATES, POLICY };

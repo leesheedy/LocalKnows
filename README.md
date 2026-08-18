@@ -165,6 +165,91 @@ node scripts/og.mjs
 
 ---
 
+## It runs itself
+
+Three things happen without anybody touching them.
+
+**Weekly refresh** (`.github/workflows/refresh.yml`). Regenerates the data driven
+wire articles, expires any Google rating older than 30 days, refreshes them if a
+key is configured, rebuilds, verifies, pings IndexNow, and commits. The commit is
+what triggers the Netlify deploy, so nothing in CI talks to Netlify.
+
+**Generated articles** (`scripts/generate-wire.mjs`). Writes three pieces a month
+from `listings.json`: the directory report, what trades charge to turn up, and who
+publishes weekend hours. No language model is involved, which is exactly why the
+output can publish without review. Every sentence in them is a count. An automated
+pipeline that writes opinions needs a human before it ships; one that writes
+arithmetic does not.
+
+**What is on** re-partitions on every build. `BUILD_DATE` decides which events are
+upcoming and which have passed, so a scheduled rebuild is the whole mechanism. Past
+events keep their page, go `noindex, follow`, and say plainly that they have passed.
+
+Two things are deliberately NOT automated, and both are load bearing:
+
+- **Publishing scraped businesses.** `scripts/scrape.mjs` writes to an inbox and a
+  person promotes them. An unreviewed scraped row is how a directory fills up with
+  businesses that closed in 2019, which is the reason nobody trusts the incumbents.
+- **Curated lists.** They are meant to be opinionated and human. A generated
+  "best of" is a ranking with the judgement taken out, and it earns no links.
+
+```bash
+npm run refresh     # regenerate, rebuild, verify. What CI runs.
+npm run wire        # just the generated articles
+npm run places      # just the Google ratings
+npm run indexnow    # tell Bing and friends what changed
+```
+
+---
+
+## Expanding to a new town
+
+Coverage grows town by town. Wagga, Shepparton, Wangaratta, Corowa and Deniliquin
+are the next corridor.
+
+```bash
+pip install crawl4ai && crawl4ai-setup      # once
+node scripts/scrape.mjs --town=wagga-wagga --state=NSW --seeds=seeds.txt
+node scripts/scrape.mjs --list              # what is waiting
+# fill in categorySlug, description and an address or phone for each candidate
+node scripts/scrape.mjs --promote=wagga-wagga
+node scripts/ingest-businesses.mjs && npm run build && npm run verify
+```
+
+`crwl` is used instead of a plain fetch because most council and tourism listing
+pages are JavaScript rendered and a raw GET returns an empty shell.
+
+Seed URLs, in order of how much they are worth: the council business directory, the
+regional tourism operator list, the chamber of commerce member list, then individual
+business sites. Do not seed it with a competitor directory. Their terms prohibit it,
+their data is stale, and copying an index is not a product.
+
+A scraped candidate is not a listing. It has a name and a URL and nothing that has
+been checked. The promote step exists so somebody looks at it first.
+
+---
+
+## The paid tier
+
+`/verified/` sells the licence **checking work**, not the badge, and the distinction
+is enforced rather than promised:
+
+- A subscription that fails the register check does not get a badge.
+- If a licence lapses mid subscription the badge comes off at the next monthly check
+  and the billing keeps running. That is deliberately the wrong way round for us.
+- Nothing about a plan is an input to `rank()` in `src/lib/repo.ts`. There is no
+  field a payment writes to and no branch in the sort that reads one.
+
+Prices live in `PLANS` in `src/lib/site.ts`. `PLANS.live` is `false` until billing is
+connected, and while it is false the page says so on its face instead of taking money
+for something that does not exist.
+
+Every directory in the country sells a trust badge, which is why nobody believes one.
+The moment a badge is bought rather than passed it stops carrying information, and a
+reader who works that out discounts every badge on the site including the honest ones.
+
+---
+
 ## Adding a locality, a category or a business
 
 - **Locality**: add it to `src/data/geo-nsw.json` or `geo-vic.json`. It needs a
