@@ -1481,3 +1481,309 @@
 .trust article:nth-child(4) svg {
   color: var(--wattle-ink);
 }
+
+/* ---------------------------------------------------------------- tools */
+/*
+ * Tool widget styling lives here rather than scoped inside ToolWidget.astro.
+ * Astro scopes a component's styles by stamping an attribute on the elements
+ * it renders at build time, and the rows these widgets build at runtime never
+ * get that attribute, so a scoped rule silently does not apply to them.
+ */
+  .tw {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 22px 24px;
+    margin: 26px 0;
+  }
+  .tw-intro {
+    margin: 0 0 20px;
+    font-size: 15px;
+    color: var(--ink-60);
+    max-width: 62ch;
+  }
+  .tw-field {
+    margin: 0 0 18px;
+    border: 0;
+    padding: 0;
+  }
+  .tw-field:last-child {
+    margin-bottom: 0;
+  }
+  .tw-field > label,
+  .tw-field > legend {
+    display: block;
+    color: var(--ink-40);
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .tw input[type='text'],
+  .tw input[type='number'],
+  .tw select {
+    font: inherit;
+    font-size: 15.5px;
+    padding: 12px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r);
+    background: var(--paper-2);
+    color: var(--ink);
+    outline: none;
+    width: 100%;
+    min-height: 46px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tw input:focus,
+  .tw select:focus {
+    border-color: var(--river);
+    background: var(--white);
+  }
+  .tw select {
+    max-width: 220px;
+    cursor: pointer;
+  }
+  .tw-inline {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tw-inline input {
+    flex: 1;
+    min-width: 200px;
+  }
+  .tw-inline .btn {
+    min-height: 46px;
+  }
+  .tw-radios {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tw-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r);
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    background: var(--paper-2);
+    min-height: 46px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tw-radio:hover {
+    border-color: var(--river);
+  }
+  .tw-radio input {
+    accent-color: var(--river);
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .tw-radio:has(input:checked) {
+    border-color: var(--river);
+    background: var(--river-10);
+  }
+  .tw-hint {
+    margin: 10px 0 0;
+    font-size: 13.5px;
+    color: var(--ink-60);
+    max-width: 66ch;
+  }
+  .tw-hint.warn {
+    color: var(--wattle-ink);
+  }
+  .tw-result {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .tw-result h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .tw-check {
+    margin: 0 0 4px;
+    padding-left: 20px;
+    font-size: 14.5px;
+    color: var(--ink-80);
+    max-width: 66ch;
+  }
+  .tw-check li {
+    margin-bottom: 8px;
+  }
+  .tw-note {
+    margin: 14px 0 0;
+    font-size: 13.5px;
+    color: var(--ink-60);
+    max-width: 70ch;
+  }
+  .tw-note a {
+    color: var(--river);
+    border-bottom: 1px solid var(--wattle);
+  }
+  .tw-verdict {
+    margin: 0 0 8px;
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .tw-verdict.good {
+    color: var(--river);
+  }
+  .tw-verdict.bad {
+    color: var(--clay);
+  }
+  .tw-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+  }
+  .tw-table th,
+  .tw-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .tw-table thead th {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-40);
+    font-weight: 500;
+    background: var(--paper-2);
+  }
+  .tw-table tbody tr:hover {
+    background: var(--paper-2);
+  }
+  .tw-sub {
+    display: block;
+    font-size: 12.5px;
+    color: var(--ink-40);
+    margin-top: 3px;
+    max-width: 52ch;
+  }
+  .tw-yn {
+    width: 64px;
+  }
+  .tw-yn .yes {
+    color: var(--river);
+    font-weight: 600;
+  }
+  .tw-yn .no {
+    color: var(--ink-40);
+  }
+  .row-nsw td:first-child {
+    box-shadow: inset 3px 0 0 var(--river);
+  }
+  .row-vic td:first-child {
+    box-shadow: inset 3px 0 0 var(--wattle);
+  }
+  .tw-legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--ink-60);
+    margin: 0 0 14px;
+  }
+  .sw {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .sw-both {
+    background: var(--line-strong);
+  }
+  .sw-nsw {
+    background: var(--river);
+  }
+  .sw-vic {
+    background: var(--wattle);
+  }
+  .tw-quote-table input {
+    min-width: 90px;
+    padding: 9px 10px;
+    min-height: 40px;
+  }
+  .tw-quote-table th[scope='row'] {
+    white-space: nowrap;
+    font-weight: 500;
+    color: var(--ink-60);
+    font-size: 14px;
+  }
+  .tw-table tfoot td,
+  .tw-table tfoot th {
+    border-top: 2px solid var(--line-strong);
+    border-bottom: 0;
+    padding-top: 14px;
+  }
+  .tw-total td,
+  .tw-total th {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+  }
+  .tw-verdictbox {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .tw-state {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--river);
+    color: var(--paper);
+    padding: 6px 10px;
+    border-radius: 3px;
+    flex: none;
+  }
+  .tw-state.vic {
+    background: var(--wattle);
+    color: var(--ink);
+  }
+  .tw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .tw-grid > div {
+    background: var(--white);
+    padding: 14px 16px;
+  }
+  .tw-grid span {
+    display: block;
+    color: var(--ink-40);
+    margin-bottom: 5px;
+    font-size: 10.5px;
+  }
+  .tw-grid b {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  @media (max-width: 560px) {
+    .tw {
+      padding: 18px 16px;
+    }
+  }
+
+/* The date column is a fixed short label, so stop it wrapping mid date. */
+.tw-table td.mono {
+  white-space: nowrap;
+  width: 1%;
+  color: var(--ink-60);
+}

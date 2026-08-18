@@ -12,34 +12,27 @@
  * checksum, which is a real test, and is explicit that a valid checksum is not
  * the same as an active ABN.
  */
-import { liveLocalities, listingsInLocality, url, STATES } from '~/lib/repo';
+import { localities } from '~/lib/repo';
 
 interface Props {
   slug: string;
 }
 const { slug } = Astro.props;
 
-// Compact locality payload for the border tool. Name, state, coords, postcode.
-const places = liveLocalities()
-  .concat(
-    // Include every mapped locality, not just the ones with listings: the
-    // question "which state am I in" is worth answering for a town we do not
-    // cover yet.
-    [],
-  )
-  .map((l) => ({ n: l.name, s: l.state, la: l.lat, lo: l.lng, p: l.postcode, u: url.locality(l) }));
-
-const allPlaces = (await import('~/lib/repo')).localities.map((l) => ({
-  n: l.name,
-  s: l.state,
-  la: l.lat,
-  lo: l.lng,
-  p: l.postcode,
-  live: liveLocalities().some((x) => x.id === l.id),
-  u: url.locality(l),
-}));
-
-const placePayload = JSON.stringify(allPlaces).replace(/</g, '\\u003c');
+/**
+ * Every mapped locality, not only the ones with listings. "Which state is this
+ * town in and whose licence applies" is worth answering for a place we do not
+ * cover yet, and that is the question the border tool exists for.
+ */
+const placePayload = JSON.stringify(
+  localities.map((l) => ({
+    n: l.name,
+    s: l.state,
+    la: l.lat,
+    lo: l.lng,
+    p: l.postcode,
+  })),
+).replace(/</g, '\\u003c');
 ---
 
 {/* ---------------------------------------------------------------- licence */}
@@ -187,8 +180,8 @@ const placePayload = JSON.stringify(allPlaces).replace(/</g, '\\u003c');
           yearSel.appendChild(o);
         }
 
-        var D = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-        var M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        var D = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        var M = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
         function fmt(d) { return D[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + M[d.getUTCMonth()]; }
         function utc(y, m, d) { return new Date(Date.UTC(y, m, d)); }
         function nthWeekday(y, m, weekday, n) {
@@ -241,9 +234,16 @@ const placePayload = JSON.stringify(allPlaces).replace(/</g, '\\u003c');
           push(nthWeekday(y, 10, 2, 1), 'Melbourne Cup Day', false, true, 'Victoria only, and not observed in every Victorian region. An ordinary working day in New South Wales.');
           push(utc(y, 11, 25), 'Christmas Day', true, true, '');
           push(utc(y, 11, 26), 'Boxing Day', true, true, '');
-          var xmas = utc(y, 11, 25).getUTCDay();
-          if (xmas === 6 || xmas === 0 || xmas === 5) {
-            push(utc(y, 11, 27), 'Additional Christmas holiday', true, true, 'Declared when Christmas Day or Boxing Day falls on a weekend. Confirm the exact day on the official list.');
+          // The Christmas substitutions are two separate rules, not one. When
+          // Christmas Day lands on a weekend an extra day is declared on 27
+          // December; when Boxing Day lands on a weekend it is 28 December. In a
+          // year where Christmas falls on a Saturday, both fire.
+          var weekend = function (d) { var w = d.getUTCDay(); return w === 0 || w === 6; };
+          if (weekend(utc(y, 11, 25))) {
+            push(utc(y, 11, 27), 'Additional day for Christmas Day', true, true, 'Declared because 25 December falls on a weekend.');
+          }
+          if (weekend(utc(y, 11, 26))) {
+            push(utc(y, 11, 28), 'Additional day for Boxing Day', true, true, 'Declared because 26 December falls on a weekend.');
           }
 
           rows.sort(function (a, b) {
@@ -648,296 +648,3 @@ const placePayload = JSON.stringify(allPlaces).replace(/</g, '\\u003c');
   </>
 )}
 
-<style>
-  .tw {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: var(--r);
-    padding: 22px 24px;
-    margin: 26px 0;
-  }
-  .tw-intro {
-    margin: 0 0 20px;
-    font-size: 15px;
-    color: var(--ink-60);
-    max-width: 62ch;
-  }
-  .tw-field {
-    margin: 0 0 18px;
-    border: 0;
-    padding: 0;
-  }
-  .tw-field:last-child {
-    margin-bottom: 0;
-  }
-  .tw-field > label,
-  .tw-field > legend {
-    display: block;
-    color: var(--ink-40);
-    margin-bottom: 8px;
-    padding: 0;
-  }
-  .tw input[type='text'],
-  .tw input[type='number'],
-  .tw select {
-    font: inherit;
-    font-size: 15.5px;
-    padding: 12px 14px;
-    border: 1px solid var(--line-strong);
-    border-radius: var(--r);
-    background: var(--paper-2);
-    color: var(--ink);
-    outline: none;
-    width: 100%;
-    min-height: 46px;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .tw input:focus,
-  .tw select:focus {
-    border-color: var(--river);
-    background: var(--white);
-  }
-  .tw select {
-    max-width: 220px;
-    cursor: pointer;
-  }
-  .tw-inline {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .tw-inline input {
-    flex: 1;
-    min-width: 200px;
-  }
-  .tw-inline .btn {
-    min-height: 46px;
-  }
-  .tw-radios {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .tw-radio {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    border: 1px solid var(--line-strong);
-    border-radius: var(--r);
-    padding: 11px 16px;
-    cursor: pointer;
-    font-size: 15px;
-    background: var(--paper-2);
-    min-height: 46px;
-    transition: border-color 0.15s, background 0.15s;
-  }
-  .tw-radio:hover {
-    border-color: var(--river);
-  }
-  .tw-radio input {
-    accent-color: var(--river);
-    width: 17px;
-    height: 17px;
-    cursor: pointer;
-  }
-  .tw-radio:has(input:checked) {
-    border-color: var(--river);
-    background: var(--river-10);
-  }
-  .tw-hint {
-    margin: 10px 0 0;
-    font-size: 13.5px;
-    color: var(--ink-60);
-    max-width: 66ch;
-  }
-  .tw-hint.warn {
-    color: var(--wattle-ink);
-  }
-  .tw-result {
-    margin-top: 22px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
-  }
-  .tw-result h3 {
-    font-size: 16px;
-    margin-bottom: 12px;
-  }
-  .tw-check {
-    margin: 0 0 4px;
-    padding-left: 20px;
-    font-size: 14.5px;
-    color: var(--ink-80);
-    max-width: 66ch;
-  }
-  .tw-check li {
-    margin-bottom: 8px;
-  }
-  .tw-note {
-    margin: 14px 0 0;
-    font-size: 13.5px;
-    color: var(--ink-60);
-    max-width: 70ch;
-  }
-  .tw-note a {
-    color: var(--river);
-    border-bottom: 1px solid var(--wattle);
-  }
-  .tw-verdict {
-    margin: 0 0 8px;
-    font-family: var(--font-display);
-    font-size: 21px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-  }
-  .tw-verdict.good {
-    color: var(--river);
-  }
-  .tw-verdict.bad {
-    color: var(--clay);
-  }
-  .tw-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14.5px;
-  }
-  .tw-table th,
-  .tw-table td {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--line);
-    vertical-align: top;
-  }
-  .tw-table thead th {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-40);
-    font-weight: 500;
-    background: var(--paper-2);
-  }
-  .tw-table tbody tr:hover {
-    background: var(--paper-2);
-  }
-  .tw-sub {
-    display: block;
-    font-size: 12.5px;
-    color: var(--ink-40);
-    margin-top: 3px;
-    max-width: 52ch;
-  }
-  .tw-yn {
-    width: 64px;
-  }
-  .tw-yn .yes {
-    color: var(--river);
-    font-weight: 600;
-  }
-  .tw-yn .no {
-    color: var(--ink-40);
-  }
-  .row-nsw td:first-child {
-    box-shadow: inset 3px 0 0 var(--river);
-  }
-  .row-vic td:first-child {
-    box-shadow: inset 3px 0 0 var(--wattle);
-  }
-  .tw-legend {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-    font-size: 13px;
-    color: var(--ink-60);
-    margin: 0 0 14px;
-  }
-  .sw {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    margin-right: 6px;
-    vertical-align: middle;
-  }
-  .sw-both {
-    background: var(--line-strong);
-  }
-  .sw-nsw {
-    background: var(--river);
-  }
-  .sw-vic {
-    background: var(--wattle);
-  }
-  .tw-quote-table input {
-    min-width: 90px;
-    padding: 9px 10px;
-    min-height: 40px;
-  }
-  .tw-quote-table th[scope='row'] {
-    white-space: nowrap;
-    font-weight: 500;
-    color: var(--ink-60);
-    font-size: 14px;
-  }
-  .tw-table tfoot td,
-  .tw-table tfoot th {
-    border-top: 2px solid var(--line-strong);
-    border-bottom: 0;
-    padding-top: 14px;
-  }
-  .tw-total td,
-  .tw-total th {
-    font-family: var(--font-display);
-    font-weight: 800;
-    font-size: 19px;
-    letter-spacing: -0.02em;
-  }
-  .tw-verdictbox {
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    font-size: 16px;
-    margin-bottom: 18px;
-  }
-  .tw-state {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    background: var(--river);
-    color: var(--paper);
-    padding: 6px 10px;
-    border-radius: 3px;
-    flex: none;
-  }
-  .tw-state.vic {
-    background: var(--wattle);
-    color: var(--ink);
-  }
-  .tw-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-    border-radius: var(--r);
-    overflow: hidden;
-  }
-  .tw-grid > div {
-    background: var(--white);
-    padding: 14px 16px;
-  }
-  .tw-grid span {
-    display: block;
-    color: var(--ink-40);
-    margin-bottom: 5px;
-    font-size: 10.5px;
-  }
-  .tw-grid b {
-    font-size: 15px;
-    font-weight: 600;
-  }
-  @media (max-width: 560px) {
-    .tw {
-      padding: 18px 16px;
-    }
-  }
-</style>
