@@ -90,7 +90,7 @@ const description =
 
 const faqs = [
   {
-    q: 'What makes LocalKnows different from other directories?',
+    q: 'What makes LocalsKnow different from other directories?',
     a: 'Three things. Service area is stored separately from the registered address, so a business that works on both sides of the Murray appears on both sides of it. Trade licences are checked against the state registers and the date of the check is shown. And every fact on a listing carries the source it was read from.',
   },
   {
@@ -274,8 +274,12 @@ const jsonLd = graph([
       <div class="wrap">
         <div class="sec-head row">
           <div>
-            <h2>Free tools</h2>
-            <p>No signup, no gate. They exist because a tool earns links for years and links are what make the rest of the site rank.</p>
+            <h2>Free tools that actually compute</h2>
+            <p>
+              No signup, no gate, and nothing sent anywhere. Every one of these works out
+              its answer in your browser from published rules, so they run with the network
+              down and there is nothing to log.
+            </p>
           </div>
           <a class="btn btn-ghost btn-sm" href={url.tools()}>All tools</a>
         </div>
@@ -285,7 +289,7 @@ const jsonLd = graph([
               <span class="flag mono">Free</span>
               <h3>{t.title}</h3>
               <p>{t.standfirst}</p>
-              <span class="go">Open →</span>
+              <span class="go">Open the tool</span>
             </a>
           ))}
         </div>
@@ -347,6 +351,68 @@ const jsonLd = graph([
   <div class="wrap">
     <Faq faqs={faqs} heading="How this works" />
   </div>
+
+  <section class="sec" id="how-we-check">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What we check, and what we will not claim</h2>
+        <p>
+          Four rules. Each one is enforced in the code that builds this site rather than
+          stated in a policy and hoped for.
+        </p>
+      </div>
+      <div class="trust">
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 3 4 6v6c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/>
+          </svg>
+          <h3>A licence is checked, or it is not called checked</h3>
+          <p>
+            A number read off a business's own website is shown as exactly that. The
+            verified badge only appears once we have put it through the state register,
+            and the date of that check sits next to it.
+          </p>
+          <a href={url.verified()}>How verification works</a>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M11.5 3.5 3 12l8.5 8.5"/><path d="M12.5 3.5 21 12l-8.5 8.5"/><path d="M8 12h8"/>
+          </svg>
+          <h3>Every fact carries its source</h3>
+          <p>
+            Each listing shows the URLs its details were read from and the date they were
+            last read. {n(listings.length)} listings, {n(listings.filter((l) => l.confidence === 'high').length)} of them
+            read from the business itself rather than a third party.
+          </p>
+          <a href={url.dataPolicy()}>Where the data comes from</a>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M12 17.8 5.8 21l1.2-6.9L2 9.2l7-1L12 2l3 6.2 7 1-5 4.9 1.2 6.9L12 17.8Z"/>
+          </svg>
+          <h3>No rating we cannot trace</h3>
+          <p>
+            A star rating only ever comes from the Google Places API and carries the date
+            it was pulled. Where we do not have one, the page links to the business's
+            Google profile instead of showing a number nobody can check.
+          </p>
+          <a href={url.editorialPolicy()}>Editorial policy</a>
+        </article>
+        <article>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>
+          </svg>
+          <h3>Position is not for sale</h3>
+          <p>
+            Ordering comes from how complete a profile is, then rating, then name. No
+            field a payment writes to reaches the sort. Promoted placement, where it
+            exists, is boxed, labelled and kept out of the structured data.
+          </p>
+          <a href={url.advertisingPolicy()}>Advertising policy</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section class="claim-band">
     <div class="wrap claim-in">

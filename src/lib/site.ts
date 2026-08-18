@@ -5,8 +5,8 @@ import type { StateCode } from './types';
  * Nothing below should ever be re-typed inside a page.
  */
 export const SITE = {
-  name: 'LocalKnows',
-  legalName: 'LocalKnows',
+  name: 'LocalsKnow',
+  legalName: 'LocalsKnow',
   tagline: 'The border directory for New South Wales and Victoria',
   url: (import.meta.env?.SITE_URL as string) || 'https://localsknow.com.au',
   locale: 'en-AU',

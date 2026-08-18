@@ -32,7 +32,7 @@ import {
 } from '~/lib/seo';
 
 const canonicalPath = url.about();
-const h1 = 'About LocalKnows';
+const h1 = 'About LocalsKnow';
 
 // Every locality in the gazetteer, not just the ones with pages. The number
 // people want here is how much of NSW and VIC is mapped.
@@ -41,7 +41,7 @@ const verified = listings.filter((l) => l.status === 'verified').length;
 const licenceChecked = listings.filter((l) => l.licences.some((x) => x.verificationOk)).length;
 
 const description =
-  'LocalKnows is an independent NSW and Victorian directory built by Automatrix Digital on the Albury Wodonga border. Free listings, checked licences, sourced facts.';
+  'LocalsKnow is an independent NSW and Victorian directory built by Automatrix Digital on the Albury Wodonga border. Free listings, checked licences, sourced facts.';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -50,7 +50,7 @@ const crumbs: Crumb[] = [
 
 const faqs = [
   {
-    q: 'Who owns and runs LocalKnows?',
+    q: 'Who owns and runs LocalsKnow?',
     a: 'Automatrix Digital, a small web and software shop working out of the Albury Wodonga area. Automatrix builds the site, pays the hosting bill and answers the email at ' + SITE.email + '. There is no investor, no media group and no parent directory network above it.',
   },
   {
@@ -110,7 +110,7 @@ const jsonLd = graph([
 
     <div class="prose">
       <p>
-        LocalKnows lists businesses, clubs and places across {STATES.NSW.name} and
+        LocalsKnow lists businesses, clubs and places across {STATES.NSW.name} and
         {STATES.VIC.name}. Trades, cafes, bakeries, pubs, motels, wineries, sporting clubs,
         hobby groups. Every listing shows the sources its details came from and the date
         those sources were last read. Nothing on this site is ranked by who paid.
@@ -127,7 +127,7 @@ const jsonLd = graph([
 
       <h2>Who runs it</h2>
       <p>
-        LocalKnows is built and operated by
+        LocalsKnow is built and operated by
         <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>, a small web
         and software shop. The same people write the code, load the data, check the licences
         and answer the email. There is no investor, no parent directory group and no

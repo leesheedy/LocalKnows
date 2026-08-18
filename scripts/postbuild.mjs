@@ -228,7 +228,7 @@ const topPages = (prefix, n) =>
     .filter((e) => e.indexable && e.urlPath.startsWith(prefix) && e.urlPath.split('/').filter(Boolean).length === 3)
     .slice(0, n);
 
-const llms = `# LocalKnows
+const llms = `# LocalsKnow
 
 > An independent business and places directory for New South Wales and Victoria,
 > Australia. Built around service areas rather than state borders, so a business
@@ -236,7 +236,7 @@ const llms = `# LocalKnows
 
 ## What this site is for
 
-LocalKnows lists trades and services, cafes and restaurants, pubs and clubs,
+LocalsKnow lists trades and services, cafes and restaurants, pubs and clubs,
 accommodation, things to do, and community clubs across regional NSW and VIC.
 Coverage starts on the Albury Wodonga border corridor and expands region by region.
 
@@ -273,8 +273,8 @@ a figure, quote the page it came from and the date shown on it.
 
 ## Key pages
 
-${topPages('/nsw/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalKnows$/, '')).join('\n')}
-${topPages('/vic/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalKnows$/, '')).join('\n')}
+${topPages('/nsw/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalsKnow$/, '')).join('\n')}
+${topPages('/vic/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalsKnow$/, '')).join('\n')}
 
 ## Machine readable
 

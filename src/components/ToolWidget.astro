@@ -1,0 +1,943 @@
+---
+/**
+ * The interactive half of a tool page.
+ *
+ * Everything here computes in the browser from rules or from data already on
+ * the page. Nothing calls out to anything, which is why the tools work with the
+ * network down and why there is no key to leak.
+ *
+ * The line that matters: a tool either computes a real answer or it says it
+ * cannot. The public holiday calculator applies the published rules and then
+ * tells you which day it could not derive. The ABN checker validates the
+ * checksum, which is a real test, and is explicit that a valid checksum is not
+ * the same as an active ABN.
+ */
+import { liveLocalities, listingsInLocality, url, STATES } from '~/lib/repo';
+
+interface Props {
+  slug: string;
+}
+const { slug } = Astro.props;
+
+// Compact locality payload for the border tool. Name, state, coords, postcode.
+const places = liveLocalities()
+  .concat(
+    // Include every mapped locality, not just the ones with listings: the
+    // question "which state am I in" is worth answering for a town we do not
+    // cover yet.
+    [],
+  )
+  .map((l) => ({ n: l.name, s: l.state, la: l.lat, lo: l.lng, p: l.postcode, u: url.locality(l) }));
+
+const allPlaces = (await import('~/lib/repo')).localities.map((l) => ({
+  n: l.name,
+  s: l.state,
+  la: l.lat,
+  lo: l.lng,
+  p: l.postcode,
+  live: liveLocalities().some((x) => x.id === l.id),
+  u: url.locality(l),
+}));
+
+const placePayload = JSON.stringify(allPlaces).replace(/</g, '\\u003c');
+---
+
+{/* ---------------------------------------------------------------- licence */}
+{slug === 'licence-check' && (
+  <>
+    <div class="tw" id="tw-licence">
+      <fieldset class="tw-field">
+        <legend class="mono">Where was the licence issued</legend>
+        <div class="tw-radios">
+          <label class="tw-radio">
+            <input type="radio" name="lic-state" value="NSW" checked />
+            <span>New South Wales</span>
+          </label>
+          <label class="tw-radio">
+            <input type="radio" name="lic-state" value="VIC" />
+            <span>Victoria</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="tw-field">
+        <label class="mono" for="lic-num">Licence number, as printed on the card</label>
+        <div class="tw-inline">
+          <input id="lic-num" type="text" inputmode="text" autocomplete="off" placeholder="e.g. 123456C" />
+          <button class="btn btn-river" type="button" id="lic-go">Open the register</button>
+        </div>
+        <p class="tw-hint" id="lic-hint" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="tw-result" id="lic-result" hidden>
+        <h3 id="lic-result-h">Check these four things when the register loads</h3>
+        <ol class="tw-check">
+          <li><strong>The name.</strong> It must match the business you are dealing with, or they must be able to explain the relationship.</li>
+          <li><strong>The class.</strong> A licence is for specific work. A general builder is not licensed to do the plumbing.</li>
+          <li><strong>The status and expiry.</strong> Current, expired, suspended and cancelled are four different things.</li>
+          <li><strong>Conditions.</strong> Some licences carry a value limit or a supervision condition. Those are on the register and rarely on the quote.</li>
+        </ol>
+        <p class="tw-note" id="lic-copy-row">
+          <button class="btn btn-ghost btn-sm" type="button" id="lic-copy">Copy the number</button>
+          <span id="lic-copied" class="mono" style="margin-left:10px;color:var(--river)" hidden>Copied</span>
+        </p>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-licence');
+        if (!root) return;
+        var num = document.getElementById('lic-num');
+        var hint = document.getElementById('lic-hint');
+        var result = document.getElementById('lic-result');
+        var REG = {
+          NSW: { url: 'https://verify.licence.nsw.gov.au/', name: 'NSW Fair Trading licence check' },
+          VIC: { url: 'https://www.vba.vic.gov.au/consumers/search-practitioner', name: 'Victorian Building Authority practitioner search' },
+        };
+        function state() {
+          var el = root.querySelector('input[name="lic-state"]:checked');
+          return el ? el.value : 'NSW';
+        }
+        function validate() {
+          var v = num.value.replace(/\s+/g, '');
+          if (!v) { hint.textContent = ''; hint.className = 'tw-hint'; return null; }
+          // 11 digits is an ABN, and handing one over instead of a licence
+          // number is the single most common mix up.
+          if (/^\d{11}$/.test(v)) {
+            hint.textContent = 'That is eleven digits, which is an ABN rather than a licence number. An ABN says a business exists for tax. A licence says it is permitted to do the work. Check both, separately.';
+            hint.className = 'tw-hint warn';
+            return v;
+          }
+          if (v.length < 4) {
+            hint.textContent = 'That looks short for a licence number. Check the card again.';
+            hint.className = 'tw-hint warn';
+            return v;
+          }
+          hint.textContent = 'Opens the ' + REG[state()].name + ' in a new tab. Paste the number into its search box.';
+          hint.className = 'tw-hint';
+          return v;
+        }
+        num.addEventListener('blur', validate);
+        num.addEventListener('input', function () { if (hint.textContent) validate(); });
+        root.querySelectorAll('input[name="lic-state"]').forEach(function (r) {
+          r.addEventListener('change', function () { if (num.value) validate(); });
+        });
+        document.getElementById('lic-go').addEventListener('click', function () {
+          var v = validate();
+          if (!v) { num.focus(); hint.textContent = 'Put the licence number in first.'; hint.className = 'tw-hint warn'; return; }
+          document.getElementById('lic-result-h').textContent =
+            'Check these four things on the ' + (state() === 'NSW' ? 'Fair Trading' : 'VBA') + ' register';
+          result.hidden = false;
+          window.open(REG[state()].url, '_blank', 'noopener');
+        });
+        document.getElementById('lic-copy').addEventListener('click', function () {
+          navigator.clipboard.writeText(num.value.replace(/\s+/g, '')).then(function () {
+            var c = document.getElementById('lic-copied');
+            c.hidden = false;
+            setTimeout(function () { c.hidden = true; }, 2000);
+          });
+        });
+      })();
+    </script>
+  </>
+)}
+
+{/* ---------------------------------------------------------------- holidays */}
+{slug === 'public-holidays' && (
+  <>
+    <div class="tw" id="tw-hol">
+      <div class="tw-field">
+        <label class="mono" for="hol-year">Year</label>
+        <select id="hol-year"></select>
+      </div>
+      <div class="tw-legend">
+        <span><i class="sw sw-both" aria-hidden="true"></i> Both states</span>
+        <span><i class="sw sw-nsw" aria-hidden="true"></i> New South Wales only</span>
+        <span><i class="sw sw-vic" aria-hidden="true"></i> Victoria only</span>
+      </div>
+      <div class="table-scroll">
+        <table class="tw-table" id="hol-table">
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Holiday</th>
+              <th scope="col">NSW</th>
+              <th scope="col">VIC</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <p class="tw-note" id="hol-summary" aria-live="polite"></p>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-hol');
+        if (!root) return;
+        var yearSel = document.getElementById('hol-year');
+        var tbody = document.querySelector('#hol-table tbody');
+        var summary = document.getElementById('hol-summary');
+        var base = new Date().getUTCFullYear();
+        for (var y = base; y <= base + 2; y++) {
+          var o = document.createElement('option');
+          o.value = String(y);
+          o.textContent = String(y);
+          yearSel.appendChild(o);
+        }
+
+        var D = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        var M = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+        function fmt(d) { return D[d.getUTCDay()] + ' ' + d.getUTCDate() + ' ' + M[d.getUTCMonth()]; }
+        function utc(y, m, d) { return new Date(Date.UTC(y, m, d)); }
+        function nthWeekday(y, m, weekday, n) {
+          var d = utc(y, m, 1);
+          var shift = (weekday - d.getUTCDay() + 7) % 7;
+          return utc(y, m, 1 + shift + (n - 1) * 7);
+        }
+        // Anonymous Gregorian algorithm. Easter Sunday, from which the rest follow.
+        function easter(y) {
+          var a = y % 19, b = Math.floor(y / 100), c = y % 100;
+          var d = Math.floor(b / 4), e = b % 4, f = Math.floor((b + 8) / 25);
+          var g = Math.floor((b - f + 1) / 3), h = (19 * a + b - d - g + 15) % 30;
+          var i = Math.floor(c / 4), k = c % 4;
+          var l = (32 + 2 * e + 2 * i - h - k) % 7;
+          var m = Math.floor((a + 11 * h + 22 * l) / 451);
+          var mo = Math.floor((h + l - 7 * m + 114) / 31);
+          var da = ((h + l - 7 * m + 114) % 31) + 1;
+          return utc(y, mo - 1, da);
+        }
+        function addDays(d, n) { return utc(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + n); }
+        // Fixed date holidays move to the following Monday when they land on a
+        // weekend. Christmas and Boxing Day get an extra day rather than a move,
+        // which is why they are handled separately below.
+        function substituted(d) {
+          var wd = d.getUTCDay();
+          if (wd === 6) return addDays(d, 2);
+          if (wd === 0) return addDays(d, 1);
+          return d;
+        }
+
+        function build(y) {
+          var e = easter(y);
+          var rows = [];
+          function push(date, name, nsw, vic, note) {
+            rows.push({ date: date, name: name, nsw: nsw, vic: vic, note: note || '' });
+          }
+
+          push(substituted(utc(y, 0, 1)), "New Year's Day", true, true, utc(y, 0, 1).getUTCDay() % 6 === 0 ? 'Substitute day, 1 January falls on a weekend' : '');
+          push(substituted(utc(y, 0, 26)), 'Australia Day', true, true, utc(y, 0, 26).getUTCDay() % 6 === 0 ? 'Substitute day' : '');
+          push(nthWeekday(y, 2, 1, 2), 'Labour Day', false, true, 'Victoria takes Labour Day in March. New South Wales takes it in October.');
+          push(addDays(e, -2), 'Good Friday', true, true, '');
+          push(addDays(e, -1), 'Easter Saturday', true, true, '');
+          push(e, 'Easter Sunday', true, true, '');
+          push(addDays(e, 1), 'Easter Monday', true, true, '');
+          push(utc(y, 3, 25), 'Anzac Day', true, true, 'Observed on 25 April in both states, with no substitute day.');
+          push(nthWeekday(y, 5, 1, 2), "King's Birthday", true, true, '');
+          push(nthWeekday(y, 7, 1, 1), 'Bank Holiday', true, false, 'New South Wales only, and limited to banks and some finance sector employers.');
+          push(null, 'AFL Grand Final Friday', false, true, 'Victoria only. The date moves with the fixture and is declared annually, so it cannot be calculated. Check the Victorian list.');
+          push(nthWeekday(y, 9, 1, 1), 'Labour Day', true, false, 'New South Wales takes Labour Day in October.');
+          push(nthWeekday(y, 10, 2, 1), 'Melbourne Cup Day', false, true, 'Victoria only, and not observed in every Victorian region. An ordinary working day in New South Wales.');
+          push(utc(y, 11, 25), 'Christmas Day', true, true, '');
+          push(utc(y, 11, 26), 'Boxing Day', true, true, '');
+          var xmas = utc(y, 11, 25).getUTCDay();
+          if (xmas === 6 || xmas === 0 || xmas === 5) {
+            push(utc(y, 11, 27), 'Additional Christmas holiday', true, true, 'Declared when Christmas Day or Boxing Day falls on a weekend. Confirm the exact day on the official list.');
+          }
+
+          rows.sort(function (a, b) {
+            if (!a.date) return 1;
+            if (!b.date) return -1;
+            return a.date - b.date;
+          });
+          return rows;
+        }
+
+        function render() {
+          var y = Number(yearSel.value);
+          var rows = build(y);
+          tbody.innerHTML = rows
+            .map(function (r) {
+              var cls = r.nsw && r.vic ? 'both' : r.nsw ? 'nsw' : 'vic';
+              return (
+                '<tr class="row-' + cls + '">' +
+                '<td class="mono">' + (r.date ? fmt(r.date) : 'Varies') + '</td>' +
+                '<td><strong>' + r.name + '</strong>' + (r.note ? '<span class="tw-sub">' + r.note + '</span>' : '') + '</td>' +
+                '<td class="tw-yn">' + (r.nsw ? '<span class="yes">Yes</span>' : '<span class="no">No</span>') + '</td>' +
+                '<td class="tw-yn">' + (r.vic ? '<span class="yes">Yes</span>' : '<span class="no">No</span>') + '</td>' +
+                '</tr>'
+              );
+            })
+            .join('');
+          var diff = rows.filter(function (r) { return r.nsw !== r.vic; });
+          summary.textContent =
+            diff.length + ' of the ' + rows.length + ' holidays in ' + y +
+            ' apply on one side of the Murray and not the other: ' +
+            diff.map(function (r) { return r.name; }).join(', ') +
+            '. Dates are computed from the published rules and are gazetted annually, so confirm anything you are paying a loading on.';
+        }
+
+        yearSel.addEventListener('change', render);
+        render();
+      })();
+    </script>
+  </>
+)}
+
+{/* ---------------------------------------------------------------- abn */}
+{slug === 'abn-lookup' && (
+  <>
+    <div class="tw" id="tw-abn">
+      <div class="tw-field">
+        <label class="mono" for="abn-num">ABN, as printed on the invoice</label>
+        <div class="tw-inline">
+          <input id="abn-num" type="text" inputmode="numeric" autocomplete="off" placeholder="51 824 753 556" maxlength="14" />
+          <button class="btn btn-river" type="button" id="abn-go">Check it</button>
+        </div>
+      </div>
+      <div class="tw-result" id="abn-result" hidden>
+        <p class="tw-verdict" id="abn-verdict"></p>
+        <p class="tw-note" id="abn-explain"></p>
+        <p id="abn-links" hidden>
+          <a class="btn btn-ghost btn-sm" id="abn-link" href="https://abr.business.gov.au/" rel="nofollow noopener" target="_blank">
+            Look it up on the Australian Business Register
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-abn');
+        if (!root) return;
+        var input = document.getElementById('abn-num');
+        var result = document.getElementById('abn-result');
+        var verdict = document.getElementById('abn-verdict');
+        var explain = document.getElementById('abn-explain');
+        var links = document.getElementById('abn-links');
+        var link = document.getElementById('abn-link');
+        var WEIGHTS = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+
+        function check(raw) {
+          var v = String(raw).replace(/[^0-9]/g, '');
+          if (v.length !== 11) return { ok: false, reason: 'length', digits: v };
+          var digits = v.split('').map(Number);
+          digits[0] -= 1;
+          var sum = 0;
+          for (var i = 0; i < 11; i++) sum += digits[i] * WEIGHTS[i];
+          return { ok: sum % 89 === 0, reason: 'checksum', digits: v };
+        }
+
+        function run() {
+          var r = check(input.value);
+          result.hidden = false;
+          if (r.reason === 'length') {
+            verdict.textContent = 'That is ' + r.digits.length + ' digits, not 11.';
+            verdict.className = 'tw-verdict bad';
+            explain.textContent = 'An ABN is exactly eleven digits. An ACN is nine, and a licence number is usually shorter again. Check what you have been given.';
+            links.hidden = true;
+            return;
+          }
+          if (r.ok) {
+            verdict.textContent = 'Valid ABN format.';
+            verdict.className = 'tw-verdict good';
+            explain.textContent = 'The eleven digit checksum is correct, which means this is a well formed ABN and not a typo or a made up number. It does NOT tell you the ABN is active, who holds it, or whether it is registered for GST. Those come from the register itself.';
+            link.href = 'https://abr.business.gov.au/ABN/View?abn=' + r.digits;
+            links.hidden = false;
+          } else {
+            verdict.textContent = 'That is not a valid ABN.';
+            verdict.className = 'tw-verdict bad';
+            explain.textContent = 'Eleven digits, but the checksum does not come out. That means a digit is wrong somewhere. Every real ABN passes this test, so a number that fails it was mistyped or invented. Go back to the invoice.';
+            links.hidden = true;
+          }
+        }
+
+        input.addEventListener('input', function () {
+          var v = input.value.replace(/[^0-9]/g, '').slice(0, 11);
+          input.value = v.replace(/^(\d{2})(\d{0,3})(\d{0,3})(\d{0,3}).*$/, function (_m, a, b, c, d) {
+            return [a, b, c, d].filter(Boolean).join(' ');
+          });
+          if (v.length === 11) run();
+        });
+        input.addEventListener('blur', function () { if (input.value) run(); });
+        document.getElementById('abn-go').addEventListener('click', run);
+      })();
+    </script>
+  </>
+)}
+
+{/* ---------------------------------------------------------------- quote */}
+{slug === 'what-should-this-cost' && (
+  <>
+    <div class="tw" id="tw-quote">
+      <p class="tw-intro">
+        Put two or three quotes in side by side. It works out what each one actually
+        costs once the call out, the loading and the materials are in, and shows you the
+        effective hourly rate, which is the number that makes them comparable.
+        Nothing is sent anywhere.
+      </p>
+      <div class="table-scroll">
+        <table class="tw-table tw-quote-table">
+          <thead>
+            <tr>
+              <th scope="col">Line</th>
+              <th scope="col">Quote A</th>
+              <th scope="col">Quote B</th>
+              <th scope="col">Quote C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><label for="q-name-a">Who</label></th>
+              <td><input id="q-name-a" data-q="a" data-f="name" type="text" placeholder="Name" /></td>
+              <td><input data-q="b" data-f="name" type="text" placeholder="Name" aria-label="Quote B name" /></td>
+              <td><input data-q="c" data-f="name" type="text" placeholder="Name" aria-label="Quote C name" /></td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="q-call-a">Call out fee</label></th>
+              <td><input id="q-call-a" data-q="a" data-f="call" type="number" min="0" step="5" placeholder="0" /></td>
+              <td><input data-q="b" data-f="call" type="number" min="0" step="5" placeholder="0" aria-label="Quote B call out" /></td>
+              <td><input data-q="c" data-f="call" type="number" min="0" step="5" placeholder="0" aria-label="Quote C call out" /></td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="q-rate-a">Hourly rate</label></th>
+              <td><input id="q-rate-a" data-q="a" data-f="rate" type="number" min="0" step="5" placeholder="0" /></td>
+              <td><input data-q="b" data-f="rate" type="number" min="0" step="5" placeholder="0" aria-label="Quote B hourly rate" /></td>
+              <td><input data-q="c" data-f="rate" type="number" min="0" step="5" placeholder="0" aria-label="Quote C hourly rate" /></td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="q-hours-a">Hours quoted</label></th>
+              <td><input id="q-hours-a" data-q="a" data-f="hours" type="number" min="0" step="0.5" placeholder="0" /></td>
+              <td><input data-q="b" data-f="hours" type="number" min="0" step="0.5" placeholder="0" aria-label="Quote B hours" /></td>
+              <td><input data-q="c" data-f="hours" type="number" min="0" step="0.5" placeholder="0" aria-label="Quote C hours" /></td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="q-mat-a">Materials</label></th>
+              <td><input id="q-mat-a" data-q="a" data-f="mat" type="number" min="0" step="10" placeholder="0" /></td>
+              <td><input data-q="b" data-f="mat" type="number" min="0" step="10" placeholder="0" aria-label="Quote B materials" /></td>
+              <td><input data-q="c" data-f="mat" type="number" min="0" step="10" placeholder="0" aria-label="Quote C materials" /></td>
+            </tr>
+            <tr>
+              <th scope="row"><label for="q-load-a">After hours loading %</label></th>
+              <td><input id="q-load-a" data-q="a" data-f="load" type="number" min="0" max="200" step="5" placeholder="0" /></td>
+              <td><input data-q="b" data-f="load" type="number" min="0" max="200" step="5" placeholder="0" aria-label="Quote B loading" /></td>
+              <td><input data-q="c" data-f="load" type="number" min="0" max="200" step="5" placeholder="0" aria-label="Quote C loading" /></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr class="tw-total">
+              <th scope="row">Total</th>
+              <td id="q-total-a">—</td>
+              <td id="q-total-b">—</td>
+              <td id="q-total-c">—</td>
+            </tr>
+            <tr>
+              <th scope="row">Effective per hour</th>
+              <td id="q-eff-a" class="mono">—</td>
+              <td id="q-eff-b" class="mono">—</td>
+              <td id="q-eff-c" class="mono">—</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p class="tw-note" id="q-verdict" aria-live="polite"></p>
+      <p class="tw-note" id="q-gaps"></p>
+    </div>
+
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-quote');
+        if (!root) return;
+        var money = function (v) { return '$' + Math.round(v).toLocaleString('en-AU'); };
+
+        function read(q) {
+          var out = {};
+          root.querySelectorAll('input[data-q="' + q + '"]').forEach(function (el) {
+            out[el.dataset.f] = el.dataset.f === 'name' ? el.value.trim() : Number(el.value || 0);
+          });
+          return out;
+        }
+
+        function run() {
+          var quotes = ['a', 'b', 'c'].map(function (q) {
+            var d = read(q);
+            var labour = d.rate * d.hours;
+            var loaded = labour * (1 + (d.load || 0) / 100);
+            var total = d.call + loaded + d.mat;
+            var used = d.call > 0 || d.rate > 0 || d.hours > 0 || d.mat > 0;
+            return {
+              q: q,
+              name: d.name || 'Quote ' + q.toUpperCase(),
+              total: total,
+              hours: d.hours,
+              used: used,
+              d: d,
+              eff: d.hours > 0 ? total / d.hours : 0,
+            };
+          });
+
+          quotes.forEach(function (r) {
+            document.getElementById('q-total-' + r.q).textContent = r.used ? money(r.total) : '—';
+            document.getElementById('q-eff-' + r.q).textContent = r.eff > 0 ? money(r.eff) + '/hr' : '—';
+          });
+
+          var live = quotes.filter(function (r) { return r.used && r.total > 0; });
+          var verdict = document.getElementById('q-verdict');
+          var gaps = document.getElementById('q-gaps');
+
+          if (live.length < 2) {
+            verdict.textContent = 'Fill in at least two quotes to compare them.';
+            gaps.textContent = '';
+            return;
+          }
+
+          var sorted = live.slice().sort(function (a, b) { return a.total - b.total; });
+          var cheapest = sorted[0];
+          var dearest = sorted[sorted.length - 1];
+          var gap = dearest.total - cheapest.total;
+          var pct = Math.round((gap / cheapest.total) * 100);
+
+          verdict.textContent =
+            cheapest.name + ' comes in lowest at ' + money(cheapest.total) + ', ' +
+            money(gap) + ' below ' + dearest.name + ', which is ' + pct + '% more. ' +
+            (live.every(function (r) { return r.eff > 0; })
+              ? 'On effective hourly rate the order is ' +
+                live.slice().sort(function (a, b) { return a.eff - b.eff; })
+                  .map(function (r) { return r.name + ' ' + money(r.eff); }).join(', ') + '.'
+              : 'Add the hours to each quote to compare them per hour.');
+
+          var missing = [];
+          live.forEach(function (r) {
+            var m = [];
+            if (!r.d.call) m.push('no call out fee');
+            if (!r.d.mat) m.push('no materials line');
+            if (!r.d.hours) m.push('no hours');
+            if (m.length) missing.push(r.name + ' has ' + m.join(' and '));
+          });
+          gaps.textContent = missing.length
+            ? 'Worth asking about: ' + missing.join('; ') + '. A quote that does not separate those is not necessarily worse, you just cannot check it.'
+            : 'All three quotes itemise the call out, the labour and the materials, which is what you want.';
+        }
+
+        root.addEventListener('input', run);
+        run();
+      })();
+    </script>
+  </>
+)}
+
+{/* ---------------------------------------------------------------- border */}
+{slug === 'border-check' && (
+  <>
+    <div class="tw" id="tw-border">
+      <div class="tw-field">
+        <label class="mono" for="bc-town">Where is the work happening</label>
+        <input id="bc-town" type="text" list="bc-list" autocomplete="off" placeholder="Start typing a town or suburb" />
+        <datalist id="bc-list"></datalist>
+        <p class="tw-hint" id="bc-hint"></p>
+      </div>
+      <div class="tw-result" id="bc-result" hidden>
+        <div class="tw-verdictbox" id="bc-box"></div>
+        <div class="tw-grid" id="bc-grid"></div>
+        <p class="tw-note">
+          The licence that applies is the one for the state the work is performed in, not
+          the state the business is registered in. Automatic Mutual Recognition lets a
+          licence holder work across the border after notifying the other state, but it
+          does not cover every occupation and it does not import the home state's permit
+          process. <a href="/guides/nsw-vic-licence-rules/">The longer version</a>.
+        </p>
+      </div>
+    </div>
+
+    <script type="application/json" id="bc-data" set:html={placePayload} is:inline />
+    <script is:inline>
+      (function () {
+        var root = document.getElementById('tw-border');
+        if (!root) return;
+        var places = JSON.parse(document.getElementById('bc-data').textContent);
+        var input = document.getElementById('bc-town');
+        var list = document.getElementById('bc-list');
+        var hint = document.getElementById('bc-hint');
+        var result = document.getElementById('bc-result');
+        var box = document.getElementById('bc-box');
+        var grid = document.getElementById('bc-grid');
+
+        places.sort(function (a, b) { return a.n.localeCompare(b.n); });
+        list.innerHTML = places
+          .map(function (p) { return '<option value="' + p.n + ', ' + p.s + '"></option>'; })
+          .join('');
+
+        function km(a, b) {
+          var R = 6371, tr = Math.PI / 180;
+          var dLat = (b.la - a.la) * tr, dLng = (b.lo - a.lo) * tr;
+          var h = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.sin(dLng / 2) * Math.sin(dLng / 2) * Math.cos(a.la * tr) * Math.cos(b.la * tr);
+          return 2 * R * Math.asin(Math.sqrt(h));
+        }
+
+        var BODIES = {
+          NSW: {
+            build: 'NSW Fair Trading',
+            buildUrl: 'https://verify.licence.nsw.gov.au/',
+            elec: 'NSW Fair Trading',
+            other: 'New South Wales',
+            labour: 'the first Monday in October',
+            cup: 'an ordinary working day',
+          },
+          VIC: {
+            build: 'the Victorian Building Authority',
+            buildUrl: 'https://www.vba.vic.gov.au/consumers/search-practitioner',
+            elec: 'Energy Safe Victoria',
+            other: 'Victoria',
+            labour: 'the second Monday in March',
+            cup: 'a public holiday',
+          },
+        };
+
+        function run() {
+          var raw = input.value.trim().toLowerCase().replace(/,\s*(nsw|vic)$/i, '');
+          if (!raw) { result.hidden = true; hint.textContent = ''; return; }
+          var found = places.filter(function (p) { return p.n.toLowerCase() === raw; });
+          if (!found.length) {
+            found = places.filter(function (p) { return p.n.toLowerCase().indexOf(raw) === 0; });
+          }
+          if (!found.length) {
+            hint.textContent = 'No town of that name in the NSW or Victorian set we have mapped. Try the nearest larger town.';
+            hint.className = 'tw-hint warn';
+            result.hidden = true;
+            return;
+          }
+          hint.textContent = '';
+          hint.className = 'tw-hint';
+          var p = found[0];
+          var b = BODIES[p.s];
+          var other = p.s === 'NSW' ? 'VIC' : 'NSW';
+
+          var across = places
+            .filter(function (x) { return x.s === other; })
+            .map(function (x) { return { p: x, d: km(p, x) }; })
+            .sort(function (a, b2) { return a.d - b2.d; })[0];
+
+          box.innerHTML =
+            '<span class="tw-state ' + (p.s === 'VIC' ? 'vic' : '') + '">' + p.s + '</span>' +
+            '<div><strong>' + p.n + ' ' + p.p + '</strong> is in ' + (p.s === 'NSW' ? 'New South Wales' : 'Victoria') +
+            (across ? '. The nearest ' + BODIES[other].other + ' locality is ' + across.p.n + ', ' + Math.round(across.d) + 'km away.' : '.') +
+            '</div>';
+
+          grid.innerHTML = [
+            ['Building and trade licences', b.build],
+            ['Electrical licensing', b.elec],
+            ['Plumbing licensing', p.s === 'NSW' ? 'NSW Fair Trading' : 'the Victorian Building Authority'],
+            ['Labour Day falls on', b.labour],
+            ['Melbourne Cup Day is', b.cup],
+            ['Public holiday calendar', p.s === 'NSW' ? 'New South Wales' : 'Victoria'],
+          ]
+            .map(function (r) {
+              return '<div><span class="mono">' + r[0] + '</span><b>' + r[1] + '</b></div>';
+            })
+            .join('');
+
+          result.hidden = false;
+        }
+
+        input.addEventListener('input', run);
+        input.addEventListener('change', run);
+      })();
+    </script>
+  </>
+)}
+
+<style>
+  .tw {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 22px 24px;
+    margin: 26px 0;
+  }
+  .tw-intro {
+    margin: 0 0 20px;
+    font-size: 15px;
+    color: var(--ink-60);
+    max-width: 62ch;
+  }
+  .tw-field {
+    margin: 0 0 18px;
+    border: 0;
+    padding: 0;
+  }
+  .tw-field:last-child {
+    margin-bottom: 0;
+  }
+  .tw-field > label,
+  .tw-field > legend {
+    display: block;
+    color: var(--ink-40);
+    margin-bottom: 8px;
+    padding: 0;
+  }
+  .tw input[type='text'],
+  .tw input[type='number'],
+  .tw select {
+    font: inherit;
+    font-size: 15.5px;
+    padding: 12px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r);
+    background: var(--paper-2);
+    color: var(--ink);
+    outline: none;
+    width: 100%;
+    min-height: 46px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tw input:focus,
+  .tw select:focus {
+    border-color: var(--river);
+    background: var(--white);
+  }
+  .tw select {
+    max-width: 220px;
+    cursor: pointer;
+  }
+  .tw-inline {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tw-inline input {
+    flex: 1;
+    min-width: 200px;
+  }
+  .tw-inline .btn {
+    min-height: 46px;
+  }
+  .tw-radios {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .tw-radio {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--r);
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 15px;
+    background: var(--paper-2);
+    min-height: 46px;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .tw-radio:hover {
+    border-color: var(--river);
+  }
+  .tw-radio input {
+    accent-color: var(--river);
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .tw-radio:has(input:checked) {
+    border-color: var(--river);
+    background: var(--river-10);
+  }
+  .tw-hint {
+    margin: 10px 0 0;
+    font-size: 13.5px;
+    color: var(--ink-60);
+    max-width: 66ch;
+  }
+  .tw-hint.warn {
+    color: var(--wattle-ink);
+  }
+  .tw-result {
+    margin-top: 22px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .tw-result h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .tw-check {
+    margin: 0 0 4px;
+    padding-left: 20px;
+    font-size: 14.5px;
+    color: var(--ink-80);
+    max-width: 66ch;
+  }
+  .tw-check li {
+    margin-bottom: 8px;
+  }
+  .tw-note {
+    margin: 14px 0 0;
+    font-size: 13.5px;
+    color: var(--ink-60);
+    max-width: 70ch;
+  }
+  .tw-note a {
+    color: var(--river);
+    border-bottom: 1px solid var(--wattle);
+  }
+  .tw-verdict {
+    margin: 0 0 8px;
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .tw-verdict.good {
+    color: var(--river);
+  }
+  .tw-verdict.bad {
+    color: var(--clay);
+  }
+  .tw-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+  }
+  .tw-table th,
+  .tw-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  .tw-table thead th {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-40);
+    font-weight: 500;
+    background: var(--paper-2);
+  }
+  .tw-table tbody tr:hover {
+    background: var(--paper-2);
+  }
+  .tw-sub {
+    display: block;
+    font-size: 12.5px;
+    color: var(--ink-40);
+    margin-top: 3px;
+    max-width: 52ch;
+  }
+  .tw-yn {
+    width: 64px;
+  }
+  .tw-yn .yes {
+    color: var(--river);
+    font-weight: 600;
+  }
+  .tw-yn .no {
+    color: var(--ink-40);
+  }
+  .row-nsw td:first-child {
+    box-shadow: inset 3px 0 0 var(--river);
+  }
+  .row-vic td:first-child {
+    box-shadow: inset 3px 0 0 var(--wattle);
+  }
+  .tw-legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: var(--ink-60);
+    margin: 0 0 14px;
+  }
+  .sw {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .sw-both {
+    background: var(--line-strong);
+  }
+  .sw-nsw {
+    background: var(--river);
+  }
+  .sw-vic {
+    background: var(--wattle);
+  }
+  .tw-quote-table input {
+    min-width: 90px;
+    padding: 9px 10px;
+    min-height: 40px;
+  }
+  .tw-quote-table th[scope='row'] {
+    white-space: nowrap;
+    font-weight: 500;
+    color: var(--ink-60);
+    font-size: 14px;
+  }
+  .tw-table tfoot td,
+  .tw-table tfoot th {
+    border-top: 2px solid var(--line-strong);
+    border-bottom: 0;
+    padding-top: 14px;
+  }
+  .tw-total td,
+  .tw-total th {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 19px;
+    letter-spacing: -0.02em;
+  }
+  .tw-verdictbox {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+  .tw-state {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    background: var(--river);
+    color: var(--paper);
+    padding: 6px 10px;
+    border-radius: 3px;
+    flex: none;
+  }
+  .tw-state.vic {
+    background: var(--wattle);
+    color: var(--ink);
+  }
+  .tw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+  .tw-grid > div {
+    background: var(--white);
+    padding: 14px 16px;
+  }
+  .tw-grid span {
+    display: block;
+    color: var(--ink-40);
+    margin-bottom: 5px;
+    font-size: 10.5px;
+  }
+  .tw-grid b {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  @media (max-width: 560px) {
+    .tw {
+      padding: 18px 16px;
+    }
+  }
+</style>

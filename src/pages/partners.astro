@@ -66,7 +66,7 @@ const tiers = [
 // domain. The example slug is illustrative and is not a live listing.
 const exampleListing = abs('/nsw/albury/plumbers/riverside-plumbing-co/');
 const exampleBadge = abs('/badge/riverside-plumbing-co.svg');
-const crawlerAgent = 'LocalKnowsBot/1.0 (+' + abs(canonicalPath) + ')';
+const crawlerAgent = 'LocalsKnowBot/1.0 (+' + abs(canonicalPath) + ')';
 
 const badgeSnippet = `<!-- ${SITE.name} verified badge. Paste anywhere on your site. -->
 <a href="${exampleListing}"
@@ -80,7 +80,7 @@ const badgeSnippet = `<!-- ${SITE.name} verified badge. Paste anywhere on your s
 const faqs = [
   {
     q: 'Will you give me a dofollow link if I link to you?',
-    a: 'No, and please do not offer. Google names reciprocal link exchanges and link-for-contract arrangements in its spam policies. Running one at scale leaves an obvious footprint and devalues the link for both sides. Dofollow on LocalKnows is earned by verification. Link to us if the page is genuinely useful to your readers, and do not link to us if it is not.',
+    a: 'No, and please do not offer. Google names reciprocal link exchanges and link-for-contract arrangements in its spam policies. Running one at scale leaves an obvious footprint and devalues the link for both sides. Dofollow on LocalsKnow is earned by verification. Link to us if the page is genuinely useful to your readers, and do not link to us if it is not.',
   },
   {
     q: 'Do I have to display the badge to keep my verified status?',
@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: 'What does your crawler do and how do I block it?',
-    a: 'LocalKnowsBot fetches your homepage plus /links, /partners and /about once a week, looks for an anchor pointing at your listing, and records whether it found one, the rel attributes, the anchor text and the HTTP status. It obeys robots.txt and takes no more than one request per domain every five seconds. Disallow LocalKnowsBot in your robots.txt and it stops. Nothing about your listing changes if you do.',
+    a: 'LocalsKnowBot fetches your homepage plus /links, /partners and /about once a week, looks for an anchor pointing at your listing, and records whether it found one, the rel attributes, the anchor text and the HTTP status. It obeys robots.txt and takes no more than one request per domain every five seconds. Disallow LocalsKnowBot in your robots.txt and it stops. Nothing about your listing changes if you do.',
   },
 ];
 
@@ -128,7 +128,7 @@ const pre =
       <p class="eyebrow mono">Links &middot; badges &middot; the crawler</p>
       <h1>{h1}</h1>
       <p class="standfirst">
-        LocalKnows does not trade links. Dofollow is earned by verification and the badge is
+        LocalsKnow does not trade links. Dofollow is earned by verification and the badge is
         nofollow on purpose. This page explains why, including the version of the program we
         designed and then threw out.
       </p>
@@ -142,7 +142,7 @@ const pre =
     <div class="prose">
       <h2>The version we did not build</h2>
       <p>
-        The original plan was ordinary enough. A business links to its LocalKnows listing, an
+        The original plan was ordinary enough. A business links to its LocalsKnow listing, an
         automated check confirms the link is live, and the outbound link on the listing flips
         to dofollow in return. Every directory in the country has done some version of it.
       </p>
@@ -263,7 +263,7 @@ const pre =
       <ul>
         <li>
           <strong>User agent:</strong>
-          {' '}<code>LocalKnowsBot/1.0 (+https://localsknow.com.au/partners/)</code>
+          {' '}<code>LocalsKnowBot/1.0 (+https://localsknow.com.au/partners/)</code>
         </li>
         <li><strong>Rate limit:</strong> one request per domain per five seconds, hard capped.</li>
         <li><strong>robots.txt:</strong> obeyed. Disallow it and the checks stop.</li>

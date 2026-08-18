@@ -24,7 +24,7 @@ const SITE = (args.site || process.env.SITE_URL || 'https://localsknow.com.au').
 const CONCURRENCY = Number(args.concurrency || 4);
 const RETRY_STATUSES = new Set([403, 429, 502, 503, 504]);
 const UA =
-  'Mozilla/5.0 (compatible; LocalKnowsSmoke/1.0; +https://localsknow.com.au/about/)';
+  'Mozilla/5.0 (compatible; LocalsKnowSmoke/1.0; +https://localsknow.com.au/about/)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const locs = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);

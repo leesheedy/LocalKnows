@@ -1,4 +1,4 @@
-# LocalKnows. Static Astro build, headers and redirects are generated into
+# LocalsKnow. Static Astro build, headers and redirects are generated into
 # dist/ by scripts/postbuild.mjs so they stay in step with what was actually
 # rendered. Anything set here is a floor, not the whole story.
 

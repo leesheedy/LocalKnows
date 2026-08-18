@@ -30,7 +30,7 @@ const claimed = listings.filter((l) => l.status === 'claimed' || l.status === 'v
 const verified = listings.filter((l) => l.status === 'verified').length;
 
 const description =
-  'Take control of your LocalKnows listing. Free permanently, no trial, no card. Verified licences earn a badge and a dofollow link to your own website.';
+  'Take control of your LocalsKnow listing. Free permanently, no trial, no card. Verified licences earn a badge and a dofollow link to your own website.';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -44,7 +44,7 @@ const faqs = [
   },
   {
     q: 'What proof do you need that the business is mine?',
-    a: 'We match the claim against something already on record: the phone number on the listing, an email on the same domain as the business website, or the ABN. If none of those line up, we ring the number published on the listing and ask for you by name. We do not ask for identity documents, bank details or a photo of a licence card, and nobody from LocalKnows will ever request them.',
+    a: 'We match the claim against something already on record: the phone number on the listing, an email on the same domain as the business website, or the ABN. If none of those line up, we ring the number published on the listing and ask for you by name. We do not ask for identity documents, bank details or a photo of a licence card, and nobody from LocalsKnow will ever request them.',
   },
   {
     q: 'What if the business has no ABN, or I do not know it?',
@@ -107,7 +107,7 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
 
     <div class="prose">
       <p>
-        Most listings on LocalKnows were built from public sources before the owner had
+        Most listings on LocalsKnow were built from public sources before the owner had
         heard of the site. That gets a directory useful quickly, and it also means some
         details are out of date the day they are published. Claiming hands the listing to
         the person who knows the answers.
@@ -342,7 +342,7 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
       {
         heading: 'How the site works',
         links: [
-          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.about(), label: 'About LocalsKnow' },
           { href: url.editorialPolicy(), label: 'Editorial policy' },
           { href: url.advertisingPolicy(), label: 'Advertising policy' },
         ],

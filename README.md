@@ -1,4 +1,4 @@
-# LocalKnows
+# LocalsKnow
 
 An independent business and places directory for New South Wales and Victoria.
 
@@ -184,7 +184,7 @@ Also worth doing once: verify the domain in Google Search Console and submit
 
 ### A naming thing
 
-The site content, the repo and the wordmark all say **LocalKnows**. The domain is
+The site content, the repo and the wordmark all say **LocalsKnow**. The domain is
 **localsknow.com.au**. Both are used consistently as they stand and nothing is
 broken by it, but they are two different words and it is worth deciding which one
 is the brand before anybody prints anything.

@@ -49,7 +49,7 @@ export function statSentences(
     pick(
       [
         'We list ' + stats.listingCount + ' ' + noun + ' covering ' + locality.name + '.',
-        'There are ' + stats.listingCount + ' ' + noun + ' on LocalKnows that work in ' + locality.name + '.',
+        'There are ' + stats.listingCount + ' ' + noun + ' on LocalsKnow that work in ' + locality.name + '.',
         locality.name + ' has ' + stats.listingCount + ' ' + noun + ' listed here.',
       ],
       seed,

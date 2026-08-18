@@ -57,9 +57,12 @@ const card = ({ eyebrow, headline, footnote }) => {
     <path d="M0 612 C 200 584, 340 644, 560 612 S 940 584, 1200 620" stroke="${RIVER}" stroke-width="2" fill="none" stroke-dasharray="10 9" opacity="0.55"/>
   </g>
 
-  <g transform="translate(72,74)">
-    <rect x="0" y="-22" width="5" height="30" fill="${WATTLE}" transform="skewX(-14)"/>
-    <text x="18" y="2" font-size="30" font-weight="800" fill="${INK}" letter-spacing="-1.4">LocalKnows</text>
+  <g transform="translate(72,50)">
+    <path d="M11 0C4.9 0 0 4.9 0 11c0 8.4 11 20 11 20s11-11.6 11-20c0-6.1-4.9-11-11-11z" fill="${WATTLE}"/>
+    <circle cx="11" cy="10.9" r="4.4" fill="${PAPER}"/>
+    <text x="34" y="26" font-size="31" font-weight="800" letter-spacing="-1.5">
+      <tspan fill="${RIVER}">Locals</tspan><tspan fill="#8A6A00">Know</tspan>
+    </text>
   </g>
 
   <text x="72" y="180" font-size="21" font-weight="600" fill="${RIVER}" letter-spacing="3.4">${esc(String(eyebrow).toUpperCase())}</text>
@@ -163,10 +166,9 @@ for (const c of cards) {
 
 // Brand marks used by the Organization node and the manifest.
 const mark = `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="${INK}"/>
-  <path d="M14 12h5v34h-5z" fill="${WATTLE}" transform="skewX(-14) translate(6 0)"/>
-  <path d="M24 44V20h6v18h13v6H24z" fill="${PAPER}"/>
-  <path d="M8 52c8-4 16-4 24 0s16 4 24 0" stroke="${RIVER}" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="10" fill="${RIVER}"/>
+  <path d="M32 13c-7.2 0-13 5.8-13 13 0 9.8 13 25 13 25s13-15.2 13-25c0-7.2-5.8-13-13-13z" fill="${WATTLE}"/>
+  <circle cx="32" cy="26" r="5.2" fill="${RIVER}"/>
 </svg>`;
 const BRAND = path.join(ROOT, 'public', 'brand');
 fs.mkdirSync(BRAND, { recursive: true });

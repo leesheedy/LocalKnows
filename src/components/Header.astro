@@ -18,7 +18,10 @@ const on = (p: string) => (here === p || (p !== '/' && here.startsWith(p)) ? 'pa
 <header class="bar">
   <div class="wrap bar-in">
     <a class="mark" href={url.home()} aria-label={SITE.name + ' home'}>
-      <i aria-hidden="true"></i>{SITE.name}
+      <svg class="pin" width="17" height="22" viewBox="0 0 17 22" aria-hidden="true">
+        <path d="M8.5 0C3.8 0 0 3.8 0 8.5 0 15 8.5 22 8.5 22S17 15 17 8.5C17 3.8 13.2 0 8.5 0z" fill="#E8B21F"/>
+        <circle cx="8.5" cy="8.4" r="3.4" fill="#EFEDE4"/>
+      </svg><span><b>Locals</b><em>Know</em></span>
     </a>
     <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav">Menu</button>
     <nav class="nav" id="sitenav" aria-label="Main">

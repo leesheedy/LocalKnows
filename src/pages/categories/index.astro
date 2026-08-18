@@ -38,7 +38,7 @@ const groups = VERTICALS.map((v) => ({
   items: categories.filter((c) => c.vertical === v.key),
 })).filter((g) => g.items.length > 0);
 
-const h1 = 'Every category on LocalKnows';
+const h1 = 'Every category on LocalsKnow';
 const description =
   categories.length +
   ' categories across ' +
@@ -86,7 +86,7 @@ const jsonLd = graph([
   }),
   itemListNode({
     pageUrl: canonicalPath,
-    name: 'Verticals on LocalKnows',
+    name: 'Verticals on LocalsKnow',
     items: VERTICALS.map((v) => ({ url: url.vertical(v.slug), name: v.name })),
   }),
   faqNode(faqs, canonicalPath),

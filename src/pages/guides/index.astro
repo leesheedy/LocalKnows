@@ -68,7 +68,7 @@ const jsonLd = graph([
   }),
   itemListNode({
     pageUrl: canonicalPath,
-    name: 'LocalKnows guides',
+    name: 'LocalsKnow guides',
     items: rows.map((g) => ({ url: url.guide(g), name: g.title })),
   }),
   faqNode(faqs, canonicalPath),
@@ -177,7 +177,7 @@ const jsonLd = graph([
           { href: url.editorialPolicy(), label: 'Editorial policy' },
           { href: url.advertisingPolicy(), label: 'Advertising policy' },
           { href: url.dataPolicy(), label: 'Data and corrections' },
-          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.about(), label: 'About LocalsKnow' },
         ],
       },
     ]}

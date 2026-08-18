@@ -1,5 +1,5 @@
 /**
- * LocalKnows data contracts.
+ * LocalsKnow data contracts.
  *
  * Every template reads through `src/lib/repo.ts`, never from these modules
  * directly. Swapping the file-backed seed for Supabase means reimplementing

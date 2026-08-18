@@ -1,4 +1,4 @@
-# LocalKnows
+# LocalsKnow
 
 An independent business and places directory for New South Wales and Victoria.
 
@@ -13,7 +13,7 @@ Three things make this rank when Yellow Pages, TrueLocal and Localsearch do not:
 
 1. Cross border logic. Every other directory treats the NSW and VIC boundary as a
    hard wall. Businesses that service both sides are invisible on half the queries
-   they should own. LocalKnows models service area separately from physical address.
+   they should own. LocalsKnow models service area separately from physical address.
 2. Verified licences. Trade licence numbers checked against NSW Fair Trading and the
    VIC Building Authority registers. Nobody else does this and it is the thing that
    makes the site quotable by AI answer engines.
@@ -235,7 +235,7 @@ POST /api/partners/verify
 ```
 
 Rate limit to 1 request per domain per 5 seconds. Respect robots.txt. Identify as
-LocalKnowsBot with a URL in the user agent explaining what it does.
+LocalsKnowBot with a URL in the user agent explaining what it does.
 
 ### Where links actually come from
 

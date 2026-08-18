@@ -7,9 +7,12 @@
     <path d="M0 612 C 200 584, 340 644, 560 612 S 940 584, 1200 620" stroke="#1F6B5C" stroke-width="2" fill="none" stroke-dasharray="10 9" opacity="0.55"/>
   </g>
 
-  <g transform="translate(72,74)">
-    <rect x="0" y="-22" width="5" height="30" fill="#E8B21F" transform="skewX(-14)"/>
-    <text x="18" y="2" font-size="30" font-weight="800" fill="#131E19" letter-spacing="-1.4">LocalKnows</text>
+  <g transform="translate(72,50)">
+    <path d="M11 0C4.9 0 0 4.9 0 11c0 8.4 11 20 11 20s11-11.6 11-20c0-6.1-4.9-11-11-11z" fill="#E8B21F"/>
+    <circle cx="11" cy="10.9" r="4.4" fill="#EFEDE4"/>
+    <text x="34" y="26" font-size="31" font-weight="800" letter-spacing="-1.5">
+      <tspan fill="#1F6B5C">Locals</tspan><tspan fill="#8A6A00">Know</tspan>
+    </text>
   </g>
 
   <text x="72" y="180" font-size="21" font-weight="600" fill="#1F6B5C" letter-spacing="3.4">NEW SOUTH WALES</text>

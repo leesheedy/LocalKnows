@@ -6,14 +6,14 @@
     "standfirst": "Paste a licence number, pick a state, and go straight to the official register.",
     "isApplication": true,
     "status": "live",
-    "body": "This tool does one thing: it takes you to the right official register with the right search open, so you can check a licence in under a minute instead of hunting for the correct page.\n\nIt does not tell you the answer itself. The registers are the authority and neither of them publishes an open API for public lookups, so anything that claimed to verify a licence without going to the register would be guessing. LocalKnows is not affiliated with NSW Fair Trading or the Victorian Building Authority and does not speak for either of them.\n\n## What you are checking against\n\n**New South Wales.** NSW Fair Trading runs a public licence check covering building, trade, electrical, plumbing, gasfitting, air conditioning and refrigeration work, plus motor dealers and repairers, real estate agents and several other classes. It shows the licence holder, the class of work, the status and the expiry.\n\n**Victoria.** The Victorian Building Authority runs a practitioner search covering registered building practitioners and licensed plumbers. Electrical work in Victoria sits with Energy Safe Victoria, which runs its own separate check.\n\nThe two states do not share a register. A NSW licence number will not resolve in the VBA search and the reverse is also true.\n\n## What to look at when you get there\n\n- **The name.** It must match the business you are dealing with, or the business must be able to explain the relationship. A trading name that does not appear anywhere on the licence is a question worth asking.\n- **The class.** A licence is for specific work. A general builder is not automatically licensed to do the plumbing, and a restricted electrical licence is not a full one. \"Licensed\" on its own means nothing until you know licensed for what.\n- **The status and expiry.** Current, expired, suspended and cancelled are four different things. An expired licence is not a technicality if something goes wrong and you need to claim.\n- **The conditions.** Some licences carry a value limit or a supervision condition. Those are on the register and they are rarely on the quote.\n\n## The border problem\n\nWhat matters is the licence that applies where the work is done, not where the business is registered. A Wodonga plumber working on a house in Lavington needs to satisfy NSW requirements for that job. Automatic Mutual Recognition means many licence holders can work interstate on the strength of their home licence after notifying the other state, but the scheme does not cover every occupation and it does not cover every class within an occupation.\n\nIf the job is on the other side of the river from the tradesperson's address, ask which licence they are working under and check that one.\n\n## Why we built it\n\nEvery public check run through this page tells us which numbers people are actually looking up, which feeds the verification queue on the directory itself. That is the whole business case. It is free, ungated, and it will stay that way.",
+    "body": "This tool does one thing: it takes you to the right official register with the right search open, so you can check a licence in under a minute instead of hunting for the correct page.\n\nIt does not tell you the answer itself. The registers are the authority and neither of them publishes an open API for public lookups, so anything that claimed to verify a licence without going to the register would be guessing. LocalsKnow is not affiliated with NSW Fair Trading or the Victorian Building Authority and does not speak for either of them.\n\n## What you are checking against\n\n**New South Wales.** NSW Fair Trading runs a public licence check covering building, trade, electrical, plumbing, gasfitting, air conditioning and refrigeration work, plus motor dealers and repairers, real estate agents and several other classes. It shows the licence holder, the class of work, the status and the expiry.\n\n**Victoria.** The Victorian Building Authority runs a practitioner search covering registered building practitioners and licensed plumbers. Electrical work in Victoria sits with Energy Safe Victoria, which runs its own separate check.\n\nThe two states do not share a register. A NSW licence number will not resolve in the VBA search and the reverse is also true.\n\n## What to look at when you get there\n\n- **The name.** It must match the business you are dealing with, or the business must be able to explain the relationship. A trading name that does not appear anywhere on the licence is a question worth asking.\n- **The class.** A licence is for specific work. A general builder is not automatically licensed to do the plumbing, and a restricted electrical licence is not a full one. \"Licensed\" on its own means nothing until you know licensed for what.\n- **The status and expiry.** Current, expired, suspended and cancelled are four different things. An expired licence is not a technicality if something goes wrong and you need to claim.\n- **The conditions.** Some licences carry a value limit or a supervision condition. Those are on the register and they are rarely on the quote.\n\n## The border problem\n\nWhat matters is the licence that applies where the work is done, not where the business is registered. A Wodonga plumber working on a house in Lavington needs to satisfy NSW requirements for that job. Automatic Mutual Recognition means many licence holders can work interstate on the strength of their home licence after notifying the other state, but the scheme does not cover every occupation and it does not cover every class within an occupation.\n\nIf the job is on the other side of the river from the tradesperson's address, ask which licence they are working under and check that one.\n\n## Why we built it\n\nEvery public check run through this page tells us which numbers people are actually looking up, which feeds the verification queue on the directory itself. That is the whole business case. It is free, ungated, and it will stay that way.",
     "faqs": [
       {
         "q": "Does this tool verify the licence for me?",
         "a": "No. It sends you to the official register with the search page open. The register is the authority and its answer is the only one that counts. Anything that claimed to verify a licence without querying the register would be guessing."
       },
       {
-        "q": "Is LocalKnows connected to NSW Fair Trading or the VBA?",
+        "q": "Is LocalsKnow connected to NSW Fair Trading or the VBA?",
         "a": "No. We are an independent directory. We link to those registers because they are the public source of truth, and we have no relationship with either body."
       },
       {
@@ -29,7 +29,7 @@
         "a": "Both states set a dollar threshold below which residential building work does not require a licensed builder, and both set them low enough that most jobs worth worrying about are above it. Electrical and plumbing work is regulated regardless of value. The thresholds change, so check the current figure on the Fair Trading or VBA site rather than relying on a number you read somewhere."
       },
       {
-        "q": "What does a verified badge on a LocalKnows listing mean?",
+        "q": "What does a verified badge on a LocalsKnow listing mean?",
         "a": "That we ran this exact check against the state register on the date shown on the listing, and the licence was current for the class of work the business advertises. It is a statement about a check we ran on a date, not an endorsement and not a guarantee about the work."
       }
     ]
@@ -66,6 +66,33 @@
     ]
   },
   {
+    "slug": "border-check",
+    "title": "Which state, which rules",
+    "description": "Type a town on the NSW and Victorian border. Get the state, the licensing body, the public holiday calendar and how far it is across the river.",
+    "standfirst": "One question, four answers, for anyone working within sight of the Murray.",
+    "isApplication": true,
+    "status": "live",
+    "body": "On this border the state a job is in decides more than people expect: which register the licence has to be on, which public holiday calendar sets the loading, and which regulator you go to if it goes wrong. Four kilometres separates the middle of Albury from the middle of Wodonga and there are two of everything.\n\nType the town the work is happening in. Not where the business is based, and not where you live. Where the work is.\n\n## Why the work location is the one that counts\n\nThe licence that applies is the one for the state the work is performed in. A Wodonga plumber replacing a hot water service in Lavington is doing New South Wales work. A Jindera builder putting up a shed in Barnawartha is doing Victorian work. The address on the invoice does not change that, and neither does the registered address of the company.\n\nAutomatic Mutual Recognition means a licence holder can generally work in the other state on the strength of their home licence after notifying that state, without paying a second fee. It made the border far easier to work across. It did not make it disappear: the scheme does not cover every occupation, the notification is not optional, and permits, compliance certificates and inspection regimes are still set by the state the work is in.\n\n## The holiday problem\n\nThe two states do not share a public holiday calendar. Melbourne Cup Day is a holiday in Wodonga and an ordinary Tuesday in Albury. Labour Day is March on one side and October on the other. Victoria takes the Friday before the AFL Grand Final and New South Wales does not.\n\nIf you are paying a public holiday loading, the calendar that applies is worth being certain about. The [public holiday comparison](/tools/public-holidays/) lays both states out side by side for any year.\n\n## What this page is not\n\nIt is a lookup against the town list this directory maintains, not legal advice and not a ruling. It tells you which state a place is in and which bodies govern licensing there. Whether a particular person is licensed for a particular job is a question for the register, and the [licence check](/tools/licence-check/) opens the right one.",
+    "faqs": [
+      {
+        "q": "Which licence applies if the tradesperson lives in one state and the job is in the other?",
+        "a": "The one for the state the work is performed in. Where the business is registered, where the ute is garaged and where the invoice is issued from make no difference. Ask which licence they are working under for your job, and check that one."
+      },
+      {
+        "q": "Does Automatic Mutual Recognition mean a NSW licence just works in Victoria?",
+        "a": "Usually, but not in the loose sense. The holder must notify the second state before working there, the scheme excludes some occupations and some classes within an occupation, and local permits and compliance certificates still apply. It removes the second licence fee, not the second set of rules."
+      },
+      {
+        "q": "Where does the town list come from?",
+        "a": "It is the same locality set the rest of this directory runs on: every mapped town and suburb in New South Wales and Victoria that we hold, with its postcode and coordinates. If a town is missing, the nearest larger one gives you the same answer."
+      },
+      {
+        "q": "Is this legal advice?",
+        "a": "No. It reports which state a locality is in and which bodies license trades there. Anything turning on a specific job, contract or dispute is a question for the regulator or a lawyer."
+      }
+    ]
+  },
+  {
     "slug": "what-should-this-cost",
     "title": "What should this cost?",
     "description": "Indicative price ranges for common trade jobs across the Albury Wodonga border, built from published call out fees and rates on the directory.",
@@ -98,28 +125,32 @@
   },
   {
     "slug": "abn-lookup",
-    "title": "ABN and business name check",
-    "description": "Check an ABN, its GST registration and its trading names against the Australian Business Register before you pay an invoice.",
-    "standfirst": "Not built yet. Here is what it will do, and what to use in the meantime.",
+    "title": "ABN checker",
+    "description": "Validate an ABN checksum instantly in your browser, then go straight to the Australian Business Register for the entity name and GST status.",
+    "standfirst": "Paste an ABN. It tells you straight away whether the number is real.",
     "isApplication": true,
-    "status": "planned",
-    "body": "This tool is not built. When it is, it will take an ABN or a business name and return the entity name, the entity type, whether the ABN is active, the GST registration status and date, the main business location by state and postcode, and any registered trading names, all from the Australian Business Register's public web services.\n\nUntil then, use ABN Lookup directly at abr.business.gov.au. It is free, it is the same data, and it takes about thirty seconds.\n\n## What to actually check\n\n- **Active.** A cancelled ABN on a current invoice is a problem, not a formality.\n- **GST registered.** If an invoice charges GST, the ABN on it should be registered for GST. If it is not, the GST line should not be there.\n- **The entity name.** It will often differ from the trading name. That is normal. What is not normal is an ABN registered to an entity with no visible connection to the business you are dealing with.\n- **The registration date.** A business trading for fifteen years under an ABN registered last month is worth a question.\n\n## Why it matters on an invoice\n\nIf a supplier does not quote an ABN on an invoice, the payer may be required to withhold tax from the payment at the top rate. That is the ATO's rule, not ours, and it is the practical reason ABNs appear on invoices at all.\n\n## Why we will build it\n\nThe same reason as the licence checker. It is a thirty second job that people currently do not do, it feeds our own verification pipeline every time somebody runs one, and a tool page earns links for years.",
+    "status": "live",
+    "body": "Every Australian Business Number carries a check digit. Paste one in above and this page works out, without asking anything of anyone, whether the number is well formed or whether a digit is wrong.\n\nThat is a real test and it is worth running. A mistyped ABN on an invoice fails it. So does an invented one.\n\n## What a valid checksum does and does not tell you\n\nIt tells you the eleven digits are internally consistent, so the number was not invented or fat fingered.\n\nIt does not tell you the ABN is active, who holds it, whether the holder is the business you are dealing with, or whether they are registered for GST. Those four things come from the Australian Business Register, and the link to that exact ABN appears once the number checks out.\n\n## How the check works\n\nSubtract one from the first digit. Multiply each of the eleven digits by its weight, which runs 10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19. Add the results. If the total divides by 89, the number is valid. The Australian Taxation Office publishes the algorithm, which is why this page can run it rather than ask a server.\n\n## What to check once you get to the register\n\n- **Active.** A cancelled ABN on a current invoice is a problem, not a formality.\n- **GST registered.** If an invoice charges GST, the ABN on it should be registered for GST. If it is not, the GST line should not be there.\n- **The entity name.** It will often differ from the trading name, which is normal. What is not normal is an entity with no visible connection to the business you are dealing with.\n- **The registration date.** A business trading for fifteen years under an ABN registered last month is worth a question.\n\n## Why it matters on an invoice\n\nIf a supplier does not quote an ABN on an invoice, the payer may be required to withhold tax from the payment at the top rate. That is the ATO rule and it is the practical reason ABNs appear on invoices at all.\n\nAn ABN is not a licence. Almost anyone can get an ABN in about ten minutes. A licence is permission to do a specific class of regulated work. Check both, separately, and the [licence check](/tools/licence-check/) is the other half of the job.",
     "faqs": [
       {
-        "q": "Why is this listed if it does not work yet?",
-        "a": "Because the page tells you where to go in the meantime and what to look at when you get there, which is most of the value. Pretending a tool works when it does not is worse than saying so."
+        "q": "Does this tell me if the ABN is active?",
+        "a": "No. It validates the checksum, which proves the number is well formed rather than mistyped or invented. Active status, the entity name and GST registration all come from the Australian Business Register, and the link to that exact ABN appears once the number checks out."
+      },
+      {
+        "q": "Is my ABN sent anywhere?",
+        "a": "No. The check runs in your browser using the algorithm the ATO publishes. Nothing leaves the page, there is no request, and there is nothing to log."
       },
       {
         "q": "Is an ABN the same as a licence?",
-        "a": "No. An ABN is a tax registration and almost anyone can get one. A licence is permission to do a specific class of regulated work. Check both, separately."
+        "a": "No, and the difference matters. An ABN is a tax registration and almost anyone can get one. A licence is permission to do a specific class of regulated work. Check both, separately."
       },
       {
         "q": "What is the difference between an ABN and an ACN?",
-        "a": "An ACN is a company number issued by ASIC and only companies have one. An ABN is issued by the ATO and sole traders, partnerships, trusts and companies can all have one. A company's ABN usually contains its ACN."
+        "a": "An ACN is a nine digit company number issued by ASIC and only companies have one. An ABN is eleven digits, issued by the ATO, and sole traders, partnerships, trusts and companies can all have one. A company ABN usually contains its ACN."
       },
       {
-        "q": "Can I check a business name that is not a company?",
-        "a": "Yes. Registered business names are searchable through ASIC's business names register and through ABN Lookup, which shows trading names linked to an ABN."
+        "q": "The checksum passes but the entity name is different. What now?",
+        "a": "Ask. Trading names routinely differ from the registered entity and that is normal. An entity with no visible connection to the business in front of you is not."
       }
     ]
   },

@@ -109,12 +109,26 @@
   gap: 9px;
   flex: none;
 }
-.mark i {
-  width: 3px;
-  height: 20px;
-  background: var(--wattle);
+/* Wordmark. Gold pin, "Locals" in the brand green, "Know" in wattle, which is
+   the lockup on the logo itself. */
+.mark .pin {
+  flex: none;
   display: block;
-  transform: skewX(-14deg);
+}
+.mark b {
+  font-weight: 800;
+  color: var(--river);
+}
+.mark em {
+  font-style: normal;
+  font-weight: 800;
+  color: var(--wattle-ink);
+}
+.foot .mark b {
+  color: var(--paper);
+}
+.foot .mark em {
+  color: var(--wattle);
 }
 .nav {
   display: flex;
@@ -1401,4 +1415,69 @@
   margin-left: auto;
   color: var(--ink-40);
   font-size: 13.5px;
+}
+
+/* ---------------------------------------------------------------- trust band */
+/*
+ * The Trust and Safety block a directory needs and almost none of them have.
+ * Four claims, each linking to the page that proves it, because a trust claim
+ * with nowhere to go is decoration.
+ */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.trust article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--river);
+  border-radius: var(--r);
+  padding: 22px 22px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.trust svg {
+  width: 26px;
+  height: 26px;
+  color: var(--river);
+  margin-bottom: 14px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.trust h3 {
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  margin-bottom: 9px;
+  text-wrap: balance;
+}
+.trust p {
+  font-size: 14.5px;
+  color: var(--ink-60);
+  margin: 0 0 14px;
+}
+.trust a {
+  margin-top: auto;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--river);
+  border-bottom: 1px solid var(--wattle);
+  align-self: flex-start;
+  transition: color 0.15s, border-color 0.15s;
+}
+.trust a:hover {
+  color: var(--river-dark);
+  border-color: var(--river);
+}
+.trust article:nth-child(2) {
+  border-left-color: var(--wattle);
+}
+.trust article:nth-child(2) svg {
+  color: var(--wattle-ink);
+}
+.trust article:nth-child(4) {
+  border-left-color: var(--wattle);
+}
+.trust article:nth-child(4) svg {
+  color: var(--wattle-ink);
 }
