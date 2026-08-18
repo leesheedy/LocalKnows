@@ -178,6 +178,7 @@ you, and none of them block anything that is already working.
 | 4 | **Add `GOOGLE_MAPS_API_KEY`** if you want real star ratings. Without it every listing links to its Google profile instead, which is the intended fallback and not a failure. | Netlify env, GitHub secret |
 | 5 | **Add `INDEXNOW_KEY`** to ping Bing and friends on every refresh. Generate one with `node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"`. | GitHub secret |
 | 6 | **`pip install crawl4ai && crawl4ai-setup`** on whichever machine runs the town expansion scraper. | Local |
+| 7 | **Extend `src/data/community.json`.** Eleven verified entries cover most towns via their council and regional paper. To add more, open the organisation's own site and copy the URL out of its footer. Never construct one from a name: `facebook.com/<TownName>` may belong to somebody else. `npm test` checks every entry resolves to real localities and records its source. | Local |
 
 Also worth doing once: verify the domain in Google Search Console and submit
 `https://localsknow.com.au/sitemap.xml`.
@@ -225,6 +226,46 @@ npm run wire        # just the generated articles
 npm run places      # just the Google ratings
 npm run indexnow    # tell Bing and friends what changed
 ```
+
+---
+
+## Checking it
+
+Three commands, three different jobs, and the build runs the first two.
+
+```bash
+npm test      # 93 hand worked assertions. Arithmetic, dates, data invariants.
+npm run verify   # crawls dist: dead links, duplicate canonicals, sitemap agreement
+npm run audit    # on page SEO report: descriptions, titles, thin pages, schema
+npm run smoke    # checks every URL in the DEPLOYED sitemap returns 200
+```
+
+`npm test` and `verify` are gates: they fail the build. `audit` and `smoke` are
+reports, because a weak meta description should be on a list, not blocking a
+deploy.
+
+The assertions are deliberately the kind somebody could check with a calculator
+and a tape measure. 6m x 4m of concrete at 100mm is 2.4 cubic metres. A 30%
+markup is a 23.08% margin. Easter Sunday 2027 is 28 March. 24m of fence at 2.4m
+centres is exactly 10 bays and 11 posts, so exact division must not add a
+phantom bay. Every one of those is published on the site as advice, which is the
+only reason they are worth testing.
+
+Nine of them are data invariants no build step covered: no verified licence
+without a check date, no Google rating without a fetch date, every listing has a
+source, every listing services its own locality, and no business is listed twice.
+
+### The bug class this codebase actually has
+
+Five times now, a page has been linked from somewhere that computed a threshold
+differently to the route that builds it. Suburbs linked to town hubs that were
+never generated; theme pages linked from eight places and built from none.
+
+The fix each time is the same and it is worth stating as a rule: **a predicate
+that decides whether a page exists lives in `src/lib/repo.ts`, and everything
+that links to that page asks it.** `isLiveLocality`, `hasGuidePages`,
+`hasLocalityEvents`, `themesFor`, `pageExists`. Never re-derive one at a call
+site. `npm run verify` catches it when you do, which is what it is for.
 
 ---
 
