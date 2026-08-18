@@ -12,6 +12,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { tokenise, matchesQuery, buildHaystack } from '../src/lib/search.mjs';
+import { imageSize } from '../src/lib/imagesize.mjs';
 import {
   CALCULATORS,
   GST_RATE,
@@ -343,6 +344,126 @@ if (fs.existsSync(path.join(DATA, 'community.json'))) {
   eq('every community entry has a known type', badType, 0);
   eq('every community entry records where it was read from', noSource, 0);
   eq('community data is not empty', community.length > 0, true);
+}
+
+// ---------------------------------------------------------------- image headers
+{
+  // Dimensions decide the width and height on every business photo, and a
+  // wrong number there is layout shift on a page nobody rebuilds for months.
+  // Real files first, where the expected answer is independently known.
+  const real = [
+    ['public/brand/icon-192.png', 192, 192, 'png'],
+    ['public/brand/icon-512.png', 512, 512, 'png'],
+    ['public/og/default.png', 1200, 630, 'png'],
+    ['public/favicon.svg', 64, 64, 'svg'],
+  ];
+  for (const [file, w, h, format] of real) {
+    const d = imageSize(fs.readFileSync(path.join(process.cwd(), file)));
+    eq(file + ' measures ' + w + 'x' + h, d ? d.width + 'x' + d.height : 'null', w + 'x' + h);
+    eq(file + ' is detected as ' + format, d && d.format, format);
+  }
+
+  // The logo ships as both PNG and SVG. They have to agree, or one of the two
+  // is the wrong export and every place that picks between them is inconsistent.
+  const asPng = imageSize(fs.readFileSync(path.join(process.cwd(), 'public/brand/localknows-logo.png')));
+  const asSvg = imageSize(fs.readFileSync(path.join(process.cwd(), 'public/brand/localknows-logo.svg')));
+  eq(
+    'the logo PNG and SVG describe the same box',
+    asPng.width / asPng.height,
+    asSvg.width / asSvg.height,
+  );
+
+  // Synthetic headers, because no JPEG or WebP is checked into the repository
+  // and those are the two formats a business will actually send from a phone.
+  const jpegOf = (w, h, decoy) => {
+    const parts = [Buffer.from([0xff, 0xd8])];
+    const app0 = Buffer.alloc(18);
+    app0.writeUInt16BE(0xffe0, 0);
+    app0.writeUInt16BE(16, 2);
+    app0.write('JFIF\0', 4, 'ascii');
+    parts.push(app0);
+    if (decoy) {
+      // An APP1 payload containing bytes identical to an SOF0 announcing 1x1.
+      // Real EXIF thumbnails contain exactly this. A parser that scans for
+      // 0xFFC0 rather than walking segment lengths reports 1x1 for every photo
+      // off an iPhone.
+      const payload = Buffer.from([0xff, 0xc0, 0x00, 0x11, 0x08, 0x00, 0x01, 0x00, 0x01, 0x03]);
+      const app1 = Buffer.alloc(4 + payload.length);
+      app1.writeUInt16BE(0xffe1, 0);
+      app1.writeUInt16BE(2 + payload.length, 2);
+      payload.copy(app1, 4);
+      parts.push(app1);
+    }
+    const sof = Buffer.alloc(21);
+    sof.writeUInt16BE(0xffc0, 0);
+    sof.writeUInt16BE(17, 2);
+    sof.writeUInt8(8, 4);
+    sof.writeUInt16BE(h, 5);
+    sof.writeUInt16BE(w, 7);
+    sof.writeUInt8(3, 9);
+    parts.push(sof);
+    return Buffer.concat(parts);
+  };
+
+  const riff = (id, body) => {
+    const buf = Buffer.alloc(20 + body.length);
+    buf.write('RIFF', 0, 'ascii');
+    buf.writeUInt32LE(12 + body.length, 4);
+    buf.write('WEBP', 8, 'ascii');
+    buf.write(id, 12, 'ascii');
+    buf.writeUInt32LE(body.length, 16);
+    body.copy(buf, 20);
+    return buf;
+  };
+
+  const vp8x = (w, h) => {
+    const b = Buffer.alloc(10);
+    b.writeUIntLE(w - 1, 4, 3);
+    b.writeUIntLE(h - 1, 7, 3);
+    return riff('VP8X', b);
+  };
+  const vp8 = (w, h) => {
+    const b = Buffer.alloc(20);
+    b[3] = 0x9d;
+    b[4] = 0x01;
+    b[5] = 0x2a;
+    b.writeUInt16LE(w, 6);
+    b.writeUInt16LE(h, 8);
+    return riff('VP8 ', b);
+  };
+  const vp8l = (w, h) => {
+    const b = Buffer.alloc(20);
+    b[0] = 0x2f;
+    b.writeUInt32LE(((w - 1) | ((h - 1) << 14)) >>> 0, 1);
+    return riff('VP8L', b);
+  };
+
+  const synthetic = [
+    ['jpeg 4032x3024, an iPhone photo', jpegOf(4032, 3024, false), 4032, 3024],
+    ['jpeg with an SOF decoy inside EXIF', jpegOf(3000, 2000, true), 3000, 2000],
+    ['webp VP8X 1600x1200', vp8x(1600, 1200), 1600, 1200],
+    ['webp lossy 800x600', vp8(800, 600), 800, 600],
+    ['webp lossless 640x480', vp8l(640, 480), 640, 480],
+  ];
+  for (const [label, buf, w, h] of synthetic) {
+    const d = imageSize(buf);
+    eq(label, d ? d.width + 'x' + d.height : 'null', w + 'x' + h);
+  }
+
+  // Height precedes width in a JPEG frame header and follows it in every other
+  // format here, so a transposition is the likeliest bug and a square test
+  // would hide it.
+  const tall = imageSize(jpegOf(1000, 2000, false));
+  eq('a portrait JPEG is not reported as landscape', tall.width < tall.height, true);
+
+  // Anything that is not an image must come back null rather than a guess,
+  // because preflight turns null into a build failure and a wrong guess into
+  // a broken page.
+  for (const f of ['package.json', 'src/lib/search.mjs', 'src/styles/tokens.css']) {
+    eq('not an image: ' + f, imageSize(fs.readFileSync(path.join(process.cwd(), f))), null);
+  }
+  eq('an empty buffer is not an image', imageSize(Buffer.alloc(0)), null);
+  eq('a truncated PNG signature is not an image', imageSize(Buffer.from([0x89, 0x50])), null);
 }
 
 // ---------------------------------------------------------------- report

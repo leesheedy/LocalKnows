@@ -8,6 +8,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { imageSize } from '../src/lib/imagesize.mjs';
+
 const DATA = path.join(process.cwd(), 'src', 'data');
 const read = (f) => JSON.parse(fs.readFileSync(path.join(DATA, f), 'utf8'));
 
@@ -230,6 +232,99 @@ console.log('  localities   ' + localities.length + '  (' + withListings.size + 
 console.log('  categories   ' + categories.length + '  (' + orphanCategories.length + ' with no listings yet)');
 console.log('  modifiers    ' + modifiers.length);
 console.log('  listings     ' + listings.length);
+// ---------------------------------------------------------------- imagery
+{
+  // Images are the one part of a listing supplied by an outsider: a business
+  // sends a logo and a photo through the claim form and somebody drops the
+  // files in and writes the path. That is a manual step, and a mistyped path
+  // would otherwise fail silently by rendering the monogram fallback, which
+  // looks exactly like a business that never sent anything.
+  const PUBLIC = path.join(process.cwd(), 'public');
+  const seenSrc = new Map();
+  let logos = 0;
+  let photos = 0;
+
+  const checkImage = (l, img, kind) => {
+    const where = l.slug + ' ' + kind;
+
+    if (typeof img.src !== 'string' || !img.src.startsWith('/')) {
+      fail(where + ': src must be a site absolute path, got ' + JSON.stringify(img.src));
+      return;
+    }
+
+    const full = path.join(PUBLIC, img.src);
+    const rel = path.relative(PUBLIC, full);
+    if (rel.startsWith('..') || path.isAbsolute(rel)) {
+      fail(where + ': src escapes public/, ' + img.src);
+      return;
+    }
+    if (!fs.existsSync(full)) {
+      fail(where + ': file does not exist, public' + img.src);
+      return;
+    }
+
+    const dim = imageSize(fs.readFileSync(full));
+    if (!dim) {
+      fail(where + ': not a readable PNG, JPEG, WebP or SVG, public' + img.src);
+      return;
+    }
+
+    // Anything smaller than this is a thumbnail somebody grabbed off a search
+    // result, and it will look like one at the size the page renders it.
+    const floor = kind === 'logo' ? 96 : 640;
+    if (dim.width < floor) {
+      fail(
+        where + ': only ' + dim.width + 'px wide, needs at least ' + floor + 'px (' + img.src + ')',
+      );
+    }
+
+    const bytes = fs.statSync(full).size;
+    // Not a failure: an oversized file still renders. It is a warning because
+    // it is a page weight problem somebody should fix, not a broken page.
+    if (bytes > 600 * 1024) {
+      warn(where + ': ' + Math.round(bytes / 1024) + ' KB is heavy for the web (' + img.src + ')');
+    }
+
+    // The same file used by two businesses means one of them has somebody
+    // else's shopfront on their page.
+    if (seenSrc.has(img.src) && seenSrc.get(img.src) !== l.slug) {
+      fail(where + ': ' + img.src + ' is also used by ' + seenSrc.get(img.src));
+    }
+    seenSrc.set(img.src, l.slug);
+  };
+
+  for (const l of listings) {
+    if (l.logo) {
+      logos++;
+      checkImage(l, l.logo, 'logo');
+    }
+
+    for (const [i, ph] of (l.photos ?? []).entries()) {
+      photos++;
+      checkImage(l, ph, 'photo ' + (i + 1));
+
+      // A photo carries information a screen reader user loses entirely
+      // without alt text, so unlike a logo it is mandatory. These particular
+      // rejections are the placeholder strings people actually type.
+      const alt = typeof ph.alt === 'string' ? ph.alt.trim() : '';
+      if (!alt) {
+        fail(l.slug + ' photo ' + (i + 1) + ': alt text is required');
+      } else if (alt.length < 12) {
+        fail(l.slug + ' photo ' + (i + 1) + ': alt text "' + alt + '" is too short to describe anything');
+      } else if (/^(photo|image|picture|logo)\b/i.test(alt)) {
+        fail(
+          l.slug + ' photo ' + (i + 1) + ': alt text should describe the scene, not start with "' +
+            alt.split(/\s+/)[0] + '"',
+        );
+      } else if (alt.trim().toLowerCase() === String(l.name).trim().toLowerCase()) {
+        fail(l.slug + ' photo ' + (i + 1) + ': alt text is just the business name');
+      }
+    }
+  }
+
+  console.log('  imagery      ' + logos + ' logos, ' + photos + ' photos');
+}
+
 console.log('  guides       ' + guides.length + '   wire ' + wire.length + '   tools ' + tools.length + '   events ' + events.length + '   lists ' + lists.length);
 
 if (warnings.length) {

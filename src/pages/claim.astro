@@ -9,6 +9,7 @@
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
+import UploadFields from '~/components/UploadFields.astro';
 import { url, STATES, listings, POLICY } from '~/lib/repo';
 import { SITE } from '~/lib/site';
 import { n } from '~/lib/copy';
@@ -41,6 +42,10 @@ const faqs = [
   {
     q: 'Does claiming a listing cost anything?',
     a: 'No, and it does not become paid later. Claiming, editing every field, adding hours and photos, setting service areas, replying to reviews and receiving enquiries are all on the free tier and stay there. The paid products are enquiry routing for businesses that want quote requests pushed into their own systems, and a multi location dashboard. Neither one changes where a listing sits in a list.',
+  },
+  {
+    q: 'How do I send my logo and photos?',
+    a: 'Attach them to the claim form. There is a slot for a logo and three for photos, and PNG, JPEG and WebP all work, plus SVG for a logo. Send them straight off your phone: large images are shrunk on your own device before they are uploaded, so a photo that is five megabytes on the camera roll arrives as a few hundred kilobytes and nothing is sent at full size. The photos go on the listing when the claim is approved, the first one leading the page. They stay yours, we do not sell them or pass them to anyone, and you can ask for any of them to be taken down at any time.',
   },
   {
     q: 'What proof do you need that the business is mine?',
@@ -254,7 +259,7 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
         <span class="mono">Free &middot; two business days</span>
       </div>
       <div class="panel-body">
-        <form name="claim" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="claim" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="claim" />
           <input type="hidden" name="subject" value="LocalsKnow listing claim" />
           <p hidden>
@@ -309,6 +314,8 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
             <label class="mono" style={lbl} for="k-notes">Anything else we should fix</label>
             <textarea style={inp + ';min-height:130px;resize:vertical'} id="k-notes" name="notes" rows="5"></textarea>
           </p>
+
+          <UploadFields idPrefix="claim" />
 
           <p style="margin:0">
             <button class="btn btn-river" type="submit">Send claim</button>

@@ -480,6 +480,178 @@
   background-size: cover;
   background-position: center;
 }
+/*
+ * A business's own logo replaces the monogram tile in the same box. contain,
+ * not cover: cropping somebody's logo to a square is worse than letterboxing
+ * it, and the white ground keeps a transparent PNG legible on the paper
+ * background. Width and height are fixed by .logo above, so the intrinsic
+ * dimensions on the tag only ever serve as the aspect ratio hint.
+ */
+img.logo {
+  object-fit: contain;
+  background: var(--white);
+}
+
+/*
+ * Photographs supplied by the business. The first one leads at full width and
+ * the rest sit in a row beneath it, which reads as a shopfront and a few
+ * details rather than a contact sheet.
+ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.gallery figure {
+  margin: 0;
+  border-radius: var(--r);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  /* A fixed ratio box means the page never reflows as photos arrive, whatever
+     shape the business sent. */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.gallery .gal-lead {
+  grid-column: 1 / -1;
+}
+
+.gallery .gal-lead img {
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 560px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery .gal-lead img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/*
+ * Upload fields on the claim and verified forms.
+ *
+ * These styles live here rather than scoped inside UploadFields.astro for the
+ * reason the tool widgets do: the script toggles classes at runtime, and while
+ * these particular elements are server rendered and would keep their scoping
+ * attribute, keeping every runtime-touched rule in one global file is the
+ * convention that stopped this breaking once already.
+ */
+.upload {
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  padding: 16px 16px 4px;
+  margin: 0 0 18px;
+  background: var(--white);
+}
+
+.upload legend {
+  padding: 0 8px;
+  font-size: 13px;
+  color: var(--ink-60);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.upload-intro {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: var(--ink-60);
+  max-width: 60ch;
+}
+
+.upload-row {
+  margin: 0 0 14px;
+}
+
+.upload-label {
+  display: block;
+  color: var(--ink-60);
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.upload input[type='file'] {
+  display: block;
+  width: 100%;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink-60);
+  padding: 9px 10px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r);
+  background: var(--paper);
+  cursor: pointer;
+}
+
+.upload input[type='file']:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 2px;
+}
+
+/* The button inside a file input is the actual tap target, and at its default
+   size it is well under the 44px a thumb needs. */
+.upload input[type='file']::file-selector-button {
+  font: inherit;
+  font-size: 14px;
+  min-height: 34px;
+  padding: 6px 14px;
+  margin-right: 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r);
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.upload input[type='file']::file-selector-button:hover {
+  background: var(--river);
+  border-color: var(--river);
+  color: var(--white);
+}
+
+.upload-status {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: var(--river);
+  min-height: 1em;
+  overflow-wrap: anywhere;
+}
+
+.upload-status.bad {
+  color: var(--clay);
+}
+
+.upload-hint {
+  display: block;
+  font-size: 13px;
+  color: var(--ink-40);
+  margin-top: 4px;
+}
+
+.upload-total {
+  margin: 4px 0 12px;
+  font-size: 13px;
+  color: var(--ink-60);
+  min-height: 1em;
+}
+
+.upload-total.over {
+  color: var(--clay);
+  font-weight: 600;
+}
+
 .logo.sm {
   width: 38px;
   height: 38px;

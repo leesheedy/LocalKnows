@@ -28,6 +28,7 @@ import ListingCard from '~/components/ListingCard.astro';
 import { outboundRel } from '~/lib/indexability';
 import { description as fitDescription } from '~/lib/seo';
 import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
+import { listingMedia } from '~/lib/media';
 import { humanDate } from '~/lib/build';
 import {
   graph,
@@ -49,6 +50,7 @@ interface Props {
 }
 const { listing, locality, category, buildDate } = Astro.props;
 
+const media = listingMedia(listing);
 const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const canonicalPath = url.listing(listing);
@@ -276,7 +278,7 @@ const jsonLd = graph([
   crumbs={crumbs}
   jsonLd={jsonLd}
   qualityScore={listing.qualityScore}
-  ogImage={ogForVertical(listing.vertical)}
+  ogImage={media.social ? media.social.src : ogForVertical(listing.vertical)}
   ogType="article"
   modifiedAt={listing.lastCheckedAt}
 >
@@ -284,7 +286,19 @@ const jsonLd = graph([
     <div class="biz">
       <div>
         <header class="biz-head">
-          <span class={'logo lg lg-' + listing.logoTheme} aria-hidden="true">{listing.logoText}</span>
+          {media.logo ? (
+            <img
+              class="logo lg"
+              src={media.logo.src}
+              alt=""
+              width={media.logo.width}
+              height={media.logo.height}
+              fetchpriority="high"
+              decoding="async"
+            />
+          ) : (
+            <span class={'logo lg lg-' + listing.logoTheme} aria-hidden="true">{listing.logoText}</span>
+          )}
           <div style="min-width:0;flex:1">
             <p class="eyebrow mono">
               <a href={url.localityCategory(locality, category)}>{category.name}</a>
@@ -305,6 +319,23 @@ const jsonLd = graph([
         <p style="margin-top:22px;font-size:17px;color:var(--ink-80);max-width:var(--measure)">
           {listing.description}
         </p>
+
+        {media.photos.length > 0 && (
+          <section class="gallery" aria-label={'Photos of ' + listing.name}>
+            {media.photos.map((p, i) => (
+              <figure class={i === 0 ? 'gal-lead' : ''}>
+                <img
+                  src={p.src}
+                  alt={p.alt}
+                  width={p.width}
+                  height={p.height}
+                  loading={i === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              </figure>
+            ))}
+          </section>
+        )}
 
         {listing.highlights.length > 0 && (
           <section class="panel" style="margin-top:24px">

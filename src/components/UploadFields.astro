@@ -1,0 +1,278 @@
+---
+/**
+ * Logo and photo upload, for the claim and verified forms.
+ *
+ * Netlify Forms imposes two limits that between them decide this whole design:
+ * the entire form request must be under 8 MB, and file uploads time out after
+ * 30 seconds. A modern phone photo is 3 to 5 MB, so an owner attaching a
+ * shopfront and two interiors blows the request limit outright, and on the
+ * rural mobile connections a lot of this directory's businesses actually have,
+ * even one of them can run past 30 seconds. Both failures happen after the
+ * person has filled in the whole form.
+ *
+ * So the images are downscaled in the browser before they are ever sent. A
+ * 4032x3024 phone photo becomes roughly 1600px on its long edge and a few
+ * hundred kilobytes, which is larger than anything the site displays and
+ * removes the limits from the conversation entirely.
+ *
+ * The resized file is written back into the input with DataTransfer rather
+ * than being posted over fetch. That matters: the form keeps its ordinary
+ * native submission, the one currently working and already collecting
+ * submissions. Swapping in an AJAX post to gain a progress bar would put the
+ * only working path on the site at risk for cosmetics.
+ *
+ * Netlify supports one file per field, so there are four discrete fields
+ * rather than a single multiple input.
+ */
+interface Props {
+  /** Distinct per form, since two forms can appear in one build. */
+  idPrefix: string;
+  photoSlots?: number;
+}
+const { idPrefix, photoSlots = 3 } = Astro.props;
+
+const slots = Array.from({ length: photoSlots }, (_, i) => i + 1);
+---
+
+<fieldset class="upload" data-upload>
+  <legend class="mono">Logo and photos (optional)</legend>
+  <p class="upload-intro">
+    Send your logo and up to {photoSlots} photos and we will put them on the listing when
+    the claim is approved. Large photos are shrunk on this device before sending, so a
+    picture straight off a phone is fine and nothing is uploaded at full size.
+  </p>
+
+  <div class="upload-row">
+    <label class="mono upload-label" for={idPrefix + '-logo'}>Logo</label>
+    <input
+      id={idPrefix + '-logo'}
+      name="logo"
+      type="file"
+      accept="image/png,image/jpeg,image/webp,image/svg+xml"
+      data-upload-input
+      data-kind="logo"
+    />
+    <p class="upload-status" data-status-for={idPrefix + '-logo'} aria-live="polite"></p>
+    <span class="upload-hint">PNG, JPEG, WebP or SVG. A square version works best.</span>
+  </div>
+
+  {slots.map((i) => (
+    <div class="upload-row">
+      <label class="mono upload-label" for={idPrefix + '-photo-' + i}>Photo {i}</label>
+      <input
+        id={idPrefix + '-photo-' + i}
+        name={'photo_' + i}
+        type="file"
+        accept="image/png,image/jpeg,image/webp"
+        data-upload-input
+        data-kind="photo"
+      />
+      <p class="upload-status" data-status-for={idPrefix + '-photo-' + i} aria-live="polite"></p>
+      {i === 1 && (
+        <span class="upload-hint">
+          The shopfront or the thing people recognise. This one leads the page.
+        </span>
+      )}
+    </div>
+  ))}
+
+  <p class="upload-total mono" data-upload-total aria-live="polite"></p>
+</fieldset>
+
+<script is:inline define:vars={{ idPrefix }}>
+  (function () {
+    var scope = document.getElementById(idPrefix + '-logo');
+    if (!scope) return;
+    var root = scope.closest('[data-upload]');
+    if (!root) return;
+    var form = root.closest('form');
+    if (!form) return;
+
+    // Netlify's ceiling is 8 MB for the whole request. The text fields are
+    // negligible beside the images, but the margin is left anyway because
+    // multipart encoding adds overhead and being refused at the door after
+    // filling in a long form is a miserable way to find out.
+    var REQUEST_CEILING = 7.2 * 1024 * 1024;
+    var MAX_EDGE = { logo: 800, photo: 1600 };
+    var QUALITY = 0.82;
+
+    var inputs = [].slice.call(root.querySelectorAll('[data-upload-input]'));
+    var totalEl = root.querySelector('[data-upload-total]');
+    // Holds the resized size per input so the total does not have to re-read
+    // the File objects on every keystroke elsewhere in the form.
+    var sizes = {};
+    var working = 0;
+
+    function human(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return Math.round(bytes / 1024) + ' KB';
+      return (bytes / 1024 / 1024).toFixed(1) + ' MB';
+    }
+
+    function statusFor(input) {
+      return root.querySelector('[data-status-for="' + input.id + '"]');
+    }
+
+    function total() {
+      var t = 0;
+      for (var k in sizes) if (Object.prototype.hasOwnProperty.call(sizes, k)) t += sizes[k];
+      return t;
+    }
+
+    function paintTotal() {
+      var t = total();
+      if (!totalEl) return;
+      if (t === 0) {
+        totalEl.textContent = '';
+        totalEl.classList.remove('over');
+        return;
+      }
+      totalEl.textContent = 'Attached: ' + human(t) + ' of 8 MB allowed';
+      totalEl.classList.toggle('over', t > REQUEST_CEILING);
+    }
+
+    /**
+     * Draws the image at a reduced size and re-encodes it as JPEG.
+     * Returns the original file whenever shrinking would not help, so a
+     * carefully optimised 40 KB logo is never re-encoded into something worse.
+     */
+    function shrink(file, maxEdge) {
+      if (!/^image\/(jpeg|png|webp)$/.test(file.type)) return Promise.resolve(file);
+      if (typeof createImageBitmap !== 'function') return Promise.resolve(file);
+
+      // from-image applies the EXIF rotation. Without it every portrait photo
+      // taken on a phone arrives on its side.
+      return createImageBitmap(file, { imageOrientation: 'from-image' })
+        .catch(function () {
+          return createImageBitmap(file);
+        })
+        .then(function (bmp) {
+          var longest = Math.max(bmp.width, bmp.height);
+          var scale = Math.min(1, maxEdge / longest);
+          var w = Math.max(1, Math.round(bmp.width * scale));
+          var h = Math.max(1, Math.round(bmp.height * scale));
+
+          var canvas = document.createElement('canvas');
+          canvas.width = w;
+          canvas.height = h;
+          var ctx = canvas.getContext('2d');
+          if (!ctx) return file;
+          // A white ground, because a transparent PNG re-encoded to JPEG
+          // otherwise fills its transparency with black.
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, w, h);
+          ctx.drawImage(bmp, 0, 0, w, h);
+          if (bmp.close) bmp.close();
+
+          return new Promise(function (resolve) {
+            canvas.toBlob(
+              function (blob) {
+                if (!blob || blob.size >= file.size) return resolve(file);
+                var name = file.name.replace(/\.[^.]+$/, '') + '.jpg';
+                try {
+                  resolve(new File([blob], name, { type: 'image/jpeg' }));
+                } catch (e) {
+                  resolve(file);
+                }
+              },
+              'image/jpeg',
+              QUALITY,
+            );
+          });
+        })
+        .catch(function () {
+          return file;
+        });
+    }
+
+    function replaceFile(input, file) {
+      if (typeof DataTransfer !== 'function') return false;
+      try {
+        var dt = new DataTransfer();
+        dt.items.add(file);
+        input.files = dt.files;
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function handle(input) {
+      var status = statusFor(input);
+      var file = input.files && input.files[0];
+
+      if (!file) {
+        delete sizes[input.id];
+        if (status) {
+          status.textContent = '';
+          status.classList.remove('bad');
+        }
+        paintTotal();
+        return;
+      }
+
+      if (!/^image\//.test(file.type)) {
+        input.value = '';
+        delete sizes[input.id];
+        if (status) {
+          status.textContent = 'That is not an image. Send a PNG, JPEG or WebP.';
+          status.classList.add('bad');
+        }
+        paintTotal();
+        return;
+      }
+
+      if (status) {
+        status.classList.remove('bad');
+        status.textContent = 'Preparing…';
+      }
+      working++;
+
+      var original = file.size;
+      shrink(file, MAX_EDGE[input.getAttribute('data-kind')] || 1600).then(function (out) {
+        working--;
+        var used = out;
+        if (out !== file && !replaceFile(input, out)) {
+          // The browser will not let us swap the file in, so the original is
+          // what will actually be sent and the total has to say so.
+          used = file;
+        }
+        sizes[input.id] = used.size;
+
+        if (status) {
+          var shrunk = used.size < original;
+          status.textContent = shrunk
+            ? file.name + ' — ' + human(original) + ' reduced to ' + human(used.size)
+            : file.name + ' — ' + human(used.size);
+          status.classList.toggle('bad', used.size > REQUEST_CEILING);
+        }
+        paintTotal();
+      });
+    }
+
+    inputs.forEach(function (input) {
+      input.addEventListener('change', function () {
+        handle(input);
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      if (working > 0) {
+        e.preventDefault();
+        if (totalEl) totalEl.textContent = 'Still preparing the images, one moment…';
+        return;
+      }
+      if (total() > REQUEST_CEILING) {
+        e.preventDefault();
+        if (totalEl) {
+          totalEl.classList.add('over');
+          totalEl.textContent =
+            'Attached files come to ' +
+            human(total()) +
+            ', over the 8 MB limit. Remove one and send the rest — you can email the others later.';
+          totalEl.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+      }
+    });
+  })();
+</script>

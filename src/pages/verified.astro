@@ -10,6 +10,7 @@
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
+import UploadFields from '~/components/UploadFields.astro';
 import { url, listings } from '~/lib/repo';
 import { SITE, PLANS } from '~/lib/site';
 import { n } from '~/lib/copy';
@@ -215,7 +216,7 @@ const jsonLd = graph([
             ? 'Tell us the business and the licence number and we will run the first check within two business days.'
             : 'No payment details, no obligation. We will email you once when it opens and not for any other reason.'}
         </p>
-        <form name="verified" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="verified" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="verified" />
           <input type="hidden" name="subject" value="LocalsKnow verification enquiry" />
           <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
@@ -253,6 +254,8 @@ const jsonLd = graph([
             <span style="display:block;font-size:13.5px;font-weight:500;margin-bottom:6px">Anything else</span>
             <textarea name="message" rows="3"></textarea>
           </label>
+          <UploadFields idPrefix="verified" />
+
           <button class="btn btn-gold" type="submit" style="margin-top:18px">
             {PLANS.live ? 'Start verification' : 'Put me on the list'}
           </button>

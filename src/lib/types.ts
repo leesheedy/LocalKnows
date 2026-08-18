@@ -120,6 +120,26 @@ export interface Review {
   ownerReply?: string;
 }
 
+/** A logo supplied by the business. Path is site absolute, under /img/biz/. */
+export interface ListingImage {
+  src: string;
+  /**
+   * Optional for a logo only. A logo is decorative beside a heading that
+   * already carries the business name, so an empty alt is the correct
+   * accessible choice and the default.
+   */
+  alt?: string;
+}
+
+/** A photograph supplied by the business. */
+export interface ListingPhoto extends ListingImage {
+  /**
+   * Mandatory here, unlike a logo. A photo carries information a screen reader
+   * user would otherwise lose, and "photo of the business" is not alt text.
+   */
+  alt: string;
+}
+
 export interface Listing {
   id: string;
   slug: string;
@@ -155,6 +175,21 @@ export interface Listing {
 
   logoText: string;
   logoTheme: 'a' | 'b' | 'c' | 'd' | 'e' | 'f';
+
+  /**
+   * Real imagery, supplied by the business when it claims the listing.
+   *
+   * Both are optional and absent for most records, because most records were
+   * built from public sources and we do not have the right to a business's
+   * photographs until they hand them over. When absent the generated monogram
+   * tile shows instead, which is why logoText and logoTheme stay mandatory.
+   *
+   * Note there are no width and height fields. Dimensions are read from the
+   * file itself at build time by src/lib/media.ts, so a re-crop cannot leave a
+   * stale number behind. See src/lib/imagesize.mjs.
+   */
+  logo?: ListingImage;
+  photos?: ListingPhoto[];
 
   attributes: Record<string, string>;
   licences: Licence[];

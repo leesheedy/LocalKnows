@@ -2,6 +2,7 @@
 import type { Category, Listing, Locality } from '~/lib/types';
 import { url, averageRating, getCategory, getLocality } from '~/lib/repo';
 import { formatTime, dayShort } from '~/lib/copy';
+import { listingMedia } from '~/lib/media';
 
 interface Props {
   listing: Listing;
@@ -20,12 +21,25 @@ const travelsIn = context && home && home.id !== context.id;
 const crossesBorder = context && home && home.state !== context.state;
 const openDays = listing.hours.filter((h) => !h.closed);
 const weekend = listing.hours.find((h) => h.day === 6 && !h.closed);
+const media = listingMedia(listing);
 ---
 <article class="card">
   <div class="card-top">
-    <span class={'logo lg-' + listing.logoTheme} aria-hidden="true">
-      {listing.logoText}
-    </span>
+    {media.logo ? (
+      <img
+        class="logo"
+        src={media.logo.src}
+        alt=""
+        width={media.logo.width}
+        height={media.logo.height}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <span class={'logo lg-' + listing.logoTheme} aria-hidden="true">
+        {listing.logoText}
+      </span>
+    )}
     <div style="min-width:0">
       <h3><a href={url.listing(listing)}>{listing.name}</a></h3>
       <p class="cat-line">

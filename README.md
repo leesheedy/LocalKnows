@@ -351,3 +351,36 @@ program runs separately with `rel="nofollow"`. Reasoning is in
 ---
 
 Built by [Automatrix Digital](https://automatrix.au).
+
+## Business imagery
+
+A listing may carry a `logo` and up to a few `photos`. Both are optional and
+most records have neither, because most were built from public sources and a
+business's photographs are not ours to publish until they send them.
+
+Files live under `public/img/biz/<slug>/` and the listing stores only the path
+and, for photos, alt text. **Dimensions are never stored.** They are read out of
+the file itself at build time by `src/lib/imagesize.mjs`, so a re-crop cannot
+leave a stale width behind and the `<img>` always reserves the right box. Every
+consumer — cards, the business page, the JSON-LD `image` property and the social
+card — goes through `listingMedia()` in `src/lib/media.ts`, for the same reason
+every other predicate lives in one place here.
+
+Adding a business's images is three steps:
+
+1. Download the files from the Netlify form submission.
+2. Save them under `public/img/biz/<slug>/`.
+3. Add `logo` and/or `photos` to the listing in `src/data/listings.json`. Photos
+   need alt text describing the scene.
+
+`npm run build` then fails if the path is wrong, the file is too small to be
+anything but a thumbnail, the same file is used by two businesses, or a photo's
+alt text is missing or is a placeholder like "Photo of the shop".
+
+Uploads come in through the claim and verified forms. Netlify caps the whole
+form request at 8 MB and times uploads out after 30 seconds, which a single
+modern phone photo can breach on a rural connection, so
+`src/components/UploadFields.astro` downscales images in the browser before they
+are sent — 1600px on the long edge for a photo, 800px for a logo. It writes the
+smaller file back into the input rather than posting over fetch, so the form
+keeps its ordinary native submission.

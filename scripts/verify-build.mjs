@@ -59,6 +59,8 @@ const rx = {
   jsonld: /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/gi,
   href: /\shref="(\/[^"#?]*)"/gi,
   imgNoAlt: /<img(?![^>]*\salt=)[^>]*>/gi,
+  img: /<img\s[^>]*>/gi,
+  imgSrc: /\ssrc="([^"]*)"/i,
   ogImage: /<meta property="og:image" content="([^"]*)"/i,
 };
 
@@ -137,6 +139,24 @@ for (const file of htmlFiles) {
   // --- images
   const noAlt = (html.match(rx.imgNoAlt) || []).length;
   if (noAlt > 0) warnings.push(p + ' has ' + noAlt + ' img without alt');
+
+  for (const tag of html.match(rx.img) || []) {
+    const src = (tag.match(rx.imgSrc) || [])[1];
+    if (!src || !src.startsWith('/')) continue;
+
+    // A business photo whose file did not ship is a broken image on a page
+    // built to look credible, so it is an error rather than a warning.
+    if (!allFiles.has(path.join(DIST, src.split('?')[0]))) {
+      errors.push(p + ' references a missing image: ' + src);
+    }
+
+    // Dimensions are what stop the page reflowing when the image lands. They
+    // are emitted from the file itself by src/lib/media.ts, so a tag without
+    // them means something bypassed that path.
+    if (!/\swidth="/.test(tag) || !/\sheight="/.test(tag)) {
+      errors.push(p + ' has an img without width and height: ' + src);
+    }
+  }
 
   // --- weight
   if (html.length > 320_000) warnings.push(p + ' is ' + Math.round(html.length / 1024) + 'kb of HTML');
