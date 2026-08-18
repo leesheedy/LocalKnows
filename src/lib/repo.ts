@@ -22,6 +22,7 @@ import type {
 import { POLICY, STATES } from './site';
 import { nearestLocalities, type Neighbour } from './geo';
 import { path } from './slug';
+import { THEMES } from './themes';
 
 import geoNsw from '../data/geo-nsw.json';
 import geoVic from '../data/geo-vic.json';
@@ -628,3 +629,19 @@ export const COMMUNITY_TYPE_LABEL: Record<CommunityLink['type'], string> = {
   buysell: 'Buy, swap and sell',
   emergency: 'Emergency and alerts',
 };
+
+// ------------------------------------------------------------------ themes
+
+/**
+ * Which themed pages exist for a locality.
+ *
+ * Same shape as isLiveLocality and hasGuidePages, and here for the same reason:
+ * the route decides existence by a threshold, so anything that links to one has
+ * to ask the same question rather than assume.
+ */
+export function themesFor(localityId: string) {
+  const rows = listingsInLocality(localityId);
+  return THEMES.filter(
+    (t) => rows.filter((l) => t.matches(l, categoryById.get(l.categoryIds[0]))).length >= t.min,
+  );
+}

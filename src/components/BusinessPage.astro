@@ -335,6 +335,7 @@ const jsonLd = graph([
               <span class="mono">As published</span>
             </div>
             <div class="panel-body">
+              <div class="table-scroll">
               <table class="hourstable">
                 <tbody>
                   {hours.map((h) => (
@@ -349,6 +350,7 @@ const jsonLd = graph([
                   ))}
                 </tbody>
               </table>
+              </div>
               <p style="margin:14px 0 0;font-size:13px;color:var(--ink-40)">
                 Public holiday hours differ, and they differ between New South Wales and
                 Victoria. <a href="/guides/public-holidays-nsw-vs-vic/" style="color:var(--river)">Which days differ</a>.

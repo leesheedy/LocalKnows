@@ -1,0 +1,237 @@
+---
+/**
+ * Themed locality pages: /nsw/albury/nightlife/, /nsw/wagga-wagga/with-kids/.
+ *
+ * "Albury nightlife" is a real query and a category page cannot answer it,
+ * because the answer spans pubs, bars, breweries and live music and excludes
+ * the bowls club that shuts at six.
+ *
+ * The theme definitions are in src/lib/themes.ts. Every listing on one of these
+ * pages is there because it matched a rule, and the rule is printed on the page.
+ * That is the difference between this and the "best of" pages that fill the
+ * first result for every one of these queries.
+ *
+ * A theme sits at the same URL depth as a category, /state/place/<slug>/, so it
+ * shares that route rather than declaring its own. Two dynamic routes at the
+ * same segment is a collision, not a feature. preflight guards theme slugs
+ * against colliding with a category slug.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import {
+  url,
+  STATES,
+  listingsInLocality,
+  getCategory,
+  getRegion,
+  neighboursOf,
+  hasGuidePages,
+  hasLocalityEvents,
+} from '~/lib/repo';
+import { THEMES } from '~/lib/themes';
+import type { Listing, Locality } from '~/lib/types';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  placeNode,
+  faqNode,
+  itemListNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  locality: Locality;
+  themeSlug: string;
+}
+const { locality, themeSlug } = Astro.props;
+const theme = THEMES.find((t) => t.slug === themeSlug)!;
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.locality(locality) + theme.slug + '/';
+
+const matched = listingsInLocality(locality.id)
+  .filter((l) => theme.matches(l, getCategory(l.categoryIds[0])))
+  .sort((a, b) => b.qualityScore - a.qualityScore);
+
+/** A listing lands in the first group it matches, so nothing is listed twice. */
+const groups = theme.groups
+  ? (() => {
+      const seen = new Set<string>();
+      return theme.groups
+        .map((g) => {
+          const items = matched.filter((l) => {
+            if (seen.has(l.id)) return false;
+            if (!g.test(l, getCategory(l.categoryIds[0]))) return false;
+            seen.add(l.id);
+            return true;
+          });
+          return { ...g, items };
+        })
+        .filter((g) => g.items.length > 0);
+    })()
+  : [];
+const ungrouped = theme.groups ? matched.filter((l) => !groups.some((g) => g.items.includes(l))) : matched;
+
+const h1 = theme.title(locality.name);
+const description = theme.standfirst(locality.name, matched.length);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: h1, href: canonicalPath },
+];
+
+const faqs = theme.faqs(locality.name, state.name, matched.length);
+
+// Sibling themes that actually exist for this town, so nothing links to a page
+// that fell under its own threshold.
+const rows = listingsInLocality(locality.id);
+const siblings = THEMES.filter(
+  (t) =>
+    t.slug !== theme.slug &&
+    rows.filter((l) => t.matches(l, getCategory(l.categoryIds[0]))).length >= t.min,
+);
+
+// Same theme, nearby towns, again only where the page exists.
+const nearby = neighboursOf(locality, 12)
+  .filter((nb) => {
+    const r = listingsInLocality(nb.locality.id);
+    return r.filter((l) => theme.matches(l, getCategory(l.categoryIds[0]))).length >= theme.min;
+  })
+  .slice(0, 6);
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: theme.metaTitle(locality.name, state.name),
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  placeNode(locality, region),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: h1,
+    items: matched.slice(0, 40).map((l) => ({ url: url.listing(l), name: l.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="localityCategory"
+  title={theme.metaTitle(locality.name, state.name)}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={matched.length}
+  basedCount={1}
+  ogImage={ogForState(locality.state)}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{theme.eyebrow} &middot; {locality.name} {locality.state}</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{description}</p>
+      <div class="headmeta">
+        <span>{n(matched.length)} {matched.length === 1 ? 'place' : 'places'}</span>
+        {groups.length > 0 && <span>&middot; {groups.length} groups</span>}
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>How this page was built.</strong> {theme.rule}
+    </div>
+  </div>
+
+  {groups.length > 0
+    ? groups.map((g) => (
+        <section class="sec">
+          <div class="wrap">
+            <div class="sec-head">
+              <h2>{g.key}</h2>
+              <p>{g.blurb} {g.items.length} in {locality.name}.</p>
+            </div>
+            <div class="cards">
+              {g.items.map((l: Listing) => <ListingCard listing={l} context={locality} />)}
+            </div>
+          </div>
+        </section>
+      ))
+    : (
+        <div class="wrap" style="padding-top:24px">
+          <div class="cards">
+            {matched.map((l) => <ListingCard listing={l} context={locality} />)}
+          </div>
+        </div>
+      )}
+
+  {groups.length > 0 && ungrouped.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head"><h2>Also on the list</h2></div>
+        <div class="cards">
+          {ungrouped.map((l) => <ListingCard listing={l} context={locality} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={h1.charAt(0).toUpperCase() + h1.slice(1) + ', asked and answered'} />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'More of ' + locality.name,
+        links: [
+          ...siblings.map((t) => ({
+            href: url.locality(locality) + t.slug + '/',
+            label: t.title(locality.name),
+          })),
+          ...(hasGuidePages(locality.id)
+            ? [
+                { href: url.locality(locality) + 'new-in-town/', label: 'New in ' + locality.name + '? Start here' },
+                { href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name },
+              ]
+            : []),
+          { href: url.locality(locality), label: 'Everything in ' + locality.name },
+          ...(hasLocalityEvents(locality.slug)
+            ? [{ href: url.localityEvents(locality), label: 'What is on in ' + locality.name }]
+            : []),
+        ],
+      },
+      ...(nearby.length
+        ? [
+            {
+              heading: h1.charAt(0).toUpperCase() + h1.slice(1) + ', nearby',
+              links: nearby.map((nb) => ({
+                href: url.locality(nb.locality) + theme.slug + '/',
+                label: theme.title(nb.locality.name),
+                note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+                cross: nb.crossesBorder,
+              })),
+            },
+          ]
+        : []),
+    ]}
+  />
+</Base>

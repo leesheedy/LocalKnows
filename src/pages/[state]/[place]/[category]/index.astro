@@ -1,17 +1,29 @@
 ---
+/**
+ * /nsw/albury/plumbers/  and  /nsw/albury/nightlife/
+ *
+ * A category page and a themed page sit at the same URL depth, so they share a
+ * route and getStaticPaths decides which is which. Two dynamic routes competing
+ * for one segment is a collision, not a feature.
+ */
 import MoneyPage from '~/components/MoneyPage.astro';
+import ThemePage from '~/components/ThemePage.astro';
 import {
   STATES,
   liveLocalities,
   activeCategoriesInLocality,
+  listingsInLocality,
   listingsInLocalityCategory,
   localityCategoryStats,
+  getCategory,
   POLICY,
 } from '~/lib/repo';
+import { THEMES } from '~/lib/themes';
 import { BUILD_DATE, chunk } from '~/lib/build';
 
 export async function getStaticPaths() {
-  const paths = [];
+  const paths: any[] = [];
+
   for (const locality of liveLocalities()) {
     for (const { category } of activeCategoriesInLocality(locality.id)) {
       const rows = listingsInLocalityCategory(locality.id, category.id);
@@ -23,6 +35,7 @@ export async function getStaticPaths() {
           category: category.slug,
         },
         props: {
+          type: 'category',
           locality,
           category,
           listings: chunk(rows, POLICY.perPage)[0],
@@ -32,18 +45,39 @@ export async function getStaticPaths() {
         },
       });
     }
+
+    // Themed pages. Below a theme's own threshold the page is not generated at
+    // all: a nightlife page with two pubs on it is worse than none.
+    const all = listingsInLocality(locality.id);
+    for (const theme of THEMES) {
+      const matched = all.filter((l) => theme.matches(l, getCategory(l.categoryIds[0])));
+      if (matched.length < theme.min) continue;
+      paths.push({
+        params: {
+          state: STATES[locality.state].slug,
+          place: locality.slug,
+          category: theme.slug,
+        },
+        props: { type: 'theme', locality, themeSlug: theme.slug },
+      });
+    }
   }
+
   return paths;
 }
 
-const { locality, category, listings, stats, page, totalPages } = Astro.props;
+const props = Astro.props as any;
 ---
-<MoneyPage
-  locality={locality}
-  category={category}
-  listings={listings}
-  stats={stats}
-  page={page}
-  totalPages={totalPages}
-  buildDate={BUILD_DATE}
-/>
+{props.type === 'theme' ? (
+  <ThemePage locality={props.locality} themeSlug={props.themeSlug} />
+) : (
+  <MoneyPage
+    locality={props.locality}
+    category={props.category}
+    listings={props.listings}
+    stats={props.stats}
+    page={props.page}
+    totalPages={props.totalPages}
+    buildDate={BUILD_DATE}
+  />
+)}

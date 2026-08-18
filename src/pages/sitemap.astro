@@ -16,6 +16,8 @@ import {
   liveLocalities,
   listingsInLocality,
   activeCategoriesInLocality,
+  themesFor,
+  hasGuidePages,
   listingsInCategory,
   categories,
   guides,
@@ -233,6 +235,17 @@ const jsonLd = graph([
               </a>
             </h3>
             <ul>
+              {themesFor(row.locality.id).map((t) => (
+                <li>
+                  <a href={url.locality(row.locality) + t.slug + '/'}><strong>{t.title(row.locality.name)}</strong></a>
+                </li>
+              ))}
+              {hasGuidePages(row.locality.id) && (
+                <>
+                  <li><a href={url.locality(row.locality) + 'new-in-town/'}><strong>New in {row.locality.name}</strong></a></li>
+                  <li><a href={url.locality(row.locality) + 'hidden-gems/'}><strong>Hidden gems</strong></a></li>
+                </>
+              )}
               {row.cats.map((c) => (
                 <li>
                   <a href={url.localityCategory(row.locality, c.category)}>{c.category.name}</a>

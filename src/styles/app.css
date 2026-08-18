@@ -1996,3 +1996,44 @@
   font-size: 14px;
   color: var(--ink-60);
 }
+
+/* ---------------------------------------------------------------- mobile */
+/*
+ * The footer dropped from five columns to two at 900px and stopped there. Two
+ * 150px columns on a 360px phone is not a layout, it is a squeeze, so it goes
+ * to one below 520px.
+ */
+@media (max-width: 520px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+  .foot-base {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .foot-base .right {
+    margin-left: 0;
+  }
+}
+
+/* A scroll container only earns its keep when there is something to scroll. */
+.table-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+.table-scroll > table {
+  min-width: 100%;
+}
+
+/* Long words and URLs are the other way a page gets wider than the phone. */
+@media (max-width: 520px) {
+  .prose,
+  .standfirst,
+  .card p.desc,
+  .deflist dd {
+    overflow-wrap: anywhere;
+  }
+  .pagehead h1 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+}

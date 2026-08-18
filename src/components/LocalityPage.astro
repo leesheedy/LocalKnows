@@ -10,6 +10,7 @@ import {
   getRegion,
   activeCategoriesInLocality,
   hasGuidePages,
+  themesFor,
   listingsInLocality,
   neighboursOf,
   listsForLocality,
@@ -62,6 +63,7 @@ const byVertical = VERTICALS.map((v) => ({
 
 const featured = rows.slice().sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 6);
 const nearby = neighboursOf(locality, 10);
+const themes = themesFor(locality.id);
 const lists = listsForLocality(locality.slug);
 const events = eventsInLocality(locality.slug).filter((e) => e.startDate.slice(0, 10) >= buildDate).slice(0, 5);
 const guides = allGuides
@@ -162,6 +164,14 @@ const jsonLd = graph([
         <span>&middot; Checked {buildDate}</span>
       </div>
     </div>
+
+    {themes.length > 0 && (
+      <nav class="chips" style="margin-top:24px" aria-label={'Ways to explore ' + locality.name}>
+        {themes.map((t) => (
+          <a class="chip" href={url.locality(locality) + t.slug + '/'}>{t.title(locality.name)}</a>
+        ))}
+      </nav>
+    )}
 
     {hasGuidePages(locality.id) && (
       <div class="guidecta">
