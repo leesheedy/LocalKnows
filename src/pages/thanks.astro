@@ -1,0 +1,115 @@
+---
+/**
+ * Form confirmation.
+ *
+ * Every form on the site posts here rather than letting Netlify serve its own
+ * generic success page. It costs one hidden attribute per form and it is the
+ * difference between "your message was sent" and a page that tells someone what
+ * happens next and gives them somewhere to go.
+ *
+ * noindex, follow: it is a destination, not a search result.
+ */
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, listings, liveLocalities, tools } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import { graph, organisationNode, websiteNode, webPageNode, breadcrumbNode, type Crumb } from '~/lib/seo';
+
+const canonicalPath = url.thanks();
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Thanks', href: canonicalPath },
+];
+const liveTools = tools.filter((t) => t.status === 'live').slice(0, 6);
+
+const description = 'Your message reached us. Here is what happens next.';
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: 'Thanks', description, crumbs, dateModified: BUILD_DATE }),
+]);
+---
+
+<Base
+  kind="utility"
+  title="Thanks, we have it"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Received</p>
+      <h1>Thanks, we have it.</h1>
+      <p class="standfirst">
+        It landed in the inbox at {SITE.email}. Someone reads every one of these, and you
+        will hear back within two business days.
+      </p>
+    </div>
+
+    <div class="prose">
+      <h2>What happens next</h2>
+      <p>Depends what you sent, so here is all of it:</p>
+      <ul>
+        <li>
+          <strong>A correction.</strong> We check it against the source, fix the listing and
+          update the last checked date. If the correction came from the business itself we
+          take it at face value and fix it the same day.
+        </li>
+        <li>
+          <strong>A claim.</strong> We confirm you are entitled to manage the listing, then
+          hand it over. If you gave us a licence number, that goes into the verification
+          queue at the same time.
+        </li>
+        <li>
+          <strong>A removal request.</strong> Actioned within five business days, no reason
+          required and no cost. That is in the <a href={url.terms()}>terms</a> because it
+          should be enforceable rather than merely polite.
+        </li>
+        <li>
+          <strong>Anything else.</strong> A reply from a person, not an autoresponder
+          pretending to be one.
+        </li>
+      </ul>
+
+      <h2>While you are here</h2>
+      <p>
+        There are {n(listings.length)} businesses listed across {liveLocalities().length} towns
+        in New South Wales and Victoria, and every one of them shows where its details came
+        from and when they were last read.
+      </p>
+    </div>
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'Free tools',
+        links: liveTools.map((t) => ({ href: url.tool(t), label: t.title })),
+      },
+      {
+        heading: 'Browse',
+        links: [
+          { href: url.state('NSW'), label: 'New South Wales' },
+          { href: url.state('VIC'), label: 'Victoria', cross: true },
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.search(), label: 'Search the directory' },
+        ],
+      },
+      {
+        heading: 'How this works',
+        links: [
+          { href: url.about(), label: 'About LocalsKnow' },
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.privacy(), label: 'Privacy' },
+        ],
+      },
+    ]}
+  />
+</Base>

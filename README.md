@@ -172,7 +172,7 @@ you, and none of them block anything that is already working.
 
 | | What | Where |
 |---|---|---|
-| 1 | **Turn on Netlify Forms.** It is currently off, so the contact, claim, correction and verified forms render and submit but nothing is captured. Netlify project settings, Forms, enable form detection, then redeploy. | Netlify UI |
+| 1 | **Point form notifications at an inbox.** Form detection is on and the four forms register on deploy, but the notification recipient is a Netlify UI setting that cannot be set from the repo. Netlify project, Forms, Form notifications, add an email notification to `info@automatrix.au`. Each form already sends a distinct subject line and posts to `/thanks/`. | Netlify UI |
 | 2 | **Confirm the Verified price.** `PLANS.verified.price` is set to an indicative $29 a month. It is a business decision, not a code one. | `src/lib/site.ts` |
 | 3 | **Flip `PLANS.live` when Stripe is connected.** Until then `/verified/` says on its face that it is not open, and collects interest instead of money. | `src/lib/site.ts` |
 | 4 | **Add `GOOGLE_MAPS_API_KEY`** if you want real star ratings. Without it every listing links to its Google profile instead, which is the intended fallback and not a failure. | Netlify env, GitHub secret |

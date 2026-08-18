@@ -215,8 +215,9 @@ const jsonLd = graph([
             ? 'Tell us the business and the licence number and we will run the first check within two business days.'
             : 'No payment details, no obligation. We will email you once when it opens and not for any other reason.'}
         </p>
-        <form name="verified" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="verified" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="verified" />
+          <input type="hidden" name="subject" value="LocalsKnow verification enquiry" />
           <p hidden><label>Leave this empty: <input name="bot-field" /></label></p>
           <div class="formgrid">
             <label>

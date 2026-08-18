@@ -441,6 +441,7 @@ export const url = {
   dataPolicy: () => path('data-and-corrections'),
   sitemapPage: () => path('sitemap'),
   verified: () => path('verified'),
+  thanks: () => path('thanks'),
 };
 
 export { STATES, POLICY };

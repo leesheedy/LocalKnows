@@ -254,8 +254,9 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
         <span class="mono">Free &middot; two business days</span>
       </div>
       <div class="panel-body">
-        <form name="claim" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="claim" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="claim" />
+          <input type="hidden" name="subject" value="LocalsKnow listing claim" />
           <p hidden>
             <label>Leave this field empty: <input name="bot-field" /></label>
           </p>
