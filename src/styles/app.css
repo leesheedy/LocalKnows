@@ -1787,3 +1787,32 @@
   width: 1%;
   color: var(--ink-60);
 }
+
+/* ---------------------------------------------------------------- touch */
+/*
+ * 44px is the floor for anything you tap. The desktop buttons came in around
+ * 40, which is fine with a mouse and a miss with a thumb. Raised only where
+ * there is no pointer, so the desktop proportions are unchanged.
+ */
+@media (pointer: coarse) {
+  .btn,
+  .pill,
+  .chip,
+  .navtoggle {
+    min-height: 44px;
+  }
+  .chip,
+  .pill {
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-sm {
+    padding-block: 10px;
+  }
+  .nav a,
+  .util a,
+  .foot a {
+    display: inline-block;
+    padding-block: 4px;
+  }
+}

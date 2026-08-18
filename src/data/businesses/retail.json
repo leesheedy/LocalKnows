@@ -1,0 +1,1780 @@
+[
+  {
+    "name": "Borella Butchery",
+    "slug": "borella-butchery",
+    "categorySlug": "butchers",
+    "localityName": "East Albury",
+    "state": "NSW",
+    "addressLine": "206 Borella Road",
+    "suburb": "East Albury",
+    "postcode": "2640",
+    "phone": "02 6021 5222",
+    "website": "https://borellabutchery.com.au/",
+    "facebook": "https://www.facebook.com/BorellaButchery",
+    "description": "Family run butcher on Borella Road in East Albury selling grass fed beef, Angus, Wagyu, Tasmanian lamb, pork and chicken. Smallgoods are made on site in wood fired smokers, and the counter also carries dry aged beef, sausages, BBQ rubs and sauces, chef prepared meals and pastry items. Free local delivery is offered.",
+    "highlights": [
+      "Smallgoods made on site in wood fired smokers",
+      "Dry aged beef",
+      "Grass fed beef, Angus and Wagyu",
+      "Tasmanian lamb, pork and chicken",
+      "Chef prepared meals and pastries",
+      "Free local delivery"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://borellabutchery.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Borella%20Butchery%20East%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Locky's Countryside Meats",
+    "slug": "lockys-countryside-meats",
+    "categorySlug": "butchers",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "514-516 Macauley Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 3283",
+    "website": "https://lockyscountrysidemeats.com.au/",
+    "facebook": "https://www.facebook.com/Lockys-Countryside-Meats-461148364066987/",
+    "description": "Butcher shop on Macauley Street in Albury stocking beef, pork, lamb and chicken. It carries a large selection of continental smallgoods including hams, salami and smoked meats, and supplies halal meat in a range of quantities. Retail and commercial packs are available with delivery.",
+    "highlights": [
+      "Continental smallgoods, hams, salami and smoked meats",
+      "Beef, pork, lamb and chicken",
+      "Halal meat available",
+      "Retail and commercial meat packs",
+      "Delivery available"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://lockyscountrysidemeats.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Locky's%20Countryside%20Meats%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wolki Butchery",
+    "slug": "wolki-butchery",
+    "categorySlug": "butchers",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "317A Urana Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "0459 225 666",
+    "website": "https://wolkifarm.com.au/",
+    "facebook": "https://www.facebook.com/wolkifarm",
+    "instagram": "https://www.instagram.com/wolkifarm/",
+    "description": "Self serve butchery on Urana Road selling grass fed and pasture raised beef, lamb and pork from Wolki Farm. The shop describes itself as Australia’s first 24/7 self serve butchery, with access open around the clock to members. Membership is free but places are limited.",
+    "highlights": [
+      "Self serve butchery open 24/7 to members",
+      "Grass fed and pasture raised beef, lamb and pork",
+      "Meat from Wolki Farm",
+      "Free membership, limited places"
+    ],
+    "sources": [
+      "https://wolkifarm.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wolki%20Butchery%20Lavington%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Arnold's Fruit Market",
+    "slug": "arnolds-fruit-market",
+    "categorySlug": "greengrocers",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "6 Osburn Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 5322",
+    "website": "https://www.arnoldsonline.com.au/",
+    "facebook": "https://www.facebook.com/arnoldsfruitmarket",
+    "instagram": "https://www.instagram.com/arnoldsfruitmarket",
+    "description": "Fruit and vegetable market on Osburn Street in Wodonga that also carries meat, groceries, bakery, dairy and confectionery. The business traces back to 1892 when J.G Arnold began selling fresh fruit and vegetables in Albury and is now in its fifth generation of family ownership. An online shop and delivery service covers Albury Wodonga and surrounding areas, and Brian’s Nursery operates within the store.",
+    "highlights": [
+      "Trading since 1892, five generations of family ownership",
+      "Fresh fruit and vegetables plus groceries, meat, bakery and dairy",
+      "Online shop with delivery around Albury Wodonga",
+      "Brian’s Nursery operates in store",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:45",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:45",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:45",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:45",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:45",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.arnoldsonline.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Arnold's%20Fruit%20Market%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Miss Amelie Gourmet",
+    "slug": "miss-amelie-gourmet",
+    "categorySlug": "delis",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "6 Michael Drive",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 4486",
+    "website": "https://missameliegourmet.com.au/",
+    "facebook": "https://www.facebook.com/missameliegourmet",
+    "instagram": "https://www.instagram.com/missameliegourmet",
+    "description": "Fine food provedore selling pies, heat and eat meals, desserts, pastries, deli items, seafood, pantry products and wine. The business won Australia’s Best Gourmet Pie in 2022 with its Chinese BBQ pork belly pie, and has stores in Wodonga, Albury, Beechworth and Prahran Market.",
+    "highlights": [
+      "Fine food provedore",
+      "Pies, heat and eat meals and desserts",
+      "Deli, seafood and pantry lines",
+      "Winner, Australia’s Best Gourmet Pie 2022",
+      "Stores in Wodonga, Albury, Beechworth and Prahran Market"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://missameliegourmet.com.au/",
+      "https://au.search.yahoo.com/search?p=Miss+Amelie+Gourmet+Albury+Wodonga+store+address"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Miss%20Amelie%20Gourmet%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Cellar Door Wine Store",
+    "slug": "cellar-door-wine-store",
+    "categorySlug": "bottle-shops",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "62 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "website": "https://cellardoorwinestore.com.au/",
+    "description": "Boutique wine retailer and wine bar on the main street of Beechworth. It stocks an extensive selection of boutique Beechworth wines along with imported and rare wines and a range of spirits from around the world.",
+    "highlights": [
+      "Boutique Beechworth wines",
+      "Imported and rare wines",
+      "Spirits range",
+      "Wine bar as well as retail store",
+      "On Ford Street in the town centre"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=independent+bottle+shop+Beechworth+Yackandandah+wine+store+cellars",
+      "https://cellardoorwinestore.com.au/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cellar%20Door%20Wine%20Store%20Beechworth%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Olive Health Foods",
+    "slug": "olive-health-foods",
+    "categorySlug": "health-food-stores",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "540 Olive Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 5626",
+    "website": "https://www.olivehealthfoods.com.au/",
+    "facebook": "https://www.facebook.com/OliveHealthFoodsAlbury/",
+    "instagram": "https://www.instagram.com/olivehealthfoodsalbury/",
+    "description": "Health food store on Olive Street that describes itself as the largest health food store between Melbourne and Sydney. It stocks vitamins, minerals and herbs, natural makeup and skincare, water filters, eco friendly and allergy friendly products, local products and sports supplements. An in house clinic offers naturopathic consultations, allergy and intolerance testing and seminars.",
+    "highlights": [
+      "Vitamins, minerals and herbal supplements",
+      "Natural makeup and skincare",
+      "Allergy friendly and eco friendly products",
+      "In house naturopathy clinic",
+      "Allergy and intolerance testing",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "14:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.olivehealthfoods.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Olive%20Health%20Foods%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "A Zesty Health",
+    "slug": "a-zesty-health",
+    "categorySlug": "health-food-stores",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "194A High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 5099",
+    "website": "https://azestyhealth.com.au/",
+    "facebook": "https://www.facebook.com/AzestyHealth/",
+    "instagram": "https://www.instagram.com/azestyhealth/",
+    "description": "Health food shop on High Street Wodonga stocking organic, eco friendly and chemical free products alongside supplements and whole foods. Lines include nuts, seeds, legumes, grains, herbs and spices, dried fruit, sourdough bread, protein powders, essential oils, medicinal mushroom powders and skincare, with a focus on plant based, gluten free and dairy free diets. Nutrition consultations are also offered.",
+    "highlights": [
+      "Bulk nuts, seeds, grains, herbs and spices",
+      "Gluten free, dairy free and plant based lines",
+      "Supplements and protein powders",
+      "Essential oils and skincare",
+      "Nutrition consultations"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://azestyhealth.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Zesty%20Health%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wholefoods",
+    "slug": "wholefoods-wodonga",
+    "categorySlug": "health-food-stores",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "2 Romet Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "0412 552 335",
+    "website": "https://www.wholefoodsau.com/",
+    "description": "Organic grocery store on Romet Road in Wodonga stocking organic fresh produce, pantry staples, bread, eggs, frozen food, home and cleaning products, beauty items, beverages, wellness supplements, baby and kids products and pet food. Click and collect is available, and there is a second store in Wangaratta.",
+    "highlights": [
+      "Organic fresh produce",
+      "Pantry staples, bread and eggs",
+      "Wellness supplements",
+      "Home, cleaning and beauty products",
+      "Click and collect",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.wholefoodsau.com/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wholefoods%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "BOOKtique Albury",
+    "slug": "booktique-albury",
+    "categorySlug": "bookshops",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Shop 7, AMP Lane, 569 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 5005 7865",
+    "website": "https://booktiquealbury.com.au/",
+    "instagram": "https://www.instagram.com/booktique_albury/",
+    "description": "Independent bookshop in AMP Lane off Dean Street, Albury. Stock is spread across more than 60 categories including fiction, children’s books, crime and thrillers and science fiction, alongside journals, cards and gifts. Audiobooks are sold through a Libro.fm partnership.",
+    "highlights": [
+      "Independent bookshop in AMP Lane",
+      "More than 60 book categories",
+      "Children’s books, crime and science fiction",
+      "Journals, cards and gifts",
+      "Audiobooks through Libro.fm"
+    ],
+    "sources": [
+      "https://booktiquealbury.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BOOKtique%20Albury%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Thistle & Fern",
+    "slug": "thistle-and-fern",
+    "categorySlug": "florists",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "4/539 Hume Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "0447 844 785",
+    "website": "https://thistleandfern.com.au/",
+    "facebook": "https://www.facebook.com/thistleandfern/",
+    "instagram": "https://www.instagram.com/thistleandfernflowers/",
+    "description": "Florist with a shop in South Albury and a second location at Junction Square in Wodonga, selling seasonal fresh flowers, arrangements, gifts and greeting cards. Deliveries run Tuesday to Friday, with a flat delivery rate covering Wodonga, Albury, Lavington, Glenroy, Springdale Heights, Hamilton Valley, Thurgoona, Killara and Bandiana.",
+    "highlights": [
+      "Seasonal fresh flowers and arrangements",
+      "Shops in South Albury and Junction Square Wodonga",
+      "Deliveries Tuesday to Friday",
+      "Flat rate delivery across Albury Wodonga suburbs",
+      "Gifts and greeting cards"
+    ],
+    "hours": [
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://thistleandfern.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Thistle%20%26%20Fern%20South%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Jannoel Floral Co.",
+    "slug": "jannoel-floral-co",
+    "categorySlug": "florists",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "160 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "website": "https://jannoelfloralco.com.au/",
+    "description": "Florist on High Street in Wodonga selling fresh flower bouquets and arrangements for a range of occasions, with delivery across Albury Wodonga and a same day delivery option.",
+    "highlights": [
+      "Shopfront on High Street Wodonga",
+      "Fresh flower bouquets and arrangements",
+      "Delivery across Albury Wodonga",
+      "Same day delivery available"
+    ],
+    "sources": [
+      "https://jannoelfloralco.com.au/",
+      "https://au.search.yahoo.com/search?p=florist+Wodonga+flower+shop"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jannoel%20Floral%20Co.%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Peards Nursery Albury",
+    "slug": "peards-nursery-albury",
+    "categorySlug": "nurseries",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "119 Borella Road",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 7800",
+    "website": "https://peards.com.au/nursery/",
+    "facebook": "https://www.facebook.com/peardsalbury",
+    "description": "Garden centre at the Peards site on Borella Road, Albury, selling plants, trees, pots and water features alongside giftware and homewares. The nursery opens every day from 8:00am and there is a cafe on site serving coffee and meals.",
+    "highlights": [
+      "Plants, trees and seedlings",
+      "Pots and water features",
+      "Giftware and homewares",
+      "Cafe on site",
+      "Open every day from 8am"
+    ],
+    "sources": [
+      "https://peards.com.au/nursery/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Peards%20Nursery%20Albury%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Peards Nursery Wodonga",
+    "slug": "peards-nursery-wodonga",
+    "categorySlug": "nurseries",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "90 Elgin Boulevard",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 2661",
+    "website": "https://www.peardswodonga.com.au/",
+    "facebook": "https://www.facebook.com/p/Peards-Nursery-Wodonga-100063491649540/",
+    "description": "Nursery on Elgin Boulevard in Wodonga carrying a large range of indoor and outdoor shrubs, trees and seedlings, plus garden giftware and accessories. The business has been locally owned and operating for more than 40 years.",
+    "highlights": [
+      "Indoor and outdoor shrubs, trees and seedlings",
+      "Garden giftware and accessories",
+      "Locally owned for over 40 years",
+      "On Elgin Boulevard, Wodonga"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.peardswodonga.com.au/",
+      "https://www.peardswodonga.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Peards%20Nursery%20Wodonga%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Our Native Garden Nursery",
+    "slug": "our-native-garden-nursery",
+    "categorySlug": "nurseries",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "29 Kane Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "0418 579 331",
+    "website": "https://ournativegarden.com.au/",
+    "description": "Nursery supplying native plants local to the Albury Wodonga region for revegetation projects, landscaping and home gardens, propagated from locally sourced seed. It sits next to the Re-use Shop at the Wodonga Transfer Station, with parking at the Re-use Shop, and opens Friday mornings and Saturday middays.",
+    "highlights": [
+      "Indigenous plants local to the Albury Wodonga region",
+      "Grown from locally sourced seed",
+      "Stock for revegetation, landscaping and home gardens",
+      "Next to the Re-use Shop at Wodonga Transfer Station",
+      "Open Friday and Saturday"
+    ],
+    "hours": [
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "12:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "11:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://ournativegarden.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Our%20Native%20Garden%20Nursery%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Comet Cycles",
+    "slug": "comet-cycles",
+    "categorySlug": "bike-shops",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "2/435 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 6017",
+    "website": "https://www.cometcycles.com.au/",
+    "facebook": "https://www.facebook.com/CometCyclesAlbury",
+    "instagram": "https://www.instagram.com/cometcyclesalbury",
+    "description": "Bike shop on Dean Street, Albury selling road, mountain, gravel, fitness, kids and e-bikes along with parts and cycling accessories. The workshop handles everything from tune ups to custom builds, aiming to complete repairs on the spot where possible and quoting in advance otherwise.",
+    "highlights": [
+      "Road, mountain, gravel, fitness and e-bikes",
+      "Workshop servicing and custom builds",
+      "Bike fitting",
+      "Parts and accessories",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "11:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.cometcycles.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Comet%20Cycles%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Border Bikes AW",
+    "slug": "border-bikes-aw",
+    "categorySlug": "bike-shops",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "1/60 Chapple Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6041 4388",
+    "website": "https://borderbikesaw.com.au/",
+    "facebook": "https://www.facebook.com/borderbikesaw/",
+    "instagram": "https://www.instagram.com/borderbikesaw",
+    "description": "Bike shop on Chapple Street, Wodonga handling sales, servicing and repairs. It is a stockist for major bike brands and offers tune ups, custom part fitting, personal bike fitting, spare parts and help with delivery or pick up of bikes. The business started in 2014 as Cycle Station in the Albury CBD.",
+    "highlights": [
+      "Sales, servicing and repairs",
+      "Stockist for major bike brands",
+      "Personal bike fitting",
+      "Custom builds and parts fitting",
+      "Trading since 2014"
+    ],
+    "sources": [
+      "https://borderbikesaw.com.au/",
+      "https://au.search.yahoo.com/search?p=bike+shop+Albury+Wodonga+bicycle+store"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Border%20Bikes%20AW%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Adventure Gear Albury",
+    "slug": "adventure-gear-albury",
+    "categorySlug": "outdoor-stores",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "1/435 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 6200",
+    "website": "https://adventuregearonline.com.au/",
+    "facebook": "https://www.facebook.com/p/Adventure-Gear-Albury-61578929741868/",
+    "instagram": "https://www.instagram.com/adventuregearalbury/",
+    "description": "Outdoor shop on Dean Street, Albury stocking hiking, camping and travel gear. Departments cover apparel, footwear, packs and bags, hydration, nutrition, navigation, optics and lighting, and repair and survival gear. Brands carried include Osprey, Fjällräven, Icebreaker, La Sportiva, Rab, Patagonia, Helinox, Lowa and Exped.",
+    "highlights": [
+      "Hiking, camping and travel gear",
+      "Packs, footwear and technical apparel",
+      "Navigation, optics and lighting",
+      "Brands include Osprey, Fjällräven, Icebreaker and Rab",
+      "On Dean Street in central Albury"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://adventuregearonline.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Adventure%20Gear%20Albury%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Great Outdoors Albury",
+    "slug": "great-outdoors-albury",
+    "categorySlug": "outdoor-stores",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "415 Wagga Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6040 6344",
+    "website": "https://greatoutdoorsalbury.com.au/",
+    "facebook": "https://www.facebook.com/greatoutdoorsalbury",
+    "instagram": "https://www.instagram.com/great_outdoors_albury/",
+    "description": "Outdoor and heating store on Wagga Road, Lavington selling barbecues and pizza ovens, wood heaters and gas heaters, outdoor furniture and umbrellas, camping equipment and prospecting gear, plus gas bottle refills. It is a Weber specialist dealer and calls itself the Border’s wood heater specialists.",
+    "highlights": [
+      "Weber specialist dealer",
+      "Barbecues and pizza ovens",
+      "Wood heaters and gas heaters",
+      "Camping and prospecting equipment",
+      "Gas bottle refills",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://greatoutdoorsalbury.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Great%20Outdoors%20Albury%20Lavington%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "All Music Direct",
+    "slug": "all-music-direct",
+    "categorySlug": "music-shops",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "608 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 1765",
+    "website": "https://www.allmusicdirect.com.au/",
+    "description": "Musical instrument shop on Dean Street, Albury selling acoustic, electric, bass and classical guitars, amplifiers, keyboards and pianos, orchestral and folk instruments and drums. It also carries studio and live equipment including microphones, mixers, cables and audio interfaces, and has a guitar technician on staff.",
+    "highlights": [
+      "Guitars, amplifiers, keyboards and pianos",
+      "Orchestral, folk and drum instruments",
+      "Studio and live sound equipment",
+      "Guitar technician on staff"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "10:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "10:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.allmusicdirect.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=All%20Music%20Direct%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Art Parts Fine Arts Supplies",
+    "slug": "art-parts-fine-arts-supplies",
+    "categorySlug": "art-supplies",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "488 David Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "0428 173 094",
+    "website": "https://artpartsfinearts.com.au/",
+    "facebook": "https://www.facebook.com/ArtPartsFineArts/",
+    "instagram": "https://www.instagram.com/artpartsfinearts/",
+    "description": "Art supply shop on David Street, Albury stocking acrylic, gouache, oil and watercolour paint, stretched canvas, boards and rolls, mediums, brushes, easels, drawing tools, printmaking supplies, paper and journals. The shop also runs creative workshops and sells gift certificates.",
+    "highlights": [
+      "Paint, canvas, brushes and mediums",
+      "Printmaking supplies",
+      "Paper, journals and drawing tools",
+      "Creative workshops",
+      "Gift certificates"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://artpartsfinearts.com.au/",
+      "https://artpartsfinearts.com.au/pages/contact"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Art%20Parts%20Fine%20Arts%20Supplies%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Gemglow Jewellers",
+    "slug": "gemglow-jewellers",
+    "categorySlug": "jewellers",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Shop 10, City Walk Arcade, 515-519 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6024 5219",
+    "facebook": "https://www.facebook.com/gemglowjewellers/",
+    "description": "Family jewellers in the City Walk Arcade off Dean Street, Albury, established in 1961. The business specialises in handmade bespoke jewellery, jewellery repairs and gifts, and carries pearl and silver jewellery.",
+    "highlights": [
+      "Family jewellers established in 1961",
+      "Handmade bespoke jewellery",
+      "Jewellery repairs",
+      "Pearl and silver jewellery",
+      "In City Walk Arcade off Dean Street"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:30",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=%22Gemglow%22+jewellers+Albury+address+phone",
+      "https://www.facebook.com/gemglowjewellers/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gemglow%20Jewellers%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Armadio Style Collective",
+    "slug": "armadio-style-collective",
+    "categorySlug": "clothing-stores",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "494 Olive Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "0493 834 053",
+    "website": "https://armadiostyle.com.au/",
+    "instagram": "https://www.instagram.com/armadio_stylecollective/",
+    "description": "Women’s fashion boutique on Olive Street, Albury stocking mid to high end clothing and accessories, including dresses, tops, bottoms, outerwear, jewellery, bags, footwear and scarves. The store also sells online.",
+    "highlights": [
+      "Mid to high end women’s clothing",
+      "Dresses, tops, bottoms and outerwear",
+      "Jewellery, bags, footwear and scarves",
+      "Shop on Olive Street plus online store"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "15:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://armadiostyle.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Armadio%20Style%20Collective%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beechworth Emporium",
+    "slug": "beechworth-emporium",
+    "categorySlug": "clothing-stores",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "24 Camp Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "03 5728 2625",
+    "facebook": "https://www.facebook.com/beechworthemporium/",
+    "description": "Department store on Camp Street in Beechworth selling men’s and ladies clothing, accessories and footwear. It has traded for over 30 years and occupies a building dating back to the 1850s, describing itself as today’s department store with yesteryear’s service.",
+    "highlights": [
+      "Men’s and ladies clothing, accessories and footwear",
+      "Trading for more than 30 years",
+      "Housed in an 1850s building",
+      "On Camp Street in central Beechworth"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=%22Beechworth+Emporium%22+Ford+Street+Beechworth+address",
+      "https://www.facebook.com/beechworthemporium/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth%20Emporium%20Beechworth%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "2 Grey Birds",
+    "slug": "2-grey-birds",
+    "categorySlug": "gift-shops",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "558 Olive Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 4426",
+    "website": "https://www.2greybirds.com.au/",
+    "facebook": "https://www.facebook.com/2GreyBirds/",
+    "instagram": "https://www.instagram.com/2greybirdsalbury/",
+    "description": "Family owned gift store on Olive Street, Albury describing itself as a treasure trove of gifts, curated hampers, homewares, paper goods and cards. Ranges cover cards, baby and wedding gifts and homewares, with a focus on independent designers and home grown brands.",
+    "highlights": [
+      "Gifts, cards and paper goods",
+      "Curated hampers",
+      "Homewares",
+      "Baby and wedding gifts",
+      "Stocks independent designers and Australian brands"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.2greybirds.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=2%20Grey%20Birds%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Yack Store",
+    "slug": "the-yack-store",
+    "categorySlug": "gift-shops",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "24 High Street",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "phone": "02 6027 1226",
+    "facebook": "https://www.facebook.com/TheYackStore/",
+    "description": "Shop on High Street in Yackandandah described as an old fashioned emporium with the latest books and gifts. It stocks books, including classic Little Golden Books, and gifts for a range of occasions.",
+    "highlights": [
+      "Books and gifts",
+      "Old fashioned emporium fit-out",
+      "Little Golden Books",
+      "On High Street in central Yackandandah"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=%22The+Yack+Store%22+Yackandandah+High+Street+books+gifts",
+      "https://www.facebook.com/TheYackStore/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Yack%20Store%20Yackandandah%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Giftwrapt Corowa",
+    "slug": "giftwrapt-corowa",
+    "categorySlug": "gift-shops",
+    "localityName": "Corowa",
+    "state": "NSW",
+    "addressLine": "102 Sanger Street",
+    "suburb": "Corowa",
+    "postcode": "2646",
+    "phone": "02 6033 0100",
+    "facebook": "https://www.facebook.com/p/Giftwrapt-Corowa-100032074046944/",
+    "description": "Gift shop on Sanger Street in Corowa selling giftware, hampers and gift vouchers.",
+    "highlights": [
+      "Giftware and merchandise",
+      "Hampers",
+      "Gift vouchers",
+      "On Sanger Street, Corowa"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=Corowa+NSW+shops+Sanger+Street+gift+shop+retail",
+      "https://www.facebook.com/p/Giftwrapt-Corowa-100032074046944/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Giftwrapt%20Corowa%20Corowa%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Who What Why",
+    "slug": "who-what-why",
+    "categorySlug": "toy-shops",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "485 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 1700",
+    "website": "https://whowhatwhy.com.au/",
+    "facebook": "https://www.facebook.com/whowhatwhyalbury/",
+    "instagram": "https://www.instagram.com/whowhatwhytoys/",
+    "description": "Toy and gift shop on Dean Street, Albury trading under the line \"an education in toys\". It has been locally owned and operated since 1995 and stocks over 3000 items covering educational toys, games, puzzles, craft supplies and children’s gifts, with brands including Connetix, Schleich, Melissa & Doug and Ravensburger.",
+    "highlights": [
+      "Locally owned and operated since 1995",
+      "Over 3000 toys, games and puzzles",
+      "Educational and craft ranges",
+      "Brands include Connetix, Schleich and Ravensburger",
+      "Gifts from baby age up to teenagers"
+    ],
+    "sources": [
+      "https://whowhatwhy.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Who%20What%20Why%20Albury%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Blairs Produce",
+    "slug": "blairs-produce",
+    "categorySlug": "produce-stores",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "341 Wagga Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6025 4600",
+    "website": "https://blairsproduce.com.au/",
+    "description": "Rural and livestock supplies store on Wagga Road, Lavington. It carries pet food and animal health products, crop protection chemicals and seed, veterinary supplies, produce, garden lines and general merchandise, stocking brands including AgBoss, Blundstone and Bainbridge.",
+    "highlights": [
+      "Rural and livestock supplies",
+      "Animal health and veterinary products",
+      "Crop protection chemicals and seed",
+      "Pet food",
+      "Workwear and farm hardware brands"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://blairsproduce.com.au/pages/retail-store"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blairs%20Produce%20Lavington%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Parkside Produce",
+    "slug": "parkside-produce",
+    "categorySlug": "produce-stores",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "13 Osburn Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 7766",
+    "website": "https://www.parksideproduce.net.au/",
+    "description": "Family owned produce store on Osburn Street, Wodonga supplying stock feed, equine and poultry products, farm supplies and domestic pet food. The store has a drive through, which it describes as the only one in the region.",
+    "highlights": [
+      "Stock feed and farm supplies",
+      "Equine and poultry products",
+      "Domestic pet food",
+      "Drive through service",
+      "Family owned and locally operated"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=Parkside+Produce+Wodonga+stock+feed+farm+supplies+Osburn",
+      "https://www.parksideproduce.net.au/"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parkside%20Produce%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kellys Mitre 10",
+    "slug": "kellys-mitre-10",
+    "categorySlug": "hardware-stores",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "88 Elgin Boulevard",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6055 3333",
+    "website": "https://kellysmitre10.com/",
+    "facebook": "https://www.facebook.com/kellyswodonga",
+    "instagram": "https://www.instagram.com/kellysmitre10/",
+    "description": "Locally owned family run hardware store on Elgin Boulevard, Wodonga. It runs a trade centre carrying building materials, is an authorised STIHL dealer for sales and servicing with genuine parts, and stocks rural and animal care products plus workwear and boots. Local delivery and equipment servicing are offered to builders, tradespeople and farmers across the Albury Wodonga region.",
+    "highlights": [
+      "Locally owned and family run",
+      "Trade centre with building materials",
+      "Authorised STIHL sales and servicing",
+      "Rural and animal care products",
+      "Workwear and boots",
+      "Local delivery"
+    ],
+    "sources": [
+      "https://kellysmitre10.com/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kellys%20Mitre%2010%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Rutherglen Home Hardware",
+    "slug": "rutherglen-home-hardware",
+    "categorySlug": "hardware-stores",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "79-81 Main Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 8513",
+    "description": "Independent hardware store on Main Street, Rutherglen carrying a range of home improvement and hardware products for home and weekend projects, with in store shopping, delivery and same day service options.",
+    "highlights": [
+      "Independent local hardware store",
+      "Home improvement and hardware range",
+      "Delivery available",
+      "Same day service option",
+      "On Main Street, Rutherglen"
+    ],
+    "sources": [
+      "https://au.search.yahoo.com/search?p=Rutherglen+Hardware+Main+Street+Rutherglen+Victoria"
+    ],
+    "confidence": "medium",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Rutherglen%20Home%20Hardware%20Rutherglen%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Leather & Thread",
+    "slug": "leather-and-thread",
+    "categorySlug": "furniture-stores",
+    "localityName": "West Wodonga",
+    "state": "VIC",
+    "addressLine": "2 Romet Road",
+    "suburb": "West Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 6665",
+    "website": "https://leatherandthread.com.au/",
+    "facebook": "https://www.facebook.com/LeatherAndThreadFurniture",
+    "instagram": "https://www.instagram.com/leatherthreadco",
+    "description": "Furniture store at the corner of Romet Road and McKoy Street in West Wodonga, selling lounges, dining settings, bedroom suites, living room furniture and outdoor ranges. The site also houses Good Night Sleep and La-Z-Boy Albury Wodonga.",
+    "highlights": [
+      "Lounges, dining and bedroom furniture",
+      "Outdoor furniture ranges",
+      "Good Night Sleep bedding on site",
+      "La-Z-Boy Albury Wodonga on site",
+      "Open seven days"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "10:00",
+        "closes": "14:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "14:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://leatherandthread.com.au/",
+      "https://au.search.yahoo.com/search?p=furniture+store+Albury+Wodonga+locally+owned+family"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Leather%20%26%20Thread%20West%20Wodonga%20VIC",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Whatever Where-ever Craft",
+    "slug": "whatever-where-ever-craft",
+    "categorySlug": "craft-stores",
+    "localityName": "Howlong",
+    "state": "NSW",
+    "addressLine": "26 Fairway Close",
+    "suburb": "Howlong",
+    "postcode": "2643",
+    "phone": "02 6026 5489",
+    "website": "https://whateverwhereever.com.au/",
+    "facebook": "https://www.facebook.com/Whatever-Where-ever-Crafts-280478668643632",
+    "instagram": "https://www.instagram.com/whatever_whereever_craft/",
+    "description": "Patchwork, quilting and sewing shop in Howlong stocking over 2,000 bolts of fabric across brights, florals, reproductions and children’s prints. It also carries patterns, pre-cuts such as jelly rolls, layer cakes and charm squares, kits, books, templates, felt, yarn and notions, and sells online.",
+    "highlights": [
+      "Over 2,000 bolts of quilting fabric",
+      "Pre-cuts including jelly rolls and charm squares",
+      "Patterns, kits, books and templates",
+      "Felt, yarn and notions",
+      "Online store as well as shopfront"
+    ],
+    "hours": [
+      {
+        "day": 2,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "10:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://whateverwhereever.com.au/"
+    ],
+    "confidence": "high",
+    "vertical": "trades",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Whatever%20Where-ever%20Craft%20Howlong%20NSW",
+    "lastCheckedAt": "2026-08-18"
+  }
+]
