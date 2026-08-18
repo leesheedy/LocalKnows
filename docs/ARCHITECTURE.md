@@ -469,3 +469,80 @@ The spec above is implemented. The mapping, so this document does not drift:
    page says "estimated", and `areaServed` is left out of the structured data
    until the owner states it. Section 1's cross border claim is worth nothing if
    it is built on a fabricated field.
+
+---
+
+## 14. Automation
+
+The site maintains itself between expansions. What is automated, and what is
+deliberately not, is the whole design.
+
+| Job | When | What it does |
+|---|---|---|
+| `ci.yml` | Every push | preflight, build, verify. The verifier is the gate. |
+| `refresh.yml` | Weekly, Monday 06:00 AEST | Expire ratings past 30 days, refresh them, regenerate the data driven articles, rebuild, verify, ping IndexNow, commit |
+| `smoke.yml` | Daily | Check every URL in the deployed sitemap returns 200 |
+
+The commit from `refresh.yml` is what triggers the Netlify deploy. Nothing in CI
+talks to Netlify directly.
+
+### Why the generated articles can publish unreviewed
+
+`scripts/generate-wire.mjs` writes three pieces a month out of `listings.json`:
+the directory report, what trades charge to turn up, and who publishes weekend
+hours. No language model is involved and every sentence in them is a count over
+the rows on the site.
+
+That is the test. An automated pipeline that writes opinions needs a human before
+it ships, because an opinion can be wrong in a way that is invisible to the
+machine producing it. One that writes arithmetic does not, because if the
+arithmetic is wrong the data is wrong and the whole site is wrong with it.
+
+### Why scraped businesses do not publish unreviewed
+
+`scripts/scrape.mjs` uses the crawl4ai CLI to find candidates for a new town and
+writes them to `src/data/businesses/_inbox/`. A separate `--promote` command
+moves them into the live data.
+
+A scraped row has a name and a URL and nothing that has been checked. Publishing
+them unreviewed is how every incumbent directory ended up full of businesses that
+closed in 2019, which is the thing this site exists to be an alternative to. The
+review step is about thirty seconds per business and it is the product.
+
+### Events
+
+"What is on" is not a job. `BUILD_DATE` decides which events are upcoming and
+which have passed, so a scheduled rebuild is the entire mechanism. A passed event
+keeps its page, goes `noindex, follow`, and says so on its face with a pointer to
+what is next. Nothing is deleted, per section 12.
+
+---
+
+## 15. The paid tier
+
+`/verified/` sells the licence checking work. It does not sell the badge, and the
+difference is enforced rather than promised:
+
+- A subscriber whose licence does not check out does not get a badge.
+- A licence that lapses mid subscription loses the badge at the next monthly
+  check while the billing keeps running. That is deliberately the wrong way round
+  for us, and the right way round for the reader.
+- Nothing about a plan is an input to `rank()`. There is no field a payment writes
+  to and no branch in the sort that reads one.
+
+Prices live in `PLANS` in `src/lib/site.ts`. `PLANS.live` gates the page between
+"opening soon" and "available", so it cannot take money for something that is not
+connected yet.
+
+Every directory in the country sells a trust badge, which is why nobody believes
+one. The moment a badge is bought rather than passed it stops carrying
+information, and a reader who works that out discounts every badge on the site
+including the honest ones. The subscription is only worth anything while the badge
+is worth something.
+
+### Still to build
+
+- Stripe subscription and the webhook that sets `plan` on a listing.
+- The monthly re-check job against both registers, writing `lastVerifiedAt`.
+- The 60 day expiry warning email.
+- The member dashboard. `docs/prototype.html` has the design for it.

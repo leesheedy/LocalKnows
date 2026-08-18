@@ -165,6 +165,32 @@ node scripts/og.mjs
 
 ---
 
+## What still needs a human, once
+
+The site is live and self maintaining. Six things need a decision or a key from
+you, and none of them block anything that is already working.
+
+| | What | Where |
+|---|---|---|
+| 1 | **Turn on Netlify Forms.** It is currently off, so the contact, claim, correction and verified forms render and submit but nothing is captured. Netlify project settings, Forms, enable form detection, then redeploy. | Netlify UI |
+| 2 | **Confirm the Verified price.** `PLANS.verified.price` is set to an indicative $29 a month. It is a business decision, not a code one. | `src/lib/site.ts` |
+| 3 | **Flip `PLANS.live` when Stripe is connected.** Until then `/verified/` says on its face that it is not open, and collects interest instead of money. | `src/lib/site.ts` |
+| 4 | **Add `GOOGLE_MAPS_API_KEY`** if you want real star ratings. Without it every listing links to its Google profile instead, which is the intended fallback and not a failure. | Netlify env, GitHub secret |
+| 5 | **Add `INDEXNOW_KEY`** to ping Bing and friends on every refresh. Generate one with `node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"`. | GitHub secret |
+| 6 | **`pip install crawl4ai && crawl4ai-setup`** on whichever machine runs the town expansion scraper. | Local |
+
+Also worth doing once: verify the domain in Google Search Console and submit
+`https://localsknow.com.au/sitemap.xml`.
+
+### A naming thing
+
+The site content, the repo and the wordmark all say **LocalKnows**. The domain is
+**localsknow.com.au**. Both are used consistently as they stand and nothing is
+broken by it, but they are two different words and it is worth deciding which one
+is the brand before anybody prints anything.
+
+---
+
 ## It runs itself
 
 Three things happen without anybody touching them.

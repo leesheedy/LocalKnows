@@ -18,7 +18,14 @@ const args = Object.fromEntries(
 );
 
 const SITE = (args.site || process.env.SITE_URL || 'https://localsknow.com.au').replace(/\/$/, '');
-const CONCURRENCY = 12;
+// Deliberately gentle. At twelve concurrent the CDN rate limits and answers 403,
+// which a smoke test reports as the site being down. A check that cries wolf gets
+// ignored, and an ignored check is worse than no check.
+const CONCURRENCY = Number(args.concurrency || 4);
+const RETRY_STATUSES = new Set([403, 429, 502, 503, 504]);
+const UA =
+  'Mozilla/5.0 (compatible; LocalKnowsSmoke/1.0; +https://localsknow.com.au/about/)';
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 const locs = (xml) => [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 
@@ -47,17 +54,31 @@ let cursor = 0;
 async function worker() {
   while (cursor < urls.length) {
     const url = urls[cursor++];
-    try {
-      // redirect: manual, because a 301 on a canonical URL is a defect here even
-      // when it eventually resolves. It leaks link equity and it hides loops.
-      const res = await fetch(url, { redirect: 'manual', headers: { 'User-Agent': 'LocalKnowsSmoke/1.0' } });
-      const expected = url.endsWith('/404.html') ? [200, 404] : [200];
-      if (!expected.includes(res.status)) {
-        bad.push({ url, status: res.status, location: res.headers.get('location') || '' });
+    const expected = url.endsWith('/404.html') ? [200, 404] : [200];
+    let last = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        // redirect: manual, because a 301 on a canonical URL is a defect here
+        // even when it eventually resolves. It leaks equity and it hides loops.
+        const res = await fetch(url, {
+          redirect: 'manual',
+          headers: { 'User-Agent': UA, Accept: 'text/html,*/*' },
+        });
+        if (expected.includes(res.status)) {
+          last = null;
+          break;
+        }
+        last = { url, status: res.status, location: res.headers.get('location') || '' };
+        // A rate limit is not a broken page. Back off and ask again.
+        if (!RETRY_STATUSES.has(res.status)) break;
+        await sleep(1200 * (attempt + 1));
+      } catch (e) {
+        last = { url, status: 'ERR', location: e.message.slice(0, 60) };
+        await sleep(800 * (attempt + 1));
       }
-    } catch (e) {
-      bad.push({ url, status: 'ERR', location: e.message.slice(0, 60) });
     }
+    if (last) bad.push(last);
+    await sleep(60);
     done++;
     if (done % 100 === 0) process.stdout.write('  ' + done + '/' + urls.length + '\n');
   }
