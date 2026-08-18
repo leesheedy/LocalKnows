@@ -1,0 +1,133 @@
+---
+/**
+ * /wire/<slug>/ — a single piece.
+ *
+ * One column, no sidebar, no related-posts widget above the fold. The article
+ * is the page. Everything else hangs off the bottom in a link block so the
+ * crawler still gets somewhere useful when it finishes reading.
+ */
+import type { WireArticle } from '~/lib/types';
+import { url, wire, guides, localities, eventsInLocality, STATES,
+  pageExists,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { renderMarkdown } from '~/lib/markdown';
+import { humanDate, shortDate } from '~/lib/build';
+import { wireGraph, type Crumb } from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return wire.map((w) => ({ params: { slug: w.slug }, props: { w } }));
+}
+
+const { w } = Astro.props as { w: WireArticle };
+
+const canonicalPath = url.wireArticle(w);
+const rendered = renderMarkdown(w.body, pageExists);
+const scope = w.state === 'both' ? 'NSW and Victoria' : STATES[w.state].name;
+
+/**
+ * Slugs are only unique inside a state, so the state narrows the match wherever
+ * the article names one. A piece scoped to both states matches on slug alone.
+ */
+const found = w.localitySlug
+  ? localities.find((l) => l.slug === w.localitySlug && (w.state === 'both' || l.state === w.state))
+  : undefined;
+
+/** Tier 4 rolls up into a neighbour and has no page, so it never gets linked. */
+const locality = found && found.tier !== 4 ? found : undefined;
+const localityHasEvents =
+  !!locality && eventsInLocality(locality.slug).some((e) => e.state === locality.state);
+
+const others = wire
+  .filter((x) => x.slug !== w.slug)
+  .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+  .slice(0, 6);
+
+const relatedGuides = guides
+  .filter(
+    (g) =>
+      w.state === 'both' ||
+      g.stateScope === 'both' ||
+      (Array.isArray(g.stateScope) && g.stateScope.includes(w.state)),
+  )
+  .slice(0, 5);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'The wire', href: url.wire() },
+  { name: w.title, href: canonicalPath },
+];
+
+const jsonLd = wireGraph(w, crumbs);
+---
+
+<Base
+  kind="wire"
+  title={w.title}
+  description={w.description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  ogType="article"
+  publishedAt={w.publishedAt}
+  modifiedAt={w.publishedAt}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">The wire</p>
+      <h1>{w.title}</h1>
+      <p class="standfirst">{w.description}</p>
+      <div class="headmeta">
+        <span>By {w.author}</span>
+        <span>&middot; <time datetime={w.publishedAt}>{humanDate(w.publishedAt)}</time></span>
+        <span>&middot; {scope}</span>
+        {locality && <span>&middot; <a href={url.locality(locality)} style="color:var(--river)">{locality.name}</a></span>}
+      </div>
+    </div>
+
+    <div class="prose" set:html={rendered.html} />
+
+    <div class="notice">
+      <strong>On the figures.</strong> Any dollar amount or count quoted here is indicative.
+      It was read off the listings, quotes and public registers behind this site on the day
+      of writing and it moves. <a href={url.dataPolicy()}>How the data is sourced and corrected</a>.
+    </div>
+  </div>
+
+  <LinkBlock
+    heading="Keep reading"
+    groups={[
+      {
+        heading: 'More from the wire',
+        links: others.map((x) => ({
+          href: url.wireArticle(x),
+          label: x.title,
+          note: shortDate(x.publishedAt),
+        })),
+      },
+      {
+        heading: 'Guides on this',
+        links: relatedGuides.map((g) => ({ href: url.guide(g), label: g.title })),
+      },
+      {
+        heading: locality ? locality.name : scope,
+        links: locality
+          ? [
+              { href: url.locality(locality), label: 'Businesses in ' + locality.name },
+              ...(localityHasEvents
+                ? [{ href: url.localityEvents(locality), label: 'Events in ' + locality.name }]
+                : []),
+              { href: url.state(locality.state), label: STATES[locality.state].name },
+              { href: url.wire(), label: 'All of the wire' },
+            ]
+          : [
+              { href: url.state('NSW'), label: STATES.NSW.name },
+              { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+              { href: url.events(), label: 'Events across the border' },
+              { href: url.wire(), label: 'All of the wire' },
+            ],
+      },
+    ]}
+  />
+</Base>

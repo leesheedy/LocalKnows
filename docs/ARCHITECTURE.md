@@ -32,9 +32,12 @@ Flat, predictable, keyword aligned. Location first, category second.
 /nsw/riverina/                        Region hub
 /nsw/albury/                          Locality hub
 /nsw/albury/plumbers/                 MONEY PAGE  (locality x category)
+/nsw/albury/plumbers/page/2/          Pagination, indexable, self canonical
 /nsw/albury/plumbers/emergency/       Long tail modifier page
 /nsw/albury/pubs/beer-garden/         Attribute page
-/business/riverside-plumbing-co/      Listing detail (location independent)
+/nsw/albury/plumbers/riverside-plumbing-co/   Listing detail
+/business/riverside-plumbing-co/      301 alias to the canonical listing URL
+/nsw/albury/events/                   Locality events
 /categories/                          Category index
 /categories/plumbers/                 Category hub, national, links to localities
 /guides/what-plumbers-charge-nsw/     Editorial
@@ -45,7 +48,21 @@ Flat, predictable, keyword aligned. Location first, category second.
 Rules:
 
 - Trailing slash everywhere, enforced by Netlify redirect. Pick one and never change it.
-- Listing URLs never contain the suburb. A business that moves keeps its URL.
+- Listing detail sits under its locality and its primary category. The original
+  plan put it at a location independent `/business/<slug>/` so a business that
+  moved kept its URL. That was traded away deliberately: the location and
+  category in the path is worth more in the SERP than the churn it costs, and
+  a business that moves is rare compared to a business that gets found. The
+  location independent form is kept as a permanent 301 alias, written into
+  `_redirects` at build time, so a listing still has one stable identifier.
+- A listing has exactly one canonical page even when it services twenty
+  localities. Service area drives which locality pages it appears ON, never how
+  many pages it has.
+- Region and locality share the `/state/<slug>/` namespace, so a region slug can
+  never equal a locality slug inside a state. `scripts/preflight.mjs` fails the
+  build if one ever does, rather than leaving it to a naming convention.
+- A business slug and a modifier slug share `/state/place/category/<slug>/`.
+  Same rule, same check.
 - Region is a real tier, not decoration. It is how you scale to 800 localities without
   a flat 800 item sitemap that Google ignores.
 - Modifier pages only exist when there is search volume AND at least 5 qualifying
@@ -211,7 +228,7 @@ POST /api/partners/verify
   { listing_id }
 
   1. Fetch the listing's registered domain, homepage plus /links, /partners, /about
-  2. Parse for an anchor to localknows.au containing the listing slug
+  2. Parse for an anchor to localsknow.com.au containing the listing slug
   3. Record: found, url, rel attributes, anchor text, http status, first_seen
   4. Re-check weekly, mark as lapsed after 2 consecutive misses
   5. Never gate any ranking benefit on the result
@@ -411,3 +428,44 @@ Rules:
 - IndexNow ping on publish for Bing, and submit fresh URLs via the Search Console API.
 - Allow GPTBot, ClaudeBot, PerplexityBot and Google-Extended. Directories get cited
   constantly in AI answers and that is a growing referral channel.
+
+---
+
+## 13. What was built, and where it lives
+
+The spec above is implemented. The mapping, so this document does not drift:
+
+| Spec section | Implementation |
+|---|---|
+| 2. URL architecture | `src/lib/repo.ts` `url.*`, routes under `src/pages/` |
+| 3. Taxonomy | `src/data/categories.json`, `src/lib/site.ts` `VERTICALS` |
+| 4. Page templates | `src/components/MoneyPage.astro`, `BusinessPage.astro`, `ModifierPage.astro`, `LocalityPage.astro`, `RegionPage.astro` |
+| 4. The data block | `src/lib/copy.ts` `statSentences()`, rendered by `DataBlock.astro`, computed by `localityCategoryStats()` |
+| 5. Structured data | `src/lib/seo.ts`, one function per node type |
+| 6. Link partner program | `outboundRel()` in `src/lib/indexability.ts`, page at `/partners/` |
+| 7. Data model | `src/lib/types.ts` now, `docs/schema.sql` when it moves to Supabase |
+| 8. Build and hosting | `astro.config.mjs`, `netlify.toml`, `scripts/postbuild.mjs` |
+| 11. Internal linking | `LinkBlock.astro`, `neighboursOf()` with the cross border bias in `src/lib/geo.ts` |
+| 12. Technical SEO | `src/lib/indexability.ts` for the policy, `scripts/verify-build.mjs` for the proof |
+
+### Three decisions that changed during the build
+
+1. **Listing URLs carry the location.** See section 2. The stable identifier is
+   preserved as a redirect rather than as the canonical.
+
+2. **Ratings are not invented, and neither is anything else.** Every listing
+   records the URLs its details were read from and the date they were read. A
+   star rating only exists if `scripts/fetch-places.mjs` pulled it from the
+   Google Places API, and it is deleted automatically after 30 days, which is
+   both Google's caching limit and the point at which the number stops being
+   true. Without an API key the page links to the Google profile instead. The
+   same rule applies to licences: a number read off a business's own website is
+   shown as published, not as verified, and `hasCredential` is only emitted once
+   it has been checked against a register with a date recorded.
+
+3. **Inferred service areas are labelled as inferred.** Deriving a trade's
+   service area from a radius is useful, and it is what makes the cross border
+   pages work before anybody has claimed a listing. But it is a guess, so the
+   page says "estimated", and `areaServed` is left out of the structured data
+   until the owner states it. Section 1's cross border claim is worth nothing if
+   it is built on a fabricated field.

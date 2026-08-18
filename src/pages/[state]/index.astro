@@ -1,0 +1,239 @@
+---
+/** State hub. /nsw/ and /vic/. */
+import type { StateCode } from '~/lib/types';
+import {
+  url,
+  STATES,
+  regionsInState,
+  localitiesInState,
+  listingsInLocality,
+  activeCategoriesInLocality,
+  localitiesInRegion,
+  categories as allCategories,
+  guides as allGuides,
+  curatedLists,
+  liveLocalities,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return (['NSW', 'VIC'] as StateCode[]).map((code) => ({
+    params: { state: STATES[code].slug },
+    props: { code },
+  }));
+}
+
+const { code } = Astro.props as { code: StateCode };
+const state = STATES[code];
+const canonicalPath = url.state(code);
+const other = code === 'NSW' ? 'VIC' : 'NSW';
+
+const regions = regionsInState(code);
+const places = localitiesInState(code);
+const withListings = liveLocalities()
+  .filter((l) => l.state === code)
+  .map((l) => ({ locality: l, count: listingsInLocality(l.id).length }))
+  .sort((a, b) => b.count - a.count);
+
+const totalListings = withListings.reduce((t, p) => t + p.count, 0);
+
+const regionRows = regions.map((r) => {
+  const locs = localitiesInRegion(r.id).filter((l) => l.tier !== 4);
+  const count = locs.reduce((t, l) => t + listingsInLocality(l.id).length, 0);
+  return { region: r, towns: locs.length, count };
+});
+
+const catCounts = new Map<string, number>();
+for (const { locality } of withListings) {
+  for (const a of activeCategoriesInLocality(locality.id)) {
+    catCounts.set(a.category.slug, (catCounts.get(a.category.slug) ?? 0) + a.count);
+  }
+}
+const liveCategories = allCategories
+  .filter((c) => catCounts.has(c.slug))
+  .map((c) => ({ category: c, count: catCounts.get(c.slug) as number }));
+
+const byVertical = VERTICALS.map((v) => ({
+  vertical: v,
+  items: liveCategories.filter((c) => c.category.vertical === v.key).sort((a, b) => b.count - a.count).slice(0, 12),
+})).filter((g) => g.items.length > 0);
+
+const stateGuides = allGuides
+  .filter((g) => g.stateScope === 'both' || (Array.isArray(g.stateScope) && g.stateScope.includes(code)))
+  .slice(0, 6);
+const stateLists = curatedLists.filter((l) => l.state === code).slice(0, 6);
+
+const h1 = 'Business directory for ' + state.name;
+const description =
+  n(totalListings) +
+  ' businesses across ' +
+  withListings.length +
+  ' towns and ' +
+  regions.length +
+  ' regions in ' +
+  state.name +
+  '. Service areas cross the border, so operators from ' +
+  STATES[other].name +
+  ' show up too.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How many businesses are listed in ' + state.name + '?',
+    a: n(totalListings) + ' across ' + withListings.length + ' towns and ' + liveCategories.length + ' categories. Coverage starts on the border corridor and expands region by region, so a town with no listings does not yet have a page.',
+  },
+  {
+    q: 'Do you list ' + STATES[other].name + ' businesses that work in ' + state.name + '?',
+    a: 'Yes, and that is the point of the site. Where a business is registered and where it works are stored as separate things, so a ' + STATES[other].name + ' operator that services a ' + state.name + ' town appears on that town’s pages without claiming an address it does not have.',
+  },
+  {
+    q: 'How do I get my ' + state.name + ' business listed?',
+    a: 'Add it or claim an existing entry. It is free, there is no trial, and no part of the free tier expires. Verification is a separate step: we check a trade licence against the state register and show the date we checked.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: BUILD_DATE }),
+  { '@type': 'State', name: state.name, alternateName: code, containedInPlace: { '@type': 'Country', name: 'Australia' } },
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Regions of ' + state.name,
+    items: regions.map((r) => ({ url: url.region(r), name: r.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="state"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  ogImage={ogForState(code)}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{code} &middot; Australia</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{state.blurb}</p>
+      <div class="headmeta">
+        <span>{regions.length} regions</span>
+        <span>&middot; {withListings.length} towns live</span>
+        <span>&middot; {n(totalListings)} listings</span>
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="statgrid">
+      <div><b>{n(totalListings)}</b><span>listings</span></div>
+      <div><b>{regions.length}</b><span>regions</span></div>
+      <div><b>{places.length}</b><span>localities mapped</span></div>
+      <div><b>{withListings.length}</b><span>with pages live</span></div>
+      <div><b>{liveCategories.length}</b><span>categories live</span></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Regions of {state.name}</h2>
+        <p>Region hubs exist so that eight hundred localities are never linked from one page. Each one links down to its towns.</p>
+      </div>
+      <div class="cats">
+        {regionRows.map((r) => (
+          <a class="cat" href={url.region(r.region)}>
+            <strong>{r.region.name}</strong>
+            <span class="n mono">{r.towns} towns{r.count > 0 ? ' · ' + r.count + ' listed' : ''}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {withListings.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Towns with listings</h2>
+          <p>Ordered by how much is on them. A town goes live when it has content, not before.</p>
+        </div>
+        <div class="cats">
+          {withListings.slice(0, 48).map((p) => (
+            <a class="cat" href={url.locality(p.locality)}>
+              <strong>{p.locality.name}</strong>
+              <span class="n mono">{p.count} listed · {p.locality.postcode}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {byVertical.map((group) => (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>{group.vertical.name}</h2>
+            <p>{group.vertical.blurb}</p>
+          </div>
+        </div>
+        <div class="cats">
+          {group.items.map((c) => (
+            <a class="cat" href={url.category(c.category)}>
+              <strong>{c.category.name}</strong>
+              <span class="n mono">{c.count} in {code}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={'Listing in ' + state.name} />
+  </div>
+
+  <LinkBlock
+    groups={[
+      { heading: 'Guides', links: stateGuides.map((g) => ({ href: url.guide(g), label: g.title })) },
+      { heading: 'Curated lists', links: stateLists.map((l) => ({ href: url.list(l), label: l.title })) },
+      {
+        heading: 'Elsewhere',
+        links: [
+          { href: url.state(other), label: STATES[other].name, cross: true },
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.events(), label: 'Events' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

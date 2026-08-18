@@ -1,0 +1,486 @@
+---
+/**
+ * Search.
+ *
+ * A static site cannot query a database, so the index is built at build time,
+ * shipped as one JSON blob and filtered in the browser. Noindex, follow: a
+ * search results page has no standalone search value and every result on it is
+ * already reachable through the locality and category pages.
+ *
+ * Three inputs, because that is how people actually search a directory: what
+ * they want, where they want it, and a free text box for when neither dropdown
+ * has the word they are thinking of. All three are deep linkable, so a result
+ * set can be sent to somebody.
+ *
+ * The chips and the category and suburb lists underneath are rendered server
+ * side, so the page is still useful and still crawlable with scripting off.
+ */
+import Base from '~/layouts/Base.astro';
+import {
+  url,
+  STATES,
+  listings,
+  categories,
+  getCategory,
+  getLocality,
+  liveLocalities,
+  listingsInLocality,
+  listingsInCategory,
+  activeCategoriesInLocality,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import type { Category, Locality } from '~/lib/types';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.search();
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Search', href: canonicalPath },
+];
+
+// The index. Keys are one letter because this ships to every visitor.
+//   n name, u url, c category label, cs category slug, p locality name,
+//   ps locality slug, s state, k haystack, q quality, v vertical
+const CAP = 6000;
+const searchable = listings.filter((l) => l.status !== 'suspended');
+const ranked = searchable.slice().sort((a, b) => b.qualityScore - a.qualityScore);
+const capped = ranked.length > CAP;
+const chosen = capped ? ranked.slice(0, CAP) : ranked;
+
+const index = chosen.map((l) => {
+  const locality = getLocality(l.localityId);
+  const cats = l.categoryIds.map((id) => getCategory(id)).filter(Boolean) as Category[];
+  const haystack = [
+    l.name,
+    ...cats.map((c) => c.name),
+    ...cats.flatMap((c) => c.synonyms),
+    ...l.highlights,
+    locality?.name ?? '',
+    locality?.state ?? '',
+    l.postcode,
+  ]
+    .join(' ')
+    .replace(/\s+/g, ' ')
+    .toLowerCase();
+
+  return {
+    n: l.name,
+    u: url.listing(l),
+    c: cats[0]?.name ?? '',
+    cs: cats.map((c) => c.slug).join(','),
+    p: locality?.name ?? '',
+    ps: locality?.slug ?? '',
+    s: locality?.state ?? '',
+    v: l.vertical,
+    k: haystack,
+  };
+});
+
+// Escaped so a business name containing a closing script tag cannot break out.
+const payload = JSON.stringify(index).replace(/</g, '\\u003c');
+
+/** Categories that have listings, grouped by vertical, for the "looking for" menu. */
+const categoryOptions = VERTICALS.map((v) => ({
+  vertical: v,
+  items: categories
+    .filter((c) => c.vertical === v.key)
+    .map((c) => ({ category: c, count: listingsInCategory(c.id).length }))
+    .filter((c) => c.count > 0)
+    .sort((a, b) => a.category.name.localeCompare(b.category.name)),
+})).filter((g) => g.items.length > 0);
+
+/** Suburbs that have listings, grouped by state, for the "near" menu. */
+const suburbOptions = (['NSW', 'VIC'] as const).map((code) => ({
+  state: STATES[code],
+  items: liveLocalities()
+    .filter((l) => l.state === code)
+    .map((l) => ({ locality: l, count: listingsInLocality(l.id).length }))
+    .sort((a, b) => a.locality.name.localeCompare(b.locality.name)),
+}));
+
+// The twelve biggest locality x category pages, for people with scripting off
+// and for the crawler that follows them.
+const pairs: { locality: Locality; category: Category; count: number }[] = [];
+for (const locality of liveLocalities()) {
+  for (const { category, count } of activeCategoriesInLocality(locality.id)) {
+    pairs.push({ locality, category, count });
+  }
+}
+pairs.sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name));
+const biggest = pairs.slice(0, 12);
+
+const description =
+  'Search every business listed on LocalKnows across New South Wales and Victoria. Pick what you are looking for, pick a town, or type it.';
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: 'Search',
+    description,
+    crumbs,
+    type: 'SearchResultsPage',
+    dateModified: BUILD_DATE,
+  }),
+]);
+---
+
+<Base
+  kind="utility"
+  title="Search the directory"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{n(searchable.length)} listings, both states</p>
+      <h1>Search</h1>
+      <p class="standfirst">
+        Pick what you are after and where. A business shows up under a town when it is
+        based there or works there, so a Wodonga operator appears under Lavington.
+      </p>
+    </div>
+
+    <form class="searchbar" id="lk-form" action={url.search()} method="get" role="search">
+      <div class="sb-field sb-grow">
+        <label class="mono" for="q">Search</label>
+        <input
+          id="q"
+          name="q"
+          type="search"
+          autocomplete="off"
+          placeholder="Business name or keyword"
+        />
+      </div>
+
+      <div class="sb-field">
+        <label class="mono" for="cat">Looking for</label>
+        <select id="cat" name="cat">
+          <option value="">Anything</option>
+          {categoryOptions.map((g) => (
+            <optgroup label={g.vertical.name}>
+              {g.items.map((c) => (
+                <option value={c.category.slug}>
+                  {c.category.name} ({c.count})
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+
+      <div class="sb-field">
+        <label class="mono" for="in">Suburb or town</label>
+        <select id="in" name="in">
+          <option value="">Anywhere in NSW and VIC</option>
+          {suburbOptions.map((g) => (
+            <optgroup label={g.state.name}>
+              {g.items.map((s) => (
+                <option value={s.locality.slug + '|' + s.locality.state}>
+                  {s.locality.name} {s.locality.state} ({s.count})
+                </option>
+              ))}
+            </optgroup>
+          ))}
+        </select>
+      </div>
+
+      <button class="btn btn-river" type="submit">Search</button>
+    </form>
+
+    <div class="filters" style="margin-top:16px">
+      <button class="pill" type="button" data-state="" aria-pressed="true">Both states</button>
+      <button class="pill" type="button" data-state="NSW" aria-pressed="false">NSW only</button>
+      <button class="pill" type="button" data-state="VIC" aria-pressed="false">Victoria only</button>
+      <span class="count" id="lk-count" aria-live="polite" role="status"></span>
+    </div>
+
+    <noscript>
+      <div class="notice" style="margin-top:20px">
+        <strong>Live search needs JavaScript.</strong> The dropdowns above still work as an
+        ordinary form, and every town and category page is linked below.
+      </div>
+    </noscript>
+
+    <div id="lk-results" class="cards" style="margin-top:24px"></div>
+    <div id="lk-empty" class="empty" hidden>
+      <p id="lk-empty-msg">Nothing matched.</p>
+      <a class="btn btn-ghost" href={url.categoryIndex()}>Browse every category</a>
+    </div>
+    <p id="lk-more" class="mono" style="margin-top:18px;color:var(--ink-40)" hidden></p>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Most searched right now</h2>
+        <p>These are ordinary pages, not a search result. They rank, they get crawled, and they load without any of the above.</p>
+      </div>
+      <div class="chips">
+        {biggest.map((p) => (
+          <a class="chip" href={url.localityCategory(p.locality, p.category)}>
+            {p.category.name} in {p.locality.name} ({p.count})
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Browse instead</h2>
+      </div>
+      <div class="linkgrid">
+        {suburbOptions.map((g) => (
+          <div>
+            <h3>{g.state.name} towns</h3>
+            <ul>
+              {g.items.slice(0, 20).map((s) => (
+                <li>
+                  <a href={url.locality(s.locality)}>{s.locality.name}</a>
+                  <span style="color:var(--ink-40);font-size:13px"> {s.count}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        <div>
+          <h3>By kind</h3>
+          <ul>
+            {VERTICALS.map((v) => (
+              <li><a href={url.vertical(v.slug)}>{v.name}</a></li>
+            ))}
+            <li><a href={url.categoryIndex()}>Every category</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/json" id="lk-index" set:html={payload} is:inline />
+
+  <script is:inline define:vars={{ capped, total: searchable.length }}>
+    (function () {
+      var el = document.getElementById('lk-index');
+      if (!el) return;
+      var rows = JSON.parse(el.textContent || '[]');
+
+      var form = document.getElementById('lk-form');
+      var qEl = document.getElementById('q');
+      var catEl = document.getElementById('cat');
+      var inEl = document.getElementById('in');
+      var out = document.getElementById('lk-results');
+      var empty = document.getElementById('lk-empty');
+      var emptyMsg = document.getElementById('lk-empty-msg');
+      var countEl = document.getElementById('lk-count');
+      var moreEl = document.getElementById('lk-more');
+      var stateBtns = Array.prototype.slice.call(document.querySelectorAll('.pill[data-state]'));
+      var stateFilter = '';
+      var LIMIT = 60;
+
+      var themes = ['a', 'b', 'c', 'd', 'e', 'f'];
+      function theme(s) {
+        var h = 0;
+        for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+        return themes[h % themes.length];
+      }
+      function initials(name) {
+        var w = name.replace(/^(the|a)\s+/i, '').replace(/[^A-Za-z0-9 &]/g, ' ').split(/\s+/).filter(Boolean);
+        if (!w.length) return '??';
+        return (w.length === 1 ? w[0].slice(0, 2) : w[0][0] + w[1][0]).toUpperCase();
+      }
+      function esc(s) {
+        return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      }
+
+      function readParams() {
+        var p = new URLSearchParams(location.search);
+        if (p.get('q')) qEl.value = p.get('q');
+        if (p.get('cat')) catEl.value = p.get('cat');
+        if (p.get('in')) inEl.value = p.get('in');
+        if (p.get('state')) {
+          stateFilter = p.get('state');
+          stateBtns.forEach(function (b) {
+            b.setAttribute('aria-pressed', b.dataset.state === stateFilter ? 'true' : 'false');
+          });
+        }
+      }
+
+      function writeParams() {
+        var p = new URLSearchParams();
+        if (qEl.value.trim()) p.set('q', qEl.value.trim());
+        if (catEl.value) p.set('cat', catEl.value);
+        if (inEl.value) p.set('in', inEl.value);
+        if (stateFilter) p.set('state', stateFilter);
+        var qs = p.toString();
+        history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+      }
+
+      function run() {
+        var q = qEl.value.trim().toLowerCase();
+        var tokens = q ? q.split(/\s+/) : [];
+        var cat = catEl.value;
+        var loc = inEl.value;
+        var locSlug = loc ? loc.split('|')[0] : '';
+        var locState = loc ? loc.split('|')[1] : '';
+
+        var hits = rows.filter(function (r) {
+          if (stateFilter && r.s !== stateFilter) return false;
+          if (locSlug && !(r.ps === locSlug && r.s === locState)) return false;
+          if (cat && (',' + r.cs + ',').indexOf(',' + cat + ',') === -1) return false;
+          for (var i = 0; i < tokens.length; i++) {
+            if (r.k.indexOf(tokens[i]) === -1) return false;
+          }
+          return true;
+        });
+
+        out.innerHTML = hits
+          .slice(0, LIMIT)
+          .map(function (r) {
+            return (
+              '<article class="card"><div class="card-top">' +
+              '<span class="logo lg-' + theme(r.u) + '" aria-hidden="true">' + esc(initials(r.n)) + '</span>' +
+              '<div style="min-width:0"><h3><a href="' + r.u + '">' + esc(r.n) + '</a></h3>' +
+              '<p class="cat-line">' + esc(r.c) + (r.p ? ' &middot; ' + esc(r.p) : '') + '</p></div></div>' +
+              '<span class="state mono' + (r.s === 'VIC' ? ' vic' : '') + '">' + esc(r.s) + '</span>' +
+              '<div class="card-foot"><span class="right">' +
+              '<a class="btn btn-sm btn-ghost" href="' + r.u + '">Details</a></span></div></article>'
+            );
+          })
+          .join('');
+
+        var none = hits.length === 0;
+        empty.hidden = !none;
+        out.hidden = none;
+        if (none) {
+          emptyMsg.textContent = q || cat || loc
+            ? 'Nothing matched that combination. Try widening the suburb or clearing the category.'
+            : 'Nothing to show.';
+        }
+
+        countEl.textContent =
+          hits.length === 0
+            ? ''
+            : hits.length + (hits.length === 1 ? ' result' : ' results');
+
+        if (hits.length > LIMIT) {
+          moreEl.hidden = false;
+          moreEl.textContent =
+            'Showing the first ' + LIMIT + ' of ' + hits.length + '. Narrow it with a suburb or a category.';
+        } else {
+          moreEl.hidden = true;
+        }
+
+        writeParams();
+      }
+
+      var timer;
+      function debounced() {
+        clearTimeout(timer);
+        timer = setTimeout(run, 120);
+      }
+
+      qEl.addEventListener('input', debounced);
+      catEl.addEventListener('change', run);
+      inEl.addEventListener('change', run);
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        run();
+      });
+      stateBtns.forEach(function (b) {
+        b.addEventListener('click', function () {
+          stateFilter = b.dataset.state;
+          stateBtns.forEach(function (x) {
+            x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+          });
+          run();
+        });
+      });
+
+      if (capped) {
+        moreEl.hidden = false;
+        moreEl.textContent = 'Search covers the ' + rows.length + ' strongest of ' + total + ' listings.';
+      }
+
+      readParams();
+      run();
+    })();
+  </script>
+
+  <style>
+    .searchbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      margin-top: 26px;
+      overflow: hidden;
+    }
+    .sb-field {
+      background: var(--white);
+      padding: 11px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      min-width: 0;
+    }
+    .sb-field label {
+      color: var(--ink-40);
+      font-size: 10px;
+    }
+    .sb-field input,
+    .sb-field select {
+      border: 0;
+      background: none;
+      font: inherit;
+      font-size: 15.5px;
+      color: var(--ink);
+      outline: none;
+      width: 100%;
+      padding: 0;
+      appearance: none;
+      cursor: pointer;
+      text-overflow: ellipsis;
+    }
+    .sb-field input {
+      cursor: text;
+    }
+    .sb-field input::placeholder {
+      color: var(--ink-40);
+    }
+    .sb-field:focus-within {
+      background: var(--paper-2);
+    }
+    .searchbar .btn {
+      border-radius: 0;
+      padding-inline: 30px;
+      justify-content: center;
+    }
+    @media (max-width: 860px) {
+      .searchbar {
+        grid-template-columns: 1fr;
+      }
+      .searchbar .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</Base>

@@ -1,0 +1,16 @@
+{
+  "name": "LocalKnows",
+  "short_name": "LocalKnows",
+  "description": "Business and places directory for New South Wales and Victoria",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#EFEDE4",
+  "theme_color": "#131E19",
+  "lang": "en-AU",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/brand/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/brand/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

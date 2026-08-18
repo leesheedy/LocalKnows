@@ -1,0 +1,311 @@
+---
+/**
+ * Editorial policy.
+ *
+ * Who writes, who checks, how often it is reviewed, what AI is allowed to touch
+ * and what it is not. The publishingPrinciples property on the Organization node
+ * points at this URL, so it has to be true.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, STATES, guides, curatedLists, POLICY } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.editorialPolicy();
+const h1 = 'Editorial policy';
+
+const description =
+  'How LocalKnows content is written, checked and reviewed. Named authors, a six month review cycle, corrections inside five business days, and no page ever deleted.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Editorial policy', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Is this site written by AI?',
+    a: 'AI is used for research, first drafts and summarising source material. It is not used to publish. Every fact on a guide, list or wire article is checked by a person against a named source before it goes live, and the named author on the page is the person who did that checking. The numbers in the data blocks on category pages are not written at all: they are computed from the listing rows on that page and can be reproduced from them.',
+  },
+  {
+    q: 'Can a business pay to appear in a guide or a curated list?',
+    a: 'No. Inclusion in editorial is not for sale in any form, including advertising spend, an enquiry routing subscription, a link, a gift, a free meal or a free night. Businesses are not told in advance that they are being considered and are not shown drafts. If a business is included, the reason is on the page.',
+  },
+  {
+    q: 'Something in a guide is out of date. How fast will it change?',
+    a: 'Send it through the corrections form. Corrections are acknowledged within two business days and resolved within five. If the change alters a fact a reader could have acted on, such as a price, a licence requirement or a public holiday rule, the page carries a dated correction note rather than being quietly edited.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="Editorial policy"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Policy &middot; how content is made</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Named authors, a visible review date on every guide, corrections inside five business
+        days, and a standing rule that a page which once ranked is never deleted.
+      </p>
+      <div class="headmeta">
+        <span>{guides.length} guides</span>
+        <span>&middot; {curatedLists.length} curated lists</span>
+        <span>&middot; Reviewed every six months</span>
+        <span>&middot; Updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        There are two kinds of content on LocalKnows and they are held to different
+        standards. Listing data is factual, sourced and dated, and it is governed by
+        <a href={url.dataPolicy()}>the data and corrections policy</a>. Editorial is guides,
+        curated lists, tools and the wire, and it is governed by this page.
+      </p>
+
+      <h2>Who writes it</h2>
+      <p>
+        Editorial is written by people at <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>
+        and by local writers commissioned for a specific region or trade. Every guide carries
+        a named author and their role at the top of the page. There are no house bylines, no
+        "LocalKnows Team" credits and no pen names. If you want to know who told you a plumber
+        in Wagga charges what they charge, the page says.
+      </p>
+      <p>
+        Writers are paid for the work, per piece or per hour. They are never paid by a
+        business that appears in the piece, and a writer with a commercial relationship to a
+        business does not write about that business or its direct competitors. Where a writer
+        has a personal connection to a subject, such as membership of a club being covered, it
+        is disclosed on the page.
+      </p>
+
+      <h2>Dates on every page</h2>
+      <p>
+        Each guide shows two dates: when it was first published and when it was last reviewed.
+        These are different things and the site does not blur them. A page reviewed and left
+        unchanged still gets a new review date, because "we checked this and it still holds"
+        is information a reader wants.
+      </p>
+      <ul>
+        <li>
+          <strong>Six month review cycle.</strong> Every guide, tool page and curated list is
+          reopened at least every six months and either confirmed, updated or retired.
+        </li>
+        <li>
+          <strong>Out of cycle review</strong> whenever something underneath it moves: a
+          licensing rule changes, a state register changes its search, a price band shifts, or
+          the New South Wales and Victorian public holiday calendars diverge in a way that
+          affects a page about opening hours.
+        </li>
+        <li>
+          <strong>Retirement</strong> means the page stays at its URL with the content
+          rewritten or a pointer to what replaced it. It never means a deletion.
+        </li>
+      </ul>
+
+      <h2>How curated lists are chosen</h2>
+      <p>
+        Curated lists are opinionated on purpose. A list called "best pubs with a beer garden
+        in Albury" is useless if it contains every pub in Albury. Selection works like this:
+      </p>
+      <ol>
+        <li>
+          Start from every listing in the relevant category and locality, including the ones
+          that reach it from across the border.
+        </li>
+        <li>
+          Apply the criterion in the title against the listing data, then against the
+          business&rsquo;s own published material, then against a visit or a phone call where
+          the criterion is not checkable any other way.
+        </li>
+        <li>
+          Rank by the criterion, not by quality score, review count or anything commercial.
+          The order is a judgement and the page says who made it.
+        </li>
+        <li>
+          Write a specific reason for each entry. If the reason could be copied to any other
+          entry on the list, the entry comes off.
+        </li>
+        <li>Publish with the author, the date and a review date.</li>
+      </ol>
+      <p>
+        <strong>Inclusion cannot be bought.</strong> Not with advertising spend, not with a
+        subscription, not with a link, not with a free meal or a comped room. Businesses are
+        not told they are being considered and do not see the piece before it runs. A business
+        that asks to be added is told to read this paragraph. Removal from a list is not for
+        sale either: a business that wants out of a list can have its listing removed from the
+        directory entirely, and that request is honoured, but it cannot buy a rewrite.
+      </p>
+
+      <h2>Where AI is used, and where it is not</h2>
+      <p>
+        This is stated plainly because most sites will not state it at all.
+      </p>
+      <ul>
+        <li>
+          <strong>Used for:</strong> research, gathering and summarising source material,
+          first drafts, restructuring, and checking a draft for internal contradictions.
+        </li>
+        <li>
+          <strong>Not used for:</strong> publishing. Nothing goes live straight from a model.
+        </li>
+        <li>
+          <strong>Every published fact is checked by a person against a source.</strong> A
+          price, a licence class, an opening time, a distance, a claim about what a business
+          offers. If a fact cannot be traced to a source a human opened, it is cut from the
+          draft rather than softened with "generally" or "typically".
+        </li>
+        <li>
+          <strong>Quotes and reviews are never generated.</strong> A quote in a guide came out
+          of a real conversation and is attributed. Review text on a listing is written by the
+          person who left it.
+        </li>
+        <li>
+          <strong>Statistics are computed, not written.</strong> The data block on a category
+          page is generated from that page&rsquo;s own listing rows. Every number on it can be
+          checked by counting the cards above it.
+        </li>
+      </ul>
+      <p>
+        The named author on a page is the person who did the checking, and they own what it
+        says. "The model wrote it" has never been an acceptable answer to a correction and
+        never will be.
+      </p>
+
+      <h2>Corrections</h2>
+      <p>
+        Getting something wrong is normal. Leaving it wrong is not.
+      </p>
+      <ul>
+        <li><strong>Acknowledged</strong> within two business days, by a person.</li>
+        <li>
+          <strong>Resolved</strong> within five business days: fixed, or explained with the
+          source we relied on so you can tell us what is wrong with it.
+        </li>
+        <li>
+          <strong>Noted on the page</strong> with the date, where the change alters a fact a
+          reader could have acted on. Silent edits are for typos, not for numbers.
+        </li>
+        <li>
+          <strong>Escalated</strong> to a full review of the piece if the same page draws two
+          corrections in six months, because that is a sign the sourcing was weak rather than
+          unlucky.
+        </li>
+      </ul>
+      <p>
+        Report one through <a href={url.dataPolicy()}>the corrections form</a> or by email to
+        <a href={'mailto:' + SITE.email}>{SITE.email}</a>. No account is needed and you do not
+        have to be connected to the business.
+      </p>
+
+      <h2>Pages are never deleted</h2>
+      <p>
+        This is the standing rule and it overrides the rest. A page that has ever ranked, ever
+        been linked to, or ever been printed on a business card does not get deleted and does
+        not get a 404.
+      </p>
+      <ul>
+        <li>
+          A category page that drops below {POLICY.minListingsToIndex} listings goes noindex,
+          follow. It keeps its URL and its outbound links, and it flips back to indexed
+          automatically when the count crosses the threshold again.
+        </li>
+        <li>
+          A business that closes keeps its page, marked closed, with a link to the category it
+          sat in. Somebody is still searching for it and telling them what happened is better
+          than an error.
+        </li>
+        <li>
+          A listing that is merged or renamed gets a permanent redirect from the old URL. The
+          redirect is kept indefinitely.
+        </li>
+        <li>
+          A guide that is superseded is rewritten in place, or redirected to the guide that
+          replaced it. It is never quietly removed.
+        </li>
+      </ul>
+
+      <h2>Independence</h2>
+      <p>
+        Advertisers have no input into editorial and no advance notice of it. Advertising is
+        labelled, boxed and excluded from the structured data, which is set out in
+        <a href={url.advertisingPolicy()}>the advertising policy</a>. Nobody at
+        {' '}{SITE.publisher.name} holds an ownership interest in a business listed on the
+        site. If that ever changes, the affected listings will carry a disclosure and this
+        page will say so.
+      </p>
+      <p>
+        Coverage is limited to {STATES.NSW.name} and {STATES.VIC.name} and expands region by
+        region. A town without a page is a town we have not reached, not a judgement about the
+        businesses in it.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Editorial, answered" id="editorial-faq" />
+  </div>
+
+  <LinkBlock
+    heading="The rest of the fine print"
+    groups={[
+      {
+        heading: 'Policies',
+        links: [
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.terms(), label: 'Terms of use' },
+        ],
+      },
+      {
+        heading: 'Read the output',
+        links: [
+          { href: url.guides(), label: 'Guides' },
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.wire(), label: 'The wire' },
+          { href: url.tools(), label: 'Free tools' },
+        ],
+      },
+      {
+        heading: 'Get in touch',
+        links: [
+          { href: url.contact(), label: 'Contact us' },
+          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.claim(), label: 'Claim a listing' },
+        ],
+      },
+    ]}
+  />
+</Base>

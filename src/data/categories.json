@@ -1,0 +1,2912 @@
+{
+ "categories": [
+  {
+   "id": "cat-plumbers",
+   "vertical": "trades",
+   "name": "Plumbers",
+   "nameSingular": "Plumber",
+   "slug": "plumbers",
+   "schemaType": "Plumber",
+   "description": "Burst pipes, blocked drains, dead hot water systems and gas fitting make up most callouts across the border towns. Anyone doing the work holds a NSW Fair Trading plumbing licence or a Victorian Building Authority registration, and the number belongs on the quote. The ones worth calling name the callout fee before they leave the depot and carry common hot water parts on the ute.",
+   "synonyms": [
+    "plumber near me",
+    "emergency plumber",
+    "blocked drain",
+    "hot water repair",
+    "24 hour plumber",
+    "gas fitter"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-electricians",
+   "vertical": "trades",
+   "name": "Electricians",
+   "nameSingular": "Electrician",
+   "slug": "electricians",
+   "schemaType": "Electrician",
+   "description": "Switchboard upgrades, safety switch faults, shed and pump circuits, and getting power back after a storm are the everyday jobs. Every sparky needs an electrical licence in NSW or a registered electrical contractor number in Victoria, and both sit on a public register. Rural properties add long driveway runs, SWER supply and irrigation wiring, so ask whether they work past the town boundary.",
+   "synonyms": [
+    "electrician near me",
+    "emergency electrician",
+    "24 hour electrician",
+    "switchboard upgrade",
+    "sparky",
+    "power point installation"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-builders",
+   "vertical": "trades",
+   "name": "Builders",
+   "nameSingular": "Builder",
+   "slug": "builders",
+   "schemaType": "GeneralContractor",
+   "description": "New homes, extensions, granny flats and insurance repairs sit under a residential builder licence in NSW and domestic builder registration in Victoria. Any job over the state threshold needs home warranty insurance in NSW or domestic building insurance in Victoria before money changes hands. Regional build programs run longer than metro because trades travel, so a realistic timeline is worth more than the cheapest price.",
+   "synonyms": [
+    "builders near me",
+    "home builder",
+    "house extension",
+    "granny flat builder",
+    "renovation builder",
+    "licensed builder"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-carpenters",
+   "vertical": "trades",
+   "name": "Carpenters",
+   "nameSingular": "Carpenter",
+   "slug": "carpenters",
+   "schemaType": "GeneralContractor",
+   "description": "Framing, decks, pergolas, door hanging and the second fix work a builder often subcontracts out. Small jobs are where a chippy earns a reputation, because a deck that still drains after three winters and a door that closes in February is the whole test. Plenty in the Riverina and north east Victoria work across farm sheds and yards as well as houses.",
+   "synonyms": [
+    "carpenter near me",
+    "chippy",
+    "deck builder",
+    "pergola builder",
+    "timber framing",
+    "door hanging"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-painters",
+   "vertical": "trades",
+   "name": "Painters",
+   "nameSingular": "Painter",
+   "slug": "painters",
+   "schemaType": "HousePainter",
+   "description": "Interior repaints, weatherboard work, roof coating and the preparation that decides how long any of it lasts. Weather runs the calendar out here, since exterior work stalls through a Riverina summer afternoon and again through winter frosts. Ask what the quote covers for sanding, filling and undercoat, because that is where a cheap number hides.",
+   "synonyms": [
+    "painter near me",
+    "house painting",
+    "interior painting",
+    "exterior painting",
+    "roof painting",
+    "painter and decorator"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-roofers",
+   "vertical": "trades",
+   "name": "Roofers",
+   "nameSingular": "Roofer",
+   "slug": "roofers",
+   "schemaType": "RoofingContractor",
+   "description": "Metal re-roofs, tile repairs, ridge capping, leak tracing and the storm damage that follows a summer hail run. Insurance work is a large share of it, so a roofer who writes a clear scope and photographs the damage saves weeks arguing with an assessor. Height work needs current public liability cover and a safe access plan, and anyone who shrugs at that is telling you something.",
+   "synonyms": [
+    "roofer near me",
+    "roof repairs",
+    "roof restoration",
+    "metal roofing",
+    "tile roof repair",
+    "leaking roof"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-concreters",
+   "vertical": "trades",
+   "name": "Concreters",
+   "nameSingular": "Concreter",
+   "slug": "concreters",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Driveways, shed slabs, house slabs, paths and the steel underneath that stops the lot cracking. Reactive clay soils through the Goulburn Valley and the Riverina make slab design and mesh depth matter more than the surface finish. Ask for the concrete strength, the slab thickness and whether the price includes a pump, because those three answers explain most quote gaps.",
+   "synonyms": [
+    "concreter near me",
+    "concrete driveway",
+    "shed slab",
+    "exposed aggregate",
+    "concrete path",
+    "house slab"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-landscapers",
+   "vertical": "trades",
+   "name": "Landscapers",
+   "nameSingular": "Landscaper",
+   "slug": "landscapers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Retaining walls, turf, irrigation, garden design and the drainage most people only think about after the first big storm. Water restrictions and long dry summers push regional designs towards natives, mulch and drip line rather than lawn. A retaining wall over a metre usually needs an engineer's design and council approval, so check that before the first sleeper goes in.",
+   "synonyms": [
+    "landscaper near me",
+    "landscaping",
+    "retaining wall",
+    "turf laying",
+    "garden design",
+    "irrigation installation"
+   ],
+   "sortOrder": 80
+  },
+  {
+   "id": "cat-fencing-contractors",
+   "vertical": "trades",
+   "name": "Fencing Contractors",
+   "nameSingular": "Fencing Contractor",
+   "slug": "fencing-contractors",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Steel and timber fences in town, rural boundary fencing, stock yards and gates on properties. Dividing fences are shared under the Dividing Fences Act in NSW and the Fences Act in Victoria, so get the neighbour's agreement in writing before the posts go in. Rural work is quoted by the kilometre and depends on terrain, so a site visit beats a phone estimate every time.",
+   "synonyms": [
+    "fencing near me",
+    "fence installation",
+    "colorbond fencing",
+    "rural fencing",
+    "pool fencing",
+    "farm fencing"
+   ],
+   "sortOrder": 90
+  },
+  {
+   "id": "cat-tilers",
+   "vertical": "trades",
+   "name": "Tilers",
+   "nameSingular": "Tiler",
+   "slug": "tilers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Bathroom, kitchen, laundry and outdoor tiling, plus the waterproofing that sits underneath it. Waterproofing is the part that fails, and in both states it must meet AS 3740 with a certificate issued for the job. Straight grout lines and a floor that actually falls to the waste are the mark of someone who has laid a few thousand square metres.",
+   "synonyms": [
+    "tiler near me",
+    "bathroom tiling",
+    "floor tiling",
+    "waterproofing",
+    "wall tiling",
+    "tile repairs"
+   ],
+   "sortOrder": 100
+  },
+  {
+   "id": "cat-plasterers",
+   "vertical": "trades",
+   "name": "Plasterers",
+   "nameSingular": "Plasterer",
+   "slug": "plasterers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Plasterboard hanging, cornice, patching and the set coat that decides whether a wall looks flat under afternoon light. Renovation patching is harder than new work, because matching an old texture takes more skill than sheeting a fresh room. New build is usually quoted by the square metre and repair work by the hour, so compare like with like.",
+   "synonyms": [
+    "plasterer near me",
+    "gyprock",
+    "plasterboard repair",
+    "cornice installation",
+    "ceiling repair",
+    "wall patching"
+   ],
+   "sortOrder": 110
+  },
+  {
+   "id": "cat-bricklayers",
+   "vertical": "trades",
+   "name": "Bricklayers",
+   "nameSingular": "Bricklayer",
+   "slug": "bricklayers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Brick and block work for houses, extensions, fences, retaining walls and the occasional feature wall. A bricklayer's rate covers a set number of bricks laid per day, so ask how a quote is built before putting two of them side by side. Heritage repointing on the older housing stock in Bendigo, Ballarat and central Albury is a separate skill and worth paying for.",
+   "synonyms": [
+    "bricklayer near me",
+    "brickie",
+    "block laying",
+    "brick fence",
+    "repointing",
+    "brick repairs"
+   ],
+   "sortOrder": 120
+  },
+  {
+   "id": "cat-air-conditioning",
+   "vertical": "trades",
+   "name": "Air Conditioning",
+   "nameSingular": "Air Conditioning Installer",
+   "slug": "air-conditioning",
+   "schemaType": "HVACBusiness",
+   "description": "Split system installs, ducted refrigerated systems, evaporative coolers and the servicing that keeps them alive through a 40 degree week. Anyone handling refrigerant needs an ARC licence, which is a national scheme and simple to check. Evaporative still makes sense in dry inland heat while refrigerated wins on humid days and through smoke, so the right answer depends on where you live.",
+   "synonyms": [
+    "air conditioning near me",
+    "split system installation",
+    "ducted air conditioning",
+    "evaporative cooling",
+    "aircon repair",
+    "heating and cooling"
+   ],
+   "sortOrder": 130
+  },
+  {
+   "id": "cat-solar-installers",
+   "vertical": "trades",
+   "name": "Solar Installers",
+   "nameSingular": "Solar Installer",
+   "slug": "solar-installers",
+   "schemaType": "Electrician",
+   "description": "Rooftop solar, battery storage, off grid systems and the grid connection paperwork that goes with them. Installers must hold accreditation under the national scheme for a system to qualify for small scale technology certificates, so ask to see it before paying a deposit. Export limits vary by network across regional NSW and Victoria, so the system your roof fits is not always the system your connection allows.",
+   "synonyms": [
+    "solar installer near me",
+    "solar panels",
+    "solar battery",
+    "off grid solar",
+    "solar repairs",
+    "solar quotes"
+   ],
+   "sortOrder": 140
+  },
+  {
+   "id": "cat-pest-control",
+   "vertical": "trades",
+   "name": "Pest Control",
+   "nameSingular": "Pest Controller",
+   "slug": "pest-control",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Termites, spiders, rodents, wasps and the annual inspection that protects the biggest asset most people own. Termite pressure through the Murray and Murrumbidgee valleys is real, and the standard advice is a full timber pest inspection every twelve months. Technicians need a pest management licence in both states, and every chemical used should be named on the report.",
+   "synonyms": [
+    "pest control near me",
+    "termite inspection",
+    "termite treatment",
+    "rodent control",
+    "spider spray",
+    "cockroach treatment"
+   ],
+   "sortOrder": 150
+  },
+  {
+   "id": "cat-locksmiths",
+   "vertical": "trades",
+   "name": "Locksmiths",
+   "nameSingular": "Locksmith",
+   "slug": "locksmiths",
+   "schemaType": "Locksmith",
+   "description": "Lockouts, rekeying after a tenant leaves, restricted key systems, safes and window locks. A regional callout often runs 40 or 50 kilometres, so the travel component of the fee matters more here than it does in a city. One who can cut and code a modern transponder car key saves a dealership trip to Wagga or Shepparton.",
+   "synonyms": [
+    "locksmith near me",
+    "emergency locksmith",
+    "24 hour locksmith",
+    "car key replacement",
+    "rekey locks",
+    "lockout service"
+   ],
+   "sortOrder": 160
+  },
+  {
+   "id": "cat-glaziers",
+   "vertical": "trades",
+   "name": "Glaziers",
+   "nameSingular": "Glazier",
+   "slug": "glaziers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Broken windows, shower screens, mirrors, splashbacks and double glazing retrofits. Emergency board up is the part that matters most, because a smashed shopfront on a Saturday night needs someone within the hour rather than on Monday. Glass in a door, a shower screen or low set panels has to be Grade A safety glass, and a proper glazier will tell you that before you ask.",
+   "synonyms": [
+    "glazier near me",
+    "window replacement",
+    "emergency glass repair",
+    "shower screen",
+    "glass repairs",
+    "double glazing"
+   ],
+   "sortOrder": 170
+  },
+  {
+   "id": "cat-cabinet-makers",
+   "vertical": "trades",
+   "name": "Cabinet Makers",
+   "nameSingular": "Cabinet Maker",
+   "slug": "cabinet-makers",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Kitchens, wardrobes, vanities, laundries and built in joinery cut to a room that is never quite square. A local maker measures on site and can work around an odd fridge cavity or a wall out of plumb, which a flat pack cannot. Lead times run four to ten weeks depending on the door finish, so order before the demolition starts.",
+   "synonyms": [
+    "cabinet maker near me",
+    "custom kitchens",
+    "built in wardrobes",
+    "joinery",
+    "kitchen renovation",
+    "vanity units"
+   ],
+   "sortOrder": 180
+  },
+  {
+   "id": "cat-earthmoving",
+   "vertical": "trades",
+   "name": "Earthmoving",
+   "nameSingular": "Earthmoving Contractor",
+   "slug": "earthmoving",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Bulk earthworks, site cuts, dam construction, road forming and clearing with excavators, dozers and scrapers. Wet weather stops work outright on clay country, so allow for it in the program instead of pretending it will not happen. Machines are usually hired wet, meaning plant plus operator, and the float to get gear to site is charged on top.",
+   "synonyms": [
+    "earthmoving near me",
+    "bulk earthworks",
+    "dam construction",
+    "land clearing",
+    "dozer hire",
+    "site cut"
+   ],
+   "sortOrder": 190
+  },
+  {
+   "id": "cat-excavation",
+   "vertical": "trades",
+   "name": "Excavation",
+   "nameSingular": "Excavation Contractor",
+   "slug": "excavation",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Trenching for services, pool digs, footings, pier holes and driveway prep, usually with a three to five tonne machine and a bobcat. The free Before You Dig Australia service takes five minutes, and skipping it is how a simple trench turns into a gas repair bill. Rock is the variable that blows a quote apart, so ask how it gets charged before the machine arrives.",
+   "synonyms": [
+    "excavation near me",
+    "bobcat hire",
+    "trenching",
+    "excavator hire",
+    "pool excavation",
+    "footings"
+   ],
+   "sortOrder": 200
+  },
+  {
+   "id": "cat-tree-services",
+   "vertical": "trades",
+   "name": "Tree Services",
+   "nameSingular": "Arborist",
+   "slug": "tree-services",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Removals, pruning, stump grinding, storm damage and the powerline clearance work utilities require. Councils across NSW and Victoria protect trees over certain sizes, so check whether a permit is needed before a saw gets anywhere near it. Ask for a certificate of currency, because a limb that lands on a roof without cover in place becomes your problem, not theirs.",
+   "synonyms": [
+    "tree removal near me",
+    "arborist",
+    "tree lopping",
+    "stump grinding",
+    "tree pruning",
+    "emergency tree removal"
+   ],
+   "sortOrder": 210
+  },
+  {
+   "id": "cat-gutter-cleaning",
+   "vertical": "trades",
+   "name": "Gutter Cleaning",
+   "nameSingular": "Gutter Cleaner",
+   "slug": "gutter-cleaning",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Clearing leaves and debris, fitting gutter guard, flushing downpipes and the once a year job that matters most heading into fire season and again before the storms. A property with gums around it drops enough into a gutter to block a downpipe in a single autumn. Before and after photos are standard practice and worth insisting on, since nobody else is getting up there to check.",
+   "synonyms": [
+    "gutter cleaning near me",
+    "gutter guard",
+    "downpipe cleaning",
+    "roof gutter clean",
+    "leaf removal",
+    "gutter repairs"
+   ],
+   "sortOrder": 220
+  },
+  {
+   "id": "cat-cleaners",
+   "vertical": "trades",
+   "name": "Cleaners",
+   "nameSingular": "Cleaner",
+   "slug": "cleaners",
+   "schemaType": "ProfessionalService",
+   "description": "Regular house cleans, end of lease bonds, commercial and office contracts, and the one off deep clean before an inspection. A bond clean is judged against the entry condition report, so a cleaner who guarantees a free re-clean when the agent complains is worth the extra. Rates in regional towns generally sit below metro, though travel to outlying properties is usually billed on top.",
+   "synonyms": [
+    "cleaners near me",
+    "house cleaning",
+    "end of lease cleaning",
+    "bond clean",
+    "office cleaning",
+    "carpet cleaning"
+   ],
+   "sortOrder": 230
+  },
+  {
+   "id": "cat-removalists",
+   "vertical": "trades",
+   "name": "Removalists",
+   "nameSingular": "Removalist",
+   "slug": "removalists",
+   "schemaType": "MovingCompany",
+   "description": "Local moves, interstate runs across the border, packing services and short term storage. A move from Albury to Melbourne or Sydney is a full day each way, so pricing shifts from hourly to per job once you leave town. Read what the transit insurance actually covers, because most basic cover excludes anything you packed yourself.",
+   "synonyms": [
+    "removalists near me",
+    "furniture removals",
+    "interstate removalists",
+    "moving company",
+    "packing service",
+    "two men and a truck"
+   ],
+   "sortOrder": 240
+  },
+  {
+   "id": "cat-auto-electricians",
+   "vertical": "trades",
+   "name": "Auto Electricians",
+   "nameSingular": "Auto Electrician",
+   "slug": "auto-electricians",
+   "schemaType": "AutoRepair",
+   "description": "Batteries, alternators, starter motors, wiring faults, dual battery systems, UHF radios and trailer plugs. Late model vehicles are diagnostic work more than wiring work, so scan tool coverage for your make is the question to ask on the phone. Farm and fleet work is a big share of the trade out here, and many run mobile so the truck never has to leave the shed.",
+   "synonyms": [
+    "auto electrician near me",
+    "car battery replacement",
+    "dual battery system",
+    "auto electrical repairs",
+    "mobile auto electrician",
+    "trailer wiring"
+   ],
+   "sortOrder": 250
+  },
+  {
+   "id": "cat-mechanics",
+   "vertical": "trades",
+   "name": "Mechanics",
+   "nameSingular": "Mechanic",
+   "slug": "mechanics",
+   "schemaType": "AutoRepair",
+   "description": "Log book servicing, brakes, clutches, suspension, timing belts and the pink slip or roadworthy that keeps a car registered. Servicing at an independent workshop does not void a new car warranty as long as the right parts go in and the book gets stamped. Diesel utes dominate the regional fleet, so ask whether DPF and injector work is done in house or sent away.",
+   "synonyms": [
+    "mechanic near me",
+    "car service",
+    "log book service",
+    "brake repairs",
+    "pink slip",
+    "roadworthy certificate"
+   ],
+   "sortOrder": 260
+  },
+  {
+   "id": "cat-panel-beaters",
+   "vertical": "trades",
+   "name": "Panel Beaters",
+   "nameSingular": "Panel Beater",
+   "slug": "panel-beaters",
+   "schemaType": "AutoBodyShop",
+   "description": "Collision repairs, rust cutting, dent removal, bumper repair and colour matched respraying. Insurers steer work to preferred repairers, but you can usually choose your own shop, and it is worth asking what warranty comes with the repair. A single hail event fills regional workshops for months, so book early or wait it out.",
+   "synonyms": [
+    "panel beater near me",
+    "smash repairs",
+    "car body repair",
+    "dent removal",
+    "spray painting car",
+    "hail damage repair"
+   ],
+   "sortOrder": 270
+  },
+  {
+   "id": "cat-tyre-services",
+   "vertical": "trades",
+   "name": "Tyre Services",
+   "nameSingular": "Tyre Fitter",
+   "slug": "tyre-services",
+   "schemaType": "AutoRepair",
+   "description": "New tyres, puncture repairs, balancing, wheel alignment and light truck and agricultural fitting. On farm and roadside fitting is the difference between an hour lost and a day lost when a header or a truck goes down mid harvest. Tread under 1.5mm is illegal in both states and is the easiest defect to pick up at a roadside check.",
+   "synonyms": [
+    "tyres near me",
+    "tyre shop",
+    "wheel alignment",
+    "puncture repair",
+    "mobile tyre fitting",
+    "truck tyres"
+   ],
+   "sortOrder": 280
+  },
+  {
+   "id": "cat-windscreen-repairs",
+   "vertical": "trades",
+   "name": "Windscreen Repairs",
+   "nameSingular": "Windscreen Specialist",
+   "slug": "windscreen-repairs",
+   "schemaType": "AutoRepair",
+   "description": "Chip repairs, full windscreen replacement, side and rear glass, and the camera recalibration most late model cars need afterwards. A chip smaller than a 20 cent coin can usually be filled in half an hour and is often covered with no excess under comprehensive insurance. Mobile fitters come to the house or the worksite, which counts for a lot when the nearest branch is 80 kilometres away.",
+   "synonyms": [
+    "windscreen replacement near me",
+    "chip repair",
+    "car glass repair",
+    "mobile windscreen",
+    "windscreen insurance claim",
+    "rear window replacement"
+   ],
+   "sortOrder": 290
+  },
+  {
+   "id": "cat-septic-services",
+   "vertical": "trades",
+   "name": "Septic Services",
+   "nameSingular": "Septic Contractor",
+   "slug": "septic-services",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Pump outs, aerated wastewater system servicing, new installs and the quarterly checks councils require on treatment units. Anywhere outside a sewered town runs on a septic or an AWTS, which covers most of the small localities in both states. A new system needs council approval and a soil test, and the test result drives the design more than the budget does.",
+   "synonyms": [
+    "septic tank pump out",
+    "septic service near me",
+    "aerated wastewater system",
+    "septic tank installation",
+    "AWTS service",
+    "effluent disposal"
+   ],
+   "sortOrder": 300
+  },
+  {
+   "id": "cat-bore-drilling",
+   "vertical": "trades",
+   "name": "Bore Drilling",
+   "nameSingular": "Bore Driller",
+   "slug": "bore-drilling",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Water bore drilling, casing, pump installation and the licensing that comes with taking groundwater. In NSW a water supply work approval and a water access licence go through WaterNSW, and in Victoria the rural water corporations issue bore construction licences. Drilling is quoted per metre plus casing, and nobody knows the real depth until the rig is on site and turning.",
+   "synonyms": [
+    "bore drilling near me",
+    "water bore",
+    "bore pump installation",
+    "well drilling",
+    "stock and domestic bore",
+    "bore water testing"
+   ],
+   "sortOrder": 310
+  },
+  {
+   "id": "cat-welders",
+   "vertical": "trades",
+   "name": "Welders",
+   "nameSingular": "Welder",
+   "slug": "welders",
+   "schemaType": "HomeAndConstructionBusiness",
+   "description": "Mobile welding, on farm repairs, structural steel, aluminium work, trailers and custom fabrication. Structural work needs the right ticket and often an inspection, so a certificate matters on anything that carries load. Breakdown repair is the bread and butter, and the ones who answer the phone at 6am on a Sunday during harvest keep that customer for twenty years.",
+   "synonyms": [
+    "welder near me",
+    "mobile welding",
+    "steel fabrication",
+    "aluminium welding",
+    "trailer repairs",
+    "on farm welding"
+   ],
+   "sortOrder": 320
+  },
+  {
+   "id": "cat-farm-machinery-repairs",
+   "vertical": "trades",
+   "name": "Farm Machinery Repairs",
+   "nameSingular": "Farm Machinery Mechanic",
+   "slug": "farm-machinery-repairs",
+   "schemaType": "AutoRepair",
+   "description": "Tractors, headers, balers, sprayers, hydraulics and the electronics inside a modern cab. Downtime during sowing or harvest costs more than the repair itself, so response time is the entire selling point. Most workshops run a service truck for on farm work and stock the wear parts for whichever brands the district happens to run.",
+   "synonyms": [
+    "farm machinery repairs near me",
+    "tractor repairs",
+    "header service",
+    "agricultural mechanic",
+    "hydraulic repairs",
+    "mobile farm mechanic"
+   ],
+   "sortOrder": 330
+  },
+  {
+   "id": "cat-cafes",
+   "vertical": "eat_drink",
+   "name": "Cafes",
+   "nameSingular": "Cafe",
+   "slug": "cafes",
+   "schemaType": "CafeOrCoffeeShop",
+   "description": "Coffee, breakfast, lunch and a table you can sit at for an hour without anyone hovering. Regional cafe culture in NSW and Victoria has closed most of the gap with the cities, and plenty of country main streets now roast their own or buy from a roaster down the road. The ones that last keep a short menu and open at 7am for tradies rather than 9am for tourists.",
+   "synonyms": [
+    "cafe near me",
+    "coffee shop",
+    "breakfast near me",
+    "brunch",
+    "best coffee",
+    "dog friendly cafe"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-restaurants",
+   "vertical": "eat_drink",
+   "name": "Restaurants",
+   "nameSingular": "Restaurant",
+   "slug": "restaurants",
+   "schemaType": "Restaurant",
+   "description": "Sit down dining, from a bistro counter meal to a long lunch with a proper wine list. Country kitchens live or die on midweek trade, so many only open Thursday to Sunday and a booking is not optional in a small town. Produce driven menus are genuinely easier here, since the growers are up the road rather than through a distributor.",
+   "synonyms": [
+    "restaurants near me",
+    "dinner near me",
+    "best restaurant",
+    "fine dining",
+    "family restaurant",
+    "restaurant bookings"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-takeaway",
+   "vertical": "eat_drink",
+   "name": "Takeaway",
+   "nameSingular": "Takeaway Shop",
+   "slug": "takeaway",
+   "schemaType": "FastFoodRestaurant",
+   "description": "Burgers, chicken, kebabs, souvlaki and the counter still serving after the kitchens close. In smaller towns the takeaway shop is often the only thing open past 8pm, which makes posted hours worth checking rather than assuming. Online ordering has reached most main streets, though a phone call still gets a better result on a busy Friday.",
+   "synonyms": [
+    "takeaway near me",
+    "food delivery",
+    "burgers near me",
+    "kebab shop",
+    "chicken shop",
+    "open late food"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-bakeries",
+   "vertical": "eat_drink",
+   "name": "Bakeries",
+   "nameSingular": "Bakery",
+   "slug": "bakeries",
+   "schemaType": "Bakery",
+   "description": "Bread, pies, vanilla slice, sausage rolls and the 5am start behind all of it. A country bakery is an institution and the pie is the benchmark, which is why the state pie competitions get taken seriously in both NSW and Victoria. The popular lines sell out by early afternoon, so the safe move is to get there before 11.",
+   "synonyms": [
+    "bakery near me",
+    "best pies",
+    "fresh bread",
+    "sourdough",
+    "vanilla slice",
+    "birthday cakes"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-pizza",
+   "vertical": "eat_drink",
+   "name": "Pizza",
+   "nameSingular": "Pizza Shop",
+   "slug": "pizza",
+   "schemaType": "Restaurant",
+   "description": "Wood fired, traditional and the Australian versions nobody argues about anymore. Delivery radius is the real constraint out here, and most shops draw the line at 10 or 15 kilometres from the door. Gluten free bases are close to standard now, though the quality varies more than anything else on the menu.",
+   "synonyms": [
+    "pizza near me",
+    "pizza delivery",
+    "wood fired pizza",
+    "gluten free pizza",
+    "best pizza",
+    "pizza open now"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-chinese-restaurants",
+   "vertical": "eat_drink",
+   "name": "Chinese Restaurants",
+   "nameSingular": "Chinese Restaurant",
+   "slug": "chinese-restaurants",
+   "schemaType": "Restaurant",
+   "description": "Family run kitchens serving Cantonese and Sichuan, with the banquet menu that has fed country towns since the 1960s. Almost every town of any size in NSW and Victoria has one, and it is often the oldest continuously trading restaurant on the street. Lunch specials and takeaway containers carry the volume while the dining room fills for birthdays and Lunar New Year.",
+   "synonyms": [
+    "chinese near me",
+    "chinese takeaway",
+    "yum cha",
+    "banquet menu",
+    "asian food near me",
+    "chinese restaurant open now"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-thai-restaurants",
+   "vertical": "eat_drink",
+   "name": "Thai Restaurants",
+   "nameSingular": "Thai Restaurant",
+   "slug": "thai-restaurants",
+   "schemaType": "Restaurant",
+   "description": "Curries, stir fries, salads and a heat level you have to negotiate honestly. Thai has become the default weeknight dinner out across regional NSW and Victoria, and most towns over 5,000 people carry at least one. Ask for Thai hot only if you mean it, because a regional kitchen will take you at your word.",
+   "synonyms": [
+    "thai near me",
+    "thai takeaway",
+    "pad thai",
+    "green curry",
+    "thai food delivery",
+    "best thai"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-indian-restaurants",
+   "vertical": "eat_drink",
+   "name": "Indian Restaurants",
+   "nameSingular": "Indian Restaurant",
+   "slug": "indian-restaurants",
+   "schemaType": "Restaurant",
+   "description": "North Indian standards, southern dosa and the banquet deals that make it good value for a group. Several regional Indian restaurants run a grocery counter alongside the dining room, which is where you find spices the supermarket does not stock. Vegetarian and vegan diners get more real choices here than at almost any other cuisine.",
+   "synonyms": [
+    "indian near me",
+    "indian takeaway",
+    "butter chicken",
+    "curry house",
+    "vegetarian indian",
+    "indian food delivery"
+   ],
+   "sortOrder": 80
+  },
+  {
+   "id": "cat-fish-and-chips",
+   "vertical": "eat_drink",
+   "name": "Fish and Chips",
+   "nameSingular": "Fish and Chip Shop",
+   "slug": "fish-and-chips",
+   "schemaType": "FastFoodRestaurant",
+   "description": "Flake, whiting, potato cakes, calamari and a bag of chips eaten in the car park. Inland shops mostly work from frozen product, so the ones bringing fresh fish in weekly will tell you which day it lands. Friday night queues are real in country towns and ringing ahead saves half an hour.",
+   "synonyms": [
+    "fish and chips near me",
+    "seafood takeaway",
+    "flake and chips",
+    "potato cakes",
+    "fish shop",
+    "friday night takeaway"
+   ],
+   "sortOrder": 90
+  },
+  {
+   "id": "cat-butchers",
+   "vertical": "eat_drink",
+   "name": "Butchers",
+   "nameSingular": "Butcher",
+   "slug": "butchers",
+   "schemaType": "Store",
+   "description": "Cut to order meat, house made sausages, smallgoods and the local beef and lamb a supermarket cabinet will never tell you about. A good regional butcher names the property the beef came from, and that is the whole reason to shop there instead of the chain. Most also do bulk freezer packs, cryovac and the odd whole lamb for a spit.",
+   "synonyms": [
+    "butcher near me",
+    "local butcher",
+    "meat packs",
+    "sausages",
+    "free range meat",
+    "bulk meat"
+   ],
+   "sortOrder": 100
+  },
+  {
+   "id": "cat-caterers",
+   "vertical": "eat_drink",
+   "name": "Caterers",
+   "nameSingular": "Caterer",
+   "slug": "caterers",
+   "schemaType": "FoodEstablishment",
+   "description": "Weddings, funerals, farm sheds, corporate lunches and the football club presentation night. Regional catering is a logistics job as much as a cooking job, because half the venues have no commercial kitchen and the power comes off a generator. Ask what the quote covers for staff, hire equipment and travel, since those three lines decide the final number.",
+   "synonyms": [
+    "caterers near me",
+    "wedding catering",
+    "function catering",
+    "corporate catering",
+    "spit roast",
+    "party food"
+   ],
+   "sortOrder": 110
+  },
+  {
+   "id": "cat-food-trucks",
+   "vertical": "eat_drink",
+   "name": "Food Trucks",
+   "nameSingular": "Food Truck",
+   "slug": "food-trucks",
+   "schemaType": "FoodEstablishment",
+   "description": "Mobile kitchens working markets, festivals, sporting events and the brewery car park on a Saturday. Location changes weekly, so a social media feed is usually more accurate than any fixed address. Council permits limit where they can trade, which is why some towns run a rotating spot and others have none at all.",
+   "synonyms": [
+    "food truck near me",
+    "mobile catering",
+    "market food",
+    "festival food",
+    "coffee van",
+    "food van hire"
+   ],
+   "sortOrder": 120
+  },
+  {
+   "id": "cat-pubs",
+   "vertical": "pubs_clubs",
+   "name": "Pubs",
+   "nameSingular": "Pub",
+   "slug": "pubs",
+   "schemaType": "BarOrPub",
+   "description": "Counter meals, cold beer, a TAB screen and a beer garden that fills the moment the weather turns. Country pubs are still the social centre of most towns in NSW and Victoria, and plenty run accommodation upstairs that never appears on a booking site. Kitchen hours are the thing to check, since many stop serving food at 8pm even when the bar keeps going.",
+   "synonyms": [
+    "pub near me",
+    "counter meal",
+    "beer garden",
+    "pub with live music",
+    "country pub",
+    "pub meals"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-rsl-clubs",
+   "vertical": "pubs_clubs",
+   "name": "RSL and Licensed Clubs",
+   "nameSingular": "RSL Club",
+   "slug": "rsl-clubs",
+   "schemaType": "BarOrPub",
+   "description": "Returned services and community licensed clubs, usually with a bistro, a members draw and prices held down by the club model. Visitors from outside the local area can normally sign in at the door with photo identification. The bistro is often the best value meal in town and the courtesy bus is the reason people pick it over the pub.",
+   "synonyms": [
+    "rsl near me",
+    "rsl club bistro",
+    "licensed club",
+    "club bistro",
+    "members draw",
+    "courtesy bus club"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-golf-clubs",
+   "vertical": "pubs_clubs",
+   "name": "Golf Clubs",
+   "nameSingular": "Golf Club",
+   "slug": "golf-clubs",
+   "schemaType": "GolfCourse",
+   "description": "Eighteen and nine hole courses, most of them country layouts where the fairways brown off over summer and the greens stay honest. Green fees at regional clubs are a fraction of metro rates and visitors are welcome at nearly all of them outside competition days. The clubhouse bar is frequently open to the public whether or not you have played.",
+   "synonyms": [
+    "golf club near me",
+    "golf course",
+    "green fees",
+    "social golf",
+    "driving range",
+    "9 hole course"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-craft-breweries",
+   "vertical": "pubs_clubs",
+   "name": "Craft Breweries",
+   "nameSingular": "Brewery",
+   "slug": "craft-breweries",
+   "schemaType": "Brewery",
+   "description": "Taprooms pouring what was brewed on site, usually with a food truck out front or a short kitchen menu. The number of working breweries across north east Victoria and southern NSW has grown sharply in the last decade, and most run tasting paddles plus takeaway fills. Trading is often Thursday to Sunday only, so check before driving out of town for one.",
+   "synonyms": [
+    "brewery near me",
+    "craft beer",
+    "taproom",
+    "brewery tour",
+    "beer tasting",
+    "dog friendly brewery"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-wine-bars",
+   "vertical": "pubs_clubs",
+   "name": "Wine Bars",
+   "nameSingular": "Wine Bar",
+   "slug": "wine-bars",
+   "schemaType": "BarOrPub",
+   "description": "Small rooms with a serious list, mostly by the glass, and a snack menu built to sit beside it. Regional wine bars lean on their own district first, which means Rutherglen, Beechworth, the King Valley, Heathcote or Tumbarumba depending on where you are standing. Most seat 40 or fewer, so a Friday night without a booking is a gamble.",
+   "synonyms": [
+    "wine bar near me",
+    "wine by the glass",
+    "cocktail bar",
+    "small bar",
+    "late night bar",
+    "bar with live music"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-nightclubs",
+   "vertical": "pubs_clubs",
+   "name": "Nightclubs",
+   "nameSingular": "Nightclub",
+   "slug": "nightclubs",
+   "schemaType": "NightClub",
+   "description": "Late trading venues with a dance floor, mostly Friday and Saturday, and mostly in the bigger regional centres. Albury, Wodonga, Wagga, Bendigo, Ballarat and Shepparton carry the ones that survive, because a club needs a student or shift worker population to trade every week. Licence conditions set last drinks, so the posted closing time is the one that counts.",
+   "synonyms": [
+    "nightclub near me",
+    "clubs open tonight",
+    "dance floor",
+    "late night venue",
+    "dj nights",
+    "bar open late"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-distilleries",
+   "vertical": "pubs_clubs",
+   "name": "Distilleries",
+   "nameSingular": "Distillery",
+   "slug": "distilleries",
+   "schemaType": "Distillery",
+   "description": "Gin, whisky, vodka and liqueurs made on site, with a cellar door or tasting bar attached. Australian craft distilling has spread well beyond Tasmania and there are now working stills through the Murray, the high country and central Victoria. Tastings are usually paid and redeemable against a bottle, and the same driver limits apply as at any cellar door.",
+   "synonyms": [
+    "distillery near me",
+    "gin tasting",
+    "whisky distillery",
+    "cellar door gin",
+    "distillery tour",
+    "local spirits"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-motels",
+   "vertical": "stay",
+   "name": "Motels",
+   "nameSingular": "Motel",
+   "slug": "motels",
+   "schemaType": "Motel",
+   "description": "Drive up rooms, parking outside the door and a bed within a couple of hours of anywhere on the Hume. Regional motels carry most of the work travel in both states, which means midweek fills first and weekends are easier to book. Ask about late check in, because plenty of family run places shut reception at 8pm and leave a key box.",
+   "synonyms": [
+    "motel near me",
+    "cheap motel",
+    "pet friendly motel",
+    "motel with parking",
+    "family room motel",
+    "accommodation near me"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-holiday-parks",
+   "vertical": "stay",
+   "name": "Holiday Parks",
+   "nameSingular": "Holiday Park",
+   "slug": "holiday-parks",
+   "schemaType": "Campground",
+   "description": "Powered and unpowered sites, cabins, amenity blocks and a camp kitchen, usually beside a river or a lake. School holidays and long weekends book out months ahead at the Murray parks, and most hold a minimum night rule over peak periods. Read the pet policy closely, since many allow dogs on sites but not inside cabins.",
+   "synonyms": [
+    "caravan park near me",
+    "holiday park",
+    "powered sites",
+    "cabin accommodation",
+    "camping with kids",
+    "van park"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-hotels",
+   "vertical": "stay",
+   "name": "Hotels",
+   "nameSingular": "Hotel",
+   "slug": "hotels",
+   "schemaType": "Hotel",
+   "description": "Full service accommodation with a staffed reception, function space in most and room service in a few. In regional NSW and Victoria the word covers both a modern build near the highway and a restored 19th century building on the main street. Business travel, weddings and conferences set the rates, so a Tuesday in a health or agriculture services town can cost more than a Saturday.",
+   "synonyms": [
+    "hotels near me",
+    "hotel accommodation",
+    "conference venue",
+    "hotel with pool",
+    "boutique hotel",
+    "hotel deals"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-cabins-and-cottages",
+   "vertical": "stay",
+   "name": "Cabins and Cottages",
+   "nameSingular": "Cabin",
+   "slug": "cabins-and-cottages",
+   "schemaType": "LodgingBusiness",
+   "description": "Self contained places with a kitchen, sleeping two to eight, on a farm, a bush block or behind a main street cottage. Self catering suits regions where the restaurants shut on Mondays and the nearest supermarket is 30 kilometres away. Two night minimums are normal on weekends and the cleaning fee is worth checking before comparing nightly rates.",
+   "synonyms": [
+    "cabins near me",
+    "self contained accommodation",
+    "romantic getaway",
+    "bush cabin",
+    "cottage accommodation",
+    "spa cabin"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-bed-and-breakfasts",
+   "vertical": "stay",
+   "name": "Bed and Breakfasts",
+   "nameSingular": "Bed and Breakfast",
+   "slug": "bed-and-breakfasts",
+   "schemaType": "BedAndBreakfast",
+   "description": "Guest rooms in a home or a restored building, breakfast included, and a host who actually knows the district. Numbers have fallen since the short stay platforms arrived, though the trade is still solid around Beechworth, Daylesford, Berry and the Southern Highlands. Rooms are limited, so booking direct usually beats the platform rate.",
+   "synonyms": [
+    "bed and breakfast near me",
+    "b and b",
+    "guest house",
+    "breakfast included",
+    "heritage accommodation",
+    "couples getaway"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-campgrounds",
+   "vertical": "stay",
+   "name": "Campgrounds",
+   "nameSingular": "Campground",
+   "slug": "campgrounds",
+   "schemaType": "Campground",
+   "description": "Bush and riverside camping, from national park sites with a drop toilet to free camps on Crown land. Fees, booking rules and fire restrictions differ between NSW National Parks and Parks Victoria, and a total fire ban overrides all of it. Water is the thing people underestimate, because most inland sites have none at all.",
+   "synonyms": [
+    "camping near me",
+    "free camping",
+    "riverside camping",
+    "national park camping",
+    "bush camping",
+    "dog friendly camping"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-farm-stays",
+   "vertical": "stay",
+   "name": "Farm Stays",
+   "nameSingular": "Farm Stay",
+   "slug": "farm-stays",
+   "schemaType": "LodgingBusiness",
+   "description": "Working properties that take guests, with the animals, the paddocks and the early start included. Popular with families out of Melbourne and Sydney who want their kids to see where food actually comes from, and quieter midweek. Ask what guests are allowed to do, because the range runs from watching over a fence to helping with the morning feed.",
+   "synonyms": [
+    "farm stay near me",
+    "farm accommodation",
+    "kids farm holiday",
+    "country escape",
+    "working farm stay",
+    "farm stay with animals"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-holiday-houses",
+   "vertical": "stay",
+   "name": "Holiday Houses",
+   "nameSingular": "Holiday House",
+   "slug": "holiday-houses",
+   "schemaType": "LodgingBusiness",
+   "description": "Whole houses let by the weekend or the week, usually four to twelve beds, which suits a family group or a wedding party. Short term rental accommodation is regulated in both NSW and Victoria now, so a compliant listing carries a registration number. Peak periods book a year out in the snowfields and along the Murray, and everything else is easier than people expect.",
+   "synonyms": [
+    "holiday house near me",
+    "house rental",
+    "group accommodation",
+    "weekend house",
+    "large house rental",
+    "short term rental"
+   ],
+   "sortOrder": 80
+  },
+  {
+   "id": "cat-resorts",
+   "vertical": "stay",
+   "name": "Resorts",
+   "nameSingular": "Resort",
+   "slug": "resorts",
+   "schemaType": "Resort",
+   "description": "Larger properties with pools, restaurants, treatment rooms and conference space on the one site. In this part of the country that mostly means the alpine villages, a handful of lakeside properties and the golf resorts. Rates swing hard with the season, and at Falls Creek, Mount Hotham and Thredbo a winter night can cost triple the summer equivalent.",
+   "synonyms": [
+    "resort near me",
+    "spa resort",
+    "golf resort",
+    "ski accommodation",
+    "luxury accommodation",
+    "resort with pool"
+   ],
+   "sortOrder": 90
+  },
+  {
+   "id": "cat-wineries",
+   "vertical": "things_to_do",
+   "name": "Wineries",
+   "nameSingular": "Winery",
+   "slug": "wineries",
+   "schemaType": "Winery",
+   "description": "Cellar doors pouring what they grew, from a tasting bench in a shed to a full restaurant with a function room. Rutherglen built its name on fortifieds, the King Valley on Italian varieties, Heathcote on shiraz and Tumbarumba on cool climate whites, so the district sets the style before the winemaker does. Tasting fees are normal now and usually waived on a purchase, and most doors close at 5pm.",
+   "synonyms": [
+    "wineries near me",
+    "cellar door",
+    "wine tasting",
+    "vineyard",
+    "winery lunch",
+    "wine tour"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-national-parks",
+   "vertical": "things_to_do",
+   "name": "National Parks",
+   "nameSingular": "National Park",
+   "slug": "national-parks",
+   "schemaType": "Park",
+   "description": "Bushwalking, camping, four wheel driving, waterfalls and the country that sits outside the farm gate. NSW National Parks and Parks Victoria run separate fee structures, separate booking systems and separate rules, and dogs are banned from nearly all of them. Check fire, flood and seasonal road closures before setting out, because alpine and river access shuts for months at a time.",
+   "synonyms": [
+    "national park near me",
+    "bushwalking",
+    "waterfalls",
+    "park entry fees",
+    "4wd tracks",
+    "camping in national park"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-museums",
+   "vertical": "things_to_do",
+   "name": "Museums",
+   "nameSingular": "Museum",
+   "slug": "museums",
+   "schemaType": "Museum",
+   "description": "Local history collections, rail and machinery sheds, military exhibits and the volunteer run rooms holding a town's records. Across regional NSW and Victoria these are often the only place a district's photographs and newspapers survive together. Opening hours are the catch, since volunteer staffing means many trade Friday to Sunday or by appointment only.",
+   "synonyms": [
+    "museum near me",
+    "local history",
+    "military museum",
+    "rail museum",
+    "things to do with kids",
+    "heritage display"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-art-galleries",
+   "vertical": "things_to_do",
+   "name": "Art Galleries",
+   "nameSingular": "Art Gallery",
+   "slug": "art-galleries",
+   "schemaType": "ArtGallery",
+   "description": "Public and commercial galleries showing local painters, touring exhibitions and regional collections that quietly hold significant Australian work. Councils in both states fund gallery spaces most visitors never think to look for, and entry is usually free. Exhibition changeovers close the doors for a week or two at a time, so check what is hanging before you drive out.",
+   "synonyms": [
+    "art gallery near me",
+    "exhibitions",
+    "local artists",
+    "regional gallery",
+    "free things to do",
+    "art classes"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-swimming-spots",
+   "vertical": "things_to_do",
+   "name": "Swimming Spots",
+   "nameSingular": "Swimming Spot",
+   "slug": "swimming-spots",
+   "schemaType": "TouristAttraction",
+   "description": "River holes, weir pools, lakes and the town pool that opens from November through March. The Murray, the Murrumbidgee, the Ovens and the Goulburn all hold spots locals use and visitors drive straight past. Currents, submerged timber and cold water below a weir wall kill people every summer, so ask about a spot before anyone jumps in.",
+   "synonyms": [
+    "swimming near me",
+    "river swimming",
+    "waterhole",
+    "public pool",
+    "lake swimming",
+    "free swimming spot"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-walking-tracks",
+   "vertical": "things_to_do",
+   "name": "Walking Tracks",
+   "nameSingular": "Walking Track",
+   "slug": "walking-tracks",
+   "schemaType": "TouristAttraction",
+   "description": "Short river walks, half day summit climbs, rail trails and the multi day routes through alpine country. The rail trails across north east Victoria and the Riverina are flat, sealed or well surfaced and open to bikes and prams, which makes them the easy option with kids. Inland heat is the real hazard, so anything over an hour is better started before 10am.",
+   "synonyms": [
+    "walking tracks near me",
+    "rail trail",
+    "hiking trails",
+    "easy walks",
+    "pram friendly walk",
+    "dog friendly walk"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-lookouts",
+   "vertical": "things_to_do",
+   "name": "Lookouts",
+   "nameSingular": "Lookout",
+   "slug": "lookouts",
+   "schemaType": "TouristAttraction",
+   "description": "High points over the valley, the river or the ranges, most of them reachable by car. Sunset is the obvious time and also when the car park fills, so an early morning run gets the same view with nobody in it. Gravel access roads decide the trip after rain, especially in anything without clearance.",
+   "synonyms": [
+    "lookout near me",
+    "scenic drive",
+    "sunset spot",
+    "best views",
+    "photo spot",
+    "hilltop lookout"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-farmers-markets",
+   "vertical": "things_to_do",
+   "name": "Farmers Markets",
+   "nameSingular": "Farmers Market",
+   "slug": "farmers-markets",
+   "schemaType": "TouristAttraction",
+   "description": "Growers and producer markets, generally monthly, generally Saturday morning and generally finished by noon. Regional markets run to a fixed calendar, so a first Saturday market stays on the first Saturday whatever the weather is doing. Bring cash and a bag, because reception is patchy and card terminals fail more often than stallholders like to admit.",
+   "synonyms": [
+    "farmers market near me",
+    "produce market",
+    "market day",
+    "local produce",
+    "craft market",
+    "monthly market"
+   ],
+   "sortOrder": 80
+  },
+  {
+   "id": "cat-cinemas",
+   "vertical": "things_to_do",
+   "name": "Cinemas",
+   "nameSingular": "Cinema",
+   "slug": "cinemas",
+   "schemaType": "MovieTheater",
+   "description": "Screens ranging from a small multiplex to a single art deco room that has run since the 1930s. Regional sessions cluster into evenings and weekends, and midweek daytime screenings sometimes need a minimum number of tickets to go ahead. A handful of towns still run a drive in, which is the only good reason to travel 40 minutes to watch a film.",
+   "synonyms": [
+    "cinema near me",
+    "movie times",
+    "drive in",
+    "kids movies",
+    "cheap tuesday",
+    "what's on"
+   ],
+   "sortOrder": 90
+  },
+  {
+   "id": "cat-ski-fields",
+   "vertical": "things_to_do",
+   "name": "Ski Fields",
+   "nameSingular": "Ski Field",
+   "slug": "ski-fields",
+   "schemaType": "SkiResort",
+   "description": "Lift access resorts and cross country areas across the Victorian and NSW alps, operating roughly June to September. Resort entry fees, chain requirements and oversnow transport are the costs people forget to budget for, and all three apply in Victoria. Cover varies hugely between seasons, so July and August are the reliable months rather than the shoulders.",
+   "synonyms": [
+    "ski fields near me",
+    "snow report",
+    "lift tickets",
+    "toboggan park",
+    "cross country skiing",
+    "snow play"
+   ],
+   "sortOrder": 100
+  },
+  {
+   "id": "cat-wildlife-parks",
+   "vertical": "things_to_do",
+   "name": "Wildlife Parks",
+   "nameSingular": "Wildlife Park",
+   "slug": "wildlife-parks",
+   "schemaType": "Zoo",
+   "description": "Sanctuaries and animal encounters, from kangaroo and koala enclosures to raptor displays and reptile houses. Regional operators run scheduled feeds and keeper talks rather than continuous shows, so the timetable decides when to arrive. Many double as rescue and rehabilitation centres, which is where the entry fee actually goes.",
+   "synonyms": [
+    "wildlife park near me",
+    "zoo",
+    "animal encounters",
+    "kangaroos",
+    "koalas",
+    "things to do with kids"
+   ],
+   "sortOrder": 110
+  },
+  {
+   "id": "cat-football-netball-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Football and Netball Clubs",
+   "nameSingular": "Football and Netball Club",
+   "slug": "football-netball-clubs",
+   "schemaType": "SportsClub",
+   "description": "Senior and junior sides in the country football and netball leagues that run April to September. In a small town this is the biggest social organisation going, with the courts and the ground sharing a canteen, a committee and a volunteer roster. Registration fees, training nights and the junior pathway are what most people come looking for, along with who is at home this weekend.",
+   "synonyms": [
+    "football club near me",
+    "netball club",
+    "auskick",
+    "junior football",
+    "country league",
+    "training nights"
+   ],
+   "sortOrder": 10
+  },
+  {
+   "id": "cat-cricket-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Cricket Clubs",
+   "nameSingular": "Cricket Club",
+   "slug": "cricket-clubs",
+   "schemaType": "SportsClub",
+   "description": "Grade, social and junior cricket through summer, on turf in the larger centres and synthetic nearly everywhere else. Clubs recruit hardest in August and September, and most will find a spot for anyone who turns up to training in the first fortnight. The junior entry programs run by the state associations feed straight into the senior sides.",
+   "synonyms": [
+    "cricket club near me",
+    "junior cricket",
+    "turf wicket",
+    "social cricket",
+    "cricket registration",
+    "nets training"
+   ],
+   "sortOrder": 20
+  },
+  {
+   "id": "cat-bowls-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Bowls Clubs",
+   "nameSingular": "Bowls Club",
+   "slug": "bowls-clubs",
+   "schemaType": "SportsClub",
+   "description": "Lawn bowls clubs running pennant sides, social bowls and barefoot nights for people who have never held a bowl. Membership is cheap, the greens are kept by volunteers and almost every club will lend a set to get you started. Many hold a licence and a kitchen as well, which is why the bowls club is often the quietest decent feed in town.",
+   "synonyms": [
+    "bowls club near me",
+    "barefoot bowls",
+    "lawn bowls",
+    "pennant bowls",
+    "social bowls",
+    "bowls membership"
+   ],
+   "sortOrder": 30
+  },
+  {
+   "id": "cat-car-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Car Clubs",
+   "nameSingular": "Car Club",
+   "slug": "car-clubs",
+   "schemaType": "Organization",
+   "description": "Enthusiast groups for classics, hot rods, four wheel drives, muscle cars and single make marques. Club membership is also the practical route into historic and club registration schemes in both NSW and Victoria, which cuts the annual cost of a car driven occasionally. Monthly meetings, show and shine days and organised runs make up the calendar.",
+   "synonyms": [
+    "car club near me",
+    "classic car club",
+    "hot rod club",
+    "club rego",
+    "4wd club",
+    "show and shine"
+   ],
+   "sortOrder": 40
+  },
+  {
+   "id": "cat-fishing-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Fishing Clubs",
+   "nameSingular": "Fishing Club",
+   "slug": "fishing-clubs",
+   "schemaType": "SportsClub",
+   "description": "Groups fishing the Murray, the Murrumbidgee, the impoundments and the coast, with monthly comps and an annual weigh in. Closed seasons and size limits differ between NSW and Victoria and both are enforced, so a club is the fastest way to learn what applies where you are standing. Junior sections and come and try days are common and gear is usually lent out.",
+   "synonyms": [
+    "fishing club near me",
+    "murray cod",
+    "fishing competition",
+    "junior fishing",
+    "anglers club",
+    "learn to fish"
+   ],
+   "sortOrder": 50
+  },
+  {
+   "id": "cat-motorcycle-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Motorcycle Clubs",
+   "nameSingular": "Motorcycle Club",
+   "slug": "motorcycle-clubs",
+   "schemaType": "Organization",
+   "description": "Riding groups for road, adventure, trail and vintage machines, meeting for weekend rides and coffee stops. Most are ordinary social clubs with a rides calendar, a committee and a public liability policy. Historic registration applies to bikes as well as cars in both states, and a recognised club is what makes that possible.",
+   "synonyms": [
+    "motorcycle club near me",
+    "riders group",
+    "adventure riding",
+    "vintage motorcycle club",
+    "weekend rides",
+    "bike club"
+   ],
+   "sortOrder": 60
+  },
+  {
+   "id": "cat-mens-sheds",
+   "vertical": "clubs_hobbies",
+   "name": "Men's Sheds",
+   "nameSingular": "Men's Shed",
+   "slug": "mens-sheds",
+   "schemaType": "Organization",
+   "description": "Workshops where blokes meet to build things, repair things and talk while they do it, usually two or three mornings a week. The movement started in Australia and now runs to several hundred sheds across NSW and Victoria under the Australian Men's Shed Association. Membership is a small annual fee, the tools and the tea are provided, and the isolation and health angle is the real point.",
+   "synonyms": [
+    "mens shed near me",
+    "community workshop",
+    "woodworking group",
+    "volunteer shed",
+    "mens group",
+    "shed membership"
+   ],
+   "sortOrder": 70
+  },
+  {
+   "id": "cat-historical-societies",
+   "vertical": "clubs_hobbies",
+   "name": "Historical Societies",
+   "nameSingular": "Historical Society",
+   "slug": "historical-societies",
+   "schemaType": "Organization",
+   "description": "Volunteer groups holding a district's records, photographs, cemetery indexes and family history files. If you are tracing a family through a country town, the local society usually holds material that never reached State Records NSW or the Public Record Office Victoria. Rooms open a couple of days a week, research requests come in by email and a donation is expected rather than charged.",
+   "synonyms": [
+    "historical society near me",
+    "family history",
+    "local records",
+    "genealogy group",
+    "heritage society",
+    "old photographs"
+   ],
+   "sortOrder": 80
+  },
+  {
+   "id": "cat-garden-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Garden Clubs",
+   "nameSingular": "Garden Club",
+   "slug": "garden-clubs",
+   "schemaType": "Organization",
+   "description": "Monthly meetings, guest speakers, plant swaps, garden visits and an annual show with a schedule everyone argues over. A regional club knows exactly what survives a frost hollow in the Southern Highlands or a Riverina February, which no online guide gets right. Membership is usually under 50 dollars a year and visitors can generally sit in on a meeting before joining.",
+   "synonyms": [
+    "garden club near me",
+    "horticultural society",
+    "plant swap",
+    "open gardens",
+    "gardening group",
+    "garden show"
+   ],
+   "sortOrder": 90
+  },
+  {
+   "id": "cat-bushwalking-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Bushwalking Clubs",
+   "nameSingular": "Bushwalking Club",
+   "slug": "bushwalking-clubs",
+   "schemaType": "SportsClub",
+   "description": "Organised walks graded from a two hour riverside stroll to overnight packs through the alpine parks. Walking with a club is the sensible way into remote country, because there is a leader, a route plan and someone who has done it before. Most run a trial walk or two for prospective members before anyone is asked to join.",
+   "synonyms": [
+    "bushwalking club near me",
+    "hiking group",
+    "walking group",
+    "overnight hikes",
+    "trail walking",
+    "social walks"
+   ],
+   "sortOrder": 100
+  },
+  {
+   "id": "cat-pony-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Pony Clubs",
+   "nameSingular": "Pony Club",
+   "slug": "pony-clubs",
+   "schemaType": "SportsClub",
+   "description": "Riding instruction, rallies, gymkhanas and competition for young riders, run by parent volunteers on grounds most country towns still own. Pony Club Australia sets the structure through its state branches, and certificates step up from basic handling to jumping and dressage. A helmet and a quiet horse matter far more than an expensive one, and clubs will usually help a family find both.",
+   "synonyms": [
+    "pony club near me",
+    "riding lessons kids",
+    "gymkhana",
+    "horse riding club",
+    "junior equestrian",
+    "pony club rally"
+   ],
+   "sortOrder": 110
+  },
+  {
+   "id": "cat-sailing-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Sailing Clubs",
+   "nameSingular": "Sailing Club",
+   "slug": "sailing-clubs",
+   "schemaType": "SportsClub",
+   "description": "Dinghy, trailer sailer and yacht clubs on Lake Hume, Lake Mulwala, Lake Eildon and the coastal estuaries. Most race Saturday or Sunday through summer and run a learn to sail program that does not require owning a boat. Fees sit well below the metro clubs and there is nearly always a crew shortage, which is the easiest way in.",
+   "synonyms": [
+    "sailing club near me",
+    "learn to sail",
+    "yacht club",
+    "dinghy racing",
+    "crew wanted",
+    "sailing lessons"
+   ],
+   "sortOrder": 120
+  },
+  {
+   "id": "cat-lions-and-rotary",
+   "vertical": "clubs_hobbies",
+   "name": "Lions and Rotary Clubs",
+   "nameSingular": "Service Club",
+   "slug": "lions-and-rotary",
+   "schemaType": "Organization",
+   "description": "Service clubs raising money for local causes, running the barbecue at every community event and funding what councils will not. Rotary, Lions and Apex branches across regional NSW and Victoria are often the reason a town has a playground, a defibrillator or a scholarship. Meetings are usually fortnightly over a meal and visitors are welcome with no commitment attached.",
+   "synonyms": [
+    "rotary club near me",
+    "lions club",
+    "apex club",
+    "service club",
+    "community fundraising",
+    "volunteer group"
+   ],
+   "sortOrder": 130
+  },
+  {
+   "id": "cat-cwa-branches",
+   "vertical": "clubs_hobbies",
+   "name": "CWA Branches",
+   "nameSingular": "CWA Branch",
+   "slug": "cwa-branches",
+   "schemaType": "Organization",
+   "description": "Country Women's Association branches, which do a great deal more than the scones they are known for. The CWA runs drought and disaster relief, lobbies on rural health and education, and holds the oldest continuous women's network in country Australia. Branches meet monthly, membership is inexpensive, and handicraft, cookery and international study groups sit under most of them.",
+   "synonyms": [
+    "cwa near me",
+    "country womens association",
+    "cwa branch meeting",
+    "womens group",
+    "handicraft group",
+    "cwa membership"
+   ],
+   "sortOrder": 140
+  },
+  {
+   "id": "cat-model-railway-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Model Railway Clubs",
+   "nameSingular": "Model Railway Club",
+   "slug": "model-railway-clubs",
+   "schemaType": "Organization",
+   "description": "Layout building, running nights, exhibitions and the scale and gauge arguments that come with them. Clubs across NSW and Victoria keep permanent layouts in halls and sheds, and the annual exhibitions pull crowds that surprise anyone who has never been to one. Visitors are almost always welcome on a running night, which is the best way to work out whether it suits you.",
+   "synonyms": [
+    "model railway club near me",
+    "model trains",
+    "ho scale",
+    "model railway exhibition",
+    "train layout",
+    "modelling group"
+   ],
+   "sortOrder": 150
+  },
+  {
+   "id": "cat-aero-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Aero Clubs",
+   "nameSingular": "Aero Club",
+   "slug": "aero-clubs",
+   "schemaType": "SportsClub",
+   "description": "Flying clubs, gliding clubs and recreational aviation groups working out of regional aerodromes. Airfields around Albury, Wagga, Benalla, Tocumwal and Corowa support training, gliding and vintage aircraft activity that metro airspace makes impossible. A trial instructional flight is the standard entry point and costs far less than most people assume.",
+   "synonyms": [
+    "aero club near me",
+    "flying lessons",
+    "gliding club",
+    "recreational aviation",
+    "trial flight",
+    "learn to fly"
+   ],
+   "sortOrder": 160
+  },
+  {
+   "id": "cat-radio-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Radio Clubs",
+   "nameSingular": "Radio Club",
+   "slug": "radio-clubs",
+   "schemaType": "Organization",
+   "description": "Amateur radio clubs running nets, contests, field days and the courses that lead to a callsign. Amateur qualifications are assessed under arrangements overseen by the ACMA, and clubs deliver most of the training and testing. In regional areas the emergency communications role is genuine, because HF still works when the mobile tower does not.",
+   "synonyms": [
+    "amateur radio club near me",
+    "ham radio",
+    "radio licence course",
+    "cb radio club",
+    "field day",
+    "callsign training"
+   ],
+   "sortOrder": 170
+  },
+  {
+   "id": "cat-quilting-and-craft-groups",
+   "vertical": "clubs_hobbies",
+   "name": "Quilting and Craft Groups",
+   "nameSingular": "Craft Group",
+   "slug": "quilting-and-craft-groups",
+   "schemaType": "Organization",
+   "description": "Patchwork circles, quilting guilds, spinners and weavers, knitting groups and craft mornings held in halls and libraries. Work out of regional groups fills the pavilions at agricultural shows and goes out as charity quilts after fires and floods. Most meet weekly or fortnightly, charge a few dollars towards the room and will teach a beginner from scratch.",
+   "synonyms": [
+    "quilting group near me",
+    "craft group",
+    "patchwork club",
+    "knitting group",
+    "spinners and weavers",
+    "sewing classes"
+   ],
+   "sortOrder": 180
+  },
+  {
+   "id": "cat-coffee-roasters",
+   "vertical": "eat_drink",
+   "name": "Coffee Roasters",
+   "nameSingular": "Coffee Roaster",
+   "slug": "coffee-roasters",
+   "schemaType": "FoodEstablishment",
+   "description": "Coffee Roasters listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-vietnamese-restaurants",
+   "vertical": "eat_drink",
+   "name": "Vietnamese Restaurants",
+   "nameSingular": "Vietnamese Restaurant",
+   "slug": "vietnamese-restaurants",
+   "schemaType": "FoodEstablishment",
+   "description": "Vietnamese Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-mexican-restaurants",
+   "vertical": "eat_drink",
+   "name": "Mexican Restaurants",
+   "nameSingular": "Mexican Restaurant",
+   "slug": "mexican-restaurants",
+   "schemaType": "FoodEstablishment",
+   "description": "Mexican Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-italian-restaurants",
+   "vertical": "eat_drink",
+   "name": "Italian Restaurants",
+   "nameSingular": "Italian Restaurant",
+   "slug": "italian-restaurants",
+   "schemaType": "FoodEstablishment",
+   "description": "Italian Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-sports-clubs",
+   "vertical": "pubs_clubs",
+   "name": "Sports Clubs",
+   "nameSingular": "Sports Club",
+   "slug": "sports-clubs",
+   "schemaType": "BarOrPub",
+   "description": "Sports Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-bars",
+   "vertical": "pubs_clubs",
+   "name": "Bars",
+   "nameSingular": "Bar",
+   "slug": "bars",
+   "schemaType": "BarOrPub",
+   "description": "Bars listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-accountants",
+   "vertical": "trades",
+   "name": "Accountants",
+   "nameSingular": "Accountant",
+   "slug": "accountants",
+   "schemaType": "LocalBusiness",
+   "description": "Accountants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-solicitors",
+   "vertical": "trades",
+   "name": "Solicitors",
+   "nameSingular": "Solicitor",
+   "slug": "solicitors",
+   "schemaType": "LocalBusiness",
+   "description": "Solicitors listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-conveyancers",
+   "vertical": "trades",
+   "name": "Conveyancers",
+   "nameSingular": "Conveyancer",
+   "slug": "conveyancers",
+   "schemaType": "LocalBusiness",
+   "description": "Conveyancers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-mortgage-brokers",
+   "vertical": "trades",
+   "name": "Mortgage Brokers",
+   "nameSingular": "Mortgage Broker",
+   "slug": "mortgage-brokers",
+   "schemaType": "LocalBusiness",
+   "description": "Mortgage Brokers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-real-estate-agents",
+   "vertical": "trades",
+   "name": "Real Estate Agents",
+   "nameSingular": "Real Estate Agent",
+   "slug": "real-estate-agents",
+   "schemaType": "LocalBusiness",
+   "description": "Real Estate Agents listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-architects",
+   "vertical": "trades",
+   "name": "Architects",
+   "nameSingular": "Architect",
+   "slug": "architects",
+   "schemaType": "LocalBusiness",
+   "description": "Architects listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-web-design",
+   "vertical": "trades",
+   "name": "Web Design",
+   "nameSingular": "Web Design",
+   "slug": "web-design",
+   "schemaType": "LocalBusiness",
+   "description": "Web Design listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-printers",
+   "vertical": "trades",
+   "name": "Printers",
+   "nameSingular": "Printer",
+   "slug": "printers",
+   "schemaType": "LocalBusiness",
+   "description": "Printers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-signage",
+   "vertical": "trades",
+   "name": "Signage",
+   "nameSingular": "Signage",
+   "slug": "signage",
+   "schemaType": "LocalBusiness",
+   "description": "Signage listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-dentists",
+   "vertical": "trades",
+   "name": "Dentists",
+   "nameSingular": "Dentist",
+   "slug": "dentists",
+   "schemaType": "LocalBusiness",
+   "description": "Dentists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-physiotherapists",
+   "vertical": "trades",
+   "name": "Physiotherapists",
+   "nameSingular": "Physiotherapist",
+   "slug": "physiotherapists",
+   "schemaType": "LocalBusiness",
+   "description": "Physiotherapists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-chiropractors",
+   "vertical": "trades",
+   "name": "Chiropractors",
+   "nameSingular": "Chiropractor",
+   "slug": "chiropractors",
+   "schemaType": "LocalBusiness",
+   "description": "Chiropractors listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-podiatrists",
+   "vertical": "trades",
+   "name": "Podiatrists",
+   "nameSingular": "Podiatrist",
+   "slug": "podiatrists",
+   "schemaType": "LocalBusiness",
+   "description": "Podiatrists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-optometrists",
+   "vertical": "trades",
+   "name": "Optometrists",
+   "nameSingular": "Optometrist",
+   "slug": "optometrists",
+   "schemaType": "LocalBusiness",
+   "description": "Optometrists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-veterinary-clinics",
+   "vertical": "trades",
+   "name": "Veterinary Clinics",
+   "nameSingular": "Veterinary Clinic",
+   "slug": "veterinary-clinics",
+   "schemaType": "LocalBusiness",
+   "description": "Veterinary Clinics listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-pharmacies",
+   "vertical": "trades",
+   "name": "Pharmacies",
+   "nameSingular": "Pharmacy",
+   "slug": "pharmacies",
+   "schemaType": "LocalBusiness",
+   "description": "Pharmacies listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-hairdressers",
+   "vertical": "trades",
+   "name": "Hairdressers",
+   "nameSingular": "Hairdresser",
+   "slug": "hairdressers",
+   "schemaType": "LocalBusiness",
+   "description": "Hairdressers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-barbers",
+   "vertical": "trades",
+   "name": "Barbers",
+   "nameSingular": "Barber",
+   "slug": "barbers",
+   "schemaType": "LocalBusiness",
+   "description": "Barbers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-day-spas",
+   "vertical": "trades",
+   "name": "Day Spas",
+   "nameSingular": "Day Spa",
+   "slug": "day-spas",
+   "schemaType": "LocalBusiness",
+   "description": "Day Spas listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-tattoo-studios",
+   "vertical": "trades",
+   "name": "Tattoo Studios",
+   "nameSingular": "Tattoo Studio",
+   "slug": "tattoo-studios",
+   "schemaType": "LocalBusiness",
+   "description": "Tattoo Studios listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-childcare",
+   "vertical": "trades",
+   "name": "Childcare",
+   "nameSingular": "Childcare",
+   "slug": "childcare",
+   "schemaType": "LocalBusiness",
+   "description": "Childcare listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-driving-schools",
+   "vertical": "trades",
+   "name": "Driving Schools",
+   "nameSingular": "Driving School",
+   "slug": "driving-schools",
+   "schemaType": "LocalBusiness",
+   "description": "Driving Schools listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-caravan-parks",
+   "vertical": "stay",
+   "name": "Caravan Parks",
+   "nameSingular": "Caravan Park",
+   "slug": "caravan-parks",
+   "schemaType": "LodgingBusiness",
+   "description": "Caravan Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-cottages",
+   "vertical": "stay",
+   "name": "Cottages",
+   "nameSingular": "Cottage",
+   "slug": "cottages",
+   "schemaType": "LodgingBusiness",
+   "description": "Cottages listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-bed-and-breakfast",
+   "vertical": "stay",
+   "name": "Bed And Breakfast",
+   "nameSingular": "Bed And Breakfast",
+   "slug": "bed-and-breakfast",
+   "schemaType": "LodgingBusiness",
+   "description": "Bed And Breakfast listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-parks-and-gardens",
+   "vertical": "things_to_do",
+   "name": "Parks And Gardens",
+   "nameSingular": "Parks And Garden",
+   "slug": "parks-and-gardens",
+   "schemaType": "TouristAttraction",
+   "description": "Parks And Gardens listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-walking-trails",
+   "vertical": "things_to_do",
+   "name": "Walking Trails",
+   "nameSingular": "Walking Trail",
+   "slug": "walking-trails",
+   "schemaType": "TouristAttraction",
+   "description": "Walking Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-escape-rooms",
+   "vertical": "things_to_do",
+   "name": "Escape Rooms",
+   "nameSingular": "Escape Room",
+   "slug": "escape-rooms",
+   "schemaType": "TouristAttraction",
+   "description": "Escape Rooms listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-heritage-sites",
+   "vertical": "things_to_do",
+   "name": "Heritage Sites",
+   "nameSingular": "Heritage Site",
+   "slug": "heritage-sites",
+   "schemaType": "TouristAttraction",
+   "description": "Heritage Sites listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-bowling-alleys",
+   "vertical": "things_to_do",
+   "name": "Bowling Alleys",
+   "nameSingular": "Bowling Alley",
+   "slug": "bowling-alleys",
+   "schemaType": "TouristAttraction",
+   "description": "Bowling Alleys listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-water-parks",
+   "vertical": "things_to_do",
+   "name": "Water Parks",
+   "nameSingular": "Water Park",
+   "slug": "water-parks",
+   "schemaType": "TouristAttraction",
+   "description": "Water Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-towing-services",
+   "vertical": "trades",
+   "name": "Towing Services",
+   "nameSingular": "Towing Service",
+   "slug": "towing-services",
+   "schemaType": "LocalBusiness",
+   "description": "Towing Services listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-exhaust-specialists",
+   "vertical": "trades",
+   "name": "Exhaust Specialists",
+   "nameSingular": "Exhaust Specialist",
+   "slug": "exhaust-specialists",
+   "schemaType": "LocalBusiness",
+   "description": "Exhaust Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-4wd-specialists",
+   "vertical": "trades",
+   "name": "4wd Specialists",
+   "nameSingular": "4wd Specialist",
+   "slug": "4wd-specialists",
+   "schemaType": "LocalBusiness",
+   "description": "4wd Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-truck-repairs",
+   "vertical": "trades",
+   "name": "Truck Repairs",
+   "nameSingular": "Truck Repair",
+   "slug": "truck-repairs",
+   "schemaType": "LocalBusiness",
+   "description": "Truck Repairs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-motorcycle-service",
+   "vertical": "trades",
+   "name": "Motorcycle Service",
+   "nameSingular": "Motorcycle Service",
+   "slug": "motorcycle-service",
+   "schemaType": "LocalBusiness",
+   "description": "Motorcycle Service listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-car-detailing",
+   "vertical": "trades",
+   "name": "Car Detailing",
+   "nameSingular": "Car Detailing",
+   "slug": "car-detailing",
+   "schemaType": "LocalBusiness",
+   "description": "Car Detailing listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-shed-builders",
+   "vertical": "trades",
+   "name": "Shed Builders",
+   "nameSingular": "Shed Builder",
+   "slug": "shed-builders",
+   "schemaType": "LocalBusiness",
+   "description": "Shed Builders listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-carpet-cleaning",
+   "vertical": "trades",
+   "name": "Carpet Cleaning",
+   "nameSingular": "Carpet Cleaning",
+   "slug": "carpet-cleaning",
+   "schemaType": "LocalBusiness",
+   "description": "Carpet Cleaning listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-lawn-mowing",
+   "vertical": "trades",
+   "name": "Lawn Mowing",
+   "nameSingular": "Lawn Mowing",
+   "slug": "lawn-mowing",
+   "schemaType": "LocalBusiness",
+   "description": "Lawn Mowing listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-self-storage",
+   "vertical": "trades",
+   "name": "Self Storage",
+   "nameSingular": "Self Storage",
+   "slug": "self-storage",
+   "schemaType": "LocalBusiness",
+   "description": "Self Storage listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-rubbish-removal",
+   "vertical": "trades",
+   "name": "Rubbish Removal",
+   "nameSingular": "Rubbish Removal",
+   "slug": "rubbish-removal",
+   "schemaType": "LocalBusiness",
+   "description": "Rubbish Removal listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-skip-bins",
+   "vertical": "trades",
+   "name": "Skip Bins",
+   "nameSingular": "Skip Bin",
+   "slug": "skip-bins",
+   "schemaType": "LocalBusiness",
+   "description": "Skip Bins listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-pool-services",
+   "vertical": "trades",
+   "name": "Pool Services",
+   "nameSingular": "Pool Service",
+   "slug": "pool-services",
+   "schemaType": "LocalBusiness",
+   "description": "Pool Services listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-handymen",
+   "vertical": "trades",
+   "name": "Handymen",
+   "nameSingular": "Handymen",
+   "slug": "handymen",
+   "schemaType": "LocalBusiness",
+   "description": "Handymen listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-welding",
+   "vertical": "trades",
+   "name": "Welding",
+   "nameSingular": "Welding",
+   "slug": "welding",
+   "schemaType": "LocalBusiness",
+   "description": "Welding listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-appliance-repair",
+   "vertical": "trades",
+   "name": "Appliance Repair",
+   "nameSingular": "Appliance Repair",
+   "slug": "appliance-repair",
+   "schemaType": "LocalBusiness",
+   "description": "Appliance Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-computer-repair",
+   "vertical": "trades",
+   "name": "Computer Repair",
+   "nameSingular": "Computer Repair",
+   "slug": "computer-repair",
+   "schemaType": "LocalBusiness",
+   "description": "Computer Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-breweries",
+   "vertical": "things_to_do",
+   "name": "Breweries",
+   "nameSingular": "Brewery",
+   "slug": "breweries",
+   "schemaType": "TouristAttraction",
+   "description": "Breweries listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-mountain-bike-trails",
+   "vertical": "things_to_do",
+   "name": "Mountain Bike Trails",
+   "nameSingular": "Mountain Bike Trail",
+   "slug": "mountain-bike-trails",
+   "schemaType": "TouristAttraction",
+   "description": "Mountain Bike Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-boat-hire",
+   "vertical": "things_to_do",
+   "name": "Boat Hire",
+   "nameSingular": "Boat Hire",
+   "slug": "boat-hire",
+   "schemaType": "TouristAttraction",
+   "description": "Boat Hire listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-phone-repair",
+   "vertical": "trades",
+   "name": "Phone Repair",
+   "nameSingular": "Phone Repair",
+   "slug": "phone-repair",
+   "schemaType": "LocalBusiness",
+   "description": "Phone Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  }
+ ],
+ "modifiers": [
+  {
+   "id": "mod-plumbers-emergency",
+   "categoryId": "cat-plumbers",
+   "slug": "emergency",
+   "label": "Emergency",
+   "attributeKey": "emergency_callout",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed here when the business answers after hours and attends the same day for burst pipes, sewer overflows and no water. After hours rates are higher than the day rate and the figure appears on the listing where the operator has supplied it."
+  },
+  {
+   "id": "mod-plumbers-blocked-drains",
+   "categoryId": "cat-plumbers",
+   "slug": "blocked-drains",
+   "label": "Blocked drains",
+   "attributeKey": "blocked_drains",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the plumber runs their own drain camera and jetter instead of sending the work elsewhere. Tree root intrusion is the usual cause in older streets and the camera is what proves it."
+  },
+  {
+   "id": "mod-plumbers-hot-water",
+   "categoryId": "cat-plumbers",
+   "slug": "hot-water",
+   "label": "Hot water",
+   "attributeKey": "hot_water",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For plumbers who repair and replace electric, gas, heat pump and solar units and hold stock for a same day swap. A dead system on a Sunday is the most common reason people search this."
+  },
+  {
+   "id": "mod-plumbers-gas-fitting",
+   "categoryId": "cat-plumbers",
+   "slug": "gas-fitting",
+   "label": "Gas fitting",
+   "attributeKey": "gas_fitting",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the plumber holds a gas fitting authorisation for natural gas and LPG, which is separate to a plumbing licence. Covers appliance installation, leak repairs and compliance certificates."
+  },
+  {
+   "id": "mod-electricians-24-hour",
+   "categoryId": "cat-electricians",
+   "slug": "24-hour",
+   "label": "24 hour",
+   "attributeKey": "emergency_callout",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For electricians who take calls overnight and on weekends for power failures, burning smells and a switchboard that keeps tripping. After hours work is charged from the moment they leave the depot."
+  },
+  {
+   "id": "mod-electricians-switchboard-upgrades",
+   "categoryId": "cat-electricians",
+   "slug": "switchboard-upgrades",
+   "label": "Switchboard upgrades",
+   "attributeKey": "switchboard_upgrades",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the electrician does full board replacements, including removing ceramic fuses and fitting safety switches to every circuit. Plenty of housing stock in both states still runs a board that predates RCD requirements."
+  },
+  {
+   "id": "mod-builders-extensions",
+   "categoryId": "cat-builders",
+   "slug": "extensions",
+   "label": "Extensions",
+   "attributeKey": "extensions",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For builders who take on additions, second storeys and structural renovation rather than new builds only. Extension work needs engineering, an approval pathway and a tie in to an existing structure, which is a different job to a slab on a clear block."
+  },
+  {
+   "id": "mod-air-conditioning-ducted",
+   "categoryId": "cat-air-conditioning",
+   "slug": "ducted",
+   "label": "Ducted",
+   "attributeKey": "ducted_system",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the business designs and installs ducted refrigerated systems, not only wall splits. Ceiling space, zoning and duct sizing decide whether a ducted system actually performs on a 40 degree day."
+  },
+  {
+   "id": "mod-air-conditioning-split-system",
+   "categoryId": "cat-air-conditioning",
+   "slug": "split-system",
+   "label": "Split system",
+   "attributeKey": "split_system",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For installers who supply and fit wall mounted splits, including back to back and long pipe runs. Quotes move on run length and any electrical work needed, so a site look beats a phone price."
+  },
+  {
+   "id": "mod-solar-installers-battery-storage",
+   "categoryId": "cat-solar-installers",
+   "slug": "battery-storage",
+   "label": "Battery storage",
+   "attributeKey": "battery_storage",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the installer sizes and fits home batteries alongside solar, including retrofits to an existing array. Battery work carries its own accreditation and rules about where the unit can be mounted."
+  },
+  {
+   "id": "mod-mechanics-mobile",
+   "categoryId": "cat-mechanics",
+   "slug": "mobile",
+   "label": "Mobile",
+   "attributeKey": "mobile_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For mechanics who come to the house, the yard or the paddock in a fitted service van. Useful for fleet servicing and for anything that cannot be safely driven to a workshop."
+  },
+  {
+   "id": "mod-mechanics-diesel",
+   "categoryId": "cat-mechanics",
+   "slug": "diesel",
+   "label": "Diesel",
+   "attributeKey": "diesel_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the workshop does diesel work in house, covering DPF cleaning, injector testing and turbo replacement. Diesel utes and light trucks run the regional fleet and not every shop is set up for them."
+  },
+  {
+   "id": "mod-auto-electricians-mobile",
+   "categoryId": "cat-auto-electricians",
+   "slug": "mobile",
+   "label": "Mobile",
+   "attributeKey": "mobile_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For auto electricians working from a fitted service vehicle rather than a workshop bay. Standard for farm, fleet and roadside jobs where the machine cannot be moved."
+  },
+  {
+   "id": "mod-tyre-services-mobile",
+   "categoryId": "cat-tyre-services",
+   "slug": "mobile",
+   "label": "Mobile fitting",
+   "attributeKey": "mobile_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the business fits and repairs tyres on site, including truck and agricultural work in a paddock. Harvest and freight breakdowns are the whole reason this service exists."
+  },
+  {
+   "id": "mod-windscreen-repairs-mobile",
+   "categoryId": "cat-windscreen-repairs",
+   "slug": "mobile",
+   "label": "Mobile",
+   "attributeKey": "mobile_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For fitters who bring the glass and the gear to a home or worksite. Most chip repairs and many full replacements are finished in a driveway inside two hours."
+  },
+  {
+   "id": "mod-cleaners-end-of-lease",
+   "categoryId": "cat-cleaners",
+   "slug": "end-of-lease",
+   "label": "End of lease",
+   "attributeKey": "end_of_lease",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the cleaner does bond cleans judged against the entry condition report, oven, window tracks and blinds included. Ask whether a free return visit is covered if the agent knocks it back."
+  },
+  {
+   "id": "mod-cleaners-carpet",
+   "categoryId": "cat-cleaners",
+   "slug": "carpet",
+   "label": "Carpet cleaning",
+   "attributeKey": "carpet_cleaning",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For cleaners running their own hot water extraction plant rather than a hire machine from the supermarket. Usually booked with a bond clean, or after a flood or a pet accident."
+  },
+  {
+   "id": "mod-cleaners-commercial",
+   "categoryId": "cat-cleaners",
+   "slug": "commercial",
+   "label": "Commercial",
+   "attributeKey": "commercial_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the business holds contracts for offices, schools, medical rooms and shops, which brings insurance, police checks and after hours access with it. Different scheduling and different compliance to a house clean."
+  },
+  {
+   "id": "mod-removalists-interstate",
+   "categoryId": "cat-removalists",
+   "slug": "interstate",
+   "label": "Interstate",
+   "attributeKey": "interstate_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For removalists who run loads across the border and beyond rather than local moves only. A cross border job is priced per move because the truck is committed for a full day or more."
+  },
+  {
+   "id": "mod-pest-control-termite-inspections",
+   "categoryId": "cat-pest-control",
+   "slug": "termite-inspections",
+   "label": "Termite inspections",
+   "attributeKey": "termite_inspection",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the technician carries out full timber pest inspections to the Australian Standard and issues a written report with photographs. That is separate work to a general spray and worth repeating every twelve months."
+  },
+  {
+   "id": "mod-locksmiths-24-hour",
+   "categoryId": "cat-locksmiths",
+   "slug": "24-hour",
+   "label": "24 hour",
+   "attributeKey": "emergency_callout",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For locksmiths attending lockouts and break in repairs overnight and on weekends. A regional callout includes travel, so ask what the fee covers before they leave."
+  },
+  {
+   "id": "mod-tree-services-stump-grinding",
+   "categoryId": "cat-tree-services",
+   "slug": "stump-grinding",
+   "label": "Stump grinding",
+   "attributeKey": "stump_grinding",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the business owns a grinder instead of subcontracting the job out. Access width is the first question, because a narrow side gate rules out the bigger machines."
+  },
+  {
+   "id": "mod-tree-services-emergency",
+   "categoryId": "cat-tree-services",
+   "slug": "emergency",
+   "label": "Emergency",
+   "attributeKey": "emergency_callout",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For arborists who attend storm damage after hours, including limbs on roofs and trees across a driveway. Anything touching a powerline goes to the network operator first, not a contractor."
+  },
+  {
+   "id": "mod-fencing-contractors-rural-fencing",
+   "categoryId": "cat-fencing-contractors",
+   "slug": "rural-fencing",
+   "label": "Rural fencing",
+   "attributeKey": "rural_fencing",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the contractor builds boundary, internal and stock fencing on farms and quotes by the kilometre. Covers post driving, strainer assemblies, gates and the spacings that suit cattle or sheep."
+  },
+  {
+   "id": "mod-septic-services-pump-outs",
+   "categoryId": "cat-septic-services",
+   "slug": "pump-outs",
+   "label": "Pump outs",
+   "attributeKey": "septic_pump_out",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For operators with a licensed vacuum truck and an approved disposal point for the waste. Most households need a tank pumped every three to five years depending on size and use."
+  },
+  {
+   "id": "mod-farm-machinery-repairs-mobile",
+   "categoryId": "cat-farm-machinery-repairs",
+   "slug": "mobile",
+   "label": "Mobile",
+   "attributeKey": "mobile_service",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the workshop sends a service truck to the property for field breakdowns. Response time during sowing and harvest is the only thing that matters on this page."
+  },
+  {
+   "id": "mod-cafes-dog-friendly",
+   "categoryId": "cat-cafes",
+   "slug": "dog-friendly",
+   "label": "Dog friendly",
+   "attributeKey": "dog_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For cafes that let a dog sit with you outside, with a water bowl at the door. Food safety rules keep dogs out of indoor dining areas in both states, so this always means the courtyard or the footpath tables."
+  },
+  {
+   "id": "mod-cafes-open-sunday",
+   "categoryId": "cat-cafes",
+   "slug": "open-sunday",
+   "label": "Open Sunday",
+   "attributeKey": "open_sunday",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the cafe trades on Sundays, which is not a given in a country town where the main street shuts. Hours are re-checked weekly and the listing shows when they were last confirmed."
+  },
+  {
+   "id": "mod-restaurants-gluten-free",
+   "categoryId": "cat-restaurants",
+   "slug": "gluten-free",
+   "label": "Gluten free",
+   "attributeKey": "gluten_free",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For kitchens with real gluten free dishes and a process for keeping them apart, not a salad offered as an afterthought. Coeliac diners should still ring ahead about cross contamination in a shared kitchen."
+  },
+  {
+   "id": "mod-restaurants-byo",
+   "categoryId": "cat-restaurants",
+   "slug": "byo",
+   "label": "BYO",
+   "attributeKey": "byo",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the restaurant lets you bring your own wine, with or without corkage. Common in smaller towns where a full liquor licence is not worth the cost to the operator."
+  },
+  {
+   "id": "mod-restaurants-outdoor-seating",
+   "categoryId": "cat-restaurants",
+   "slug": "outdoor-seating",
+   "label": "Outdoor seating",
+   "attributeKey": "outdoor_seating",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For venues with a courtyard, verandah or footpath tables, which matters from October through April. Shade in summer and heaters in winter decide whether the space is usable at either end."
+  },
+  {
+   "id": "mod-restaurants-kids-menu",
+   "categoryId": "cat-restaurants",
+   "slug": "kids-menu",
+   "label": "Kids menu",
+   "attributeKey": "kids_menu",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when there is a proper children's menu rather than a smaller plate of an adult dish. High chairs and a change table are recorded on the listing where we have confirmed them."
+  },
+  {
+   "id": "mod-bakeries-gluten-free",
+   "categoryId": "cat-bakeries",
+   "slug": "gluten-free",
+   "label": "Gluten free",
+   "attributeKey": "gluten_free",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For bakeries producing gluten free bread and sweets, which in a shared bakery is never coeliac safe. Ask which day the gluten free lines are made, since most bake them in a batch rather than daily."
+  },
+  {
+   "id": "mod-takeaway-open-sunday",
+   "categoryId": "cat-takeaway",
+   "slug": "open-sunday",
+   "label": "Open Sunday",
+   "attributeKey": "open_sunday",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the shop trades Sunday, which in a lot of towns leaves it as the only thing open after midday. Sunday surcharges apply at some venues and are noted where known."
+  },
+  {
+   "id": "mod-pubs-beer-garden",
+   "categoryId": "cat-pubs",
+   "slug": "beer-garden",
+   "label": "Beer garden",
+   "attributeKey": "beer_garden",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For pubs with a real outdoor area rather than two tables near the bins. Shade, heaters and whether the kitchen serves out there are recorded where we have confirmed them."
+  },
+  {
+   "id": "mod-pubs-live-music",
+   "categoryId": "cat-pubs",
+   "slug": "live-music",
+   "label": "Live music",
+   "attributeKey": "live_music",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the pub books live acts on a regular night rather than once a year for a fundraiser. Most country venues run Friday or Saturday and the usual night appears on the listing where the venue has told us."
+  },
+  {
+   "id": "mod-pubs-pokies",
+   "categoryId": "cat-pubs",
+   "slug": "pokies",
+   "label": "Pokies",
+   "attributeKey": "pokies",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For venues with a gaming room on site. Machine numbers are capped differently in NSW and Victoria, and both states require responsible gambling signage and access to self exclusion."
+  },
+  {
+   "id": "mod-pubs-courtesy-bus",
+   "categoryId": "cat-pubs",
+   "slug": "courtesy-bus",
+   "label": "Courtesy bus",
+   "attributeKey": "courtesy_bus",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the venue runs a courtesy bus around the local area, which is why a lot of country pubs stay busy on a Friday. Nights of operation and the pick up radius vary, so ring on the day."
+  },
+  {
+   "id": "mod-pubs-tab",
+   "categoryId": "cat-pubs",
+   "slug": "tab",
+   "label": "TAB",
+   "attributeKey": "tab",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For pubs with a TAB outlet or terminals and the racing vision on screen. Usually paired with a Saturday crowd and a counter lunch."
+  },
+  {
+   "id": "mod-pubs-kids-menu",
+   "categoryId": "cat-pubs",
+   "slug": "kids-menu",
+   "label": "Kids menu",
+   "attributeKey": "kids_menu",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the bistro runs a children's menu and can seat a family without fuss. Playgrounds and high chairs are noted on the listing where they have been confirmed."
+  },
+  {
+   "id": "mod-rsl-clubs-courtesy-bus",
+   "categoryId": "cat-rsl-clubs",
+   "slug": "courtesy-bus",
+   "label": "Courtesy bus",
+   "attributeKey": "courtesy_bus",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For clubs running a bus that collects and drops members and guests inside the town. Standard on bistro nights and worth booking early in the evening rather than at closing."
+  },
+  {
+   "id": "mod-craft-breweries-dog-friendly",
+   "categoryId": "cat-craft-breweries",
+   "slug": "dog-friendly",
+   "label": "Dog friendly",
+   "attributeKey": "dog_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when dogs are welcome in the outdoor drinking area. Common at regional taprooms working out of sheds and yards where most of the seating is outside anyway."
+  },
+  {
+   "id": "mod-wine-bars-live-music",
+   "categoryId": "cat-wine-bars",
+   "slug": "live-music",
+   "label": "Live music",
+   "attributeKey": "live_music",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the bar programs live acoustic or jazz on a set night. Small rooms fill fast on a music night, so a booking is the sensible move."
+  },
+  {
+   "id": "mod-motels-pet-friendly",
+   "categoryId": "cat-motels",
+   "slug": "pet-friendly",
+   "label": "Pet friendly",
+   "attributeKey": "pet_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For motels that take dogs, usually in specific ground floor rooms and often for a small extra charge. Rules about leaving an animal alone in the room differ, so confirm that when booking."
+  },
+  {
+   "id": "mod-motels-family-rooms",
+   "categoryId": "cat-motels",
+   "slug": "family-rooms",
+   "label": "Family rooms",
+   "attributeKey": "family_rooms",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the motel has rooms sleeping four or more in the one space instead of forcing two bookings. Interconnecting rooms are recorded separately where they exist."
+  },
+  {
+   "id": "mod-motels-ev-charging",
+   "categoryId": "cat-motels",
+   "slug": "ev-charging",
+   "label": "EV charging",
+   "attributeKey": "ev_charging",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when there is charging on site for guests, whether a destination unit or a dedicated outlet. Connector type and speed decide whether an overnight stop actually fills the car, so both are recorded where confirmed."
+  },
+  {
+   "id": "mod-holiday-parks-powered-sites",
+   "categoryId": "cat-holiday-parks",
+   "slug": "powered-sites",
+   "label": "Powered sites",
+   "attributeKey": "powered_sites",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For parks with powered caravan and camper sites, with the amperage shown where we have it. Powered sites sell first over school holidays and long weekends."
+  },
+  {
+   "id": "mod-holiday-parks-pet-friendly",
+   "categoryId": "cat-holiday-parks",
+   "slug": "pet-friendly",
+   "label": "Pet friendly",
+   "attributeKey": "pet_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when dogs are allowed on sites, in cabins, or both, which are three different policies. Many parks suspend pet bookings over school holidays even when they allow them the rest of the year."
+  },
+  {
+   "id": "mod-campgrounds-dog-friendly",
+   "categoryId": "cat-campgrounds",
+   "slug": "dog-friendly",
+   "label": "Dog friendly",
+   "attributeKey": "dog_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For campgrounds that permit dogs, which rules out almost every national park site in both states. State forest, Crown land reserves and privately run camps are where this is possible."
+  },
+  {
+   "id": "mod-cabins-and-cottages-pet-friendly",
+   "categoryId": "cat-cabins-and-cottages",
+   "slug": "pet-friendly",
+   "label": "Pet friendly",
+   "attributeKey": "pet_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the property takes dogs inside or in a secure yard. Fencing and whether the dog can be left alone while you go out are the two things to settle before booking."
+  },
+  {
+   "id": "mod-wineries-dog-friendly",
+   "categoryId": "cat-wineries",
+   "slug": "dog-friendly",
+   "label": "Dog friendly",
+   "attributeKey": "dog_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For cellar doors that welcome dogs in the outdoor areas, which covers most working vineyards and few of the restaurant sites. Leads are expected and the property's own working dog gets right of way."
+  },
+  {
+   "id": "mod-wineries-open-sunday",
+   "categoryId": "cat-wineries",
+   "slug": "open-sunday",
+   "label": "Open Sunday",
+   "attributeKey": "open_sunday",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the cellar door trades on Sunday, which not every small producer does. Weekday opening at boutique sites is often by appointment only, so the listing shows both."
+  },
+  {
+   "id": "mod-museums-wheelchair-accessible",
+   "categoryId": "cat-museums",
+   "slug": "wheelchair-accessible",
+   "label": "Wheelchair accessible",
+   "attributeKey": "wheelchair_accessible",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when there is step free entry, an accessible toilet and room to move between displays. Heritage buildings are the usual obstacle, and partial access is described on the listing rather than claimed as full."
+  },
+  {
+   "id": "mod-walking-tracks-pram-friendly",
+   "categoryId": "cat-walking-tracks",
+   "slug": "pram-friendly",
+   "label": "Pram friendly",
+   "attributeKey": "pram_friendly",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For tracks with a firm, mostly flat surface that takes a pram or a wheelchair. Rail trails and sealed riverside paths make up most of what lands here."
+  },
+  {
+   "id": "mod-football-netball-clubs-junior-program",
+   "categoryId": "cat-football-netball-clubs",
+   "slug": "junior-program",
+   "label": "Junior program",
+   "attributeKey": "junior_program",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For clubs fielding junior sides and running age group coaching, with registration opening before the autumn start. Fees, training nights and whether uniforms are supplied are recorded where the club has told us."
+  },
+  {
+   "id": "mod-cricket-clubs-junior-program",
+   "categoryId": "cat-cricket-clubs",
+   "slug": "junior-program",
+   "label": "Junior program",
+   "attributeKey": "junior_program",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the club fields junior sides or runs an entry level program for primary school ages. Sign ups happen through August and September ahead of an October start."
+  },
+  {
+   "id": "mod-bowls-clubs-come-and-try",
+   "categoryId": "cat-bowls-clubs",
+   "slug": "come-and-try",
+   "label": "Come and try",
+   "attributeKey": "come_and_try",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Listed when the club runs open sessions for beginners, with bowls supplied and no membership needed. Barefoot nights count and are the easiest way to work out whether you like it."
+  },
+  {
+   "id": "mod-sailing-clubs-come-and-try",
+   "categoryId": "cat-sailing-clubs",
+   "slug": "come-and-try",
+   "label": "Come and try",
+   "attributeKey": "come_and_try",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "For clubs that get newcomers on the water without owning a boat, either through a learn to sail course or as crew on someone else's. Most run these in spring before the summer racing season."
+  },
+  {
+   "id": "mod-pony-clubs-junior-program",
+   "categoryId": "cat-pony-clubs",
+   "slug": "junior-program",
+   "label": "Junior program",
+   "attributeKey": "junior_program",
+   "attributeValue": "yes",
+   "minListings": 5,
+   "intro": "Qualifies when the club runs rallies and instruction for riders under 18, which is the core of what pony club does. Whether a rider needs their own horse or can borrow one is noted on the listing."
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+---
+/**
+ * Curated lists index. /lists/
+ *
+ * These are the only pages on the site where the order is an opinion. That is
+ * the point of them, and it is why they carry a byline and a review date while
+ * the ranked category pages carry a quality score instead.
+ */
+import type { StateCode } from '~/lib/types';
+import {
+  url,
+  STATES,
+  curatedLists,
+  getCategoryBySlug,
+  getLocalityByStateSlug,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.lists();
+
+const rows = curatedLists.slice().sort((a, b) => b.reviewedAt.localeCompare(a.reviewedAt));
+const lastReviewed = rows[0]?.reviewedAt;
+
+const byState = (['NSW', 'VIC'] as StateCode[]).map((code) => ({
+  code,
+  state: STATES[code],
+  lists: rows.filter((l) => l.state === code),
+}));
+
+const h1 = 'Curated lists';
+const pageTitle = 'Curated lists of NSW and Victorian businesses';
+const description =
+  'Lists written and ranked by a person, not sorted by a score. Each one names its author, shows the date it was last reviewed, and says why every entry is on it.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Curated lists', href: canonicalPath },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: lastReviewed ?? BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'LocalKnows curated lists',
+    items: rows.map((l) => ({ url: url.list(l), name: l.title })),
+  }),
+]);
+---
+
+<Base
+  kind="static"
+  title={pageTitle}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={lastReviewed ?? BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">Editorial</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Every list here is written and ranked by a person, carries that person's name and
+        shows the date it was last reviewed. Businesses that make a list tend to link to
+        it without being asked, which is most of the reason these pages exist.
+      </p>
+      <div class="headmeta">
+        <span>{rows.length} {rows.length === 1 ? 'list' : 'lists'}</span>
+        {lastReviewed && (
+          <span>
+            &middot; Last review <time datetime={lastReviewed}>{humanDate(lastReviewed)}</time>
+          </span>
+        )}
+        <span>&middot; Ordering is an opinion, not a score</span>
+      </div>
+    </div>
+  </div>
+
+  {rows.length === 0 ? (
+    <section class="sec">
+      <div class="wrap">
+        <div class="empty">
+          <p>
+            No lists yet. The first ones land as each town reaches enough listings to rank
+            honestly. Picking the best five bakeries in a town where we hold six is not a
+            curated list, it is a directory page with an opinion attached to it.
+          </p>
+          <p>Start with a state hub and work down to a town instead.</p>
+          <p style="margin:0">
+            <a class="btn" href={url.state('NSW')}>{STATES.NSW.name}</a>
+            {' '}
+            <a class="btn btn-ghost" href={url.state('VIC')}>{STATES.VIC.name}</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    byState
+      .filter((group) => group.lists.length > 0)
+      .map((group) => (
+        <section class="sec">
+          <div class="wrap">
+            <div class="sec-head">
+              <h2>{group.state.name}</h2>
+              <p>
+                {group.lists.length} {group.lists.length === 1 ? 'list' : 'lists'} covering
+                towns in {group.code}. Newest review first.
+              </p>
+            </div>
+            <div class="cards">
+              {group.lists.map((l) => {
+                const locality = getLocalityByStateSlug(l.state, l.localitySlug);
+                const category = getCategoryBySlug(l.categorySlug);
+                return (
+                  <article class="card">
+                    <div class="card-top">
+                      <div style="min-width:0">
+                        <h3><a href={url.list(l)}>{l.title}</a></h3>
+                        <p class="cat-line">
+                          {locality?.name ?? l.localitySlug}
+                          {category && <> &middot; {category.name}</>}
+                        </p>
+                      </div>
+                    </div>
+                    <p class="desc" style="margin-top:14px">
+                      {l.intro.length > 170 ? l.intro.slice(0, 167).trimEnd() + '…' : l.intro}
+                    </p>
+                    <div class="card-foot">
+                      <span class="mono" style="color:var(--ink-40)">
+                        {l.items.length} ranked &middot; reviewed{' '}
+                        <time datetime={l.reviewedAt}>{humanDate(l.reviewedAt)}</time>
+                      </span>
+                      <span class="right">
+                        <a class="btn btn-sm btn-ghost" href={url.list(l)}>Open</a>
+                      </span>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      ))
+  )}
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: 'State hubs',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+      {
+        heading: 'Elsewhere on the site',
+        links: [
+          { href: url.guides(), label: 'Guides' },
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.events(), label: 'Events' },
+        ],
+      },
+      {
+        heading: 'How we work',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+        ],
+      },
+    ]}
+  />
+</Base>

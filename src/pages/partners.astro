@@ -1,0 +1,351 @@
+---
+/**
+ * Link partners.
+ *
+ * The public version of docs/ARCHITECTURE.md section 6. The reciprocal
+ * dofollow-for-dofollow scheme was designed, then rejected, and this page says
+ * so out loud. Publishing the reasoning is the point: it is the difference
+ * between an editorial link policy and a link scheme with better manners.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, STATES, POLICY } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  abs,
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.partners();
+const h1 = 'Link partners and the badge program';
+
+const description =
+  'We do not trade links. Dofollow is earned by verification, the badge is nofollow by design, and the crawler that checks it gates nothing. Here is the reasoning.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Link partners', href: canonicalPath },
+];
+
+const tiers = [
+  {
+    state: 'Unclaimed, built from public sources',
+    link: 'nofollow',
+    rel: 'rel="nofollow noopener"',
+    why: 'Nobody has confirmed the business exists in the form we describe it.',
+  },
+  {
+    state: 'Claimed, not yet verified',
+    link: 'nofollow',
+    rel: 'rel="nofollow noopener"',
+    why: 'An owner has taken control of the details. We still have not checked anything against a register.',
+  },
+  {
+    state: 'Claimed, ABN verified, profile 80 per cent complete',
+    link: 'dofollow',
+    rel: 'rel="noopener"',
+    why: 'The trading name matches the public ABN register and the profile is filled in. That is enough to vouch for.',
+  },
+  {
+    state: 'Verified, licence checked against the state register',
+    link: 'dofollow, plus the verified badge',
+    rel: 'rel="noopener"',
+    why: 'A licence number was entered into NSW Fair Trading or the Victorian Building Authority register and came back current, on a date we publish.',
+  },
+];
+
+// Built from SITE.url so the snippet on the page can never point at a stale
+// domain. The example slug is illustrative and is not a live listing.
+const exampleListing = abs('/nsw/albury/plumbers/riverside-plumbing-co/');
+const exampleBadge = abs('/badge/riverside-plumbing-co.svg');
+const crawlerAgent = 'LocalKnowsBot/1.0 (+' + abs(canonicalPath) + ')';
+
+const badgeSnippet = `<!-- ${SITE.name} verified badge. Paste anywhere on your site. -->
+<a href="${exampleListing}"
+   rel="nofollow noopener"
+   title="Licence verified on ${SITE.name}">
+  <img src="${exampleBadge}"
+       width="200" height="64" loading="lazy"
+       alt="Riverside Plumbing Co, licence verified on ${SITE.name}" />
+</a>`;
+
+const faqs = [
+  {
+    q: 'Will you give me a dofollow link if I link to you?',
+    a: 'No, and please do not offer. Google names reciprocal link exchanges and link-for-contract arrangements in its spam policies. Running one at scale leaves an obvious footprint and devalues the link for both sides. Dofollow on LocalKnows is earned by verification. Link to us if the page is genuinely useful to your readers, and do not link to us if it is not.',
+  },
+  {
+    q: 'Do I have to display the badge to keep my verified status?',
+    a: 'No. The badge is optional and nothing is conditional on it. Displaying it, removing it, or never installing it makes no difference to the verified status, the outbound link, the quality score or the position of the listing. The crawler records whether it is live purely so the dashboard can tell you.',
+  },
+  {
+    q: 'Why does the badge link carry rel="nofollow"?',
+    a: 'Because the badge is a snippet we wrote and asked you to paste, which makes it our link rather than an editorial one on your part. Marking it nofollow is the honest description of what it is. It is a trust and traffic feature: it shows visitors the licence was checked and it sends the ones who care straight to the evidence.',
+  },
+  {
+    q: 'What does your crawler do and how do I block it?',
+    a: 'LocalKnowsBot fetches your homepage plus /links, /partners and /about once a week, looks for an anchor pointing at your listing, and records whether it found one, the rel attributes, the anchor text and the HTTP status. It obeys robots.txt and takes no more than one request per domain every five seconds. Disallow LocalKnowsBot in your robots.txt and it stops. Nothing about your listing changes if you do.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+
+const pre =
+  'overflow-x:auto;background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;font-family:var(--font-mono);font-size:12.5px;line-height:1.65;color:var(--ink-80);margin:0 0 18px';
+---
+
+<Base
+  kind="static"
+  title="Link partners and the badge program"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Links &middot; badges &middot; the crawler</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        LocalKnows does not trade links. Dofollow is earned by verification and the badge is
+        nofollow on purpose. This page explains why, including the version of the program we
+        designed and then threw out.
+      </p>
+      <div class="headmeta">
+        <span>No reciprocal linking</span>
+        <span>&middot; Badge is optional</span>
+        <span>&middot; Updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>The version we did not build</h2>
+      <p>
+        The original plan was ordinary enough. A business links to its LocalKnows listing, an
+        automated check confirms the link is live, and the outbound link on the listing flips
+        to dofollow in return. Every directory in the country has done some version of it.
+      </p>
+      <p>
+        It went in the bin, because Google&rsquo;s spam policies describe that exact
+        arrangement twice.
+      </p>
+      <blockquote>
+        <p>
+          Excessive link exchanges ("link to me and I&rsquo;ll link to you") or partner pages
+          exclusively for the sake of cross linking.
+        </p>
+        <p>
+          Requiring a link as part of a terms of service, contract, or similar arrangement
+          without allowing a third party content owner the choice of qualifying the outbound
+          link.
+        </p>
+      </blockquote>
+      <p>
+        An automated system that grants a dofollow link on condition of receiving one is the
+        textbook example of the first, and gating it behind our terms would have been the
+        second. It also leaves a footprint that is not subtle: pairs of links appearing in
+        both directions within minutes of each other, at scale, from one directory. Detecting
+        that pattern is precisely what SpamBrain is for. At five hundred partners it would be
+        visible from space.
+      </p>
+      <p>
+        Both sides lose in that trade. The partner&rsquo;s link gets discounted and our
+        outbound profile looks engineered, which is a bad position to be in when the whole
+        product depends on being the directory that can be trusted.
+      </p>
+
+      <h2>What we built instead</h2>
+      <p>
+        The reward is decoupled from the reciprocity. Same benefit for the business, same
+        reason to complete a profile, no risk to either party. Dofollow is earned by
+        verification.
+      </p>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Listing state</th>
+              <th>Outbound link</th>
+              <th>rel emitted</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tiers.map((t) => (
+              <tr>
+                <td>{t.state}</td>
+                <td>{t.link}</td>
+                <td><code>{t.rel}</code></td>
+                <td>{t.why}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Dofollow switches on at a quality score of {POLICY.dofollowQualityFloor} on a verified
+        listing. That is an editorial decision in the ordinary sense of the word: we are
+        vouching for businesses whose credentials we actually checked, and declining to vouch
+        for the ones we have not. It is defensible in a reconsideration request, it survives a
+        manual review, and it gives owners a reason to finish their profile, which is what we
+        wanted from the reciprocal scheme in the first place.
+      </p>
+      <p>
+        Sample records never get a dofollow link, whatever their state.
+        <a href={url.claim()}>The claim page</a> covers how to move up the table.
+      </p>
+
+      <h2>The badge program</h2>
+      <p>
+        The badge runs alongside all of this and is deliberately not a PageRank play. It is a
+        trust and traffic feature. A visitor on your own website sees that a licence was
+        checked, and the ones who want the evidence click through to the listing where the
+        register link and the check date are published.
+      </p>
+      <ul>
+        <li>Verified listings get an embed snippet in the dashboard.</li>
+        <li>The badge renders the live verification status and rating from our API.</li>
+        <li>
+          The link in the snippet carries <code>rel="nofollow"</code> by default, and this is
+          the note explaining why.
+        </li>
+        <li>
+          A weekly crawl confirms the badge is still live and shows the result in your
+          dashboard. Nothing depends on it.
+        </li>
+      </ul>
+
+      <p>Here is the snippet, exactly as it ships. The rel is not hidden in a redirect.</p>
+
+      <pre style={pre}>{badgeSnippet}</pre>
+
+      <p>
+        Nofollow is the honest label. We wrote the snippet and asked you to paste it, so it is
+        not an editorial link on your part. Marking it as what it is protects your site as
+        much as ours. If you later write about the directory in your own words and link to it
+        because it helped, that is a different kind of link and it is welcome, with whatever
+        rel you think is right. The choice is yours, which is the whole point of the policy
+        quoted above.
+      </p>
+
+      <h2>The crawler</h2>
+      <p>
+        The badge check runs weekly against the domain registered on a verified listing. It
+        fetches the homepage plus <code>/links</code>, <code>/partners</code> and
+        <code>/about</code>, parses for an anchor to the listing, and records what it found:
+        the URL, the rel attributes, the anchor text, the HTTP status and the first date it
+        was seen. Two consecutive misses mark the badge as lapsed in the dashboard and nowhere
+        else.
+      </p>
+      <ul>
+        <li>
+          <strong>User agent:</strong>
+          {' '}<code>LocalKnowsBot/1.0 (+https://localsknow.com.au/partners/)</code>
+        </li>
+        <li><strong>Rate limit:</strong> one request per domain per five seconds, hard capped.</li>
+        <li><strong>robots.txt:</strong> obeyed. Disallow it and the checks stop.</li>
+        <li><strong>Scope:</strong> four URLs per domain per week. It is not a site crawler.</li>
+        <li>
+          <strong>What it affects:</strong> a status line in your dashboard. Not the quality
+          score, not the ordering, not the badge, not the outbound rel, not indexation.
+        </li>
+      </ul>
+      <p>
+        The crawler exists because knowing who links to the site, when a link went live and
+        when it disappeared is useful in its own right. It was worth building with nothing
+        conditional attached, which is exactly how it was built.
+      </p>
+
+      <h2>Where links actually come from</h2>
+      <p>
+        None of the above is a link building strategy. The badge is a retention feature. Real
+        links to this site come from four places, and they are the four we spend the budget
+        on.
+      </p>
+      <ul>
+        <li>
+          <a href={url.lists()}>Curated lists</a>. Businesses that make the list link to it
+          without being asked, and they should.
+        </li>
+        <li>
+          Community club pages. Sporting and hobby clubs link out generously and their sites
+          are old and trusted.
+        </li>
+        <li>
+          Council and tourism board resource pages, which link to the region hubs rather than
+          to individual businesses.
+        </li>
+        <li>
+          Local news, because the data block on every category page hands a journalist a
+          number they can quote and attribute.
+        </li>
+      </ul>
+
+      <div class="notice river">
+        <strong>If you run a club, council page or community site:</strong> link to whatever
+        is useful to your members, or to nothing at all. There is no partner list to join, no
+        agreement to sign, and no reward for linking. Write to
+        {' '}<a href={'mailto:' + SITE.email}>{SITE.email}</a> if a region or town page is
+        missing something your members would need.
+      </div>
+    </div>
+
+    <Faq faqs={faqs} heading="Links and badges, answered" id="partners-faq" />
+  </div>
+
+  <LinkBlock
+    heading="Related"
+    groups={[
+      {
+        heading: 'Earn the dofollow',
+        links: [
+          { href: url.claim(), label: 'Claim your listing' },
+          { href: url.about(), label: 'How verification works' },
+          { href: url.contact(), label: 'Ask a question' },
+        ],
+      },
+      {
+        heading: 'Our policies',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.terms(), label: 'Terms of use' },
+        ],
+      },
+      {
+        heading: 'Pages worth linking to',
+        links: [
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+    ]}
+  />
+</Base>

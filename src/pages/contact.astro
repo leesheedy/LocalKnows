@@ -1,0 +1,231 @@
+---
+/**
+ * Contact.
+ *
+ * One email address, five routes, and an honest response time. The form posts
+ * to Netlify Forms, which needs the markup present in the static HTML, so it is
+ * written out by hand rather than assembled by script.
+ */
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, STATES } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.contact();
+const h1 = 'Contact LocalKnows';
+
+const description =
+  'Email ' +
+  SITE.email +
+  ' for corrections, claims, removal requests, advertising or media. Every message is answered within two business days.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Contact', href: canonicalPath },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'ContactPage',
+    dateModified: BUILD_DATE,
+  }),
+]);
+
+// No form classes exist in app.css yet, so the field chrome is inline rather
+// than invented. Keep these three strings in sync across the three form pages.
+const row = 'margin:0 0 18px';
+const lbl = 'display:block;color:var(--ink-60);margin-bottom:6px';
+const inp =
+  'width:100%;font:inherit;font-size:15.5px;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--white);color:var(--ink)';
+
+const subjects = [
+  'Correction',
+  'Claim a listing',
+  'Remove a listing',
+  'Advertising',
+  'Media',
+  'Something else',
+];
+---
+
+<Base
+  kind="static"
+  title="Contact"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Contact &middot; {SITE.publisher.name}</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        One address, answered by the people who build the site. Corrections and removal
+        requests are handled first, because a wrong phone number costs somebody a job.
+      </p>
+      <div class="headmeta">
+        <span>{SITE.email}</span>
+        <span>&middot; Replies within two business days</span>
+        <span>&middot; Page updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        Email <a href={'mailto:' + SITE.email}>{SITE.email}</a> or use the form below. Both
+        land in the same inbox and both are read by a person. LocalKnows is operated by
+        <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a> in the Albury
+        Wodonga area, covering {STATES.NSW.name} and {STATES.VIC.name}.
+      </p>
+
+      <div class="notice">
+        <strong>Response time.</strong> Every message is answered within two business days.
+        That is a commitment, not an aspiration. If two days pass with no reply, send it
+        again and put URGENT in the subject line, because something has gone wrong at our
+        end.
+      </div>
+
+      <h2>What to use each route for</h2>
+
+      <h3>A detail on a listing is wrong</h3>
+      <p>
+        Use the correction form on
+        <a href={url.dataPolicy()}>the data and corrections page</a>. It asks for the listing
+        URL, what is wrong, what it should be and where we can confirm it, which is
+        everything needed to fix it in one pass instead of three emails. Corrections are
+        checked against the source you give and fixed or explained within five business days.
+      </p>
+
+      <h3>You own the business and want control of the listing</h3>
+      <p>
+        Start at <a href={url.claim()}>the claim page</a>. Claiming is free, permanently. Use
+        the contact form here only if a claim has stalled or the listing does not exist yet.
+      </p>
+
+      <h3>You want a listing taken down</h3>
+      <p>
+        Say so and it comes down. Choose <strong>Remove a listing</strong> below, give the
+        URL, and confirm you are connected to the business. No reason is required, nothing is
+        charged, and nobody will argue with you. The page is removed within two business days
+        and the URL redirects to the category it sat in, so old links do not end up on an
+        error page.
+      </p>
+
+      <h3>Media, research or data requests</h3>
+      <p>
+        Journalists and researchers can have the numbers behind any data block on the site,
+        including how they were computed and what the sample was. Choose
+        <strong>Media</strong> and name the pages you are working from. Attribution to
+        LocalKnows is appreciated and a link is better, but neither is a condition.
+      </p>
+
+      <h3>Advertising and sponsorship</h3>
+      <p>
+        Read <a href={url.advertisingPolicy()}>the advertising policy</a> first. It is short
+        and it lists exactly what can and cannot be bought. If what you want is on the second
+        list, the answer will be no, and saying it here saves us both a meeting.
+      </p>
+
+      <h2>Send a message</h2>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Contact form</h2>
+        <span class="mono">Two business days</span>
+      </div>
+      <div class="panel-body">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p hidden>
+            <label>Leave this field empty: <input name="bot-field" /></label>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="c-name">Your name</label>
+            <input style={inp} id="c-name" name="name" type="text" autocomplete="name" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="c-email">Email</label>
+            <input style={inp} id="c-email" name="email" type="email" autocomplete="email" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="c-subject">What is this about</label>
+            <select style={inp} id="c-subject" name="subject" required>
+              {subjects.map((s) => <option value={s}>{s}</option>)}
+            </select>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="c-message">Message</label>
+            <textarea style={inp + ';min-height:170px;resize:vertical'} id="c-message" name="message" rows="7" required></textarea>
+          </p>
+
+          <p style="margin:0">
+            <button class="btn btn-river" type="submit">Send message</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:26px">
+      <p>
+        What happens to what you send is set out in
+        <a href={url.privacy()}>the privacy policy</a>. In short: the message is stored so we
+        can answer it, it is not sold, and it is not used to market anything at you. Please
+        do not send bank details, licence scans or identity documents through this form.
+        Nobody here will ever ask you for them.
+      </p>
+    </div>
+  </div>
+
+  <LinkBlock
+    heading="Faster than an email"
+    groups={[
+      {
+        heading: 'Fix something',
+        links: [
+          { href: url.dataPolicy(), label: 'Report a correction', note: 'goes straight to the queue' },
+          { href: url.claim(), label: 'Claim a listing' },
+          { href: url.editorialPolicy(), label: 'How corrections are handled' },
+        ],
+      },
+      {
+        heading: 'Before you write',
+        links: [
+          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.advertisingPolicy(), label: 'What can be advertised' },
+          { href: url.partners(), label: 'Link partners and badges' },
+        ],
+      },
+      {
+        heading: 'The fine print',
+        links: [
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.terms(), label: 'Terms of use' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

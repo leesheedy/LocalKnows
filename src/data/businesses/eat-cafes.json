@@ -1,0 +1,1137 @@
+[
+  {
+    "name": "The Proprietor",
+    "slug": "the-proprietor",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "459 Townsend Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 5024 5537",
+    "website": "https://theproprietor.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Proprietor+Albury+NSW",
+    "description": "A cafe set in a heritage building on Townsend Street whose original foundations were laid before 1890, first a saddler's shop and later a butchery. The kitchen works to a seasonal, locally sourced menu of brunch dishes, pastries, bowls and lunch plates alongside espresso coffee. The owners restored the space using recycled materials and handcrafted furnishings, and there is alfresco seating out the front.",
+    "highlights": [
+      "Housed in a pre-1890 saddlery and former butcher shop",
+      "Seasonal menu built on local Albury producers",
+      "Brunch, pastries and gourmet lunch plates",
+      "Alfresco dining and takeaway available",
+      "Open seven days from 7am weekdays, 8am weekends"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:00", "closes": "15:30", "closed": false },
+      { "day": 2, "opens": "07:00", "closes": "15:30", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "15:30", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "15:30", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "15:30", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "15:30", "closed": false },
+      { "day": 0, "opens": "08:00", "closes": "15:30", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://theproprietor.com.au/",
+      "https://www.visitalburywodonga.com/operator/the-proprietor/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Mr Benedict",
+    "slug": "mr-benedict",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "664 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 1840",
+    "website": "https://www.mrbenedict.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mr+Benedict+Albury+NSW",
+    "facebook": "https://www.facebook.com/MrBenedictCafe",
+    "instagram": "https://www.instagram.com/mr_benedict_cafe/",
+    "description": "A breakfast, brunch and lunch cafe at the Monument end of Dean Street, opposite the Botanic Gardens. The all-day menu runs to eggs benedict, corn fritters, toasties, waffles, salads and burgers, with vegan options through the menu. Coffee is Code Black house blend, and there is a courtyard out the back planted with bamboo.",
+    "highlights": [
+      "All-day breakfast and brunch menu",
+      "Code Black house blend coffee",
+      "Bamboo-planted back courtyard",
+      "Vegan options across the menu",
+      "Open Wednesday to Sunday, kitchen closes 2pm"
+    ],
+    "hours": [
+      { "day": 3, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 0, "opens": "07:00", "closes": "15:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "vegan_options": "yes",
+      "licensed": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.mrbenedict.com.au/",
+      "https://www.visitalburywodonga.com/where-to-eat-drink-in-albury-wodonga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Coffee Mamma",
+    "slug": "coffee-mamma",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "5/501 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 2600",
+    "website": "https://www.coffeemamma.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coffee+Mamma+Albury+NSW",
+    "facebook": "https://www.facebook.com/coffeemammaalbury",
+    "instagram": "https://www.instagram.com/coffeemammaalbury/",
+    "description": "An espresso bar on Dean Street serving freshly roasted coffee with snacks and light food options. They pour exclusive locally roasted blends and single origins, and sell packaged beans for home or office brewing. Trade is early: doors open at 6am on weekdays and close at 2pm.",
+    "highlights": [
+      "Espresso bar on Dean Street in central Albury",
+      "Locally roasted exclusive blends and single origins",
+      "Retail beans for home and office",
+      "Snacks and light food options",
+      "Opens 6am weekdays"
+    ],
+    "hours": [
+      { "day": 1, "opens": "06:00", "closes": "14:00", "closed": false },
+      { "day": 2, "opens": "06:00", "closes": "14:00", "closed": false },
+      { "day": 3, "opens": "06:00", "closes": "14:00", "closed": false },
+      { "day": 4, "opens": "06:00", "closes": "14:00", "closed": false },
+      { "day": 5, "opens": "06:00", "closes": "14:00", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "13:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.coffeemamma.com.au/",
+      "https://www.localsearch.com.au/find/cafes/albury-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The River Deck Cafe",
+    "slug": "the-river-deck-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "48 Noreuil Parade",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 5980",
+    "website": "https://www.riverdeckcafe.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+River+Deck+Cafe+Albury+NSW",
+    "facebook": "https://www.facebook.com/theriverdeckalbury/",
+    "instagram": "https://www.instagram.com/riverdeckalbury/",
+    "description": "A cafe and restaurant in Noreuil Park on the bank of the Murray River. The kitchen cooks modern Australian food built on natural, native and local ingredients sourced from regional farmers and producers around Albury-Wodonga. Breakfast and lunch are served seven days from 9am to 3pm, and there is a kids' menu.",
+    "highlights": [
+      "Riverside location in Noreuil Park on the Murray",
+      "Modern Australian menu using native and local ingredients",
+      "Produce sourced from Albury-Wodonga regional growers",
+      "Breakfast and lunch seven days, 9am to 3pm",
+      "Kids' menu available"
+    ],
+    "hours": [
+      { "day": 0, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 1, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "15:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.riverdeckcafe.com.au/",
+      "https://www.riverdeckcafe.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Cafe Musette",
+    "slug": "cafe-musette",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "2/480 Young Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6088 6593",
+    "website": "https://www.cafemusette.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+Musette+Albury+NSW",
+    "instagram": "https://www.instagram.com/cafemusette/",
+    "description": "A Young Street cafe open for breakfast and lunch six days a week, from 7am to 2pm. The kitchen closes at 1.30pm Monday to Friday and 2pm on Saturday. Catering is offered alongside the dine-in and takeaway trade.",
+    "highlights": [
+      "Breakfast and lunch trade six days a week",
+      "Kitchen closes 1.30pm weekdays, 2pm Saturday",
+      "Catering available",
+      "Closed Sundays"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 2, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.cafemusette.com.au/",
+      "https://www.localsearch.com.au/find/cafes/albury-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Clancy's Food Store",
+    "slug": "clancys-food-store",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "591 Smollett Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 0580",
+    "website": "https://www.clancysfoodstore.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Clancy%27s+Food+Store+Albury+NSW",
+    "facebook": "https://www.facebook.com/clancysfoodstore/",
+    "instagram": "https://www.instagram.com/clancysfoodstore/",
+    "description": "A weekday food store and coffee stop on Smollett Street, trading from 6.15am Tuesday to Friday and 6.45am on Monday. Alongside coffee and treats they run a lunch menu and prepare takeaway gourmet meals fresh each day. Catering is offered for events and business functions.",
+    "highlights": [
+      "Opens from 6.15am Tuesday to Friday",
+      "Lunch menu plus coffee and treats",
+      "Takeaway gourmet meals prepared fresh daily",
+      "Event and business catering",
+      "Closed weekends"
+    ],
+    "hours": [
+      { "day": 1, "opens": "06:45", "closes": "15:30", "closed": false },
+      { "day": 2, "opens": "06:15", "closes": "15:30", "closed": false },
+      { "day": 3, "opens": "06:15", "closes": "15:30", "closed": false },
+      { "day": 4, "opens": "06:15", "closes": "15:30", "closed": false },
+      { "day": 5, "opens": "06:15", "closes": "15:30", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.clancysfoodstore.com.au/",
+      "https://www.localsearch.com.au/find/cafes/albury-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Green Zebra Café",
+    "slug": "green-zebra-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "484 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 1100",
+    "website": "https://greenzebraalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Green+Zebra+Cafe+Albury+NSW",
+    "description": "A Dean Street cafe open seven days from 7.30am to 3pm. The breakfast menu covers eggs benedict, smashed avocado, pancakes and French toast, and the kitchen also makes preservative-free pasta in house served with Italian sauces. Coffee is made to order.",
+    "highlights": [
+      "Open seven days, 7.30am to 3pm",
+      "Breakfast menu of benedicts, smashed avocado and pancakes",
+      "Fresh preservative-free pasta made in house",
+      "Central Dean Street location"
+    ],
+    "hours": [
+      { "day": 0, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 1, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 2, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 3, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "07:30", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "07:30", "closes": "15:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://greenzebraalbury.com.au/",
+      "https://www.localsearch.com.au/find/cafes/albury-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Retro Lane Café",
+    "slug": "retro-lane-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "QEII Square",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 8390",
+    "website": "https://www.alburycity.nsw.gov.au/community/facilities-and-venues/retro-lane-cafe",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Retro+Lane+Cafe+Albury+NSW",
+    "description": "A cafe in QEII Square run by AlburyCity as a social enterprise supporting young people aged 12 to 24. The counter serves hot finger food, gourmet sandwiches, house-made baked goods and fresh seasonal fruit at affordable prices. Catering is available for meetings and events.",
+    "highlights": [
+      "Social enterprise run by AlburyCity for young people aged 12-24",
+      "Gourmet sandwiches, hot finger food and house-made baked goods",
+      "Catering for meetings and events",
+      "Open weekdays 10am-5pm and Saturday 10am-2pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/community/facilities-and-venues/retro-lane-cafe",
+      "https://www.localsearch.com.au/find/cafes/albury-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Brothers Cup",
+    "slug": "brothers-cup",
+    "categorySlug": "coffee-roasters",
+    "vertical": "eat_drink",
+    "localityName": "North Albury",
+    "state": "NSW",
+    "addressLine": "6/39 Union Road",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "website": "https://brotherscup.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Brothers+Cup+North+Albury+NSW",
+    "facebook": "https://www.facebook.com/thebrotherscup",
+    "instagram": "https://www.instagram.com/the_brothers_cup/",
+    "description": "A small batch coffee roaster on Union Road in North Albury. Green coffee is sourced from growers around the world and roasted in-house in small batches so each cup stays fresh and true to origin. They sell retail beans alongside a cafe counter, trading weekday mornings from 6.30am.",
+    "highlights": [
+      "Roasts in small batches on site in North Albury",
+      "Green coffee sourced globally",
+      "Retail beans plus a cafe counter",
+      "Open weekdays 6.30am to 1pm"
+    ],
+    "hours": [
+      { "day": 1, "opens": "06:30", "closes": "13:00", "closed": false },
+      { "day": 2, "opens": "06:30", "closes": "13:00", "closed": false },
+      { "day": 3, "opens": "06:30", "closes": "13:00", "closed": false },
+      { "day": 4, "opens": "06:30", "closes": "13:00", "closed": false },
+      { "day": 5, "opens": "06:30", "closes": "13:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://brotherscup.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Platform 9 Coffee Roasters",
+    "slug": "platform-9-coffee-roasters",
+    "categorySlug": "coffee-roasters",
+    "vertical": "eat_drink",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "1/315 Townsend Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "0421 043 921",
+    "website": "https://p9coffee.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Platform+9+Coffee+Roasters+South+Albury+NSW",
+    "facebook": "https://www.facebook.com/platform9coffee/",
+    "description": "A family-owned specialty coffee roaster, wholesaler and store on Townsend Street in South Albury. They roast in small batches and supply cafes across the region, with a retail shop for beans and brew gear. The business also runs barista training and provides cafe support and brew recipes.",
+    "highlights": [
+      "Family-owned specialty roaster in South Albury",
+      "Small batch roasting with retail store",
+      "Wholesale supply and full cafe support",
+      "Barista training and brew guidance",
+      "Roasting on Townsend Street since 2011"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "13:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://p9coffee.com.au/",
+      "https://www.bordermail.com.au/story/9182731/alburys-platform-9-planning-new-beginnings-on-david-street/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Crust & Crumb Bakery",
+    "slug": "crust-and-crumb-bakery",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "499 Ebden Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "0415 243 139",
+    "website": "https://www.crustandcrumb.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Crust+%26+Crumb+Bakery+South+Albury+NSW",
+    "instagram": "https://www.instagram.com/crust_and_crumb_bakery_/",
+    "description": "A sourdough bakery on the corner of Ebden and Olive Streets in South Albury, opened in 2024 by baker Adam Streltschenko. Loaves are naturally leavened and slow fermented using certified sustainable Australian flour, filtered water and sea salt, in styles including wholewheat and honey, ciabatta, rye, white and pumpkin. The counter also carries almond and plain croissants, Danish pastries, choc chip sourdough biscuits and muffins.",
+    "highlights": [
+      "Slow-fermented naturally leavened sourdough",
+      "Certified sustainable Australian flour",
+      "Croissants, Danish pastries and muffins",
+      "Founded 2024 by baker Adam Streltschenko",
+      "Open Tuesday to Saturday mornings"
+    ],
+    "hours": [
+      { "day": 2, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "12:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.crustandcrumb.au/contact",
+      "https://www.crustandcrumb.au/about",
+      "https://www.bordermail.com.au/story/8531929/adam-streltschenko-opens-crust-and-crumb-bakery-in-south-albury/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Valentine's Bakehouse",
+    "slug": "valentines-bakehouse",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Myer Centrepoint, 525 David Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "0420 436 883",
+    "website": "https://www.valentinessourdough.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Valentine%27s+Bakehouse+Albury+NSW",
+    "facebook": "https://www.facebook.com/Valentines-Traditional-Bakehouse-134967283226377/",
+    "instagram": "https://www.instagram.com/valentinesbakehouse/",
+    "description": "An artisan sourdough bakery and coffee shop in Myer Centrepoint on David Street. They bake bread daily and serve fresh lunches, hearty sandwiches and homemade cakes using locally sourced ingredients. Coffee is locally roasted White Owl. The business also trades in Wodonga and Rutherglen.",
+    "highlights": [
+      "Artisan sourdough baked daily",
+      "Sandwiches, fresh lunches and homemade cakes",
+      "Pours locally roasted White Owl coffee",
+      "Located inside Myer Centrepoint",
+      "Also trades in Wodonga and Rutherglen"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.valentinessourdough.com.au/",
+      "https://myercentrepoint.com.au/retailer/valentines-bakehouse/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beechworth Bakery Albury",
+    "slug": "beechworth-bakery-albury",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Shop 11, Myer Centrepoint, 525 David Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "1300 233 784",
+    "website": "https://www.beechworthbakery.com.au/locationalbury",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth+Bakery+Albury+NSW",
+    "description": "The Albury shop of the Beechworth Bakery group, trading in Myer Centrepoint since 2004. The counter carries the bakery's Ned Kelly pie, the Beesting and a range of cakes, pastries, pies, breads and rolls, with barista-made coffee. The cafe area has been renovated and catering is available for events.",
+    "highlights": [
+      "Ned Kelly pie and the Beesting",
+      "Cakes, pastries, pies, breads and rolls",
+      "Barista-made coffee",
+      "Trading at Myer Centrepoint since 2004",
+      "Open seven days"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:30", "closes": "17:30", "closed": false },
+      { "day": 2, "opens": "07:30", "closes": "17:30", "closed": false },
+      { "day": 3, "opens": "07:30", "closes": "17:30", "closed": false },
+      { "day": 4, "opens": "07:30", "closes": "17:30", "closed": false },
+      { "day": 5, "opens": "07:30", "closes": "17:30", "closed": false },
+      { "day": 6, "opens": "07:30", "closes": "17:00", "closed": false },
+      { "day": 0, "opens": "08:30", "closes": "16:30", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.beechworthbakery.com.au/locationalbury",
+      "https://www.visitalburywodonga.com/operator/beechworth-bakery-albury/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Red Brik Caffe",
+    "slug": "red-brik-caffe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "Shop 3, 525 Sanders Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6025 1829",
+    "website": "https://www.redbrikcaffe.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Red+Brik+Caffe+Lavington+NSW",
+    "facebook": "https://www.facebook.com/redbrikcaffe/",
+    "instagram": "https://www.instagram.com/redbrikcaffe",
+    "description": "A Sanders Road cafe in Lavington open every day from 8am to 2pm. They cook with quality, locally sourced ingredients and serve all-day breakfast, lunch, cakes and specialty coffee. Gluten free, vegan, vegetarian and dairy free options are on the menu, and takeaway is available.",
+    "highlights": [
+      "Open seven days, 8am to 2pm",
+      "All-day breakfast plus lunch and cakes",
+      "Specialty coffee",
+      "Gluten free, vegan, vegetarian and dairy free options",
+      "Takeaway available"
+    ],
+    "hours": [
+      { "day": 0, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 1, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "14:00", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "gluten_free": "yes",
+      "vegan_options": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.redbrikcaffe.com.au/",
+      "https://www.localsearch.com.au/find/cafes/lavington-nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Close Collective Cafe",
+    "slug": "close-collective-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "198A High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6049 1870",
+    "website": "https://www.closecollective.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Close+Collective+Cafe+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/closecollectivecafe",
+    "instagram": "https://www.instagram.com/closecollectivecafe/",
+    "description": "A High Street cafe in Wodonga, opposite the water tower, serving a fresh and seasonal selection of breakfast, morning tea and lunch. The kitchen describes its food as classic cafe fare made to a consistent high standard, with both savoury and sweet options. Baristas pour locally roasted beans from The Blessed Bean, and a separate brunch menu runs on Saturdays.",
+    "highlights": [
+      "Locally roasted The Blessed Bean coffee",
+      "Seasonal breakfast, morning tea and lunch menu",
+      "Saturday brunch menu 8am to 2pm",
+      "Opposite the Wodonga water tower"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 2, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.closecollective.org.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "BeanStation Cafe",
+    "slug": "beanstation-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "Tenancy 1, Wodonga Railway Station, Elgin Boulevard",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 5006",
+    "website": "https://www.beanstationcafewodonga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BeanStation+Cafe+Wodonga+VIC",
+    "description": "An upcycled industrial cafe and wine bar in Wodonga's 1873 railway station building at Junction Place. Old floor beams, tin signs and metal braces have been repurposed through the fit-out, and there is seating out on the platform. The modern Australian menu is served with Merlo coffee, local wines and Australian boutique beers, plus seasonal grazing platters.",
+    "highlights": [
+      "Set in the 1873 Wodonga railway station at Junction Place",
+      "Modern Australian menu and grazing platters",
+      "Merlo coffee, local wines and boutique beers",
+      "Seating on the old station platform",
+      "Kitchen closes 2pm weekdays, 2.30pm weekends"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 2, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "15:30", "closed": false },
+      { "day": 0, "opens": "08:00", "closes": "15:30", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "licensed": "yes",
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.beanstationcafewodonga.com.au/",
+      "https://www.beanstationcafewodonga.com.au/contact.html"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Delibean",
+    "slug": "delibean",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "237 Beechworth Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 3354",
+    "website": "https://www.delibean.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Delibean+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/DelibeanCafe",
+    "instagram": "https://www.instagram.com/deli_bean_wodonga_/",
+    "description": "A Beechworth Road cafe in Wodonga open Monday to Saturday from 7.30am to 4pm. They serve coffee alongside generous all-day breakfasts and cafe lunch favourites, with daily changing specials written up on the blackboards.",
+    "highlights": [
+      "All-day breakfast and cafe lunch menu",
+      "Daily changing specials on the blackboards",
+      "Open Monday to Saturday, 7.30am to 4pm",
+      "Closed Sundays"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:30", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "07:30", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "07:30", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "07:30", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "07:30", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "07:30", "closes": "16:00", "closed": false }
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "breakfast": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.delibean.com.au/",
+      "https://www.visitalburywodonga.com/where-to-eat-drink-in-albury-wodonga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Henri's Wodonga Bakery",
+    "slug": "henris-wodonga-bakery",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "57-61 Hovell Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 1248",
+    "website": "https://www.henrisbakery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Henri%27s+Wodonga+Bakery+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/henriswodongabakery",
+    "instagram": "https://www.instagram.com/henriswodongabakery",
+    "description": "A Hovell Street bakery in Wodonga making handmade pies, fresh sandwiches and sweet treats, with ingredients bought from local butchers and grocers. The counter covers breakfast and lunch, and they also sell frozen meals and fresh takeaway items. Catering is available. Doors open at 6am on weekdays.",
+    "highlights": [
+      "Handmade pies and fresh sandwiches",
+      "Ingredients from local butchers and grocers",
+      "Frozen meals and takeaway items",
+      "Catering available",
+      "Opens 6am weekdays, 7am weekends"
+    ],
+    "hours": [
+      { "day": 1, "opens": "06:00", "closes": "16:30", "closed": false },
+      { "day": 2, "opens": "06:00", "closes": "16:30", "closed": false },
+      { "day": 3, "opens": "06:00", "closes": "16:30", "closed": false },
+      { "day": 4, "opens": "06:00", "closes": "16:30", "closed": false },
+      { "day": 5, "opens": "06:00", "closes": "16:30", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "14:00", "closed": false },
+      { "day": 0, "opens": "07:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.henrisbakery.com.au/",
+      "https://www.localsearch.com.au/find/bakeries/wodonga-vic"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Gum Tree Pies Wodonga",
+    "slug": "gum-tree-pies-wodonga",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "1/15 Aurora Way",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 6777",
+    "website": "https://www.gumtreepies.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gum+Tree+Pies+Wodonga+VIC",
+    "description": "The Wodonga shop of Gum Tree Pies, a pie maker whose pies are made in Yackandandah. The Aurora Way store trades 8am to 4pm seven days and also takes orders online. The business runs shops in Yackandandah, Wodonga and Bright.",
+    "highlights": [
+      "Pies made in Yackandandah",
+      "Open 8am to 4pm, seven days",
+      "Online ordering available",
+      "One of three Gum Tree Pies stores"
+    ],
+    "hours": [
+      { "day": 0, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "16:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.gumtreepies.com.au/pages/our-stores",
+      "https://www.localsearch.com.au/find/bakeries/wodonga-vic"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Piccolo Pod",
+    "slug": "piccolo-pod",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "34B Elgin Boulevard",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Piccolo+Pod+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/piccolopod/",
+    "description": "A coffee window on Elgin Boulevard in Wodonga operating out of a converted shipping container. The team serve coffee and milkshakes, with plenty of outdoor seating on the lawns around the pod.",
+    "highlights": [
+      "Coffee served from a converted shipping container",
+      "Coffee and milkshakes",
+      "Outdoor seating on the lawns",
+      "On Elgin Boulevard near Junction Place"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "outdoor_seating": "yes",
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.visitalburywodonga.com/where-to-eat-drink-in-albury-wodonga/",
+      "https://www.localsearch.com.au/find/cafes/wodonga-vic"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beechworth Bakery",
+    "slug": "beechworth-bakery-beechworth",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "27 Camp Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "1300 233 784",
+    "website": "https://beechworthbakery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth+Bakery+Beechworth+VIC",
+    "description": "The original Beechworth Bakery on Camp Street, established in 1984 when Tom O'Toole bought the Ideal Cafe and turned it into a bakery. It is the birthplace of the Ned Kelly pie, a meat pie topped with bacon, cheese and a whole egg, and of the Beesting. The counter carries cakes, pastries, pies, breads and rolls.",
+    "highlights": [
+      "The original bakery, established 1984",
+      "Home of the Ned Kelly pie",
+      "The Beesting is the other signature item",
+      "Cakes, pastries, pies, breads and rolls",
+      "On Camp Street in central Beechworth"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://beechworthbakery.com.au/",
+      "https://www.beechworthbakery.com.au/locationalbury",
+      "https://en.wikipedia.org/wiki/Beechworth_Bakery"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beechworth Coffee Roasters",
+    "slug": "beechworth-coffee-roasters",
+    "categorySlug": "coffee-roasters",
+    "vertical": "eat_drink",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "6 Boiler House Lane",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "0490 444 042",
+    "website": "https://beechworth.coffee/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth+Coffee+Roasters+Beechworth+VIC",
+    "facebook": "https://www.facebook.com/beechworthcoffeeroasters",
+    "instagram": "https://www.instagram.com/beechworthcoffeeroasters",
+    "description": "A small batch coffee roaster on Boiler House Lane in Beechworth. Beans are sourced ethically and roasted in small batches into blends and single origins chosen to highlight the character of each bean, sold as whole bean or ground. They also supply cafes, offices and retailers wholesale and run a subscription delivery service.",
+    "highlights": [
+      "Small batch roasting in Beechworth",
+      "Blends and single origins, whole bean or ground",
+      "Wholesale supply to cafes, offices and retailers",
+      "Coffee subscription delivery"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://beechworth.coffee/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beechworth Bakery Yackandandah",
+    "slug": "beechworth-bakery-yackandandah",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "20 High Street",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "phone": "1300 233 784",
+    "website": "https://beechworthbakery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beechworth+Bakery+Yackandandah+VIC",
+    "description": "The Yackandandah shop of the Beechworth Bakery group, opened in 2017 on High Street in the middle of town. It sells the group's cakes, pastries, pies, breads and rolls including the Ned Kelly pie and the Beesting.",
+    "highlights": [
+      "Opened in Yackandandah in 2017",
+      "Ned Kelly pie and Beesting",
+      "Cakes, pastries, pies, breads and rolls",
+      "On High Street in the town centre"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.beechworthbakery.com.au/locationalbury",
+      "https://www.exploreyackandandah.com.au/cafes-restaurants/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Gum Tree Pies Yackandandah",
+    "slug": "gum-tree-pies-yackandandah",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "11 High Street",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "website": "https://www.gumtreepies.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gum+Tree+Pies+Yackandandah+VIC",
+    "description": "The home store of Gum Tree Pies on High Street in Yackandandah, where the pies are made. The shop trades 8am to 4pm seven days and the business also sells online and at the Canberra market.",
+    "highlights": [
+      "Pies made on site in Yackandandah",
+      "Open 8am to 4pm, seven days",
+      "Online ordering available",
+      "Also stalls at the Canberra market"
+    ],
+    "hours": [
+      { "day": 0, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "08:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "08:00", "closes": "16:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.gumtreepies.com.au/pages/our-stores",
+      "https://www.exploreyackandandah.com.au/cafes-restaurants/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "White Owl Coffee Merchants",
+    "slug": "white-owl-coffee-merchants",
+    "categorySlug": "coffee-roasters",
+    "vertical": "eat_drink",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "105 Fraser Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "website": "https://www.whiteowlcoffee.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White+Owl+Coffee+Merchants+Rutherglen+VIC",
+    "facebook": "https://www.facebook.com/whiteowlcoffeemerchants/",
+    "instagram": "https://www.instagram.com/whiteowlcoffeemerchants/",
+    "description": "A family-owned specialty coffee roaster established in 2014 by Harry Perry to supply the Albury Wodonga region. Roasting is done on a 60kg Brambatti roaster at Fraser Road in Rutherglen. They sell beans, pods, subscriptions, brew equipment and merchandise, and supply cafes across the region including Valentine's Bakehouse.",
+    "highlights": [
+      "Established 2014, family owned",
+      "Roasts on a 60kg Brambatti roaster",
+      "Beans, pods, brew gear and subscriptions",
+      "Supplies cafes across Albury Wodonga"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes"
+    },
+    "sources": [
+      "https://www.whiteowlcoffee.com.au/pages/about",
+      "https://www.valentinessourdough.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Parker Pies",
+    "slug": "parker-pies",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "86-88 Main Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 9605",
+    "website": "https://parkerpies.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parker+Pies+Rutherglen+VIC",
+    "facebook": "https://www.facebook.com/parkerpiesrutherglen/",
+    "instagram": "https://www.instagram.com/parkerpies/",
+    "description": "A pie shop on Main Street in Rutherglen making gourmet and traditional pies. It trades seven days, from 7.30am to 4.30pm Monday to Saturday and 7.30am to 4pm on Sunday, and closes on Good Friday, ANZAC Day, Christmas Day and Boxing Day.",
+    "highlights": [
+      "Gourmet and traditional pies",
+      "On Main Street in Rutherglen",
+      "Open seven days from 7.30am",
+      "Closed Good Friday, ANZAC Day, Christmas and Boxing Day"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 2, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 3, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 4, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 5, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 6, "opens": "07:30", "closes": "16:30", "closed": false },
+      { "day": 0, "opens": "07:30", "closes": "16:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://parkerpies.com.au/information",
+      "https://www.alburywodongaaustralia.com.au/food-wine-and-dining/cafes-and-restaurants/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Pickled Sisters Cafe",
+    "slug": "the-pickled-sisters-cafe",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "121B Main Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6033 2377",
+    "website": "https://www.pickledsisters.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Pickled+Sisters+Cafe+Rutherglen+VIC",
+    "facebook": "https://www.facebook.com/pickledsisterscafe",
+    "instagram": "https://www.instagram.com/pickledsisters/",
+    "description": "A family-run cafe and restaurant on Main Street in Rutherglen cooking homemade, locally sourced food. Daytime service runs Thursday to Monday from 10am to 3pm, with dinner Thursday to Saturday from 5.30pm and a pasta night on Thursdays. They also run cooking classes and sell picnic hampers, takeaway meals and catering for private functions.",
+    "highlights": [
+      "Homemade, locally sourced menu",
+      "Thursday pasta night from 5.30pm",
+      "Dinner service Thursday to Saturday",
+      "Cooking classes and picnic hampers",
+      "Private functions and catering"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "bookings": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.pickledsisters.com.au/",
+      "https://www.localsearch.com.au/find/cafes/rutherglen-vic"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Chiltern Bakery & Cafe",
+    "slug": "chiltern-bakery-and-cafe",
+    "categorySlug": "bakeries",
+    "vertical": "eat_drink",
+    "localityName": "Chiltern",
+    "state": "VIC",
+    "addressLine": "27-29 Conness Street",
+    "suburb": "Chiltern",
+    "postcode": "3683",
+    "phone": "03 5726 1000",
+    "website": "https://www.chilternbakery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chiltern+Bakery+%26+Cafe+Chiltern+VIC",
+    "facebook": "https://www.facebook.com/ChilternBakery/",
+    "description": "A bakery and cafe on Conness Street in Chiltern baking hand-shaped, stone-baked artisan breads and loaves. The counter also carries sausage rolls, pies, croissants and cakes, and the coffee is roasted in house. Catering platters and sandwich boxes can be ordered.",
+    "highlights": [
+      "Hand-shaped, stone-baked artisan loaves",
+      "House-roasted coffee",
+      "Sausage rolls, pies and croissants",
+      "Catering platters and sandwich boxes",
+      "Open seven days"
+    ],
+    "hours": [
+      { "day": 1, "opens": "07:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "07:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "07:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "07:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "07:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "07:00", "closes": "15:00", "closed": false },
+      { "day": 0, "opens": "08:00", "closes": "14:00", "closed": false }
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "takeaway": "yes",
+      "dine_in": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.chilternbakery.com.au/",
+      "https://www.localsearch.com.au/find/cafes/rutherglen-vic"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "name": "localknows",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent business and places directory for New South Wales and Victoria",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "node scripts/preflight.mjs && astro build && node scripts/postbuild.mjs",
+    "preview": "astro preview",
+    "check": "astro check",
+    "verify": "node scripts/verify-build.mjs",
+    "data:validate": "node scripts/preflight.mjs",
+    "ingest": "node scripts/ingest-businesses.mjs",
+    "wire": "node scripts/generate-wire.mjs",
+    "places": "node scripts/fetch-places.mjs",
+    "og": "node scripts/og.mjs",
+    "scrape": "node scripts/scrape.mjs",
+    "indexnow": "node scripts/indexnow.mjs",
+    "refresh": "node scripts/generate-wire.mjs && node scripts/ingest-businesses.mjs && npm run build && npm run verify"
+  },
+  "dependencies": {
+    "astro": "^5.18.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.3",
+    "typescript": "^5.9.2"
+  }
+}

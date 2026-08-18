@@ -1,0 +1,437 @@
+---
+/**
+ * The national category hub. /categories/plumbers/
+ *
+ * This is the page that holds the internal link graph together. Every locality
+ * where the category is actually live is linked from here, split by state, which
+ * gives twenty thousand money pages a parent that is not the homepage. Nothing
+ * on it is asserted that the listing rows underneath do not support.
+ */
+import type { Category, CategoryModifier, Locality } from '~/lib/types';
+import {
+  url,
+  STATES,
+  POLICY,
+  categories,
+  categoriesInVertical,
+  liveLocalities,
+  listingsInCategory,
+  listingsInLocality,
+  listingsInLocalityCategory,
+  modifiersForCategory,
+  listingsForModifier,
+  guidesForCategory,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n, plural } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return categories.map((category) => ({
+    params: { category: category.slug },
+    props: { category },
+  }));
+}
+
+const { category } = Astro.props as any as { category: Category };
+
+const canonicalPath = url.category(category);
+const vertical = VERTICALS.find((v) => v.key === category.vertical);
+const noun = category.name.toLowerCase();
+const nounSingular = category.nameSingular.toLowerCase();
+
+const rows = listingsInCategory(category.id);
+
+// Only page worthy localities. A tier 4 town rolls up into a neighbour and has
+// no page of its own, so linking to one would be linking at a 404.
+const places = liveLocalities()
+  .map((locality) => ({
+    locality,
+    count: listingsInLocalityCategory(locality.id, category.id).length,
+  }))
+  .filter((p) => p.count > 0)
+  .sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name));
+
+const nsw = places.filter((p) => p.locality.state === 'NSW');
+const vic = places.filter((p) => p.locality.state === 'VIC');
+
+const verified = rows.filter((l) => l.status === 'verified').length;
+const hasEmergencyAttribute = rows.some((l) => l.attributes.emergency_callout !== undefined);
+const emergency = rows.filter((l) => l.attributes.emergency_callout === 'yes').length;
+
+// listingsInCategory is already ranked by quality score, then rating, then name.
+const top = rows.slice(0, 6);
+
+// A modifier only earns a chip where some town actually clears the threshold that
+// generates the page. Below that the route does not exist.
+const modifierChips = modifiersForCategory(category.id)
+  .map((modifier) => {
+    let best: { locality: Locality; count: number } | undefined;
+    for (const p of places) {
+      const count = listingsForModifier(p.locality.id, category.id, modifier).length;
+      if (count < POLICY.minListingsForModifierPage) continue;
+      if (!best || count > best.count) best = { locality: p.locality, count };
+    }
+    return best ? { modifier, locality: best.locality, count: best.count } : undefined;
+  })
+  .filter(Boolean) as { modifier: CategoryModifier; locality: Locality; count: number }[];
+
+const relatedGuides = guidesForCategory(category.slug).slice(0, 6);
+
+const siblings = categoriesInVertical(category.vertical)
+  .filter((c) => c.id !== category.id)
+  .map((c) => ({ category: c, count: listingsInCategory(c.id).length }))
+  .sort((a, b) => b.count - a.count || a.category.sortOrder - b.category.sortOrder)
+  .slice(0, 12);
+
+const topLocalities = liveLocalities()
+  .map((locality) => ({ locality, count: listingsInLocality(locality.id).length }))
+  .filter((p) => p.count > 0)
+  .sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name))
+  .slice(0, 8);
+
+const h1 = category.name + ' in NSW and Victoria';
+const description =
+  n(rows.length) +
+  ' ' +
+  noun +
+  ' listed across ' +
+  places.length +
+  ' ' +
+  plural(places.length, 'town', 'towns') +
+  ' in New South Wales and Victoria' +
+  (verified > 0 ? ', ' + verified + ' of them verified' : '') +
+  '. Service area is stored separately from address, so operators who cross the border show up on both sides of it.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Categories', href: url.categoryIndex() },
+  ...(vertical ? [{ name: vertical.name, href: url.vertical(vertical.slug) }] : []),
+  { name: category.name, href: canonicalPath },
+];
+
+const biggest = places.slice(0, 3);
+
+const faqs = [
+  {
+    q: 'How many ' + noun + ' are listed on LocalKnows?',
+    a:
+      places.length > 0
+        ? n(rows.length) +
+          ' ' +
+          noun +
+          ' across ' +
+          places.length +
+          ' ' +
+          plural(places.length, 'town', 'towns') +
+          ', ' +
+          nsw.length +
+          ' in New South Wales and ' +
+          vic.length +
+          ' in Victoria. A business appears in every town it services, not only the one it is registered in, so the town counts add up to more than the listing count.'
+        : 'None yet. ' +
+          category.name +
+          ' exists in the taxonomy with its own template and schema type, and the page goes live in a town the moment there is something real to put on it. Nothing is padded out with placeholder entries.',
+  },
+  {
+    q: 'Which towns have the most ' + noun + '?',
+    a:
+      biggest.length > 0
+        ? biggest.map((p) => p.locality.name + ' with ' + p.count).join(', ') +
+          '. Coverage starts on the border corridor and works outwards, so the ordering here reflects where the directory has been built out, not where the trade is busiest.'
+        : 'None so far. Once a town has ' +
+          noun +
+          ' listed it appears in the two state columns on this page, ordered by how many are behind it.',
+  },
+  {
+    q: 'What schema type do ' + noun + ' use, and why does that matter?',
+    a:
+      'Every listing in this category is marked up as ' +
+      category.schemaType +
+      ' rather than a generic LocalBusiness. The type carries the properties that fit the business, so opening hours, service area and credentials are read as what they are. Marking a ' +
+      nounSingular +
+      ' up as a generic business tells a search engine almost nothing, and it costs the rich result.',
+  },
+  {
+    q: 'How is the order on these pages decided?',
+    a: 'By a quality score built from profile completeness, whether the business has claimed its listing, and whether a licence has been checked against the state register. Rating breaks a tie. Payment does not enter it at any point, and any promoted slot is boxed, labelled, and kept out of the structured data.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: category.name + ' by town',
+    items: places.map((p) => ({
+      url: url.localityCategory(p.locality, category),
+      name: category.name + ' in ' + p.locality.name + ', ' + p.locality.state,
+    })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="category"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={rows.length}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        {vertical ? vertical.name : 'Category'} &middot; {category.schemaType}
+      </p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{category.description}</p>
+      <div class="headmeta">
+        <span>{n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
+        <span>&middot; {places.length} {plural(places.length, 'town', 'towns')} live</span>
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="statgrid">
+      <div><b>{n(rows.length)}</b><span>listed</span></div>
+      <div><b>{nsw.length}</b><span>towns live in NSW</span></div>
+      <div><b>{vic.length}</b><span>towns live in VIC</span></div>
+      <div><b>{verified}</b><span>verified</span></div>
+      {hasEmergencyAttribute && (
+        <div><b>{emergency}</b><span>after hours</span></div>
+      )}
+    </div>
+
+    {category.synonyms.length > 0 && (
+      <p class="mono" style="color:var(--ink-40);margin-top:20px">
+        Also searched as {category.synonyms.join(', ')}
+      </p>
+    )}
+
+    {places.length === 0 && (
+      <div class="notice" style="margin-top:26px">
+        <strong>Nothing listed in this category yet.</strong> {category.name} is defined in
+        the taxonomy with its own template and schema type, and it goes live in a town as
+        soon as there are real businesses to put on it.
+        <a href={url.claim()}> Add the first one, free</a>.
+      </div>
+    )}
+  </div>
+
+  {places.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Where {noun} are live</h2>
+            <p>
+              Each town links to the {noun} who work there, including the ones based on the
+              other side of the river.
+            </p>
+          </div>
+        </div>
+        <div class="river-split">
+          <div>
+            <p class="mono" style="color:var(--river);margin-bottom:12px">{STATES.NSW.name}</p>
+            {nsw.length > 0 ? (
+              <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+                {nsw.map((p) => (
+                  <li style="margin-bottom:9px;break-inside:avoid">
+                    <a
+                      href={url.localityCategory(p.locality, category)}
+                      style="font-size:14.5px;color:var(--ink-60)"
+                    >
+                      {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p style="font-size:14.5px;color:var(--ink-40)">
+                No {noun} listed in New South Wales yet.
+              </p>
+            )}
+            <p style="margin-top:16px">
+              <a class="btn btn-ghost btn-sm" href={url.state('NSW')}>All of NSW</a>
+            </p>
+          </div>
+          <div class="river-line"><span class="mono">Murray</span></div>
+          <div>
+            <p class="mono" style="color:var(--wattle-ink);margin-bottom:12px">{STATES.VIC.name}</p>
+            {vic.length > 0 ? (
+              <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+                {vic.map((p) => (
+                  <li style="margin-bottom:9px;break-inside:avoid">
+                    <a
+                      href={url.localityCategory(p.locality, category)}
+                      style="font-size:14.5px;color:var(--ink-60)"
+                    >
+                      {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p style="font-size:14.5px;color:var(--ink-40)">
+                No {noun} listed in Victoria yet.
+              </p>
+            )}
+            <p style="margin-top:16px">
+              <a class="btn btn-ghost btn-sm" href={url.state('VIC')}>All of Victoria</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {top.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Top rated {noun}</h2>
+            <p>
+              The {top.length} strongest {plural(top.length, 'profile', 'profiles')} in the
+              category. Ordered by quality score and then rating, never by payment.
+            </p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.search()}>Search everything</a>
+        </div>
+        <div class="cards">
+          {top.map((l) => <ListingCard listing={l} category={category} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {modifierChips.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Narrower than {noun}</h2>
+          <p>
+            Each of these has its own page in every town that has enough businesses behind
+            it. The link goes to the biggest one.
+          </p>
+        </div>
+        <nav class="chips" aria-label={'Filtered ' + noun}>
+          {modifierChips.map((c) => (
+            <a class="chip" href={url.modifier(c.locality, category, c.modifier)}>
+              {c.modifier.label} in {c.locality.name} ({c.count})
+            </a>
+          ))}
+        </nav>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <section class="prose" style="margin-top:34px;max-width:var(--measure)">
+      <h2>How this category is built</h2>
+      <p>{category.description}</p>
+      <p>
+        A {nounSingular} appears in every town it services, not only the town it is
+        registered in. That is why the town counts on this page add up to more than
+        {' '}{n(rows.length)}. Address and service area are held as separate facts, which
+        is the whole reason a business on one side of the Murray is not invisible on the
+        other.
+      </p>
+      <p>
+        Listings are marked up as <code>{category.schemaType}</code> in the structured
+        data. Ordering comes from a quality score, and where it exists, promoted placement
+        is boxed and labelled.
+        <a href={url.advertisingPolicy()}> How we handle advertising</a>.
+      </p>
+    </section>
+
+    {relatedGuides.length > 0 && (
+      <section class="sec-tight">
+        <div class="sec-head">
+          <h2>Read before you book</h2>
+        </div>
+        <ul class="stack">
+          {relatedGuides.map((g) => (
+            <li>
+              <a href={url.guide(g)}>
+                <h3>{g.title}</h3>
+                <p>{g.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <Faq faqs={faqs} heading={'Questions about ' + noun} />
+  </div>
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: vertical ? 'More ' + vertical.name.toLowerCase() : 'Related categories',
+        links: siblings.map((s) => ({
+          href: url.category(s.category),
+          label: s.category.name,
+          note: s.count > 0 ? '(' + s.count + ')' : undefined,
+        })),
+      },
+      {
+        heading: 'By state',
+        links: [
+          {
+            href: url.state('NSW'),
+            label: 'Everything in ' + STATES.NSW.name,
+            note: nsw.length > 0 ? nsw.length + ' towns' : undefined,
+          },
+          {
+            href: url.state('VIC'),
+            label: 'Everything in ' + STATES.VIC.name,
+            note: vic.length > 0 ? vic.length + ' towns' : undefined,
+            cross: true,
+          },
+          { href: url.categoryIndex(), label: 'Every category' },
+          ...(vertical ? [{ href: url.vertical(vertical.slug), label: 'All ' + vertical.name.toLowerCase() }] : []),
+        ],
+      },
+      {
+        heading: 'Busiest towns',
+        links: topLocalities.map((p) => ({
+          href: url.locality(p.locality),
+          label: p.locality.name,
+          note: '(' + p.count + ')',
+          cross: p.locality.state === 'VIC',
+        })),
+      },
+    ]}
+  />
+</Base>

@@ -1,0 +1,351 @@
+---
+/**
+ * Human readable site index.
+ *
+ * The crawl safety net. Every page that gets built should be reachable from
+ * here in one hop, so an orphan shows up in `npm run verify` as a warning
+ * rather than as a page nobody ever finds.
+ */
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import {
+  url,
+  STATES,
+  regions,
+  regionsInState,
+  liveLocalities,
+  listingsInLocality,
+  activeCategoriesInLocality,
+  listingsInCategory,
+  categories,
+  guides,
+  curatedLists,
+  wire,
+  tools,
+  events,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.sitemapPage();
+const h1 = 'Site index';
+
+const live = liveLocalities();
+const liveByState = {
+  NSW: live.filter((l) => l.state === 'NSW').sort((a, b) => a.name.localeCompare(b.name)),
+  VIC: live.filter((l) => l.state === 'VIC').sort((a, b) => a.name.localeCompare(b.name)),
+};
+
+const liveCategories = categories
+  .map((c) => ({ category: c, count: listingsInCategory(c.id).length }))
+  .filter((c) => c.count > 0)
+  .sort((a, b) => a.category.name.localeCompare(b.category.name));
+
+const emptyCategories = categories.filter((c) => listingsInCategory(c.id).length === 0);
+
+// Every locality x category page that exists, grouped by locality. This is the
+// block that makes the index a genuine safety net rather than a nav duplicate.
+const moneyPages = live
+  .map((locality) => ({
+    locality,
+    cats: activeCategoriesInLocality(locality.id),
+  }))
+  .filter((row) => row.cats.length > 0)
+  .sort(
+    (a, b) =>
+      listingsInLocality(b.locality.id).length - listingsInLocality(a.locality.id).length ||
+      a.locality.name.localeCompare(b.locality.name),
+  );
+
+const upcoming = events.filter((e) => e.startDate.slice(0, 10) >= BUILD_DATE);
+const past = events.filter((e) => e.startDate.slice(0, 10) < BUILD_DATE);
+
+const totalPages =
+  2 +
+  regions.length +
+  live.length +
+  moneyPages.reduce((t, r) => t + r.cats.length, 0) +
+  liveCategories.length +
+  VERTICALS.length +
+  guides.length +
+  curatedLists.length +
+  wire.length +
+  tools.length +
+  events.length;
+
+const description =
+  'Every page on LocalKnows in one place: ' +
+  live.length +
+  ' town hubs, ' +
+  liveCategories.length +
+  ' live categories, guides, lists, tools and events across NSW and Victoria.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Site index', href: canonicalPath },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+]);
+---
+
+<Base
+  kind="static"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">Everything, on one page</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Every page that exists, linked once. The machine readable version is at
+        <a href="/sitemap.xml" style="color:var(--river)">/sitemap.xml</a>, and there is a
+        summary for answer engines at <a href="/llms.txt" style="color:var(--river)">/llms.txt</a>.
+      </p>
+      <div class="headmeta">
+        <span>{n(totalPages)} pages</span>
+        <span>&middot; Built {BUILD_DATE}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2>States and regions</h2></div>
+      <div class="linkgrid">
+        {(['NSW', 'VIC'] as const).map((code) => (
+          <div>
+            <h3>{STATES[code].name}</h3>
+            <ul>
+              <li><a href={url.state(code)}><strong>All of {STATES[code].name}</strong></a></li>
+              {regionsInState(code).map((r) => (
+                <li><a href={url.region(r)}>{r.name}</a></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Towns with listings</h2>
+        <p>A town appears here once it has content. {n(live.length)} of them so far.</p>
+      </div>
+      <div class="linkgrid">
+        {(['NSW', 'VIC'] as const).map((code) => (
+          <div>
+            <h3>{STATES[code].name} &middot; {liveByState[code].length}</h3>
+            <ul>
+              {liveByState[code].map((l) => (
+                <li>
+                  <a href={url.locality(l)}>{l.name}</a>
+                  <span style="color:var(--ink-40);font-size:13px"> {listingsInLocality(l.id).length}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Categories</h2>
+        <p>
+          {n(liveCategories.length)} categories have listings. {n(emptyCategories.length)} more
+          exist in the taxonomy and go live when their first business is added.
+        </p>
+      </div>
+      <div class="linkgrid">
+        <div>
+          <h3>Browse</h3>
+          <ul>
+            <li><a href={url.categoryIndex()}><strong>Every category</strong></a></li>
+            {VERTICALS.map((v) => (
+              <li><a href={url.vertical(v.slug)}>{v.name}</a></li>
+            ))}
+          </ul>
+        </div>
+        {[0, 1, 2].map((col) => (
+          <div>
+            <h3>{col === 0 ? 'Live categories' : ' '}</h3>
+            <ul>
+              {liveCategories
+                .filter((_, i) => i % 3 === col)
+                .map((c) => (
+                  <li>
+                    <a href={url.category(c.category)}>{c.category.name}</a>
+                    <span style="color:var(--ink-40);font-size:13px"> {c.count}</span>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Every town and category page</h2>
+        <p>
+          The pages people actually search for. {n(moneyPages.reduce((t, r) => t + r.cats.length, 0))}
+          of them, grouped by town.
+        </p>
+      </div>
+      <div class="linkgrid">
+        {moneyPages.map((row) => (
+          <div>
+            <h3>
+              <a href={url.locality(row.locality)} style="color:inherit">
+                {row.locality.name} {row.locality.state}
+              </a>
+            </h3>
+            <ul>
+              {row.cats.map((c) => (
+                <li>
+                  <a href={url.localityCategory(row.locality, c.category)}>{c.category.name}</a>
+                  <span style="color:var(--ink-40);font-size:13px"> {c.count}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2>Reading and tools</h2></div>
+      <div class="linkgrid">
+        <div>
+          <h3>Guides</h3>
+          <ul>
+            <li><a href={url.guides()}><strong>All guides</strong></a></li>
+            {guides.map((g) => <li><a href={url.guide(g)}>{g.title}</a></li>)}
+          </ul>
+        </div>
+        <div>
+          <h3>The wire</h3>
+          <ul>
+            <li><a href={url.wire()}><strong>All of the wire</strong></a></li>
+            {wire.map((w) => <li><a href={url.wireArticle(w)}>{w.title}</a></li>)}
+            <li><a href="/wire/rss.xml">RSS feed</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Free tools</h3>
+          <ul>
+            <li><a href={url.tools()}><strong>All tools</strong></a></li>
+            {tools.map((t) => (
+              <li>
+                <a href={url.tool(t)}>{t.title}</a>
+                {t.status === 'planned' && <span style="color:var(--ink-40);font-size:13px"> planned</span>}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Curated lists</h3>
+          <ul>
+            <li><a href={url.lists()}><strong>All lists</strong></a></li>
+            {curatedLists.map((l) => <li><a href={url.list(l)}>{l.title}</a></li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Events</h2>
+        <p>{n(upcoming.length)} coming up, {n(past.length)} passed and kept.</p>
+      </div>
+      <div class="linkgrid">
+        <div>
+          <h3>Coming up</h3>
+          <ul>
+            <li><a href={url.events()}><strong>All events</strong></a></li>
+            {upcoming.map((e) => <li><a href={url.event(e)}>{e.title}</a></li>)}
+          </ul>
+        </div>
+        {past.length > 0 && (
+          <div>
+            <h3>Passed</h3>
+            <ul>
+              {past.map((e) => <li><a href={url.event(e)}>{e.title}</a></li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <LinkBlock
+    heading="The site itself"
+    groups={[
+      {
+        heading: 'About',
+        links: [
+          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.contact(), label: 'Contact' },
+          { href: url.claim(), label: 'Claim a listing' },
+          { href: url.partners(), label: 'Link partner program' },
+          { href: url.search(), label: 'Search' },
+        ],
+      },
+      {
+        heading: 'Policies',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.privacy(), label: 'Privacy' },
+          { href: url.terms(), label: 'Terms of use' },
+        ],
+      },
+      {
+        heading: 'For machines',
+        links: [
+          { href: '/sitemap.xml', label: 'XML sitemap index' },
+          { href: '/llms.txt', label: 'llms.txt' },
+          { href: '/robots.txt', label: 'robots.txt' },
+          { href: '/wire/rss.xml', label: 'RSS feed' },
+        ],
+      },
+    ]}
+  />
+</Base>

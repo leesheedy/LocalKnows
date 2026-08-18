@@ -1,0 +1,430 @@
+---
+/**
+ * A tool page.
+ *
+ * Three shapes come out of this one file: a working widget for the tools that
+ * have one, a plainly worded holding page for the ones still planned, and body
+ * prose plus a pointer to the authority for everything else. A planned tool
+ * never renders a control that looks like it does something.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import { tools, url,
+  pageExists,
+} from '~/lib/repo';
+import type { ToolPage } from '~/lib/types';
+import { renderMarkdown } from '~/lib/markdown';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  toolNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return tools.map((tool) => ({
+    params: { slug: tool.slug },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props as any;
+const t = tool as ToolPage;
+
+const canonicalPath = url.tool(t);
+const isLive = t.status === 'live';
+const rendered = renderMarkdown(t.body, pageExists);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Free tools', href: url.tools() },
+  { name: t.title, href: canonicalPath },
+];
+
+/**
+ * The registers the licence checker opens. Landing pages only.
+ * Neither body publishes a documented query string for a public search, so we
+ * do not invent one and we do not pretend a number was checked here.
+ */
+const REGISTERS = [
+  {
+    code: 'NSW',
+    label: 'New South Wales',
+    register: 'NSW Fair Trading licence check',
+    href: 'https://verify.licence.nsw.gov.au/',
+  },
+  {
+    code: 'VIC',
+    label: 'Victoria',
+    register: 'the Victorian Building Authority register',
+    href: 'https://www.vba.vic.gov.au/',
+  },
+];
+
+/** Which public holidays actually differ. Rules only, never a gazetted date. */
+const HOLIDAY_ROWS = [
+  {
+    day: 'Melbourne Cup Day',
+    rule: 'First Tuesday in November',
+    nsw: 'Not a public holiday. Normal trading, normal rates.',
+    vic: 'Public holiday. Some regional councils substitute a local show or race day instead, so check the council before you roster.',
+  },
+  {
+    day: 'AFL Grand Final Friday',
+    rule: 'The Friday before the AFL Grand Final',
+    nsw: 'Not a public holiday.',
+    vic: 'Public holiday. It moves with the AFL fixture and is declared each year, so it has no fixed calendar date.',
+  },
+  {
+    day: 'Labour Day',
+    rule: 'Different month in each state',
+    nsw: 'First Monday in October.',
+    vic: 'Second Monday in March.',
+  },
+  {
+    day: 'Bank Holiday',
+    rule: 'First Monday in August',
+    nsw: 'Observed by banks and some financial institutions only. It is not a general public holiday and most workplaces trade as usual.',
+    vic: 'No equivalent.',
+  },
+  {
+    day: 'Easter Sunday',
+    rule: 'Easter weekend',
+    nsw: 'Public holiday.',
+    vic: 'Public holiday.',
+  },
+  {
+    day: 'Easter Saturday',
+    rule: 'The Saturday before Easter Sunday',
+    nsw: 'Public holiday.',
+    vic: 'Public holiday.',
+  },
+  {
+    day: 'Easter Tuesday',
+    rule: 'The Tuesday after Easter Monday',
+    nsw: 'Not a public holiday.',
+    vic: 'Not a gazetted public holiday either. Some Victorian workplaces still take it under older award and agreement terms, which is where the argument usually starts.',
+  },
+];
+
+const HOLIDAY_SOURCES = [
+  {
+    label: 'NSW public holidays, nsw.gov.au',
+    href: 'https://www.nsw.gov.au/about-nsw/public-holidays',
+  },
+  {
+    label: 'Victorian public holidays, business.vic.gov.au',
+    href: 'https://business.vic.gov.au/business-information/public-holidays',
+  },
+];
+
+/** Where a live tool's answer really comes from. One line, named, linked. */
+const SOURCES: Record<string, { label: string; href: string; line: string }> = {
+  'abn-lookup': {
+    label: 'ABN Lookup, Australian Business Register',
+    href: 'https://abr.business.gov.au/',
+    line: 'The Australian Business Register is the authority on whether an ABN is active and whether the business is registered for GST. If it disagrees with anything shown here, it is right and we are stale.',
+  },
+  'business-name-check': {
+    label: 'ASIC',
+    href: 'https://asic.gov.au/',
+    line: 'ASIC holds the business names register and decides what can be registered. A name that looks free here can still be knocked back there, and only ASIC settles it.',
+  },
+  'what-should-this-cost': {
+    label: 'our editorial policy',
+    href: url.editorialPolicy(),
+    line: 'These figures come from quotes and rates published on LocalKnows listings, not from an industry body or a survey. The method, the sample size and the review cycle are set out in the editorial policy.',
+  },
+  'quote-comparison': {
+    label: 'how we verify',
+    href: url.about(),
+    line: 'A brief sent through this tool goes to businesses listed on LocalKnows. We do not price the job, we do not take a cut of it, and we do not rank the replies.',
+  },
+};
+
+const fallbackSource = {
+  label: 'our editorial policy',
+  href: url.editorialPolicy(),
+  line: 'Everything this tool shows is worked out from data published on LocalKnows. Where a government body is the authority on the question, its register beats anything on this page.',
+};
+
+const source = SOURCES[t.slug] ?? fallbackSource;
+const sourceIsExternal = /^https?:\/\//.test(source.href);
+const showGenericSource = isLive && t.slug !== 'licence-check' && t.slug !== 'public-holidays';
+
+const nodes: unknown[] = [
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: t.title,
+    description: t.description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+];
+
+// A planned tool is not an application. Marking one up as WebApplication would
+// be claiming software that does not exist.
+if (t.isApplication && isLive) {
+  nodes.push(
+    toolNode({
+      pageUrl: canonicalPath,
+      name: t.title,
+      description: t.description,
+      live: true,
+    }),
+  );
+}
+if (t.faqs.length) nodes.push(faqNode(t.faqs, canonicalPath));
+
+const jsonLd = graph(nodes);
+---
+
+<Base
+  kind="tool"
+  title={t.title}
+  description={t.description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow mono">Free tool</p>
+      <h1>{t.title}</h1>
+      <p class="standfirst">{t.standfirst}</p>
+      <p class="headmeta">
+        <span class={isLive ? 'tag good' : 'tag warn'}>{isLive ? 'Live' : 'Not built yet'}</span>
+        <span>No signup</span>
+        <span>Page checked {BUILD_DATE}</span>
+      </p>
+    </div>
+  </div>
+
+  <section class="sec-tight">
+    <div class="wrap-narrow">
+      {!isLive && (
+        <div class="notice" style="border-left-color:var(--clay)">
+          <p style="margin:0 0 10px">
+            <strong>This tool is not built yet.</strong> Nothing on this page checks,
+            calculates or looks anything up. There is no form, because there is nothing
+            behind it. The page exists so the plan is public and so people can tell us
+            whether it is worth building.
+          </p>
+          <p style="margin:0 0 10px">
+            <strong>What it will do once it exists:</strong> {t.description}
+          </p>
+          <p style="margin:0">
+            Until then, see <a href={url.tools()}>the tools that already work</a>, or tell
+            us what you need this one to do on the <a href={url.contact()}>contact page</a>.
+          </p>
+        </div>
+      )}
+
+      {isLive && t.slug === 'licence-check' && (
+        <>
+          <form class="panel" id="lk-lic">
+            <div class="panel-head">
+              <h2>Open the right register</h2>
+              <span class="mono">Two states, two bodies</span>
+            </div>
+            <div class="panel-body">
+              <fieldset style="border:0;padding:0;margin:0;min-width:0">
+                <legend class="mono" style="color:var(--ink-40);padding:0;margin-bottom:10px">
+                  Where was the licence issued
+                </legend>
+                <div class="filters">
+                  {REGISTERS.map((r, i) => (
+                    <label style="display:inline-flex;align-items:center;gap:8px;font-size:15px">
+                      <input
+                        type="radio"
+                        name="lk-state"
+                        value={r.code}
+                        checked={i === 0}
+                        style="accent-color:var(--river);width:17px;height:17px"
+                      />
+                      {r.label}
+                      <span class="mono" style="color:var(--ink-40)">{r.code}</span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+
+              <div class="search" style="margin-top:0">
+                <div class="field">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h5M7 14h9"/></svg>
+                  <label class="visually-hidden" for="lk-num">Licence number</label>
+                  <input
+                    id="lk-num"
+                    name="number"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder="Licence number, as printed on the card"
+                  />
+                </div>
+                <button class="btn" type="submit">Open the register</button>
+              </div>
+
+              <p class="notice" id="lk-lic-note" aria-live="polite">
+                Pick a state, put the number in, and we open that state's official register
+                in a new tab. Nothing is checked here and nothing ever will be. The register
+                is the only place a licence is real.
+              </p>
+
+              <p style="font-size:14px;color:var(--ink-60);margin:0">
+                Straight there instead:
+                {REGISTERS.map((r, i) => (
+                  <>
+                    {i > 0 && <span> and </span>}
+                    <a href={r.href} target="_blank" rel="nofollow noopener" style="color:var(--river)">{r.register}</a>
+                  </>
+                ))}. Electrical work in Victoria is licensed by <a href="https://www.energysafe.vic.gov.au/" target="_blank" rel="nofollow noopener" style="color:var(--river)">Energy Safe Victoria</a>, not the
+                Victorian Building Authority, so an electrician's number will not show up on
+                the building register.
+              </p>
+            </div>
+          </form>
+
+          <div class="notice river">
+            <strong>LocalKnows is not affiliated with NSW Fair Trading, the Victorian
+            Building Authority or Energy Safe Victoria.</strong> We do not hold their data,
+            we do not mirror it, and we cannot confirm a licence on their behalf. If a
+            register says something different to a listing on this site, the register is
+            right. Tell us and we will fix the listing.
+          </div>
+
+          <script is:inline>
+            (function () {
+              var form = document.getElementById('lk-lic');
+              if (!form) return;
+              var note = document.getElementById('lk-lic-note');
+              var input = document.getElementById('lk-num');
+              var REG = {
+                NSW: {
+                  name: 'the NSW Fair Trading licence check',
+                  url: 'https://verify.licence.nsw.gov.au/'
+                },
+                VIC: {
+                  name: 'the Victorian Building Authority register',
+                  url: 'https://www.vba.vic.gov.au/'
+                }
+              };
+
+              form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var picked = form.querySelector('input[name="lk-state"]:checked');
+                var code = picked && picked.value === 'VIC' ? 'VIC' : 'NSW';
+                var reg = REG[code];
+                var num = (input && input.value ? input.value : '').trim();
+
+                window.open(reg.url, '_blank', 'noopener,noreferrer');
+
+                var msg = 'Opened ' + reg.name + ' in a new tab. ';
+                msg += num
+                  ? 'Paste ' + num + ' into its search box. Nothing was checked here.'
+                  : 'Type the licence number into its search box. Nothing was checked here.';
+                note.textContent = msg;
+
+                if (num && navigator.clipboard && navigator.clipboard.writeText) {
+                  navigator.clipboard.writeText(num).then(
+                    function () { note.textContent = msg + ' The number is on your clipboard.'; },
+                    function () {}
+                  );
+                }
+              });
+            })();
+          </script>
+        </>
+      )}
+
+      {isLive && t.slug === 'public-holidays' && (
+        <>
+          <div class="prose" style="max-width:none">
+            <h2 id="what-differs">What actually differs</h2>
+            <p>
+              Most of the calendar is the same on both sides of the Murray. New Year's Day,
+              Australia Day, Good Friday, Easter Monday, Anzac Day, the King's Birthday,
+              Christmas Day and Boxing Day are public holidays in New South Wales and in
+              Victoria. Below is only the part where the two states part company.
+            </p>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">When it falls</th>
+                    <th scope="col">New South Wales</th>
+                    <th scope="col">Victoria</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {HOLIDAY_ROWS.map((r) => (
+                    <tr>
+                      <th scope="row">{r.day}</th>
+                      <td>{r.rule}</td>
+                      <td>{r.nsw}</td>
+                      <td>{r.vic}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="notice">
+            <p style="margin:0 0 10px">
+              <strong>Exact dates are gazetted annually by each state, so this page does not
+              list them.</strong> Substitute day rules for a holiday that lands on a weekend
+              are set the same way, and the AFL Grand Final Friday date is not known until
+              the fixture is. Before you roster anyone, quote a penalty rate or promise a
+              same day call out, read the official list:
+            </p>
+            <p style="margin:0">
+              {HOLIDAY_SOURCES.map((s, i) => (
+                <>
+                  {i > 0 && <span> &middot; </span>}
+                  <a href={s.href} target="_blank" rel="nofollow noopener">{s.label}</a>
+                </>
+              ))}
+            </p>
+          </div>
+
+          <div class="notice river">
+            A trade that lives in Albury and works in Wodonga gets caught by this twice a
+            year. The first Tuesday in November is an ordinary Tuesday at home and a public
+            holiday across the bridge. Penalty rates follow where the work is done, not where
+            the business is registered, so check the site address before you quote.
+          </div>
+        </>
+      )}
+
+      {showGenericSource && (
+        <div class="notice">
+          <strong>Where this comes from.</strong> {source.line}{' '}
+          {sourceIsExternal ? (
+            <a href={source.href} target="_blank" rel="nofollow noopener">{source.label}</a>
+          ) : (
+            <a href={source.href}>{source.label}</a>
+          )}.
+        </div>
+      )}
+
+      <div class="prose" set:html={rendered.html} />
+
+      <Faq faqs={t.faqs} />
+
+      <p style="margin-top:30px">
+        <a class="btn btn-ghost btn-sm" href={url.tools()}>All free tools</a>
+      </p>
+    </div>
+  </section>
+</Base>

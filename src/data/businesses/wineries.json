@@ -1,0 +1,1141 @@
+[
+  {
+    "name": "All Saints Estate",
+    "slug": "all-saints-estate",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Wahgunyah",
+    "state": "VIC",
+    "addressLine": "205 All Saints Road",
+    "suburb": "Wahgunyah",
+    "postcode": "3687",
+    "phone": "1800 021 621",
+    "website": "https://www.allsaintswine.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=All%20Saints%20Estate%20Wahgunyah%20VIC",
+    "facebook": "https://www.facebook.com/AllSaintsEstate",
+    "instagram": "https://www.instagram.com/allsaintsestate/",
+    "description": "All Saints Estate is one of Australia's original wineries, established in 1864 on the Murray near Wahgunyah. The cellar door is open seven days for wine tasting and sales, and the estate runs two dining venues: KIN for destination dining Thursday to Sunday for lunch, and Bonnie serving casual pizza for sharing Wednesday to Sunday for lunch. Winery tours, cycling and accommodation at Mount Ophir Estate are also offered.",
+    "highlights": [
+      "Established 1864",
+      "Cellar door open seven days, 10am to 5pm",
+      "KIN restaurant, lunch Thursday to Sunday",
+      "Bonnie pizza, lunch Wednesday to Sunday",
+      "Winery tours available",
+      "Accommodation at Mount Ophir Estate"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "tours": "yes",
+      "meals": "yes",
+      "accommodation": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.allsaintswine.com.au/",
+      "https://www.alburywodongaaustralia.com.au/wineries-breweries/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pfeiffer Wines",
+    "slug": "pfeiffer-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Wahgunyah",
+    "state": "VIC",
+    "addressLine": "167 Distillery Road",
+    "suburb": "Wahgunyah",
+    "postcode": "3687",
+    "phone": "02 6033 2805",
+    "website": "https://pfeifferwinesrutherglen.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pfeiffer%20Wines%20Wahgunyah%20VIC",
+    "facebook": "https://www.facebook.com/pfeiffer.wines/",
+    "instagram": "https://www.instagram.com/pfeifferwines/",
+    "description": "Family owned Rutherglen winery on Distillery Road at Wahgunyah, about 45km from Albury. The cellar door offers wine tastings with reserved seating available by booking, picnics and platters, and a wine shop stocking the full range. It is open every day and on public holidays except Christmas Day, Boxing Day, Good Friday and Anzac Day morning.",
+    "highlights": [
+      "Cellar door open seven days",
+      "Reserved seated tastings can be booked",
+      "Picnics and platters available",
+      "About 45km from Albury"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://pfeifferwinesrutherglen.com.au/",
+      "https://www.explorerutherglen.com.au/wine/wineries-cellar-doors/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Cofield Wines",
+    "slug": "cofield-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Wahgunyah",
+    "state": "VIC",
+    "addressLine": "341 Distillery Road",
+    "suburb": "Wahgunyah",
+    "postcode": "3687",
+    "phone": "02 6033 3798",
+    "website": "https://www.cofieldwines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cofield%20Wines%20Wahgunyah%20VIC",
+    "facebook": "https://www.facebook.com/cofieldwines",
+    "instagram": "https://www.instagram.com/cofieldwines/",
+    "description": "Cofield Wines runs a cellar door for tastings and wine sales on Distillery Road at Wahgunyah, with the on site cafe Quartz Cuisine open daily from 9am to 4pm using local produce and producers from the Rutherglen region. The grounds have plenty of shade, tables and chairs, a rotunda, a giant chess set and lawn games. Closed Christmas Day, Boxing Day and Good Friday.",
+    "highlights": [
+      "Cellar door tastings and wine sales",
+      "Quartz Cuisine cafe on site, 9am to 4pm daily",
+      "Giant chess set and lawn games",
+      "Shaded grounds with a rotunda"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "meals": "yes",
+      "kid_friendly": "yes",
+      "outdoor_seating": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.cofieldwines.com.au/",
+      "https://www.explorerutherglen.com.au/wine/wineries-cellar-doors/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "St Leonards Vineyard",
+    "slug": "st-leonards-vineyard",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Wahgunyah",
+    "state": "VIC",
+    "addressLine": "201 St Leonards Road",
+    "suburb": "Wahgunyah",
+    "postcode": "3687",
+    "phone": "1800 021 621",
+    "website": "https://www.stleonardswine.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=St%20Leonards%20Vineyard%20Wahgunyah%20VIC",
+    "description": "St Leonards Vineyard sits on the banks of the Murray at Wahgunyah, making handcrafted wines with a focus on sustainable viticulture. The cellar door opens every Saturday and Sunday from 11am to 4pm. The St Leonards Vineyard Kitchen runs on the first Saturday of every month with the kitchen open 12pm to 3pm and live music.",
+    "highlights": [
+      "Cellar door open Saturday and Sunday, 11am to 4pm",
+      "Vineyard Kitchen first Saturday of each month",
+      "Live music on the first Saturday of the month",
+      "Historic winery on the Murray River"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "live_music": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.stleonardswine.com.au/st-leonards/contact-us",
+      "https://www.stleonardswine.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Campbells Wines of Rutherglen",
+    "slug": "campbells-wines-of-rutherglen",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "4603 Murray Valley Highway",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6033 6000",
+    "website": "https://www.campbellswines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Campbells%20Wines%20of%20Rutherglen%20Rutherglen%20VIC",
+    "facebook": "https://www.facebook.com/campbellswines",
+    "instagram": "https://www.instagram.com/campbellswines/",
+    "description": "Five generations of the Campbell family have made wine at this Murray Valley Highway property west of Rutherglen. Tastings are held in the heart of the cellars among the giant casks holding their muscats and topaques, with access to rare back vintage releases. Signature wines include Bobbie Burns Shiraz and The Barkly Durif, and vineyard platters are available all day every day. Bookings are preferred for groups of 10 or more.",
+    "highlights": [
+      "Five generations of family winemaking",
+      "Tastings among the cask cellars",
+      "Bobbie Burns Shiraz and The Barkly Durif",
+      "Vineyard platters available daily",
+      "Group bookings preferred for 10 or more"
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.campbellswines.com.au/",
+      "https://www.explorerutherglen.com.au/listing/campbells-wines-of-rutherglen-rutherglen/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Morris of Rutherglen",
+    "slug": "morris-of-rutherglen",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "154 Mia Mia Road",
+    "suburb": "Browns Plains",
+    "postcode": "3685",
+    "phone": "02 6026 7303",
+    "website": "https://morrisofrutherglen.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Morris%20of%20Rutherglen%20Browns%20Plains%20VIC",
+    "description": "Morris of Rutherglen has a refurbished cellar door on Mia Mia Road at Browns Plains, just out of Rutherglen. Visitors can sample the award winning fortified wines and the Australian single malt whisky expressions those wines have influenced, all under one roof. Interactive tours are available and booked separately through the website. Open 10am to 4pm weekdays and weekends, closed Good Friday, Anzac Day, Christmas Day, Boxing Day and New Year's Day.",
+    "highlights": [
+      "Fortified wine and single malt whisky tastings together",
+      "Refurbished cellar door",
+      "Interactive tours bookable online",
+      "Open 10am to 4pm seven days"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "tours": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://morrisofrutherglen.com/pages/visitor-information",
+      "https://morrisofrutherglen.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Chambers Rosewood Vineyards",
+    "slug": "chambers-rosewood-vineyards",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "178 Barkly Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "0493 528 809",
+    "website": "https://www.chambersrosewood.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chambers%20Rosewood%20Vineyards%20Rutherglen%20VIC",
+    "instagram": "https://www.instagram.com/chambersrosewoodvineyards/",
+    "description": "A family run Rutherglen winery on Barkly Street where the cellar door sits among vines more than 120 years old and the wine is made on site. Seated tastings run between 10am and 4pm, with sales from 9am to 5pm Monday to Saturday. The range covers fortified Muscat, Shiraz and the white variety Gouais. Closed Sundays unless arranged by appointment.",
+    "highlights": [
+      "Cellar door among 120 year old vines",
+      "Seated tastings 10am to 4pm",
+      "Fortified Muscat, Shiraz and Gouais",
+      "Sunday visits by prior appointment"
+    ],
+    "hours": [
+      { "day": 1, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.chambersrosewood.com.au/contact-us",
+      "https://www.chambersrosewood.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Stanton & Killeen Wines",
+    "slug": "stanton-and-killeen-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "440 Jacks Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 9457",
+    "website": "https://www.stantonandkilleen.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Stanton%20%26%20Killeen%20Wines%20Rutherglen%20VIC",
+    "facebook": "https://www.facebook.com/stantonandkilleenwines",
+    "instagram": "https://www.instagram.com/stantonkilleen",
+    "description": "Stanton & Killeen is a long standing Rutherglen family wine business on Jacks Road, about 45 minutes from Albury airport. The cellar door does seated tastings and sales with a $10 tasting fee that is refunded on purchase, and groups of eight or more are asked to call ahead. Open 10am to 4pm every day, closed Christmas Day.",
+    "highlights": [
+      "Seated tastings and cellar door sales",
+      "$10 tasting fee refunded on purchase",
+      "Open 10am to 4pm every day",
+      "Groups of 8 or more should book",
+      "About 45 minutes from Albury airport"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.stantonandkilleen.com.au/pages/contact",
+      "https://www.stantonandkilleen.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Scion Wine",
+    "slug": "scion-wine",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "74 Slaughterhouse Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "0418 434 974",
+    "website": "https://www.scionwine.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Scion%20Wine%20Rutherglen%20VIC",
+    "facebook": "https://www.facebook.com/scionwine",
+    "instagram": "https://www.instagram.com/scionwine/",
+    "description": "A small cellar door on Slaughterhouse Road, about 2km south of the Rutherglen township. Personalised tastings cost $15 per person and run about 45 minutes, with a maximum group size of eight; walk ins are welcome alongside bookings. Grazing platters can be pre-ordered or you can bring your own picnic, well behaved dogs on a lead are welcome, and there is a Tesla charging station plus bike racks and a pump.",
+    "highlights": [
+      "Personalised tastings, $15 per person",
+      "Walk ins welcome, maximum group of 8",
+      "Grazing platters by pre-order or BYO picnic",
+      "Dogs on a lead welcome",
+      "Tesla charger, bike racks and pump"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "dog_friendly": "yes",
+      "ev_charging": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.scionwine.com.au/pages/cellar-door",
+      "https://www.explorerutherglen.com.au/listing/scion-rutherglen/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Buller Wines",
+    "slug": "buller-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "2804 Federation Way",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 9660",
+    "website": "https://www.bullerwines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Buller%20Wines%20Rutherglen%20VIC",
+    "description": "Buller Wines runs both a cellar door and the Three Chain Road Distillery Door on Federation Way, open seven days 10am to 5pm. Wine tastings cover King Valley Prosecco, Rutherglen Durif and the Muscats, with a Muscat Mile fortified flight at $15 per person and a Barrel Perfection guided winery tour with barrel tasting at $35 per person by reservation. The distillery door runs a $25 gin tasting, and build your own cheese platters are available daily. The Pavilion Restaurant operates on site on 02 6032 8820 with bookings essential.",
+    "highlights": [
+      "Cellar door and distillery door open 7 days, 10am to 5pm",
+      "Muscat Mile fortified flight, $15 per person",
+      "Barrel Perfection winery tour, $35 per person",
+      "Gin tasting at the Three Chain Road Distillery Door",
+      "Build your own cheese platters",
+      "The Pavilion Restaurant on site, bookings essential"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "tours": "yes",
+      "meals": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.bullerwines.com.au/pages/visit-us",
+      "https://www.bullerwines.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Jones Winery & Vineyard",
+    "slug": "jones-winery-and-vineyard",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "61 Jones Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 8496",
+    "website": "https://joneswinery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jones%20Winery%20%26%20Vineyard%20Rutherglen%20VIC",
+    "facebook": "https://www.facebook.com/joneswinery",
+    "instagram": "https://www.instagram.com/joneswinery",
+    "description": "Jones Winery & Vineyard tastes in a heritage listed sales area built from handmade bricks with its original bark lined roof. The estate wines include L.J. old vine Shiraz, Fiano, Marsanne, Durif and Malbec, plus fortifieds such as CORRELL and Classic Muscat. The cellar door is open Wednesday to Sunday 11am to 4pm and the restaurant serves French style cafe cuisine for lunch Thursday to Sunday.",
+    "highlights": [
+      "Heritage listed handmade brick cellar door",
+      "L.J. old vine Shiraz, Fiano, Marsanne, Durif and Malbec",
+      "Classic Muscat and CORRELL fortifieds",
+      "Restaurant serving French style cafe cuisine",
+      "Cellar door Wednesday to Sunday, 11am to 4pm"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "meals": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://joneswinery.com.au/visit/",
+      "https://joneswinery.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Anderson Winery",
+    "slug": "anderson-winery",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "1619 Chiltern-Rutherglen Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 8111",
+    "website": "https://www.andersonwinery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Anderson%20Winery%20Rutherglen%20VIC",
+    "description": "Anderson Winery makes estate grown, handcrafted wines on the Chiltern-Rutherglen Road. Wine tastings and sales run Monday to Saturday 10am to 4pm, closed Sundays except most long weekends and closed Good Friday, Christmas Day, Boxing Day and New Year's Day. Bookings are not required but are appreciated for groups, and the museum vault holds back vintages.",
+    "highlights": [
+      "Estate grown and handcrafted wines",
+      "Tastings Monday to Saturday, 10am to 4pm",
+      "Museum vault of back vintages",
+      "Walk ins welcome, groups appreciated to book"
+    ],
+    "hours": [
+      { "day": 1, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes"
+    },
+    "sources": [
+      "https://www.andersonwinery.com.au/visit-us",
+      "https://www.andersonwinery.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Warrabilla Wines",
+    "slug": "warrabilla-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "6152 Murray Valley Highway",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6035 7242",
+    "website": "https://warrabillawines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Warrabilla%20Wines%20Rutherglen%20VIC",
+    "description": "Warrabilla's cellar door sits right on the Murray Valley Highway between Rutherglen and Yarrawonga and is open seven days a week from 10am to 5pm. Tastings cover the full range including Riesling, full bodied reds and aged fortifieds. Standard cellar door tastings are complimentary; group tastings are $10 per head and include a guided tasting with simple accompaniments. Private tastings need 24 hours notice and groups of eight or more must book ahead.",
+    "highlights": [
+      "Open seven days, 10am to 5pm",
+      "Complimentary standard tastings",
+      "Guided group tastings $10 per head",
+      "Riesling, full bodied reds and aged fortifieds",
+      "Private tastings with 24 hours notice"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://warrabillawines.com.au/cellar-door/",
+      "https://www.explorerutherglen.com.au/listing/warrabilla-wines-rutherglen/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Moodemere Estate",
+    "slug": "lake-moodemere-estate",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "12 Moodemere Road",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 9449",
+    "website": "https://www.moodemerewines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake%20Moodemere%20Estate%20Rutherglen%20VIC",
+    "description": "Lake Moodemere Estate is a carbon neutral wine business and certified sustainable vineyard making single vineyard sparkling, white, rose, red and fortified wines from vines that have grown on the site since 1886. There is a heritage listed cellar door, the Lakeside Restaurant, private tastings at the Vigneron's Table and a daily happy hour. The property sits on the Rutherglen Loops Cycle Path with bike parking and rider facilities, and offers accommodation at Moodemere Lake House and waterfront villas.",
+    "highlights": [
+      "North East Victoria's first carbon neutral wine business",
+      "Certified sustainable single vineyard, vines since 1886",
+      "Heritage listed cellar door and Lakeside Restaurant",
+      "On the Rutherglen Loops Cycle Path",
+      "Accommodation on site",
+      "Private tastings at the Vigneron's Table"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "meals": "yes",
+      "accommodation": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.explorerutherglen.com.au/listing/lake-moodemere-estate-and-lakeside-restaurant-rutherglen/",
+      "https://www.moodemerewines.com.au/cellar-door/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "De Bortoli Rutherglen Estate",
+    "slug": "de-bortoli-rutherglen-estate",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "13-35 Drummond Street, Tuileries Complex",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6033 6100",
+    "website": "https://www.debortoli.com.au/visit-us/cellar-doors/rutherglen",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=De%20Bortoli%20Rutherglen%20Estate%20Rutherglen%20VIC",
+    "description": "The De Bortoli cellar door sits in the Tuileries Complex on Drummond Street in a building originally constructed as cellars by Seppelt's Wines in 1886. The cellar door focuses on Italian and Mediterranean varietals alongside regional standouts, with tasting options bookable online. The complex also holds a restaurant with a la carte dining, an outdoor courtyard, accommodation, conference spaces and the Aboriginal Exhibitions Art Gallery.",
+    "highlights": [
+      "Housed in 1886 Seppelt's cellars",
+      "Italian and Mediterranean varietals",
+      "Tastings bookable online",
+      "Restaurant, courtyard and conference spaces",
+      "Aboriginal Exhibitions Art Gallery on site"
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "meals": "yes",
+      "accommodation": "yes",
+      "function_room": "yes",
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://www.explorerutherglen.com.au/listing/de-bortoli-rutherglen-estate-rutherglen/",
+      "https://www.explorerutherglen.com.au/wine/wineries-cellar-doors/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Olive Hills Estate",
+    "slug": "olive-hills-estate",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "3221 Murray Valley Highway",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "0438 561 331",
+    "website": "https://www.olivehills.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Olive%20Hills%20Estate%20Rutherglen%20VIC",
+    "description": "Olive Hills Estate is a boutique winery owned and operated by the Perry family and set in historical 1886 cellars on the Murray Valley Highway. All wines are made on site from estate grown, non irrigated grapes. Tastings are personalised with winemaker Ross Perry and can be paired with regional grazing platters at the original 1886 homestead. The property is open seven days a week and also hosts weddings and private functions.",
+    "highlights": [
+      "Boutique family winery in 1886 cellars",
+      "Estate grown, non irrigated grapes",
+      "Personalised tastings with the winemaker",
+      "Regional grazing platters",
+      "Open seven days a week",
+      "Weddings and private functions"
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.explorerutherglen.com.au/listing/olive-hills-estate-rutherglen/",
+      "https://www.explorerutherglen.com.au/wine/wineries-cellar-doors/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "James & Co. Wines",
+    "slug": "james-and-co-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "136 Main Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "website": "https://www.jamesandcowines.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=James%20%26%20Co.%20Wines%20Rutherglen%20VIC",
+    "description": "A boutique cellar door on Rutherglen's Main Street working with cool climate vineyard fruit. Seated tastings are hosted by winemaker Ricky with bookings preferred, and wine is also sold by the glass or bottle. They serve a Cheese-Your-Own-Adventure platter and have garden seating with misting fans. Open Thursday to Monday, closed Tuesday and Wednesday.",
+    "highlights": [
+      "Boutique cellar door on Main Street",
+      "Seated tastings with the winemaker",
+      "Wine by the glass or bottle",
+      "Cheese-Your-Own-Adventure platters",
+      "Garden seating with misting fans",
+      "Closed Tuesday and Wednesday"
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "bookings": "yes",
+      "outdoor_seating": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.jamesandcowines.com.au/",
+      "https://www.explorerutherglen.com.au/wine/wineries-cellar-doors/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Corowa Distilling Co",
+    "slug": "corowa-distilling-co",
+    "categorySlug": "distilleries",
+    "vertical": "things_to_do",
+    "localityName": "Corowa",
+    "state": "NSW",
+    "addressLine": "20-24 Steel Street",
+    "suburb": "Corowa",
+    "postcode": "2646",
+    "phone": "02 6033 1311",
+    "website": "https://corowadistilling.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Corowa%20Distilling%20Co%20Corowa%20NSW",
+    "facebook": "https://www.facebook.com/corowadistillingco",
+    "instagram": "https://www.instagram.com/corowadistillingco/",
+    "description": "Corowa Distilling Co is a whisky distillery set inside the 1920s Corowa Flour Mill, open seven days from 9am to 4pm. Alongside distillery visits and tastings, the site has a chocolate shop where visitors can watch Belgian chocolate being made from 9am to 4pm daily, plus a cafe and event spaces used for weddings and functions. Freckle making for children runs Saturdays and Sundays 10am to 3pm at $5 per person.",
+    "highlights": [
+      "Whisky distillery in the 1920s Corowa Flour Mill",
+      "Open seven days, 9am to 4pm",
+      "Chocolate shop with Belgian chocolate made on site",
+      "Freckle making for kids on weekends, $5 per person",
+      "Cafe and function/wedding venue",
+      "Coach parking and disabled access"
+    ],
+    "hours": [
+      { "day": 0, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 2, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "tours": "yes",
+      "meals": "yes",
+      "kid_friendly": "yes",
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://corowadistilling.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/corowa/food-and-drink/corowa-whisky-and-chocolate"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Bridge Road Brewers",
+    "slug": "bridge-road-brewers",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "42 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "03 5728 2703",
+    "website": "https://www.bridgeroadbrewers.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge%20Road%20Brewers%20Beechworth%20VIC",
+    "facebook": "https://www.facebook.com/BridgeRoadBrewers",
+    "instagram": "https://www.instagram.com/bridgeroadbrewers/",
+    "description": "Bridge Road Brewers has operated from a 150 year old coach house and stables in the centre of Beechworth since 2005. The taproom pours 20 house brewed beers on tap plus curated local wines, and the kitchen serves pizza. There is a sunny beer garden, a children's play area, complimentary bike hire and daily insider brewery tours. Beers include the Beechworth Pale Ale, Bling IPA, Little Hazy, alcohol free options and a ginger beer.",
+    "highlights": [
+      "20 house brewed beers on tap",
+      "Set in a 150 year old coach house and stables",
+      "Pizza kitchen",
+      "Beer garden and children's play area",
+      "Complimentary bike hire",
+      "Daily insider brewery tours"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 2, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "23:00", "closed": false }
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "tours": "yes",
+      "meals": "yes",
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.bridgeroadbrewers.com.au/",
+      "https://www.explorebeechworth.com.au/listing/bridge-road-brewers-beechworth/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Last St Brewery",
+    "slug": "last-st-brewery",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "29 Last Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "website": "https://lastst.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Last%20St%20Brewery%20Beechworth%20VIC",
+    "description": "Last St Brewery, formerly Billson's, has been operating on its Beechworth site since 1865 and is one of Australia's oldest continuing beverage manufacturers. The shop stocks more than 65 traditional cordials made to old fashioned recipes plus liqueurs and merchandise, with complimentary tastings at standing bars and no booking needed. The restaurant and bar serves a seasonal menu across a family friendly taproom, beer garden, barrel room and speakeasy. Nathan's guided one hour brewery tour, hosted by the owner, covers the original red brick spring water well and is $7.50 for adults.",
+    "highlights": [
+      "Brewing on the site since 1865",
+      "More than 65 traditional cordials in the shop",
+      "Free tastings at the standing bars, no booking needed",
+      "Taproom, beer garden, barrel room and speakeasy",
+      "Guided brewery tour, $7.50 adults",
+      "Shop open 7 days, restaurant and bar Thursday to Monday"
+    ],
+    "hours": [
+      { "day": 0, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "12:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "tours": "yes",
+      "meals": "yes",
+      "beer_garden": "yes",
+      "kid_friendly": "yes",
+      "outdoor_seating": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://lastst.com.au/pages/last-st-brewery",
+      "https://lastst.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Eldorado Road",
+    "slug": "eldorado-road",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "44 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "03 5725 1698",
+    "website": "https://www.eldoradoroad.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Eldorado%20Road%20Beechworth%20VIC",
+    "description": "Eldorado Road's cellar door and cantina sits in the heart of historic Beechworth on Ford Street. Alongside tastings of the handcrafted range you can drink wine or craft beer in the courtyard bar, and the kitchen runs a small menu built on artisan local and international ingredients chosen to match the wines. The cellar door has won the Gourmet Traveller Star Cellar Door award. Reservations are recommended.",
+    "highlights": [
+      "Cellar door and cantina in central Beechworth",
+      "Courtyard bar serving wine and craft beer",
+      "Small food menu matched to the wines",
+      "Gourmet Traveller Star Cellar Door award winner",
+      "Open daily 27 December to 19 January",
+      "Reservations recommended"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "13:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "18:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "meals": "yes",
+      "outdoor_seating": "yes",
+      "bookings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.eldoradoroad.com.au/cellar-door-food",
+      "https://www.explorebeechworth.com.au/beechworth-wine-cellar-doors/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pennyweight Winery",
+    "slug": "pennyweight-winery",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "13 Pennyweight Lane",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "03 5728 1747",
+    "website": "https://www.pennyweight.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pennyweight%20Winery%20Beechworth%20VIC",
+    "description": "Pennyweight is a certified organic and biodynamic vineyard on Pennyweight Lane at Beechworth, run by the same family for four decades. The cellar door is open daily 10am to 5pm for tastings and sales of white and red table wines, fortified wines and Spanish style aperas. Closed Christmas Day, Boxing Day and Good Friday.",
+    "highlights": [
+      "Certified organic and biodynamic vineyard",
+      "Open daily 10am to 5pm",
+      "Table wines, fortifieds and Spanish style aperas",
+      "Four decades of family winemaking"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "17:00", "closed": false }
+    ],
+    "attributes": {
+      "cellar_door": "yes",
+      "tastings": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.pennyweight.com.au/",
+      "https://www.explorebeechworth.com.au/beechworth-wine-cellar-doors/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Backwoods Distilling Co",
+    "slug": "backwoods-distilling-co",
+    "categorySlug": "distilleries",
+    "vertical": "things_to_do",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "6 Turntable Lane",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "website": "https://www.backwoodsdistilling.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Backwoods%20Distilling%20Co%20Yackandandah%20VIC",
+    "facebook": "https://www.facebook.com/backwoodsdistillingco/",
+    "instagram": "https://www.instagram.com/backwoodsdistillingco/",
+    "description": "Backwoods Distilling Co has made small batch whisky and gin at Yackandandah since 2017, using Australian grown grains and native botanicals. The distillery door on Turntable Lane opens Wednesday to Sunday 11am to 4pm for guided whisky and gin tastings and paddle flights, seasonal cocktails, and a retail shop with the full range, limited releases and gift packs. There is a Whisky Hand Fill Experience where you bottle straight from the barrel, DIY platter boards, dog friendly indoor and outdoor areas, and bike racks with free water refills. Walk ins welcome, groups of six or more should book.",
+    "highlights": [
+      "Distilling rye and single malt whisky and gin since 2017",
+      "Distillery door Wednesday to Sunday, 11am to 4pm",
+      "Guided tastings and paddle flights beside the copper stills",
+      "Whisky Hand Fill Experience straight from the barrel",
+      "Dog friendly indoor and outdoor areas",
+      "Bike racks, pumps and free water refills"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "dog_friendly": "yes",
+      "kid_friendly": "yes",
+      "bookings": "yes",
+      "outdoor_seating": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.backwoodsdistilling.com.au/pages/visit-us",
+      "https://www.backwoodsdistilling.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Yack Creek Distillery",
+    "slug": "yack-creek-distillery",
+    "categorySlug": "distilleries",
+    "vertical": "things_to_do",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "231 Bells Flat Road",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "phone": "0409 406 996",
+    "website": "https://www.yackcreekdistillery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yack%20Creek%20Distillery%20Yackandandah%20VIC",
+    "facebook": "https://www.facebook.com/yackcreekdistillery/",
+    "instagram": "https://www.instagram.com/yackcreekdistillery/",
+    "description": "Yack Creek Distillery is on Bells Flat Road just out of Yackandandah, with spirits distilled, bottled and labelled by hand. The range covers single malt whisky in bourbon and red wine cask finishes, blackstrap, gold and spiced rums, wild mint and truffleberry gins, and vodka. Beer and food are also served on site and there is a retail shop. The distillery can be reached on a 40 minute walk from the Yackandandah Sports Park along the creek path.",
+    "highlights": [
+      "Spirits distilled, bottled and labelled by hand",
+      "Single malt whisky in bourbon and red wine casks",
+      "Blackstrap, gold and spiced rums",
+      "Wild mint and truffleberry gins",
+      "Beer and food served on site",
+      "40 minute creek path walk from Yackandandah Sports Park"
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "meals": "yes"
+    },
+    "sources": [
+      "https://www.yackcreekdistillery.com.au/",
+      "https://www.yackcreekdistillery.com.au/pages/find-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murray Towns Brewing Co",
+    "slug": "murray-towns-brewing-co",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "64 Lincoln Causeway, Gateway Island",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "0481 720 577",
+    "website": "https://murraytowns.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray%20Towns%20Brewing%20Co%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/twotownsbrewing",
+    "instagram": "https://www.instagram.com/murraytowns_brewing_co/",
+    "description": "Murray Towns Brewing Co is a craft brewery and taproom on Gateway Island, on the Lincoln Causeway between Albury and Wodonga. Beers are brewed on site and the taproom also pours local wines and spirits, with a share style food menu available during opening hours. The taproom opens Thursday through Sunday.",
+    "highlights": [
+      "Craft brewery and taproom on Gateway Island",
+      "Beers brewed on site",
+      "Local wines and spirits also poured",
+      "Share style food menu",
+      "Open Thursday to Sunday"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "licensed": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://murraytowns.au/about-us/",
+      "https://www.alburywodongaaustralia.com.au/17503/murray-towns-brewing-co/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury Brewhouse",
+    "slug": "albury-brewhouse",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "618 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6057 2300",
+    "website": "https://www.alburybrewhouse.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury%20Brewhouse%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/AlburyBrewhouse/",
+    "description": "Albury Brewhouse brews craft beers onsite at 618 Dean Street and serves a modern menu of share plates, mains and desserts, with lunch from 12pm to 2:30pm and dinner from 5:30pm to 9pm. The bar also carries premium wines, spirits and signature cocktails. Live acoustic music is programmed and there are two dedicated spaces for private events. Open Wednesday to Sunday.",
+    "highlights": [
+      "Craft beers brewed onsite",
+      "Lunch 12pm to 2:30pm, dinner 5:30pm to 9pm",
+      "Share plates, mains and desserts",
+      "Live acoustic music",
+      "Two private event spaces",
+      "Open Wednesday to Sunday"
+    ],
+    "hours": [
+      { "day": 0, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "12:00", "closes": "22:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "22:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "licensed": "yes",
+      "live_music": "yes",
+      "function_room": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.alburybrewhouse.com.au/",
+      "https://www.visitalburywodonga.com/operator/albury-brewhouse/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Thirsty Devil Brewery",
+    "slug": "the-thirsty-devil-brewery",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "289 Townsend Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "02 6021 1112",
+    "website": "https://www.thethirstydevil.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Thirsty%20Devil%20Brewery%20South%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/TheThirstyDevilBrewery",
+    "instagram": "https://www.instagram.com/the_thirsty_devil_brewery/",
+    "description": "The Thirsty Devil brews its beers on site in South Albury's industrial area and runs a 14 tap lineup covering pale ale, IPA, red ale, mid strength, porter and ginger beer. The bar also pours in house spirits and vodka RTDs, local wines, ciders, cocktails and non alcoholic drinks. Food comes from an indoor food van serving pizzas, burgers, chicken wings and sides. There are two outdoor beer gardens which are dog friendly, live music in the warmer months, and a function room for up to 100 people.",
+    "highlights": [
+      "Beers brewed on site, 14 taps",
+      "House made vodka RTDs and in house spirits",
+      "Indoor food van serving pizzas, burgers and wings",
+      "Two dog friendly outdoor beer gardens",
+      "Live music in the warmer months",
+      "Function room for up to 100 people"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "dog_friendly": "yes",
+      "live_music": "yes",
+      "function_room": "yes",
+      "meals": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.thethirstydevil.com.au/",
+      "https://www.visitalburywodonga.com/operator/the-thirsty-devil-brewery/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

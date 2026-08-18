@@ -1,0 +1,149 @@
+---
+/**
+ * /wire/ — the index.
+ *
+ * The wire is what stops the domain reading as a scraper farm, so this page is
+ * a reverse chronological list and nothing else. No tags, no filters, no
+ * pagination until there is enough published to need it.
+ */
+import { url, wire, STATES } from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, shortDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.wire();
+/** The feed is a file, not a page, so it keeps its extension and no trailing slash. */
+const feedPath = url.wire() + 'rss.xml';
+
+const articles = wire.slice().sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+const latest = articles[0]?.publishedAt ?? BUILD_DATE;
+
+const h1 = 'The wire';
+const description =
+  'Original local business writing from the desk, weekly. ' +
+  n(articles.length) +
+  ' pieces on grants, rates, licences and who is opening or closing across the NSW and Victorian border.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: h1, href: canonicalPath },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: latest.slice(0, 10),
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Articles on the wire',
+    items: articles.map((w) => ({ url: url.wireArticle(w), name: w.title })),
+  }),
+]);
+---
+
+<Base
+  kind="static"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={latest.slice(0, 10)}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Reporting &middot; NSW &amp; Victoria</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Original local business writing from the desk, weekly. Grants, rate rises, licence
+        changes and who is opening or closing, written for people who run something on the
+        border.
+      </p>
+      <div class="headmeta">
+        <span>{n(articles.length)} {articles.length === 1 ? 'piece' : 'pieces'}</span>
+        {articles.length > 0 && <span>&middot; Latest {shortDate(latest)}</span>}
+        <span>&middot; <a href={feedPath} style="color:var(--river)">RSS feed</a></span>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec-tight">
+    <div class="wrap-narrow">
+      {articles.length === 0 ? (
+        <div class="empty">
+          <p>Nothing on the wire yet. The first piece goes up when there is something worth reporting.</p>
+          <a class="btn" href={url.contact()}>Send us a tip</a>
+        </div>
+      ) : (
+        <ul class="stack">
+          {articles.map((w) => (
+            <li>
+              <a href={url.wireArticle(w)}>
+                <time datetime={w.publishedAt}>{shortDate(w.publishedAt)}</time>
+                <h3>{w.title}</h3>
+                <p>{w.description}</p>
+                <p class="mono" style="color:var(--ink-40)">
+                  {w.author} &middot; {w.state === 'both' ? 'NSW and Victoria' : STATES[w.state].name}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <p style="margin-top:26px">
+        <a class="btn btn-ghost btn-sm" href={feedPath}>Subscribe by RSS</a>
+      </p>
+    </div>
+  </section>
+
+  <LinkBlock
+    heading="Read next"
+    groups={[
+      {
+        heading: 'Longer form',
+        links: [
+          { href: url.guides(), label: 'Guides', note: 'reviewed every six months' },
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.tools(), label: 'Free tools' },
+        ],
+      },
+      {
+        heading: 'Around the site',
+        links: [
+          { href: url.events(), label: 'Events across the border' },
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+          { href: url.categoryIndex(), label: 'Every category' },
+        ],
+      },
+      {
+        heading: 'How this works',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.about(), label: 'Who writes this' },
+          { href: url.contact(), label: 'Send a tip' },
+        ],
+      },
+    ]}
+  />
+</Base>

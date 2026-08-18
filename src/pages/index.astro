@@ -1,0 +1,372 @@
+---
+import {
+  url,
+  STATES,
+  listings,
+  localities,
+  categories,
+  guides,
+  wire,
+  tools,
+  events,
+  curatedLists,
+  listingsInLocality,
+  listingsInCategory,
+  localitiesInState,
+  activeCategoriesInLocality,
+  getLocality,
+  liveLocalities,
+} from '~/lib/repo';
+import { VERTICALS, SITE } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, shortDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.home();
+
+// liveLocalities() is the single source of truth for which towns have a page.
+// Computing it a second way here is how the homepage started linking to towns
+// that were never built.
+const liveNsw = liveLocalities()
+  .filter((l) => l.state === 'NSW')
+  .map((l) => ({ locality: l, count: listingsInLocality(l.id).length }))
+  .sort((a, b) => b.count - a.count);
+const liveVic = liveLocalities()
+  .filter((l) => l.state === 'VIC')
+  .map((l) => ({ locality: l, count: listingsInLocality(l.id).length }))
+  .sort((a, b) => b.count - a.count);
+
+const verified = listings.filter((l) => l.status === 'verified').length;
+const crossBorder = listings.filter((l) => {
+  const home = getLocality(l.localityId);
+  if (!home) return false;
+  return l.serviceAreaIds.some((id) => {
+    const a = getLocality(id);
+    return a && a.state !== home.state;
+  });
+}).length;
+
+// The flagship locality. Everything starts here and the homepage should say so.
+const flagship = liveNsw[0]?.locality;
+const flagshipCategories = flagship ? activeCategoriesInLocality(flagship.id).slice(0, 12) : [];
+const featured = listings.slice().sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 6);
+
+const upcoming = events.filter((e) => e.startDate.slice(0, 10) >= BUILD_DATE).slice(0, 4);
+const latestWire = wire.slice(0, 4);
+const liveTools = tools.filter((t) => t.status === 'live').slice(0, 6);
+
+// The two dropdowns in the hero. Both are built from what is actually live, so
+// a category or a town with nothing in it never appears as a dead end choice.
+const homeCategoryOptions = VERTICALS.map((v) => ({
+  vertical: v,
+  items: categories
+    .filter((c) => c.vertical === v.key)
+    .map((c) => ({ category: c, count: listingsInCategory(c.id).length }))
+    .filter((c) => c.count > 0)
+    .sort((a, b) => b.count - a.count || a.category.name.localeCompare(b.category.name)),
+})).filter((g) => g.items.length > 0);
+
+const homeSuburbOptions = (['NSW', 'VIC'] as const).map((code) => ({
+  state: STATES[code],
+  items: (code === 'NSW' ? liveNsw : liveVic)
+    .slice()
+    .sort((a, b) => a.locality.name.localeCompare(b.locality.name)),
+}));
+
+const description =
+  'Find trades, cafes, pubs, places to stay and things to do across New South Wales and Victoria. ' +
+  n(listings.length) +
+  ' listings, service areas that cross the border, and sources on every page.';
+
+const faqs = [
+  {
+    q: 'What makes LocalKnows different from other directories?',
+    a: 'Three things. Service area is stored separately from the registered address, so a business that works on both sides of the Murray appears on both sides of it. Trade licences are checked against the state registers and the date of the check is shown. And every fact on a listing carries the source it was read from.',
+  },
+  {
+    q: 'Does paying money move a business up the list?',
+    a: 'No. Ordering comes from a quality score built on profile completeness, claim status and licence verification. Promoted placement, where it exists, is boxed and labelled and never enters the structured data. The moment ranking is for sale the reason to trust the site is gone.',
+  },
+  {
+    q: 'How much does a listing cost?',
+    a: 'Nothing. Claiming, editing, adding hours and photos and replying to reviews are all free and stay free. Paid features are enquiry routing and multi location management, neither of which affects ordering.',
+  },
+  {
+    q: 'Where does the information come from?',
+    a: 'From businesses’ own websites and published material, from public registers, and from owners who claim their listing. Each page shows the sources and the date they were last read. If something is wrong, there is a correction link on every listing.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  webPageNode({ pageUrl: canonicalPath, title: SITE.name, description, type: 'WebPage', dateModified: BUILD_DATE }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="home"
+  title="Business directory for NSW and Victoria"
+  description={description}
+  canonicalPath={canonicalPath}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow mono">New South Wales &amp; Victoria &middot; independent</p>
+      <h1>The directory that <em>ignores the river</em>.</h1>
+      <p class="sub">
+        Every other directory treats the state line as a wall. A Lavington plumber who
+        works in Wodonga is invisible on half the searches they should own. We store
+        service area separately from address, so they are not.
+      </p>
+
+      <form class="search" action={url.search()} method="get" role="search">
+        <div class="field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="visually-hidden" for="cat">What are you looking for</label>
+          <select id="cat" name="cat">
+            <option value="">What are you looking for?</option>
+            {homeCategoryOptions.map((g) => (
+              <optgroup label={g.vertical.name}>
+                {g.items.map((c) => (
+                  <option value={c.category.slug}>{c.category.name} ({c.count})</option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+        </div>
+        <div class="field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <label class="visually-hidden" for="loc">Suburb or town</label>
+          <select id="loc" name="in">
+            <option value="">Anywhere on the border</option>
+            {homeSuburbOptions.map((g) => (
+              <optgroup label={g.state.name}>
+                {g.items.map((s) => (
+                  <option value={s.locality.slug + '|' + s.locality.state}>
+                    {s.locality.name} {s.locality.state} ({s.count})
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
+        </div>
+        <button class="btn" type="submit">Search</button>
+      </form>
+      <p style="margin:10px 0 0;font-size:13.5px;color:var(--ink-40)">
+        Or <a href={url.search()} style="color:var(--river);border-bottom:1px solid var(--wattle)">search by name</a>
+        if you already know who you are after.
+      </p>
+
+      {flagshipCategories.length > 0 && flagship && (
+        <div class="chips">
+          {flagshipCategories.slice(0, 8).map((c) => (
+            <a class="chip" href={url.localityCategory(flagship, c.category)}>
+              {c.category.name} in {flagship.name}
+            </a>
+          ))}
+        </div>
+      )}
+
+      <div class="statgrid" style="margin-top:34px">
+        <div><b>{n(listings.length)}</b><span>listings</span></div>
+        <div><b>{liveNsw.length + liveVic.length}</b><span>towns live</span></div>
+        <div><b>{n(localities.length)}</b><span>localities mapped</span></div>
+        <div><b>{categories.length}</b><span>categories</span></div>
+        {crossBorder > 0 && <div><b>{crossBorder}</b><span>cross the border</span></div>}
+        {verified > 0 && <div><b>{verified}</b><span>verified</span></div>}
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head row">
+        <div>
+          <h2>Both sides of the Murray</h2>
+          <p>Neighbouring towns are linked across the border on purpose. Albury links to Wodonga, not to another Albury suburb.</p>
+        </div>
+      </div>
+      <div class="river-split">
+        <div>
+          <p class="mono" style="color:var(--river);margin-bottom:12px">{STATES.NSW.name}</p>
+          <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+            {liveNsw.slice(0, 18).map((p) => (
+              <li style="margin-bottom:9px;break-inside:avoid">
+                <a href={url.locality(p.locality)} style="font-size:14.5px;color:var(--ink-60)">
+                  {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top:16px"><a class="btn btn-ghost btn-sm" href={url.state('NSW')}>All of NSW</a></p>
+        </div>
+        <div class="river-line"><span class="mono">Murray</span></div>
+        <div>
+          <p class="mono" style="color:var(--wattle-ink);margin-bottom:12px">{STATES.VIC.name}</p>
+          <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+            {liveVic.slice(0, 18).map((p) => (
+              <li style="margin-bottom:9px;break-inside:avoid">
+                <a href={url.locality(p.locality)} style="font-size:14.5px;color:var(--ink-60)">
+                  {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p style="margin-top:16px"><a class="btn btn-ghost btn-sm" href={url.state('VIC')}>All of Victoria</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Recently checked</h2>
+            <p>Ordered by how complete and how verified a profile is. Never by payment.</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.search()}>Search everything</a>
+        </div>
+        <div class="cards">
+          {featured.map((l) => <ListingCard listing={l} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Browse by what it is</h2>
+        <p>Six verticals, each with its own template, its own filters and its own schema type. A pub and a plumber are not the same kind of thing and should not share a page layout.</p>
+      </div>
+      <div class="cats">
+        {VERTICALS.map((v) => {
+          const count = categories.filter((c) => c.vertical === v.key).length;
+          return (
+            <a class="cat" href={url.categoryIndex()}>
+              <strong>{v.name}</strong>
+              <span class="n mono">{count} categories</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  {liveTools.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Free tools</h2>
+            <p>No signup, no gate. They exist because a tool earns links for years and links are what make the rest of the site rank.</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.tools()}>All tools</a>
+        </div>
+        <div class="tools-grid">
+          {liveTools.map((t) => (
+            <a class="tool" href={url.tool(t)}>
+              <span class="flag mono">Free</span>
+              <h3>{t.title}</h3>
+              <p>{t.standfirst}</p>
+              <span class="go">Open →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {(upcoming.length > 0 || latestWire.length > 0) && (
+    <section class="sec">
+      <div class="wrap">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:44px" class="duo-grid">
+          {upcoming.length > 0 && (
+            <div>
+              <h2 style="font-size:26px;margin-bottom:6px">What is on</h2>
+              <p style="color:var(--ink-60);font-size:14.5px;margin:0 0 18px">
+                Markets, open days and come and try nights. Free to submit.
+              </p>
+              {upcoming.map((e) => (
+                <div class="ev">
+                  <div class="ev-date">
+                    <b>{new Date(e.startDate).getUTCDate()}</b>
+                    <span>{new Date(e.startDate).toLocaleDateString('en-AU', { month: 'short', timeZone: 'UTC' })}</span>
+                  </div>
+                  <div>
+                    <h3><a href={url.event(e)}>{e.title}</a></h3>
+                    <p>{e.description}</p>
+                    <span class="where">{e.venueName}</span>
+                  </div>
+                </div>
+              ))}
+              <p style="margin-top:16px"><a class="btn btn-ghost btn-sm" href={url.events()}>All events</a></p>
+            </div>
+          )}
+          {latestWire.length > 0 && (
+            <div>
+              <h2 style="font-size:26px;margin-bottom:6px">The wire</h2>
+              <p style="color:var(--ink-60);font-size:14.5px;margin:0 0 18px">
+                How things actually work on the border, written by the desk.
+              </p>
+              <ul class="stack">
+                {latestWire.map((w) => (
+                  <li>
+                    <a href={url.wireArticle(w)}>
+                      <time datetime={w.publishedAt}>{shortDate(w.publishedAt)}</time>
+                      <h3>{w.title}</h3>
+                      <p>{w.description}</p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p style="margin-top:16px"><a class="btn btn-ghost btn-sm" href={url.wire()}>All of the wire</a></p>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="How this works" />
+  </div>
+
+  <section class="claim-band">
+    <div class="wrap claim-in">
+      <div>
+        <h2>Your listing is probably already here.</h2>
+        <p>
+          Claim it and you can fix the details, add hours and photos, reply to reviews and
+          see how many people looked you up. It costs nothing and it stays free.
+        </p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-gold" href={url.claim()}>Claim a listing</a>
+        <a class="btn btn-ghost" href={url.about()} style="color:var(--paper);border-color:rgba(239,237,228,.3)">How we verify</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @media (max-width: 900px) {
+      .duo-grid { grid-template-columns: 1fr !important; gap: 44px !important; }
+    }
+  </style>
+</Base>

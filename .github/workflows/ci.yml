@@ -1,0 +1,48 @@
+# Build and verify on every push. The verifier is the gate: a dead internal
+# link, a duplicate canonical or a noindex page in the sitemap fails the job
+# rather than reaching production.
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Validate the data
+        run: node scripts/preflight.mjs
+
+      - name: Build
+        run: npm run build
+        env:
+          SITE_URL: https://localsknow.com.au
+
+      - name: Verify the SEO contract
+        run: npm run verify
+        env:
+          SITE_URL: https://localsknow.com.au
+
+      - name: Summarise
+        if: always()
+        run: |
+          {
+            echo "### Build"
+            echo ""
+            echo "- pages: $(find dist -name index.html | wc -l)"
+            echo "- sitemaps: $(ls dist/sitemap-*.xml 2>/dev/null | wc -l)"
+            echo "- redirects: $(grep -c '301' dist/_redirects || echo 0)"
+          } >> "$GITHUB_STEP_SUMMARY"

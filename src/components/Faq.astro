@@ -1,0 +1,16 @@
+---
+import type { Faq } from '~/lib/types';
+interface Props { faqs: Faq[]; heading?: string; id?: string }
+const { faqs, heading = 'Common questions', id = 'faq' } = Astro.props;
+---
+{faqs.length > 0 && (
+  <section class="faq" aria-labelledby={id + '-h'}>
+    <h2 id={id + '-h'}>{heading}</h2>
+    {faqs.map((f, i) => (
+      <details open={i === 0}>
+        <summary>{f.q}</summary>
+        <div class="answer"><p>{f.a}</p></div>
+      </details>
+    ))}
+  </section>
+)}

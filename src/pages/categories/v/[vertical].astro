@@ -1,0 +1,272 @@
+---
+/**
+ * The vertical hub. /categories/v/trades-and-services/
+ *
+ * One level between the taxonomy index and a category. It exists because six
+ * verticals each carry their own template, their own filters and their own
+ * schema types, and that grouping is worth a page rather than a heading.
+ */
+import type { Listing, Vertical } from '~/lib/types';
+import {
+  url,
+  STATES,
+  categoriesInVertical,
+  listingsInCategory,
+  listingsInLocalityCategory,
+  liveLocalities,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n, plural } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return VERTICALS.map((vertical) => ({
+    params: { vertical: vertical.slug },
+    props: { vertical },
+  }));
+}
+
+const { vertical } = Astro.props as any as {
+  vertical: { key: string; name: string; slug: string; blurb: string };
+};
+
+const canonicalPath = url.vertical(vertical.slug);
+const cats = categoriesInVertical(vertical.key as Vertical);
+
+const catRows = cats
+  .map((category) => ({ category, count: listingsInCategory(category.id).length }))
+  .sort((a, b) => b.count - a.count || a.category.sortOrder - b.category.sortOrder);
+
+// A listing can sit in more than one category inside the same vertical, so the
+// union is deduped before anything is counted or ranked off it.
+const byId = new Map<string, Listing>();
+for (const c of cats) {
+  for (const l of listingsInCategory(c.id)) byId.set(l.id, l);
+}
+const rows = Array.from(byId.values()).sort(
+  (a, b) => b.qualityScore - a.qualityScore || a.name.localeCompare(b.name),
+);
+const strongest = rows.slice(0, 6);
+
+const liveCats = catRows.filter((r) => r.count > 0);
+const verified = rows.filter((l) => l.status === 'verified').length;
+
+const places = liveLocalities().filter((locality) =>
+  cats.some((c) => listingsInLocalityCategory(locality.id, c.id).length > 0),
+);
+const nswTowns = places.filter((l) => l.state === 'NSW').length;
+const vicTowns = places.filter((l) => l.state === 'VIC').length;
+
+const schemaTypes = Array.from(new Set(cats.map((c) => c.schemaType)));
+
+const otherVerticals = VERTICALS.filter((v) => v.slug !== vertical.slug).map((v) => ({
+  slug: v.slug,
+  name: v.name,
+  categoryCount: categoriesInVertical(v.key as Vertical).length,
+}));
+
+const h1 = vertical.name + ' across NSW and Victoria';
+const description =
+  cats.length +
+  ' ' +
+  plural(cats.length, 'category', 'categories') +
+  ' and ' +
+  n(rows.length) +
+  ' ' +
+  plural(rows.length, 'listing', 'listings') +
+  ' in ' +
+  vertical.name.toLowerCase() +
+  ', live in ' +
+  places.length +
+  ' ' +
+  plural(places.length, 'town', 'towns') +
+  ' across New South Wales and Victoria.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Categories', href: url.categoryIndex() },
+  { name: vertical.name, href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'What sits in ' + vertical.name.toLowerCase() + '?',
+    a:
+      cats.length +
+      ' ' +
+      plural(cats.length, 'category', 'categories') +
+      ': ' +
+      cats.map((c) => c.name.toLowerCase()).join(', ') +
+      '. ' +
+      (liveCats.length > 0
+        ? liveCats.length +
+          ' of them already have listings behind them. The rest are defined and waiting on real businesses.'
+        : 'None of them have listings yet. The categories are defined and the pages go live in a town as soon as there is something real to put on them.'),
+  },
+  {
+    q: 'Why does ' + vertical.name.toLowerCase() + ' get its own template?',
+    a:
+      'Because the questions are different. ' +
+      (schemaTypes.length === 1
+        ? 'Everything here is marked up as ' + schemaTypes[0] + ', '
+        : 'The categories here use ' + schemaTypes.join(', ') + ' in the structured data, ') +
+      'and the filters, the facts on a card and the data block underneath a page are all built for that. A generic business template would leave the useful part off every one of these pages.',
+  },
+  {
+    q: 'How do I get a business listed in one of these categories?',
+    a: 'Add it or claim the entry that already exists. It is free and it stays free. Pick the category that matches what you actually sell rather than the one with the most traffic, because the wrong category means the wrong template, the wrong filters and enquiries from people who wanted something else.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: vertical.name,
+    items: cats.map((c) => ({ url: url.category(c), name: c.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="vertical"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={rows.length}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">Vertical &middot; NSW &amp; VIC</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{vertical.blurb}</p>
+      <div class="headmeta">
+        <span>{cats.length} {plural(cats.length, 'category', 'categories')}</span>
+        <span>&middot; {n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
+        <span>&middot; {places.length} {plural(places.length, 'town', 'towns')} live</span>
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="statgrid">
+      <div><b>{cats.length}</b><span>categories</span></div>
+      <div><b>{n(rows.length)}</b><span>listings</span></div>
+      <div><b>{nswTowns}</b><span>towns live in NSW</span></div>
+      <div><b>{vicTowns}</b><span>towns live in VIC</span></div>
+      <div><b>{verified}</b><span>verified</span></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head row">
+        <div>
+          <h2>Categories in {vertical.name.toLowerCase()}</h2>
+          <p>
+            Open one and you get the towns in New South Wales and Victoria where it is
+            actually live, with the count behind each.
+          </p>
+        </div>
+        <a class="btn btn-ghost btn-sm" href={url.categoryIndex()}>Every category</a>
+      </div>
+      {catRows.length > 0 ? (
+        <div class="cats">
+          {catRows.map((r) => (
+            <a class="cat" href={url.category(r.category)}>
+              <strong>{r.category.name}</strong>
+              <span class="n mono">{r.count > 0 ? r.count + ' listed' : 'no listings yet'}</span>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="empty">
+          <p>No categories are defined in this vertical yet.</p>
+          <a class="btn" href={url.contact()}>Suggest one</a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  {strongest.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Strongest profiles</h2>
+            <p>
+              Ordered by quality score, which comes from how complete a profile is, whether
+              it has been claimed, and whether a licence has been checked. Not by payment.
+            </p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.search()}>Search everything</a>
+        </div>
+        <div class="cards">
+          {strongest.map((l) => <ListingCard listing={l} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={'About ' + vertical.name.toLowerCase()} />
+  </div>
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: 'Other verticals',
+        links: otherVerticals.map((v) => ({
+          href: url.vertical(v.slug),
+          label: v.name,
+          note: '(' + v.categoryCount + ')',
+        })),
+      },
+      {
+        heading: 'By state',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name, note: nswTowns + ' towns' },
+          { href: url.state('VIC'), label: STATES.VIC.name, note: vicTowns + ' towns', cross: true },
+        ],
+      },
+      {
+        heading: 'Elsewhere',
+        links: [
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.claim(), label: 'Claim a listing' },
+        ],
+      },
+    ]}
+  />
+</Base>

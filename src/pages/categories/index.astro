@@ -1,0 +1,211 @@
+---
+/**
+ * The taxonomy index. /categories/
+ *
+ * This page is the map of the whole classification, not a map of the content.
+ * A category is listed here the moment it exists in the taxonomy, whether or not
+ * a single business sits in it, because the shape of the directory is a fact
+ * worth publishing on its own. Where a category is actually live is the job of
+ * the category page one level down.
+ */
+import { url, STATES, categories, listings, listingsInCategory } from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n, plural } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.categoryIndex();
+
+const countById = new Map<string, number>(
+  categories.map((c) => [c.id, listingsInCategory(c.id).length]),
+);
+const liveCount = categories.filter((c) => (countById.get(c.id) ?? 0) > 0).length;
+
+const groups = VERTICALS.map((v) => ({
+  vertical: v,
+  items: categories.filter((c) => c.vertical === v.key),
+})).filter((g) => g.items.length > 0);
+
+const h1 = 'Every category on LocalKnows';
+const description =
+  categories.length +
+  ' categories across ' +
+  VERTICALS.length +
+  ' verticals in New South Wales and Victoria. ' +
+  liveCount +
+  ' of them already have listings, and each one shows the towns where it is live.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Categories', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'What is a vertical?',
+    a:
+      'A vertical is the top level of the taxonomy. There are ' +
+      VERTICALS.length +
+      ' of them: ' +
+      VERTICALS.map((v) => v.name.toLowerCase()).join(', ') +
+      '. Categories sit inside one vertical each, and the vertical decides the page template, the filters that make sense and the schema.org type the listings are marked up with.',
+  },
+  {
+    q: 'Why do a pub and a plumber need different templates?',
+    a: 'Because almost nothing useful about them is the same. A plumber has a service area, a licence number you can check against a state register and a call out fee. A pub has a kitchen, opening hours that matter down to the minute, a beer garden and a courtesy bus. Forcing both into one generic business card means neither page answers the question that brought someone to it, and the structured data ends up as LocalBusiness for everything, which tells a search engine nothing.',
+  },
+  {
+    q: 'How do I suggest a category that is missing?',
+    a: 'Send it through the contact form with an example of two or three businesses that would sit in it. A new category gets added when it has a distinct schema type, a distinct set of questions buyers ask, and enough real businesses in the border corridor to fill more than one town. Adding an empty category to look bigger is how directories end up with thousands of pages nobody wants.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Verticals on LocalKnows',
+    items: VERTICALS.map((v) => ({ url: url.vertical(v.slug), name: v.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="categoryIndex"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={listings.length}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">Taxonomy &middot; NSW &amp; VIC</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        {VERTICALS.length} verticals, {categories.length} categories, and an honest count of
+        what is behind each one.
+      </p>
+      <div class="headmeta">
+        <span>{categories.length} categories</span>
+        <span>&middot; {liveCount} with listings</span>
+        <span>&middot; {n(listings.length)} listings</span>
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="statgrid">
+      <div><b>{categories.length}</b><span>categories</span></div>
+      <div><b>{VERTICALS.length}</b><span>verticals</span></div>
+      <div><b>{n(listings.length)}</b><span>listings</span></div>
+      <div><b>{liveCount}</b><span>categories live</span></div>
+    </div>
+
+    <section class="prose" style="margin-top:34px;max-width:var(--measure)">
+      <p>
+        A category exists in the taxonomy before it has a single listing in it. That is
+        deliberate. The classification is decided once, from how people actually search
+        and what schema type the businesses need, and then filled in town by town. So a
+        category on this page with a zero next to it is not a mistake. It is a slot we
+        have defined and not populated yet.
+      </p>
+      <p>
+        Open a category and you get the part that matters: exactly which towns in New
+        South Wales and Victoria it is live in, how many businesses are behind each one,
+        and which of them cross the border to work. {liveCount} of the {categories.length}
+        {' '}{plural(categories.length, 'category', 'categories')} here have reached that
+        point so far.
+      </p>
+    </section>
+  </div>
+
+  {groups.map((g) => (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>{g.vertical.name}</h2>
+            <p>{g.vertical.blurb}</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.vertical(g.vertical.slug)}>
+            All {g.vertical.name.toLowerCase()}
+          </a>
+        </div>
+        <div class="cats">
+          {g.items.map((c) => {
+            const count = countById.get(c.id) ?? 0;
+            return (
+              <a class="cat" href={url.category(c)}>
+                <strong>{c.name}</strong>
+                <span class="n mono">
+                  {count > 0 ? count + ' listed' : 'no listings yet'}
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="How the taxonomy works" />
+  </div>
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: 'By vertical',
+        links: VERTICALS.map((v) => ({
+          href: url.vertical(v.slug),
+          label: v.name,
+          note: '(' + categories.filter((c) => c.vertical === v.key).length + ')',
+        })),
+      },
+      {
+        heading: 'By state',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+      {
+        heading: 'Elsewhere',
+        links: [
+          { href: url.guides(), label: 'Guides' },
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.search(), label: 'Search everything' },
+          { href: url.contact(), label: 'Suggest a category' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

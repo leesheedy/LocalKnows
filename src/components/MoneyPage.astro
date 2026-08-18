@@ -1,0 +1,322 @@
+---
+/**
+ * The locality x category page.
+ *
+ * Rendered by both /nsw/albury/plumbers/ and /nsw/albury/plumbers/page/2/, so
+ * the two routes cannot drift. Everything on this page that reads like a claim
+ * is computed from the listing rows underneath it.
+ */
+import type { Category, CategoryModifier, Locality } from '~/lib/types';
+import type { LocalityCategoryStats } from '~/lib/repo';
+import {
+  url,
+  POLICY,
+  STATES,
+  getRegion,
+  neighboursWithCategory,
+  activeCategoriesInLocality,
+  modifiersForCategory,
+  listingsForModifier,
+  guidesForCategory,
+  listsForLocality,
+} from '~/lib/repo';
+import type { Listing } from '~/lib/types';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import DataBlock from '~/components/DataBlock.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import Pager from '~/components/Pager.astro';
+import {
+  moneyPageTitle,
+  moneyPageDescription,
+  statSummary,
+  otherStateLabel,
+  money,
+  n,
+} from '~/lib/copy';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  listingNode,
+  placeNode,
+  ogForVertical,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  locality: Locality;
+  category: Category;
+  listings: Listing[];
+  stats: LocalityCategoryStats;
+  page: number;
+  totalPages: number;
+  buildDate: string;
+}
+
+const { locality, category, listings, stats, page, totalPages, buildDate } = Astro.props;
+
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const otherState = otherStateLabel(locality.state);
+
+const h1 = moneyPageTitle(locality, category);
+const pageSuffix = page > 1 ? ' — page ' + page : '';
+const canonicalPath = url.localityCategoryPage(locality, category, page);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: category.name, href: url.localityCategory(locality, category) },
+];
+if (page > 1) crumbs.push({ name: 'Page ' + page, href: canonicalPath });
+
+// Long tail modifier pages, but only where the listing count actually supports one.
+const liveModifiers = modifiersForCategory(category.id)
+  .map((m) => ({ m, count: listingsForModifier(locality.id, category.id, m).length }))
+  .filter((x) => x.count >= POLICY.minListingsForModifierPage);
+
+const nearby = neighboursWithCategory(locality, category.id, POLICY.nearbyLinkCount);
+const siblingCategories = activeCategoriesInLocality(locality.id)
+  .filter((c) => c.category.id !== category.id)
+  .slice(0, 10);
+const relatedGuides = guidesForCategory(category.slug).slice(0, 3);
+const localLists = listsForLocality(locality.slug).slice(0, 4);
+
+// FAQs are built from what this page can actually answer, never invented.
+const faqs = [
+  {
+    q: 'How many ' + category.name.toLowerCase() + ' are there in ' + locality.name + '?',
+    a:
+      'We list ' +
+      stats.listingCount +
+      ' ' +
+      category.name.toLowerCase() +
+      ' covering ' +
+      locality.name +
+      ', ' +
+      locality.state +
+      '. ' +
+      (stats.fromOtherLocality > 0
+        ? stats.fromOtherLocality +
+          ' of those are based in a nearby town and travel in, which is why the number is higher than the shopfront count.'
+        : 'All of them are based in ' + locality.name + ' itself.'),
+  },
+  ...(stats.crossBorderCount > 0
+    ? [
+        {
+          q:
+            'Can a ' +
+            category.nameSingular.toLowerCase() +
+            ' from ' +
+            otherState +
+            ' work in ' +
+            locality.name +
+            '?',
+          a:
+            'Yes, and ' +
+            stats.crossBorderCount +
+            ' on this page do. What matters is the licence that applies where the work is performed, not where the business is registered. We list service area separately from address so those operators are visible here.',
+        },
+      ]
+    : []),
+  ...(stats.avgCalloutFee
+    ? [
+        {
+          q: 'What does a ' + category.nameSingular.toLowerCase() + ' charge in ' + locality.name + '?',
+          a:
+            'Across the listings on this page, published call out fees run from ' +
+            money(stats.calloutFeeLow as number) +
+            ' to ' +
+            money(stats.calloutFeeHigh as number) +
+            ', averaging ' +
+            money(stats.avgCalloutFee) +
+            '. That is the fee to attend, before labour and parts. Always confirm the rate when you book.',
+        },
+      ]
+    : []),
+  ...(stats.openSaturdayCount > 0
+    ? [
+        {
+          q: 'Which ' + category.name.toLowerCase() + ' in ' + locality.name + ' open on Saturdays?',
+          a:
+            stats.openSaturdayCount +
+            ' of the ' +
+            stats.listingCount +
+            ' listings on this page publish Saturday hours. Each card shows the days that business trades, and the full week is on its own page.',
+        },
+      ]
+    : []),
+  ...(stats.licencedCount > 0
+    ? [
+        {
+          q: 'Are these ' + category.name.toLowerCase() + ' licensed?',
+          a:
+            'We have checked ' +
+            stats.licencedCount +
+            ' against the ' +
+            (locality.state === 'NSW' ? 'NSW Fair Trading' : 'Victorian Building Authority') +
+            ' public register and show the date of the check on each listing. A listing without a verified badge has not been checked, which is not the same as being unlicensed.',
+        },
+      ]
+    : []),
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description: moneyPageDescription(locality, category, stats),
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: buildDate,
+  }),
+  placeNode(locality, region),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: h1,
+    items: listings.map((l) => ({ url: url.listing(l), name: l.name })),
+  }),
+  // Individual businesses, without ratings, because the reviews are not on this page.
+  ...listings
+    .slice(0, 20)
+    .map((l, i) => listingNode(l, { locality, category, withReviews: false, position: i + 1 })),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="localityCategory"
+  title={h1 + pageSuffix}
+  description={moneyPageDescription(locality, category, stats)}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={stats.listingCount}
+  basedCount={stats.listingCount - stats.fromOtherLocality}
+  ogImage={ogForVertical(category.vertical)}
+  page={page}
+  prev={page > 1 ? url.localityCategoryPage(locality, category, page - 1) : undefined}
+  next={page < totalPages ? url.localityCategoryPage(locality, category, page + 1) : undefined}
+  modifiedAt={buildDate}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{state.name} &middot; {locality.name} {locality.postcode}</p>
+      <h1>{h1}{page > 1 && <span style="color:var(--ink-40)"> &middot; page {page}</span>}</h1>
+      <p class="standfirst">{statSummary(locality, category, stats)}</p>
+      <div class="headmeta">
+        <span>{n(stats.listingCount)} {stats.listingCount === 1 ? 'listing' : 'listings'}</span>
+        {stats.verifiedCount > 0 && <span>&middot; {stats.verifiedCount} verified</span>}
+        {stats.reviewCount > 0 && <span>&middot; {n(stats.reviewCount)} reviews collected</span>}
+        <span>&middot; Checked {buildDate}</span>
+      </div>
+    </div>
+
+    {stats.listingCount < POLICY.minListingsToIndex && (
+      <div class="notice">
+        <strong>This page is still filling up.</strong> It holds fewer than {POLICY.minListingsToIndex}
+        listings, so it is set to <code>noindex, follow</code> until it does. Know a
+        {' '}{category.nameSingular.toLowerCase()} who works in {locality.name}?
+        <a href={url.claim()}> Add them, free</a>.
+      </div>
+    )}
+
+    {liveModifiers.length > 0 && (
+      <nav class="chips" aria-label={'Filter ' + category.name.toLowerCase()}>
+        <span class="chip" aria-current="page">All {category.name.toLowerCase()}</span>
+        {liveModifiers.map(({ m, count }) => (
+          <a class="chip" href={url.modifier(locality, category, m as CategoryModifier)}>
+            {m.label} ({count})
+          </a>
+        ))}
+      </nav>
+    )}
+  </div>
+
+  <div class="wrap" style="padding-top:26px">
+    {listings.length > 0 ? (
+      <div class="cards">
+        {listings.map((l) => (
+          <ListingCard listing={l} context={locality} category={category} />
+        ))}
+      </div>
+    ) : (
+      <div class="empty">
+        <p>Nothing listed here yet.</p>
+        <a class="btn" href={url.claim()}>Add the first one</a>
+      </div>
+    )}
+
+    <Pager
+      current={page}
+      total={totalPages}
+      hrefFor={(p: number) => url.localityCategoryPage(locality, category, p)}
+    />
+  </div>
+
+  {page === 1 && (
+    <div class="wrap">
+      <DataBlock locality={locality} category={category} stats={stats} asOf={buildDate} />
+
+      <section class="prose" style="margin-top:34px">
+        <h2>Finding a {category.nameSingular.toLowerCase()} in {locality.name}</h2>
+        <p>{category.description}</p>
+        <p>
+          {locality.blurb}
+        </p>
+        <p>
+          Listings are ordered by a quality score built from how complete the profile is,
+          whether the business has claimed it, and whether we have checked a licence
+          against the state register. Paid placement does not move that order, and any
+          promoted slot is boxed and labelled where it appears.
+          <a href={url.advertisingPolicy()}> How we handle advertising</a>.
+        </p>
+      </section>
+
+      <Faq faqs={faqs} heading={'Questions about ' + category.name.toLowerCase() + ' in ' + locality.name} />
+    </div>
+  )}
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: 'Nearby towns',
+        links: nearby.map((nb) => ({
+          href: url.localityCategory(nb.locality, category),
+          label: category.name + ' in ' + nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : String(Math.round(nb.distanceKm)) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Other trades in ' + locality.name,
+        links: siblingCategories.map((c) => ({
+          href: url.localityCategory(locality, c.category),
+          label: c.category.name,
+          note: '(' + c.count + ')',
+        })),
+      },
+      {
+        heading: 'Read first',
+        links: [
+          ...relatedGuides.map((g) => ({ href: url.guide(g), label: g.title })),
+          ...localLists.map((l) => ({ href: url.list(l), label: l.title })),
+          { href: url.category(category), label: category.name + ' across NSW and Victoria' },
+          { href: url.locality(locality), label: 'Everything in ' + locality.name },
+        ],
+      },
+    ]}
+  />
+</Base>

@@ -1,0 +1,138 @@
+---
+/**
+ * 404.
+ *
+ * The rule in src/lib/indexability.ts is that a page which once ranked is never
+ * deleted, so this page should be rare. When it does fire it is a dead end, and
+ * a dead end with no way out is how a visit ends. Everything below is an exit.
+ */
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import {
+  url,
+  STATES,
+  liveLocalities,
+  listingsInLocality,
+} from '~/lib/repo';
+// Same helper every url.* above is built from. There is no url.notFound().
+import { path } from '~/lib/slug';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = path('404');
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Page not found', href: canonicalPath },
+];
+
+const biggest = liveLocalities()
+  .map((locality) => ({ locality, count: listingsInLocality(locality.id).length }))
+  .filter((row) => row.count > 0)
+  .sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name))
+  .slice(0, 6);
+
+const groups = [
+  {
+    heading: 'Start again',
+    links: [
+      { href: url.state('NSW'), label: STATES.NSW.name },
+      { href: url.state('VIC'), label: STATES.VIC.name },
+      { href: url.categoryIndex(), label: 'Every category' },
+      { href: url.home(), label: 'Home' },
+    ],
+  },
+  {
+    heading: 'Busiest towns',
+    links: biggest.map((row) => ({
+      href: url.locality(row.locality),
+      label: row.locality.name,
+      note: n(row.count) + ' listed',
+      cross: row.locality.state === 'VIC',
+    })),
+  },
+  {
+    heading: 'Other ways in',
+    links: [
+      { href: url.search(), label: 'Search everything' },
+      { href: url.tools(), label: 'Free tools' },
+      { href: url.guides(), label: 'Guides' },
+      { href: url.sitemapPage(), label: 'Sitemap' },
+      { href: url.contact(), label: 'Contact' },
+    ],
+  },
+];
+
+const description =
+  'That page is not here. Search the directory, or jump to a state hub, a category or one of the busiest towns on LocalKnows.';
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: 'That page is not here',
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+]);
+---
+
+<Base
+  kind="utility"
+  title="That page is not here"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+>
+  <div class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow mono">404</p>
+      <h1>That page is not here</h1>
+      <p class="standfirst">
+        We do not delete pages. A listing that moves, merges or changes category keeps its
+        old address and redirects to the new one, and a page that once ranked stays up even
+        after it goes quiet. So this is almost always a typo in the address bar, or a link
+        somewhere else that was wrong when it was written.
+      </p>
+    </div>
+  </div>
+
+  <section class="sec-tight">
+    <div class="wrap">
+      <form class="search" action={url.search()} method="get" role="search">
+        <div class="field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="visually-hidden" for="q">What were you after</label>
+          <input id="q" name="q" type="search" placeholder="Plumber, cafe, motel, bowls club" />
+        </div>
+        <div class="field">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <label class="visually-hidden" for="loc">Town</label>
+          <input id="loc" name="in" type="search" placeholder="Albury, Wodonga, Beechworth" />
+        </div>
+        <button class="btn" type="submit">Search</button>
+      </form>
+
+      <div class="notice">
+        <strong>Followed a link to get here?</strong> That is worth knowing about, because a
+        broken inbound link is our problem and not yours. Send us the address you came from
+        and where you expected to land. How corrections are handled, and how long they take,
+        is set out in <a href={url.dataPolicy()}>data and corrections</a>.
+      </div>
+    </div>
+  </section>
+
+  <LinkBlock heading="Where you probably meant to go" groups={groups} />
+</Base>

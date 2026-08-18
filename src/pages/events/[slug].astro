@@ -1,0 +1,302 @@
+---
+/**
+ * /events/<slug>/ — one event.
+ *
+ * A passed event keeps its page and its URL. It gets a banner and a pointer to
+ * what is on next, and the layout drops it out of the index via `isPast`. That
+ * is the whole policy: never delete a page that once had a link pointing at it.
+ */
+import type { EventRecord } from '~/lib/types';
+import { url, events, localities, STATES, getRegion, eventsInLocality, listingsInLocality,
+  isLiveLocality,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { formatTime } from '~/lib/copy';
+import { BUILD_DATE, humanDate, shortDate } from '~/lib/build';
+import {
+  abs,
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  eventNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return events.map((e) => ({ params: { slug: e.slug }, props: { e } }));
+}
+
+const { e } = Astro.props as { e: EventRecord };
+
+const canonicalPath = url.event(e);
+const isPast = e.startDate.slice(0, 10) < BUILD_DATE;
+
+/** Slugs are only unique inside a state, so both parts of the key are used. */
+const locality = localities.find((l) => l.slug === e.localitySlug && l.state === e.state);
+const region = locality ? getRegion(locality.regionId) : undefined;
+/**
+ * A town with no listings has no hub or calendar of its own, so it
+ * is used for the address and the schema but never linked to.
+ */
+// The locality only has a hub and a calendar page if it has listings. An event
+// in a town with nothing listed yet still gets its own page, it just cannot
+// link back to a town hub that was never built.
+const hub = locality && isLiveLocality(locality.id) ? locality : undefined;
+const hasCalendar = Boolean(hub) && eventsInLocality((locality as any).slug).length > 0;
+
+const allDay = e.startDate.length <= 10;
+const startTime = allDay ? '' : formatTime(e.startDate.slice(11, 16));
+const endTime = e.endDate && e.endDate.length > 10 ? formatTime(e.endDate.slice(11, 16)) : '';
+const cost = e.isFree ? 'Free' : (e.price ?? 'Not published');
+
+/**
+ * Google Calendar template URL. External, so it is built here rather than in the
+ * url helpers, which only ever produce internal paths.
+ */
+const utc = (iso: string) => new Date(/[zZ]|[+-]\d{2}:\d{2}$/.test(iso) ? iso : iso + 'Z');
+const dayStamp = (iso: string, addDays: number) => {
+  const d = new Date(iso.slice(0, 10) + 'T00:00:00Z');
+  d.setUTCDate(d.getUTCDate() + addDays);
+  return d.toISOString().slice(0, 10).replace(/-/g, '');
+};
+const timeStamp = (iso: string, addHours: number) => {
+  const d = utc(iso);
+  d.setUTCHours(d.getUTCHours() + addHours);
+  return d.toISOString().replace(/[-:]/g, '').slice(0, 15) + 'Z';
+};
+const timedEnd = e.endDate && e.endDate.length > 10 ? e.endDate : undefined;
+const calDates = allDay
+  ? dayStamp(e.startDate, 0) + '/' + dayStamp(e.endDate ?? e.startDate, 1)
+  : timeStamp(e.startDate, 0) + '/' + (timedEnd ? timeStamp(timedEnd, 0) : timeStamp(e.startDate, 2));
+const calendarUrl =
+  'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+  '&text=' +
+  encodeURIComponent(e.title) +
+  '&dates=' +
+  calDates +
+  '&details=' +
+  encodeURIComponent(e.description + '\n\n' + abs(canonicalPath)) +
+  '&location=' +
+  encodeURIComponent(
+    [e.venueName, e.address, locality?.name, e.state].filter(Boolean).join(', '),
+  );
+
+const alsoHere = locality
+  ? eventsInLocality(locality.slug)
+      .filter((x) => x.state === locality.state && x.slug !== e.slug)
+      .filter((x) => x.startDate.slice(0, 10) >= BUILD_DATE)
+      .slice(0, 6)
+  : [];
+
+const nextUp = events
+  .filter((x) => x.slug !== e.slug && x.startDate.slice(0, 10) >= BUILD_DATE)
+  .sort((a, b) => a.startDate.localeCompare(b.startDate))
+  .slice(0, 6);
+
+const where = locality ? locality.name + ' ' + e.state : e.state;
+const description =
+  e.eventType +
+  ' at ' +
+  e.venueName +
+  ', ' +
+  where +
+  ' on ' +
+  humanDate(e.startDate) +
+  '. ' +
+  (e.isFree ? 'Free entry. ' : cost !== 'Not published' ? cost + '. ' : '') +
+  e.description;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Events', href: url.events() },
+  { name: e.title, href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'When and where is ' + e.title + '?',
+    a:
+      humanDate(e.startDate) +
+      (startTime ? ' from ' + startTime + (endTime ? ' to ' + endTime : '') : ', all day') +
+      ' at ' +
+      e.venueName +
+      ', ' +
+      e.address +
+      ', ' +
+      where +
+      '.',
+  },
+  {
+    q: 'How much does it cost to get in?',
+    a: e.isFree
+      ? 'Entry is free. Anything sold on the day is priced by the stallholders, not by the organiser.'
+      : cost === 'Not published'
+        ? 'The organiser has not published a price. Contact the venue before you travel.'
+        : 'Entry is ' + cost + ' as published by the organiser. Check with the venue before you travel, because prices change and this page is only as current as the last time it was checked.',
+  },
+  {
+    q: 'How do I get my own event on this site?',
+    a: 'Send it through the contact form with the date, venue address, start time and price. It is free to list, it stays free, and no payment moves an event up the events page.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: e.title,
+    description,
+    crumbs,
+    type: 'WebPage',
+    dateModified: BUILD_DATE,
+  }),
+  locality ? eventNode(e, locality) : undefined,
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="event"
+  title={e.title}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  isPast={isPast}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    {isPast && (
+      <div class="notice" style="margin-top:22px">
+        <strong>This event has already happened.</strong> It ran on {humanDate(e.startDate)}. The
+        page is kept because most of these run again. See <a href={url.events()}>what is on next</a>
+        {hasCalendar && hub && <> or <a href={url.localityEvents(hub)}>events in {hub.name}</a></>}.
+      </div>
+    )}
+
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        <time datetime={e.startDate}>{humanDate(e.startDate)}</time>
+        {startTime && <> &middot; {startTime}</>}
+        &middot; {e.eventType}
+      </p>
+      <h1>{e.title}</h1>
+      <p class="standfirst">{e.description}</p>
+      <div class="headmeta">
+        <span>{e.venueName}</span>
+        {hub ? (
+          <span>&middot; <a href={url.locality(hub)} style="color:var(--river)">{hub.name}</a> {e.state}</span>
+        ) : (
+          <span>&middot; {locality ? locality.name + ' ' + e.state : e.state}</span>
+        )}
+        <span>&middot; {cost}</span>
+        {isPast && <span class="tag warn">Passed</span>}
+      </div>
+    </div>
+
+    <section class="panel" style="margin-top:24px">
+      <div class="panel-head">
+        <h2>Details</h2>
+        <span class="mono">As published</span>
+      </div>
+      <div class="panel-body">
+        <dl class="deflist">
+          <dt>Date</dt>
+          <dd>
+            <time datetime={e.startDate}>{humanDate(e.startDate)}</time>
+            {e.endDate && e.endDate.slice(0, 10) !== e.startDate.slice(0, 10) && (
+              <> to <time datetime={e.endDate}>{humanDate(e.endDate)}</time></>
+            )}
+          </dd>
+
+          <dt>Time</dt>
+          <dd>{startTime ? startTime + (endTime ? ' to ' + endTime : '') : 'All day, times not published'}</dd>
+
+          <dt>Venue</dt>
+          <dd>{e.venueName}</dd>
+
+          <dt>Address</dt>
+          <dd>
+            {e.address}
+            {locality && <><br />{locality.name} {e.state} {locality.postcode}</>}
+          </dd>
+
+          <dt>Cost</dt>
+          <dd>{cost}</dd>
+
+          <dt>Type</dt>
+          <dd>{e.eventType}</dd>
+        </dl>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+          <a class="btn btn-sm" href={calendarUrl} rel="nofollow noopener" target="_blank">
+            Add to calendar
+          </a>
+          {e.url && (
+            <a class="btn btn-sm btn-ghost" href={e.url} rel="nofollow noopener" target="_blank">
+              Organiser's page
+            </a>
+          )}
+          {hasCalendar && hub && (
+            <a class="btn btn-sm btn-ghost" href={url.localityEvents(hub)}>
+              More in {hub.name}
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+
+    {hub && (
+      <div class="notice river">
+        <strong>{hub.name}, {e.state}.</strong> {hub.blurb}
+        <a href={url.locality(hub)}> Businesses in {hub.name}</a>.
+      </div>
+    )}
+
+    <Faq faqs={faqs} heading="Before you go" />
+  </div>
+
+  <LinkBlock
+    heading="More events"
+    groups={[
+      {
+        heading: locality ? 'Also in ' + locality.name : 'Nearby',
+        links: alsoHere.map((x) => ({
+          href: url.event(x),
+          label: x.title,
+          note: shortDate(x.startDate),
+        })),
+      },
+      {
+        heading: 'Coming up elsewhere',
+        links: nextUp.map((x) => ({
+          href: url.event(x),
+          label: x.title,
+          note: shortDate(x.startDate),
+          cross: locality ? x.state !== locality.state : false,
+        })),
+      },
+      {
+        heading: 'Around here',
+        links: [
+          ...(hub
+            ? [
+                { href: url.locality(hub), label: 'Businesses in ' + hub.name },
+                ...(hasCalendar ? [{ href: url.localityEvents(hub), label: 'Events in ' + hub.name }] : []),
+              ]
+            : []),
+          ...(region ? [{ href: url.region(region), label: 'All of ' + region.name }] : []),
+          { href: url.state(e.state), label: STATES[e.state].name },
+          { href: url.events(), label: 'Every event' },
+        ],
+      },
+    ]}
+  />
+</Base>

@@ -1,0 +1,260 @@
+---
+/**
+ * Privacy policy.
+ *
+ * Written against the Australian Privacy Principles. It describes what this
+ * site actually does rather than what a template says a website does, which
+ * means it has to be updated when the stack changes.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.privacy();
+const h1 = 'Privacy policy';
+const description =
+  'What LocalKnows collects, why, who it goes to, how long it is kept, and how to get at it or have it deleted. Written against the Australian Privacy Principles.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Privacy', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Do you sell personal information?',
+    a: 'No. Enquiry details go to the business the enquiry was addressed to and nowhere else. There is no data broker arrangement, no list rental and no sale of contact details, and if that ever changed this page would say so before it changed rather than after.',
+  },
+  {
+    q: 'A business listing has my personal details on it. Can you remove them?',
+    a: 'Yes. Listings are built from publicly published business information, but a sole trader’s business details can also be personal information. Email ' + SITE.email + ' from an address connected to the business, or use the correction form, and it will be removed or amended. We do not require a reason.',
+  },
+  {
+    q: 'Do you use tracking cookies or advertising pixels?',
+    a: 'No advertising pixels and no cross site trackers. There is no third party analytics script on this site. Netlify records standard server request logs, which include IP addresses, as part of hosting.',
+  },
+  {
+    q: 'How do I make a privacy complaint?',
+    a: 'Email ' + SITE.email + ' with the details and we will respond within 30 days. If you are not satisfied with the response, you can complain to the Office of the Australian Information Commissioner at oaic.gov.au. You do not have to come to us first, but it is usually quicker.',
+  },
+  {
+    q: 'Is any of this data stored overseas?',
+    a: 'Yes. Netlify and Supabase both operate infrastructure outside Australia. Where an overseas recipient handles personal information collected here, we take reasonable steps to ensure it is handled consistently with the Australian Privacy Principles, which is what APP 8 requires.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">The site</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        What we collect, why, who it goes to and how to get rid of it. This is a plain
+        English summary of how the site actually works. It is not legal advice.
+      </p>
+      <div class="headmeta">
+        <span>Effective {humanDate(BUILD_DATE)}</span>
+        <span>&middot; {SITE.name}, operated by {SITE.publisher.name}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>Who we are</h2>
+      <p>
+        {SITE.name} is a business and places directory for New South Wales and Victoria,
+        operated by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.
+        Privacy questions go to <a href={'mailto:' + SITE.email}>{SITE.email}</a>.
+      </p>
+
+      <h2>What we collect</h2>
+      <p>Four things, and nothing else.</p>
+      <ul>
+        <li>
+          <strong>What you type into a form.</strong> Contact, claim and correction forms
+          collect the fields on them: your name, email, phone if you give it, and the
+          message. Claim forms also collect the business you are claiming and your role in it.
+        </li>
+        <li>
+          <strong>Enquiries you send to a business.</strong> Your name and contact details,
+          and the description of the job.
+        </li>
+        <li>
+          <strong>Server logs.</strong> Our host records IP address, user agent, the URL
+          requested and the time, which is what any web server records.
+        </li>
+        <li>
+          <strong>Nothing else.</strong> There is no advertising pixel, no cross site
+          tracker, and no third party analytics script on this site.
+        </li>
+      </ul>
+
+      <h2>Business listings and personal information</h2>
+      <p>
+        Listings are built from information businesses publish about themselves: their own
+        websites, their own social pages, and public registers. Every listing shows the
+        sources it was read from and the date.
+      </p>
+      <p>
+        For a sole trader, business contact details can also be personal information. If a
+        listing includes details you want removed or corrected, tell us and we will do it.
+        We do not require a reason and we do not argue about it. Use the
+        <a href={url.dataPolicy()}>corrections page</a> or email
+        <a href={'mailto:' + SITE.email}>{SITE.email}</a>.
+      </p>
+
+      <h2>Why we collect it, and who gets it</h2>
+      <table>
+        <thead>
+          <tr><th scope="col">What</th><th scope="col">Why</th><th scope="col">Who receives it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Enquiry details</td>
+            <td>To pass your job to the business you chose</td>
+            <td>That business only</td>
+          </tr>
+          <tr>
+            <td>Claim submissions</td>
+            <td>To confirm you are entitled to manage the listing</td>
+            <td>Us, and a state register or the ABR for verification</td>
+          </tr>
+          <tr>
+            <td>Corrections</td>
+            <td>To fix the listing and record why it changed</td>
+            <td>Us</td>
+          </tr>
+          <tr>
+            <td>Server logs</td>
+            <td>Security, abuse prevention, and knowing which pages get crawled</td>
+            <td>Our host</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Response time statistics</h2>
+      <p>
+        The median response time figure on some category pages is computed from when an
+        enquiry was sent and when the business replied through the site. It uses timestamps
+        only. No part of your message or your identity is used in that calculation or shown
+        anywhere.
+      </p>
+
+      <h2>Third parties we actually use</h2>
+      <ul>
+        <li><strong>Netlify</strong>, for hosting and form handling. Standard server logs and form submissions pass through it.</li>
+        <li><strong>Supabase</strong>, for the database, as the directory moves off static data files.</li>
+        <li><strong>Google Maps</strong>, as outbound links only. There is no embedded map on this site, so Google does not receive a request from your browser unless you click through.</li>
+        <li><strong>The Google Places API</strong>, server side, to read published business ratings. It sends business names, not anything about you.</li>
+      </ul>
+      <p>
+        Netlify and Supabase both operate infrastructure outside Australia. Where personal
+        information collected here is handled by an overseas recipient, we take reasonable
+        steps to ensure it is handled consistently with the Australian Privacy Principles.
+      </p>
+
+      <h2>Cookies</h2>
+      <p>
+        This site sets no cookies of its own. There is no consent banner because there is
+        nothing to consent to. If that changes, a banner appears and this section changes
+        with it.
+      </p>
+
+      <h2>How long we keep it</h2>
+      <ul>
+        <li><strong>Enquiries:</strong> 24 months, so response time statistics stay honest, then deleted.</li>
+        <li><strong>Contact and correction messages:</strong> 24 months.</li>
+        <li><strong>Claim records:</strong> for as long as the listing is claimed, plus 12 months.</li>
+        <li><strong>Server logs:</strong> as long as our host retains them, which is a matter of weeks.</li>
+      </ul>
+      <p>You can ask for anything of yours to be deleted sooner and we will do it.</p>
+
+      <h2>Getting at your information</h2>
+      <p>
+        Email <a href={'mailto:' + SITE.email}>{SITE.email}</a> and ask. You can request a
+        copy of what we hold about you, ask for it to be corrected, or ask for it to be
+        deleted. We will respond within 30 days and there is no charge.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        The site is served over HTTPS with HSTS. Form submissions are transmitted encrypted.
+        We hold as little as the site needs to work, which is the only security control that
+        never fails.
+      </p>
+
+      <h2>Complaints</h2>
+      <p>
+        Email <a href={'mailto:' + SITE.email}>{SITE.email}</a> and we will respond within
+        30 days. If you are not satisfied, the Office of the Australian Information
+        Commissioner takes privacy complaints at
+        <a href="https://www.oaic.gov.au/" rel="noopener">oaic.gov.au</a>. You are not
+        required to come to us first.
+      </p>
+
+      <h2>Changes</h2>
+      <p>
+        The effective date at the top of this page is the date of the last build that
+        changed it. Material changes will be described here rather than quietly folded in.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Privacy questions" />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'Related',
+        links: [
+          { href: url.terms(), label: 'Terms of use' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+        ],
+      },
+      {
+        heading: 'Get in touch',
+        links: [
+          { href: url.contact(), label: 'Contact us' },
+          { href: url.claim(), label: 'Claim a listing' },
+          { href: url.about(), label: 'About LocalKnows' },
+        ],
+      },
+    ]}
+  />
+</Base>

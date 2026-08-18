@@ -1,0 +1,256 @@
+---
+/**
+ * Advertising policy.
+ *
+ * The short version: ordering comes from the quality score and nothing else,
+ * and paid placement is labelled, boxed and kept out of the ItemList. Both
+ * statements are enforced in code, not by good intentions.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, POLICY } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.advertisingPolicy();
+const h1 = 'Advertising policy';
+
+const description =
+  'Paid placement on LocalKnows is labelled, boxed and excluded from structured data. Organic order comes from the quality score alone. Ranking is not for sale.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Advertising policy', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How do I tell what is paid for?',
+    a: 'Paid placement sits in its own bordered box with the word Promoted on it, above or beside the list but never inside it. It is excluded from the ItemList structured data, so the positions a search engine reads are the organic positions. If a card is in the numbered flow of a list, no money was involved in putting it there.',
+  },
+  {
+    q: 'Can I pay to have a competitor removed or pushed down?',
+    a: 'No. There is no price for it and no process for requesting it. Listings are removed only at the request of the business itself, or because the business has closed, or because the entry breaches the terms of use. An advertiser asking for a competitor to be demoted will have the request declined and the advertising ended.',
+  },
+  {
+    q: 'Does advertising change the order of the organic list?',
+    a: 'No. Ordering is computed from the quality score, then average rating, then business name. Advertising spend is not an input to the quality score and is not visible to the code that sorts a list. A promoted box on the page does not move a single card in the list below it.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="Advertising policy"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Policy &middot; money and placement</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Advertising pays for the hosting. It does not pay for a position in a list, a badge,
+        a curated list slot or the removal of a competitor.
+      </p>
+      <div class="headmeta">
+        <span>Paid placement is labelled</span>
+        <span>&middot; Excluded from structured data</span>
+        <span>&middot; Updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        A directory that sells its ranking is a classifieds page pretending to be a
+        recommendation. Everything below exists so that a reader can look at a list on this
+        site and know that the order means something.
+      </p>
+
+      <h2>How the organic order is produced</h2>
+      <p>
+        Every list on LocalKnows is sorted by exactly three things, in this order:
+      </p>
+      <ol>
+        <li>
+          <strong>Quality score</strong>, a number from 0 to 100 computed from profile
+          completeness, claim status, licence verification, review volume and how recently the
+          details were checked. It is computed on a schedule and never authored by hand.
+        </li>
+        <li><strong>Average rating</strong> across the reviews published on the listing.</li>
+        <li><strong>Business name</strong>, alphabetically, to break the remaining ties.</li>
+      </ol>
+      <p>
+        There is no fourth input. Advertising spend, enquiry routing subscriptions, links,
+        emails from owners and personal opinions are not among them. The sort function does
+        not receive commercial data, so it cannot use it.
+      </p>
+
+      <h2>How paid placement is shown</h2>
+      <ul>
+        <li>
+          <strong>Labelled.</strong> The word Promoted appears on the unit, in text, not as an
+          icon or a colour.
+        </li>
+        <li>
+          <strong>Boxed.</strong> It sits in its own bordered container above or beside the
+          list. It is never inserted into the flow of the list, and the numbering of the
+          organic list ignores it entirely.
+        </li>
+        <li>
+          <strong>Excluded from structured data.</strong> Promoted units are left out of the
+          ItemList emitted for the page. What a search engine reads is the organic order, in
+          the organic positions, with no paid entries in it.
+        </li>
+        <li>
+          <strong>Capped.</strong> At most one promoted unit per page. A page full of boxes is
+          a page nobody trusts.
+        </li>
+        <li>
+          <strong>Never dressed as editorial.</strong> A promoted unit does not use the
+          curated list layout, the guide layout or the verified badge.
+        </li>
+      </ul>
+
+      <h2>What can be bought</h2>
+      <ul>
+        <li>A promoted box on a locality and category page, sold by locality and category.</li>
+        <li>A sponsorship line on a free tool page or an issue of the wire, labelled as such.</li>
+        <li>A display panel on a region hub, outside the listing grid.</li>
+        <li>
+          Enquiry routing, which delivers quote requests from the site into a business&rsquo;s
+          own systems. This is a product, not advertising, and it has no effect on placement.
+        </li>
+      </ul>
+
+      <h2>What cannot be bought, at any price</h2>
+      <ul>
+        <li>A position in an organic list, or any change to the quality score.</li>
+        <li>
+          The verified badge. It is earned by a licence check against a state register and
+          nothing else. See <a href={url.claim()}>the claim page</a>.
+        </li>
+        <li>
+          A dofollow outbound link. Dofollow is earned by verification at a quality score of
+          {' '}{POLICY.dofollowQualityFloor} and above, for the reasons set out on
+          {' '}<a href={url.partners()}>the link partner page</a>.
+        </li>
+        <li>
+          Inclusion in a curated list, a guide, a wire article or an FAQ answer. Editorial is
+          not for sale and is not shown to advertisers before it runs.
+        </li>
+        <li>
+          The removal, suspension or demotion of another business. There is no mechanism for
+          this and requesting it ends the advertising relationship.
+        </li>
+        <li>
+          A number in a data block. Those are computed from the listing rows on the page and
+          cannot be edited.
+        </li>
+        <li>
+          Suppression of a review, a correction, or the closed status on a listing.
+        </li>
+      </ul>
+
+      <div class="notice">
+        <strong>Advertisers get the same correction process as everyone else.</strong> A
+        correction against an advertiser is handled on the same timeline, by the same person,
+        with the same result. Paying us buys a box on a page. It does not buy an editorial
+        relationship.
+      </div>
+
+      <h2>Affiliate and referral links</h2>
+      <p>
+        Where an outbound link earns a commission, it is disclosed on the page in plain words
+        and carries a sponsored rel attribute. Affiliate arrangements never determine what is
+        recommended, what is included in a list, or the order of anything. If a product is
+        recommended and there is money attached, the disclosure sits next to the
+        recommendation, not in a footer.
+      </p>
+
+      <h2>What we will not accept</h2>
+      <ul>
+        <li>Advertising for unlicensed trade work in a licensed category.</li>
+        <li>
+          Advertising from a business whose claimed licence has lapsed or failed verification.
+        </li>
+        <li>Gambling, payday lending, and anything requiring a disclaimer we would not print.</li>
+        <li>Advertising designed to be mistaken for editorial or for a verified badge.</li>
+      </ul>
+
+      <h2>Complaints about advertising</h2>
+      <p>
+        If something on this site looks paid for and is not labelled, that is a defect and we
+        want to hear about it. Email
+        <a href={'mailto:' + SITE.email}>{SITE.email}</a> with the URL. Advertising complaints
+        are answered within two business days, and if the label was missing it goes on within
+        one. Enquiries about buying advertising go to the same address, through
+        <a href={url.contact()}>the contact form</a>.
+      </p>
+      <p>
+        This policy is reviewed every six months alongside the rest of the site content, under
+        <a href={url.editorialPolicy()}>the editorial policy</a>.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Advertising, answered" id="advertising-faq" />
+  </div>
+
+  <LinkBlock
+    heading="Related policies"
+    groups={[
+      {
+        heading: 'Policies',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.terms(), label: 'Terms of use' },
+        ],
+      },
+      {
+        heading: 'For business owners',
+        links: [
+          { href: url.claim(), label: 'Claim your listing', note: 'free' },
+          { href: url.partners(), label: 'Links and badges' },
+          { href: url.contact(), label: 'Advertising enquiries' },
+        ],
+      },
+      {
+        heading: 'How the site works',
+        links: [
+          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.categoryIndex(), label: 'All categories' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

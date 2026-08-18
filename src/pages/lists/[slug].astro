@@ -1,0 +1,228 @@
+---
+/**
+ * Curated list detail. /lists/<slug>/
+ *
+ * The order on this page is a judgement, so the page says whose judgement it
+ * is and when it was last checked. Entries that no longer resolve to a live
+ * listing are dropped rather than rendered as a dead number, which keeps the
+ * ItemList positions and the visible positions identical.
+ */
+import type { CuratedList, Listing } from '~/lib/types';
+import {
+  url,
+  STATES,
+  curatedLists,
+  getCategory,
+  getCategoryBySlug,
+  getListingBySlug,
+  getLocality,
+  getLocalityByStateSlug,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { humanDate } from '~/lib/build';
+import { listGraph, type Crumb } from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return curatedLists.map((list) => ({
+    params: { slug: list.slug },
+    props: { list },
+  }));
+}
+
+const { list } = Astro.props as { list: CuratedList };
+
+const canonicalPath = url.list(list);
+const state = STATES[list.state];
+const locality = getLocalityByStateSlug(list.state, list.localitySlug);
+const category = getCategoryBySlug(list.categorySlug);
+
+/** Resolve first, render second. A slug that no longer exists just falls out. */
+const entries = list.items
+  .map((item) => {
+    const listing = getListingBySlug(item.listingSlug);
+    if (!listing) return undefined;
+    return {
+      listing: listing as Listing,
+      blurb: item.blurb,
+      home: getLocality(listing.localityId),
+      primary: getCategory(listing.categoryIds[0]),
+    };
+  })
+  .filter(Boolean) as {
+  listing: Listing;
+  blurb: string;
+  home: ReturnType<typeof getLocality>;
+  primary: ReturnType<typeof getCategory>;
+}[];
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Curated lists', href: url.lists() },
+  { name: list.title, href: canonicalPath },
+];
+
+const jsonLd = listGraph(
+  list,
+  crumbs,
+  entries.map((e) => ({ url: url.listing(e.listing), name: e.listing.name })),
+);
+
+const otherLists = curatedLists
+  .filter((l) => l.slug !== list.slug)
+  .map((l) => ({ list: l, sameTown: l.localitySlug === list.localitySlug ? 1 : 0 }))
+  .sort((a, b) => b.sameTown - a.sameTown || b.list.reviewedAt.localeCompare(a.list.reviewedAt))
+  .slice(0, 6)
+  .map((x) => x.list);
+
+const description =
+  list.intro.length > 155 ? list.intro.slice(0, 152).trimEnd() + '…' : list.intro;
+---
+
+<Base
+  kind="list"
+  title={list.title}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  ogType="article"
+  publishedAt={list.publishedAt}
+  modifiedAt={list.reviewedAt}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        Curated list &middot; {locality?.name ?? list.localitySlug}, {list.state}
+      </p>
+      <h1>{list.title}</h1>
+      <p class="mono" style="color:var(--wattle-ink);margin:14px 0 0">
+        By {list.author} &middot; last reviewed{' '}
+        <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
+      </p>
+      <p class="standfirst">{list.intro}</p>
+      <div class="headmeta">
+        <span>{entries.length} {entries.length === 1 ? 'business' : 'businesses'}, ranked</span>
+        <span>
+          &middot; Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
+        </span>
+        <span>
+          &middot; Reviewed <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
+        </span>
+        {category && locality && (
+          <span>
+            &middot; <a href={url.localityCategory(locality, category)} style="color:var(--river)">
+              All {category.name.toLowerCase()} in {locality.name}
+            </a>
+          </span>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap" style="padding-top:10px;padding-bottom:20px">
+    {entries.length > 0 ? (
+      <ol style="list-style:none;margin:0;padding:0;max-width:820px">
+        {entries.map((e, i) => (
+          <li
+            style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding:26px 0;border-bottom:1px solid var(--line)"
+          >
+            <span
+              class="mono"
+              style="font-size:30px;letter-spacing:0.02em;line-height:1;color:var(--ink-40)"
+            >
+              {String(i + 1).padStart(2, '0')}
+            </span>
+            <div style="min-width:0">
+              <h2 style="font-size:clamp(21px,2.4vw,26px)">
+                <a href={url.listing(e.listing)}>{e.listing.name}</a>
+              </h2>
+              <p style="color:var(--ink-40);font-size:13.5px;margin:5px 0 12px">
+                {e.primary?.name}
+                {e.home && <> &middot; {e.home.name}, {e.home.state}</>}
+                {e.listing.status === 'verified' && <> &middot; verified</>}
+              </p>
+              <p style="color:var(--ink-80);font-size:16px;margin:0 0 12px;max-width:var(--measure)">
+                {e.blurb}
+              </p>
+              <a class="btn btn-sm btn-ghost" href={url.listing(e.listing)}>See the full listing</a>
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <div class="empty">
+        <p>
+          Every business on this list has come off the site since it was written. The list
+          is held here rather than deleted so the links pointing at it still land
+          somewhere useful.
+        </p>
+        {locality && category ? (
+          <a class="btn" href={url.localityCategory(locality, category)}>
+            All {category.name.toLowerCase()} in {locality.name}
+          </a>
+        ) : (
+          <a class="btn" href={url.lists()}>Back to the lists</a>
+        )}
+      </div>
+    )}
+  </div>
+
+  <div class="wrap">
+    <section class="prose" style="padding-bottom:20px">
+      <h2>How this list was put together</h2>
+      <p>
+        {list.author} ranked these by hand. Nobody paid to be on the list and nobody can
+        pay to move up it. Where a position is arguable, the blurb says what tipped it.
+        The ordering here is deliberately not the quality score used on the category
+        pages, because a score cannot tell you which of two good operators to ring first.
+      </p>
+      <p>
+        The list is checked again every six months. If something has closed, changed
+        hands or fallen off, <a href={url.contact()}>tell us</a> and it gets pulled at the
+        next review rather than left sitting there.
+      </p>
+    </section>
+  </div>
+
+  <LinkBlock
+    heading="Keep looking"
+    groups={[
+      {
+        heading: 'More lists',
+        links: [
+          ...otherLists.map((l) => ({ href: url.list(l), label: l.title })),
+          { href: url.lists(), label: 'Every curated list' },
+        ],
+      },
+      {
+        heading: locality ? 'Around ' + locality.name : 'Around here',
+        links: [
+          ...(locality && category
+            ? [
+                {
+                  href: url.localityCategory(locality, category),
+                  label: 'All ' + category.name.toLowerCase() + ' in ' + locality.name,
+                },
+              ]
+            : []),
+          ...(locality
+            ? [{ href: url.locality(locality), label: 'Everything in ' + locality.name }]
+            : []),
+          ...(category
+            ? [{ href: url.category(category), label: category.name + ' across NSW and Victoria' }]
+            : []),
+          { href: url.state(list.state), label: state.name },
+        ],
+      },
+      {
+        heading: 'How we work',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.guides(), label: 'Guides' },
+        ],
+      },
+    ]}
+  />
+</Base>

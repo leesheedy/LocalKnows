@@ -1,0 +1,222 @@
+---
+/**
+ * Region hub.
+ *
+ * The region tier exists so a state does not link to eight hundred localities
+ * from one page. It is a crawl distribution layer first and a landing page
+ * second, which is why the link blocks are dense and the prose is short.
+ */
+import type { Region } from '~/lib/types';
+import {
+  url,
+  STATES,
+  localitiesInRegion,
+  listingsInLocality,
+  activeCategoriesInLocality,
+  regionsInState,
+  isLiveLocality,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n } from '~/lib/copy';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  region: Region;
+  buildDate: string;
+}
+const { region, buildDate } = Astro.props;
+
+const state = STATES[region.state];
+const canonicalPath = url.region(region);
+
+const places = localitiesInRegion(region.id)
+  .map((l) => ({ locality: l, count: isLiveLocality(l.id) ? listingsInLocality(l.id).length : 0 }))
+  .sort((a, b) => b.count - a.count || a.locality.tier - b.locality.tier || a.locality.name.localeCompare(b.locality.name));
+
+const withListings = places.filter((p) => p.count > 0);
+const notLive = places.filter((p) => p.count === 0);
+const totalListings = places.reduce((t, p) => t + p.count, 0);
+
+// Categories across the whole region, most populous first.
+const catCounts = new Map<string, { name: string; slug: string; count: number; localitySlug: string; localityId: string }>();
+for (const { locality } of places) {
+  for (const a of activeCategoriesInLocality(locality.id)) {
+    const key = a.category.slug;
+    const prev = catCounts.get(key);
+    if (!prev || a.count > prev.count) {
+      catCounts.set(key, {
+        name: a.category.name,
+        slug: a.category.slug,
+        count: (prev?.count ?? 0) + a.count,
+        localitySlug: locality.slug,
+        localityId: locality.id,
+      });
+    } else {
+      prev.count += a.count;
+    }
+  }
+}
+const topCategories = [...catCounts.values()].sort((a, b) => b.count - a.count).slice(0, 24);
+
+const siblings = regionsInState(region.state).filter((r) => r.id !== region.id);
+
+const h1 = region.name + ', ' + state.name;
+const description =
+  n(totalListings) +
+  ' businesses across ' +
+  withListings.length +
+  ' towns in the ' +
+  region.name +
+  ' region of ' +
+  state.name +
+  '. ' +
+  region.blurb.slice(0, 80);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(region.state) },
+  { name: region.name, href: canonicalPath },
+];
+
+const faqs = [
+  { q: 'Which towns are in the ' + region.name + ' region?', a: places.slice(0, 18).map((p) => p.locality.name).join(', ') + '.' },
+  {
+    q: 'How many businesses are listed across ' + region.name + '?',
+    a: n(totalListings) + ' at the last count, spread across ' + withListings.length + ' towns. Towns without a listing yet do not get a page until they have content.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: buildDate }),
+  {
+    '@type': 'AdministrativeArea',
+    name: region.name,
+    description: region.blurb,
+    containedInPlace: { '@type': 'State', name: state.name },
+  },
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Towns in ' + region.name,
+    items: withListings.map((p) => ({ url: url.locality(p.locality), name: p.locality.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="region"
+  listingCount={totalListings}
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  ogImage={ogForState(region.state)}
+  modifiedAt={buildDate}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{state.name} region</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{region.blurb}</p>
+      <div class="headmeta">
+        <span>{places.length} towns</span>
+        <span>&middot; {n(totalListings)} listings</span>
+        <span>&middot; Checked {buildDate}</span>
+      </div>
+    </div>
+
+    <div class="statgrid">
+      <div><b>{places.length}</b><span>towns</span></div>
+      <div><b>{withListings.length}</b><span>with listings</span></div>
+      <div><b>{n(totalListings)}</b><span>businesses</span></div>
+      <div><b>{topCategories.length}</b><span>categories live</span></div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Towns in {region.name}</h2>
+        <p>A town gets a page once it has listings. Empty pages do not get seeded ahead of content.</p>
+      </div>
+      {withListings.length > 0 ? (
+        <div class="cats">
+          {withListings.map((p) => (
+            <a class="cat" href={url.locality(p.locality)}>
+              <strong>{p.locality.name}</strong>
+              <span class="n mono">{p.count} listed</span>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="empty">
+          <p>No town in {region.name} has listings yet, so none of them have pages.</p>
+          <a class="btn" href={url.claim()}>Add the first listing</a>
+        </div>
+      )}
+
+      {notLive.length > 0 && (
+        <p style="margin:18px 0 0;font-size:14px;color:var(--ink-40)">
+          {notLive.length} more {notLive.length === 1 ? 'town is' : 'towns are'} mapped in this region and
+          waiting on their first listing: {notLive.slice(0, 24).map((p) => p.locality.name).join(', ')}
+          {notLive.length > 24 ? ' and ' + (notLive.length - 24) + ' others' : ''}.
+        </p>
+      )}
+    </div>
+  </section>
+
+  {topCategories.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>What people look for in {region.name}</h2>
+        </div>
+        <div class="cats">
+          {topCategories.map((c) => (
+            <a class="cat" href={'/categories/' + c.slug + '/'}>
+              <strong>{c.name}</strong>
+              <span class="n mono">{c.count} across the region</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={'About ' + region.name} />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'Other ' + state.name + ' regions',
+        links: siblings.map((r) => ({ href: url.region(r), label: r.name })),
+      },
+      {
+        heading: 'Across the border',
+        links: [
+          { href: url.state(region.state === 'NSW' ? 'VIC' : 'NSW'), label: region.state === 'NSW' ? 'Victoria' : 'New South Wales', cross: true },
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.guides(), label: 'Guides' },
+        ],
+      },
+    ]}
+  />
+</Base>

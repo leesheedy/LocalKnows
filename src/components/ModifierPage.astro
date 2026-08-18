@@ -1,0 +1,167 @@
+---
+/**
+ * Long tail page: /nsw/albury/pubs/beer-garden/
+ *
+ * These only exist where the listing count clears POLICY.minListingsForModifierPage.
+ * Below that they are never generated, rather than published as a 200 with an
+ * empty state, which is the fastest way to teach a crawler to ignore a pattern.
+ */
+import type { Category, CategoryModifier, Listing, Locality } from '~/lib/types';
+import { url, STATES, getRegion, modifiersForCategory, listingsForModifier, neighboursWithCategory } from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { otherStateLabel, n } from '~/lib/copy';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  listingNode,
+  ogForVertical,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  locality: Locality;
+  category: Category;
+  modifier: CategoryModifier;
+  listings: Listing[];
+  buildDate: string;
+}
+const { locality, category, modifier, listings, buildDate } = Astro.props;
+
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.modifier(locality, category, modifier);
+const h1 = modifier.label + ' ' + category.name.toLowerCase() + ' in ' + locality.name + ', ' + locality.state;
+const description =
+  listings.length +
+  ' ' +
+  category.name.toLowerCase() +
+  ' in ' +
+  locality.name +
+  ' ' +
+  locality.state +
+  ' with ' +
+  modifier.label.toLowerCase() +
+  '. Checked against published listings on ' +
+  buildDate +
+  '.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: category.name, href: url.localityCategory(locality, category) },
+  { name: modifier.label, href: canonicalPath },
+];
+
+const siblings = modifiersForCategory(category.id)
+  .filter((m) => m.id !== modifier.id)
+  .map((m) => ({ m, count: listingsForModifier(locality.id, category.id, m).length }))
+  .filter((x) => x.count >= modifier.minListings);
+
+const nearby = neighboursWithCategory(locality, category.id, 6);
+const crossBorder = listings.filter((l) => l.localityId !== locality.id).length;
+
+const faqs = [
+  {
+    q: 'How many ' + category.name.toLowerCase() + ' in ' + locality.name + ' have ' + modifier.label.toLowerCase() + '?',
+    a:
+      listings.length +
+      ' of the ' +
+      category.name.toLowerCase() +
+      ' we list for ' +
+      locality.name +
+      ' record ' +
+      modifier.label.toLowerCase() +
+      '. ' +
+      modifier.intro,
+  },
+  {
+    q: 'How is this list put together?',
+    a: 'A listing appears here when its own profile records ' + modifier.label.toLowerCase() + '. We do not infer it, so a business that has it but has not said so will be missing until it claims its listing and fills the profile in.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: buildDate }),
+  itemListNode({ pageUrl: canonicalPath, name: h1, items: listings.map((l) => ({ url: url.listing(l), name: l.name })) }),
+  ...listings.slice(0, 20).map((l, i) => listingNode(l, { locality, category, withReviews: false, position: i + 1 })),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="modifier"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={listings.length}
+  ogImage={ogForVertical(category.vertical)}
+  modifiedAt={buildDate}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        <a href={url.localityCategory(locality, category)}>{category.name} in {locality.name}</a>
+      </p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{modifier.intro}</p>
+      <div class="headmeta">
+        <span>{n(listings.length)} {listings.length === 1 ? 'listing' : 'listings'}</span>
+        {crossBorder > 0 && <span>&middot; {crossBorder} travel in</span>}
+        <span>&middot; Checked {buildDate}</span>
+      </div>
+    </div>
+
+    <nav class="chips" aria-label="Related filters" style="margin-top:20px">
+      <a class="chip" href={url.localityCategory(locality, category)}>All {category.name.toLowerCase()}</a>
+      <span class="chip" aria-current="page">{modifier.label}</span>
+      {siblings.map(({ m, count }) => (
+        <a class="chip" href={url.modifier(locality, category, m)}>{m.label} ({count})</a>
+      ))}
+    </nav>
+  </div>
+
+  <div class="wrap" style="padding-top:26px">
+    <div class="cards">
+      {listings.map((l) => <ListingCard listing={l} context={locality} category={category} />)}
+    </div>
+    <Faq faqs={faqs} />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: modifier.label + ' nearby',
+        links: nearby.map((nb) => ({
+          href: url.localityCategory(nb.locality, category),
+          label: category.name + ' in ' + nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Back up a level',
+        links: [
+          { href: url.localityCategory(locality, category), label: 'All ' + category.name.toLowerCase() + ' in ' + locality.name },
+          { href: url.locality(locality), label: 'Everything in ' + locality.name },
+          { href: url.category(category), label: category.name + ' across NSW and Victoria' },
+          { href: url.state(locality.state), label: state.name },
+        ],
+      },
+    ]}
+  />
+</Base>

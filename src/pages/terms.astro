@@ -1,0 +1,257 @@
+---
+/**
+ * Terms of use.
+ *
+ * The clause that matters most is the one about what verification means, because
+ * that is the claim the whole site trades on and it needs a hard boundary
+ * around it.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.terms();
+const h1 = 'Terms of use';
+const description =
+  'The terms you agree to by using LocalKnows. What a listing is, what a verified badge means and does not mean, what business owners agree to, and what is not permitted.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Terms', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Is a listing on LocalKnows a recommendation?',
+    a: 'No. A listing is a record of a business that exists, built from what that business publishes. Ordering reflects how complete and how verified a profile is, not how good the work is. We have not used these businesses and we are not in a position to vouch for their work.',
+  },
+  {
+    q: 'What does a verified badge legally mean?',
+    a: 'That on the date shown, the licence number on the listing returned as current for the stated class of work in the relevant state register. It is a statement about a lookup performed on a date. It is not an endorsement, not a warranty, and not a statement about anything that happened before or after that date.',
+  },
+  {
+    q: 'Can I scrape the directory?',
+    a: 'No. Automated harvesting of the listings is not permitted. The individual facts about a business belong to that business, but the compiled directory, the categorisation, the service area modelling and the generated statistics are ours. There is a machine readable summary at /llms.txt and sitemaps at /sitemap.xml for legitimate crawling.',
+  },
+  {
+    q: 'Something on my listing is wrong and I did not put it there. What are my rights?',
+    a: 'Tell us and we will fix it or remove the listing, at your choice, at no cost. You do not have to claim the listing first and you do not have to give a reason. That commitment is in these terms because it should be enforceable, not just polite.',
+  },
+  {
+    q: 'What happens if I claim a listing and put false information on it?',
+    a: 'The listing gets suspended and the claim is revoked. Publishing a licence number you do not hold is also a matter for the relevant state regulator, and misleading conduct in trade is a matter for the ACCC or state fair trading, neither of which is something we control or can shield you from.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">The site</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Using this site means accepting these terms. They are written to be read, not to be
+        skipped, and the section on what verification means is the one that matters.
+      </p>
+      <div class="headmeta">
+        <span>Effective {humanDate(BUILD_DATE)}</span>
+        <span>&middot; Governed by the law of New South Wales</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>1. What this site is</h2>
+      <p>
+        {SITE.name} is an independent directory of businesses and places in New South Wales
+        and Victoria, operated by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.
+        It is not affiliated with, endorsed by, or acting for NSW Fair Trading, the Victorian
+        Building Authority, the Australian Business Register, ASIC, any council, or any
+        tourism body, and nothing on it should be read as speaking for any of them.
+      </p>
+
+      <h2>2. Listings are information, not advice</h2>
+      <p>
+        A listing records that a business exists and repeats details that business publishes
+        about itself. It is not a recommendation and not professional advice. We have not
+        engaged these businesses, inspected their work, or assessed their suitability for
+        your job. Deciding who to hire is yours to do.
+      </p>
+      <p>
+        Details go stale. Businesses change hours, numbers, addresses and owners without
+        telling anybody. Every listing shows the date its details were last read from a
+        source, and that date is the extent of what we are saying about currency.
+      </p>
+
+      <h2>3. What verification means</h2>
+      <p>
+        Where a listing shows a verified badge, it means one thing: on the date shown, the
+        licence number recorded against that listing returned as current for the stated
+        class of work in the relevant state register.
+      </p>
+      <p>It specifically does not mean:</p>
+      <ul>
+        <li>that the licence is current now</li>
+        <li>that the business is insured</li>
+        <li>that the business is competent, or that we think it is</li>
+        <li>that the licence covers every kind of work the business advertises</li>
+        <li>that we accept any responsibility for work performed by that business</li>
+      </ul>
+      <p>
+        A licence number shown without a verified badge was read from the business’s own
+        published material and has not been checked. Check it yourself before you commit
+        money. The <a href="/tools/licence-check/">licence check tool</a>
+        takes you straight to the official register.
+      </p>
+
+      <h2>4. Ratings and reviews</h2>
+      <p>
+        Where a star rating appears, it was read from the Google Places API on the date shown
+        beside it and is Google’s number, not ours. Where no rating appears, we do not have
+        one, and the page links to the business’s Google profile instead of showing a figure
+        we cannot source. We do not write, buy, generate or edit reviews.
+      </p>
+
+      <h2>5. If you claim a listing</h2>
+      <p>By claiming a listing you confirm that:</p>
+      <ul>
+        <li>you own the business or are authorised to act for it</li>
+        <li>the information you publish is accurate and not misleading</li>
+        <li>any licence or registration number you supply is genuinely held by that business</li>
+        <li>you will keep the listing current, or release the claim</li>
+      </ul>
+      <p>
+        Claiming and maintaining a listing is free. We may suspend a listing or revoke a
+        claim where information is false, where a licence number is not held, or where the
+        listing is used to mislead. Publishing a licence number you do not hold is also a
+        matter for the relevant state regulator.
+      </p>
+
+      <h2>6. Removal</h2>
+      <p>
+        A business can have its listing removed at any time, at no cost, without giving a
+        reason, by contacting us from an address connected to the business. We will action
+        it within five business days. This is not conditional on anything.
+      </p>
+
+      <h2>7. What is not permitted</h2>
+      <ul>
+        <li>Automated harvesting, scraping or bulk extraction of the listings.</li>
+        <li>Republishing the compiled directory, or a substantial part of it, as your own.</li>
+        <li>Using contact details from this site to send unsolicited commercial messages. That is also a Spam Act problem, not just a terms problem.</li>
+        <li>Attempting to manipulate ordering, or submitting listings for businesses that do not exist.</li>
+        <li>Using the site in a way that interferes with it working for anyone else.</li>
+      </ul>
+      <p>
+        Legitimate crawling is welcome. The sitemap index is at
+        <a href="/sitemap.xml">/sitemap.xml</a>, the machine readable summary is at
+        <a href="/llms.txt">/llms.txt</a>, and the crawl rules are in
+        <a href="/robots.txt">robots.txt</a>.
+      </p>
+
+      <h2>8. Intellectual property</h2>
+      <p>
+        Facts about a business belong to that business and we claim nothing over them. The
+        compiled directory, the taxonomy, the service area modelling, the generated
+        statistics, the editorial content and the design of this site are ours. Business
+        names, logos and trade marks belong to their owners and appear here to identify the
+        business.
+      </p>
+
+      <h2>9. Third party links</h2>
+      <p>
+        Outbound links go to sites we do not control. We are not responsible for their
+        content, their accuracy or their privacy practices. A link is not an endorsement,
+        including where it is a dofollow link.
+      </p>
+
+      <h2>10. Liability</h2>
+      <p>
+        The site is provided as is. To the extent permitted by law we exclude all warranties
+        and are not liable for loss arising from reliance on information here, from dealings
+        with a business found here, or from the site being unavailable.
+      </p>
+      <p>
+        Nothing in these terms excludes, restricts or modifies any consumer guarantee or
+        right under the Australian Consumer Law that cannot lawfully be excluded. Where our
+        liability can be limited but not excluded, it is limited to resupplying the service.
+      </p>
+
+      <h2>11. Changes</h2>
+      <p>
+        These terms can change. The effective date at the top is the date of the last build
+        that changed them. Continuing to use the site after a change means accepting it.
+      </p>
+
+      <h2>12. Governing law</h2>
+      <p>
+        These terms are governed by the law of New South Wales, and the courts of New South
+        Wales have jurisdiction. That is a fitting amount of irony for a site built around
+        ignoring the state line.
+      </p>
+
+      <h2>13. Contact</h2>
+      <p>
+        <a href={'mailto:' + SITE.email}>{SITE.email}</a>, or the
+        <a href={url.contact()}>contact page</a>.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Common questions about these terms" />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'Related',
+        links: [
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+        ],
+      },
+      {
+        heading: 'Get in touch',
+        links: [
+          { href: url.contact(), label: 'Contact us' },
+          { href: url.claim(), label: 'Claim a listing' },
+          { href: url.partners(), label: 'Link partners' },
+        ],
+      },
+    ]}
+  />
+</Base>

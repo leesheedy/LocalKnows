@@ -1,0 +1,49 @@
+---
+import MoneyPage from '~/components/MoneyPage.astro';
+import {
+  STATES,
+  liveLocalities,
+  activeCategoriesInLocality,
+  listingsInLocalityCategory,
+  localityCategoryStats,
+  POLICY,
+} from '~/lib/repo';
+import { BUILD_DATE, chunk } from '~/lib/build';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const locality of liveLocalities()) {
+    for (const { category } of activeCategoriesInLocality(locality.id)) {
+      const rows = listingsInLocalityCategory(locality.id, category.id);
+      if (!rows.length) continue;
+      paths.push({
+        params: {
+          state: STATES[locality.state].slug,
+          place: locality.slug,
+          category: category.slug,
+        },
+        props: {
+          locality,
+          category,
+          listings: chunk(rows, POLICY.perPage)[0],
+          stats: localityCategoryStats(locality.id, category.id),
+          page: 1,
+          totalPages: Math.max(1, Math.ceil(rows.length / POLICY.perPage)),
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+const { locality, category, listings, stats, page, totalPages } = Astro.props;
+---
+<MoneyPage
+  locality={locality}
+  category={category}
+  listings={listings}
+  stats={stats}
+  page={page}
+  totalPages={totalPages}
+  buildDate={BUILD_DATE}
+/>

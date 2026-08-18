@@ -1,0 +1,1239 @@
+[
+  {
+    "name": "The Bended Elbow",
+    "slug": "the-bended-elbow",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "480 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 6266",
+    "website": "https://thebendedelbow.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Bended+Elbow+Albury+NSW",
+    "facebook": "https://www.facebook.com/THEBENDEDELBOWALBURY",
+    "instagram": "https://www.instagram.com/thebendedelbow/",
+    "description": "A contemporary Australian styled hotel on Dean Street spread over two levels with multiple dining areas. There is a rooftop beer garden, a Melbourne-style alfresco laneway and a modern bistro, with a bar pouring tap beers, wines, spirits and cocktails. The venue runs live music and trivia nights and takes private function bookings.",
+    "highlights": [
+      "Rooftop beer garden open Thursday to Saturday",
+      "Melbourne-style alfresco laneway",
+      "Two-level venue with several dining areas",
+      "Tap beers, wines, spirits and cocktails",
+      "Live music and trivia nights",
+      "Private function bookings"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "00:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 2, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "23:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "23:00", "closed": false }
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "live_music": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "function_room": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://thebendedelbow.com.au/",
+      "https://www.alburywodongaaustralia.com.au/food-wine-and-dining/pubs-clubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Sodens Hotel",
+    "slug": "sodens-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "459 Wilson Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 6945",
+    "website": "https://sodenshotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sodens+Hotel+Albury+NSW",
+    "facebook": "https://www.facebook.com/Sodens.Hotel",
+    "instagram": "https://www.instagram.com/sodenshotel_albury/",
+    "description": "A Wilson Street hotel with a family-friendly bistro, a sports bar and a beer garden. It has TAB, Keno and gaming facilities and a kids' play area, and runs live music on Friday and Saturday nights. Private function spaces include the Stable Bar, the Lounge and the Birdcage, used for birthdays, Christmas parties, business events, weddings and wakes.",
+    "highlights": [
+      "Family-friendly bistro",
+      "Beer garden and kids' play area",
+      "Live music Friday and Saturday",
+      "TAB, Keno and gaming",
+      "Three function spaces: Stable Bar, Lounge and Birdcage"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "00:00", "closed": false }
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "live_music": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "pokies": "yes",
+      "tab": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://sodenshotel.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Commercial Club Albury",
+    "slug": "commercial-club-albury",
+    "categorySlug": "sports-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "618 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6057 2000",
+    "website": "https://commercialclubalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Commercial+Club+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/Commercial.Club.Albury/",
+    "description": "A large licensed club on Dean Street. Dining is spread across The Grill restaurant and Reflections Cafe, which serves breakfast and pastries from the club's own bakehouse, and there is a sports bar beside The Grill with multiple screens for sport and racing, TAB and Keno and an outdoor courtyard. The club also runs gaming promotions, artist shows and bands, a bottle shop, an on-site golf motel and sporting sections covering golf, lawn bowls, cue sports, squash and gym.",
+    "highlights": [
+      "The Grill restaurant and Reflections Cafe",
+      "Sports bar with TAB, Keno and outdoor courtyard",
+      "Function rooms from board meetings to large events",
+      "Live entertainment and artist shows",
+      "Golf, lawn bowls, cue sports, squash and gym sections",
+      "On-site golf motel accommodation"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "tab": "yes",
+      "pokies": "yes",
+      "function_room": "yes",
+      "parking": "yes",
+      "accommodation": "yes",
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://commercialclubalbury.com.au/",
+      "https://commercialclubalbury.com.au/restaurants/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "SS&A Albury",
+    "slug": "ssa-albury",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "570-582 Olive Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 2222",
+    "website": "https://ssaclub.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SS%26A+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/ssaclubalbury",
+    "instagram": "https://www.instagram.com/ssa_albury/",
+    "description": "The Albury Sailors, Soldiers and Airmen's Club on Olive Street, which traces its origins to a 1944 war services hall appeal. It has three bars with distinct identities: The Studio with free live entertainment on Friday and Saturday nights, the Aurum Lounge, and The Locker Room sports bar with giant screens and betting facilities. There is also a cafe and the Social Bar and Dining restaurant serving club and pub classics such as steaks, schnitzels and burgers alongside Asian dishes and a kids' menu, plus conference and function facilities and free on-site parking.",
+    "highlights": [
+      "Three bars: The Studio, Aurum Lounge and The Locker Room",
+      "Free live entertainment Friday and Saturday nights",
+      "Sports bar with giant screens and betting facilities",
+      "Social Bar and Dining restaurant plus a cafe",
+      "Conference and function facilities",
+      "Free on-site parking, wheelchair access via David Street"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "04:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "04:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "tab": "yes",
+      "function_room": "yes",
+      "parking": "yes",
+      "wheelchair_accessible": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://ssaclub.com.au/contact-us/",
+      "https://www.ssaclub.com.au/about-us/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albion Hotel",
+    "slug": "albion-hotel-albury",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "593 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 8322 2022",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albion+Hotel+Albury+NSW",
+    "facebook": "https://www.facebook.com/albionhotelalbury/",
+    "description": "A Dean Street pub that has been part of the Albury CBD for over 100 years. The ground floor bistro serves pub-style counter meals and there is a rooftop bar upstairs for cocktails, spritzes and a grazing menu. The hotel also operates three function rooms and runs a bottomless brunch on Saturdays and Sundays.",
+    "highlights": [
+      "Ground floor bistro with pub-style counter meals",
+      "Rooftop bar with cocktails and grazing menu",
+      "Three function rooms",
+      "Bottomless brunch Saturday and Sunday"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "function_room": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf",
+      "https://www.alburywodongaaustralia.com.au/13044/albion-hotel-albury/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Public House Albury",
+    "slug": "public-house-albury",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "491 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "website": "https://www.publichousealbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Public+House+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/Publichousealbury/",
+    "instagram": "https://www.instagram.com/publichousealbury/",
+    "description": "A Dean Street pub serving contemporary pub food built on locally grown seasonal produce, alongside craft beers, regional wines and an extensive cocktail list that includes pre-order Cocktail Trees of twelve cocktails and frozen Poptails. Weekly regulars include happy hour from 4pm to 6pm daily, mini martinis on Wednesday evenings, two-for-one pizzas from noon on Thursdays and DJs from 9pm on Friday and Saturday. A kids menu is available and the venue takes function bookings.",
+    "highlights": [
+      "Contemporary pub food from local seasonal produce",
+      "Craft beers, regional wines and an extensive cocktail list",
+      "Cocktail Trees and frozen Poptails",
+      "Happy hour daily 4pm to 6pm",
+      "Two-for-one pizzas Thursdays from noon",
+      "DJs Friday and Saturday from 9pm"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "licensed": "yes",
+      "bookings": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.publichousealbury.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Beer Deluxe Albury",
+    "slug": "beer-deluxe-albury",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "491 Kiewa Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 8322 2070",
+    "website": "https://beerdeluxealbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beer+Deluxe+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/beerdeluxealbury",
+    "instagram": "https://www.instagram.com/beerdeluxe_albury/",
+    "description": "A Kiewa Street pub that describes itself as Albury's home of entertainment, good times and cold beers. It has a beer garden, large screens showing live sport, a pub classics kitchen and a stage used for live music and touring acts. Trivia nights and function bookings are also offered.",
+    "highlights": [
+      "Beer garden",
+      "Live sport on large screens",
+      "Live music and touring acts",
+      "Pub classics kitchen",
+      "Trivia nights",
+      "Functions"
+    ],
+    "hours": [
+      { "day": 1, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "22:00", "closed": false }
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "live_music": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://beerdeluxealbury.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Star Hotel",
+    "slug": "star-hotel-albury",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "502 Guinea Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 3176",
+    "website": "https://www.starhotelalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Star+Hotel+Albury+NSW",
+    "facebook": "https://www.facebook.com/StarBarAlbury",
+    "instagram": "https://www.instagram.com/starhotelalbury/",
+    "description": "A Guinea Street hotel established in 1874 with a newly renovated public bar, a bistro, a sports bar and a beer garden. Carlton Draught tank beer is poured on site. Two function spaces, The Laneway and The Shed, are available for events.",
+    "highlights": [
+      "Established 1874",
+      "Renovated public bar and sports bar",
+      "Family friendly bistro",
+      "Beer garden",
+      "Carlton Draught tank beer",
+      "The Laneway and The Shed function spaces"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "kid_friendly": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.starhotelalbury.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Astor Hotel Albury",
+    "slug": "astor-hotel-albury",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "641 Young Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 1922",
+    "website": "https://www.astorhotelalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Astor+Hotel+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/AstorHotelAlbury",
+    "instagram": "https://www.instagram.com/astorhotelalbury/",
+    "description": "A Young Street hotel that describes its look as where retro meets modern. It combines a pub and bar with a food offering the Visit Albury Wodonga dining guide describes as pub style meals featuring a woodfire grill and rotisserie. The hotel also has accommodation, hosts live events and is used as a function and photoshoot venue.",
+    "highlights": [
+      "Retro-styled hotel bar and dining room",
+      "Pub meals from a woodfire grill and rotisserie",
+      "On-site accommodation",
+      "Live events",
+      "Function venue"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes",
+      "function_room": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://www.astorhotelalbury.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Brady's Railway Hotel",
+    "slug": "bradys-railway-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "450 Smollett Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 4700",
+    "website": "https://www.bradysrailwayhotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Brady%27s+Railway+Hotel+Albury+NSW",
+    "facebook": "https://www.facebook.com/bradysrailwayhotel",
+    "instagram": "https://www.instagram.com/bradysrailwayhotel_albury/",
+    "description": "A Smollett Street pub with a bistro serving pub food and contemporary Australian dishes, a beer garden, and a public bar showing live sport. There is a drive-through bottle shop open until midnight Monday to Saturday. Weekly regulars include raffles, trivia, music bingo, joker poker and a members draw, and the hotel has function facilities.",
+    "highlights": [
+      "Bistro open for lunch daily and dinner nightly",
+      "Beer garden",
+      "Public bar with live sport",
+      "Drive-through bottle shop",
+      "Raffles, trivia, music bingo and joker poker",
+      "Function facilities"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.bradysrailwayhotel.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Dux Albury",
+    "slug": "dux-albury",
+    "categorySlug": "wine-bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "466 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 5024 5555",
+    "website": "https://www.duxalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dux+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/duxalbury",
+    "instagram": "https://www.instagram.com/duxalbury/",
+    "description": "A Dean Street bar and dining room offering curated wines, cocktails and share plates, with bar seating and intimate dining. Private event bookings can be made outside standard trading hours. Dux was named a Critics' Pick in the SMH Good Food Guide 2025.",
+    "highlights": [
+      "Curated wine list and cocktails",
+      "Share plates",
+      "Bar seating and intimate dining",
+      "Private event bookings outside standard hours",
+      "Critics' Pick, SMH Good Food Guide 2025"
+    ],
+    "hours": [
+      { "day": 2, "opens": "15:00", "closes": "22:30", "closed": false },
+      { "day": 3, "opens": "15:00", "closes": "22:30", "closed": false },
+      { "day": 4, "opens": "15:00", "closes": "22:30", "closed": false },
+      { "day": 5, "opens": "12:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "00:00", "closed": false }
+    ],
+    "attributes": {
+      "licensed": "yes",
+      "bookings": "yes",
+      "dine_in": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.duxalbury.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Thirsty Devil Brewery",
+    "slug": "the-thirsty-devil-brewery",
+    "categorySlug": "bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "289 Townsend Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "0428 769 126",
+    "website": "https://thethirstydevil.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Thirsty+Devil+Brewery+Albury+NSW",
+    "facebook": "https://www.facebook.com/TheThirstyDevilBrewery",
+    "instagram": "https://www.instagram.com/the_thirsty_devil_brewery/",
+    "description": "A micro brewery on Townsend Street that brews on site and pours from a 14-tap bar. There are two beer gardens, a large function room and the Hungry Devil food van operating during peak times. The bar also serves cocktails such as espresso martinis, Aperol spritzes and ginger mules and produces its own spirits. Dogs are welcome on leads and live music runs seasonally in the warmer months.",
+    "highlights": [
+      "Beer brewed on site, 14 taps",
+      "Two beer gardens",
+      "Hungry Devil food van at peak times",
+      "Large function room",
+      "Dogs welcome on leads",
+      "Seasonal live music in the warmer months"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "dog_friendly": "yes",
+      "live_music": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://thethirstydevil.com.au/",
+      "https://www.alburywodongaaustralia.com.au/17198/the-thirsty-devil-brewery/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Boomerang Hotel",
+    "slug": "boomerang-hotel-lavington",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "312-316 Wagga Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6025 1711",
+    "website": "https://www.boomeranghotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Boomerang+Hotel+Lavington+NSW",
+    "facebook": "https://www.facebook.com/the.boomerang.hotel",
+    "instagram": "https://www.instagram.com/boomerang.hotel",
+    "description": "A Wagga Road hotel in Lavington with a family bistro serving pub fare, steaks and kids meals, a sports bar with TAB, and gaming facilities. Breakfast is served daily from 7.30am. The hotel has 38 motel rooms with ensuites, air-conditioning, TV and WiFi, an indoor pool, and function rooms used for birthdays, weddings and corporate events.",
+    "highlights": [
+      "Family bistro with steaks and a kids menu",
+      "Sports bar with TAB",
+      "Gaming facilities",
+      "38 motel rooms with ensuites",
+      "Indoor pool",
+      "Function rooms"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "03:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "03:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "breakfast": "yes",
+      "kid_friendly": "yes",
+      "tab": "yes",
+      "pokies": "yes",
+      "accommodation": "yes",
+      "pool": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.boomeranghotel.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kinross Woolshed",
+    "slug": "kinross-woolshed",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Thurgoona",
+    "state": "NSW",
+    "addressLine": "5 Kinross Court",
+    "suburb": "Thurgoona",
+    "postcode": "2640",
+    "phone": "02 6046 9889",
+    "website": "https://www.kinrosswoolshed.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kinross+Woolshed+Thurgoona+NSW",
+    "facebook": "https://www.facebook.com/kinrosshotel/",
+    "instagram": "https://www.instagram.com/kinrosshotel/",
+    "description": "A hotel in Thurgoona set in a converted woolshed on a wide open site. It has a sports bar, a bistro, a beer garden and outdoor deck, and a gaming lounge, plus function spaces. The venue hosts live music and entertainment and is family friendly.",
+    "highlights": [
+      "Set in a converted woolshed",
+      "Sports bar and gaming lounge",
+      "Bistro dining",
+      "Beer garden and outdoor deck",
+      "Live music and entertainment",
+      "Function spaces"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "pokies": "yes",
+      "live_music": "yes",
+      "kid_friendly": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.kinrosswoolshed.com.au/",
+      "https://www.alburywodongaaustralia.com.au/food-wine-and-dining/pubs-clubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Jindera Hotel",
+    "slug": "jindera-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Jindera",
+    "state": "NSW",
+    "addressLine": "121 Urana Road",
+    "suburb": "Jindera",
+    "postcode": "2642",
+    "phone": "02 6026 3258",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jindera+Hotel+Jindera+NSW",
+    "facebook": "https://www.facebook.com/jinderapub/",
+    "description": "A country pub in the centre of Jindera serving classic pub meals and drinks. It offers indoor and outdoor dining with a spacious beer garden and runs regular community events. Disabled access is available.",
+    "highlights": [
+      "Country pub in the centre of Jindera",
+      "Classic pub meals",
+      "Indoor and outdoor dining",
+      "Spacious beer garden",
+      "Regular community events"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/food-and-drink/jindera-hotel"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Howlong Golf Resort",
+    "slug": "howlong-golf-resort",
+    "categorySlug": "golf-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Howlong",
+    "state": "NSW",
+    "addressLine": "186 Golf Club Drive",
+    "suburb": "Howlong",
+    "postcode": "2643",
+    "phone": "02 6026 5321",
+    "website": "https://howlonggolf.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Howlong+Golf+Resort+Howlong+NSW",
+    "facebook": "https://www.facebook.com/howlonggolf/",
+    "description": "A golf club and resort on Golf Club Drive at Howlong. Alongside the golf course it runs the Fairways Bistro, a pro shop, on-site resort accommodation and a functions venue. Separate contact lines are published for the pro shop, accommodation, bistro and memberships.",
+    "highlights": [
+      "Golf course with pro shop",
+      "Fairways Bistro",
+      "On-site resort accommodation",
+      "Functions venue"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://howlonggolf.com.au/contact/",
+      "https://www.alburywodongaaustralia.com.au/8182/howlong-country-golf-club/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Club Corowa",
+    "slug": "club-corowa",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Corowa",
+    "state": "NSW",
+    "addressLine": "30 Betterment Parade",
+    "suburb": "Corowa",
+    "postcode": "2646",
+    "phone": "02 6030 5000",
+    "website": "https://www.clubcorowa.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Club+Corowa+Corowa+NSW",
+    "description": "The Corowa RSL club on Betterment Parade, trading as Club Corowa. It has a bistro and cafe with alfresco dining, a club lounge and the Silks sports bar serving cocktails, gourmet pizza and appetisers. Function spaces run across three levels and include a high-tech auditorium. The club also has indoor and outdoor playgrounds and an 18-hole Mini Golf on the Murray course, and runs a shuttle service from Thursday to Sunday between 5pm and close.",
+    "highlights": [
+      "Bistro and cafe with alfresco dining",
+      "Silks sports bar",
+      "Function spaces across three levels plus an auditorium",
+      "Indoor and outdoor playgrounds",
+      "18-hole Mini Golf on the Murray",
+      "Shuttle service Thursday to Sunday from 5pm"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "23:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "00:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "courtesy_bus": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.clubcorowa.com.au/",
+      "https://www.corowarsl.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wodonga RSL",
+    "slug": "wodonga-rsl",
+    "categorySlug": "rsl-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "29 Reid Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 2023",
+    "website": "https://wodongarsl.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+RSL+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/WodongaRSL",
+    "instagram": "https://www.instagram.com/wodongarsl",
+    "description": "An RSL club on Reid Street with The Fowlers Stove Bistro, which seats 100 inside plus an alfresco balcony, and a bar stocking local wines and Australian beverages. The club is pokie free and family friendly, welcoming veterans, families and the general public. Function rooms are available for hire and a courtesy bus runs Friday nights from 5pm to 9pm across local suburbs for a gold coin donation.",
+    "highlights": [
+      "The Fowlers Stove Bistro, 100 seats plus alfresco balcony",
+      "Pokie free club",
+      "Bar with local wines",
+      "Function rooms for hire",
+      "Courtesy bus Friday nights 5pm to 9pm",
+      "Open on ANZAC Day and Remembrance Day"
+    ],
+    "hours": [
+      { "day": 0, "opens": "15:00", "closes": "18:00", "closed": false },
+      { "day": 1, "opens": "15:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "15:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "15:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "15:00", "closes": "20:00", "closed": false },
+      { "day": 6, "opens": "12:00", "closes": "18:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "kid_friendly": "yes",
+      "courtesy_bus": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://wodongarsl.com.au/",
+      "https://wodongarsl.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Blazing Stump Hotel",
+    "slug": "blazing-stump-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "4315 Anzac Parade",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 2041",
+    "website": "https://blazingstumphotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blazing+Stump+Hotel+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/BlazingStumpHotel",
+    "instagram": "https://www.instagram.com/blazingstumphotelwodonga/",
+    "description": "A family pub and dining venue on Anzac Parade that has operated on the site since 1880. It has a modern sports bar with the biggest sports screen in Wodonga, a large outdoor tank bar deck pouring brewery-fresh tank beer, a bottle shop open until late, and a 400 seat bistro that includes a Mountain deck looking out to the ranges.",
+    "highlights": [
+      "Modern sports bar with the biggest sports screen in Wodonga",
+      "Outdoor tank bar deck with tank beer on tap",
+      "400 seat bistro with Mountain deck",
+      "Bottle shop open until late",
+      "Family pub dining"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://blazingstumphotel.com.au/contact/",
+      "https://www.blazingstumphotel.com.au/",
+      "https://www.alburywodongaaustralia.com.au/food-wine-and-dining/pubs-clubs/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Huon Hill Hotel",
+    "slug": "huon-hill-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "48 Reid Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 1399",
+    "website": "https://huonhill.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Huon+Hill+Hotel+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/HuonHill/",
+    "instagram": "https://www.instagram.com/huonhillwodonga/",
+    "description": "A Reid Street pub and bistro in Wodonga. The bistro menu blends classic pub favourites with pizzas, gourmet burgers, salads and pub-style mains, and the venue publishes daily bistro specials and a live music line-up on its What's On page. Function bookings are taken and table bookings can be made online.",
+    "highlights": [
+      "Bistro with pizzas, gourmet burgers, salads and pub mains",
+      "Daily bistro specials",
+      "Live music line-up",
+      "Function bookings",
+      "Online table bookings"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "11:00", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "11:00", "closes": "00:00", "closed": false },
+      { "day": 5, "opens": "11:00", "closes": "01:00", "closed": false },
+      { "day": 6, "opens": "11:00", "closes": "01:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "bookings": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://huonhill.com.au/contact-us/",
+      "https://huonhill.com.au/eat/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Church St Hotel",
+    "slug": "church-st-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "49 Church Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 2222",
+    "website": "https://www.churchsthotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Church+St+Hotel+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/442060389333876",
+    "instagram": "https://www.instagram.com/cshwodonga",
+    "description": "A hotel on Church Street in central Wodonga described in the Visit Albury Wodonga dining guide as a gastro pub serving contemporary cuisine and cocktails. The hotel's own site lists food and drink service, accommodation bookings, function facilities and special events.",
+    "highlights": [
+      "Gastro pub menu",
+      "Cocktail list",
+      "Accommodation bookings",
+      "Function facilities",
+      "Special events"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.churchsthotel.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Lincoln",
+    "slug": "the-lincoln-wodonga",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "64 Lincoln Causeway, Gateway Island",
+    "suburb": "Wodonga",
+    "phone": "02 6041 1114",
+    "website": "https://www.thelincoln.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Lincoln+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/thelincoln64/",
+    "instagram": "https://www.instagram.com/thelincoln64/",
+    "description": "A gastro pub on Gateway Island at Wodonga, described in the Visit Albury Wodonga dining guide as having a cocktail lounge and beer garden. The venue serves casual bistro dining and offers large flexible indoor and outdoor spaces used for corporate functions, private events and weddings. Online bookings and gift cards are available.",
+    "highlights": [
+      "Cocktail lounge and beer garden",
+      "Casual bistro dining",
+      "Large indoor and outdoor function spaces",
+      "Wedding and corporate event venue",
+      "Online bookings"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "bookings": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.thelincoln.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Goods Shed",
+    "slug": "the-goods-shed-wodonga",
+    "categorySlug": "bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "1/71 Church Street",
+    "suburb": "Wodonga",
+    "phone": "02 6056 8828",
+    "website": "https://www.thegoodsshedwodonga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Goods+Shed+Wodonga+VIC",
+    "facebook": "https://www.facebook.com/goodsshed",
+    "description": "A bar and restaurant on Church Street, Wodonga running a seasonal menu and what it calls the largest craft beer fridge between Melbourne and Sydney. Pizza and fries are served daily between 3pm and 5pm. The venue takes online reservations and function bookings and sells gift vouchers.",
+    "highlights": [
+      "Large craft beer range",
+      "Seasonal menu",
+      "Pizza and fries daily 3pm to 5pm",
+      "Function bookings",
+      "Online reservations"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:30", "closes": "21:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "11:30", "closes": "00:00", "closed": false },
+      { "day": 6, "opens": "11:30", "closes": "00:00", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "bookings": "yes",
+      "function_room": "yes",
+      "licensed": "yes"
+    },
+    "sources": [
+      "https://www.thegoodsshedwodonga.com.au/",
+      "https://www.visitalburywodonga.com/wp-content/uploads/2024/08/Eat-Drink-Dining-guide-24-25.pdf"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wodonga Golf Club",
+    "slug": "wodonga-golf-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "10 Clubhouse Place",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6059 1552",
+    "website": "https://wodongagolf.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+Golf+Club+Wodonga+VIC",
+    "description": "A golf club on Clubhouse Place set in a natural bush environment where native trees are a feature and Felltimber Creek runs through the layout. The course measures over 6,100 metres and is open daily except Christmas Day. On site are the Clubhouse Bar & Bistro, open Wednesday to Sunday for lunch and dinner with Sunday lunch, a lounge and spike bar, the only golf shop in Wodonga, and function and corporate event spaces.",
+    "highlights": [
+      "Course over 6,100 metres in a bush setting",
+      "Felltimber Creek runs through the course",
+      "Clubhouse Bar & Bistro open Wednesday to Sunday",
+      "Lounge and spike bar",
+      "Pro shop",
+      "Function and corporate event spaces"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://wodongagolf.com.au/",
+      "https://www.alburywodongaaustralia.com.au/13149/the-clubhouse-bar-and-bistro/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Birallee Tavern",
+    "slug": "the-birallee-tavern",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "97 Melrose Drive",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6059 4666",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Birallee+Tavern+Wodonga+VIC",
+    "description": "A locally owned tavern on Melrose Drive in Wodonga serving meals and drinks for occasions from casual lunches to celebrations. The venue has a dining room, a deck seating area, Bobby's Bar for cocktails and the Bira Bar gaming room, and hosts functions and events.",
+    "highlights": [
+      "Locally owned tavern",
+      "Deck seating area",
+      "Bobby's Bar for cocktails",
+      "Bira Bar gaming room",
+      "Function and event hosting"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "outdoor_seating": "yes",
+      "pokies": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.alburywodongaaustralia.com.au/11636/the-birallee-tavern/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Tanswell's Hotel",
+    "slug": "tanswells-hotel",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "50 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "0413 400 058",
+    "website": "https://www.tanswellshotel.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tanswell%27s+Hotel+Beechworth+VIC",
+    "facebook": "https://www.facebook.com/tanswellshotel/",
+    "instagram": "https://www.instagram.com/tanswellshotel",
+    "description": "A hotel built in 1853 on Ford Street in the centre of Beechworth. It has a front bar, a bandroom used for live music, and two levels of different dining areas. The kitchen serves lunch from noon to 2pm and dinner from 5.30pm to 8.30pm seven days, and the hotel takes accommodation and function bookings.",
+    "highlights": [
+      "Built in 1853 in the centre of Beechworth",
+      "Front bar with open fire",
+      "Bandroom for live music",
+      "Two levels of dining areas",
+      "Lunch and dinner seven days",
+      "Accommodation and function bookings"
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "live_music": "yes",
+      "accommodation": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.tanswellshotel.com.au/",
+      "https://www.explorebeechworth.com.au/listing/tanswells-hotel-beechworth/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Bridge Road Brewers",
+    "slug": "bridge-road-brewers",
+    "categorySlug": "bars",
+    "vertical": "pubs_clubs",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "42 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "03 5728 2703",
+    "website": "https://bridgeroadbrewers.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bridge+Road+Brewers+Beechworth+VIC",
+    "facebook": "https://www.facebook.com/BridgeRoadBrewers",
+    "instagram": "https://www.instagram.com/bridgeroadbrewers/",
+    "description": "A brewery and taproom on Ford Street, Beechworth, with a second venue in Brunswick East and an outlet at Melbourne Airport. The Beechworth venue serves pizza alongside the brewery's beers, sells packaged beer to take away, and runs tastings, events and venue bookings.",
+    "highlights": [
+      "Brewery and taproom in Beechworth",
+      "Pizza served with the beer range",
+      "Packaged beer to take away",
+      "Beer tastings and events",
+      "Venue bookings"
+    ],
+    "attributes": {
+      "tastings": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://bridgeroadbrewers.com.au/",
+      "https://www.explorebeechworth.com.au/things-to-do/eat-drink/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Star Hotel Yackandandah",
+    "slug": "star-hotel-yackandandah",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "30 High Street",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "phone": "02 6027 1493",
+    "website": "https://www.starhotelyack.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Star+Hotel+Yackandandah+Yackandandah+VIC",
+    "facebook": "https://www.facebook.com/starhotelyack/",
+    "instagram": "https://www.instagram.com/starhotelyackandandah/",
+    "description": "A High Street pub first opened in 1863 and bought by Matt and Kim Frauenfelder in 2016, since restored with a renovated restaurant and beer garden. The kitchen centres on a fusion of southern USA and Australian barbecue with all meat smoked on the premises in hand-made smokers. The bar pours local beer through a partnership with Two Pot Brewing Co, gin and spirits from Yack Creek and Backwoods distilleries, and local wines and ciders. The pub is a live music venue and hosts a main stage for the Yackandandah Folk Festival and the Spring Migration Festival.",
+    "highlights": [
+      "Opened 1863 on Yackandandah's High Street",
+      "American-style barbecue smoked on site",
+      "Beer garden",
+      "Local beer from Two Pot Brewing Co",
+      "Gin and spirits from Yack Creek and Backwoods distilleries",
+      "Live music venue and festival stage"
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "live_music": "yes",
+      "meals": "yes",
+      "dine_in": "yes"
+    },
+    "sources": [
+      "https://www.starhotelyack.com.au/contact",
+      "https://www.starhotelyack.com.au/",
+      "https://www.visitmelbourne.com/regions/high-country/eat-and-drink/restaurants/star-hotel-yackandandah"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Telegraph Hotel",
+    "slug": "telegraph-hotel-chiltern",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Chiltern",
+    "state": "VIC",
+    "addressLine": "23-25 Conness Street",
+    "suburb": "Chiltern",
+    "postcode": "3683",
+    "phone": "03 5726 1470",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Telegraph+Hotel+Chiltern+VIC",
+    "facebook": "https://www.facebook.com/telegraphchiltern/",
+    "description": "A hotel on Conness Street in the middle of Chiltern's historic streetscape. The bistro serves parmigiana, pizzas, fish and chips, steaks and burgers, and the pub has a large beer garden and TAB. Friday nights bring community raffles, and happy hours run through the week.",
+    "highlights": [
+      "In Chiltern's historic Conness Street streetscape",
+      "Bistro with parmigiana, pizza, steaks and burgers",
+      "Large beer garden",
+      "TAB",
+      "Friday night community raffles",
+      "Happy hours"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:30", "closes": "19:30", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "11:30", "closes": "21:30", "closed": false },
+      { "day": 4, "opens": "11:30", "closes": "21:00", "closed": false },
+      { "day": 5, "opens": "11:30", "closes": "01:00", "closed": false },
+      { "day": 6, "opens": "11:30", "closes": "01:00", "closed": false }
+    ],
+    "attributes": {
+      "beer_garden": "yes",
+      "outdoor_seating": "yes",
+      "meals": "yes",
+      "dine_in": "yes",
+      "tab": "yes"
+    },
+    "sources": [
+      "https://www.explorechiltern.com.au/listing/telegraph-hotel-chiltern-chiltern/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "The Victoria Hotel Rutherglen",
+    "slug": "the-victoria-hotel-rutherglen",
+    "categorySlug": "pubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Rutherglen",
+    "state": "VIC",
+    "addressLine": "90-94 Main Street",
+    "suburb": "Rutherglen",
+    "postcode": "3685",
+    "phone": "02 6032 8610",
+    "website": "https://www.victoriahotelrutherglen.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Victoria+Hotel+Rutherglen+Rutherglen+VIC",
+    "facebook": "https://www.facebook.com/VictoriaHotelRutherglen",
+    "instagram": "https://www.instagram.com/thevictoriarutherglen",
+    "description": "A landmark heritage hotel on Rutherglen's Main Street redeveloped as an owner-operated boutique hotel, and awarded AHA Victoria's Best Redeveloped Hotel. The restaurant serves flame-focused cooking with an emphasis on local produce and lunch and dinner run seven days, with takeaway pizza also available. Accommodation is 14 king suites, some of them dog friendly, and there are event spaces for functions.",
+    "highlights": [
+      "Heritage hotel on Rutherglen's Main Street",
+      "AHA Victoria's Best Redeveloped Hotel",
+      "Flame-grilled menu using local produce",
+      "Lunch and dinner seven days",
+      "Takeaway pizza",
+      "14 boutique king suites, select rooms dog friendly"
+    ],
+    "hours": [
+      { "day": 0, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 1, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 2, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 3, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 4, "opens": "11:30", "closes": "22:00", "closed": false },
+      { "day": 5, "opens": "11:30", "closes": "22:30", "closed": false },
+      { "day": 6, "opens": "11:30", "closes": "22:30", "closed": false }
+    ],
+    "attributes": {
+      "meals": "yes",
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "accommodation": "yes",
+      "dog_friendly": "yes",
+      "bookings": "yes",
+      "function_room": "yes"
+    },
+    "sources": [
+      "https://www.victoriahotelrutherglen.com.au/",
+      "https://www.explorerutherglen.com.au/listing/the-victoria-hotel-rutherglen-rutherglen/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

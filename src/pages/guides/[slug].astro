@@ -1,0 +1,263 @@
+---
+/**
+ * Guide detail. /guides/<slug>/
+ *
+ * The sidebar is doing real work. It names the author, prints the review date a
+ * second time, and points at the category pages the guide exists to support. A
+ * guide that links to nothing is a blog post. A guide that links to the money
+ * pages is part of why the money pages rank.
+ */
+import type { Category, Guide, Locality, StateCode } from '~/lib/types';
+import {
+  url,
+  STATES,
+  guides,
+  tools,
+  getCategoryBySlug,
+  liveLocalities,
+  listingsInLocalityCategory,
+  pageExists,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { humanDate } from '~/lib/build';
+import { renderMarkdown } from '~/lib/markdown';
+import { guideGraph, type Crumb } from '~/lib/seo';
+
+export async function getStaticPaths() {
+  return guides.map((guide) => ({
+    params: { slug: guide.slug },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props as { guide: Guide };
+
+const canonicalPath = url.guide(guide);
+const rendered = renderMarkdown(guide.body, pageExists);
+const toc = rendered.headings.filter((h) => h.level === 2);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Guides', href: url.guides() },
+  { name: guide.title, href: canonicalPath },
+];
+
+// The category pages this guide was written to support.
+const guideCategories = guide.categorySlugs
+  .map((slug) => getCategoryBySlug(slug))
+  .filter(Boolean) as Category[];
+
+const scope: StateCode[] =
+  guide.stateScope === 'both' ? (['NSW', 'VIC'] as StateCode[]) : guide.stateScope;
+
+/**
+ * Tool relevance is scored off words the guide actually uses, so a plumbing
+ * guide lands on the call out fee calculator rather than on whatever happens to
+ * sit first in the tools file.
+ */
+const liveTools = tools.filter((t) => t.status === 'live');
+const toolPool = liveTools.length ? liveTools : tools;
+const guideWords = Array.from(
+  new Set(
+    [
+      guide.title,
+      guide.description,
+      ...guideCategories.map((c) => c.name + ' ' + c.synonyms.join(' ')),
+    ]
+      .join(' ')
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length > 3),
+  ),
+);
+const relatedTools = toolPool
+  .map((t) => {
+    const hay = (t.title + ' ' + t.standfirst + ' ' + t.description).toLowerCase();
+    return { tool: t, score: guideWords.reduce((total, w) => total + (hay.includes(w) ? 1 : 0), 0) };
+  })
+  .sort((a, b) => b.score - a.score || a.tool.title.localeCompare(b.tool.title))
+  .slice(0, 3)
+  .map((x) => x.tool);
+
+// Towns where this guide's categories actually have something to show.
+const places = liveLocalities();
+const localityRows: { locality: Locality; category: Category; count: number }[] = [];
+for (const category of guideCategories) {
+  for (const locality of places) {
+    const count = listingsInLocalityCategory(locality.id, category.id).length;
+    if (count > 0) localityRows.push({ locality, category, count });
+  }
+}
+localityRows.sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name));
+const topLocalities = localityRows.slice(0, 8);
+
+const otherGuides = guides
+  .filter((g) => g.slug !== guide.slug)
+  .map((g) => ({
+    guide: g,
+    shared: g.categorySlugs.filter((s) => guide.categorySlugs.includes(s)).length,
+  }))
+  .sort((a, b) => b.shared - a.shared || b.guide.reviewedAt.localeCompare(a.guide.reviewedAt))
+  .slice(0, 6)
+  .map((x) => x.guide);
+
+const jsonLd = guideGraph(guide, crumbs);
+---
+
+<Base
+  kind="guide"
+  title={guide.title}
+  description={guide.description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  ogType="article"
+  publishedAt={guide.publishedAt}
+  modifiedAt={guide.reviewedAt}
+>
+  <div
+    class="wrap guide-grid"
+    style="display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;align-items:start;padding-bottom:56px"
+  >
+    <article>
+      <div class="pagehead">
+        <p class="eyebrow mono">Guide</p>
+        <h1>{guide.title}</h1>
+        <p class="mono" style="color:var(--wattle-ink);margin:14px 0 0">
+          Last reviewed <time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time>
+        </p>
+        <p class="standfirst">{guide.description}</p>
+        <div class="headmeta">
+          <span>{guide.author}, {guide.authorRole}</span>
+          <span>
+            &middot; Published{' '}
+            <time datetime={guide.publishedAt}>{humanDate(guide.publishedAt)}</time>
+          </span>
+          <span>
+            &middot; Reviewed{' '}
+            <time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time>
+          </span>
+          <span>&middot; {rendered.wordCount} words</span>
+        </div>
+      </div>
+
+      {toc.length > 1 && (
+        <nav class="toc" style="margin-top:26px" aria-label="On this page">
+          <h2>On this page</h2>
+          <ol>
+            {toc.map((h) => (
+              <li><a href={'#' + h.id}>{h.text}</a></li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
+      <div class="prose" set:html={rendered.html} />
+
+      <Faq faqs={guide.faqs ?? []} heading="Questions this guide gets asked" />
+    </article>
+
+    <aside class="guide-side" style="position:sticky;top:90px">
+      <div class="panel">
+        <div class="panel-head"><h2>About this guide</h2></div>
+        <div class="panel-body">
+          <dl class="deflist">
+            <dt>Author</dt>
+            <dd>{guide.author}</dd>
+            <dt>Role</dt>
+            <dd>{guide.authorRole}</dd>
+            <dt>Published</dt>
+            <dd><time datetime={guide.publishedAt}>{humanDate(guide.publishedAt)}</time></dd>
+            <dt>Reviewed</dt>
+            <dd><time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time></dd>
+            <dt>Covers</dt>
+            <dd>{scope.map((code) => STATES[code].name).join(' and ')}</dd>
+          </dl>
+          <p style="margin:16px 0 0;font-size:13.5px;color:var(--ink-60)">
+            This guide is reviewed every six months. If the date above has slipped past
+            that, <a href={url.contact()} style="color:var(--river)">tell us</a> and the
+            review gets brought forward.
+          </p>
+        </div>
+      </div>
+
+      {guideCategories.length > 0 && (
+        <div class="panel">
+          <div class="panel-head"><h2>Pages this guide supports</h2></div>
+          <div class="panel-body">
+            <div class="chips">
+              {guideCategories.map((c) => (
+                <a class="chip" href={url.category(c)}>{c.name}</a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {relatedTools.length > 0 && (
+        <div class="panel">
+          <div class="panel-head"><h2>Tools that go with it</h2></div>
+          <div class="panel-body">
+            <ul style="list-style:none;margin:0;padding:0">
+              {relatedTools.map((t, i) => (
+                <li
+                  style={
+                    i === 0
+                      ? 'padding:0 0 12px'
+                      : 'padding:12px 0;border-top:1px solid var(--line)'
+                  }
+                >
+                  <a href={url.tool(t)} style="font-size:15px;font-weight:600;color:var(--river)">
+                    {t.title}
+                  </a>
+                  <p style="margin:4px 0 0;font-size:13.5px;color:var(--ink-60)">{t.standfirst}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+    </aside>
+  </div>
+
+  <LinkBlock
+    heading="Where to go next"
+    groups={[
+      {
+        heading: 'Other guides',
+        links: otherGuides.map((g) => ({ href: url.guide(g), label: g.title })),
+      },
+      {
+        heading: 'State hubs',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+          { href: url.guides(), label: 'All guides' },
+        ],
+      },
+      {
+        heading: 'Towns to start in',
+        links: topLocalities.map((row) => ({
+          href: url.localityCategory(row.locality, row.category),
+          label: row.category.name + ' in ' + row.locality.name,
+          note: '(' + row.count + ')',
+          cross: row.locality.state === 'VIC',
+        })),
+      },
+    ]}
+  />
+
+  <style>
+    @media (max-width: 960px) {
+      .guide-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px !important;
+      }
+      .guide-side {
+        position: static !important;
+      }
+    }
+  </style>
+</Base>

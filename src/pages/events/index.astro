@@ -1,0 +1,278 @@
+---
+/**
+ * /events/ — every event, both states.
+ *
+ * Event rich results are close to uncontested in regional Australia, so the
+ * page is built to be read by a parser as well as a person: upcoming events
+ * grouped by type with real anchors, and passed events kept rather than deleted
+ * so the URLs never 404.
+ */
+import type { EventRecord } from '~/lib/types';
+import { url, events, localities, STATES } from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { slugify } from '~/lib/slug';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.events();
+
+const day = (iso: string) => iso.slice(0, 10);
+const asDate = (iso: string) => new Date(iso.length === 10 ? iso + 'T00:00:00Z' : iso);
+const dayNumber = (iso: string) => asDate(iso).getUTCDate();
+const monthShort = (iso: string) =>
+  asDate(iso).toLocaleDateString('en-AU', { month: 'short', timeZone: 'UTC' });
+
+/** Slugs repeat across the border, so the state has to be part of the match. */
+const localityFor = (e: EventRecord) =>
+  localities.find((l) => l.slug === e.localitySlug && l.state === e.state);
+
+const upcoming = events
+  .filter((e) => day(e.startDate) >= BUILD_DATE)
+  .sort((a, b) => a.startDate.localeCompare(b.startDate));
+
+const passed = events
+  .filter((e) => day(e.startDate) < BUILD_DATE)
+  .sort((a, b) => b.startDate.localeCompare(a.startDate))
+  .slice(0, 6);
+
+const typeGroups = [...new Set(upcoming.map((e) => e.eventType))]
+  .map((type) => ({
+    type,
+    id: 'type-' + slugify(type),
+    items: upcoming.filter((e) => e.eventType === type),
+  }))
+  .sort((a, b) => b.items.length - a.items.length || a.type.localeCompare(b.type));
+
+const nswCount = upcoming.filter((e) => e.state === 'NSW').length;
+const vicCount = upcoming.filter((e) => e.state === 'VIC').length;
+const freeCount = upcoming.filter((e) => e.isFree).length;
+const townCount = new Set(upcoming.map((e) => e.state + '/' + e.localitySlug)).size;
+
+const h1 = 'Events across the border';
+const description =
+  upcoming.length > 0
+    ? n(upcoming.length) +
+      ' events coming up in ' +
+      townCount +
+      ' towns across NSW and Victoria. Markets, open days, trade nights and come and try sessions. Free to list.'
+    : 'Markets, open days, trade nights and come and try sessions across NSW and Victoria. Nothing is scheduled right now. Listing an event is free.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Events', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How do I get an event listed?',
+    a: 'Send it through the contact form with the date, the venue address, the start time and what it costs. We check the venue exists and that the date is real, then it goes up. Events run by a business we already list are linked back to that listing.',
+  },
+  {
+    q: 'What happens to an event once it has passed?',
+    a: 'The page stays where it is. It gets a banner saying the event has finished and a link back to what is coming up next. Nothing is deleted and nothing 404s, because a URL that once had a link pointing at it should keep working.',
+  },
+  {
+    q: 'Does it cost anything to list an event?',
+    a: 'No. Listing an event is free and there is no paid position on this page. Events are ordered by date, soonest first, and nothing moves that order.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Upcoming events in NSW and Victoria',
+    items: upcoming.map((e) => ({ url: url.event(e), name: e.title })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="eventIndex"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">NSW &amp; Victoria &middot; what is on</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Markets, club open days, trade nights and expos on both sides of the Murray. Ordered
+        by date, soonest first. Listing one costs nothing and never has.
+      </p>
+      <div class="headmeta">
+        <span>{n(upcoming.length)} coming up</span>
+        {townCount > 0 && <span>&middot; {townCount} {townCount === 1 ? 'town' : 'towns'}</span>}
+        {freeCount > 0 && <span>&middot; {freeCount} free to attend</span>}
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    {events.length === 0 ? (
+      <div class="empty" style="margin-top:30px">
+        <p>No events on the calendar yet. If you run one, we will list it for nothing.</p>
+        <a class="btn" href={url.contact()}>Submit an event</a>
+      </div>
+    ) : (
+      <div class="statgrid">
+        <div><b>{n(upcoming.length)}</b><span>coming up</span></div>
+        {nswCount > 0 && <div><b>{nswCount}</b><span>in NSW</span></div>}
+        {vicCount > 0 && <div><b>{vicCount}</b><span>in Victoria</span></div>}
+        {freeCount > 0 && <div><b>{freeCount}</b><span>free entry</span></div>}
+        <div><b>{typeGroups.length}</b><span>{typeGroups.length === 1 ? 'kind of event' : 'kinds of event'}</span></div>
+      </div>
+    )}
+  </div>
+
+  {events.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Coming up</h2>
+            <p>Everything dated today or later. Jump to a kind of event, or read the lot.</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.contact()}>Submit an event</a>
+        </div>
+
+        {typeGroups.length > 0 && (
+          <div class="chips">
+            {typeGroups.map((g) => (
+              <a class="chip" href={'#' + g.id}>{g.type} <span class="mono">{g.items.length}</span></a>
+            ))}
+          </div>
+        )}
+
+        {upcoming.length === 0 ? (
+          <div class="empty">
+            <p>Nothing scheduled from {humanDate(BUILD_DATE)} onwards. Past events are below.</p>
+            <a class="btn" href={url.contact()}>Put one on the calendar</a>
+          </div>
+        ) : (
+          typeGroups.map((g) => (
+            <div style="margin-top:34px">
+              <h3 id={g.id} style="font-size:20px;scroll-margin-top:80px">{g.type}</h3>
+              {g.items.map((e) => {
+                const loc = localityFor(e);
+                return (
+                  <div class="ev">
+                    <div class="ev-date">
+                      <b>{dayNumber(e.startDate)}</b>
+                      <span>{monthShort(e.startDate)}</span>
+                    </div>
+                    <div>
+                      <h3><a href={url.event(e)}>{e.title}</a></h3>
+                      <p>{e.description}</p>
+                      <span class="where">
+                        {e.venueName}
+                        {loc ? ' · ' + loc.name + ' ' + e.state : ' · ' + e.state}
+                        {e.isFree ? ' · Free' : e.price ? ' · ' + e.price : ''}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ))
+        )}
+      </div>
+    </section>
+  )}
+
+  {passed.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Recently passed</h2>
+          <p>
+            These have already happened. The pages stay up because most of them run again,
+            and a URL that once had links pointing at it should keep working.
+          </p>
+        </div>
+        {passed.map((e) => {
+          const loc = localityFor(e);
+          return (
+            <div class="ev" style="opacity:.72">
+              <div class="ev-date">
+                <b>{dayNumber(e.startDate)}</b>
+                <span>{monthShort(e.startDate)}</span>
+              </div>
+              <div>
+                <h3>
+                  <a href={url.event(e)}>{e.title}</a>
+                  <span class="tag warn" style="margin-left:8px">Passed</span>
+                </h3>
+                <p>{e.description}</p>
+                <span class="where">
+                  Ran {humanDate(e.startDate)}
+                  {loc ? ' · ' + loc.name + ' ' + e.state : ' · ' + e.state}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="Listing an event" />
+  </div>
+
+  <LinkBlock
+    heading="Elsewhere"
+    groups={[
+      {
+        heading: 'By state',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+      {
+        heading: 'Read',
+        links: [
+          { href: url.wire(), label: 'The wire' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.lists(), label: 'Curated lists' },
+        ],
+      },
+      {
+        heading: 'The site',
+        links: [
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.contact(), label: 'Submit an event' },
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+        ],
+      },
+    ]}
+  />
+</Base>

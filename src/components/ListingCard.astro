@@ -1,0 +1,83 @@
+---
+import type { Category, Listing, Locality } from '~/lib/types';
+import { url, averageRating, getCategory, getLocality } from '~/lib/repo';
+import { formatTime, dayShort } from '~/lib/copy';
+
+interface Props {
+  listing: Listing;
+  /** The locality page this card is being shown on, for the travel note. */
+  context?: Locality;
+  category?: Category;
+  showState?: boolean;
+}
+const { listing, context, category, showState = true } = Astro.props;
+
+const home = getLocality(listing.localityId);
+const primary = category ?? getCategory(listing.categoryIds[0]);
+const rating = listing.google?.rating ?? averageRating(listing);
+const reviewCount = listing.google?.reviewCount ?? listing.reviews.length;
+const travelsIn = context && home && home.id !== context.id;
+const crossesBorder = context && home && home.state !== context.state;
+const openDays = listing.hours.filter((h) => !h.closed);
+const weekend = listing.hours.find((h) => h.day === 6 && !h.closed);
+---
+<article class="card">
+  <div class="card-top">
+    <span class={'logo lg-' + listing.logoTheme} aria-hidden="true">
+      {listing.logoText}
+    </span>
+    <div style="min-width:0">
+      <h3><a href={url.listing(listing)}>{listing.name}</a></h3>
+      <p class="cat-line">
+        {primary?.name}
+        {home && <> &middot; {home.name}</>}
+      </p>
+    </div>
+  </div>
+
+  {showState && home && (
+    <span class={'state mono ' + (home.state === 'VIC' ? 'vic' : '')}>{home.state}</span>
+  )}
+
+  <div class="meta">
+    {rating ? (
+      <>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="rate">{rating.toFixed(1)}</span>
+        <span>({reviewCount})</span>
+      </>
+    ) : (
+      <span style="color:var(--ink-40)">No ratings collected yet</span>
+    )}
+    {listing.status === 'verified' && (
+      <span class="verif">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        Verified
+      </span>
+    )}
+    {listing.priceBand && <span>{listing.priceBand}</span>}
+  </div>
+
+  <p class="desc">{listing.description.length > 155 ? listing.description.slice(0, 152).trimEnd() + '…' : listing.description}</p>
+
+  {travelsIn && (
+    <p class="mono" style="color:var(--wattle-ink);margin:-6px 0 12px">
+      {listing.serviceAreaInferred
+        ? (crossesBorder ? 'In range across the border' : 'In range of ' + context!.name)
+        : (crossesBorder ? 'Crosses the border to ' + context!.name : 'Travels to ' + context!.name)}
+    </p>
+  )}
+
+  <div class="card-foot">
+    {weekend ? (
+      <span class="open">Open Saturdays</span>
+    ) : openDays.length ? (
+      <span class="shut">{openDays.length} {openDays.length === 1 ? 'day' : 'days'} a week</span>
+    ) : (
+      <span class="shut">Hours not published</span>
+    )}
+    <span class="right">
+      <a class="btn btn-sm btn-ghost" href={url.listing(listing)}>Details</a>
+    </span>
+  </div>
+</article>

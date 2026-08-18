@@ -1,0 +1,70 @@
+---
+import { url, categories, STATES } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { VERTICALS } from '~/lib/site';
+
+const year = 2026;
+// Footer links are capped on purpose. A 200 link footer dilutes every page.
+const topCategories = categories.slice(0, 8);
+---
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="mark"><i aria-hidden="true"></i>{SITE.name}</div>
+        <p class="blurb">
+          An independent business and places directory for New South Wales and Victoria.
+          Service areas are modelled separately from addresses, so a business that works
+          across the border shows up on both sides of it.
+        </p>
+      </div>
+      <div>
+        <h2>Browse</h2>
+        <ul>
+          <li><a href={url.state('NSW')}>{STATES.NSW.name}</a></li>
+          <li><a href={url.state('VIC')}>{STATES.VIC.name}</a></li>
+          <li><a href={url.categoryIndex()}>All categories</a></li>
+          <li><a href={url.search()}>Search</a></li>
+          <li><a href={url.sitemapPage()}>Site index</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Popular</h2>
+        <ul>
+          {topCategories.map((c) => (
+            <li><a href={url.category(c)}>{c.name}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2>Read</h2>
+        <ul>
+          <li><a href={url.guides()}>Guides</a></li>
+          <li><a href={url.lists()}>Curated lists</a></li>
+          <li><a href={url.wire()}>The wire</a></li>
+          <li><a href={url.events()}>Events</a></li>
+          <li><a href={url.tools()}>Free tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>The site</h2>
+        <ul>
+          <li><a href={url.about()}>About</a></li>
+          <li><a href={url.claim()}>Claim a listing</a></li>
+          <li><a href={url.partners()}>Link partners</a></li>
+          <li><a href={url.editorialPolicy()}>Editorial policy</a></li>
+          <li><a href={url.dataPolicy()}>Data and corrections</a></li>
+          <li><a href={url.contact()}>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; {year} {SITE.name}. Built by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.</span>
+      <span class="right">
+        <a href={url.privacy()}>Privacy</a>
+        <a href={url.terms()}>Terms</a>
+        <a href={url.advertisingPolicy()}>Advertising</a>
+      </span>
+    </div>
+  </div>
+</footer>

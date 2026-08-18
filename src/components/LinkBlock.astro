@@ -1,0 +1,28 @@
+---
+interface Group { heading: string; links: { href: string; label: string; note?: string; cross?: boolean }[] }
+interface Props { groups: Group[]; heading?: string }
+const { groups, heading } = Astro.props;
+const shown = groups.filter((g) => g.links.length > 0);
+---
+{shown.length > 0 && (
+  <section class="sec">
+    <div class="wrap">
+      {heading && <div class="sec-head"><h2>{heading}</h2></div>}
+      <div class="linkgrid">
+        {shown.map((g) => (
+          <div>
+            <h3>{g.heading}</h3>
+            <ul>
+              {g.links.map((l) => (
+                <li>
+                  <a href={l.href} class={l.cross ? 'cross' : undefined}>{l.label}</a>
+                  {l.note && <span style="color:var(--ink-40);font-size:13px"> {l.note}</span>}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

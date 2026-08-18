@@ -1,0 +1,180 @@
+[
+  {
+    "slug": "licence-check",
+    "title": "Trade licence check, NSW and VIC",
+    "description": "Look up a builder, plumber or electrician licence against the official NSW Fair Trading and Victorian Building Authority registers before you pay a deposit.",
+    "standfirst": "Paste a licence number, pick a state, and go straight to the official register.",
+    "isApplication": true,
+    "status": "live",
+    "body": "This tool does one thing: it takes you to the right official register with the right search open, so you can check a licence in under a minute instead of hunting for the correct page.\n\nIt does not tell you the answer itself. The registers are the authority and neither of them publishes an open API for public lookups, so anything that claimed to verify a licence without going to the register would be guessing. LocalKnows is not affiliated with NSW Fair Trading or the Victorian Building Authority and does not speak for either of them.\n\n## What you are checking against\n\n**New South Wales.** NSW Fair Trading runs a public licence check covering building, trade, electrical, plumbing, gasfitting, air conditioning and refrigeration work, plus motor dealers and repairers, real estate agents and several other classes. It shows the licence holder, the class of work, the status and the expiry.\n\n**Victoria.** The Victorian Building Authority runs a practitioner search covering registered building practitioners and licensed plumbers. Electrical work in Victoria sits with Energy Safe Victoria, which runs its own separate check.\n\nThe two states do not share a register. A NSW licence number will not resolve in the VBA search and the reverse is also true.\n\n## What to look at when you get there\n\n- **The name.** It must match the business you are dealing with, or the business must be able to explain the relationship. A trading name that does not appear anywhere on the licence is a question worth asking.\n- **The class.** A licence is for specific work. A general builder is not automatically licensed to do the plumbing, and a restricted electrical licence is not a full one. \"Licensed\" on its own means nothing until you know licensed for what.\n- **The status and expiry.** Current, expired, suspended and cancelled are four different things. An expired licence is not a technicality if something goes wrong and you need to claim.\n- **The conditions.** Some licences carry a value limit or a supervision condition. Those are on the register and they are rarely on the quote.\n\n## The border problem\n\nWhat matters is the licence that applies where the work is done, not where the business is registered. A Wodonga plumber working on a house in Lavington needs to satisfy NSW requirements for that job. Automatic Mutual Recognition means many licence holders can work interstate on the strength of their home licence after notifying the other state, but the scheme does not cover every occupation and it does not cover every class within an occupation.\n\nIf the job is on the other side of the river from the tradesperson's address, ask which licence they are working under and check that one.\n\n## Why we built it\n\nEvery public check run through this page tells us which numbers people are actually looking up, which feeds the verification queue on the directory itself. That is the whole business case. It is free, ungated, and it will stay that way.",
+    "faqs": [
+      {
+        "q": "Does this tool verify the licence for me?",
+        "a": "No. It sends you to the official register with the search page open. The register is the authority and its answer is the only one that counts. Anything that claimed to verify a licence without querying the register would be guessing."
+      },
+      {
+        "q": "Is LocalKnows connected to NSW Fair Trading or the VBA?",
+        "a": "No. We are an independent directory. We link to those registers because they are the public source of truth, and we have no relationship with either body."
+      },
+      {
+        "q": "A tradesperson gave me an ABN instead of a licence number. Is that the same thing?",
+        "a": "No, and the difference matters. An ABN says a business exists for tax purposes. A licence says a person or company is permitted to do a specific class of regulated work. Anyone can get an ABN in about ten minutes. Ask for the licence number as well and check it separately at ABN Lookup."
+      },
+      {
+        "q": "The licence comes back current but the name is different. What now?",
+        "a": "Ask. There are legitimate reasons: a company licence held by a director, a trading name that differs from the registered entity, a recent business sale. There are also illegitimate ones, including a number borrowed from somebody else. Get the explanation before you pay a deposit."
+      },
+      {
+        "q": "Do I need to check a licence for small jobs?",
+        "a": "Both states set a dollar threshold below which residential building work does not require a licensed builder, and both set them low enough that most jobs worth worrying about are above it. Electrical and plumbing work is regulated regardless of value. The thresholds change, so check the current figure on the Fair Trading or VBA site rather than relying on a number you read somewhere."
+      },
+      {
+        "q": "What does a verified badge on a LocalKnows listing mean?",
+        "a": "That we ran this exact check against the state register on the date shown on the listing, and the licence was current for the class of work the business advertises. It is a statement about a check we ran on a date, not an endorsement and not a guarantee about the work."
+      }
+    ]
+  },
+  {
+    "slug": "public-holidays",
+    "title": "Public holidays, NSW versus Victoria",
+    "description": "The public holidays that differ between New South Wales and Victoria, and what that means for call out rates on the Albury Wodonga border.",
+    "standfirst": "Which days are a holiday on one side of the Murray and an ordinary working day on the other.",
+    "isApplication": false,
+    "status": "live",
+    "body": "On the border this is not a trivia question. A tradesperson driving from Wodonga to Albury can cross from a public holiday into a normal Tuesday, and the penalty rate on the invoice depends on which one applies.\n\nDates are gazetted every year by each state, and they move. What follows is which holidays differ, not what date they fall on. For the current year's dates use the official pages: Service NSW publishes the New South Wales list and Business Victoria publishes the Victorian one. Anything else, including this page, is a summary.\n\n## The days that differ\n\n| Holiday | New South Wales | Victoria |\n|---|---|---|\n| Labour Day | First Monday in October | Second Monday in March |\n| Melbourne Cup Day | Not a public holiday | Public holiday, first Tuesday in November, metropolitan Melbourne and most of the state |\n| AFL Grand Final Friday | Not a public holiday | Public holiday, the Friday before the Grand Final |\n| Easter Sunday | Public holiday | Public holiday |\n| Easter Tuesday | Not a general public holiday | Not a general public holiday, but observed in some Victorian awards and agreements |\n| Bank Holiday | First Monday in August, banks and some finance sector only | Not observed |\n\n## The days that are the same\n\nNew Year's Day, Australia Day, Good Friday, Easter Saturday, Easter Monday, Anzac Day, the King's Birthday, Christmas Day and Boxing Day are public holidays in both states. Substitute days apply when one falls on a weekend, and the substitution rules are not identical between the two states either.\n\nMelbourne Cup Day is the one that catches people out most often on this border. It is a public holiday in Victoria and an ordinary working day in New South Wales, so a Wodonga business may be closed while the identical business in Albury is trading normally, three kilometres away.\n\n## What it means for what you pay\n\nMost trade quotes carry a public holiday loading, and most of them do not say which state's calendar they are using. Ask. If you are in Albury booking a Wodonga electrician for Melbourne Cup Day, you are having a normal Tuesday and they are not.\n\nThe same applies in reverse for Labour Day. Victoria takes it in March, New South Wales takes it in October, and a business that services both sides has two of them.\n\n## For business owners\n\nWhich calendar applies to your employees depends on where they are based and what their award or agreement says, not on where the customer is. That is a question for Fair Work or your accountant, and it is genuinely not obvious on this border. Getting it wrong is a wage compliance problem, not a rounding error.",
+    "faqs": [
+      {
+        "q": "Is Melbourne Cup Day a public holiday in Albury?",
+        "a": "No. Melbourne Cup Day is a Victorian public holiday. Albury is in New South Wales, so it is an ordinary working day there, while Wodonga across the river is not."
+      },
+      {
+        "q": "Why does this page not list the actual dates?",
+        "a": "Because they are gazetted annually and a hardcoded date is wrong within a year. Stale dates on an evergreen page are worse than no dates. Service NSW and Business Victoria publish the current lists and those are the ones to use."
+      },
+      {
+        "q": "Does a NSW tradesperson have to charge a Victorian public holiday rate for work done in Victoria?",
+        "a": "What they charge you is a commercial matter set by their own quote. What they must pay their staff is set by the relevant award or agreement and by where the employee is based. The two are not the same question, and a business that works both sides of the border should be able to explain how it handles it."
+      },
+      {
+        "q": "Are these the only differences?",
+        "a": "These are the general statewide differences. Both states also declare local and regional holidays, and Victoria has a small number of local show day arrangements. Check the official list for the town you are in."
+      },
+      {
+        "q": "Does the AFL Grand Final Friday holiday apply every year?",
+        "a": "It has been declared each year in Victoria since 2015, but it is declared annually rather than fixed in legislation, and the date moves with the fixture. Treat it as gazetted, not guaranteed."
+      }
+    ]
+  },
+  {
+    "slug": "what-should-this-cost",
+    "title": "What should this cost?",
+    "description": "Indicative price ranges for common trade jobs across the Albury Wodonga border, built from published call out fees and rates on the directory.",
+    "standfirst": "A starting point, drawn from what businesses on this directory actually publish.",
+    "isApplication": false,
+    "status": "live",
+    "body": "There is no single right price for a trade job in a regional town. There is a range, and knowing the range is most of what you need to tell a fair quote from a bad one.\n\nThe figures on this site come from what businesses publish themselves: call out fees on their own websites, hourly rates on their quote pages, and the ranges they advertise. They are indicative, not quotes, and they are not a benchmark you can hold anyone to.\n\n## How to read a trade quote\n\nA quote worth accepting separates four things:\n\n1. **The call out or attendance fee.** What it costs for someone to turn up. Sometimes it is waived if the job proceeds. Ask which.\n2. **Labour.** An hourly or half hourly rate, and the minimum charge. A one hour minimum is normal. A four hour minimum on a domestic job is not.\n3. **Materials.** Listed, with a markup that is either stated or built into the line. Both are normal. Neither being visible at all is not.\n4. **Loadings.** After hours, weekend, public holiday, emergency. These are where the surprises live, and on this border they depend on which state's calendar applies.\n\nIf a quote is one number with no breakdown, ask for the breakdown. A tradesperson who will not itemise is not necessarily overcharging, but you have no way of telling.\n\n## Where the border changes the number\n\nTravel is the obvious one. A Corowa electrician quoting on a Howlong job is charging for the drive whether it appears as a line or not. Ask whether travel is inside the call out fee or on top of it.\n\nThe less obvious one is the public holiday calendar. Victoria and New South Wales do not share one, and a job booked for Melbourne Cup Day is a holiday rate on one side of the Murray and a normal Tuesday rate on the other.\n\n## What is on the category pages\n\nEvery locality and category page on this site carries a block built from the listings on that page: the range of published call out fees, the average, how many trade Saturdays, and how many hold a licence we have checked. Those numbers are computed from the rows underneath them and they change as listings are added and claimed.\n\nStart there rather than here. A page like plumbers in Albury has the actual figures for the actual businesses that will quote you.\n\n## What we will not do\n\nWe will not publish a single national average and call it a price. The spread between a straightforward tap washer and a burst main under a slab is not a rounding error, and a number that averages them is worse than useless. The ranges here are for orientation. The quote is the quote.",
+    "faqs": [
+      {
+        "q": "Where do these figures come from?",
+        "a": "From what businesses publish on their own websites and quote pages, recorded with the URL it was read from and the date. They are not survey data and they are not a benchmark."
+      },
+      {
+        "q": "Can I hold a tradesperson to a price on this site?",
+        "a": "No. Nothing here is a quote or an offer. A quote is a document from that business for your specific job. Use these ranges to know whether a quote is in the normal zone, then get the quote."
+      },
+      {
+        "q": "Why is the call out fee separate from the hourly rate?",
+        "a": "Because they cover different things. The call out covers getting there, including travel and the vehicle. The hourly covers the work. Some businesses roll them together and some do not, which is exactly why an itemised quote matters."
+      },
+      {
+        "q": "What is a reasonable after hours loading?",
+        "a": "It varies by trade and by how far outside hours the job is. What is not reasonable is finding out about it on the invoice. Ask what triggers the loading and what the rate is before you agree to the visit."
+      },
+      {
+        "q": "How often are these numbers updated?",
+        "a": "The per page figures recompute on every build, from the listings on that page. Each listing shows the date its details were last read from a source."
+      }
+    ]
+  },
+  {
+    "slug": "abn-lookup",
+    "title": "ABN and business name check",
+    "description": "Check an ABN, its GST registration and its trading names against the Australian Business Register before you pay an invoice.",
+    "standfirst": "Not built yet. Here is what it will do, and what to use in the meantime.",
+    "isApplication": true,
+    "status": "planned",
+    "body": "This tool is not built. When it is, it will take an ABN or a business name and return the entity name, the entity type, whether the ABN is active, the GST registration status and date, the main business location by state and postcode, and any registered trading names, all from the Australian Business Register's public web services.\n\nUntil then, use ABN Lookup directly at abr.business.gov.au. It is free, it is the same data, and it takes about thirty seconds.\n\n## What to actually check\n\n- **Active.** A cancelled ABN on a current invoice is a problem, not a formality.\n- **GST registered.** If an invoice charges GST, the ABN on it should be registered for GST. If it is not, the GST line should not be there.\n- **The entity name.** It will often differ from the trading name. That is normal. What is not normal is an ABN registered to an entity with no visible connection to the business you are dealing with.\n- **The registration date.** A business trading for fifteen years under an ABN registered last month is worth a question.\n\n## Why it matters on an invoice\n\nIf a supplier does not quote an ABN on an invoice, the payer may be required to withhold tax from the payment at the top rate. That is the ATO's rule, not ours, and it is the practical reason ABNs appear on invoices at all.\n\n## Why we will build it\n\nThe same reason as the licence checker. It is a thirty second job that people currently do not do, it feeds our own verification pipeline every time somebody runs one, and a tool page earns links for years.",
+    "faqs": [
+      {
+        "q": "Why is this listed if it does not work yet?",
+        "a": "Because the page tells you where to go in the meantime and what to look at when you get there, which is most of the value. Pretending a tool works when it does not is worse than saying so."
+      },
+      {
+        "q": "Is an ABN the same as a licence?",
+        "a": "No. An ABN is a tax registration and almost anyone can get one. A licence is permission to do a specific class of regulated work. Check both, separately."
+      },
+      {
+        "q": "What is the difference between an ABN and an ACN?",
+        "a": "An ACN is a company number issued by ASIC and only companies have one. An ABN is issued by the ATO and sole traders, partnerships, trusts and companies can all have one. A company's ABN usually contains its ACN."
+      },
+      {
+        "q": "Can I check a business name that is not a company?",
+        "a": "Yes. Registered business names are searchable through ASIC's business names register and through ABN Lookup, which shows trading names linked to an ABN."
+      }
+    ]
+  },
+  {
+    "slug": "quote-comparison",
+    "title": "Get three quotes at once",
+    "description": "Send one job brief to several verified trades across the Albury Wodonga border and compare what comes back.",
+    "standfirst": "Not built yet. Here is the design and why it is deliberately narrow.",
+    "isApplication": true,
+    "status": "planned",
+    "body": "This tool is not built. When it is, it will take one job description, one location and one preferred timeframe, and send it to a small number of trades who service that locality and hold a licence we have checked.\n\n## What it will not be\n\nIt will not be a lead auction. Nobody will pay to appear in the shortlist, and the ordering will come from the same quality score that drives the rest of the site. The moment a shortlist is for sale it stops being a shortlist and becomes advertising, and there is already plenty of that.\n\nIt will not blast the brief to twenty businesses. Trades in regional towns are on the receiving end of that model constantly and it is the reason so many of them stopped answering lead sites. Three to five, selected on service area and verification, is the design.\n\n## What it will do\n\n- Match the brief to trades whose service area actually covers the address, using the same cross border logic as the rest of the directory, so a Wodonga operator who works in Lavington is in the pool.\n- Show you who it went to before it goes, with a link to each listing.\n- Record when each business responds, which is where the median response time figure on the category pages comes from.\n- Let you close the brief once you have chosen, so the others stop chasing you.\n\n## In the meantime\n\nUse the category page for your locality, open three listings, and call them. The phone numbers on this site were read from the businesses' own published sources and each listing shows the date. It is slower than a form and it gets a faster answer.",
+    "faqs": [
+      {
+        "q": "Will businesses pay to be in the shortlist?",
+        "a": "No. If that changes, this page will say so before it changes, not after. Paid placement is labelled and boxed everywhere it appears on this site and it never affects organic ordering."
+      },
+      {
+        "q": "How many businesses will get my brief?",
+        "a": "Three to five. Enough to compare, few enough that the businesses take it seriously and you are not fielding a week of calls."
+      },
+      {
+        "q": "Will my phone number be sold?",
+        "a": "No. Enquiry details go to the businesses you send the brief to and nowhere else. That is set out in the privacy policy and it is not a promise we would be able to quietly reverse."
+      },
+      {
+        "q": "What happens to my details after the job is done?",
+        "a": "Enquiries are retained for the period set out in the privacy policy so the response time statistics stay honest, then deleted. You can ask for them to be removed sooner."
+      }
+    ]
+  },
+  {
+    "slug": "business-name-check",
+    "title": "Business name availability check",
+    "description": "Check whether a business name is free on the ASIC register, as a domain, and as a social handle, in one pass.",
+    "standfirst": "Not built yet. Here is the order to check things in, which is the part people get wrong.",
+    "isApplication": true,
+    "status": "planned",
+    "body": "This tool is not built. When it is, it will take a proposed name and check the ASIC business names register, the trade mark register, common domain endings and the main social handles in one pass.\n\n## The order that matters\n\nMost people check the domain first, find it free, buy it, and then discover the name is unavailable or already trade marked. Do it in this order:\n\n1. **Trade marks.** Search IP Australia's register. A registered trade mark in your class beats a business name registration and beats a domain. This is the check that can cost you the whole brand, and it is the one most often skipped.\n2. **ASIC business names.** Names that are identical or nearly identical to an existing registered name are refused. Nearly identical has a specific meaning in the rules and it is broader than people expect.\n3. **The company register**, if you are incorporating rather than registering a business name.\n4. **Domains.** The .com.au namespace requires an Australian presence and a connection to the name. That connection is checked at registration.\n5. **Handles.** Last, because they are the cheapest to work around.\n\n## The regional footnote\n\nIf you are naming a business on this border, decide early whether the name says Albury, Wodonga, both, or neither. Businesses that put one town in the name spend the next decade explaining that they service the other one, which is a real cost. It is also the exact problem the cross border listings on this site exist to solve.\n\n## In the meantime\n\nASIC's business names register and IP Australia's trade mark search are both free and public. Start with the trade mark search.",
+    "faqs": [
+      {
+        "q": "Do I need to register a business name?",
+        "a": "Only if you trade under a name that is not your own legal name. A sole trader operating under their own name does not need one. Anything else does."
+      },
+      {
+        "q": "Does registering a business name give me ownership of it?",
+        "a": "No. A business name registration is a registration, not a property right. A trade mark is the thing that gives you an enforceable claim, and the two are separate systems administered by different bodies."
+      },
+      {
+        "q": "Can I register a name that is already a .com.au domain?",
+        "a": "Possibly, but you are walking into a fight. Check the trade mark register and look at what the existing holder actually does before you commit."
+      },
+      {
+        "q": "Should the town be in the business name?",
+        "a": "It helps people find you locally and it hurts you the moment you expand past that town. On this border it also implies a state, which matters more than it does anywhere else in the country."
+      }
+    ]
+  }
+]

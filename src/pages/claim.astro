@@ -1,0 +1,360 @@
+---
+/**
+ * Claim a listing.
+ *
+ * The whole conversion path for a business owner, with the free tier stated
+ * plainly enough that nobody has to go looking for the catch. Dofollow and the
+ * badge are tied to verification here exactly as `outboundRel` implements them.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, STATES, listings, POLICY } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.claim();
+const h1 = 'Claim your business listing';
+
+const claimed = listings.filter((l) => l.status === 'claimed' || l.status === 'verified').length;
+const verified = listings.filter((l) => l.status === 'verified').length;
+
+const description =
+  'Take control of your LocalKnows listing. Free permanently, no trial, no card. Verified licences earn a badge and a dofollow link to your own website.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Claim a listing', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Does claiming a listing cost anything?',
+    a: 'No, and it does not become paid later. Claiming, editing every field, adding hours and photos, setting service areas, replying to reviews and receiving enquiries are all on the free tier and stay there. The paid products are enquiry routing for businesses that want quote requests pushed into their own systems, and a multi location dashboard. Neither one changes where a listing sits in a list.',
+  },
+  {
+    q: 'What proof do you need that the business is mine?',
+    a: 'We match the claim against something already on record: the phone number on the listing, an email on the same domain as the business website, or the ABN. If none of those line up, we ring the number published on the listing and ask for you by name. We do not ask for identity documents, bank details or a photo of a licence card, and nobody from LocalKnows will ever request them.',
+  },
+  {
+    q: 'What if the business has no ABN, or I do not know it?',
+    a: 'Claim it anyway. The ABN field is optional. It is only used to confirm the trading name against the public ABN register, which speeds the claim up. Community groups, sporting clubs and hobby associations without an ABN are claimed the same way as everyone else.',
+  },
+  {
+    q: 'What does the verified badge actually mean?',
+    a: 'It means one specific thing: a licence number on the listing was entered into the relevant state register on the date shown and the register returned it as current. NSW licences are checked against NSW Fair Trading, Victorian plumbing and building registrations against the Victorian Building Authority. It is not a review of the work, a rating, a recommendation or a guarantee. It is a check anyone can repeat, with a link to the register so they can.',
+  },
+  {
+    q: 'How long does verification last, and can I lose it?',
+    a: 'The badge holds until the licence expires and is rechecked at least every six months. If a recheck fails, or the licence lapses or is cancelled, the badge comes off and the outbound link goes back to nofollow the same day. Nothing else on the listing changes and nobody is publicly named for it.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+
+const row = 'margin:0 0 18px';
+const lbl = 'display:block;color:var(--ink-60);margin-bottom:6px';
+const inp =
+  'width:100%;font:inherit;font-size:15.5px;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--white);color:var(--ink)';
+const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
+---
+
+<Base
+  kind="static"
+  title="Claim your business listing"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">For business owners &middot; free</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Take over the details, fix what is wrong, set the towns you actually travel to, and
+        get your licence checked. It costs nothing and it stays costing nothing.
+      </p>
+      <div class="headmeta">
+        <span>{n(claimed)} claimed</span>
+        <span>&middot; {n(verified)} verified</span>
+        <span>&middot; Claims answered in two business days</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        Most listings on LocalKnows were built from public sources before the owner had
+        heard of the site. That gets a directory useful quickly, and it also means some
+        details are out of date the day they are published. Claiming hands the listing to
+        the person who knows the answers.
+      </p>
+
+      <h2>What claiming gets you, at no cost</h2>
+      <ul>
+        <li>Edit every field: name, description, phone, email, website, address, categories.</li>
+        <li>
+          Set opening hours properly, including the ones that differ. New South Wales and
+          Victoria do not share a public holiday calendar and the site handles that.
+        </li>
+        <li>
+          Set service areas. This is the one that matters on the border. List the towns you
+          will drive to and the listing appears on those town pages, on both sides of the
+          Murray, without pretending to an address you do not have.
+        </li>
+        <li>Add photos, a logo, price band and highlights.</li>
+        <li>Reply publicly to reviews.</li>
+        <li>Receive enquiries sent through the site, by email, at no charge.</li>
+      </ul>
+      <p>
+        There is no trial period, no card at signup, and no feature on that list that moves
+        behind a paywall later. The paid products sit beside the free tier, not on top of it,
+        and they are described on <a href={url.about()}>the about page</a>.
+      </p>
+
+      <h2>The steps</h2>
+      <ol>
+        <li>
+          <strong>Find the listing.</strong> Search for the business name. If it is not on
+          the site yet, submit the form below anyway and put the website in the listing URL
+          field. We will build the listing and then hand it to you.
+        </li>
+        <li>
+          <strong>Send the claim.</strong> Use the form below. It takes about two minutes.
+          The contact you give has to be a person who works at the business.
+        </li>
+        <li>
+          <strong>We match it.</strong> The claim is checked against the phone number, the
+          email domain or the ABN already on record. If none of them match, we ring the
+          number published on the listing and ask for you. Usually answered the same day,
+          always within two business days.
+        </li>
+        <li>
+          <strong>You get edit access.</strong> A link comes back by email. From that point
+          the details are yours to change and the page shows the date you last updated them.
+        </li>
+        <li>
+          <strong>Verification, if it applies.</strong> Send a licence number and we run it
+          against the state register, normally within five business days. If it comes back
+          current, the listing is verified.
+        </li>
+      </ol>
+
+      <h2>What verification involves</h2>
+      <p>
+        Verification is a licence check, nothing more and nothing less. You give the licence
+        number, class and issuing state. Somebody here puts that number into the register,
+        records what came back, and stores the register URL along with the date. That date is
+        printed on your listing so a customer can repeat the check themselves.
+      </p>
+      <p>
+        New South Wales licences are checked against NSW Fair Trading. Victorian plumbing and
+        building registrations are checked against the Victorian Building Authority. A
+        business holding licences in both states can carry both, which is common along the
+        border and invisible on most directories.
+      </p>
+      <p>
+        If the register does not confirm the number, nothing is published. The listing shows
+        no badge, no note, and no explanation, because a public "failed verification" label
+        would punish businesses for a typo or a register outage. We simply email you and ask
+        you to check the number.
+      </p>
+
+      <h2>What changes when a listing is verified</h2>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>What</th>
+              <th>Before</th>
+              <th>After verification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Verified badge</td>
+              <td>Not shown</td>
+              <td>Shown on the listing and on every card in every list</td>
+            </tr>
+            <tr>
+              <td>Link to your website</td>
+              <td><code>rel="nofollow noopener"</code></td>
+              <td><code>rel="noopener"</code>, a dofollow link</td>
+            </tr>
+            <tr>
+              <td>Licence credential in structured data</td>
+              <td>Absent</td>
+              <td>Published, with the register named as the issuing body</td>
+            </tr>
+            <tr>
+              <td>Quality score</td>
+              <td>Whatever completeness earns</td>
+              <td>
+                Higher, which lifts the listing in the default order on every page it appears
+                on
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The dofollow link is earned by the check, not by linking back to us and not by paying
+        for it. It switches on at a quality score of {POLICY.dofollowQualityFloor} on a
+        verified listing, which in practice means a verified licence and a reasonably
+        complete profile. The reasoning is set out on
+        <a href={url.partners()}>the link partner page</a>, and it is the same reasoning that
+        made us refuse to run a reciprocal link scheme.
+      </p>
+
+      <div class="notice river">
+        <strong>Ordering is not for sale, before or after verification.</strong> A verified
+        listing outranks an unverified one because verification is part of the quality score,
+        which is computed from data. Nothing in the claim or verification process involves a
+        payment, and no amount of money moves a listing up a page.
+      </div>
+
+      <h2>How long it takes</h2>
+      <ul>
+        <li><strong>Claim answered:</strong> two business days, usually the same day.</li>
+        <li><strong>Edit access live:</strong> immediately after the claim is matched.</li>
+        <li><strong>Licence checked:</strong> five business days from receiving the number.</li>
+        <li><strong>Badge appears:</strong> at the next build after the check passes, which runs nightly.</li>
+        <li><strong>Rechecks:</strong> at least every six months, and at the licence expiry date.</li>
+      </ul>
+
+      <h2>Send a claim</h2>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Claim form</h2>
+        <span class="mono">Free &middot; two business days</span>
+      </div>
+      <div class="panel-body">
+        <form name="claim" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="claim" />
+          <p hidden>
+            <label>Leave this field empty: <input name="bot-field" /></label>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-business">Business name</label>
+            <input style={inp} id="k-business" name="business" type="text" autocomplete="organization" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-name">Your name</label>
+            <input style={inp} id="k-name" name="name" type="text" autocomplete="name" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-role">Your role at the business</label>
+            <input style={inp} id="k-role" name="role" type="text" placeholder="Owner, manager, office admin" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-email">Email</label>
+            <input style={inp} id="k-email" name="email" type="email" autocomplete="email" required />
+            <span style={hint}>An address on the business domain is matched fastest.</span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-phone">Phone</label>
+            <input style={inp} id="k-phone" name="phone" type="tel" autocomplete="tel" required />
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-listing">Listing URL</label>
+            <input style={inp} id="k-listing" name="listing_url" type="url" placeholder="https://localsknow.com.au/nsw/albury/plumbers/..." required />
+            <span style={hint}>If the listing does not exist yet, put your website here instead.</span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-abn">ABN (optional)</label>
+            <input style={inp} id="k-abn" name="abn" type="text" inputmode="numeric" placeholder="11 digits" />
+            <span style={hint}>Only used to match the trading name on the public ABN register.</span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-licence">Licence number (optional)</label>
+            <input style={inp} id="k-licence" name="licence" type="text" placeholder="Number and issuing state" />
+            <span style={hint}>Include this to start verification with the claim.</span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="k-notes">Anything else we should fix</label>
+            <textarea style={inp + ';min-height:130px;resize:vertical'} id="k-notes" name="notes" rows="5"></textarea>
+          </p>
+
+          <p style="margin:0">
+            <button class="btn btn-river" type="submit">Send claim</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:26px">
+      <p>
+        Claims are stored only so they can be processed and so there is a record of who asked
+        for what. The detail is in <a href={url.privacy()}>the privacy policy</a>. Covering
+        {' '}{STATES.NSW.name} and {STATES.VIC.name}, from {SITE.publisher.name}. Page updated
+        {' '}{humanDate(BUILD_DATE)}.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Claiming, answered" id="claim-faq" />
+  </div>
+
+  <LinkBlock
+    heading="Next steps"
+    groups={[
+      {
+        heading: 'While you wait',
+        links: [
+          { href: url.dataPolicy(), label: 'Report a correction', note: 'faster than a claim' },
+          { href: url.contact(), label: 'Contact us' },
+          { href: url.partners(), label: 'Badges and outbound links' },
+        ],
+      },
+      {
+        heading: 'How the site works',
+        links: [
+          { href: url.about(), label: 'About LocalKnows' },
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+        ],
+      },
+      {
+        heading: 'Find your listing',
+        links: [
+          { href: url.search(), label: 'Search the directory' },
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+    ]}
+  />
+</Base>

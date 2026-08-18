@@ -1,0 +1,160 @@
+---
+/**
+ * The tools index.
+ *
+ * Ungated on purpose. See docs/ARCHITECTURE.md section 10: the tools are the
+ * link magnets that pay for the ranking of every locality x category page, and
+ * a signup wall is the fastest way to stop a page being linked to.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import { tools, url } from '~/lib/repo';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.tools();
+
+// Live first, planned after. Within each group the seed order is kept, because
+// the seed order is editorial and a re-sort would lose it.
+const live = tools.filter((t) => t.status === 'live');
+const planned = tools.filter((t) => t.status !== 'live');
+const ordered = [...live, ...planned];
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Free tools', href: canonicalPath },
+];
+
+const description =
+  'Free tools for NSW and Victoria. Licence checks, ABN lookups and the public holiday split between the two states. No signup and no email wall.';
+
+const faqs = [
+  {
+    q: 'Do I have to sign up to use these?',
+    a: 'No. There is no account, no email capture and no trial. Every live tool on this page runs for anyone who opens it, including people who have never heard of us.',
+  },
+  {
+    q: 'Why give them away?',
+    a: 'Because links are worth more to this site than leads are. A tool that answers one annoying question in thirty seconds gets linked to by accountants, councils, forums and trade groups for years, and those links are what lift the listing pages underneath. Putting a form in front of it would earn almost nothing and cost all of that.',
+  },
+  {
+    q: 'Are the answers official?',
+    a: 'No tool here replaces a government register. Where a public body is the authority we send you straight to it and name it on the page. Where a number comes from our own listing data we say so, and we say when it was last read.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: 'Free tools',
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'LocalKnows free tools',
+    items: ordered.map((t) => ({ url: url.tool(t), name: t.title })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="Free tools"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow mono">No signup &middot; no email wall</p>
+      <h1>Free tools</h1>
+      <p class="standfirst">
+        These are ungated on purpose. A tool page earns links passively for years, and
+        those links are what make the rest of the directory rank. Charging for them, or
+        hiding them behind a form, would trade the only asset that compounds for a
+        handful of email addresses.
+      </p>
+      <p class="headmeta">
+        <span>{live.length} live</span>
+        <span>{planned.length} planned</span>
+        <span>Nothing here costs money</span>
+      </p>
+    </div>
+  </div>
+
+  <section class="sec-tight">
+    <div class="wrap">
+      {ordered.length > 0 ? (
+        <div class="tools-grid">
+          {ordered.map((t) => (
+            <a class="tool" href={url.tool(t)}>
+              <span class={t.status === 'live' ? 'flag mono' : 'flag soon mono'}>
+                {t.status === 'live' ? 'Free' : 'Planned'}
+              </span>
+              <h3>{t.title}</h3>
+              <p>{t.standfirst}</p>
+              <span class="go">{t.status === 'live' ? 'Open →' : 'What it will do →'}</span>
+            </a>
+          ))}
+        </div>
+      ) : (
+        <div class="empty">
+          <p style="margin:0">No tools have been published yet.</p>
+        </div>
+      )}
+
+      {planned.length > 0 && (
+        <p class="notice">
+          <strong>Planned means planned.</strong> A tool flagged planned does not work yet
+          and its page says so at the top. It is listed because the plan is public and
+          because people tell us which one to build next. If that is you, say so on the
+          <a href={url.contact()}>contact page</a>.
+        </p>
+      )}
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>What these are for</h2>
+        <p>
+          Every tool answers a question that comes up on the border and nowhere else, or
+          answers a national question without making you sit through an ad.
+        </p>
+      </div>
+      <div class="prose">
+        <p>
+          Two states, one town, two sets of rules. A builder in Wodonga quoting work in
+          Albury deals with two registers, two licence classes and two public holiday
+          calendars. The tools exist because we had to answer those questions to build the
+          directory, and there is no reason to keep the answers to ourselves.
+        </p>
+        <p>
+          None of them collect a phone number, and none of them are a sales funnel. If a
+          tool sends you to a government register instead of answering, that is the tool
+          working correctly.
+        </p>
+      </div>
+      <Faq faqs={faqs} heading="Common questions" id="tools-faq" />
+    </div>
+  </section>
+</Base>

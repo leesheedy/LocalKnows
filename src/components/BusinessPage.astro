@@ -1,0 +1,618 @@
+---
+/**
+ * Listing detail.
+ *
+ * Two things make this page different from every other directory profile:
+ * every fact carries a source and a date it was last read, and nothing that
+ * has not been checked is dressed up as if it had been. A rating only appears
+ * when it came from the Google Places API, and the page says where it came from.
+ */
+import type { Category, Listing, Locality } from '~/lib/types';
+import {
+  url,
+  STATES,
+  getRegion,
+  getCategory,
+  getLocality,
+  averageRating,
+  neighboursWithCategory,
+  listingsInLocalityCategory,
+  activeCategoriesInLocality,
+  guidesForCategory,
+  isLiveLocality,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import { outboundRel } from '~/lib/indexability';
+import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
+import { humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  listingNode,
+  faqNode,
+  ogForVertical,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  listing: Listing;
+  locality: Locality;
+  category: Category;
+  buildDate: string;
+}
+const { listing, locality, category, buildDate } = Astro.props;
+
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.listing(listing);
+const otherCategories = listing.categoryIds
+  .slice(1)
+  .map((id) => getCategory(id))
+  .filter(Boolean);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: category.name, href: url.localityCategory(locality, category) },
+  { name: listing.name, href: canonicalPath },
+];
+
+const rel = outboundRel({
+  status: listing.status,
+  qualityScore: listing.qualityScore,
+  isSample: listing.isSample,
+});
+
+const hours = [1, 2, 3, 4, 5, 6, 0]
+  .map((d) => listing.hours.find((h) => h.day === d) ?? { day: d, closed: true })
+  .filter(() => listing.hours.length > 0);
+
+// Only areas that actually have a page. An inferred service area can reach a
+// hamlet with nothing in it, and a chip linking there is a 404.
+const serviceAreas = listing.serviceAreaIds
+  .map((id) => getLocality(id))
+  .filter((l): l is Locality => Boolean(l))
+  .filter((l) => l.id !== listing.localityId && isLiveLocality(l.id));
+const crossBorderAreas = serviceAreas.filter((l) => l.state !== locality.state);
+
+const attributeLabels: Record<string, string> = {
+  outdoor_seating: 'Outdoor seating',
+  dog_friendly: 'Dog friendly',
+  kid_friendly: 'Kid friendly',
+  wheelchair_accessible: 'Wheelchair accessible',
+  parking: 'Parking on site',
+  licensed: 'Licensed',
+  byo: 'BYO',
+  takeaway: 'Takeaway',
+  bookings: 'Takes bookings',
+  gluten_free: 'Gluten free options',
+  vegan_options: 'Vegan options',
+  breakfast: 'Breakfast',
+  dine_in: 'Dine in',
+  beer_garden: 'Beer garden',
+  live_music: 'Live music',
+  pokies: 'Gaming room',
+  tab: 'TAB',
+  courtesy_bus: 'Courtesy bus',
+  meals: 'Meals served',
+  accommodation: 'Accommodation',
+  function_room: 'Function room',
+  pet_friendly: 'Pet friendly',
+  family_rooms: 'Family rooms',
+  pool: 'Pool',
+  ev_charging: 'EV charging',
+  powered_sites: 'Powered sites',
+  emergency_callout: 'Emergency call outs',
+  mobile_service: 'Mobile service',
+  after_hours: 'After hours',
+  free_quotes: 'Free quotes',
+  open_sunday: 'Open Sundays',
+  cellar_door: 'Cellar door',
+  tastings: 'Tastings',
+  tours: 'Tours',
+  playground: 'Playground',
+  bbq: 'BBQ facilities',
+  toilets: 'Public toilets',
+  free_entry: 'Free entry',
+  booking_required: 'Booking required',
+  junior_program: 'Junior program',
+  come_and_try: 'Come and try',
+  star_rating: 'Star rating',
+};
+
+const shownAttributes = Object.entries(listing.attributes)
+  .filter(([k, v]) => v === 'yes' && attributeLabels[k])
+  .map(([k]) => attributeLabels[k]);
+
+const rating = listing.google?.rating;
+const reviewCount = listing.google?.reviewCount;
+const onSiteRating = averageRating(listing);
+
+const sameCategoryNearby = listingsInLocalityCategory(locality.id, category.id)
+  .filter((l) => l.id !== listing.id)
+  .slice(0, 3);
+const nearby = neighboursWithCategory(locality, category.id, 6);
+const otherLocal = activeCategoriesInLocality(locality.id)
+  .filter((c) => c.category.id !== category.id)
+  .slice(0, 8);
+const relatedGuides = guidesForCategory(category.slug).slice(0, 2);
+
+const quickAnswer = [
+  listing.name + ' is a ' + category.nameSingular.toLowerCase() + ' in ' + locality.name + ', ' + locality.state + '.',
+  listing.addressLine ? 'It is at ' + listing.addressLine + ', ' + locality.name + ' ' + listing.postcode + '.' : null,
+  listing.phone ? 'The published phone number is ' + listing.phone + '.' : null,
+  hours.length
+    ? 'Opening hours are published for ' + hours.filter((h) => !h.closed).length + ' days a week.'
+    : 'Opening hours are not published on the sources we checked.',
+  crossBorderAreas.length
+    ? (listing.serviceAreaInferred
+        ? 'It is within reach of ' + crossBorderAreas.length + ' ' + otherStateLabel(locality.state) + ' localities.'
+        : 'It also services ' + crossBorderAreas.length + ' ' + otherStateLabel(locality.state) + ' localities.')
+    : null,
+]
+  .filter(Boolean)
+  .join(' ');
+
+const faqs = [
+  {
+    q: 'Where is ' + listing.name + '?',
+    a: listing.isMobile
+      ? listing.name + ' is a mobile operator based in ' + locality.name + ', ' + locality.state + ', with no public shopfront. It travels to ' + (serviceAreas.length || 'nearby') + ' surrounding localities.'
+      : (listing.addressLine ? listing.addressLine + ', ' : '') + locality.name + ' ' + locality.state + ' ' + listing.postcode + '.',
+  },
+  ...(listing.phone
+    ? [{ q: 'What is the phone number for ' + listing.name + '?', a: 'The number published on their own listing is ' + listing.phone + '. We last checked it on ' + humanDate(listing.lastCheckedAt) + '.' }]
+    : []),
+  ...(hours.length
+    ? [
+        {
+          q: 'What are the opening hours?',
+          a:
+            hours
+              .filter((h) => !h.closed)
+              .map((h) => dayName(h.day) + ' ' + formatTime(h.opens) + ' to ' + formatTime(h.closes))
+              .join(', ') +
+            '. Hours change, especially over public holidays, so confirm before you travel.',
+        },
+      ]
+    : []),
+  ...(crossBorderAreas.length
+    ? [
+        {
+          q: 'Does ' + listing.name + ' work across the border?',
+          a:
+            (listing.serviceAreaInferred
+              ? 'Possibly. It is based within travelling distance of '
+              : 'Yes. It lists ') +
+            crossBorderAreas.length +
+            ' ' +
+            otherStateLabel(locality.state) +
+            ' ' +
+            (crossBorderAreas.length === 1 ? 'locality' : 'localities') +
+            (listing.serviceAreaInferred ? ', including ' : ' in its service area, including ') +
+            crossBorderAreas
+              .slice(0, 3)
+              .map((l) => l.name)
+              .join(', ') +
+            '. ' +
+            (listing.serviceAreaInferred
+              ? 'That is an estimate from their location, not something they have confirmed. Ask when you call.'
+              : ''),
+        },
+      ]
+    : []),
+  {
+    q: 'Is this information current?',
+    a:
+      'The details on this page were last read from their published sources on ' +
+      humanDate(listing.lastCheckedAt) +
+      '. Businesses change hours, numbers and addresses without telling anyone, so treat it as a starting point and confirm anything that matters. If something is wrong, tell us and we will fix it.',
+  },
+];
+
+const description =
+  listing.description.length > 150 ? listing.description.slice(0, 147).trimEnd() + '…' : listing.description;
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: listing.name + ' — ' + category.nameSingular + ' in ' + locality.name,
+    description,
+    crumbs,
+    type: 'ItemPage',
+    dateModified: listing.lastCheckedAt,
+  }),
+  listingNode(listing, { locality, category, withReviews: Boolean(listing.reviews.length) }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="listing"
+  title={listing.name + ' — ' + category.nameSingular + ' in ' + locality.name + ' ' + locality.state}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  qualityScore={listing.qualityScore}
+  ogImage={ogForVertical(listing.vertical)}
+  ogType="article"
+  modifiedAt={listing.lastCheckedAt}
+>
+  <div class="wrap">
+    <div class="biz">
+      <div>
+        <header class="biz-head">
+          <span class={'logo lg lg-' + listing.logoTheme} aria-hidden="true">{listing.logoText}</span>
+          <div style="min-width:0;flex:1">
+            <p class="eyebrow mono">
+              <a href={url.localityCategory(locality, category)}>{category.name}</a>
+              &middot; {locality.name}, {locality.state}
+            </p>
+            <h1>{listing.name}</h1>
+            <div class="biz-tags">
+              {listing.status === 'verified' && <span class="tag good">Verified</span>}
+              {listing.isMobile && <span class="tag">Mobile, no shopfront</span>}
+              {listing.priceBand && <span class="tag">{listing.priceBand}</span>}
+              {crossBorderAreas.length > 0 && <span class="tag warn">Works across the border</span>}
+              {listing.confidence === 'medium' && <span class="tag">Details from a third party listing</span>}
+              {listing.isSample && <span class="tag warn">Sample record</span>}
+            </div>
+          </div>
+        </header>
+
+        <p style="margin-top:22px;font-size:17px;color:var(--ink-80);max-width:var(--measure)">
+          {listing.description}
+        </p>
+
+        {listing.highlights.length > 0 && (
+          <section class="panel" style="margin-top:24px">
+            <div class="panel-head"><h2>What they do</h2></div>
+            <div class="panel-body">
+              <ul class="attrs">
+                {listing.highlights.map((h) => <li>{h}</li>)}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {shownAttributes.length > 0 && (
+          <section class="panel">
+            <div class="panel-head"><h2>Features</h2></div>
+            <div class="panel-body">
+              <ul class="attrs">
+                {shownAttributes.map((a) => <li>{a}</li>)}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {hours.length > 0 && (
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Opening hours</h2>
+              <span class="mono">As published</span>
+            </div>
+            <div class="panel-body">
+              <table class="hourstable">
+                <tbody>
+                  {hours.map((h) => (
+                    <tr>
+                      <th scope="row">{dayName(h.day)}</th>
+                      <td>
+                        {h.closed || !h.opens
+                          ? 'Closed'
+                          : formatTime(h.opens) + ' – ' + formatTime(h.closes)}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p style="margin:14px 0 0;font-size:13px;color:var(--ink-40)">
+                Public holiday hours differ, and they differ between New South Wales and
+                Victoria. <a href="/guides/public-holidays-nsw-vs-vic/" style="color:var(--river)">Which days differ</a>.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {listing.licences.length > 0 && (
+          <section class="panel">
+            <div class="panel-head"><h2>Licences</h2></div>
+            <div class="panel-body">
+              <dl class="deflist">
+                {listing.licences.map((lic) => (
+                  <>
+                    <dt>{lic.state} {lic.class}</dt>
+                    <dd>
+                      <code>{lic.number}</code>
+                      {lic.verificationOk ? (
+                        <span class="verif" style="margin-left:8px">Checked {lic.lastVerifiedAt ? humanDate(lic.lastVerifiedAt) : ''}</span>
+                      ) : (
+                        <span style="margin-left:8px;color:var(--ink-40);font-size:13px">
+                          Published by the business, not yet checked against the register
+                        </span>
+                      )}
+                    </dd>
+                  </>
+                ))}
+              </dl>
+              <p style="margin:14px 0 0;font-size:13px;color:var(--ink-40)">
+                A number shown here was read from the business's own material. Until it
+                carries a checked date we have not confirmed it against the state register.
+                <a href="/tools/licence-check/" style="color:var(--river)"> Check it yourself</a>.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {serviceAreas.length > 0 && (
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Service area</h2>
+              <span class="mono">{listing.serviceAreaInferred ? 'Estimated' : 'Stated'}</span>
+            </div>
+            <div class="panel-body">
+              <ul class="attrs">
+                {serviceAreas.slice(0, 24).map((l) => (
+                  <li>
+                    <a href={url.localityCategory(l, category)}>{l.name}</a>
+                    {l.state !== locality.state && <span class="mono" style="margin-left:6px;color:var(--wattle-ink)">{l.state}</span>}
+                  </li>
+                ))}
+              </ul>
+              {crossBorderAreas.length > 0 && (
+                <p style="margin:16px 0 0;font-size:14px;color:var(--ink-60)">
+                  {crossBorderAreas.length} of these are in {otherStateLabel(locality.state)}.
+                  Service area is stored separately from the registered address, which is
+                  why this business appears on {otherStateLabel(locality.state)} pages
+                  without pretending to be based there.
+                </p>
+              )}
+              {listing.serviceAreaInferred && (
+                <p style="margin:14px 0 0;font-size:13px;color:var(--ink-40)">
+                  This area is estimated from where the business is based, not confirmed by
+                  them. A {category.nameSingular.toLowerCase()} in {locality.name} is within
+                  reach of these towns, which is not the same as saying they will take the
+                  job. Owners can set their real service area when they
+                  <a href={url.claim()} style="color:var(--river)"> claim the listing</a>.
+                </p>
+              )}
+            </div>
+          </section>
+        )}
+
+        {listing.reviews.length > 0 && (
+          <section class="panel">
+            <div class="panel-head">
+              <h2>Reviews left through LocalKnows</h2>
+              {onSiteRating && <span class="mono">{onSiteRating} / 5</span>}
+            </div>
+            <div class="panel-body">
+              {listing.reviews.map((r) => (
+                <article style="padding:14px 0;border-bottom:1px solid var(--line)">
+                  <div style="display:flex;gap:10px;align-items:center;font-size:14px">
+                    <strong>{r.author}</strong>
+                    <span class="star" aria-label={r.rating + ' out of 5'}>{'★'.repeat(r.rating)}</span>
+                    <time datetime={r.publishedAt} style="margin-left:auto;color:var(--ink-40);font-size:13px">
+                      {humanDate(r.publishedAt)}
+                    </time>
+                  </div>
+                  <p style="margin:8px 0 0;font-size:15px;color:var(--ink-80)">{r.body}</p>
+                  {r.ownerReply && (
+                    <p style="margin:10px 0 0;padding-left:14px;border-left:2px solid var(--river);font-size:14px;color:var(--ink-60)">
+                      <strong>Reply from the owner:</strong> {r.ownerReply}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <Faq faqs={faqs} heading={'About ' + listing.name} />
+      </div>
+
+      <aside>
+        <section class="panel">
+          <div class="panel-head"><h2>Contact</h2></div>
+          <div class="panel-body">
+            <dl class="deflist">
+              {!listing.isMobile && listing.addressLine && (
+                <>
+                  <dt>Address</dt>
+                  <dd>
+                    {listing.addressLine}<br />
+                    {locality.name} {locality.state} {listing.postcode}
+                  </dd>
+                </>
+              )}
+              {listing.isMobile && (
+                <>
+                  <dt>Based in</dt>
+                  <dd>{locality.name} {locality.state} {listing.postcode}<br /><span style="color:var(--ink-40);font-size:13px">Mobile operator, no shopfront</span></dd>
+                </>
+              )}
+              {listing.phone && (
+                <>
+                  <dt>Phone</dt>
+                  <dd><a href={'tel:' + listing.phone.replace(/[^0-9+]/g, '')}>{listing.phone}</a></dd>
+                </>
+              )}
+              {listing.email && (
+                <>
+                  <dt>Email</dt>
+                  <dd><a href={'mailto:' + listing.email}>{listing.email}</a></dd>
+                </>
+              )}
+              {listing.website && (
+                <>
+                  <dt>Website</dt>
+                  <dd>
+                    <a href={listing.website} rel={rel} target="_blank">
+                      {listing.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+                    </a>
+                  </dd>
+                </>
+              )}
+              {listing.bookingUrl && (
+                <>
+                  <dt>Bookings</dt>
+                  <dd><a href={listing.bookingUrl} rel={rel} target="_blank">Book online</a></dd>
+                </>
+              )}
+              {(listing.facebook || listing.instagram) && (
+                <>
+                  <dt>Social</dt>
+                  <dd>
+                    {listing.facebook && <a href={listing.facebook} rel="nofollow noopener" target="_blank">Facebook</a>}
+                    {listing.facebook && listing.instagram && ' · '}
+                    {listing.instagram && <a href={listing.instagram} rel="nofollow noopener" target="_blank">Instagram</a>}
+                  </dd>
+                </>
+              )}
+            </dl>
+
+            {listing.googleMapsUrl && (
+              <a class="btn btn-block" style="margin-top:16px" href={listing.googleMapsUrl} rel="nofollow noopener" target="_blank">
+                Open in Google Maps
+              </a>
+            )}
+            {listing.phone && (
+              <a class="btn btn-ghost btn-block" style="margin-top:8px" href={'tel:' + listing.phone.replace(/[^0-9+]/g, '')}>
+                Call {listing.phone}
+              </a>
+            )}
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Google reviews</h2></div>
+          <div class="panel-body">
+            {rating ? (
+              <>
+                <div style="display:flex;align-items:baseline;gap:10px">
+                  <b style="font-family:var(--font-mono);font-size:30px;font-weight:500">{rating.toFixed(1)}</b>
+                  <span class="star" aria-hidden="true">{'★'.repeat(Math.round(rating))}</span>
+                </div>
+                <p style="margin:8px 0 0;font-size:14px;color:var(--ink-60)">
+                  From {reviewCount} Google reviews, read {listing.google ? humanDate(listing.google.fetchedAt) : ''}.
+                </p>
+                <a class="btn btn-ghost btn-block" style="margin-top:14px" href={listing.google?.url ?? listing.googleMapsUrl} rel="nofollow noopener" target="_blank">
+                  Read them on Google
+                </a>
+              </>
+            ) : (
+              <>
+                <p style="margin:0;font-size:14.5px;color:var(--ink-60)">
+                  We have not pulled a Google rating for this business. Rather than show a
+                  number we cannot source, here is the link straight to their profile.
+                </p>
+                <a class="btn btn-ghost btn-block" style="margin-top:14px" href={listing.googleMapsUrl ?? ('https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(listing.name + ' ' + locality.name + ' ' + locality.state))} rel="nofollow noopener" target="_blank">
+                  See reviews on Google
+                </a>
+              </>
+            )}
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Where this came from</h2></div>
+          <div class="panel-body sources">
+            <p style="margin:0 0 4px;color:var(--ink-60);font-size:14px">
+              Last checked <strong>{humanDate(listing.lastCheckedAt)}</strong>.
+              Confidence: {listing.confidence === 'high' ? 'read from the business or an official source' : 'read from a third party listing'}.
+            </p>
+            {listing.sources.length > 0 && (
+              <ul>
+                {listing.sources.map((s) => (
+                  <li><a href={s} rel="nofollow noopener" target="_blank">{s.replace(/^https?:\/\//, '').slice(0, 52)}</a></li>
+                ))}
+              </ul>
+            )}
+            <p style="margin:12px 0 0">
+              <a href={url.dataPolicy()} style="color:var(--river)">Something wrong? Tell us</a>
+            </p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head"><h2>Own this business?</h2></div>
+          <div class="panel-body">
+            <p style="margin:0 0 12px;font-size:14.5px;color:var(--ink-60)">
+              Claiming is free. You get to correct the details, add hours and photos,
+              reply to reviews, and see how many people looked you up.
+            </p>
+            <a class="btn btn-gold btn-block" href={url.claim()}>Claim this listing</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="notice river" style="margin-bottom:30px">
+      <strong>In short.</strong> {quickAnswer}
+    </div>
+  </div>
+
+  {sameCategoryNearby.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Other {category.name.toLowerCase()} in {locality.name}</h2>
+        </div>
+        <div class="cards">
+          {sameCategoryNearby.map((l) => <ListingCard listing={l} context={locality} category={category} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'In ' + locality.name,
+        links: otherLocal.map((c) => ({
+          href: url.localityCategory(locality, c.category),
+          label: c.category.name,
+          note: '(' + c.count + ')',
+        })),
+      },
+      {
+        heading: category.name + ' nearby',
+        links: nearby.map((nb) => ({
+          href: url.localityCategory(nb.locality, category),
+          label: nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Worth reading',
+        links: [
+          ...relatedGuides.map((g) => ({ href: url.guide(g), label: g.title })),
+          { href: url.category(category), label: 'All ' + category.name.toLowerCase() },
+          { href: url.locality(locality), label: 'Everything in ' + locality.name },
+          ...(otherCategories.length
+            ? otherCategories.map((c) => ({
+                href: url.localityCategory(locality, c!),
+                label: 'Also listed under ' + c!.name,
+              }))
+            : []),
+        ],
+      },
+    ]}
+  />
+</Base>

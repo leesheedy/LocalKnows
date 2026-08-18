@@ -1,0 +1,343 @@
+---
+/**
+ * Data sources and corrections.
+ *
+ * Where every fact came from, how fast a wrong one gets fixed, and an honest
+ * list of what goes stale. The correction form posts to Netlify Forms, so the
+ * markup has to be in the static HTML.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { url, STATES, listings } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.dataPolicy();
+const h1 = 'Data sources and corrections';
+
+const highConfidence = listings.filter((l) => l.confidence === 'high').length;
+
+const description =
+  'Where LocalKnows data comes from, how every listing shows its sources and check date, how to report a correction, and how to have a listing removed. Removals are honoured.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Data and corrections', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How do I get a detail on my listing corrected?',
+    a: 'Use the form on this page. Give the listing URL, what is wrong, what it should be, and a URL where we can confirm it. You do not need an account and you do not have to own the business. It is acknowledged within two business days and fixed within five, or you get an explanation of the source we relied on so you can tell us what is wrong with it.',
+  },
+  {
+    q: 'Can I have my business removed from the directory entirely?',
+    a: 'Yes, and it will be honoured. Ask through the form or by email, confirm you are connected to the business, and the listing comes down within two business days. No reason is required, nothing is charged, and nobody will try to talk you out of it. The URL then redirects to the category the listing sat in, so anyone following an old link lands somewhere useful instead of on an error.',
+  },
+  {
+    q: 'Where did you get my phone number and hours?',
+    a: 'From public sources, and the listing names them. Usually the business website, sometimes a council or tourism board listing, an industry register, or a published local news item. Every listing prints the URLs its details were read from and the date they were last read. If a source is wrong, or you would rather a detail was not published at all, say so and it goes.',
+  },
+  {
+    q: 'What does it mean when a listing has no verified badge?',
+    a: 'It means nobody has checked a licence for it yet, which is the normal state for a listing built from public sources. It does not mean the business failed a check. A failed check is never published, because a public failure label would punish a business for a typo or a register outage. No badge means not checked. That is all it means.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+
+const row = 'margin:0 0 18px';
+const lbl = 'display:block;color:var(--ink-60);margin-bottom:6px';
+const inp =
+  'width:100%;font:inherit;font-size:15.5px;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--white);color:var(--ink)';
+const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
+---
+
+<Base
+  kind="static"
+  title="Data sources and corrections"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">Policy &middot; sources and fixes</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Every listing on this site publishes where its details came from and the date they
+        were last read. When something is wrong, this is the page that fixes it.
+      </p>
+      <div class="headmeta">
+        <span>{n(listings.length)} listings</span>
+        <span>&middot; {n(highConfidence)} high confidence</span>
+        <span>&middot; Fixed within five business days</span>
+        <span>&middot; Updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>Where the data comes from</h2>
+      <p>
+        Nothing on a listing is invented and nothing is bought from a data broker. Details
+        come from five places, in this order of preference:
+      </p>
+      <ol>
+        <li>
+          <strong>The business&rsquo;s own published material.</strong> Its website, its
+          menu, its booking page, its own social profiles. This is the best source and the
+          one used first.
+        </li>
+        <li>
+          <strong>Public registers.</strong> The ABN register for trading names, NSW Fair
+          Trading for New South Wales trade licences, and the Victorian Building Authority for
+          Victorian plumbing and building registrations.
+        </li>
+        <li>
+          <strong>Council and tourism board listings.</strong> Useful for opening hours of
+          parks, halls, galleries and community facilities.
+        </li>
+        <li>
+          <strong>The owner.</strong> Once a listing is claimed, the owner&rsquo;s version
+          overrides everything above it, and the page says the details are owner maintained.
+        </li>
+        <li>
+          <strong>The Google Places API</strong>, for a rating and review count only. Where a
+          Google rating appears it carries the date it was fetched. Where it does not appear,
+          we do not have it, and the page says so rather than showing a number nobody can
+          trace.
+        </li>
+      </ol>
+
+      <h2>What every listing shows</h2>
+      <ul>
+        <li>
+          <strong>Sources.</strong> The URLs the details were read from, listed on the page.
+        </li>
+        <li>
+          <strong>Last checked.</strong> The date somebody last opened those sources and
+          compared them to what is published here.
+        </li>
+        <li>
+          <strong>Confidence.</strong> High means the detail was seen on the business&rsquo;s
+          own site or on an official register. Anything lower came from a single third party
+          and is marked accordingly.
+        </li>
+        <li>
+          <strong>Licence status.</strong> Where a licence has been verified, the listing
+          shows the number, the class, the register it was checked against, a link to that
+          register and the date of the check.
+        </li>
+      </ul>
+      <p>
+        The point of publishing all of that is that you do not have to take our word for
+        anything. Every check on this site can be repeated by a reader in about a minute.
+      </p>
+
+      <h2>What goes stale, honestly</h2>
+      <p>
+        A directory that claims to be always accurate is lying, and everyone reading it knows.
+        Here is what actually degrades.
+      </p>
+      <ul>
+        <li>
+          <strong>Opening hours.</strong> The most fragile field on the site. School holidays,
+          Christmas, and the fact that {STATES.NSW.name} and {STATES.VIC.name} do not share a
+          public holiday calendar all break them. Ring ahead for anything that matters, and
+          especially around a long weekend on the border where one side is working and the
+          other is not.
+        </li>
+        <li>
+          <strong>Phone numbers and email addresses.</strong> These change without ceremony
+          and without a public announcement.
+        </li>
+        <li>
+          <strong>Prices and callout fees.</strong> Treated as indicative. They are read from
+          published material at a point in time and they move.
+        </li>
+        <li>
+          <strong>Businesses that have closed.</strong> Closures are often invisible online for
+          months. If you find one, tell us and it gets marked closed rather than deleted, so
+          the next person searching for it finds out what happened.
+        </li>
+        <li>
+          <strong>No verified badge is not a black mark.</strong> It means a licence has not
+          been checked yet. A check that fails is never published as a failure.
+        </li>
+      </ul>
+
+      <h2>Report a correction</h2>
+      <p>
+        Anyone can report anything. You do not need an account, you do not have to own the
+        business and you do not have to explain who you are.
+      </p>
+      <ol>
+        <li>Send the form below. The source URL field is the one that makes this fast.</li>
+        <li>
+          It is acknowledged by a person within two business days. Not an autoresponder telling
+          you it has been received.
+        </li>
+        <li>
+          The claim is checked against the source you gave and against the source already on
+          the listing.
+        </li>
+        <li>
+          It is fixed within five business days, or you get an explanation naming the source we
+          relied on so you can tell us what is wrong with it.
+        </li>
+        <li>
+          The listing&rsquo;s last checked date is reset, and where the change alters a fact a
+          reader could have acted on, the page carries a dated note.
+        </li>
+      </ol>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Correction form</h2>
+        <span class="mono">Fixed in five business days</span>
+      </div>
+      <div class="panel-body">
+        <form name="correction" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="correction" />
+          <p hidden>
+            <label>Leave this field empty: <input name="bot-field" /></label>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="f-url">Listing URL</label>
+            <input style={inp} id="f-url" name="listing_url" type="url" placeholder="https://localknows.au/nsw/albury/plumbers/..." required />
+            <span style={hint}>Copy it from the address bar of the page that is wrong.</span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="f-wrong">What is wrong</label>
+            <textarea style={inp + ';min-height:110px;resize:vertical'} id="f-wrong" name="what_is_wrong" rows="4" placeholder="The Saturday hours say 9 to 12. The shop has not opened Saturdays since March." required></textarea>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="f-right">What it should be</label>
+            <textarea style={inp + ';min-height:110px;resize:vertical'} id="f-right" name="what_it_should_be" rows="4" placeholder="Closed Saturdays and Sundays. Weekdays 7am to 4pm." required></textarea>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="f-source">Source URL</label>
+            <input style={inp} id="f-source" name="source_url" type="url" placeholder="https://example.com.au/contact" />
+            <span style={hint}>
+              A page where we can confirm it. The business website is ideal. Leave it blank if
+              there is nothing published and we will ring them.
+            </span>
+          </p>
+
+          <p style={row}>
+            <label class="mono" style={lbl} for="f-email">Your email (optional)</label>
+            <input style={inp} id="f-email" name="email" type="email" autocomplete="email" />
+            <span style={hint}>Only used to tell you what happened. Leave it out if you prefer.</span>
+          </p>
+
+          <p style="margin:0">
+            <button class="btn btn-river" type="submit">Send correction</button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <div class="prose" style="margin-top:26px">
+      <h2>Removing a listing</h2>
+      <p>
+        A business that does not want to be listed does not have to be listed. Ask, and the
+        listing comes down.
+      </p>
+      <ul>
+        <li>
+          Send the request through the form above or to
+          <a href={'mailto:' + SITE.email}>{SITE.email}</a>, from an address connected to the
+          business or from the phone number on the listing.
+        </li>
+        <li>No reason is required and none will be asked for.</li>
+        <li>Nothing is charged, now or later.</li>
+        <li>The listing is removed within two business days.</li>
+        <li>
+          The URL redirects to the category page it sat in, so old links and printed cards do
+          not lead to an error.
+        </li>
+        <li>
+          It stays off. Removed businesses are recorded on a suppression list so a later
+          import does not put them back.
+        </li>
+      </ul>
+      <p>
+        Removal is a different thing from a correction and a different thing from a legal
+        complaint. If you believe something on this site is defamatory or infringes your
+        rights, say so plainly in the message and it goes to the top of the queue.
+        <a href={url.terms()}>The terms of use</a> set out the rest.
+      </p>
+
+      <h2>Bulk and automated access</h2>
+      <p>
+        Scraping the site is not permitted. Researchers, journalists and councils who want
+        aggregate numbers should ask instead, through
+        <a href={url.contact()}>the contact form</a>, choosing Media. We will explain how a
+        figure was computed and what the sample was. That is a better answer than a crawl and
+        it takes less of your time.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="Data and corrections, answered" id="data-faq" />
+  </div>
+
+  <LinkBlock
+    heading="Related"
+    groups={[
+      {
+        heading: 'Take control',
+        links: [
+          { href: url.claim(), label: 'Claim your listing', note: 'free' },
+          { href: url.contact(), label: 'Contact us' },
+          { href: url.partners(), label: 'Badges and links' },
+        ],
+      },
+      {
+        heading: 'How we work',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.about(), label: 'About LocalKnows' },
+        ],
+      },
+      {
+        heading: 'The fine print',
+        links: [
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.terms(), label: 'Terms of use' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

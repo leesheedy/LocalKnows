@@ -1,0 +1,40 @@
+---
+/**
+ * /nsw/riverina/  and  /nsw/albury/  share a shape.
+ *
+ * Regions and localities sit at the same depth because the spec calls for
+ * location first, keyword second URLs, and an extra /regions/ segment would push
+ * every money page a level deeper for no gain. The cost is that a region slug
+ * must never equal a locality slug within one state, and preflight fails the
+ * build if it ever does.
+ */
+import RegionPage from '~/components/RegionPage.astro';
+import LocalityPage from '~/components/LocalityPage.astro';
+import { STATES, regions, liveLocalities } from '~/lib/repo';
+import { BUILD_DATE } from '~/lib/build';
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+  for (const region of regions) {
+    paths.push({
+      params: { state: STATES[region.state].slug, place: region.slug },
+      props: { type: 'region', region },
+    });
+  }
+  // A locality page is only built once it has listings. See liveLocalities().
+  for (const locality of liveLocalities()) {
+    paths.push({
+      params: { state: STATES[locality.state].slug, place: locality.slug },
+      props: { type: 'locality', locality },
+    });
+  }
+  return paths;
+}
+
+const props = Astro.props as any;
+---
+{props.type === 'region' ? (
+  <RegionPage region={props.region} buildDate={BUILD_DATE} />
+) : (
+  <LocalityPage locality={props.locality} buildDate={BUILD_DATE} />
+)}

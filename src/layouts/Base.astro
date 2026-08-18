@@ -1,0 +1,161 @@
+---
+/**
+ * The only layout.
+ *
+ * Every page passes a page kind and its own facts; the head is assembled here so
+ * canonical, robots, Open Graph and JSON-LD can never drift apart between page
+ * types. If something belongs in <head>, it belongs in this file.
+ */
+import { SITE } from '~/lib/site';
+import { decide, robotsContent, type PageKind } from '~/lib/indexability';
+import { abs, title as fitTitle, description as fitDescription, type Crumb } from '~/lib/seo';
+import Header from '~/components/Header.astro';
+import Footer from '~/components/Footer.astro';
+import Breadcrumbs from '~/components/Breadcrumbs.astro';
+import '~/styles/global.css';
+
+interface Props {
+  kind: PageKind;
+  title: string;
+  description: string;
+  /** Path only, with a trailing slash. Canonical is built from it. */
+  canonicalPath: string;
+  crumbs?: Crumb[];
+  jsonLd?: unknown;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  listingCount?: number;
+  basedCount?: number;
+  qualityScore?: number;
+  page?: number;
+  isPast?: boolean;
+  utility?: boolean;
+  /** Rendered above the breadcrumbs. Used by paginated and filtered views. */
+  prev?: string;
+  next?: string;
+  publishedAt?: string;
+  modifiedAt?: string;
+  wide?: boolean;
+}
+
+const {
+  kind,
+  title,
+  description,
+  canonicalPath,
+  crumbs = [],
+  jsonLd,
+  ogImage,
+  ogType = 'website',
+  listingCount,
+  basedCount,
+  qualityScore,
+  page,
+  isPast,
+  utility,
+  prev,
+  next,
+  publishedAt,
+  modifiedAt,
+} = Astro.props;
+
+const decision = decide({ kind, listingCount, basedCount, qualityScore, page, isPast, utility });
+const canonical = abs(canonicalPath);
+const metaTitle = fitTitle(title);
+const metaDescription = fitDescription(description);
+const image = abs(ogImage ?? '/og/default.png');
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={robotsContent(decision)} />
+
+    {/* Fonts are same origin, so a preload beats a preconnect. */}
+    <link
+      rel="preload"
+      href="/fonts/instrument-sans.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/bricolage-grotesque.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    {prev && <link rel="prev" href={abs(prev)} />}
+    {next && <link rel="next" href={abs(next)} />}
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    {publishedAt && <meta property="article:published_time" content={publishedAt} />}
+    {modifiedAt && <meta property="article:modified_time" content={modifiedAt} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={image} />
+
+    <meta name="theme-color" content="#EFEDE4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#131E19" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=yes" />
+    <meta name="geo.region" content="AU-NSW" />
+    <meta name="geo.placename" content="New South Wales and Victoria, Australia" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="alternate" type="application/rss+xml" title={SITE.name + ' wire'} href="/wire/rss.xml" />
+
+    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />}
+
+    {/*
+      Policy decision is emitted so it can be asserted in the build verifier and
+      read straight off a live page during an audit. Cheap, and it makes the
+      indexation rules testable rather than a claim in a document.
+    */}
+    <meta name="lk:index-reason" content={decision.reason} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <Header />
+    {crumbs.length > 0 && (
+      <div class="wrap">
+        <Breadcrumbs crumbs={crumbs} />
+      </div>
+    )}
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <script is:inline>
+      // Mobile nav. Nine lines of inline script rather than a framework island.
+      document.addEventListener('click', function (e) {
+        var t = e.target.closest('.navtoggle');
+        if (!t) return;
+        var bar = t.closest('.bar');
+        var open = bar.classList.toggle('open');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+---
+/**
+ * Guides index. /guides/
+ *
+ * Guides do two jobs: they earn links, and they feed the money pages with
+ * context and internal anchors. Both jobs die the moment the content goes
+ * stale, so the review date sits on the card rather than in a byline nobody
+ * scrolls to.
+ */
+import { url, STATES, guides } from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.guides();
+
+/** Newest review first. A guide reviewed last month outranks one from last year. */
+const rows = guides.slice().sort((a, b) => b.reviewedAt.localeCompare(a.reviewedAt));
+const lastReviewed = rows[0]?.reviewedAt;
+
+const h1 = 'Guides';
+const pageTitle = 'Guides to hiring local in NSW and Victoria';
+const description =
+  'Guides on hiring trades, checking licences and buying local across New South Wales and Victoria. Every one carries a named author and the date it was last reviewed.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Guides', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Who writes these guides?',
+    a: 'A named person, with their role printed at the top of the guide and again in the sidebar. Nothing here is published anonymously and nothing is published under a house byline. If a guide gets something wrong, you know exactly who to email about it.',
+  },
+  {
+    q: 'How often are the guides reviewed?',
+    a: 'Every six months. Stale evergreen content is the main way a directory gets flattened by a core update, so the last reviewed date is shown on every guide. Either the date moves or the guide comes down.',
+  },
+  {
+    q: 'Can a business pay to be recommended in a guide?',
+    a: 'No. Guides link to category and town pages, and those are ordered by a quality score built from profile completeness, claim status and licence checks. Money does not touch that order. Advertising, where it exists, is boxed and labelled.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: lastReviewed ?? BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'LocalKnows guides',
+    items: rows.map((g) => ({ url: url.guide(g), name: g.title })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title={pageTitle}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={lastReviewed ?? BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">Editorial</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Every guide carries a named author and a visible last reviewed date. Both are
+        printed on the page, not hidden in a footer.
+      </p>
+      <div class="headmeta">
+        <span>{rows.length} {rows.length === 1 ? 'guide' : 'guides'}</span>
+        {lastReviewed && (
+          <span>&middot; Last review <time datetime={lastReviewed}>{humanDate(lastReviewed)}</time></span>
+        )}
+        <span>&middot; Reviewed every six months</span>
+      </div>
+    </div>
+
+    <section class="prose" style="margin-top:26px">
+      <p>
+        Stale evergreen content is the main way a directory gets flattened by a core
+        update. A guide written two years ago that still quotes a licence class nobody
+        holds any more, or a price band nobody charges, drags down every page it links
+        to. So each guide here is on a six month review cycle. The date moves, or the
+        guide comes down.
+      </p>
+    </section>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      {rows.length > 0 ? (
+        <div class="cards">
+          {rows.map((g) => (
+            <article class="card">
+              <div class="card-top">
+                <div style="min-width:0">
+                  <h3><a href={url.guide(g)}>{g.title}</a></h3>
+                  <p class="cat-line">{g.author} &middot; {g.authorRole}</p>
+                </div>
+              </div>
+              <p class="desc" style="margin-top:14px">{g.description}</p>
+              <div class="card-foot">
+                <span class="mono" style="color:var(--ink-40)">
+                  Reviewed <time datetime={g.reviewedAt}>{humanDate(g.reviewedAt)}</time>
+                </span>
+                <span class="right">
+                  <a class="btn btn-sm btn-ghost" href={url.guide(g)}>Read</a>
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="empty">
+          <p>
+            No guides published yet. The first ones cover licence checks in both states
+            and what a call out fee actually buys you.
+          </p>
+          <a class="btn" href={url.categoryIndex()}>Browse the categories instead</a>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="How the guides work" />
+  </div>
+
+  <LinkBlock
+    heading="Keep reading"
+    groups={[
+      {
+        heading: 'State hubs',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+        ],
+      },
+      {
+        heading: 'Elsewhere on the site',
+        links: [
+          { href: url.categoryIndex(), label: 'Every category' },
+          { href: url.lists(), label: 'Curated lists' },
+          { href: url.tools(), label: 'Free tools' },
+          { href: url.wire(), label: 'The wire' },
+        ],
+      },
+      {
+        heading: 'How we work',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.about(), label: 'About LocalKnows' },
+        ],
+      },
+    ]}
+  />
+</Base>

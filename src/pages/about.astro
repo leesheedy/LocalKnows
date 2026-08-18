@@ -1,0 +1,327 @@
+---
+/**
+ * About.
+ *
+ * The E-E-A-T page. Who runs the site, why it exists, how a listing gets on it,
+ * where the money comes from, and what will not happen for money. Every claim
+ * here is one the rest of the codebase actually implements.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import {
+  url,
+  STATES,
+  listings,
+  categories,
+  regions,
+  pageWorthyLocalities,
+  POLICY,
+} from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  faqNode,
+  type Crumb,
+} from '~/lib/seo';
+
+const canonicalPath = url.about();
+const h1 = 'About LocalKnows';
+
+// Every locality in the gazetteer, not just the ones with pages. The number
+// people want here is how much of NSW and VIC is mapped.
+const places = pageWorthyLocalities();
+const verified = listings.filter((l) => l.status === 'verified').length;
+const licenceChecked = listings.filter((l) => l.licences.some((x) => x.verificationOk)).length;
+
+const description =
+  'LocalKnows is an independent NSW and Victorian directory built by Automatrix Digital on the Albury Wodonga border. Free listings, checked licences, sourced facts.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'About', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Who owns and runs LocalKnows?',
+    a: 'Automatrix Digital, a small web and software shop working out of the Albury Wodonga area. Automatrix builds the site, pays the hosting bill and answers the email at ' + SITE.email + '. There is no investor, no media group and no parent directory network above it.',
+  },
+  {
+    q: 'Does it cost anything to be listed?',
+    a: 'No. Being listed, claiming the listing, editing the details, adding hours and photos and replying to reviews are all free and stay free. There is no trial period that quietly ends. Money comes from enquiry routing and multi location tools, both of which are optional and neither of which changes the order of a list.',
+  },
+  {
+    q: 'Can a business pay to rank higher?',
+    a: 'No. Order comes from a quality score built from profile completeness, claim status, licence verification and review volume, then average rating, then name. Paid placement, where it exists, sits in a labelled box outside the list and is left out of the structured data. The day ranking goes on sale is the day there is no reason to trust anything else on the page.',
+  },
+  {
+    q: 'Why did the site start in Albury Wodonga?',
+    a: 'Because the border problem is impossible to miss there. Albury is in New South Wales, Wodonga is in Victoria, they are about four kilometres apart and they share one labour market. A tradesperson based on one side and working on the other is missing from half the searches they should appear in on every other directory. Fixing that in Albury Wodonga first meant the model was tested against the hardest case before it was rolled out anywhere easier.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'AboutPage',
+    dateModified: BUILD_DATE,
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="About"
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap-narrow">
+    <div class="pagehead">
+      <p class="eyebrow mono">About &middot; built by {SITE.publisher.name}</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        An independent directory for New South Wales and Victoria, started on the Albury
+        Wodonga border because that is where every other directory falls over.
+      </p>
+      <div class="headmeta">
+        <span>{n(listings.length)} listings</span>
+        <span>&middot; {n(places.length)} localities</span>
+        <span>&middot; {categories.length} categories</span>
+        <span>&middot; Updated {humanDate(BUILD_DATE)}</span>
+      </div>
+    </div>
+
+    <div class="prose">
+      <p>
+        LocalKnows lists businesses, clubs and places across {STATES.NSW.name} and
+        {STATES.VIC.name}. Trades, cafes, bakeries, pubs, motels, wineries, sporting clubs,
+        hobby groups. Every listing shows the sources its details came from and the date
+        those sources were last read. Nothing on this site is ranked by who paid.
+      </p>
+
+      {SITE.usingSampleData && (
+        <div class="notice">
+          <strong>This build runs on sample data.</strong> Seeded example records ship with
+          the repository so that every template renders. Sample records are labelled on the
+          page, never claim a verified licence, and are held out of the index at the
+          deployment boundary. Real listings replace them locality by locality.
+        </div>
+      )}
+
+      <h2>Who runs it</h2>
+      <p>
+        LocalKnows is built and operated by
+        <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>, a small web
+        and software shop. The same people write the code, load the data, check the licences
+        and answer the email. There is no investor, no parent directory group and no
+        outsourced content desk. When a page is wrong, one small team is responsible for it,
+        and <a href={url.contact()}>the contact address</a> goes to that team.
+      </p>
+      <p>
+        That is worth saying plainly because most directories will not say it. If you cannot
+        find out who is behind a site, who checked its facts, or what happens to your
+        details when you fill in its form, the answer to all three is usually the one you
+        would not like.
+      </p>
+
+      <h2>Why it started on the border</h2>
+      <p>
+        Albury sits in New South Wales. Wodonga sits in Victoria. The two centres are about
+        four kilometres apart across the Murray and share one labour market, one hospital
+        catchment and one pool of tradespeople. Every directory we checked treats the river
+        as a wall.
+      </p>
+      <p>
+        A plumber based in Lavington who works in Wodonga five days a week gets filed under
+        New South Wales and disappears from the Victorian searches he should own. Ask for an
+        emergency electrician in Wodonga and half the ones who will actually turn up inside
+        an hour are not on the page. The same thing happens at Corowa and Yarrawonga, at
+        Echuca and Moama, at Mildura and Wentworth.
+      </p>
+      <p>
+        This is a data modelling problem, not a content problem. Where a business is
+        registered and where a business works are two different facts, and most directories
+        store only the first one. We store both. Albury Wodonga was the obvious place to
+        prove it, because there the failure is visible from the main street.
+      </p>
+
+      <h2>Three things that make this different</h2>
+
+      <h3>1. Service area is stored separately from the address</h3>
+      <p>
+        Every listing carries a registered locality and a list of localities it will travel
+        to. A business appears on a town page when it sits there <strong>or</strong> when it
+        services there, and the card says which. A mobile trade with no shopfront gets no
+        street address in its structured data at all, because inventing one is a lie that
+        Google can check against the map pack. Cross border operators are marked, so nobody
+        has to guess whether the quote will include an hour of travel.
+      </p>
+
+      <h3>2. Trade licences are checked against the state registers</h3>
+      <p>
+        A licence number on a listing means somebody put that number into the relevant
+        register and it came back current. New South Wales licences are checked against NSW
+        Fair Trading. Victorian plumbing and building registrations are checked against the
+        Victorian Building Authority. The listing prints the register link and the date of
+        the check, so anyone can repeat it in under a minute.
+        {licenceChecked > 0 && ' Right now ' + n(licenceChecked) + ' of ' + n(listings.length) + ' listings hold a licence we have confirmed.'}
+      </p>
+      <p>
+        A licence we could not confirm is not shown. There is no partial credit and no
+        "licence pending" badge, because a badge that means "we asked and did not get an
+        answer" is worse than no badge.
+      </p>
+
+      <h3>3. Every fact carries its source and the date it was read</h3>
+      <p>
+        Each listing publishes the URLs its details were read from and a last checked date.
+        Details taken from the business&rsquo;s own site or an official register are marked
+        as high confidence. Details from a single third party source are marked lower. Where
+        a Google rating appears, it was read from the Places API on the date printed beside
+        it, and where it does not appear we simply do not have it. A directory that will not
+        say where its facts came from is asking to be trusted for no reason.
+      </p>
+
+      <h2>How a listing gets on the site</h2>
+      <ol>
+        <li>
+          <strong>Found.</strong> The business is picked up from public sources: its own
+          website, a council or tourism board listing, an industry register, a published
+          local news item.
+        </li>
+        <li>
+          <strong>Recorded.</strong> Name, address, phone, hours, categories and service
+          areas are entered together with the URL each one came from. Anything we cannot
+          source is left blank rather than guessed at.
+        </li>
+        <li>
+          <strong>Claimed.</strong> The owner claims the listing and takes over the details.
+          Claiming is free, takes a few minutes, and does not expire.
+        </li>
+        <li>
+          <strong>Checked.</strong> If the business holds a trade licence, the number is run
+          against the state register and the result is recorded with the date it was run.
+        </li>
+        <li>
+          <strong>Verified.</strong> A confirmed licence earns the verified badge, and the
+          outbound link to the business website loses its nofollow. Both are earned by the
+          check. Neither can be bought, and neither is given in exchange for a link back.
+        </li>
+      </ol>
+      <p>
+        Steps one and two happen whether or not the owner has ever heard of us, which is how
+        a directory gets useful before it gets popular. Steps three to five are the owner&rsquo;s
+        move, and <a href={url.claim()}>the claim page</a> explains what each one involves.
+      </p>
+
+      <h2>How the site makes money</h2>
+      <p>
+        Listings are free. Claiming, editing, opening hours, photos, service areas, review
+        replies: free, permanently, with no trial that quietly ends.
+      </p>
+      <p>
+        Revenue comes from two products. Enquiry routing, where a business pays to have
+        quote requests sent through the site delivered to it. And multi location tools, for
+        operators running several sites who want one dashboard instead of nine logins.
+        Advertising, where it runs, sits in a labelled box outside the organic list and is
+        excluded from the structured data, which is set out in full in the
+        <a href={url.advertisingPolicy()}>advertising policy</a>.
+      </p>
+      <p>
+        Ranking is not one of the products. Ordering comes from a quality score computed from
+        profile completeness, claim status, licence verification and review volume, then
+        average rating, then name. A business paying us every month and a business that has
+        never replied to an email go through the same function in the same order.
+      </p>
+
+      <h2>What this site will not do</h2>
+      <ul>
+        <li>Sell a position in a list, a place in a curated list, or the verified badge.</li>
+        <li>Remove or demote a business because a competitor asked for it, or paid for it.</li>
+        <li>Publish a rating, a price or an opening time that cannot be traced to a source.</li>
+        <li>
+          Put an aggregate rating in structured data on a page where the reviews themselves
+          are not visible.
+        </li>
+        <li>
+          Trade a dofollow link for a link back. Google&rsquo;s spam policies name that
+          arrangement specifically, and the
+          <a href={url.partners()}>link partner page</a> explains why we agree with them.
+        </li>
+        <li>
+          Delete a page that once ranked. Pages that fall under the
+          {' '}{POLICY.minListingsToIndex} listing threshold go noindex, follow and keep
+          their links until they cross back over it.
+        </li>
+      </ul>
+
+      <h2>Coverage, honestly stated</h2>
+      <p>
+        {n(listings.length)} listings across {n(places.length)} localities and
+        {' '}{regions.length} regions today, with {n(verified)} verified. A town goes live
+        when it has content on it, not before, so a place with no page yet is a place we have
+        not got to. Coverage grows out from the border corridor: Albury Wodonga first, then
+        Wagga, Shepparton, Wangaratta, Corowa and Deniliquin, then the larger regional
+        centres. Sydney and Melbourne come last, on purpose.
+      </p>
+      <p>
+        If something on this site is wrong, the
+        <a href={url.dataPolicy()}>corrections page</a> has a form that goes straight to a
+        person, and every correction is answered within two business days.
+      </p>
+    </div>
+
+    <Faq faqs={faqs} heading="About this site" id="about-faq" />
+  </div>
+
+  <LinkBlock
+    heading="More about how this works"
+    groups={[
+      {
+        heading: 'Policies',
+        links: [
+          { href: url.editorialPolicy(), label: 'Editorial policy', note: 'who writes, who checks' },
+          { href: url.advertisingPolicy(), label: 'Advertising policy' },
+          { href: url.dataPolicy(), label: 'Data and corrections' },
+          { href: url.privacy(), label: 'Privacy policy' },
+          { href: url.terms(), label: 'Terms of use' },
+        ],
+      },
+      {
+        heading: 'For business owners',
+        links: [
+          { href: url.claim(), label: 'Claim your listing', note: 'free' },
+          { href: url.partners(), label: 'Link partners and badges' },
+          { href: url.contact(), label: 'Contact us' },
+        ],
+      },
+      {
+        heading: 'Browse the directory',
+        links: [
+          { href: url.state('NSW'), label: STATES.NSW.name },
+          { href: url.state('VIC'), label: STATES.VIC.name, cross: true },
+          { href: url.categoryIndex(), label: 'All categories' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.sitemapPage(), label: 'Site index' },
+        ],
+      },
+    ]}
+  />
+</Base>

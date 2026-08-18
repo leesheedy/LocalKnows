@@ -1,0 +1,88 @@
+---
+/**
+ * One route, two page types.
+ *
+ *   /nsw/albury/pubs/beer-garden/        long tail modifier
+ *   /nsw/albury/pubs/the-terminus/       business detail
+ *
+ * They share a URL shape, so they share a route and getStaticPaths decides which
+ * is which. scripts/preflight.mjs asserts no listing slug ever collides with a
+ * modifier slug inside the same locality and category.
+ */
+import BusinessPage from '~/components/BusinessPage.astro';
+import ModifierPage from '~/components/ModifierPage.astro';
+import {
+  STATES,
+  POLICY,
+  liveLocalities,
+  activeCategoriesInLocality,
+  listingsInLocalityCategory,
+  modifiersForCategory,
+  listingsForModifier,
+  getLocality,
+  getCategory,
+  listings as allListings,
+} from '~/lib/repo';
+import { BUILD_DATE } from '~/lib/build';
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+
+  // Business detail sits under its own locality and primary category only.
+  // A listing that services six towns still has exactly one canonical page.
+  for (const listing of allListings) {
+    if (listing.status === 'suspended') continue;
+    const locality = getLocality(listing.localityId);
+    const category = getCategory(listing.categoryIds[0]);
+    if (!locality || !category) continue;
+    paths.push({
+      params: {
+        state: STATES[locality.state].slug,
+        place: locality.slug,
+        category: category.slug,
+        slug: listing.slug,
+      },
+      props: { type: 'business', listing, locality, category },
+    });
+  }
+
+  for (const locality of liveLocalities()) {
+    for (const { category } of activeCategoriesInLocality(locality.id)) {
+      if (!listingsInLocalityCategory(locality.id, category.id).length) continue;
+      for (const modifier of modifiersForCategory(category.id)) {
+        const rows = listingsForModifier(locality.id, category.id, modifier);
+        if (rows.length < POLICY.minListingsForModifierPage) continue;
+        paths.push({
+          params: {
+            state: STATES[locality.state].slug,
+            place: locality.slug,
+            category: category.slug,
+            slug: modifier.slug,
+          },
+          props: { type: 'modifier', locality, category, modifier, listings: rows },
+        });
+      }
+    }
+  }
+
+  return paths;
+}
+
+const props = Astro.props as any;
+---
+{props.type === 'business' ? (
+  <BusinessPage
+    listing={props.listing}
+    locality={props.locality}
+    category={props.category}
+    buildDate={BUILD_DATE}
+  />
+) : (
+  <ModifierPage
+    locality={props.locality}
+    category={props.category}
+    modifier={props.modifier}
+    listings={props.listings}
+    buildDate={BUILD_DATE}
+  />
+)}

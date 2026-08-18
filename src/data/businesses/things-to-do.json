@@ -1,0 +1,1109 @@
+[
+  {
+    "name": "Murray Art Museum Albury (MAMA)",
+    "slug": "murray-art-museum-albury-mama",
+    "categorySlug": "art-galleries",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "546 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6043 5800",
+    "website": "https://www.mamalbury.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray+Art+Museum+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/MAMAlbury/",
+    "description": "MAMA is Albury's public art museum on Dean Street, showing rotating exhibitions by local, international and First Nations artists. Entry is free and the museum is open seven days a week, 362 days of the year. The building also holds a store of Australian design, the Canvas Eatery, and the MAMA Studio art class and workshop program.",
+    "highlights": [
+      "Free entry, open seven days",
+      "Rotating exhibitions of local, international and First Nations artists",
+      "MAMA Studio art classes and workshops",
+      "Kids' trails and family programs",
+      "Museum store and Canvas Eatery on site",
+      "Closed Anzac Day, Good Friday and Christmas"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes", "wheelchair_accessible": "yes" },
+    "sources": ["https://www.mamalbury.com.au/plan-your-trip", "https://www.mamalbury.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury LibraryMuseum",
+    "slug": "albury-librarymuseum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Corner Kiewa and Swift Streets",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 8333",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/museum-and-libraries/locations/albury-librarymuseum",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+LibraryMuseum+Albury+NSW",
+    "description": "A combined public library and museum run by AlburyCity on the corner of Kiewa and Swift Streets. It runs a changing exhibition program of touring exhibitions, works from the AlburyCity Collection and community shows, alongside the permanent exhibitions 'Crossing Place: A Story of Albury' and 'Sharing Bonegilla Stories'. Admission is free, and there are public computers, local history resources and study and meeting rooms for hire.",
+    "highlights": [
+      "Free admission",
+      "Permanent exhibition 'Crossing Place: A Story of Albury'",
+      "'Sharing Bonegilla Stories' migrant exhibition",
+      "Changing touring and community exhibitions",
+      "Local history collections and public computers",
+      "Study and meeting rooms for hire"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "14:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "19:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "19:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "19:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "17:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes", "wheelchair_accessible": "yes" },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/museum-and-libraries/locations/albury-librarymuseum",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/albury-wodonga/attractions/albury-library-museum"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury Botanic Gardens",
+    "slug": "albury-botanic-gardens",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Corner Dean and Smollett Streets",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 8111",
+    "website": "https://alburycity.nsw.gov.au/leisure/parks-and-public-spaces/botanic-gardens/visit",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Botanic+Gardens+Albury+NSW",
+    "description": "AlburyCity's botanic gardens sit on the corner of Dean and Smollett Streets, with the main entrance gates on Wodonga Place. The grounds hold established trees, meandering pathways and colourful garden beds, and visitors are invited to picnic on the lawns and watch for native wildlife. There is a separate Children's Garden, accessible parking and accessible toilets, and paths that suit mobility aids and powered wheelchairs.",
+    "highlights": [
+      "Free entry, open daily from 6:30am to sunset",
+      "Children's Garden open 8:30am to sunset, closed Wednesdays outside NSW school holidays",
+      "Established trees, pathways and garden beds",
+      "Picnic lawns and native wildlife",
+      "Accessible parking and toilets"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "wheelchair_accessible": "yes",
+      "parking": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://alburycity.nsw.gov.au/leisure/parks-and-public-spaces/botanic-gardens/visit",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/albury-wodonga/attractions/albury-botanic-gardens"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Monument Hill",
+    "slug": "monument-hill",
+    "categorySlug": "lookouts",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Memorial Drive, western end of Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 8111",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks-and-reserves/monument-hill",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Monument+Hill+Albury+NSW",
+    "description": "Monument Hill is Albury's most prominent viewing point, at the western end of Dean Street and reached via Memorial Drive. On top stands the Albury and District War Memorial, a 100-foot reinforced concrete obelisk unveiled on Anzac Day 1925 and paid for by public subscription. The surrounding bushland reserve has walking tracks, picnic tables, seating, a drinking fountain, public toilets and commemorative plaques, and wildflowers including terrestrial orchids appear in spring and summer.",
+    "highlights": [
+      "Free public reserve with views over Albury and the region",
+      "Albury and District War Memorial, unveiled Anzac Day 1925",
+      "Walking tracks through bushland",
+      "Picnic tables, seating and drinking fountain",
+      "Public toilets",
+      "Site of the annual Anzac Day ceremony"
+    ],
+    "attributes": { "free_entry": "yes", "toilets": "yes", "dog_friendly": "yes" },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks-and-reserves/monument-hill",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/albury-wodonga/attractions/monument-hill"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wonga Wetlands",
+    "slug": "wonga-wetlands",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "2377 Riverina Highway",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/wonga-wetlands/see-and-do",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wonga+Wetlands+Albury+NSW",
+    "description": "Wonga Wetlands is an 80 hectare system of seven lagoons on the Murray River floodplain downstream from Albury, created using treated water from the city. More than 154 bird species have been identified here and six bird hides are spread around the lagoons. Walking trails of 0.5km, 1.2km and 2.5km start near the visitors centre, and the site includes an Indigenous Wiradjuri campsite with a cooking area, sleeping area, rock art displays and a ceremonial dancing circle.",
+    "highlights": [
+      "Free entry",
+      "Seven lagoons across 80 hectares of Murray River floodplain",
+      "Six bird hides and more than 154 recorded bird species",
+      "Walking trails of 0.5km, 1.2km and 2.5km",
+      "Wiradjuri campsite with rock art displays and ceremonial dancing circle",
+      "Connects to the Wagirra Trail and Yindyamarra Sculpture Walk"
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes" },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/wonga-wetlands/see-and-do",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/albury-wodonga/attractions/wonga-wetlands"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Nail Can Hill",
+    "slug": "nail-can-hill",
+    "categorySlug": "mountain-bike-trails",
+    "vertical": "things_to_do",
+    "localityName": "West Albury",
+    "state": "NSW",
+    "addressLine": "Range Road",
+    "suburb": "West Albury",
+    "postcode": "2640",
+    "website": "https://www.parklands-alburywodonga.org.au/explore-your-parks/other-parks/nal-can-hill/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nail+Can+Hill+West+Albury+NSW",
+    "description": "Nail Can Hill is a 1200 hectare bushland reserve on the western edge of Albury, holding about 5km of walking trails and 29km of mountain bike trails across roughly 70 individual tracks. The Ridge Trail is the longest walk at 7.9km, with shorter marked routes such as Bakes Trail (2.18km) and Pete's Trail (2.47km). Vegetation includes Box Gum Grassy Woodland, Granitic Hills Woodland, Heath Dry Forest and Box Ironbark Forest, and the reserve has hosted the Nail Can Hill Run since 1977. The main car park is on Range Road, with limited parking at Roper Street, Centaur Road and Pemberton Street.",
+    "highlights": [
+      "Free access to 1200 hectares of bushland",
+      "About 29km of mountain bike singletrack across roughly 70 tracks",
+      "5km of walking trails including the 7.9km Ridge Trail",
+      "Main car park and information board on Range Road",
+      "Downloadable track maps and trail notes",
+      "Home of the annual Nail Can Hill Run since 1977"
+    ],
+    "attributes": { "free_entry": "yes", "parking": "yes", "toilets": "yes" },
+    "sources": [
+      "https://www.parklands-alburywodonga.org.au/explore-your-parks/other-parks/nal-can-hill/",
+      "https://www.alburycity.nsw.gov.au/leisure/sport-and-recreation/walking-and-cycling-trails"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wagirra Trail and Yindyamarra Sculpture Walk",
+    "slug": "wagirra-trail-and-yindyamarra-sculpture-walk",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "website": "https://alburycity.nsw.gov.au/leisure/sport-and-recreation/walking-and-cycling-trails/wagirra-trail-and-yindyamarra-sculpture-walk",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagirra+Trail+Yindyamarra+Sculpture+Walk+Albury+NSW",
+    "description": "The Wagirra Trail is an 8.5km two metre wide shared pathway that links Horseshoe Lagoon with the South Albury Trail at the Union Bridge, running beside the Murray River through Noreuil, Australia and Hovell Tree parks and past the Oddies Creek playspace and Albury Swim Centre. The 5.3km section from Kremur Street to Wonga Wetlands is sealed and forms the Yindyamarra Sculpture Walk, lined with fifteen sculptures by local Aboriginal artists. Barbecues, picnic tables, public toilets and bins are spaced along the route.",
+    "highlights": [
+      "Free 8.5km shared walking and cycling path beside the Murray River",
+      "Fifteen sculptures by local Aboriginal artists on the Yindyamarra Sculpture Walk",
+      "Sealed 5.3km section from Kremur Street to Wonga Wetlands",
+      "Passes Noreuil, Australia and Hovell Tree parks",
+      "Barbecues, picnic tables and public toilets along the trail"
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes", "bbq": "yes", "toilets": "yes" },
+    "sources": [
+      "https://alburycity.nsw.gov.au/leisure/sport-and-recreation/walking-and-cycling-trails/wagirra-trail-and-yindyamarra-sculpture-walk"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Noreuil Park Foreshore",
+    "slug": "noreuil-park-foreshore",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Noreuil Parade",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/play-spaces/noreuil-park-foreshore",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noreuil+Park+Foreshore+Albury+NSW",
+    "description": "Noreuil Park is a riverside park on Noreuil Parade, less than a kilometre from the Albury CBD off Wodonga Place. It has mature shade trees, large grassed areas, picnic and barbecue facilities and a fenced children's playground, plus a cafe kiosk, public toilets and showers. The park is a launching point for canoeing and kayaking on the Murray and a hub for the Wagirra Trail and Bungambrawatha Bike Trail.",
+    "highlights": [
+      "Free riverside park a short walk from the Albury CBD",
+      "Fenced children's playground",
+      "Barbecues, picnic tables and shelters",
+      "Cafe kiosk, public toilets and showers",
+      "Canoe and kayak access to the Murray River",
+      "On the Wagirra Trail and Bungambrawatha Bike Trail"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/play-spaces/noreuil-park-foreshore"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Oddies Creek Park Adventure Playspace",
+    "slug": "oddies-creek-park-adventure-playspace",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "Off Ebden Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "02 6023 8111",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/play-spaces/oddies-creek-park",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oddies+Creek+Park+Adventure+Playspace+South+Albury+NSW",
+    "description": "Albury's largest playground, a 2,000 square metre fully fenced playspace set among mature gum trees off Ebden Street in South Albury and designed by Mary Jeavons. It includes a 30 metre flying fox, a giant bird nest swing, a complex climbing net, and two timber structures - a five metre high building with wheelchair accessible ramps and a smaller one for younger children with slides, climbers, rockers and a sandpit. Barbecues, picnic tables, shelter, seating, public toilets and a drinking fountain are on site, along with a leash free dog area.",
+    "highlights": [
+      "Free, fully fenced 2,000 square metre playspace",
+      "30 metre flying fox and giant bird nest swing",
+      "Wheelchair accessible ramps on the main play structure",
+      "Separate junior play area with sandpit",
+      "Barbecues, picnic tables, shelter and public toilets",
+      "Adjoining leash free dog area"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "wheelchair_accessible": "yes",
+      "dog_friendly": "yes"
+    },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/play-spaces/oddies-creek-park"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Regent Cinemas Albury",
+    "slug": "regent-cinemas-albury",
+    "categorySlug": "cinemas",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "456 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 3044",
+    "website": "https://www.regentcinemas.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Regent+Cinemas+Albury+Albury+NSW",
+    "facebook": "https://www.facebook.com/regentcinemas/",
+    "description": "Regent Cinemas is Albury's cinema complex on Dean Street, offering several different auditorium types. Gold Class has reclining armchairs and personal call buttons for waiter service, RMAX is billed as the largest screen in regional Australia and runs a 4K laser projector, Regent Junior has a dedicated play area at the back of the cinema for kids, and Regent Lounge occupies the lower section of the heritage theatre with 32 double seated couches.",
+    "highlights": [
+      "Gold Class cinemas with reclining armchairs and waiter service",
+      "RMAX, the largest screen in regional Australia, with 4K laser projection",
+      "Regent Junior with a play area inside the cinema",
+      "Regent Lounge with 32 double couches in the heritage theatre",
+      "In the centre of Albury on Dean Street"
+    ],
+    "attributes": { "kid_friendly": "yes", "bookings": "yes" },
+    "sources": [
+      "https://www.regentcinemas.com.au/",
+      "https://www.visitnsw.com/destinations/country-nsw/the-murray/albury-wodonga/attractions/regent-cinemas-albury-wodonga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury Swim Centre",
+    "slug": "albury-swim-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "441 Wodonga Place",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 3011",
+    "website": "https://alburywodongaaquatics.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury+Swim+Centre+Albury+NSW",
+    "description": "An outdoor swim centre on Wodonga Place owned by AlburyCity and operated by Aligned Leisure. The site has 50 metre pools, waterslides, lifeguards on duty, a kiosk and picnic and barbecue facilities, and runs learn to swim and kids' programs. Opening hours change with the season, so check the operator's hours page before visiting.",
+    "highlights": [
+      "Outdoor 50 metre pools with lifeguards on duty",
+      "Waterslides",
+      "Kiosk plus picnic and barbecue facilities",
+      "Learn to swim and kids' programs",
+      "Seasonal opening hours"
+    ],
+    "attributes": { "kid_friendly": "yes", "bbq": "yes" },
+    "sources": [
+      "https://alburywodongaaquatics.com.au/contact/",
+      "https://www.alburycity.nsw.gov.au/leisure/sport-and-recreation/swimming-pools"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lavington Swim Centre",
+    "slug": "lavington-swim-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "Moore Street",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6025 1034",
+    "website": "https://alburywodongaaquatics.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lavington+Swim+Centre+Lavington+NSW",
+    "description": "A seasonal outdoor swimming pool on Moore Street, Lavington, owned by AlburyCity and operated by Aligned Leisure. It opens over the summer months with swimming programs, lifeguards on duty, a kiosk and picnic and barbecue facilities, and hosts low cost aqua exercise classes.",
+    "highlights": [
+      "Seasonal outdoor pool open over summer",
+      "Swimming programs and low cost aqua exercise classes",
+      "Lifeguards on duty",
+      "Kiosk plus picnic and barbecue facilities"
+    ],
+    "attributes": { "kid_friendly": "yes", "bbq": "yes" },
+    "sources": [
+      "https://alburywodongaaquatics.com.au/contact/",
+      "https://www.alburycity.nsw.gov.au/leisure/sport-and-recreation/swimming-pools"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Worlds Beyond",
+    "slug": "worlds-beyond",
+    "categorySlug": "escape-rooms",
+    "vertical": "things_to_do",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "316 Urana Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6189 8976",
+    "website": "https://worldsbeyond.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Worlds+Beyond+Lavington+NSW",
+    "description": "Worlds Beyond on Urana Road, Lavington runs virtual reality escape rooms and other immersive experiences, including Quest Boxes, PixaPlay and party packages, along with educational content experiences. Online bookings close two hours before a session and the venue asks people to call for shorter notice, as staff are rostered on confirmed bookings and walk ins are not guaranteed. Gift vouchers are available.",
+    "highlights": [
+      "Virtual reality escape rooms",
+      "Quest Boxes and PixaPlay experiences",
+      "Party packages for groups",
+      "Booking strongly recommended, walk ins not guaranteed",
+      "Gift vouchers available"
+    ],
+    "attributes": { "kid_friendly": "yes", "booking_required": "yes", "bookings": "yes" },
+    "sources": ["https://worldsbeyond.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Table Top Reserve",
+    "slug": "table-top-reserve",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Table Top",
+    "state": "NSW",
+    "addressLine": "Table Top Reserve Road",
+    "suburb": "Table Top",
+    "postcode": "2640",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks/table-top-reserve",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Table+Top+Reserve+Table+Top+NSW",
+    "description": "A quiet AlburyCity reserve north of Thurgoona overlooking the Bowna arm of Lake Hume, Table Top Nature Reserve and Budgingi Trig Station Hill. It has Lake Hume water frontage when the lake is full, though water access recedes quickly as levels drop, and there is no direct vehicle access to the water. Facilities are a small playground, picnic tables, a public toilet and seating under mature shade trees, and much of the reserve has been revegetated.",
+    "highlights": [
+      "Free reserve with views over the Bowna arm of Lake Hume",
+      "Small playground and picnic tables",
+      "Public toilet and shaded seating",
+      "Popular fishing spot",
+      "No direct vehicle access to the water"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "toilets": "yes"
+    },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks/table-top-reserve"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Hume",
+    "slug": "lake-hume",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/lake-hume",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Hume+Albury+NSW",
+    "description": "Lake Hume sits about 20 kilometres east of the Albury CBD and is one of Australia's most important water storages, its dam completed in 1936 when it was the largest in the southern hemisphere. Four parks give public access to the water: Table Top Reserve, Bowna Waters Reserve, Apex Park (The Pines) and Lake Hume Tourist Park Beach. The lake is used for boating, fishing, kayaking, canoeing and paddleboarding, with public boat ramps at Apex Park, Bowna Waters Reserve, Kremur Street, Lake Hume Village and Mungabareena Reserve.",
+    "highlights": [
+      "About 20km east of the Albury CBD",
+      "Dam completed in 1936",
+      "Boating, fishing, kayaking, canoeing and paddleboarding",
+      "Public boat ramps at five locations",
+      "Foreshore parks at Table Top Reserve, Bowna Waters, Apex Park and Lake Hume Tourist Park Beach"
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes" },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/lake-hume",
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks-and-reserves/apex-park-pines"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Eastern Hill Reserve",
+    "slug": "eastern-hill-reserve",
+    "categorySlug": "lookouts",
+    "vertical": "things_to_do",
+    "localityName": "East Albury",
+    "state": "NSW",
+    "addressLine": "East Street",
+    "suburb": "East Albury",
+    "postcode": "2640",
+    "website": "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks-and-reserves/eastern-hill-reserve",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Eastern+Hill+Reserve+East+Albury+NSW",
+    "description": "Eastern Hill sits east of the Albury CBD, where the ridgeline gives views of Lake Hume and the Kiewa Valley. The reserve connects to Mungabareena Reserve via the Hume and Hovell Walking Track and is used by bushwalkers, trail runners and mountain bikers. There are hiking and cycling trails, a self guided trail, picnic tables, seating and public toilets.",
+    "highlights": [
+      "Free reserve with ridgeline views of Lake Hume and the Kiewa Valley",
+      "Linked to Mungabareena Reserve by the Hume and Hovell Walking Track",
+      "Hiking, trail running and mountain biking tracks",
+      "Self guided trail with picnic tables and seating",
+      "Public toilets"
+    ],
+    "attributes": { "free_entry": "yes", "toilets": "yes" },
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/parks-and-reserves/eastern-hill-reserve"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murray River Canoe Hire",
+    "slug": "murray-river-canoe-hire",
+    "categorySlug": "boat-hire",
+    "vertical": "things_to_do",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "addressLine": "301 Macauley Street",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "phone": "0417 691 339",
+    "website": "https://www.murrayrivercanoehire.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray+River+Canoe+Hire+South+Albury+NSW",
+    "description": "Operating since 1991, Murray River Canoe Hire rents two seater canoes and one and two seater sit on top kayaks for paddling the Murray River, and runs guided trips. Options range from a 1.5 hour short trip and a Thursday evening paddle through half day (17km) and full day (27km) hires to multi day trips covering 66km, plus dawn paddles and customised school group trips. Bookings are taken by phone or text.",
+    "highlights": [
+      "Canoe and kayak hire on the Murray River since 1991",
+      "Half day 17km and full day 27km paddles",
+      "Multi day 66km trips",
+      "Thursday evening and dawn paddle trips",
+      "School group trips available",
+      "Bookings by phone or text"
+    ],
+    "attributes": { "bookings": "yes", "kid_friendly": "yes" },
+    "sources": ["https://www.murrayrivercanoehire.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Jindera Pioneer Museum",
+    "slug": "jindera-pioneer-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Jindera",
+    "state": "NSW",
+    "addressLine": "118 Urana Street",
+    "suburb": "Jindera",
+    "postcode": "2642",
+    "phone": "0408 409 842",
+    "website": "https://www.jinderamuseum.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jindera+Pioneer+Museum+Jindera+NSW",
+    "description": "A volunteer run pioneer museum on about two acres in Jindera, north of Albury, with more than 400 exhibits spread through preserved historic buildings including an 1874 blacksmith shop, a period store and dwellings, and machinery and transport displays. The collection focuses on the district's settler history and German heritage. Most visitors spend 60 to 90 minutes on site, and a Sunday tea room serves Devonshire teas and homemade baking.",
+    "highlights": [
+      "More than 400 exhibits across two acres of preserved buildings",
+      "1874 blacksmith precinct",
+      "Displays on the district's German settler heritage",
+      "Sunday tea room with Devonshire teas",
+      "Open daily 10am to 4pm October to April and 10am to 3pm May to September",
+      "Adults $15, concession $10, children 5 to 12 $5, under 5 free"
+    ],
+    "attributes": { "kid_friendly": "yes", "parking": "yes" },
+    "sources": [
+      "https://www.jinderamuseum.com.au/",
+      "https://www.visitalburywodonga.com/operator/jindera-pioneer-museum/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Bonegilla Migrant Experience",
+    "slug": "bonegilla-migrant-experience",
+    "categorySlug": "heritage-sites",
+    "vertical": "things_to_do",
+    "localityName": "Bonegilla",
+    "state": "VIC",
+    "addressLine": "132 Bonegilla Road",
+    "suburb": "Bonegilla",
+    "postcode": "3691",
+    "phone": "02 6020 6912",
+    "website": "https://www.bonegilla.org.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bonegilla+Migrant+Experience+Bonegilla+VIC",
+    "description": "Block 19 at Bonegilla is the last surviving section of the post war migrant reception centre that received more than 300,000 new arrivals, and is now a heritage site open to the public. Visitors can walk through the original huts, follow the Suitcase Trail and see The Arc memorial sculpture, with guided tours available by appointment and education programs for schools. Entry is $8 for adults and $7 concession, children under 16 are free, and annual passes cost $14 and $12.",
+    "highlights": [
+      "The last remaining block of the Bonegilla migrant reception centre",
+      "More than 300,000 post war migrants passed through the camp",
+      "Suitcase Trail and The Arc memorial sculpture",
+      "Guided tours by appointment",
+      "Adults $8, concession $7, under 16s free",
+      "Open Wednesday, Friday, Saturday and Sunday, 10am to 4pm"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 4, "closed": true },
+      { "day": 5, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": { "kid_friendly": "yes", "tours": "yes" },
+    "sources": [
+      "https://www.bonegilla.org.au/visit-us/opening-times",
+      "https://www.bonegilla.org.au/About-Us/Contact-Us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Hyphen - Wodonga Library Gallery",
+    "slug": "hyphen-wodonga-library-gallery",
+    "categorySlug": "art-galleries",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "126 Hovell Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "website": "https://www.hyphenwodonga.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hyphen+Wodonga+Library+Gallery+Wodonga+VIC",
+    "description": "Hyphen is Wodonga's library and gallery in the city's cultural precinct on Hovell Street. The gallery runs a rotating program of exhibitions by local and contemporary artists, while the library gives access to more than 3 million items through Libraries Victoria plus computers, free wi-fi, printing, storytime, book clubs and local history research help. The building is fully accessible with two lifts, and parking is off Havelock Street behind The Cube Wodonga.",
+    "highlights": [
+      "Free entry gallery with rotating exhibitions",
+      "Library access to more than 3 million items via Libraries Victoria",
+      "Free wi-fi, computers and printing",
+      "Storytime, book clubs and local history research",
+      "Two lifts and full accessibility",
+      "Parking off Havelock Street"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "15:00", "closed": false },
+      { "day": 1, "opens": "10:00", "closes": "18:00", "closed": false },
+      { "day": 2, "opens": "10:00", "closes": "18:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "18:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "18:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "18:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "15:00", "closed": false }
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "wheelchair_accessible": "yes",
+      "parking": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.hyphenwodonga.com.au/",
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Belvoir Park",
+    "slug": "belvoir-park",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "website": "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Belvoir-Park-playground",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Belvoir+Park+Wodonga+VIC",
+    "description": "Belvoir Park is a large open space in Wodonga with established trees and a lake full of water birds, and the gardens beside the lake are known locally as Sumsion Gardens. There are two playgrounds: a multi age area with elevated platforms, decks, slides, nets, a climbing wall, a liberty swing, swings, a sandpit and interactive panels; and an area for ages 6 to 14 with two flying foxes, a ninja warrior obstacle course, an all abilities carousel that fits two wheelchairs, a rope snake swing for six children, a four metre twisted slide and a 7.3 metre climbing tower. The park also has a walking track around the lake, an off leash dog park, a community woodfired oven, picnic and barbecue facilities, drinking fountains, shelters, seating and public toilets.",
+    "highlights": [
+      "Free parkland with a lake and walking track",
+      "Two playgrounds including an all abilities carousel and liberty swing",
+      "Ninja warrior obstacle course and two flying foxes",
+      "7.3 metre climbing tower",
+      "Off leash dog park",
+      "Community woodfired oven, barbecues and public toilets"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "dog_friendly": "yes",
+      "wheelchair_accessible": "yes"
+    },
+    "sources": [
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Belvoir-Park-playground",
+      "https://www.melbourneplaygrounds.com.au/wodonga-sumsion-gardens-belvoir-park"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Huon Hill Regional Park",
+    "slug": "huon-hill-regional-park",
+    "categorySlug": "lookouts",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "Kenneth Watson Drive",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "website": "https://www.parklands-alburywodonga.org.au/explore-your-parks/huon-hill-regional-park/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Huon+Hill+Regional+Park+Wodonga+VIC",
+    "description": "Huon Hill rises 263 metres above the Murray and Kiewa floodplains east of Wodonga, and its lookouts take in Lake Hume, the surrounding valleys and the twin cities. The 238 hectare regional park protects Box Gum Grassy Woodland across steep rolling hills and rocky outcrops. Four walking tracks total about 7.5km - the Summit Track (200m), Bundy Track (3km), Sheoak Track (2.5km) and Mistletoe Track (2km) - and facilities include lookouts, a directional cairn, electric barbecues, shelters, picnic tables, seating, composting toilets, information boards and car parking. Access is via Thomas Mitchell Drive to the Murray Valley Highway, then Whytes Road and Kenneth Watson Drive.",
+    "highlights": [
+      "Free entry, lookouts over Lake Hume and Albury Wodonga",
+      "Four walking tracks totalling about 7.5km",
+      "Summit Track is only 200m from the car park",
+      "Electric barbecues, shelters and picnic tables",
+      "Composting toilets and car parking",
+      "Dogs allowed on lead"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "bbq": "yes",
+      "toilets": "yes",
+      "parking": "yes",
+      "dog_friendly": "yes"
+    },
+    "sources": [
+      "https://www.parklands-alburywodonga.org.au/explore-your-parks/huon-hill-regional-park/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "3D Lanes",
+    "slug": "3d-lanes",
+    "categorySlug": "bowling-alleys",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "2 Sanyo Drive",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 7022",
+    "website": "https://3dlanes.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=3D+Lanes+Wodonga+VIC",
+    "description": "3D Lanes on Sanyo Drive, Wodonga has 14 tenpin bowling lanes, an 18 hole challenge mini golf course and an amusement arcade of prize winning redemption games, plus a licensed cafe serving food and drinks. It caters for birthday parties, family outings, corporate team events and casual walk in play. Open from 10am weekdays and 9am on weekends, closing late.",
+    "highlights": [
+      "14 tenpin bowling lanes",
+      "18 hole challenge mini golf course",
+      "Amusement arcade with redemption games",
+      "Licensed cafe on site",
+      "Birthday party and corporate group packages"
+    ],
+    "attributes": { "kid_friendly": "yes", "licensed": "yes", "bookings": "yes", "parking": "yes" },
+    "sources": ["https://3dlanes.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Gateway Island Trail",
+    "slug": "gateway-island-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "Gateway Village, 64 Lincoln Causeway",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "website": "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Gateway-Island-Trail",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gateway+Island+Trail+Wodonga+VIC",
+    "description": "A 4.3km sealed loop on Gateway Island, starting from Gateway Village behind The Lincoln on the Lincoln Causeway. The path follows the Murray River and Wodonga Creek through river red gums and eucalypts, and features sculptural works by local Aboriginal artists that reflect how First Nations people used the river's resources. Wildlife seen along the trail includes platypus, wallabies, water rats, wedge tailed eagles, kangaroos, bats and spoonbills.",
+    "highlights": [
+      "Free 4.3km sealed loop suitable for walking and cycling",
+      "Sculptural works by local Aboriginal artists",
+      "Follows the Murray River and Wodonga Creek",
+      "Platypus, kangaroo and birdlife along the route",
+      "Starts at Gateway Village on the Lincoln Causeway"
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes", "parking": "yes" },
+    "sources": [
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Gateway-Island-Trail"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wodonga WAVES",
+    "slug": "wodonga-waves",
+    "categorySlug": "water-parks",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "8 Mactier Avenue",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 2066",
+    "website": "https://alburywodongaaquatics.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga+WAVES+Wodonga+VIC",
+    "description": "Wodonga WAVES is the city's summer outdoor swimming venue, with a 50 metre heated pool, a splash pad, a toddlers pool, a cafe and shaded areas. It is operated by Aligned Leisure as part of the Albury Wodonga Aquatics group of centres, and opening hours change with the season.",
+    "highlights": [
+      "50 metre heated outdoor pool",
+      "Splash pad and toddlers pool",
+      "Cafe on site",
+      "Shaded areas for families",
+      "Seasonal opening hours"
+    ],
+    "attributes": { "kid_friendly": "yes" },
+    "sources": ["https://alburywodongaaquatics.com.au/contact/", "http://alburywodongaaquatics.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Army Museum Bandiana",
+    "slug": "army-museum-bandiana",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Bandiana",
+    "state": "VIC",
+    "addressLine": "Anderson Road",
+    "suburb": "South Bandiana",
+    "postcode": "3691",
+    "phone": "02 6053 2454",
+    "website": "https://armymuseumbandiana.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Army+Museum+Bandiana+Bandiana+VIC",
+    "description": "The Army Museum Bandiana on Anderson Road holds what it describes as the largest military museum collection in Australia, with a particular focus on the history of the Australian Army's logistic corps. Displays cover Australia's military heritage across vehicles, equipment and personal collections. The museum is open Wednesday to Sunday, 9am to 3pm.",
+    "highlights": [
+      "Described as the largest military museum collection in Australia",
+      "Focus on the Army's logistic corps history",
+      "Open Wednesday to Sunday",
+      "On Anderson Road, South Bandiana"
+    ],
+    "hours": [
+      { "day": 0, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 4, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 5, "opens": "09:00", "closes": "15:00", "closed": false },
+      { "day": 6, "opens": "09:00", "closes": "15:00", "closed": false }
+    ],
+    "attributes": { "kid_friendly": "yes", "parking": "yes" },
+    "sources": [
+      "https://armymuseumbandiana.com.au/",
+      "https://www.alburywodongaaustralia.com.au/things-to-do/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "High Country Rail Trail",
+    "slug": "high-country-rail-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=High+Country+Rail+Trail+Wodonga+VIC",
+    "description": "An 81km rail trail running from Wodonga around Lake Hume to Tallangatta and up into the mountains at Shelley, passing Bandiana, Old Tallangatta, Bullioh, Darbyshire and Koetong. The surface is hot mix asphalt near Wodonga, chip seal in places and gravel beyond Old Tallangatta. The route crosses the 600 metre Sandy Creek Bridge and historic timber trestle bridges, is undulating to Bullioh and then climbs about 460 metres to Shelley.",
+    "highlights": [
+      "81km from Wodonga to Shelley via Tallangatta",
+      "Sealed near Wodonga, gravel in the upper sections",
+      "Crosses the 600 metre Sandy Creek Bridge",
+      "Skirts the Lake Hume shoreline",
+      "Passes the Old Tallangatta township site",
+      "Free to use, no permit required"
+    ],
+    "attributes": { "free_entry": "yes" },
+    "sources": [
+      "https://www.railtrails.org.au/trails/high-country-rail-trail/",
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Burke Museum and Beechworth Historic Precinct",
+    "slug": "burke-museum-and-beechworth-historic-precinct",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "101 Ford Street",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "phone": "1300 366 321",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Burke+Museum+Beechworth+Historic+Precinct+Beechworth+VIC",
+    "facebook": "https://www.facebook.com/beechworthhistoricprecinct/",
+    "description": "The Beechworth Historic Precinct groups four gold era buildings in the centre of town: the Beechworth Courthouse, which houses the Kelly Trials Exhibition and its 270 degree wrap around multimedia experience; the Burke Museum, holding more than 30,000 items including Chinese, goldmining and natural history collections, objects linked to Robert O'Hara Burke and Dame Nellie Melba, and a recreated 19th century street of shops; the 1858 Telegraph Station, which once linked the town to the outside world by Morse code; and the Powder Magazine. Tickets and current opening information come through the Beechworth Visitor Information Centre on Ford Street.",
+    "highlights": [
+      "Four gold era buildings in one precinct",
+      "Kelly Trials Exhibition in the Beechworth Courthouse",
+      "Burke Museum holds more than 30,000 items",
+      "Recreated 19th century street of shops",
+      "1858 Telegraph Station and the Powder Magazine",
+      "Ticketing through the Beechworth Visitor Information Centre"
+    ],
+    "attributes": { "kid_friendly": "yes", "bookings": "yes" },
+    "sources": [
+      "https://www.explorebeechworth.com.au/listing/beechworth-historic-precinct-beechworth/",
+      "https://www.indigoshire.vic.gov.au/Community/Cultural-Heritage/Beechworth-Historic-Precinct/Burke-Museum"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Woolshed Falls",
+    "slug": "woolshed-falls",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "McFeeters Road",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Woolshed+Falls+Beechworth+VIC",
+    "description": "Woolshed Falls is a ten minute drive north of Beechworth in Chiltern-Mt Pilot National Park, where Reedy Creek spills across a broad sheet of granite. An observation deck gives views to the falls and the valley below, which is at its most dramatic after heavy rain, and self guided walking trails lead past alluvial gold workings from the days when thousands of diggers worked this ground. A 6km walking track links the falls back to Beechworth. The rocks are slippery, so sturdy footwear is advised and children should be supervised.",
+    "highlights": [
+      "Free entry, in Chiltern-Mt Pilot National Park",
+      "Observation deck overlooking the falls and valley",
+      "Self guided walking trails past alluvial gold workings",
+      "6km walking track connects to Beechworth",
+      "Ten minute drive north of Beechworth",
+      "Rocks are slippery, sturdy footwear advised"
+    ],
+    "attributes": { "free_entry": "yes" },
+    "sources": [
+      "https://www.explorebeechworth.com.au/listing/woolshed-falls/",
+      "https://www.parks.vic.gov.au/places-to-see/parks/chiltern-mt-pilot-national-park"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Lake Sambell",
+    "slug": "lake-sambell",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Beechworth",
+    "state": "VIC",
+    "addressLine": "McConville Avenue",
+    "suburb": "Beechworth",
+    "postcode": "3747",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lake+Sambell+Beechworth+VIC",
+    "description": "Lake Sambell is a recreation reserve a short stroll from the centre of Beechworth, created in the 1920s out of the Rocky Mountain Mining Company's open cut sluice workings from the gold rush. There is a sandy beach swimming area with an adventure playground beside it, walking tracks through the reserve, two electric barbecues, picnic tables and seating. The Murray to the Mountains Rail Trail passes through the reserve.",
+    "highlights": [
+      "Free entry, always open",
+      "Sandy Beach swimming area",
+      "Children's adventure playground",
+      "Walking tracks around the lake",
+      "Two electric barbecues and picnic tables",
+      "Murray to the Mountains Rail Trail passes through"
+    ],
+    "attributes": {
+      "free_entry": "yes",
+      "kid_friendly": "yes",
+      "playground": "yes",
+      "bbq": "yes"
+    },
+    "sources": [
+      "https://www.explorebeechworth.com.au/listing/lake-sambell-beechworth/",
+      "https://www.indigoshire.vic.gov.au/Community/Sport-and-recreation/Parks-and-gardens/Lake-Sambell-Beechworth"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Chiltern Athenaeum Museum",
+    "slug": "chiltern-athenaeum-museum",
+    "categorySlug": "museums",
+    "vertical": "things_to_do",
+    "localityName": "Chiltern",
+    "state": "VIC",
+    "addressLine": "57 Conness Street",
+    "suburb": "Chiltern",
+    "postcode": "3683",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chiltern+Athenaeum+Museum+Chiltern+VIC",
+    "description": "Built in 1866, the Chiltern Athenaeum on Conness Street is one of the region's most notable historic buildings and now holds a local history museum. The collection runs from goldfields era books and memorabilia to artworks and historic artefacts, with displays on notable locals including former Prime Minister Sir John McEwen and the author Henry Handel Richardson. It opens Wednesdays and Sundays from 10am to 3pm.",
+    "highlights": [
+      "Housed in an 1866 Athenaeum building",
+      "Goldfields era books, memorabilia and artefacts",
+      "Displays on Sir John McEwen and Henry Handel Richardson",
+      "Open Wednesdays and Sundays 10am to 3pm",
+      "In the heart of Chiltern's heritage streetscape"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "15:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "closed": true },
+      { "day": 3, "opens": "10:00", "closes": "15:00", "closed": false },
+      { "day": 4, "closed": true },
+      { "day": 5, "closed": true },
+      { "day": 6, "closed": true }
+    ],
+    "sources": ["https://www.explorechiltern.com.au/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Chiltern-Mt Pilot National Park",
+    "slug": "chiltern-mt-pilot-national-park",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Chiltern",
+    "state": "VIC",
+    "suburb": "Chiltern",
+    "postcode": "3683",
+    "website": "https://www.parks.vic.gov.au/places-to-see/parks/chiltern-mt-pilot-national-park",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chiltern-Mt+Pilot+National+Park+Chiltern+VIC",
+    "description": "This 21,636 hectare national park stretches between Beechworth and the low hills around Chiltern, protecting box ironbark country and a landscape shaped by gold mining. A short walk leads to the 545 metre Mount Pilot summit and a 360 degree view of the surrounding countryside, with Mount Buffalo visible on clear days. Yeddonba is an important Aboriginal site with original rock art, and the Mount Pilot area holds cultural significance for the Yorta Yorta Peoples. The 8.5km Whitebox Walking Track starts at the Honeyeater Picnic Area and takes two to three hours, and Woolshed Falls sits within the park. Prospecting is allowed with a Miner's Right.",
+    "highlights": [
+      "Free entry, 21,636 hectares of box ironbark country",
+      "360 degree views from the 545 metre Mount Pilot summit",
+      "Yeddonba Aboriginal cultural site with rock art",
+      "8.5km Whitebox Walking Track from the Honeyeater Picnic Area",
+      "Woolshed Falls and Reedy Creek picnic area",
+      "Prospecting permitted with a Miner's Right"
+    ],
+    "attributes": { "free_entry": "yes" },
+    "sources": ["https://www.parks.vic.gov.au/places-to-see/parks/chiltern-mt-pilot-national-park"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Karr's Reef Goldmine Tours",
+    "slug": "karrs-reef-goldmine-tours",
+    "categorySlug": "heritage-sites",
+    "vertical": "things_to_do",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "addressLine": "37 High Street",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "phone": "0408 975 991",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Karr%27s+Reef+Goldmine+Tours+Yackandandah+VIC",
+    "description": "A fully guided gold history tour of Yackandandah run by local guide Greg. The tour starts by 4WD from where gold was first found along Commissioner's Creek, then finishes underground at the heritage protected Karr's Reef mine, worked from 1867 to 1884. Inside you can still see pick marks on the dirt walls and core holes from black powder blasting, walk the length of the quartz reef and see remaining gold in the rock. Tours run on demand and are booked by phone or email.",
+    "highlights": [
+      "Guided 4WD and underground gold mine tour",
+      "Heritage protected mine worked from 1867 to 1884",
+      "Original pick marks and black powder blasting core holes",
+      "Walk the quartz reef underground",
+      "Runs on demand, bookings essential"
+    ],
+    "attributes": { "tours": "yes", "booking_required": "yes" },
+    "sources": [
+      "https://www.exploreyackandandah.com.au/listing/karrs-reef-goldmine-tours-yackandandah/",
+      "https://www.exploreyackandandah.com.au/gold-history/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Yackandandah Gorge Scenic Walk",
+    "slug": "yackandandah-gorge-scenic-walk",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Yackandandah",
+    "state": "VIC",
+    "suburb": "Yackandandah",
+    "postcode": "3749",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yackandandah+Gorge+Yackandandah+VIC",
+    "description": "The gorge at Yackandandah was dug as a tail race to sluice gravel and sand for gold, first by hand and later deepened with dynamite, and the result is a twisting creek walk with cascades and shady overhanging trees. The signposted circuit is 3.5km and takes about 75 minutes, graded 2 on a hardened compacted surface with gentle hills and occasional steps, though the upper gorge is steeper and needs sure footing. A five minute access point from Bells Flat Road suits anyone who cannot manage the full walk. Gold panning is no longer permitted in the creek.",
+    "highlights": [
+      "Free 3.5km signposted walk, about 75 minutes",
+      "Grade 2 track on a hardened, compacted surface",
+      "Cascades and creek scenery through a gold era tail race",
+      "Short five minute access from Bells Flat Road",
+      "Information signs and car park at the trailhead"
+    ],
+    "attributes": { "free_entry": "yes" },
+    "sources": ["https://www.exploreyackandandah.com.au/listing/yackandandah-gorge/"],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wangaratta Art Gallery",
+    "slug": "wangaratta-art-gallery",
+    "categorySlug": "art-galleries",
+    "vertical": "things_to_do",
+    "localityName": "Wangaratta",
+    "state": "VIC",
+    "addressLine": "56 Ovens Street",
+    "suburb": "Wangaratta",
+    "postcode": "3677",
+    "phone": "03 5722 0865",
+    "website": "https://www.wangarattaartgallery.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wangaratta+Art+Gallery+Wangaratta+VIC",
+    "facebook": "https://www.facebook.com/WangarattaArtGallery/",
+    "description": "Wangaratta Art Gallery sits in the city's arts and culture precinct on Ovens Street and shows a program of self curated and touring exhibitions covering contemporary and historic visual art, craft and design. The gallery has a particular focus on textiles and runs the biennial Wangaratta Contemporary Textile Award. Education programs, public talks and kids' art classes are scheduled alongside exhibitions. Entry is free and it opens Tuesday to Sunday, 10am to 4pm.",
+    "highlights": [
+      "Free entry",
+      "Self curated and touring exhibitions of art, craft and design",
+      "Biennial Wangaratta Contemporary Textile Award",
+      "Kids' art classes and public talks",
+      "Closed Mondays and public holidays"
+    ],
+    "hours": [
+      { "day": 0, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 1, "closed": true },
+      { "day": 2, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 3, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 4, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 5, "opens": "10:00", "closes": "16:00", "closed": false },
+      { "day": 6, "opens": "10:00", "closes": "16:00", "closed": false }
+    ],
+    "attributes": { "free_entry": "yes", "kid_friendly": "yes" },
+    "sources": [
+      "https://pgav.org.au/Wangaratta-Art-Gallery~577",
+      "https://www.wangarattaartgallery.com.au/Home"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murray to Mountains Rail Trail",
+    "slug": "murray-to-mountains-rail-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wangaratta",
+    "state": "VIC",
+    "suburb": "Wangaratta",
+    "postcode": "3677",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray+to+Mountains+Rail+Trail+Wangaratta+VIC",
+    "description": "One of Australia's best known rail trails, 137km of sealed path linking Wangaratta with Myrtleford, Bright, Beechworth and Yackandandah. It runs in four main sections: Wangaratta to Bright (82km) through the Ovens Valley, Everton to Yackandandah (38km) which climbs steeply through Beechworth, Wangaratta to Oxley (9km) in the King Valley, and Rutherglen to Wahgunyah (8km) across wine country. Most of the trail has gentle rail grades, with the steeper climbs on the Everton, Beechworth and Yackandandah sections.",
+    "highlights": [
+      "137km of sealed rail trail, free to use",
+      "Links Wangaratta, Beechworth, Yackandandah, Myrtleford and Bright",
+      "Flat 9km Wangaratta to Oxley section through the King Valley",
+      "8km Rutherglen to Wahgunyah spur across wine country",
+      "Steeper climbs between Everton, Beechworth and Yackandandah"
+    ],
+    "attributes": { "free_entry": "yes" },
+    "sources": ["https://www.railtrails.org.au/trails/murray-to-mountains-rail-trail/"],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

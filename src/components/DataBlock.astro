@@ -1,0 +1,39 @@
+---
+/**
+ * The unique paragraph. Generated from this page's own listing rows, so no two
+ * pages carry the same text, and every number on it is checkable against the
+ * cards above it.
+ */
+import type { Category, Locality } from '~/lib/types';
+import type { LocalityCategoryStats } from '~/lib/repo';
+import { statSentences, otherStateLabel } from '~/lib/copy';
+
+interface Props {
+  locality: Locality;
+  category: Category;
+  stats: LocalityCategoryStats;
+  asOf: string;
+}
+const { locality, category, stats, asOf } = Astro.props;
+const sentences = statSentences(locality, category, stats, otherStateLabel(locality.state));
+---
+<section class="datablock" aria-labelledby="datablock-h">
+  <h2 id="datablock-h">
+    {category.name} in {locality.name}, by the numbers
+  </h2>
+  {sentences.map((s) => <p>{s}</p>)}
+
+  <div class="statgrid">
+    <div><b>{stats.listingCount}</b><span>listed</span></div>
+    {stats.licencedCount > 0 && <div><b>{stats.licencedCount}</b><span>licence checked</span></div>}
+    {stats.openSaturdayCount > 0 && <div><b>{stats.openSaturdayCount}</b><span>open Saturdays</span></div>}
+    {stats.crossBorderCount > 0 && <div><b>{stats.crossBorderCount}</b><span>cross the border</span></div>}
+    {stats.avgCalloutFee && <div><b>${stats.avgCalloutFee}</b><span>average call out</span></div>}
+    {stats.emergencyCount > 0 && <div><b>{stats.emergencyCount}</b><span>after hours</span></div>}
+  </div>
+
+  <p class="asof">
+    Counted from the {stats.listingCount} {stats.listingCount === 1 ? 'listing' : 'listings'} on this page on {asOf}.
+    Numbers move as listings are added, claimed and checked.
+  </p>
+</section>

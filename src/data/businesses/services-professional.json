@@ -1,0 +1,1672 @@
+[
+  {
+    "name": "Johnsons MME Accountants and Advisors",
+    "slug": "johnsons-mme-accountants-and-advisors",
+    "categorySlug": "accountants",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Level 2, 520 Swift Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 9100",
+    "website": "https://johnsonsmme.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Johnsons%20MME%20Accountants%20and%20Advisors%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/JohnsonsMME",
+    "description": "Johnsons MME is an accounting and advisory firm with offices in Albury and Wangaratta. Services listed include accounting, taxation, audit and assurance, financial advisory, finance strategy, SMSF specialists, succession planning and business performance coaching. The firm also lists fuel tax credit reviews, sustainable business services and biodiversity services, and runs client portals for collaboration and financial advisory.",
+    "highlights": [
+      "Accounting, taxation and audit services",
+      "SMSF specialists",
+      "Business performance and succession planning",
+      "Financial advisory and finance strategy",
+      "Offices in Albury and Wangaratta"
+    ],
+    "sources": [
+      "https://johnsonsmme.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Harris Lieberman",
+    "slug": "harris-lieberman",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "87 Hume Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6051 5100",
+    "website": "https://harrislieberman.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Harris%20Lieberman%20Wodonga%20VIC",
+    "description": "Harris Lieberman is a law firm that has practised in the Albury-Wodonga region since 1886, with its office at 87 Hume Street, Wodonga. Practice areas listed are commercial law, wills and estate planning, property and conveyancing, family law, employment law and personal injury including workers compensation. The firm states it is part of the Sather Legal Group.",
+    "highlights": [
+      "Practising in the region since 1886",
+      "Property and conveyancing",
+      "Wills and estate planning",
+      "Family law and employment law",
+      "Personal injury and workers compensation"
+    ],
+    "sources": [
+      "https://harrislieberman.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "McHargs Solicitors",
+    "slug": "mchargs-solicitors",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "81 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 1677",
+    "website": "https://mchargs.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=McHargs%20Solicitors%20Wodonga%20VIC",
+    "description": "McHargs Solicitors was established in 1930 and practises from 81 High Street in central Wodonga, serving clients in both Victoria and New South Wales. The firm handles residential, commercial and farming conveyancing, property law matters such as easements, covenants, caveats, title matters and leasing, and property development work including subdivisions, re-zonings and planning permits. It also prepares wills, powers of attorney and administers deceased estates.",
+    "highlights": [
+      "Established 1930",
+      "Residential, commercial and farming conveyancing",
+      "Property development, subdivisions and planning permits",
+      "Wills, powers of attorney and deceased estates",
+      "Practises in both Victoria and NSW"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://mchargs.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pogson Cronin Kerr Solicitors & Notary",
+    "slug": "pogson-cronin-kerr-solicitors",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "Level 1, 320 Urana Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6049 4400",
+    "website": "https://www.pogsoncroninkerr.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pogson%20Cronin%20Kerr%20Solicitors%20Lavington%20NSW",
+    "facebook": "https://www.facebook.com/PogsonCroninKerr/",
+    "instagram": "https://www.instagram.com/pcksolicitors/",
+    "description": "PCK Solicitors, trading as Pogson Cronin Kerr Solicitors & Notary, is a general law firm based on Urana Road in Lavington. Listed practice areas are conveyancing, property law, business and commercial, civil litigation, criminal law, family law, deceased estates and wills and estate planning. The firm also provides notary public services.",
+    "highlights": [
+      "General practice firm serving the cross-border region",
+      "Conveyancing and property law",
+      "Family law and criminal law",
+      "Wills, estate planning and deceased estates",
+      "Notary public services"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:45",
+        "closes": "17:15",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:45",
+        "closes": "17:15",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:45",
+        "closes": "17:15",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:45",
+        "closes": "17:15",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:45",
+        "closes": "17:15",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.pogsoncroninkerr.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "ACH Legal",
+    "slug": "ach-legal",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "72 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 5533",
+    "website": "https://www.achlegal.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=ACH%20Legal%20Wodonga%20VIC",
+    "description": "ACH Legal, formerly Keating Avery Solicitors, is a full-service law firm at 72 High Street, Wodonga, acting for clients in Victoria and New South Wales. Practice areas listed are property and conveyancing, wills and estates, family law, criminal law, business and company law, and civil litigation.",
+    "highlights": [
+      "Formerly Keating Avery Solicitors",
+      "Property and conveyancing",
+      "Family law and criminal law",
+      "Business and company law",
+      "Acts across Victoria and NSW"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.achlegal.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Robb & Associates Solicitors",
+    "slug": "robb-and-associates-solicitors",
+    "categorySlug": "solicitors",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "554 Smollett Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 3577",
+    "website": "https://alburywodongalawyers.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Robb%20%26%20Associates%20Solicitors%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/Robb-Associates-Solicitors-827433137424120/",
+    "description": "Robb & Associates Solicitors is a family law practice on Smollett Street in Albury. Listed areas of work include divorce, family law property settlements, de facto property settlements, children's matters, child support, binding financial agreements and surrogacy. The firm offers Skype and electronic appointments as well as in-person meetings.",
+    "highlights": [
+      "Family law focused practice",
+      "Property settlements and de facto matters",
+      "Children's matters and child support",
+      "Binding financial agreements",
+      "Video and electronic appointments available"
+    ],
+    "sources": [
+      "https://alburywodongalawyers.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Sargeants Wodonga",
+    "slug": "sargeants-wodonga",
+    "categorySlug": "conveyancers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "85 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 9873",
+    "website": "https://www.sargeantsconveyancing.com.au/branch/wodonga",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sargeants%20Wodonga%20Conveyancing%20Wodonga%20VIC",
+    "description": "Sargeants Wodonga is the Wodonga branch of the Sargeants conveyancing network, operating from 85 High Street. The practice describes itself as property transfer specialists, handling conveyancing for real estate transactions.",
+    "highlights": [
+      "Conveyancing and property transfers",
+      "High Street Wodonga office",
+      "Part of the Sargeants conveyancing network"
+    ],
+    "sources": [
+      "https://www.sargeantsconveyancing.com.au/branch/wodonga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Mortgage Finance Solutions",
+    "slug": "mortgage-finance-solutions",
+    "categorySlug": "mortgage-brokers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "5a Stanley Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "1300 652 281",
+    "website": "https://mortgagefinancesolutions.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mortgage%20Finance%20Solutions%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/profile.php?id=100064041670609",
+    "description": "Mortgage Finance Solutions is a mortgage and finance broking firm on Stanley Street in Wodonga, also serving Albury, Wangaratta and Yarrawonga Mulwala. The business is split into residential lending for first home buyers, investors and refinancing, asset finance for plant, equipment and vehicles, and commercial finance for property investment, business acquisitions and capital funding. It states relationships with more than 30 lenders and full membership of the Mortgage and Finance Association of Australia.",
+    "highlights": [
+      "Residential, asset and commercial finance",
+      "First home buyer and refinancing loans",
+      "Plant, equipment and vehicle finance",
+      "Panel of 30-plus lenders",
+      "MFAA full member"
+    ],
+    "sources": [
+      "https://mortgagefinancesolutions.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Swift Finance Brokers",
+    "slug": "swift-finance-brokers",
+    "categorySlug": "mortgage-brokers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Suite 3B, Level 1, 429 Swift Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 1320",
+    "website": "https://swiftfb.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Swift%20Finance%20Brokers%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/swiftfinancebrokers/",
+    "instagram": "https://instagram.com/swiftfinancebrokers",
+    "description": "Swift Finance Brokers is a mortgage broking firm on Swift Street in Albury serving the Albury and Wodonga area. Listed services cover new home loans for first-time buyers, investment property finance, mortgage refinancing, asset and equipment finance, and loan protection. The brokerage says it sources deals from a panel of over 40 lenders.",
+    "highlights": [
+      "First home buyer and investment loans",
+      "Refinancing",
+      "Asset and equipment finance",
+      "Panel of 40-plus lenders"
+    ],
+    "sources": [
+      "https://swiftfb.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "PRD Albury",
+    "slug": "prd-albury",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Suite 2, Level 1, 429 Swift Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 0442",
+    "website": "https://www.prd.com.au/albury/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=PRD%20Albury%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/prdrealestatealbury/",
+    "instagram": "https://www.instagram.com/prdalburywodonga",
+    "description": "PRD Albury is a licensed real estate office on Swift Street serving the Albury-Wodonga region across NSW and Victoria. The office handles residential sales, property management, rentals and leasing, and commercial property.",
+    "highlights": [
+      "Residential sales",
+      "Property management and leasing",
+      "Commercial property services",
+      "Covers both NSW and Victorian sides of the border"
+    ],
+    "sources": [
+      "https://www.prd.com.au/albury/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Century 21 Twin City",
+    "slug": "century-21-twin-city",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "621b Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6062 3144",
+    "website": "https://albury.century21.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Century%2021%20Twin%20City%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/profile.php?id=61557491401749",
+    "instagram": "https://www.instagram.com/alburycentury21/",
+    "description": "Century 21 Twin City is a real estate office on Dean Street in Albury. The office handles residential sales and purchases, rental property management, market appraisals for sellers, rental appraisals and open inspections.",
+    "highlights": [
+      "Residential sales and purchases",
+      "Rental property management",
+      "Market and rental appraisals",
+      "Dean Street office"
+    ],
+    "sources": [
+      "https://albury.century21.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Elders Real Estate Wodonga",
+    "slug": "elders-real-estate-wodonga",
+    "categorySlug": "real-estate-agents",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "18-20 Stanley Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 5450",
+    "website": "https://wodonga.eldersrealestate.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elders%20Real%20Estate%20Wodonga%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/EldersRealEstateWodonga",
+    "description": "Elders Real Estate Wodonga operates from Stanley Street in Wodonga, with a companion office at Howlong. The agency covers residential sales and rentals, commercial property sales and leasing, property management, storage shed rentals, and market appraisals and property reports.",
+    "highlights": [
+      "Residential sales and rentals",
+      "Commercial sales and leasing",
+      "Property management",
+      "Storage shed rentals",
+      "Second office at Howlong"
+    ],
+    "sources": [
+      "https://wodonga.eldersrealestate.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Pollock Architecture",
+    "slug": "pollock-architecture",
+    "categorySlug": "architects",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Suite 109, 553 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "0422 406 055",
+    "website": "https://www.pollockarchitecture.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pollock%20Architecture%20Albury%20NSW",
+    "instagram": "https://www.instagram.com/pollockarchitecture/",
+    "description": "Pollock Architecture is an architectural practice on Dean Street in Albury servicing Albury-Wodonga and the surrounding region. The practice publishes a portfolio of residential projects. Rhys Pollock is listed as the nominated registered architect, registered with the NSW Architects Registration Board and the Architects Registration Board of Victoria.",
+    "highlights": [
+      "Registered architectural practice",
+      "Residential project portfolio",
+      "Registered in both NSW and Victoria",
+      "Dean Street Albury studio"
+    ],
+    "sources": [
+      "https://www.pollockarchitecture.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "MJ Digital",
+    "slug": "mj-digital",
+    "categorySlug": "web-design",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "phone": "0422 584 307",
+    "website": "https://mjdigital.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=MJ%20Digital%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/marshalljonesdigital",
+    "instagram": "https://www.instagram.com/mjdigitalagency",
+    "description": "MJ Digital is a web design and digital marketing studio based in Albury, run by Polly and Marshall. Services listed are website design, eCommerce and Shopify builds, Meta ads management, Google Ads, SEO, email marketing, AI and process automation, and ongoing marketing management.",
+    "highlights": [
+      "Website design and Shopify eCommerce",
+      "Google Ads and Meta ads management",
+      "SEO and email marketing",
+      "AI and process automation",
+      "Small owner-operated studio"
+    ],
+    "sources": [
+      "https://mjdigital.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kwik Kopy Albury Wodonga",
+    "slug": "kwik-kopy-albury-wodonga",
+    "categorySlug": "printers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Suite 5, 520 Swift Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 7800",
+    "website": "https://kwikkopy.com.au/location/nsw/albury",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kwik%20Kopy%20Albury%20Wodonga%20Albury%20NSW",
+    "description": "Kwik Kopy Albury Wodonga is a print, signage and design centre on Swift Street in Albury. Printing work covers flyers, brochures, catalogues, manuals, letterheads, business cards, stickers and labels, and branded packaging. The centre also produces signage including A-frames, pull-up banners, window decals and corflute signs, and offers graphic design such as logo and brochure design.",
+    "highlights": [
+      "Flyers, brochures, catalogues and manuals",
+      "Business cards and letterheads",
+      "Pull-up banners, A-frames and corflute signs",
+      "Sticker and label printing",
+      "In-house graphic and logo design"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://kwikkopy.com.au/location/nsw/albury"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Signs by Knight",
+    "slug": "signs-by-knight",
+    "categorySlug": "signage",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "18 Kane Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 5966",
+    "website": "https://www.signsbyknight.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Signs%20by%20Knight%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/signsbyknight",
+    "instagram": "https://www.instagram.com/signsbyknight_albury_wodonga/",
+    "description": "Signs by Knight is a sign manufacturer on Kane Road in Wodonga, established in 1977. Work covers building signage, digital, LED and neon signs, pylon and free-standing signs, vehicle wraps, engraving, fabrication and letter bending, safety, traffic and reflective signs, and line marking. The workshop runs a UV flatbed printer able to print onto cardboard, glass, timber, plastic and metal, and also does glass frosting and tinting, wall graphics and wallpaper. The business is a member of the Australian Sign & Graphics Association and runs a corflute recycling program.",
+    "highlights": [
+      "Established 1977",
+      "Building, pylon and illuminated signage",
+      "Vehicle wraps and fleet signage",
+      "UV flatbed printing onto glass, timber, plastic and metal",
+      "Safety, traffic and reflective signs",
+      "Corflute recycling program"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.signsbyknight.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Corowa Signs",
+    "slug": "corowa-signs",
+    "categorySlug": "signage",
+    "vertical": "trades",
+    "localityName": "Corowa",
+    "state": "NSW",
+    "addressLine": "345 Honour Avenue",
+    "suburb": "Corowa",
+    "postcode": "2646",
+    "phone": "0409 538 145",
+    "website": "https://www.corowasigns.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Corowa%20Signs%20Corowa%20NSW",
+    "facebook": "https://www.facebook.com/pages/category/topic-business-services/Corowa-Signs-577280545694302/",
+    "description": "Corowa Signs is a signwriting and digital printing business on Honour Avenue in Corowa, servicing Albury-Wodonga and surrounding districts with over 30 years of experience. The business designs, manufactures and installs retail and corporate signage, vehicle signage and wraps, decals, banners and stickers, plaques, gold leaf lettering and traffic signs. Hand-painted signage, design services, installation and maintenance are also listed.",
+    "highlights": [
+      "Over 30 years in signwriting",
+      "Retail and corporate signage",
+      "Vehicle signage and wraps",
+      "Gold leaf lettering and hand-painted signs",
+      "Design, installation and maintenance"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.corowasigns.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Cameron Dental Care",
+    "slug": "cameron-dental-care",
+    "categorySlug": "dentists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "1 Park View Close, corner Melrose Drive",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 7966",
+    "website": "https://www.camerondentalcare.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cameron%20Dental%20Care%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/camerondentalcare/",
+    "description": "Cameron Dental Care has practised in Wodonga since 1987, at Park View Close on the corner of Melrose Drive. The practice provides general dentistry including checkups and fillings, emergency care, wisdom teeth removal, root canal treatment, and crowns, implants and veneers.",
+    "highlights": [
+      "Serving Wodonga since 1987",
+      "General checkups and fillings",
+      "Emergency dental care",
+      "Wisdom teeth removal",
+      "Crowns, implants and veneers"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.camerondentalcare.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wodonga Family Dental",
+    "slug": "wodonga-family-dental",
+    "categorySlug": "dentists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "296 Beechworth Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6024 3875",
+    "website": "https://www.wodongafamilydental.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga%20Family%20Dental%20Wodonga%20VIC",
+    "facebook": "https://web.facebook.com/WodongaFamilyDental",
+    "description": "Wodonga Family Dental is a general dental clinic on Beechworth Road in Wodonga offering preventative and restorative care. Listed treatments include fillings, extractions, root canal treatments, dental bridges, dental implants, cosmetic dentistry and dental treatment for children.",
+    "highlights": [
+      "Preventative and restorative dentistry",
+      "Fillings, extractions and root canals",
+      "Bridges and dental implants",
+      "Children's dental treatment",
+      "Cosmetic dentistry"
+    ],
+    "attributes": {
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.wodongafamilydental.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Healthfocus Physiotherapy",
+    "slug": "healthfocus-physiotherapy",
+    "categorySlug": "physiotherapists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "10/11 Volt Lane",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 5744",
+    "website": "https://www.healthfocus.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Healthfocus%20Physiotherapy%20Albury%20NSW",
+    "description": "Healthfocus Physiotherapy runs clinics at Volt Lane in Albury and on High Street in Wodonga. Services listed include sports physiotherapy, pelvic health, vestibular rehabilitation, neurological rehabilitation, paediatrics, concussion management, occupational physiotherapy, upper limb and hand therapy with casting and splinting, headaches and jaw dysfunction, and voice therapy. The clinic also runs group programs including GLA:D, a resistance class, RUN HUB and an adolescent class.",
+    "highlights": [
+      "Clinics in Albury and Wodonga",
+      "Sports and occupational physiotherapy",
+      "Pelvic health and vestibular rehabilitation",
+      "Hand therapy, casting and splinting",
+      "GLA:D and RUN HUB group programs",
+      "On-site parking"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "parking": "yes"
+    },
+    "sources": [
+      "https://www.healthfocus.com.au/",
+      "https://www.healthfocus.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Enhance Physio",
+    "slug": "enhance-physio",
+    "categorySlug": "physiotherapists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "2/550 Smollett Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6041 3609",
+    "website": "https://enhance.physio/pages/locations-albury",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Enhance%20Physio%20Albury%20NSW",
+    "description": "Enhance Physio is an allied health clinic on Smollett Street in Albury. Alongside general and specialised physiotherapy it lists sports physiotherapy, vestibular physiotherapy, paediatric physiotherapy, exercise physiology, massage therapy, podiatry, and nutrition and dietetics. The clinic takes NDIS and DVA clients and offers home visits.",
+    "highlights": [
+      "Physiotherapy, podiatry and exercise physiology under one roof",
+      "Sports and vestibular physiotherapy",
+      "Paediatric physiotherapy",
+      "NDIS and DVA services",
+      "Home visits available"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "mobile_service": "yes"
+    },
+    "sources": [
+      "https://enhance.physio/pages/locations-albury"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Kinetic Medicine",
+    "slug": "kinetic-medicine",
+    "categorySlug": "physiotherapists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "461B Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6557 7479",
+    "website": "https://kineticmedicine.com.au/albury",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kinetic%20Medicine%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/kineticmedicine",
+    "instagram": "https://www.instagram.com/kinetic.medicine/",
+    "description": "Kinetic Medicine is an exercise physiology and physiotherapy clinic on Dean Street in Albury, serving Albury, Wodonga and the wider Murray region. The clinic works with WorkCover NSW and WorkSafe Victoria rehabilitation, CTP and motor accident recovery, NDIS exercise physiology, and chronic disease and injury management. Neurological rehabilitation includes ExoMove exoskeleton technology.",
+    "highlights": [
+      "Exercise physiology and physiotherapy",
+      "WorkCover NSW and WorkSafe Victoria rehabilitation",
+      "CTP and motor accident recovery",
+      "NDIS exercise physiology",
+      "Neurological rehabilitation with exoskeleton technology"
+    ],
+    "sources": [
+      "https://kineticmedicine.com.au/albury"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Complete Care Chiropractic",
+    "slug": "complete-care-chiropractic",
+    "categorySlug": "chiropractors",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "183 Beechworth Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 2185",
+    "website": "https://www.completecarechiro.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Complete%20Care%20Chiropractic%20Wodonga%20VIC",
+    "description": "Complete Care Chiropractic runs its main clinic on Beechworth Road in Wodonga, with additional clinics at Swift Street in Albury and Edward Street in Corowa. The practice offers chiropractic care, remedial massage therapy, and paediatric chiropractic including neurodevelopmental paediatrics. Online booking is available.",
+    "highlights": [
+      "Clinics at Wodonga, Albury and Corowa",
+      "Chiropractic care",
+      "Remedial massage therapy",
+      "Paediatric and neurodevelopmental chiropractic",
+      "Saturday morning appointments in Wodonga"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "18:45",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "18:45",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "bookings": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.completecarechiro.com.au/contact.html",
+      "https://www.completecarechiro.com.au/chiropractors-albury-wodonga.html"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Entire Health Solutions",
+    "slug": "entire-health-solutions",
+    "categorySlug": "chiropractors",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "566 David Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6020 7000",
+    "website": "https://www.entirehealthsolutions.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Entire%20Health%20Solutions%20Albury%20NSW",
+    "description": "Entire Health Solutions is a multidisciplinary clinic on David Street in Albury. Services listed are chiropractic, applied kinesiology, kinesiology, myotherapy, Neuro Emotional Technique, reflexology, nutrition and Pilates. The clinic opens into the evening on Monday and Thursday.",
+    "highlights": [
+      "Multidisciplinary clinic",
+      "Chiropractic and myotherapy",
+      "Applied kinesiology and reflexology",
+      "Nutrition consultations",
+      "Pilates classes",
+      "Evening appointments Monday and Thursday"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "19:15",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:45",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes"
+    },
+    "sources": [
+      "https://www.entirehealthsolutions.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Wodonga Podiatry",
+    "slug": "wodonga-podiatry",
+    "categorySlug": "podiatrists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "58 Vermont Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 5188",
+    "website": "https://wodongapodiatry.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wodonga%20Podiatry%20Wodonga%20VIC",
+    "description": "Wodonga Podiatry practises from Vermont Street in Wodonga and also runs Albury Podiatry inside the iHealth Centre at 469 Olive Street, Albury. Treatments listed cover skin and nail care, children's feet, orthoses, musculoskeletal injuries, gait analysis, diabetic foot care, wound care, foot mobilisation, dry needling and shockwave therapy. Conditions treated include arch and heel pain, ingrown toenails, fungal infections, corns and calluses, ankle and knee pain and foot arthritis.",
+    "highlights": [
+      "Clinics in Wodonga and Albury",
+      "Custom orthoses and gait analysis",
+      "Diabetic foot and wound care",
+      "Ingrown toenail and nail surgery care",
+      "Dry needling and shockwave therapy",
+      "Children's foot assessments"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://wodongapodiatry.com/",
+      "https://wodongapodiatry.com/about"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury Eyecare",
+    "slug": "albury-eyecare",
+    "categorySlug": "optometrists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Shop 2, 553 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6064 2600",
+    "website": "https://alburyeyecare.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury%20Eyecare%20Albury%20NSW",
+    "description": "Albury Eyecare is an optometry practice on Dean Street in Albury. General eyecare covers comprehensive eye tests, glasses and contact lens prescriptions, glaucoma screening, retinal imaging and visual field testing. The practice also offers same-day emergency appointments including foreign body removal and direct ophthalmology referrals, children's eye exams from age three, contact lens fitting, and an eyewear range with frame adjustments and repairs.",
+    "highlights": [
+      "Comprehensive eye tests and retinal imaging",
+      "Glaucoma screening and visual field testing",
+      "Same-day emergency appointments",
+      "Children's eye exams from age three",
+      "Contact lens fitting",
+      "Frames, sunglasses and repairs"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://alburyeyecare.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Murray River Animal Hospital",
+    "slug": "murray-river-animal-hospital",
+    "categorySlug": "veterinary-clinics",
+    "vertical": "trades",
+    "localityName": "West Wodonga",
+    "state": "VIC",
+    "addressLine": "12 Moorefield Park Drive",
+    "suburb": "West Wodonga",
+    "postcode": "3690",
+    "phone": "02 6054 1838",
+    "website": "https://www.mrah.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Murray%20River%20Animal%20Hospital%20West%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/people/Murray-River-Animal-Hospital/61575190635029/",
+    "instagram": "https://www.instagram.com/murrayriver_animalhospital/",
+    "description": "Murray River Animal Hospital is a small animal clinic on Moorefield Park Drive in West Wodonga serving Albury-Wodonga. Services include vaccinations and preventative care, desexing and breeding advice, dentistry, diagnostics, skin, ear and eye care, nurse consultations, senior pet care and behaviour management. The clinic describes itself as the region's only certified stress-free vet clinic and runs puppy school and puppy and kitten starter programs.",
+    "highlights": [
+      "Certified stress-free clinic approach",
+      "Vaccinations and preventative care",
+      "Desexing, dentistry and diagnostics",
+      "Behaviour management",
+      "Puppy school and puppy/kitten programs",
+      "Senior pet care"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "pet_friendly": "yes"
+    },
+    "sources": [
+      "https://www.mrah.com.au/",
+      "https://www.mrah.com.au/about-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Petfocus Vetcare",
+    "slug": "petfocus-vetcare",
+    "categorySlug": "veterinary-clinics",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "addressLine": "365 Wagga Road",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "phone": "02 6040 9099",
+    "website": "https://www.petfocus.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Petfocus%20Vetcare%20Lavington%20NSW",
+    "facebook": "https://www.facebook.com/petfocusvetcare",
+    "instagram": "https://www.instagram.com/petfocusvetcare/",
+    "description": "Petfocus Vetcare is a veterinary hospital on Wagga Road in Lavington with separate cat, dog and exotics hospitals. General services cover health checks, vaccinations, microchipping, surgery, desexing and dentistry, and the practice also lists advanced imaging, laser therapy, hydrotherapy and radioactive iodine therapy for cats. Visiting specialists in dermatology, ophthalmology and surgery attend, and the clinic runs a mobile vet service, a blood bank and an adoption program. It is on call for emergencies 24/7.",
+    "highlights": [
+      "Separate cat, dog and exotics hospitals",
+      "Surgery, desexing and dentistry",
+      "Advanced imaging, laser therapy and hydrotherapy",
+      "Visiting dermatology, ophthalmology and surgical specialists",
+      "Mobile vet service",
+      "24/7 emergency on call"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "09:30",
+        "closes": "11:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "mobile_service": "yes",
+      "open_sunday": "yes",
+      "pet_friendly": "yes"
+    },
+    "sources": [
+      "https://www.petfocus.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Townsend Vet Albury",
+    "slug": "townsend-vet-albury",
+    "categorySlug": "veterinary-clinics",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "383 Townsend Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6046 9846",
+    "website": "https://townsendvets.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Townsend%20Vet%20Albury%20Albury%20NSW",
+    "description": "Townsend Vet Albury is a full-service animal hospital on Townsend Street in South Albury, close to Dean Street and the Lincoln Causeway. Services listed include wellness and preventative care, vaccinations, flea, tick and worm prevention, microchipping, desexing and surgery, dentistry with dental x-rays, and puppy school. The hospital also offers advanced orthopaedic surgery such as TPLO and fracture management, airway (BOAS) correction, soft tissue and oncological surgery, an in-house laboratory, diagnostic imaging, exotic and avian health checks and after-hours emergency support.",
+    "highlights": [
+      "Full-service small animal hospital",
+      "Advanced orthopaedic and soft tissue surgery",
+      "In-house laboratory and diagnostic imaging",
+      "Pet dentistry with dental x-rays",
+      "Exotic and avian health checks",
+      "After-hours emergency support"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "after_hours": "yes",
+      "pet_friendly": "yes"
+    },
+    "sources": [
+      "https://townsendvets.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Albury Compounding Pharmacy",
+    "slug": "albury-compounding-pharmacy",
+    "categorySlug": "pharmacies",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Suite 1.5, 470 Wodonga Place",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6023 3666",
+    "website": "https://www.alburycompounding.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury%20Compounding%20Pharmacy%20Albury%20NSW",
+    "description": "Albury Compounding Pharmacy, also trading as The Mortar & Pestle, is a locally owned community and compounding pharmacy at 470 Wodonga Place in Albury. Alongside prescriptions, vaccinations, MedsCheck reviews and everyday health care, it compounds bioidentical hormones, dermatology bases, paediatric suspensions and veterinary formulations. Compounded medications are shipped Australia-wide by express post.",
+    "highlights": [
+      "Community pharmacy and compounding specialists",
+      "Prescriptions and vaccinations",
+      "MedsCheck medication reviews",
+      "Bioidentical hormones and dermatology compounding",
+      "Paediatric suspensions and veterinary formulations",
+      "Australia-wide express shipping"
+    ],
+    "sources": [
+      "https://www.alburycompounding.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Temple Hair Design",
+    "slug": "temple-hair-design",
+    "categorySlug": "hairdressers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "Shop 1, 617 Dean Street",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 8065",
+    "website": "https://www.templehairdesign.com/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Temple%20Hair%20Design%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/templehairdesign",
+    "instagram": "https://www.instagram.com/templehairdesign",
+    "description": "Temple Hair Design is a hair salon on Dean Street in Albury's CBD. Services listed include cutting, colouring and styling, highlights, blow waves, perming, bond fusion, event hair and hair extensions. Appointments can be booked online.",
+    "highlights": [
+      "Cutting, colouring and styling",
+      "Highlights and colour correction",
+      "Hair extensions and bond fusion",
+      "Event and occasion hair",
+      "Online booking"
+    ],
+    "attributes": {
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.templehairdesign.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Border Barber Wodonga",
+    "slug": "border-barber-wodonga",
+    "categorySlug": "barbers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "1/119 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "0497 933 743",
+    "website": "https://borderbarberwodonga.framer.website/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Border%20Barber%20Wodonga%20Wodonga%20VIC",
+    "description": "Border Barber Wodonga is a walk-in barbershop on High Street in Wodonga with no appointments needed. Services listed are haircuts and hairstyling, skin fades, zero fades, beard trimming and shaping, cut-throat shaves and hair washes. The shop lists discounts for defence, police and aged pension holders and a reduced haircut price on Tuesdays.",
+    "highlights": [
+      "Walk-ins welcome, no appointment needed",
+      "Skin fades and zero fades",
+      "Beard trims and shaping",
+      "Cut-throat shaves",
+      "Defence, police and pensioner discounts",
+      "Saturday morning trading"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://borderbarberwodonga.framer.website/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Basq Urban Day Spa & Beauty",
+    "slug": "basq-urban-day-spa-and-beauty",
+    "categorySlug": "day-spas",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "addressLine": "323 Wodonga Place",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "phone": "02 6021 5910",
+    "website": "https://www.basqspa.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Basq%20Urban%20Day%20Spa%20%26%20Beauty%20Albury%20NSW",
+    "facebook": "https://www.facebook.com/basqspa",
+    "instagram": "https://www.instagram.com/basqspa",
+    "description": "Basq Urban Day Spa & Beauty is a day spa on Wodonga Place in Albury. Treatments cover massage and body therapies, facials, waxing, an infrared sauna, men's treatments and skincare consultations. The spa stocks ASAP Skin Care, O Cosmedics, Inika Organic, Ginger & ME and Mayde Tea, takes online bookings and offers gift vouchers valid for three years. Complimentary parking is available.",
+    "highlights": [
+      "Massage and body therapies",
+      "Facials and skincare consultations",
+      "Infrared sauna",
+      "Men's treatments",
+      "Gift vouchers valid three years",
+      "Complimentary parking"
+    ],
+    "attributes": {
+      "bookings": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://www.basqspa.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Twin City Tattoo and Body Piercing",
+    "slug": "twin-city-tattoo-and-body-piercing",
+    "categorySlug": "tattoo-studios",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "129 High Street",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 1955",
+    "website": "https://twincitytattooandbodypiercing.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Twin%20City%20Tattoo%20and%20Body%20Piercing%20Wodonga%20VIC",
+    "facebook": "https://www.facebook.com/TwinCityTattoo",
+    "instagram": "https://www.instagram.com/twincitytattooandbodypiercing",
+    "description": "Twin City Tattoo and Body Piercing is a tattoo and piercing studio on High Street in Wodonga. Tattoo styles listed include traditional, realism, black and grey, neo-traditional and military work, alongside custom designs. The studio also does body piercing covering ear, nose, navel, lip and eyebrow, stocks piercing jewellery including custom-made gold, and offers tattoo and piercing aftercare consultations.",
+    "highlights": [
+      "Custom tattoo design",
+      "Traditional, realism and blackwork styles",
+      "Body piercing service",
+      "Custom-made gold body jewellery",
+      "Aftercare consultations"
+    ],
+    "sources": [
+      "https://twincitytattooandbodypiercing.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "Village Early Education Wodonga",
+    "slug": "village-early-education-wodonga",
+    "categorySlug": "childcare",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "addressLine": "236 Beechworth Road",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "phone": "02 6056 8506",
+    "website": "https://villageeducation.com.au/locations/childcare-centre-wodonga/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Village%20Early%20Education%20Wodonga%20Wodonga%20VIC",
+    "description": "Village Early Education Wodonga is a long day care centre on Beechworth Road taking children from six weeks to six years. The centre runs funded three-year-old and four-year-old kindergarten programs alongside long day care, and is open from 6:30am to 6:00pm on weekdays.",
+    "highlights": [
+      "Long day care from six weeks to six years",
+      "Funded three-year-old kindergarten",
+      "Funded four-year-old kindergarten",
+      "Open 6:30am to 6:00pm weekdays"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "06:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:30",
+        "closes": "18:00",
+        "closed": false
+      }
+    ],
+    "attributes": {
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://villageeducation.com.au/locations/childcare-centre-wodonga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  },
+  {
+    "name": "AAA Open Road Driving School",
+    "slug": "aaa-open-road-driving-school",
+    "categorySlug": "driving-schools",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "phone": "0431 089 283",
+    "website": "https://openroadds.com.au/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=AAA%20Open%20Road%20Driving%20School%20Albury%20NSW",
+    "description": "AAA Open Road Driving School provides driving lessons across Albury-Wodonga and surrounds using dual-control vehicles. Lesson options listed are one-hour and two-hour lessons and a pre-lesson plus P test package, with instruction available in manual and automatic and in the learner's own vehicle. Both male and female certified instructors are available, and the school says it adapts lessons for anxious learners and language barriers. It is a member of the Australian Driver Trainers Association.",
+    "highlights": [
+      "Dual-control vehicles",
+      "Manual and automatic instruction",
+      "Pre-test lesson and P test packages",
+      "Male and female instructors",
+      "Lessons adapted for anxious learners",
+      "ADTA member"
+    ],
+    "attributes": {
+      "mobile_service": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://openroadds.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-18"
+  }
+]

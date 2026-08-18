@@ -1,0 +1,279 @@
+---
+/**
+ * Locality hub. The page that has to link to everything below it without
+ * turning into a wall of 400 links.
+ */
+import type { Locality } from '~/lib/types';
+import {
+  url,
+  STATES,
+  getRegion,
+  activeCategoriesInLocality,
+  listingsInLocality,
+  neighboursOf,
+  listsForLocality,
+  eventsInLocality,
+  categories as allCategories,
+  guides as allGuides,
+} from '~/lib/repo';
+import { VERTICALS } from '~/lib/site';
+import Base from '~/layouts/Base.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { hubSummary, otherStateLabel, n } from '~/lib/copy';
+import { humanDate, shortDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  placeNode,
+  faqNode,
+  itemListNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+interface Props {
+  locality: Locality;
+  buildDate: string;
+}
+const { locality, buildDate } = Astro.props;
+
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.locality(locality);
+
+const rows = listingsInLocality(locality.id);
+const active = activeCategoriesInLocality(locality.id);
+const verified = rows.filter((l) => l.status === 'verified').length;
+const travelIn = rows.filter((l) => l.localityId !== locality.id).length;
+const crossBorder = rows.filter((l) => {
+  return l.localityId !== locality.id;
+}).length;
+
+const byVertical = VERTICALS.map((v) => ({
+  vertical: v,
+  items: active.filter((a) => a.category.vertical === v.key),
+})).filter((g) => g.items.length > 0);
+
+const featured = rows.slice().sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 6);
+const nearby = neighboursOf(locality, 10);
+const lists = listsForLocality(locality.slug);
+const events = eventsInLocality(locality.slug).filter((e) => e.startDate.slice(0, 10) >= buildDate).slice(0, 5);
+const guides = allGuides
+  .filter((g) => g.stateScope === 'both' || (Array.isArray(g.stateScope) && g.stateScope.includes(locality.state)))
+  .slice(0, 4);
+
+const h1 = 'Businesses in ' + locality.name + ', ' + locality.state;
+const description =
+  n(rows.length) +
+  ' businesses and places in ' +
+  locality.name +
+  ' ' +
+  locality.state +
+  ' ' +
+  locality.postcode +
+  ' across ' +
+  active.length +
+  ' categories. ' +
+  (travelIn ? travelIn + ' travel in from nearby. ' : '') +
+  'Checked ' +
+  buildDate +
+  '.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How many businesses are listed in ' + locality.name + '?',
+    a:
+      n(rows.length) +
+      ' across ' +
+      active.length +
+      ' categories, of which ' +
+      verified +
+      ' have been verified. ' +
+      (travelIn ? travelIn + ' of them are based in a nearby town and travel in to work here.' : ''),
+  },
+  {
+    q: 'What is ' + locality.name + ' known for?',
+    a: locality.blurb,
+  },
+  {
+    q: 'Is listing a business in ' + locality.name + ' free?',
+    a: 'Yes. Claiming and maintaining a listing costs nothing, and nothing about the free tier is time limited. Paid features exist for enquiry routing and multi location management, and none of them change where a business appears in an ordinary results list.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: buildDate }),
+  placeNode(locality, region),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Categories in ' + locality.name,
+    items: active.slice(0, 40).map((a) => ({ url: url.localityCategory(locality, a.category), name: a.category.name + ' in ' + locality.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="locality"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={rows.length}
+  ogImage={ogForState(locality.state)}
+  modifiedAt={buildDate}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        {state.name} &middot; {region ? region.name : ''} &middot; {locality.postcode}
+      </p>
+      <h1>{h1}</h1>
+      <p class="standfirst">{locality.blurb}</p>
+      <div class="headmeta">
+        <span>{n(rows.length)} listings</span>
+        <span>&middot; {active.length} categories</span>
+        {verified > 0 && <span>&middot; {verified} verified</span>}
+        <span>&middot; Checked {buildDate}</span>
+      </div>
+    </div>
+
+    {rows.length === 0 ? (
+      <div class="empty" style="margin-top:30px">
+        <p>Nothing listed in {locality.name} yet. It goes live when it has content, not before.</p>
+        <a class="btn" href={url.claim()}>Add the first listing</a>
+      </div>
+    ) : (
+      <>
+        <div class="statgrid">
+          <div><b>{n(rows.length)}</b><span>listings</span></div>
+          <div><b>{active.length}</b><span>categories</span></div>
+          {verified > 0 && <div><b>{verified}</b><span>verified</span></div>}
+          {travelIn > 0 && <div><b>{travelIn}</b><span>travel in</span></div>}
+          <div><b>{locality.postcode}</b><span>postcode</span></div>
+        </div>
+      </>
+    )}
+  </div>
+
+  {byVertical.map((group) => (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>{group.vertical.name} in {locality.name}</h2>
+            <p>{group.vertical.blurb}</p>
+          </div>
+          <span class="mono" style="color:var(--ink-40)">{group.items.length} categories</span>
+        </div>
+        <div class="cats">
+          {group.items.map((a) => (
+            <a class="cat" href={url.localityCategory(locality, a.category)}>
+              <strong>{a.category.name}</strong>
+              <span class="n mono">{a.count} listed</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  {featured.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Strongest profiles in {locality.name}</h2>
+          <p>
+            Ordered by profile completeness and verification, not by payment.
+            <a href={url.advertisingPolicy()} style="color:var(--river)"> How that works</a>.
+          </p>
+        </div>
+        <div class="cards">
+          {featured.map((l) => <ListingCard listing={l} context={locality} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {(lists.length > 0 || events.length > 0) && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="linkgrid">
+          {lists.length > 0 && (
+            <div>
+              <h3>Curated lists</h3>
+              <ul>
+                {lists.map((l) => <li><a href={url.list(l)}>{l.title}</a></li>)}
+              </ul>
+            </div>
+          )}
+          {events.length > 0 && (
+            <div>
+              <h3>Coming up in {locality.name}</h3>
+              <ul>
+                {events.map((e) => (
+                  <li>
+                    <a href={url.event(e)}>{e.title}</a>
+                    <span style="color:var(--ink-40);font-size:13px"> {shortDate(e.startDate.slice(0, 10))}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {guides.length > 0 && (
+            <div>
+              <h3>Guides</h3>
+              <ul>
+                {guides.map((g) => <li><a href={url.guide(g)}>{g.title}</a></li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={'About ' + locality.name} />
+  </div>
+
+  <LinkBlock
+    heading="Nearby"
+    groups={[
+      {
+        heading: 'Towns near ' + locality.name,
+        links: nearby.map((nb) => ({
+          href: url.locality(nb.locality),
+          label: nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Wider area',
+        links: [
+          ...(region ? [{ href: url.region(region), label: 'All of ' + region.name }] : []),
+          { href: url.state(locality.state), label: state.name },
+          { href: url.state(locality.state === 'NSW' ? 'VIC' : 'NSW'), label: otherStateLabel(locality.state), cross: true },
+          { href: url.categoryIndex(), label: 'Every category' },
+        ],
+      },
+    ]}
+  />
+</Base>

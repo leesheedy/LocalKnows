@@ -1,0 +1,248 @@
+---
+/**
+ * /nsw/albury/events/ — the events on one town's calendar.
+ *
+ * Only built for a locality that actually has an event, so the site never ships
+ * a thousand empty calendars. The locality hub links here, this links back, and
+ * both link up to /events/.
+ */
+import type { Locality } from '~/lib/types';
+import {
+  url,
+  STATES,
+  getRegion,
+  liveLocalities,
+  eventsInLocality,
+  neighboursOf,
+} from '~/lib/repo';
+import Base from '~/layouts/Base.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import { n } from '~/lib/copy';
+import { BUILD_DATE, humanDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  itemListNode,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+  for (const locality of liveLocalities()) {
+    // Locality slugs repeat across the border, so the state is part of the match.
+    const rows = eventsInLocality(locality.slug).filter((e) => e.state === locality.state);
+    if (!rows.length) continue;
+    paths.push({
+      params: { state: STATES[locality.state].slug, place: locality.slug },
+      props: { locality },
+    });
+  }
+  return paths;
+}
+
+const { locality } = Astro.props as { locality: Locality };
+
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.localityEvents(locality);
+
+const asDate = (iso: string) => new Date(iso.length === 10 ? iso + 'T00:00:00Z' : iso);
+const dayNumber = (iso: string) => asDate(iso).getUTCDate();
+const monthShort = (iso: string) =>
+  asDate(iso).toLocaleDateString('en-AU', { month: 'short', timeZone: 'UTC' });
+
+const rows = eventsInLocality(locality.slug).filter((e) => e.state === locality.state);
+const upcoming = rows
+  .filter((e) => e.startDate.slice(0, 10) >= BUILD_DATE)
+  .sort((a, b) => a.startDate.localeCompare(b.startDate));
+const passed = rows
+  .filter((e) => e.startDate.slice(0, 10) < BUILD_DATE)
+  .sort((a, b) => b.startDate.localeCompare(a.startDate))
+  .slice(0, 6);
+
+const freeCount = upcoming.filter((e) => e.isFree).length;
+const types = [...new Set(upcoming.map((e) => e.eventType))];
+const listItems = upcoming.length ? upcoming : passed;
+
+/** Only neighbours that actually have an events page. The rest would 404. */
+const nearby = neighboursOf(locality, 12).filter(
+  (nb) =>
+    eventsInLocality(nb.locality.slug).filter((e) => e.state === nb.locality.state).length > 0,
+);
+
+const h1 = 'Events in ' + locality.name + ', ' + locality.state;
+const description =
+  upcoming.length > 0
+    ? n(upcoming.length) +
+      ' events coming up in ' +
+      locality.name +
+      ' ' +
+      locality.state +
+      ' ' +
+      locality.postcode +
+      '. ' +
+      (freeCount > 0 ? freeCount + ' free to attend. ' : '') +
+      'Markets, open days and club nights, listed for nothing.'
+    : 'Nothing scheduled in ' +
+      locality.name +
+      ' ' +
+      locality.state +
+      ' right now. Past events are kept here, and listing a new one costs nothing.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: 'Events', href: canonicalPath },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Events in ' + locality.name,
+    items: listItems.map((e) => ({ url: url.event(e), name: e.title })),
+  }),
+]);
+---
+
+<Base
+  kind="eventIndex"
+  title={h1}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">
+        {state.name} &middot; {region ? region.name + ' · ' : ''}{locality.postcode}
+      </p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Markets, club open days and trade nights on the {locality.name} calendar. Ordered by
+        date, soonest first. Nobody pays to be here.
+      </p>
+      <div class="headmeta">
+        <span>{n(upcoming.length)} coming up</span>
+        {types.length > 0 && <span>&middot; {types.length} {types.length === 1 ? 'kind' : 'kinds'} of event</span>}
+        {freeCount > 0 && <span>&middot; {freeCount} free to attend</span>}
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head row">
+        <div>
+          <h2>Coming up in {locality.name}</h2>
+          <p>Everything dated today or later.</p>
+        </div>
+        <a class="btn btn-ghost btn-sm" href={url.events()}>Both states</a>
+      </div>
+
+      {upcoming.length === 0 ? (
+        <div class="empty">
+          <p>
+            Nothing on the {locality.name} calendar from {humanDate(BUILD_DATE)} onwards. If you
+            run something here, we will list it for nothing.
+          </p>
+          <a class="btn" href={url.contact()}>Submit an event</a>
+        </div>
+      ) : (
+        upcoming.map((e) => (
+          <div class="ev">
+            <div class="ev-date">
+              <b>{dayNumber(e.startDate)}</b>
+              <span>{monthShort(e.startDate)}</span>
+            </div>
+            <div>
+              <h3><a href={url.event(e)}>{e.title}</a></h3>
+              <p>{e.description}</p>
+              <span class="where">
+                {e.venueName} &middot; {e.eventType}
+                {e.isFree ? ' · Free' : e.price ? ' · ' + e.price : ''}
+              </span>
+            </div>
+          </div>
+        ))
+      )}
+    </div>
+  </section>
+
+  {passed.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Already run</h2>
+          <p>Kept rather than deleted. Most of these come back on the same weekend next year.</p>
+        </div>
+        {passed.map((e) => (
+          <div class="ev" style="opacity:.72">
+            <div class="ev-date">
+              <b>{dayNumber(e.startDate)}</b>
+              <span>{monthShort(e.startDate)}</span>
+            </div>
+            <div>
+              <h3>
+                <a href={url.event(e)}>{e.title}</a>
+                <span class="tag warn" style="margin-left:8px">Passed</span>
+              </h3>
+              <p>{e.description}</p>
+              <span class="where">Ran {humanDate(e.startDate)} &middot; {e.venueName}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <LinkBlock
+    heading="Back to the town"
+    groups={[
+      {
+        heading: locality.name,
+        links: [
+          { href: url.locality(locality), label: 'Businesses in ' + locality.name },
+          ...(region ? [{ href: url.region(region), label: 'All of ' + region.name }] : []),
+          { href: url.state(locality.state), label: state.name },
+        ],
+      },
+      {
+        heading: 'Calendars nearby',
+        links: nearby.map((nb) => ({
+          href: url.localityEvents(nb.locality),
+          label: nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Elsewhere',
+        links: [
+          { href: url.events(), label: 'Every event, both states' },
+          { href: url.wire(), label: 'The wire' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.contact(), label: 'Submit an event' },
+        ],
+      },
+    ]}
+  />
+</Base>

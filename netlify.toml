@@ -1,20 +1,55 @@
+# LocalKnows. Static Astro build, headers and redirects are generated into
+# dist/ by scripts/postbuild.mjs so they stay in step with what was actually
+# rendered. Anything set here is a floor, not the whole story.
+
 [build]
-  publish = "public"
+  command = "npm run build"
+  publish = "dist"
 
-[[headers]]
+[build.environment]
+  NODE_VERSION = "22"
+  NPM_FLAGS = "--no-audit --no-fund"
+
+# Deploy previews and branch builds must never be indexed. Production sets its
+# own robots policy per page, from src/lib/indexability.ts.
+[context.deploy-preview]
+  [context.deploy-preview.environment]
+    SITE_URL = "https://deploy-preview.localsknow.com.au"
+
+[[context.deploy-preview.headers]]
   for = "/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
+  [context.deploy-preview.headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
-# enforce trailing slashes, pick one and never change it
+[[context.branch-deploy.headers]]
+  for = "/*"
+  [context.branch-deploy.headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+# Trailing slash is enforced in one direction and never changed.
 [[redirects]]
   from = "/nsw"
   to = "/nsw/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/vic"
   to = "/vic/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/feed"
+  to = "/wire/rss.xml"
+  status = 301
+
+[[redirects]]
+  from = "/rss"
+  to = "/wire/rss.xml"
   status = 301
