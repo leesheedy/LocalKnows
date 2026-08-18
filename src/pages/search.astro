@@ -60,18 +60,28 @@ const chosen = capped ? ranked.slice(0, CAP) : ranked;
 const index = chosen.map((l) => {
   const locality = getLocality(l.localityId);
   const cats = l.categoryIds.map((id) => getCategory(id)).filter(Boolean) as Category[];
-  const haystack = [
+  /**
+   * The haystack is a deduplicated token set, not a sentence.
+   *
+   * Matching is substring per token, so word order and repetition buy nothing
+   * and cost bytes on every visitor. Highlights are excluded: they are long,
+   * they repeat the description, and nobody searches a directory by the third
+   * bullet point on a listing.
+   */
+  const tokens = new Set<string>();
+  for (const part of [
     l.name,
     ...cats.map((c) => c.name),
     ...cats.flatMap((c) => c.synonyms),
-    ...l.highlights,
     locality?.name ?? '',
     locality?.state ?? '',
     l.postcode,
-  ]
-    .join(' ')
-    .replace(/\s+/g, ' ')
-    .toLowerCase();
+  ]) {
+    for (const w of String(part).toLowerCase().split(/[^a-z0-9]+/)) {
+      if (w.length > 1) tokens.add(w);
+    }
+  }
+  const haystack = [...tokens].join(' ');
 
   return {
     n: l.name,

@@ -1,0 +1,406 @@
+---
+/**
+ * New in town.
+ *
+ * The page a directory should have and none of them do. Somebody who moved here
+ * three weeks ago does not want a category listing, they want the shape of the
+ * place: which state's rules apply, where the food is, what is on, and which
+ * clubs will have them.
+ *
+ * Generated per locality from the same data as everything else, and only where
+ * there is enough of it for the page to be worth reading.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import {
+  url,
+  STATES,
+  guidePageLocalities,
+  hasGuidePages,
+  listingsInLocality,
+  listingsBasedIn,
+  activeCategoriesInLocality,
+  getRegion,
+  getCategory,
+  neighboursOf,
+  eventsInLocality,
+  listsForLocality,
+  hasLocalityEvents,
+  categories as allCategories,
+} from '~/lib/repo';
+import type { Locality } from '~/lib/types';
+import { n, otherStateLabel } from '~/lib/copy';
+import { BUILD_DATE, shortDate } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  placeNode,
+  faqNode,
+  itemListNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  // Only where there is enough to say. See hasGuidePages().
+  return guidePageLocalities()
+    .map((locality) => ({
+      params: { state: STATES[locality.state].slug, place: locality.slug },
+      props: { locality },
+    }));
+}
+
+const { locality } = Astro.props as { locality: Locality };
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.locality(locality) + 'new-in-town/';
+
+const rows = listingsInLocality(locality.id);
+const based = listingsBasedIn(locality.id);
+const active = activeCategoriesInLocality(locality.id);
+const byVertical = (v: string) => active.filter((a) => a.category.vertical === v);
+
+const eat = byVertical('eat_drink').slice(0, 8);
+const drink = byVertical('pubs_clubs').slice(0, 6);
+const doing = byVertical('things_to_do').slice(0, 8);
+const clubs = byVertical('clubs_hobbies');
+const trades = byVertical('trades').slice(0, 12);
+const stay = byVertical('stay').slice(0, 4);
+
+const freeThings = rows
+  .filter((l) => l.vertical === 'things_to_do' && l.attributes?.free_entry === 'yes')
+  .slice(0, 4);
+
+const events = eventsInLocality(locality.slug)
+  .filter((e) => e.startDate.slice(0, 10) >= BUILD_DATE)
+  .slice(0, 5);
+const lists = listsForLocality(locality.slug);
+const nearby = neighboursOf(locality, 10);
+const acrossBorder = nearby.filter((x) => x.crossesBorder).slice(0, 4);
+
+const clubCount = clubs.reduce((t, c) => t + c.count, 0);
+const other = otherStateLabel(locality.state);
+
+const h1 = 'New in ' + locality.name + '? Start here';
+const description =
+  'Just moved to ' +
+  locality.name +
+  ' ' +
+  locality.state +
+  '? Where to eat, what is on, which clubs to join, who to call when something breaks, and which state rules apply.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: 'New in town', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'What state is ' + locality.name + ' in?',
+    a:
+      locality.name +
+      ' is in ' +
+      state.name +
+      ', postcode ' +
+      locality.postcode +
+      '. That decides which trade licences apply to work done here, which public holiday calendar sets penalty rates, and which regulator handles a complaint. On this border those are three separate things worth knowing.',
+  },
+  {
+    q: 'How do I meet people in ' + locality.name + '?',
+    a:
+      clubCount > 0
+        ? 'Join something. We list ' +
+          clubCount +
+          ' clubs and community groups covering ' +
+          locality.name +
+          ', across ' +
+          clubs.length +
+          ' kinds of thing, and most of them run a come and try night. It is the single fastest way into a regional town and it costs almost nothing.'
+        : 'Clubs are the fastest way into a regional town. We do not have the ' +
+          locality.name +
+          ' club listings up yet, so the local council and the neighbourhood centre are the places to ask.',
+  },
+  {
+    q: 'What is there to do in ' + locality.name + '?',
+    a:
+      doing.length > 0
+        ? 'We list ' +
+          doing.reduce((t, c) => t + c.count, 0) +
+          ' things to do in and around ' +
+          locality.name +
+          ', across ' +
+          doing.map((d) => d.category.name.toLowerCase()).slice(0, 4).join(', ') +
+          ' and more.' +
+          (freeThings.length ? ' ' + freeThings.length + ' of them are free.' : '')
+        : 'The things to do listings for ' + locality.name + ' are still being built.',
+  },
+  {
+    q: 'Who do I call when something breaks?',
+    a:
+      trades.length > 0
+        ? 'We list ' +
+          trades.reduce((t, c) => t + c.count, 0) +
+          ' trades and services covering ' +
+          locality.name +
+          '. Every listing shows where its details came from and when they were last read, and the licence check tool opens the right state register so you can check a number before you pay a deposit.'
+        : 'Trade listings for ' + locality.name + ' are still being built.',
+  },
+  {
+    q: 'Is this page a paid guide?',
+    a: 'No. Nothing on it is sponsored, nobody paid to appear, and ordering comes from how complete a listing is rather than from money. It is assembled from the same data as the rest of the site.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  placeNode(locality, region),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: 'Getting started in ' + locality.name,
+    items: active
+      .slice(0, 30)
+      .map((a) => ({ url: url.localityCategory(locality, a.category), name: a.category.name + ' in ' + locality.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+
+const section = (
+  items: { category: any; count: number }[],
+) => items.map((c) => ({ href: url.localityCategory(locality, c.category), label: c.category.name, note: '(' + c.count + ')' }));
+---
+
+<Base
+  kind="locality"
+  title={'New in ' + locality.name + ', ' + locality.state + '? Start here'}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={rows.length}
+  ogImage={ogForState(locality.state)}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{state.name} &middot; {locality.postcode}</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Everything a new arrival actually asks in the first month, answered from the
+        {' '}{n(rows.length)} businesses, clubs and places we list here. No sponsored
+        entries, nothing paid for.
+      </p>
+      <div class="headmeta">
+        <span>{n(rows.length)} listings</span>
+        <span>&middot; {active.length} categories</span>
+        {clubCount > 0 && <span>&middot; {clubCount} clubs and groups</span>}
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <section class="prose" style="margin-top:30px">
+      <h2>First, the thing people get wrong</h2>
+      <p>{locality.blurb}</p>
+      <p>
+        {locality.name} is in <strong>{state.name}</strong>, postcode {locality.postcode}.
+        That matters more here than it does most places. The state a job is done in decides
+        which trade licence applies, which public holiday calendar sets the penalty rate,
+        and which regulator hears a complaint. {other} is close enough that people routinely
+        assume the rules travel with them. They do not.
+      </p>
+      <p>
+        If you are hiring anyone, the <a href="/tools/border-check/">border check</a> tells
+        you which state's rules apply to an address, and the
+        {' '}<a href="/tools/licence-check/">licence check</a> opens the right register.
+      </p>
+    </section>
+
+    <div class="statgrid">
+      <div><b>{state.code}</b><span>state</span></div>
+      <div><b>{locality.postcode}</b><span>postcode</span></div>
+      <div><b>{n(based.length)}</b><span>businesses based here</span></div>
+      <div><b>{n(rows.length - based.length)}</b><span>that travel in</span></div>
+      {clubCount > 0 && <div><b>{clubCount}</b><span>clubs and groups</span></div>}
+      {events.length > 0 && <div><b>{events.length}</b><span>events coming up</span></div>}
+    </div>
+  </div>
+
+  {clubs.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Join something. It is the fastest way in.</h2>
+          <p>
+            This is the honest answer to how you meet people in a regional town, and it is
+            the section most directories do not have at all. {clubCount} clubs and community
+            groups cover {locality.name}, across {clubs.length} different kinds of thing.
+            Most run a come and try night and most cost less than a month of streaming.
+          </p>
+        </div>
+        <div class="cats">
+          {clubs.map((c) => (
+            <a class="cat" href={url.localityCategory(locality, c.category)}>
+              <strong>{c.category.name}</strong>
+              <span class="n mono">{c.count} listed</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {(eat.length > 0 || drink.length > 0) && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Where to eat and drink</h2>
+          <p>Work through it rather than eating at the same place for a year.</p>
+        </div>
+        <div class="linkgrid">
+          {eat.length > 0 && <div><h3>Eat</h3><ul>{eat.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
+          {drink.length > 0 && <div><h3>Pubs and clubs</h3><ul>{drink.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
+          {lists.length > 0 && <div><h3>Worked out for you</h3><ul>{lists.map((l) => <li><a href={url.list(l)}>{l.title}</a></li>)}</ul></div>}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {doing.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>What there is to do</h2>
+            <p>
+              Including the free ones, which is what you want in the first month before you
+              know whether you are staying.
+            </p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href={url.locality(locality) + 'hidden-gems/'}>
+            The less obvious ones
+          </a>
+        </div>
+        <div class="cats">
+          {doing.map((c) => (
+            <a class="cat" href={url.localityCategory(locality, c.category)}>
+              <strong>{c.category.name}</strong>
+              <span class="n mono">{c.count} listed</span>
+            </a>
+          ))}
+        </div>
+        {freeThings.length > 0 && (
+          <div class="cards" style="margin-top:22px">
+            {freeThings.map((l) => <ListingCard listing={l} context={locality} />)}
+          </div>
+        )}
+      </div>
+    </section>
+  )}
+
+  {events.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>What is on</h2>
+            <p>Markets, open days and come and try nights. Free to submit if you run one.</p>
+          </div>
+          {hasLocalityEvents(locality.slug) ? (
+            <a class="btn btn-ghost btn-sm" href={url.localityEvents(locality)}>All {locality.name} events</a>
+          ) : (
+            <a class="btn btn-ghost btn-sm" href={url.events()}>All events</a>
+          )}
+        </div>
+        {events.map((e) => (
+          <div class="ev">
+            <div class="ev-date">
+              <b>{new Date(e.startDate).getUTCDate()}</b>
+              <span>{new Date(e.startDate).toLocaleDateString('en-AU', { month: 'short', timeZone: 'UTC' })}</span>
+            </div>
+            <div>
+              <h3><a href={url.event(e)}>{e.title}</a></h3>
+              <p>{e.description}</p>
+              <span class="where">{e.venueName}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>When something breaks</h2>
+        <p>
+          You will need a plumber or a sparky before you need anything else on this page.
+          Every listing shows where its details came from and when they were last read.
+        </p>
+      </div>
+      <div class="cats">
+        {trades.map((c) => (
+          <a class="cat" href={url.localityCategory(locality, c.category)}>
+            <strong>{c.category.name}</strong>
+            <span class="n mono">{c.count} listed</span>
+          </a>
+        ))}
+      </div>
+      <div class="notice river" style="margin-top:24px">
+        <strong>Before you pay a deposit.</strong> Ask which licence they are working under
+        for your job and check it. It takes a minute on the
+        {' '}<a href="/tools/licence-check/">licence check</a>, and on this border the
+        licence that counts is the one for the state the work is in, not the state the
+        business is registered in.
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={'Moving to ' + locality.name}/>
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'Somewhere to stay while you look',
+        links: stay.length ? section(stay) : [{ href: url.locality(locality), label: 'Everything in ' + locality.name }],
+      },
+      {
+        heading: acrossBorder.length ? 'Worth the drive, across the border' : 'Worth the drive',
+        links: (acrossBorder.length ? acrossBorder : nearby.slice(0, 6)).map((nb) => ({
+          href: url.locality(nb.locality),
+          label: nb.locality.name,
+          note: Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+      {
+        heading: 'Useful either way',
+        links: [
+          { href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name },
+          { href: '/tools/public-holidays/', label: 'Which public holidays differ' },
+          { href: '/tools/border-check/', label: 'Which state, which rules' },
+          { href: url.guides(), label: 'Guides' },
+          { href: url.claim(), label: 'List your own business' },
+        ],
+      },
+    ]}
+  />
+</Base>

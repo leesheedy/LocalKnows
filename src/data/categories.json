@@ -1627,7 +1627,7 @@
    "nameSingular": "Coffee Roaster",
    "slug": "coffee-roasters",
    "schemaType": "FoodEstablishment",
-   "description": "Coffee Roasters listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Coffee Roasters listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1639,7 +1639,7 @@
    "nameSingular": "Vietnamese Restaurant",
    "slug": "vietnamese-restaurants",
    "schemaType": "FoodEstablishment",
-   "description": "Vietnamese Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Vietnamese Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1651,7 +1651,7 @@
    "nameSingular": "Mexican Restaurant",
    "slug": "mexican-restaurants",
    "schemaType": "FoodEstablishment",
-   "description": "Mexican Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Mexican Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1663,7 +1663,7 @@
    "nameSingular": "Italian Restaurant",
    "slug": "italian-restaurants",
    "schemaType": "FoodEstablishment",
-   "description": "Italian Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Italian Restaurants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1675,7 +1675,7 @@
    "nameSingular": "Sports Club",
    "slug": "sports-clubs",
    "schemaType": "BarOrPub",
-   "description": "Sports Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Sports Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1687,7 +1687,7 @@
    "nameSingular": "Bar",
    "slug": "bars",
    "schemaType": "BarOrPub",
-   "description": "Bars listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bars listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1699,7 +1699,7 @@
    "nameSingular": "Accountant",
    "slug": "accountants",
    "schemaType": "LocalBusiness",
-   "description": "Accountants listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Accountants listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1711,7 +1711,7 @@
    "nameSingular": "Solicitor",
    "slug": "solicitors",
    "schemaType": "LocalBusiness",
-   "description": "Solicitors listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Solicitors listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1723,7 +1723,7 @@
    "nameSingular": "Conveyancer",
    "slug": "conveyancers",
    "schemaType": "LocalBusiness",
-   "description": "Conveyancers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Conveyancers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1735,7 +1735,7 @@
    "nameSingular": "Mortgage Broker",
    "slug": "mortgage-brokers",
    "schemaType": "LocalBusiness",
-   "description": "Mortgage Brokers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Mortgage Brokers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1747,7 +1747,7 @@
    "nameSingular": "Real Estate Agent",
    "slug": "real-estate-agents",
    "schemaType": "LocalBusiness",
-   "description": "Real Estate Agents listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Real Estate Agents listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1759,7 +1759,7 @@
    "nameSingular": "Architect",
    "slug": "architects",
    "schemaType": "LocalBusiness",
-   "description": "Architects listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Architects listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1771,7 +1771,7 @@
    "nameSingular": "Web Design",
    "slug": "web-design",
    "schemaType": "LocalBusiness",
-   "description": "Web Design listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Web Design listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1783,7 +1783,7 @@
    "nameSingular": "Printer",
    "slug": "printers",
    "schemaType": "LocalBusiness",
-   "description": "Printers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Printers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1795,7 +1795,7 @@
    "nameSingular": "Signage",
    "slug": "signage",
    "schemaType": "LocalBusiness",
-   "description": "Signage listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Signage listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1807,7 +1807,7 @@
    "nameSingular": "Dentist",
    "slug": "dentists",
    "schemaType": "LocalBusiness",
-   "description": "Dentists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Dentists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1819,7 +1819,7 @@
    "nameSingular": "Physiotherapist",
    "slug": "physiotherapists",
    "schemaType": "LocalBusiness",
-   "description": "Physiotherapists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Physiotherapists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1831,7 +1831,7 @@
    "nameSingular": "Chiropractor",
    "slug": "chiropractors",
    "schemaType": "LocalBusiness",
-   "description": "Chiropractors listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Chiropractors listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1843,7 +1843,7 @@
    "nameSingular": "Podiatrist",
    "slug": "podiatrists",
    "schemaType": "LocalBusiness",
-   "description": "Podiatrists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Podiatrists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1855,7 +1855,7 @@
    "nameSingular": "Optometrist",
    "slug": "optometrists",
    "schemaType": "LocalBusiness",
-   "description": "Optometrists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Optometrists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1867,7 +1867,7 @@
    "nameSingular": "Veterinary Clinic",
    "slug": "veterinary-clinics",
    "schemaType": "LocalBusiness",
-   "description": "Veterinary Clinics listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Veterinary Clinics listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1879,7 +1879,7 @@
    "nameSingular": "Pharmacy",
    "slug": "pharmacies",
    "schemaType": "LocalBusiness",
-   "description": "Pharmacies listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Pharmacies listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1891,7 +1891,7 @@
    "nameSingular": "Hairdresser",
    "slug": "hairdressers",
    "schemaType": "LocalBusiness",
-   "description": "Hairdressers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Hairdressers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1903,7 +1903,7 @@
    "nameSingular": "Barber",
    "slug": "barbers",
    "schemaType": "LocalBusiness",
-   "description": "Barbers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Barbers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1915,7 +1915,7 @@
    "nameSingular": "Day Spa",
    "slug": "day-spas",
    "schemaType": "LocalBusiness",
-   "description": "Day Spas listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Day Spas listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1927,7 +1927,7 @@
    "nameSingular": "Tattoo Studio",
    "slug": "tattoo-studios",
    "schemaType": "LocalBusiness",
-   "description": "Tattoo Studios listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Tattoo Studios listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1939,7 +1939,7 @@
    "nameSingular": "Childcare",
    "slug": "childcare",
    "schemaType": "LocalBusiness",
-   "description": "Childcare listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Childcare listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1951,7 +1951,7 @@
    "nameSingular": "Driving School",
    "slug": "driving-schools",
    "schemaType": "LocalBusiness",
-   "description": "Driving Schools listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Driving Schools listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1963,7 +1963,7 @@
    "nameSingular": "Caravan Park",
    "slug": "caravan-parks",
    "schemaType": "LodgingBusiness",
-   "description": "Caravan Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Caravan Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1975,7 +1975,7 @@
    "nameSingular": "Cottage",
    "slug": "cottages",
    "schemaType": "LodgingBusiness",
-   "description": "Cottages listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Cottages listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1987,7 +1987,7 @@
    "nameSingular": "Bed And Breakfast",
    "slug": "bed-and-breakfast",
    "schemaType": "LodgingBusiness",
-   "description": "Bed And Breakfast listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bed And Breakfast listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -1999,7 +1999,7 @@
    "nameSingular": "Parks And Garden",
    "slug": "parks-and-gardens",
    "schemaType": "TouristAttraction",
-   "description": "Parks And Gardens listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Parks And Gardens listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2011,7 +2011,7 @@
    "nameSingular": "Walking Trail",
    "slug": "walking-trails",
    "schemaType": "TouristAttraction",
-   "description": "Walking Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Walking Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2023,7 +2023,7 @@
    "nameSingular": "Escape Room",
    "slug": "escape-rooms",
    "schemaType": "TouristAttraction",
-   "description": "Escape Rooms listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Escape Rooms listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2035,7 +2035,7 @@
    "nameSingular": "Heritage Site",
    "slug": "heritage-sites",
    "schemaType": "TouristAttraction",
-   "description": "Heritage Sites listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Heritage Sites listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2047,7 +2047,7 @@
    "nameSingular": "Bowling Alley",
    "slug": "bowling-alleys",
    "schemaType": "TouristAttraction",
-   "description": "Bowling Alleys listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bowling Alleys listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2059,7 +2059,7 @@
    "nameSingular": "Water Park",
    "slug": "water-parks",
    "schemaType": "TouristAttraction",
-   "description": "Water Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Water Parks listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2071,7 +2071,7 @@
    "nameSingular": "Towing Service",
    "slug": "towing-services",
    "schemaType": "LocalBusiness",
-   "description": "Towing Services listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Towing Services listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2083,7 +2083,7 @@
    "nameSingular": "Exhaust Specialist",
    "slug": "exhaust-specialists",
    "schemaType": "LocalBusiness",
-   "description": "Exhaust Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Exhaust Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2095,7 +2095,7 @@
    "nameSingular": "4wd Specialist",
    "slug": "4wd-specialists",
    "schemaType": "LocalBusiness",
-   "description": "4wd Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "4wd Specialists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2107,7 +2107,7 @@
    "nameSingular": "Truck Repair",
    "slug": "truck-repairs",
    "schemaType": "LocalBusiness",
-   "description": "Truck Repairs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Truck Repairs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2119,7 +2119,7 @@
    "nameSingular": "Motorcycle Service",
    "slug": "motorcycle-service",
    "schemaType": "LocalBusiness",
-   "description": "Motorcycle Service listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Motorcycle Service listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2131,7 +2131,7 @@
    "nameSingular": "Car Detailing",
    "slug": "car-detailing",
    "schemaType": "LocalBusiness",
-   "description": "Car Detailing listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Car Detailing listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2143,7 +2143,7 @@
    "nameSingular": "Shed Builder",
    "slug": "shed-builders",
    "schemaType": "LocalBusiness",
-   "description": "Shed Builders listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Shed Builders listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2155,7 +2155,7 @@
    "nameSingular": "Carpet Cleaning",
    "slug": "carpet-cleaning",
    "schemaType": "LocalBusiness",
-   "description": "Carpet Cleaning listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Carpet Cleaning listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2167,7 +2167,7 @@
    "nameSingular": "Lawn Mowing",
    "slug": "lawn-mowing",
    "schemaType": "LocalBusiness",
-   "description": "Lawn Mowing listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Lawn Mowing listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2179,7 +2179,7 @@
    "nameSingular": "Self Storage",
    "slug": "self-storage",
    "schemaType": "LocalBusiness",
-   "description": "Self Storage listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Self Storage listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2191,7 +2191,7 @@
    "nameSingular": "Rubbish Removal",
    "slug": "rubbish-removal",
    "schemaType": "LocalBusiness",
-   "description": "Rubbish Removal listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Rubbish Removal listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2203,7 +2203,7 @@
    "nameSingular": "Skip Bin",
    "slug": "skip-bins",
    "schemaType": "LocalBusiness",
-   "description": "Skip Bins listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Skip Bins listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2215,7 +2215,7 @@
    "nameSingular": "Pool Service",
    "slug": "pool-services",
    "schemaType": "LocalBusiness",
-   "description": "Pool Services listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Pool Services listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2227,7 +2227,7 @@
    "nameSingular": "Handymen",
    "slug": "handymen",
    "schemaType": "LocalBusiness",
-   "description": "Handymen listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Handymen listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2239,7 +2239,7 @@
    "nameSingular": "Welding",
    "slug": "welding",
    "schemaType": "LocalBusiness",
-   "description": "Welding listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Welding listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2251,7 +2251,7 @@
    "nameSingular": "Appliance Repair",
    "slug": "appliance-repair",
    "schemaType": "LocalBusiness",
-   "description": "Appliance Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Appliance Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2263,7 +2263,7 @@
    "nameSingular": "Computer Repair",
    "slug": "computer-repair",
    "schemaType": "LocalBusiness",
-   "description": "Computer Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Computer Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2275,7 +2275,7 @@
    "nameSingular": "Brewery",
    "slug": "breweries",
    "schemaType": "TouristAttraction",
-   "description": "Breweries listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Breweries listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2287,7 +2287,7 @@
    "nameSingular": "Mountain Bike Trail",
    "slug": "mountain-bike-trails",
    "schemaType": "TouristAttraction",
-   "description": "Mountain Bike Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Mountain Bike Trails listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2299,7 +2299,7 @@
    "nameSingular": "Boat Hire",
    "slug": "boat-hire",
    "schemaType": "TouristAttraction",
-   "description": "Boat Hire listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Boat Hire listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2311,7 +2311,7 @@
    "nameSingular": "Phone Repair",
    "slug": "phone-repair",
    "schemaType": "LocalBusiness",
-   "description": "Phone Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Phone Repair listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2323,7 +2323,7 @@
    "nameSingular": "Model Aero Club",
    "slug": "model-aero-clubs",
    "schemaType": "Organization",
-   "description": "Model Aero Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Model Aero Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2335,7 +2335,7 @@
    "nameSingular": "Camera Club",
    "slug": "camera-clubs",
    "schemaType": "Organization",
-   "description": "Camera Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Camera Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2347,7 +2347,7 @@
    "nameSingular": "Landcare Group",
    "slug": "landcare-groups",
    "schemaType": "Organization",
-   "description": "Landcare Groups listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Landcare Groups listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2359,7 +2359,7 @@
    "nameSingular": "Theatre Company",
    "slug": "theatre-companies",
    "schemaType": "PerformingGroup",
-   "description": "Theatre Companies listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Theatre Companies listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2371,7 +2371,7 @@
    "nameSingular": "Choir",
    "slug": "choirs",
    "schemaType": "MusicGroup",
-   "description": "Choirs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Choirs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2383,7 +2383,7 @@
    "nameSingular": "Dog Club",
    "slug": "dog-clubs",
    "schemaType": "SportsClub",
-   "description": "Dog Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Dog Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2395,7 +2395,7 @@
    "nameSingular": "Hockey Club",
    "slug": "hockey-clubs",
    "schemaType": "SportsClub",
-   "description": "Hockey Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Hockey Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2407,7 +2407,7 @@
    "nameSingular": "Athletics Club",
    "slug": "athletics-clubs",
    "schemaType": "SportsClub",
-   "description": "Athletics Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Athletics Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2419,7 +2419,7 @@
    "nameSingular": "Soccer Club",
    "slug": "soccer-clubs",
    "schemaType": "SportsClub",
-   "description": "Soccer Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Soccer Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2431,7 +2431,7 @@
    "nameSingular": "Basketball Club",
    "slug": "basketball-clubs",
    "schemaType": "SportsClub",
-   "description": "Basketball Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Basketball Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2443,7 +2443,7 @@
    "nameSingular": "Tennis Club",
    "slug": "tennis-clubs",
    "schemaType": "SportsClub",
-   "description": "Tennis Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Tennis Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2455,7 +2455,7 @@
    "nameSingular": "Bridge Club",
    "slug": "bridge-clubs",
    "schemaType": "SportsClub",
-   "description": "Bridge Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bridge Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2467,7 +2467,7 @@
    "nameSingular": "Cycling Club",
    "slug": "cycling-clubs",
    "schemaType": "SportsClub",
-   "description": "Cycling Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Cycling Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2479,7 +2479,7 @@
    "nameSingular": "Community Garden",
    "slug": "community-gardens",
    "schemaType": "Organization",
-   "description": "Community Gardens listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Community Gardens listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2491,7 +2491,7 @@
    "nameSingular": "Neighbourhood Hous",
    "slug": "neighbourhood-houses",
    "schemaType": "Organization",
-   "description": "Neighbourhood Houses listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Neighbourhood Houses listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2503,7 +2503,7 @@
    "nameSingular": "Chess Club",
    "slug": "chess-clubs",
    "schemaType": "SportsClub",
-   "description": "Chess Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Chess Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2515,7 +2515,7 @@
    "nameSingular": "Running Club",
    "slug": "running-clubs",
    "schemaType": "SportsClub",
-   "description": "Running Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Running Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2527,7 +2527,7 @@
    "nameSingular": "Service Club",
    "slug": "service-clubs",
    "schemaType": "Organization",
-   "description": "Service Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Service Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2539,7 +2539,7 @@
    "nameSingular": "Greengrocer",
    "slug": "greengrocers",
    "schemaType": "LocalBusiness",
-   "description": "Greengrocers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Greengrocers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2551,7 +2551,7 @@
    "nameSingular": "Deli",
    "slug": "delis",
    "schemaType": "LocalBusiness",
-   "description": "Delis listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Delis listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2563,7 +2563,7 @@
    "nameSingular": "Bottle Shop",
    "slug": "bottle-shops",
    "schemaType": "LocalBusiness",
-   "description": "Bottle Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bottle Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2575,7 +2575,7 @@
    "nameSingular": "Health Food Store",
    "slug": "health-food-stores",
    "schemaType": "LocalBusiness",
-   "description": "Health Food Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Health Food Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2587,7 +2587,7 @@
    "nameSingular": "Bookshop",
    "slug": "bookshops",
    "schemaType": "LocalBusiness",
-   "description": "Bookshops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bookshops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2599,7 +2599,7 @@
    "nameSingular": "Florist",
    "slug": "florists",
    "schemaType": "LocalBusiness",
-   "description": "Florists listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Florists listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2611,7 +2611,7 @@
    "nameSingular": "Nursery",
    "slug": "nurseries",
    "schemaType": "LocalBusiness",
-   "description": "Nurseries listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Nurseries listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2623,7 +2623,7 @@
    "nameSingular": "Bike Shop",
    "slug": "bike-shops",
    "schemaType": "LocalBusiness",
-   "description": "Bike Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Bike Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2635,7 +2635,7 @@
    "nameSingular": "Outdoor Store",
    "slug": "outdoor-stores",
    "schemaType": "LocalBusiness",
-   "description": "Outdoor Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Outdoor Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2647,7 +2647,7 @@
    "nameSingular": "Music Shop",
    "slug": "music-shops",
    "schemaType": "LocalBusiness",
-   "description": "Music Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Music Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2659,7 +2659,7 @@
    "nameSingular": "Art Supply",
    "slug": "art-supplies",
    "schemaType": "LocalBusiness",
-   "description": "Art Supplies listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Art Supplies listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2671,7 +2671,7 @@
    "nameSingular": "Jeweller",
    "slug": "jewellers",
    "schemaType": "LocalBusiness",
-   "description": "Jewellers listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Jewellers listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2683,7 +2683,7 @@
    "nameSingular": "Clothing Store",
    "slug": "clothing-stores",
    "schemaType": "LocalBusiness",
-   "description": "Clothing Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Clothing Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2695,7 +2695,7 @@
    "nameSingular": "Gift Shop",
    "slug": "gift-shops",
    "schemaType": "LocalBusiness",
-   "description": "Gift Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Gift Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2707,7 +2707,7 @@
    "nameSingular": "Toy Shop",
    "slug": "toy-shops",
    "schemaType": "LocalBusiness",
-   "description": "Toy Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Toy Shops listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2719,7 +2719,7 @@
    "nameSingular": "Produce Store",
    "slug": "produce-stores",
    "schemaType": "LocalBusiness",
-   "description": "Produce Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Produce Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2731,7 +2731,7 @@
    "nameSingular": "Hardware Store",
    "slug": "hardware-stores",
    "schemaType": "LocalBusiness",
-   "description": "Hardware Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Hardware Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2743,7 +2743,7 @@
    "nameSingular": "Furniture Store",
    "slug": "furniture-stores",
    "schemaType": "LocalBusiness",
-   "description": "Furniture Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Furniture Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true
@@ -2755,7 +2755,55 @@
    "nameSingular": "Craft Store",
    "slug": "craft-stores",
    "schemaType": "LocalBusiness",
-   "description": "Craft Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business\u2019s own published sources.",
+   "description": "Craft Stores listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-beauty-salons",
+   "vertical": "trades",
+   "name": "Beauty Salons",
+   "nameSingular": "Beauty Salon",
+   "slug": "beauty-salons",
+   "schemaType": "LocalBusiness",
+   "description": "Beauty Salons listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-serviced-apartments",
+   "vertical": "stay",
+   "name": "Serviced Apartments",
+   "nameSingular": "Serviced Apartment",
+   "slug": "serviced-apartments",
+   "schemaType": "LodgingBusiness",
+   "description": "Serviced Apartments listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-indoor-play-centres",
+   "vertical": "things_to_do",
+   "name": "Indoor Play Centres",
+   "nameSingular": "Indoor Play Centre",
+   "slug": "indoor-play-centres",
+   "schemaType": "TouristAttraction",
+   "description": "Indoor Play Centres listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
+   "synonyms": [],
+   "sortOrder": 900,
+   "_auto": true
+  },
+  {
+   "id": "cat-swimming-clubs",
+   "vertical": "clubs_hobbies",
+   "name": "Swimming Clubs",
+   "nameSingular": "Swimming Club",
+   "slug": "swimming-clubs",
+   "schemaType": "Organization",
+   "description": "Swimming Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
    "synonyms": [],
    "sortOrder": 900,
    "_auto": true

@@ -559,3 +559,19 @@ export function pageExists(href: string): boolean {
  */
 const LIVE_IDS = new Set(liveLocalities().map((l) => l.id));
 export const isLiveLocality = (localityId: string): boolean => LIVE_IDS.has(localityId);
+
+/**
+ * Localities substantial enough for a "new in town" and a "hidden gems" page.
+ *
+ * A town with four listings does not need an orientation guide, it needs more
+ * listings. Same predicate used by the routes and by everything that links to
+ * them, for the same reason as isLiveLocality.
+ */
+export const hasGuidePages = (localityId: string): boolean =>
+  listingsInLocality(localityId).length >= 12 && activeCategoriesInLocality(localityId).length >= 6;
+
+export const guidePageLocalities = () => liveLocalities().filter((l) => hasGuidePages(l.id));
+
+/** Does /state/place/events/ get built for this locality? */
+export const hasLocalityEvents = (localitySlug: string): boolean =>
+  eventsInLocality(localitySlug).length > 0;

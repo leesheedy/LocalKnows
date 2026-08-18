@@ -1949,3 +1949,50 @@
 .tw-three > div.hero b {
   color: var(--river);
 }
+
+/* Two doors off the locality hub: one for people who just arrived, one for
+   people who have been here a while and think they have seen it. */
+.guidecta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 26px 0 0;
+}
+@media (max-width: 700px) {
+  .guidecta {
+    grid-template-columns: 1fr;
+  }
+}
+.guidecta a {
+  display: block;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--wattle);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+}
+.guidecta a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--line-strong);
+  border-left-color: var(--wattle);
+}
+.guidecta .mono {
+  display: block;
+  color: var(--river);
+  margin-bottom: 7px;
+}
+.guidecta strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 5px;
+}
+.guidecta .sub {
+  display: block;
+  font-size: 14px;
+  color: var(--ink-60);
+}

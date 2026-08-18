@@ -9,6 +9,7 @@ import {
   STATES,
   getRegion,
   activeCategoriesInLocality,
+  hasGuidePages,
   listingsInLocality,
   neighboursOf,
   listsForLocality,
@@ -153,6 +154,21 @@ const jsonLd = graph([
         <span>&middot; Checked {buildDate}</span>
       </div>
     </div>
+
+    {hasGuidePages(locality.id) && (
+      <div class="guidecta">
+        <a href={url.locality(locality) + 'new-in-town/'}>
+          <span class="mono">Just moved here</span>
+          <strong>New in {locality.name}? Start here</strong>
+          <span class="sub">Where to eat, what is on, which clubs to join, and which state's rules apply.</span>
+        </a>
+        <a href={url.locality(locality) + 'hidden-gems/'}>
+          <span class="mono">Off the obvious list</span>
+          <strong>Hidden gems in {locality.name}</strong>
+          <span class="sub">The free ones, the clubs and the independents that a normal search will not show you.</span>
+        </a>
+      </div>
+    )}
 
     {rows.length === 0 ? (
       <div class="empty" style="margin-top:30px">

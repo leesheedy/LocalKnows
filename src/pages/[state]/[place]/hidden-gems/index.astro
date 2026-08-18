@@ -1,0 +1,255 @@
+---
+/**
+ * Hidden gems.
+ *
+ * The honest version of a page that is usually dishonest. Nobody here has been
+ * to these places, so the selection is not "our favourites". It is everything
+ * that a normal search will not surface, chosen by rules stated on the page:
+ *
+ *   - free public places, which no directory promotes because nobody pays for them
+ *   - community clubs and groups, which almost no directory lists at all
+ *   - specialty and independent retail, which loses to the chains on every query
+ *   - anything in a category with fewer than four listings, because a thin
+ *     category never ranks and so its entries are effectively invisible
+ *
+ * The page says all of that in the standfirst. A "hidden gems" list that will
+ * not explain how it chose is an advertorial.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import LinkBlock from '~/components/LinkBlock.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import {
+  url,
+  STATES,
+  guidePageLocalities,
+  hasGuidePages,
+  listingsInLocality,
+  listingsInCategory,
+  activeCategoriesInLocality,
+  getRegion,
+  getCategory,
+  neighboursOf,
+  hasLocalityEvents,
+} from '~/lib/repo';
+import type { Listing, Locality } from '~/lib/types';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import {
+  graph,
+  organisationNode,
+  websiteNode,
+  breadcrumbNode,
+  webPageNode,
+  placeNode,
+  faqNode,
+  itemListNode,
+  listingNode,
+  ogForState,
+  type Crumb,
+} from '~/lib/seo';
+
+export async function getStaticPaths() {
+  // Only where there is enough to say. See hasGuidePages().
+  return guidePageLocalities()
+    .map((locality) => ({
+      params: { state: STATES[locality.state].slug, place: locality.slug },
+      props: { locality },
+    }));
+}
+
+const { locality } = Astro.props as { locality: Locality };
+const state = STATES[locality.state];
+const region = getRegion(locality.regionId);
+const canonicalPath = url.locality(locality) + 'hidden-gems/';
+
+const rows = listingsInLocality(locality.id);
+
+const isFree = (l: Listing) => l.attributes?.free_entry === 'yes';
+const isClub = (l: Listing) => l.vertical === 'clubs_hobbies';
+const isSmallCategory = (l: Listing) => listingsInCategory(l.categoryIds[0]).length < 4;
+const isSpecialtyRetail = (l: Listing) => {
+  const c = getCategory(l.categoryIds[0]);
+  if (!c || c.vertical !== 'trades') return false;
+  return /shops?$|stores?$|butchers|greengrocers|delis|florists|nurseries|jewellers|op-shops|produce|bookshops/.test(c.slug);
+};
+
+const reasonFor = (l: Listing): string | null => {
+  if (isFree(l)) return 'Free, so nobody advertises it';
+  if (isClub(l)) return 'A club, and clubs are invisible on every other directory';
+  if (isSpecialtyRetail(l)) return 'Independent retail, which loses every search to the chains';
+  if (isSmallCategory(l)) return 'In a category too small to rank, so it never surfaces';
+  return null;
+};
+
+const picked = rows
+  .map((l) => ({ listing: l, reason: reasonFor(l) }))
+  .filter((x): x is { listing: Listing; reason: string } => Boolean(x.reason))
+  .sort((a, b) => b.listing.qualityScore - a.listing.qualityScore);
+
+// Group so the page reads as four arguments rather than one long list.
+const groups = [
+  { key: 'Free, and nobody is advertising it', items: picked.filter((x) => isFree(x.listing)) },
+  { key: 'Clubs and groups', items: picked.filter((x) => isClub(x.listing) && !isFree(x.listing)) },
+  {
+    key: 'Independent and specialty',
+    items: picked.filter((x) => isSpecialtyRetail(x.listing) && !isClub(x.listing) && !isFree(x.listing)),
+  },
+  {
+    key: 'One of a kind here',
+    items: picked.filter(
+      (x) => isSmallCategory(x.listing) && !isFree(x.listing) && !isClub(x.listing) && !isSpecialtyRetail(x.listing),
+    ),
+  },
+].filter((g) => g.items.length > 0);
+
+const nearby = neighboursOf(locality, 10).filter((nb) => hasGuidePages(nb.locality.id)).slice(0, 6);
+
+const h1 = 'Hidden gems in ' + locality.name;
+const description =
+  n(picked.length) +
+  ' places in ' +
+  locality.name +
+  ' ' +
+  locality.state +
+  ' that an ordinary search will not show you: the free ones, the clubs, the independents and the one of a kind.';
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: state.name, href: url.state(locality.state) },
+  ...(region ? [{ name: region.name, href: url.region(region) }] : []),
+  { name: locality.name, href: url.locality(locality) },
+  { name: 'Hidden gems', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'Have you actually been to these places?',
+    a: 'No, and the page does not pretend otherwise. Nothing here is a review. The selection is made by rules that are printed at the top of the page, from listings whose details were read from published sources, and every entry shows where those came from and when.',
+  },
+  {
+    q: 'How were these chosen?',
+    a: 'Four rules, applied to everything we list for ' + locality.name + '. Free public places, because nobody promotes what they cannot charge for. Community clubs, because almost no directory lists them. Independent and specialty retail, because it loses every search to a chain. And anything in a category with fewer than four listings, because a category that thin never ranks, so its entries are effectively invisible.',
+  },
+  {
+    q: 'Did anyone pay to be on this list?',
+    a: 'No, and they cannot. There is no field a payment writes to anywhere in the ordering on this site, and this page is generated from the same rules for every town. If that ever changes it will say so on the page before it changes, not after.',
+  },
+  {
+    q: 'Something obvious is missing.',
+    a: 'Then either we do not list it yet, or it is popular enough that an ordinary search already finds it, which is the whole point of this page. Tell us either way and we will add it.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: BUILD_DATE,
+  }),
+  placeNode(locality, region),
+  itemListNode({
+    pageUrl: canonicalPath,
+    name: h1,
+    items: picked.slice(0, 40).map((x) => ({ url: url.listing(x.listing), name: x.listing.name })),
+  }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="locality"
+  title={'Hidden gems in ' + locality.name + ', ' + locality.state}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  listingCount={picked.length}
+  ogImage={ogForState(locality.state)}
+  modifiedAt={BUILD_DATE}
+>
+  <div class="wrap">
+    <div class="pagehead">
+      <p class="eyebrow mono">{locality.name} &middot; {state.name}</p>
+      <h1>{h1}</h1>
+      <p class="standfirst">
+        Not our favourites, because we have not been to them. These are the
+        {' '}{n(picked.length)} places in {locality.name} that an ordinary search will not
+        put in front of you, picked by four rules that are written out below rather than
+        left to taste.
+      </p>
+      <div class="headmeta">
+        <span>{n(picked.length)} places</span>
+        <span>&middot; {groups.length} reasons they are missed</span>
+        <span>&middot; Checked {BUILD_DATE}</span>
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>How this list was made.</strong> Free public places, because nobody promotes
+      what they cannot charge for. Community clubs, because almost no directory lists them
+      at all. Independent and specialty retail, because it loses every search to a chain.
+      And anything in a category with fewer than four listings, because a category that
+      thin never ranks, so what is in it is effectively invisible. Nothing here was paid
+      for and nothing here is a review.
+    </div>
+  </div>
+
+  {picked.length === 0 ? (
+    <div class="wrap">
+      <div class="empty">
+        <p>Nothing qualifies in {locality.name} yet. That usually means the club and free
+        attraction listings have not been built for this town.</p>
+        <a class="btn" href={url.claim()}>Add one</a>
+      </div>
+    </div>
+  ) : (
+    groups.map((g) => (
+      <section class="sec">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>{g.key}</h2>
+            <p>{g.items.length} in {locality.name}.</p>
+          </div>
+          <div class="cards">
+            {g.items.slice(0, 12).map((x) => <ListingCard listing={x.listing} context={locality} />)}
+          </div>
+        </div>
+      </section>
+    ))
+  )}
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="About this list" />
+  </div>
+
+  <LinkBlock
+    groups={[
+      {
+        heading: 'More of ' + locality.name,
+        links: [
+          { href: url.locality(locality) + 'new-in-town/', label: 'New in ' + locality.name + '? Start here' },
+          { href: url.locality(locality), label: 'Everything in ' + locality.name },
+          ...(hasLocalityEvents(locality.slug)
+            ? [{ href: url.localityEvents(locality), label: 'What is on in ' + locality.name }]
+            : [{ href: url.events(), label: 'Events across the border' }]),
+        ],
+      },
+      {
+        heading: 'Nearby',
+        links: nearby.map((nb) => ({
+          href: url.locality(nb.locality) + 'hidden-gems/',
+          label: 'Hidden gems in ' + nb.locality.name,
+          note: nb.crossesBorder ? nb.locality.state : Math.round(nb.distanceKm) + 'km',
+          cross: nb.crossesBorder,
+        })),
+      },
+    ]}
+  />
+</Base>
