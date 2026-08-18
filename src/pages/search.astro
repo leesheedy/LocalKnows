@@ -29,6 +29,7 @@ import {
   activeCategoriesInLocality,
 } from '~/lib/repo';
 import { VERTICALS } from '~/lib/site';
+import { buildHaystack, tokenise, matchesQuery } from '~/lib/search.mjs';
 import type { Category, Locality } from '~/lib/types';
 import { n } from '~/lib/copy';
 import { BUILD_DATE } from '~/lib/build';
@@ -61,27 +62,24 @@ const index = chosen.map((l) => {
   const locality = getLocality(l.localityId);
   const cats = l.categoryIds.map((id) => getCategory(id)).filter(Boolean) as Category[];
   /**
-   * The haystack is a deduplicated token set, not a sentence.
+   * A deduplicated token set, not a sentence. Matching is substring per token,
+   * so word order and repetition buy nothing and cost bytes on every visitor.
    *
-   * Matching is substring per token, so word order and repetition buy nothing
-   * and cost bytes on every visitor. Highlights are excluded: they are long,
-   * they repeat the description, and nobody searches a directory by the third
-   * bullet point on a listing.
+   * Built with the SAME function that normalises the query in the browser. When
+   * these two disagreed, the index held "cafe", the query held "café", and the
+   * search returned nothing for one of the most obvious words on the site.
+   *
+   * The street address is in here because "dean street cafe" is a real query.
    */
-  const tokens = new Set<string>();
-  for (const part of [
+  const haystack = buildHaystack([
     l.name,
     ...cats.map((c) => c.name),
     ...cats.flatMap((c) => c.synonyms),
+    l.addressLine ?? '',
     locality?.name ?? '',
     locality?.state ?? '',
     l.postcode,
-  ]) {
-    for (const w of String(part).toLowerCase().split(/[^a-z0-9]+/)) {
-      if (w.length > 1) tokens.add(w);
-    }
-  }
-  const haystack = [...tokens].join(' ');
+  ]);
 
   return {
     n: l.name,
@@ -95,6 +93,12 @@ const index = chosen.map((l) => {
     k: haystack,
   };
 });
+
+/**
+ * The matcher is serialised into the page rather than reimplemented there.
+ * Two copies of a tokeniser is how the index and the query stopped agreeing.
+ */
+const matcherSource = [tokenise.toString(), matchesQuery.toString()].join('\n');
 
 // Escaped so a business name containing a closing script tag cannot break out.
 const payload = JSON.stringify(index).replace(/</g, '\\u003c');
@@ -285,6 +289,13 @@ const jsonLd = graph([
 
   <script type="application/json" id="lk-index" set:html={payload} is:inline />
 
+  {/*
+    The tokeniser and matcher, injected from src/lib/search.mjs rather than
+    rewritten here. One definition for the index and the query, because two
+    copies is exactly how "café" stopped matching "cafe".
+  */}
+  <script is:inline set:html={matcherSource} />
+
   <script is:inline define:vars={{ capped, total: searchable.length }}>
     (function () {
       var el = document.getElementById('lk-index');
@@ -343,8 +354,7 @@ const jsonLd = graph([
       }
 
       function run() {
-        var q = qEl.value.trim().toLowerCase();
-        var tokens = q ? q.split(/\s+/) : [];
+        var q = qEl.value;
         var cat = catEl.value;
         var loc = inEl.value;
         var locSlug = loc ? loc.split('|')[0] : '';
@@ -354,10 +364,7 @@ const jsonLd = graph([
           if (stateFilter && r.s !== stateFilter) return false;
           if (locSlug && !(r.ps === locSlug && r.s === locState)) return false;
           if (cat && (',' + r.cs + ',').indexOf(',' + cat + ',') === -1) return false;
-          for (var i = 0; i < tokens.length; i++) {
-            if (r.k.indexOf(tokens[i]) === -1) return false;
-          }
-          return true;
+          return matchesQuery(r.k, q);
         });
 
         out.innerHTML = hits

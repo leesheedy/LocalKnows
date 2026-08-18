@@ -11,6 +11,7 @@
  */
 import fs from 'node:fs';
 import path from 'node:path';
+import { tokenise, matchesQuery, buildHaystack } from '../src/lib/search.mjs';
 import {
   CALCULATORS,
   GST_RATE,
@@ -260,6 +261,34 @@ if (fs.existsSync(path.join(DATA, 'listings.json'))) {
     }
   }
   eq('inferred service areas obey the same state 12km floor and skip tier 4', violations, 0);
+}
+
+// ---------------------------------------------------------------- search
+// The index and the query must agree on what a word is. They did not, and the
+// site shipped a search where "café" matched nothing while "cafe" matched 30.
+
+eq('tokenise folds accents', tokenise('Café Musette').join(' '), 'cafe musette');
+eq('tokenise splits on apostrophes', tokenise("Wello's Plumbing").join(' '), 'wello plumbing');
+eq('tokenise splits on ampersands', tokenise('Fish & Chips').join(' '), 'fish chips');
+eq('tokenise drops single characters', tokenise('B & B').length, 0);
+eq('tokenise keeps digits', tokenise('4WD 24 hour').join(' '), '4wd 24 hour');
+
+{
+  const hay = buildHaystack(['Café Musette', 'Cafes', '2/480 Young Street', 'Albury', 'NSW', '2640']);
+  eq('an accented query matches an accented name', matchesQuery(hay, 'café'), true);
+  eq('an unaccented query matches an accented name', matchesQuery(hay, 'cafe'), true);
+  eq('a street name in the address is searchable', matchesQuery(hay, 'young street'), true);
+  eq('a prefix still matches', matchesQuery(hay, 'muset'), true);
+  eq('an unrelated word does not match', matchesQuery(hay, 'plumber'), false);
+  eq('an empty query matches everything', matchesQuery(hay, ''), true);
+  eq('a query of only punctuation matches everything', matchesQuery(hay, '& -'), true);
+  eq('every token must match, not just one', matchesQuery(hay, 'cafe plumber'), false);
+}
+
+{
+  const apostrophe = buildHaystack(["Wello's Plumbing & Gas", 'Plumbers', 'Thurgoona', 'NSW']);
+  eq('an apostrophe in the query does not block a match', matchesQuery(apostrophe, "Wello's"), true);
+  eq('an ampersand in the query does not block a match', matchesQuery(apostrophe, 'plumbing & gas'), true);
 }
 
 // ---------------------------------------------------------------- report

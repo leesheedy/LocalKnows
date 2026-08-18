@@ -1,0 +1,86 @@
+{
+  "_note": "Community and official pages per town. Every URL here was read off the organisation's own website, not guessed from a name pattern. `covers` lists the locality slugs an entry legitimately serves, because one council page serves a whole LGA and duplicating it per suburb would be noise. Add entries by fetching the organisation's own site and taking the URL from its footer. Never construct a Facebook URL from a name.",
+  "entries": [
+    {
+      "name": "AlburyCity",
+      "url": "https://www.facebook.com/AlburyCity",
+      "type": "council",
+      "note": "The council's own page. Roadworks and closures, waste collection changes, what is on at the entertainment centre and the library, and consultation notices.",
+      "covers": [
+        "albury",
+        "east-albury",
+        "north-albury",
+        "south-albury",
+        "west-albury",
+        "lavington",
+        "springdale-heights",
+        "glenroy",
+        "hamilton-valley",
+        "thurgoona",
+        "table-top"
+      ],
+      "source": "https://www.alburycity.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Wodonga Council",
+      "url": "https://www.facebook.com/wodongacouncil",
+      "type": "council",
+      "note": "The council's own page. Roadworks, waste and green waste, Junction Place events, and the council's consultation notices.",
+      "covers": ["wodonga", "west-wodonga", "baranduda", "bandiana", "bonegilla"],
+      "source": "https://www.wodonga.vic.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Wagga Wagga City Council",
+      "url": "https://facebook.com/waggacouncil",
+      "type": "council",
+      "note": "The council's own page. Roadworks and river level notices, waste collection, the Civic Theatre and library programs, and consultation.",
+      "covers": [
+        "wagga-wagga",
+        "kooringal",
+        "turvey-park",
+        "ashmont",
+        "glenfield-park",
+        "mount-austin",
+        "lake-albert",
+        "bourkelands",
+        "estella",
+        "tatton",
+        "lloyd",
+        "forest-hill",
+        "gumly-gumly",
+        "uranquinty"
+      ],
+      "source": "https://wagga.nsw.gov.au/",
+      "checkedAt": "2026-08-19"
+    },
+    {
+      "name": "Visit Albury Wodonga",
+      "url": "https://www.facebook.com/VisitAW/",
+      "type": "tourism",
+      "note": "The regional tourism page for both sides of the border. Events, markets, festivals and seasonal things to do across the corridor.",
+      "covers": [
+        "albury",
+        "east-albury",
+        "north-albury",
+        "south-albury",
+        "west-albury",
+        "lavington",
+        "thurgoona",
+        "wodonga",
+        "west-wodonga",
+        "baranduda",
+        "bonegilla",
+        "jindera",
+        "howlong",
+        "beechworth",
+        "yackandandah",
+        "chiltern",
+        "rutherglen"
+      ],
+      "source": "https://www.visitalburywodonga.com/",
+      "checkedAt": "2026-08-19"
+    }
+  ]
+}

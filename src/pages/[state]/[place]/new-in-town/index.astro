@@ -27,6 +27,8 @@ import {
   neighboursOf,
   eventsInLocality,
   listsForLocality,
+  communityFor,
+  COMMUNITY_TYPE_LABEL,
   hasLocalityEvents,
   categories as allCategories,
 } from '~/lib/repo';
@@ -81,6 +83,7 @@ const events = eventsInLocality(locality.slug)
   .slice(0, 5);
 const lists = listsForLocality(locality.slug);
 const nearby = neighboursOf(locality, 10);
+const community = communityFor(locality.slug);
 const acrossBorder = nearby.filter((x) => x.crossesBorder).slice(0, 4);
 
 const clubCount = clubs.reduce((t, c) => t + c.count, 0);
@@ -310,6 +313,48 @@ const section = (
             {freeThings.map((l) => <ListingCard listing={l} context={locality} />)}
           </div>
         )}
+      </div>
+    </section>
+  )}
+
+  {community.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Where locals actually post what is on</h2>
+          <p>
+            Half of what happens in a regional town never reaches a website. It goes on a
+            council page or a community group and nowhere else. These are the ones worth
+            following, and every URL here was read off the organisation's own site rather
+            than guessed from its name.
+          </p>
+        </div>
+        <div class="cards cards-2">
+          {community.map((c) => (
+            <article class="card">
+              <div class="card-top">
+                <div style="min-width:0">
+                  <span class="tag good">{COMMUNITY_TYPE_LABEL[c.type]}</span>
+                  <h3 style="margin-top:9px">
+                    <a href={c.url} rel="nofollow noopener" target="_blank">{c.name}</a>
+                  </h3>
+                </div>
+              </div>
+              <p class="desc" style="margin-top:10px">{c.note}</p>
+              <div class="card-foot">
+                <span class="mono" style="color:var(--ink-40)">Checked {c.checkedAt}</span>
+                <span class="right">
+                  <a class="btn btn-sm btn-ghost" href={c.url} rel="nofollow noopener" target="_blank">Open</a>
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="tw-note" style="margin-top:18px">
+          Know a community group for {locality.name} that belongs here?
+          <a href={url.contact()} style="color:var(--river)"> Tell us</a> and we will check it
+          and add it. We do not add a page without opening it first.
+        </p>
       </div>
     </section>
   )}

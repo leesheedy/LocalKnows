@@ -32,6 +32,7 @@ import wireRaw from '../data/wire.json';
 import toolsRaw from '../data/tools.json';
 import eventsRaw from '../data/events.json';
 import listsRaw from '../data/lists.json';
+import communityRaw from '../data/community.json';
 
 // ------------------------------------------------------------------ load
 
@@ -575,3 +576,55 @@ export const guidePageLocalities = () => liveLocalities().filter((l) => hasGuide
 /** Does /state/place/events/ get built for this locality? */
 export const hasLocalityEvents = (localitySlug: string): boolean =>
   eventsInLocality(localitySlug).length > 0;
+
+// ------------------------------------------------------------------ community
+
+export interface CommunityLink {
+  name: string;
+  url: string;
+  type: 'council' | 'community' | 'buysell' | 'events' | 'news' | 'emergency' | 'tourism';
+  note: string;
+  covers: string[];
+  source: string;
+  checkedAt: string;
+  private?: boolean;
+}
+
+/**
+ * Official and community pages, per town.
+ *
+ * One entry can cover many localities, because a council page genuinely serves
+ * its whole LGA and duplicating it per suburb would be noise in the data and a
+ * wall of repetition on the page.
+ *
+ * Every URL was read off the organisation's own website. None were constructed
+ * from a name, which is the only way to avoid publishing a link to a page that
+ * does not exist or, worse, to somebody squatting the name.
+ */
+const communityEntries = (communityRaw as { entries: CommunityLink[] }).entries;
+
+const COMMUNITY_ORDER: CommunityLink['type'][] = [
+  'council',
+  'community',
+  'events',
+  'news',
+  'tourism',
+  'buysell',
+  'emergency',
+];
+
+export function communityFor(localitySlug: string): CommunityLink[] {
+  return communityEntries
+    .filter((e) => e.covers.includes(localitySlug))
+    .sort((a, b) => COMMUNITY_ORDER.indexOf(a.type) - COMMUNITY_ORDER.indexOf(b.type));
+}
+
+export const COMMUNITY_TYPE_LABEL: Record<CommunityLink['type'], string> = {
+  council: 'Council',
+  community: 'Community noticeboard',
+  events: 'What is on',
+  news: 'Local news',
+  tourism: 'Tourism',
+  buysell: 'Buy, swap and sell',
+  emergency: 'Emergency and alerts',
+};
