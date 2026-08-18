@@ -1,0 +1,27 @@
+# Check what is actually live.
+#
+# The build verifier proves the files are right. This proves the deployment
+# serving them is right, which is not the same thing: a redirect rule in
+# netlify.toml once turned /nsw/ and /vic/ into an infinite loop while every
+# local check passed, because the files were fine and only production was not.
+name: smoke
+
+on:
+  schedule:
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      site:
+        description: 'Origin to check'
+        default: 'https://localsknow.com.au'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/smoke.mjs --site=${{ inputs.site || 'https://localsknow.com.au' }}

@@ -316,8 +316,12 @@ const redirectFile = [
   '',
   '# Legacy shapes.',
   '/business/*  /search/?q=:splat  301',
-  '/nsw  /nsw/  301!',
-  '/vic  /vic/  301!',
+  '',
+  '# No trailing slash rules here on purpose. Netlify already 301s /nsw to /nsw/',
+  '# for directory output, and a forced rule saying the same thing also matches',
+  '# /nsw/ and redirects it to itself. That took both state hubs down with an',
+  '# infinite loop while every local check passed, because only production was',
+  '# broken. scripts/smoke.mjs now checks the deployed sitemap for exactly this.',
   '',
 ].join('\n');
 fs.writeFileSync(path.join(DIST, '_redirects'), redirectFile);

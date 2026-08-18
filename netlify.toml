@@ -26,18 +26,13 @@
   [context.branch-deploy.headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
-# Trailing slash is enforced in one direction and never changed.
-[[redirects]]
-  from = "/nsw"
-  to = "/nsw/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/vic"
-  to = "/vic/"
-  status = 301
-  force = true
+# Trailing slash normalisation is NOT declared here.
+#
+# Netlify already 301s /nsw to /nsw/ for directory output, and a rule that says
+# so explicitly matches the already slashed path as well, which turns the two
+# most important hub pages on the site into an infinite redirect loop. It shipped
+# that way once. scripts/smoke.mjs now checks the live sitemap after every deploy
+# so it cannot ship that way again.
 
 [[redirects]]
   from = "/sitemap_index.xml"

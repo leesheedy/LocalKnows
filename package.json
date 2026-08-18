@@ -21,7 +21,8 @@
     "og": "node scripts/og.mjs",
     "scrape": "node scripts/scrape.mjs",
     "indexnow": "node scripts/indexnow.mjs",
-    "refresh": "node scripts/generate-wire.mjs && node scripts/ingest-businesses.mjs && npm run build && npm run verify"
+    "refresh": "node scripts/generate-wire.mjs && node scripts/ingest-businesses.mjs && npm run build && npm run verify",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "astro": "^5.18.2"
