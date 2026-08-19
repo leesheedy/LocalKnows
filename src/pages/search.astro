@@ -30,6 +30,7 @@ import {
 } from '~/lib/repo';
 import { VERTICALS } from '~/lib/site';
 import { buildHaystack, tokenise, matchesQuery } from '~/lib/search.mjs';
+import { encodeHours, isOpenAt } from '~/lib/hours.mjs';
 import type { Category, Locality } from '~/lib/types';
 import { n } from '~/lib/copy';
 import { BUILD_DATE } from '~/lib/build';
@@ -81,6 +82,9 @@ const index = chosen.map((l) => {
     l.postcode,
   ]);
 
+  // Encoded by the same module the browser decodes with. See src/lib/hours.mjs.
+  const hours = encodeHours(l.hours);
+
   return {
     n: l.name,
     u: url.listing(l),
@@ -91,6 +95,10 @@ const index = chosen.map((l) => {
     s: locality?.state ?? '',
     v: l.vertical,
     k: haystack,
+    // Ordering key. The rows already arrive sorted by it, so it only has to be
+    // carried for the sorts that are not the default.
+    z: l.qualityScore,
+    ...(hours ? { h: hours } : {}),
   };
 });
 
@@ -98,7 +106,12 @@ const index = chosen.map((l) => {
  * The matcher is serialised into the page rather than reimplemented there.
  * Two copies of a tokeniser is how the index and the query stopped agreeing.
  */
-const matcherSource = [tokenise.toString(), matchesQuery.toString()].join('\n');
+const matcherSource = [
+  tokenise.toString(),
+  matchesQuery.toString(),
+  // The browser needs the same decoder the index was written with.
+  isOpenAt.toString(),
+].join('\n');
 
 // Escaped so a business name containing a closing script tag cannot break out.
 const payload = JSON.stringify(index).replace(/</g, '\\u003c');
@@ -214,6 +227,15 @@ const jsonLd = graph([
         </select>
       </div>
 
+      <div class="sb-field">
+        <label class="mono" for="sort">Sort</label>
+        <select id="sort" name="sort">
+          <option value="">Best match</option>
+          <option value="az">Name A to Z</option>
+          <option value="town">Town, then name</option>
+        </select>
+      </div>
+
       <button class="btn btn-river" type="submit">Search</button>
     </form>
 
@@ -221,8 +243,15 @@ const jsonLd = graph([
       <button class="pill" type="button" data-state="" aria-pressed="true">Both states</button>
       <button class="pill" type="button" data-state="NSW" aria-pressed="false">NSW only</button>
       <button class="pill" type="button" data-state="VIC" aria-pressed="false">Victoria only</button>
+      <button class="pill" type="button" id="lk-open" aria-pressed="false">Open now</button>
+      <button class="pill pill-clear" type="button" id="lk-reset" hidden>Clear all</button>
       <span class="count" id="lk-count" aria-live="polite" role="status"></span>
     </div>
+    <p class="mono" id="lk-open-note" hidden
+       style="margin:8px 0 0;font-size:13px;color:var(--ink-40)">
+      Open now can only speak for the businesses that publish their hours. The rest are
+      hidden while it is on, not closed.
+    </p>
 
     <noscript>
       <div class="notice" style="margin-top:20px">
@@ -312,9 +341,20 @@ const jsonLd = graph([
       var countEl = document.getElementById('lk-count');
       var moreEl = document.getElementById('lk-more');
       var stateBtns = Array.prototype.slice.call(document.querySelectorAll('.pill[data-state]'));
+      var sortEl = document.getElementById('sort');
+      var openBtn = document.getElementById('lk-open');
+      var openNote = document.getElementById('lk-open-note');
+      var resetBtn = document.getElementById('lk-reset');
       var stateFilter = '';
+      var openOnly = false;
       var LIMIT = 60;
 
+      /**
+       * Is the business open at this moment, according to the hours it
+       * published? Minutes from midnight, Sunday first, empty means closed.
+       * A range that ends before it starts has run past midnight, which is
+       * ordinary for a pub and reads as closed if you do not allow for it.
+       */
       var themes = ['a', 'b', 'c', 'd', 'e', 'f'];
       function theme(s) {
         var h = 0;
@@ -335,6 +375,11 @@ const jsonLd = graph([
         if (p.get('q')) qEl.value = p.get('q');
         if (p.get('cat')) catEl.value = p.get('cat');
         if (p.get('in')) inEl.value = p.get('in');
+        if (p.get('sort')) sortEl.value = p.get('sort');
+        if (p.get('open') === '1') {
+          openOnly = true;
+          openBtn.setAttribute('aria-pressed', 'true');
+        }
         if (p.get('state')) {
           stateFilter = p.get('state');
           stateBtns.forEach(function (b) {
@@ -349,6 +394,8 @@ const jsonLd = graph([
         if (catEl.value) p.set('cat', catEl.value);
         if (inEl.value) p.set('in', inEl.value);
         if (stateFilter) p.set('state', stateFilter);
+        if (sortEl.value) p.set('sort', sortEl.value);
+        if (openOnly) p.set('open', '1');
         var qs = p.toString();
         history.replaceState(null, '', qs ? '?' + qs : location.pathname);
       }
@@ -364,8 +411,20 @@ const jsonLd = graph([
           if (stateFilter && r.s !== stateFilter) return false;
           if (locSlug && !(r.ps === locSlug && r.s === locState)) return false;
           if (cat && (',' + r.cs + ',').indexOf(',' + cat + ',') === -1) return false;
+          if (openOnly && !isOpenAt(r.h, new Date())) return false;
           return matchesQuery(r.k, q);
         });
+
+        // rows arrive already ordered by the quality score, so "best match"
+        // needs no work. The others sort a copy.
+        var sort = sortEl.value;
+        if (sort === 'az') {
+          hits = hits.slice().sort(function (a, b) { return a.n.localeCompare(b.n, 'en-AU'); });
+        } else if (sort === 'town') {
+          hits = hits.slice().sort(function (a, b) {
+            return a.p.localeCompare(b.p, 'en-AU') || a.n.localeCompare(b.n, 'en-AU');
+          });
+        }
 
         out.innerHTML = hits
           .slice(0, LIMIT)
@@ -386,9 +445,26 @@ const jsonLd = graph([
         empty.hidden = !none;
         out.hidden = none;
         if (none) {
-          emptyMsg.textContent = q || cat || loc
-            ? 'Nothing matched that combination. Try widening the suburb or clearing the category.'
-            : 'Nothing to show.';
+          // Name the filter that is actually responsible. "Nothing matched"
+          // sends people back to the search box when the culprit is usually a
+          // suburb they picked three fields ago.
+          // Both menus label their options with a count, "Cafes (30)". That
+          // belongs in the menu and not in a sentence, so it comes off here.
+          function label(sel) {
+            var opt = sel.options[sel.selectedIndex];
+            return opt ? opt.text.replace(/\s*\(\d[\d,]*\)\s*$/, '').trim() : '';
+          }
+          var catName = label(catEl).toLowerCase();
+          var locName = label(inEl);
+
+          var culprit = '';
+          if (openOnly) culprit = 'Nothing is open right now under those filters. Turn off Open now to see everything.';
+          else if (loc && cat) culprit = 'No ' + catName + ' are based in ' + locName + '. Clear the suburb to search everywhere.';
+          else if (loc) culprit = 'Nothing in ' + locName + ' matched. Clear the suburb to widen it.';
+          else if (cat) culprit = 'No ' + catName + ' matched that wording.';
+          else if (stateFilter) culprit = 'Nothing in ' + stateFilter + ' matched. Try both states.';
+          else if (q) culprit = 'Nothing matched "' + q.trim() + '". Try a shorter word, or a suburb name.';
+          emptyMsg.textContent = culprit || 'Nothing to show.';
         }
 
         countEl.textContent =
@@ -404,6 +480,8 @@ const jsonLd = graph([
           moreEl.hidden = true;
         }
 
+        resetBtn.hidden = !(qEl.value.trim() || cat || loc || stateFilter || openOnly || sortEl.value);
+
         writeParams();
       }
 
@@ -416,6 +494,30 @@ const jsonLd = graph([
       qEl.addEventListener('input', debounced);
       catEl.addEventListener('change', run);
       inEl.addEventListener('change', run);
+      sortEl.addEventListener('change', run);
+
+      openBtn.addEventListener('click', function () {
+        openOnly = !openOnly;
+        openBtn.setAttribute('aria-pressed', openOnly ? 'true' : 'false');
+        openNote.hidden = !openOnly;
+        run();
+      });
+
+      resetBtn.addEventListener('click', function () {
+        qEl.value = '';
+        catEl.value = '';
+        inEl.value = '';
+        sortEl.value = '';
+        openOnly = false;
+        stateFilter = '';
+        openBtn.setAttribute('aria-pressed', 'false');
+        openNote.hidden = true;
+        stateBtns.forEach(function (x) {
+          x.setAttribute('aria-pressed', x.dataset.state === '' ? 'true' : 'false');
+        });
+        run();
+        qEl.focus();
+      });
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         run();

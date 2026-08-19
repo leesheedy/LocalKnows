@@ -13,6 +13,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { tokenise, matchesQuery, buildHaystack } from '../src/lib/search.mjs';
 import { imageSize } from '../src/lib/imagesize.mjs';
+import { encodeHours, isOpenAt, toMinutes } from '../src/lib/hours.mjs';
 import {
   CALCULATORS,
   GST_RATE,
@@ -155,6 +156,143 @@ eq('10% of an inclusive figure overstates GST', 1100 * 0.1 - gstIn(1100), 10);
   eq('a 100% margin is flagged as unreachable', hundred.values.markupForSameMargin, 0);
   const free = run('markup-and-margin-calculator', { cost: 0, markup: 30 });
   eq('zero cost does not produce NaN margin', free.values.margin, 0);
+}
+
+// ---------------------------------------------------------------- turf
+{
+  // 12m x 8m is 96 m2. Five per cent is 100.8. At two slabs to the square
+  // metre that is 201.6 slabs, so 202 once you cannot buy part of one.
+  const r = run('turf-calculator', { len: 12, wid: 8, waste: 5, price: 12 });
+  eq('turf area', r.values.area, 96);
+  eq('turf with allowance', r.values.withWaste, 100.8);
+  eq('turf slabs at two to the square metre', r.values.slabs, 201.6);
+  eq('turf headline', r.headline, '100.80 m²');
+  eq('turf cost at $12', r.rows[5][1], '$1209.60');
+
+  // A square metre is two slabs, whatever the lawn.
+  const tiny = run('turf-calculator', { len: 1, wid: 1, waste: 0, price: 10 });
+  eq('one square metre is two slabs', tiny.values.slabs, 2);
+}
+
+// ---------------------------------------------------------------- tile
+{
+  // A 600 x 300 tile is 0.18 m2. 12 m2 plus ten per cent is 13.2, which is
+  // 73.33 tiles, so 74 whole ones.
+  const r = run('tile-calculator', { area: 12, tileL: 600, tileW: 300, waste: 10, price: 45 });
+  eq('one 600x300 tile covers', r.values.tileArea, 0.18);
+  eq('tile area with allowance', r.values.withWaste, 13.2);
+  eq('tiles needed', r.values.tiles, 13.2 / 0.18);
+  eq('tile headline rounds up', r.headline, '74 tiles');
+
+  // A 300 square tile is 0.09, so exactly twice as many for the same floor.
+  const small = run('tile-calculator', { area: 12, tileL: 300, tileW: 300, waste: 10, price: 45 });
+  eq('halving the tile size doubles the count', small.values.tiles, r.values.tiles * 2);
+
+  // A zero sized tile must not divide by zero into Infinity.
+  const zero = run('tile-calculator', { area: 12, tileL: 0, tileW: 0, waste: 10, price: 45 });
+  eq('a zero sized tile yields zero, not Infinity', zero.values.tiles, 0);
+
+  // The note changes below the standard allowance, because that is the case
+  // worth warning about.
+  const tight = run('tile-calculator', { area: 12, tileL: 600, tileW: 300, waste: 5, price: 45 });
+  eq('a tight allowance is called out', /tight/.test(tight.note), true);
+}
+
+// ---------------------------------------------------------------- plasterboard
+{
+  // 24m of wall at 2.4m is 57.6 m2, less 4 m2 of openings is 53.6. Plus ten
+  // per cent is 58.96, over a 4.32 m2 sheet is 13.65, so 14 sheets.
+  const r = run('plasterboard-calculator', {
+    peri: 24, height: 2.4, ceiling: 0, openings: 4, sheetW: 1.2, sheetL: 3.6,
+  });
+  eq('plasterboard wall area less openings', r.values.wall, 53.6);
+  eq('plasterboard total to sheet', r.values.total, 53.6);
+  eq('plasterboard sheets', r.values.sheets, (53.6 * 1.1) / 4.32);
+  eq('plasterboard headline rounds up', r.headline, '14 sheets');
+
+  // The ceiling is added to the walls, not substituted for them.
+  const withCeiling = run('plasterboard-calculator', {
+    peri: 24, height: 2.4, ceiling: 20, openings: 4, sheetW: 1.2, sheetL: 3.6,
+  });
+  eq('a ceiling adds to the total', withCeiling.values.total, 73.6);
+
+  // Openings larger than the walls must floor at zero rather than go negative
+  // and quietly reduce the order.
+  const silly = run('plasterboard-calculator', {
+    peri: 2, height: 2.4, ceiling: 0, openings: 99, sheetW: 1.2, sheetL: 3.6,
+  });
+  eq('openings cannot make the wall area negative', silly.values.wall, 0);
+}
+
+// ---------------------------------------------------------------- retaining wall
+{
+  // 900mm of wall in 200mm sleepers is 4.5, so 5 courses. 10m of wall in 2.4m
+  // sleepers is 4.167 a course, so 20.83 sleepers. Posts at 2.4m centres over
+  // 10m is 4 gaps plus the one that finishes the run, so 5.
+  const r = run('retaining-wall-calculator', {
+    len: 10, height: 900, sleeperH: 200, sleeperL: 2.4, spacing: 2.4, price: 28,
+  });
+  eq('retaining wall courses round up', r.values.courses, 5);
+  eq('retaining wall sleepers', r.values.sleepers, 5 * (10 / 2.4));
+  eq('retaining wall posts include the last one', r.values.posts, 5);
+  eq('retaining wall headline', r.headline, '21 sleepers');
+
+  // A wall over a metre gets the approval warning, because that is the point
+  // at which the answer stops being about materials.
+  const low = run('retaining-wall-calculator', {
+    len: 10, height: 900, sleeperH: 200, sleeperL: 2.4, spacing: 2.4, price: 28,
+  });
+  const high = run('retaining-wall-calculator', {
+    len: 10, height: 1200, sleeperH: 200, sleeperL: 2.4, spacing: 2.4, price: 28,
+  });
+  eq('under a metre does not claim approval is needed', /almost always needs council/.test(low.note), false);
+  eq('over a metre warns about approval', /almost always needs council/.test(high.note), true);
+
+  // Post embedment is a third of the height plus 200mm of clearance.
+  eq('post embedment for a 900mm wall', Math.round((900 / 3 + 200)), 500);
+}
+
+// ---------------------------------------------------------------- rainwater tank
+{
+  // 200 m2 of roof under 600mm is 120,000 litres, because 1mm on 1 m2 is 1
+  // litre. Fifteen per cent off leaves 102,000.
+  const r = run('rainwater-tank-calculator', {
+    roof: 200, rain: 600, loss: 15, people: 4, useDay: 60,
+  });
+  eq('one mm on one square metre is one litre', r.values.gross, 120000);
+  eq('collected after losses', r.values.net, 102000);
+  eq('household annual demand', r.values.demand, 4 * 60 * 365);
+  eq('ninety day buffer', Math.round(r.values.buffer), 21600);
+  eq('tank headline', r.headline, '102000 L a year');
+
+  // Collecting more than the house uses changes the advice.
+  const plenty = run('rainwater-tank-calculator', {
+    roof: 400, rain: 900, loss: 15, people: 2, useDay: 50,
+  });
+  eq('a surplus roof is told to size for the dry run', /surviving the gap/.test(plenty.note), true);
+  const scarce = run('rainwater-tank-calculator', {
+    roof: 80, rain: 350, loss: 20, people: 5, useDay: 120,
+  });
+  eq('a deficit roof is told it will need topping up', /cannot cover/.test(scarce.note), true);
+}
+
+// ---------------------------------------------------------------- firewood
+{
+  // 2.4 x 1.2 x 0.5 is 1.44 m3. At $380 that is $263.89 a stacked cubic metre.
+  const r = run('firewood-calculator', {
+    len: 2.4, height: 1.2, depth: 0.5, price: 380, burn: 0.35,
+  });
+  eq('firewood stacked volume', r.values.stacked, 1.44);
+  eq('firewood cost per stacked cubic metre', r.values.perM3, 380 / 1.44);
+  eq('the same wood loose measures about a third more', r.values.loose, 1.44 * 1.35);
+  eq('weeks of burning', r.values.weeks, 1.44 / 0.35);
+  eq('firewood headline', r.headline, '$263.89 per m³');
+
+  // A zero sized stack must not produce Infinity dollars per cubic metre.
+  const nothing = run('firewood-calculator', {
+    len: 0, height: 0, depth: 0, price: 380, burn: 0.35,
+  });
+  eq('an empty stack costs zero per cubic metre, not Infinity', nothing.values.perM3, 0);
 }
 
 // ---------------------------------------------------------------- public holidays
@@ -464,6 +602,82 @@ if (fs.existsSync(path.join(DATA, 'community.json'))) {
   }
   eq('an empty buffer is not an image', imageSize(Buffer.alloc(0)), null);
   eq('a truncated PNG signature is not an image', imageSize(Buffer.from([0x89, 0x50])), null);
+}
+
+// ---------------------------------------------------------------- opening hours
+{
+  // The "open now" filter answers a question a person can check by walking to
+  // the door, so it has to be right at the edges: opening minute, closing
+  // minute, and the pub that shuts at one in the morning.
+  eq('7:00 is 420 minutes', toMinutes('07:00'), 420);
+  eq('23:59 is 1439 minutes', toMinutes('23:59'), 1439);
+  eq('24:00 folds to midnight', toMinutes('24:00'), 0);
+  eq('nonsense time is null', toMinutes('later'), null);
+
+  const cafe = encodeHours([
+    { day: 0, opens: '07:00', closes: '15:00' },
+    { day: 1, closed: true },
+    { day: 3, opens: '07:00', closes: '15:00' },
+  ]);
+  eq('a cafe encodes to its open days only', cafe, '420-900,,,420-900,,,');
+  eq('a business with no hours encodes to nothing', encodeHours([]), '');
+  eq(
+    'a business closed every day encodes to nothing',
+    encodeHours([{ day: 0, closed: true }, { day: 1, closed: true }]),
+    '',
+  );
+
+  // 2026-08-16 is a Sunday, so the offsets below read as weekdays.
+  const at = (dayOffset, hh, mm) => new Date(2026, 7, 16 + dayOffset, hh, mm, 0);
+
+  eq('cafe open Sunday 9am', isOpenAt(cafe, at(0, 9, 0)), true);
+  eq('cafe shut Sunday 4pm', isOpenAt(cafe, at(0, 16, 0)), false);
+  eq('cafe open at the opening minute', isOpenAt(cafe, at(0, 7, 0)), true);
+  eq('cafe shut one minute before opening', isOpenAt(cafe, at(0, 6, 59)), false);
+  eq('cafe shut at the closing minute', isOpenAt(cafe, at(0, 15, 0)), false);
+  eq('cafe shut on a closed day', isOpenAt(cafe, at(1, 9, 0)), false);
+  eq('unknown hours never count as open', isOpenAt('', at(3, 12, 0)), false);
+
+  // A pub open 11am until 1am. The close is a smaller number than the open,
+  // which is the only signal that the session ran past midnight. Getting this
+  // wrong shows a pub as shut all Friday evening.
+  const pub = encodeHours([
+    { day: 5, opens: '11:00', closes: '01:00' },
+    { day: 6, opens: '11:00', closes: '01:00' },
+  ]);
+  eq('pub encodes the overnight session', pub, ',,,,,660-60,660-60');
+  eq('pub open Friday 11pm', isOpenAt(pub, at(5, 23, 0)), true);
+  eq('pub open Saturday 00:30, still Friday night', isOpenAt(pub, at(6, 0, 30)), true);
+  eq('pub shut Saturday 01:30', isOpenAt(pub, at(6, 1, 30)), false);
+  eq('pub shut Saturday 10am', isOpenAt(pub, at(6, 10, 0)), false);
+  eq('pub open Sunday 00:30, still Saturday night', isOpenAt(pub, at(0, 0, 30)), true);
+  eq('pub shut Monday night', isOpenAt(pub, at(1, 23, 0)), false);
+
+  // Closing exactly at midnight is written as 0, which is also "less than the
+  // open time", so it must not leak into the following morning.
+  const tillMidnight = encodeHours([{ day: 0, opens: '11:00', closes: '00:00' }]);
+  eq('open at 11pm on the night itself', isOpenAt(tillMidnight, at(0, 23, 0)), true);
+  eq('shut at 00:30 the next morning', isOpenAt(tillMidnight, at(1, 0, 30)), false);
+
+  // Every encoded listing in the real data must be readable, or the filter
+  // silently treats a business as closed forever.
+  if (fs.existsSync(path.join(DATA, 'listings.json'))) {
+    const rows = read('listings.json');
+    let bad = 0;
+    let withHours = 0;
+    for (const l of rows) {
+      const enc = encodeHours(l.hours);
+      if (!enc) continue;
+      withHours++;
+      for (const slot of enc.split(',')) {
+        if (!slot) continue;
+        const [o, c] = slot.split('-').map(Number);
+        if (!isFinite(o) || !isFinite(c) || o < 0 || o > 1439 || c < 0 || c > 1439) bad++;
+      }
+    }
+    eq('every encoded opening time is a valid minute of the day', bad, 0);
+    eq('the real data does encode some hours', withHours > 0, true);
+  }
 }
 
 // ---------------------------------------------------------------- report

@@ -551,6 +551,12 @@ img.logo {
  * The orientation table on a town guide. Same bones as .hourstable, but the
  * left column carries a label rather than a day, so it needs room to breathe.
  */
+/* Reads as an escape hatch rather than another filter to apply. */
+.pill-clear {
+  border-style: dashed;
+  color: var(--ink-60);
+}
+
 .factstable {
   width: 100%;
   border-collapse: collapse;

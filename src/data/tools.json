@@ -486,5 +486,167 @@
         "a": "It helps people find you locally and it hurts you the moment you expand past that town. On this border it also implies a state, which matters more than it does anywhere else in the country."
       }
     ]
+  },
+  {
+    "slug": "turf-calculator",
+    "title": "Turf calculator",
+    "description": "Work out how many square metres, slabs and pallets of turf a lawn needs, with an allowance for cuts and curves, and what the turf will cost before delivery.",
+    "standfirst": "Lawn dimensions in, square metres and slab count out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Turf is ordered in square metres, delivered in slabs and charged with a delivery fee that often surprises people more than the grass does. Put the lawn size in above and it gives you all three numbers.\n\n## The sum\n\nArea is length times width. A lawn 12m by 8m is 96 square metres. Add an allowance for the cuts, then divide by the slab size to get the count the grower will load.\n\nAlmost every Australian grower cuts a slab at 1 metre by 0.5 metres, so there are two slabs to the square metre and about 60 slabs, or 30 square metres, to a pallet. If your grower cuts a different size they will say so, and the square metre figure is the one that still holds.\n\n## Why the allowance is small\n\nTurf is far more forgiving than tiles. Offcuts from one run get used at the start of the next, so five per cent covers a rectangular lawn. Push it to ten if the lawn has garden beds curving through it, a round path, or a lot of narrow edges along a fence line, because each curve produces a piece that cannot be used anywhere else.\n\n## Order late, not early\n\nThis is the part that costs people money. Turf is cut to fill your order, not taken off a shelf. It is a living thing on a pallet from the moment it is cut, and in an Albury or Wagga summer it will start to yellow and heat up in the middle of the roll within about a day.\n\nSo prepare the ground first. Level it, get the soil right, check the irrigation actually reaches the corners, and only then ring the order in. Laying it the day it arrives is not advice, it is the whole job.\n\n## What the calculator does not include\n\nDelivery, underlay or topsoil, and the sand you will want for levelling as you go. Ask for the delivered price rather than the per metre price when you compare growers, because the cartage on a pallet out to a smaller town can be a real part of the total.",
+    "faqs": [
+      {
+        "q": "How many slabs of turf are in a square metre?",
+        "a": "Two. The standard Australian slab is 1 metre by 0.5 metres, so a square metre is two slabs and a pallet of about 60 slabs covers roughly 30 square metres. Some growers cut a wider roll for commercial work, in which case the square metre figure still holds and the slab count changes."
+      },
+      {
+        "q": "How much extra turf should I order?",
+        "a": "Five per cent on a plain rectangle, ten if the lawn has curves, garden beds cutting into it or a lot of edge work. Turf is more forgiving than tiles because offcuts get used at the start of the next run, but a curve produces pieces that cannot be reused."
+      },
+      {
+        "q": "How long can turf sit on the pallet before it is laid?",
+        "a": "Not long. It is cut to order and starts breaking down immediately, and in summer heat the middle of a stacked pallet can be damaged inside a day. Prepare the ground and check the irrigation before you place the order, then lay it the day it arrives."
+      },
+      {
+        "q": "Does the price include delivery?",
+        "a": "Usually not. Turf is quoted per square metre and cartage is added, which matters more the further you are from the farm. Ask for a delivered price when you compare growers rather than the per metre rate."
+      }
+    ]
+  },
+  {
+    "slug": "tile-calculator",
+    "title": "Tile calculator",
+    "description": "Work out how many tiles and boxes a floor or wall needs from the area and the tile size, with a proper allowance for cuts, breakage and pattern.",
+    "standfirst": "Area and tile size in, tiles and boxes out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Tiles are priced by the square metre, sold by the box and laid one at a time, and the three numbers rarely line up neatly. This works out all of them, including the box count, which is what the merchant will actually ask you for.\n\n## The sum\n\nDivide the area you are covering, plus an allowance, by the area of one tile. A 600 by 300 tile covers 0.18 of a square metre, so 12 square metres plus ten per cent is 13.2 square metres, which is about 74 tiles.\n\nBoxes vary, but 1.44 square metres is a very common box for a 600 by 300. Check the label, because it changes with the tile size and it is the unit you are charged in.\n\n## The allowance is not padding\n\nTen per cent is the standard and it is the number to use for a straight lay in a room that is close to square. Go higher when any of these are true.\n\n- A diagonal or herringbone lay. Every edge tile is cut, and the offcut from one is rarely usable on another. Fifteen to twenty per cent.\n- A room that is out of square, which most older houses in Albury, Wodonga and Wagga are. The cut on one wall tapers, so those tiles are single use.\n- Large format tiles. Fewer, bigger tiles mean each breakage costs more area.\n- A patterned or directional tile, where you cannot rotate a piece to make it fit.\n\n## Buy the extra box, not the exact number\n\nThis is the one that catches people. Tiles are made in batches and the colour shifts slightly between them, which the industry calls a dye lot or shade batch and prints on the box. If you run out and go back in a fortnight, the new box will usually be a different batch and it will show, especially on a plain colour under side light.\n\nKeep the leftovers and a few whole tiles from the same batch. A cracked tile in three years is a twenty minute repair if you have a match, and a re-tiled floor if you do not.\n\n## What else you will need\n\nAdhesive and grout are quoted by coverage on the bag and depend on the notch of the trowel, the tile size and how flat the substrate is. Add waterproofing for a wet area, and trims for external corners and edges. None of that is in the count above.",
+    "faqs": [
+      {
+        "q": "How many tiles do I need per square metre?",
+        "a": "Divide one by the area of the tile in metres. A 600 by 300 tile is 0.18 of a square metre, so about 5.6 tiles to the square metre. A 300 by 300 is 0.09, so about 11.2. The calculator above does it from the tile dimensions in millimetres."
+      },
+      {
+        "q": "How much wastage should I allow for tiling?",
+        "a": "Ten per cent for a straight lay in a square room. Fifteen to twenty for a diagonal or herringbone pattern, for large format tiles, or for an older house where the walls are not square, because those cuts taper and the offcuts cannot be reused."
+      },
+      {
+        "q": "Why does buying an extra box matter?",
+        "a": "Tiles are made in batches and the shade shifts slightly between them. The batch number is printed on the box. If you run short and buy more later it will usually be a different batch, and on a plain colour under side light the difference is visible. Buying the extra box up front is much cheaper than matching one later."
+      },
+      {
+        "q": "Does the calculator include adhesive and grout?",
+        "a": "No. Adhesive and grout coverage depends on the trowel notch, the tile size and how flat the floor is, and it is printed on the bag. The calculator covers tiles and boxes only, so add adhesive, grout, waterproofing and trims separately."
+      }
+    ]
+  },
+  {
+    "slug": "plasterboard-calculator",
+    "title": "Plasterboard calculator",
+    "description": "Work out how many sheets of plasterboard a room needs, plus screws, base coat and paper tape, from the wall length, ceiling height and openings.",
+    "standfirst": "Room dimensions in, sheets, screws and compound out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Sheeting a room is mostly arithmetic you can do at the merchant's counter, as long as you remember to take the windows out and put the cuts back in. This does both.\n\n## The sum\n\nWall area is the total length of the walls times the height. Take off the doors and windows, add the ceiling if you are sheeting it, then add ten per cent for cuts and divide by the sheet size.\n\nA room with 24 metres of wall at 2.4 metres high is 57.6 square metres. Deduct 4 square metres for a door and a window and you have 53.6. Add ten per cent and divide by a 1.2 by 3.6 sheet, which is 4.32 square metres, and it comes to about fourteen sheets.\n\n## Sheet horizontally\n\nOn a standard 2.4 metre wall, two sheets laid horizontally cover floor to ceiling with one join running around the room at waist height. Sheeting vertically instead gives you a join every 1.2 metres, floor to ceiling.\n\nThe horizontal join is easier to hide, and that matters more than it sounds. A vertical join catches side light from a window and shows every imperfection down its whole length. A horizontal one at waist height sits where light rakes across it least, and it is a far more comfortable height to set.\n\n## Ten per cent, and why\n\nThe allowance is not for mistakes, it is for geometry. A sheet cut around a window leaves an offcut with a notch in it that will not fit anywhere else. Rooms with lots of openings, a stairwell, or angled ceilings run higher than ten per cent.\n\n## The other materials\n\nScrews come out at roughly thirty to a sheet with fixings at 300mm centres on studs at 450. One 20 kilogram bag of base coat sets somewhere near 25 square metres of joint. Paper tape runs about 30 metres per 25 square metres of wall. These are ordering estimates, not specifications, and the fixing guide for the board you actually buy is the authority.\n\n## Which board where\n\nUse the water resistant board in wet areas, and check whether the room needs fire rated or acoustic board before you order the standard sheets. In both New South Wales and Victoria, wet area construction is covered by the building code rather than by preference, and getting it wrong in a bathroom is a demolition job rather than a repaint.",
+    "faqs": [
+      {
+        "q": "How many sheets of plasterboard do I need for a room?",
+        "a": "Total wall length times ceiling height, less the doors and windows, plus the ceiling if you are sheeting it, plus about ten per cent for cuts, divided by the sheet area. A standard 1.2 by 3.6 metre sheet is 4.32 square metres. The calculator above does it from your dimensions."
+      },
+      {
+        "q": "Should plasterboard be hung horizontally or vertically?",
+        "a": "Horizontally in most domestic rooms. Two sheets cover a 2.4 metre wall with a single join at waist height, which is far easier to set invisibly than a floor to ceiling join. Vertical joins catch side light from windows and show along their whole length."
+      },
+      {
+        "q": "How many screws per sheet of plasterboard?",
+        "a": "Roughly thirty a sheet with fixings at 300mm centres on studs at 450mm centres. Treat it as an ordering estimate and follow the fixing guide for the board you buy, which sets the actual spacing for walls, ceilings and fire or acoustic rated systems."
+      },
+      {
+        "q": "Can I use normal plasterboard in a bathroom?",
+        "a": "No. Wet areas need the water resistant board and a compliant waterproofing system, and in both NSW and Victoria that is set by the building code rather than by preference. Getting it wrong in a bathroom means pulling the room apart later rather than repainting it."
+      }
+    ]
+  },
+  {
+    "slug": "retaining-wall-calculator",
+    "title": "Retaining wall calculator",
+    "description": "Work out sleepers, posts, post lengths and footing concrete for a timber sleeper retaining wall, and check whether the height needs council approval.",
+    "standfirst": "Wall length and height in, sleepers, posts and concrete out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "A sleeper wall is one of the few landscaping jobs where the material count is simple and the consequences of getting the rest wrong are severe. This handles the count and then tells you the two things that actually matter.\n\n## The sum\n\nCourses are the wall height divided by the sleeper height. Sleepers per course are the wall length divided by the sleeper length. Multiply the two.\n\nA 10 metre wall at 900mm high, built from 200mm sleepers 2.4 metres long, is 5 courses of about 4.2 sleepers, so 21 sleepers. Posts at 2.4 metre centres over 10 metres come to 5, counting the one that finishes the run.\n\n## Post depth is not a guess\n\nThe rule of thumb is a third of the exposed wall height in the ground, plus a bit of clearance under the post for the concrete to bear on. A 900mm wall wants roughly 500mm of embedment, so a post about 1.4 metres long, set in a 300mm diameter hole.\n\nThat is a rule of thumb for a low garden wall, not an engineering design. The moment the wall carries anything above it, a driveway, a shed, a pool, or a slope that keeps rising behind it, the loads change completely and the rule stops applying.\n\n## Drainage is what makes it last\n\nWater behind a wall is the reason walls fail. Saturated soil weighs far more than drained soil and it pushes far harder. Ag pipe along the base, free draining gravel behind the sleepers, geotextile so the gravel does not silt up, and an outlet that actually daylights somewhere. A wall with no drainage is a wall with a countdown on it.\n\n## Height and approval\n\nThis is the part worth ringing about before you order anything. In both New South Wales and Victoria a retaining wall over about a metre generally needs approval and an engineered design, and under that height it is often exempt. The exact trigger is set by your council and it is not the same everywhere along the border.\n\nA wall carrying a surcharge load, or one near a boundary or an easement, can need approval at any height. Ten minutes with the council beforehand is the cheapest part of the job, and a wall that has to come out is a total loss rather than a repair.",
+    "faqs": [
+      {
+        "q": "How deep should retaining wall posts go?",
+        "a": "As a rule of thumb for a low garden wall, about a third of the exposed height into the ground plus some clearance beneath for the concrete, so a 900mm wall wants roughly 500mm of embedment in a 300mm hole. That is a guide for a simple wall and not an engineered design, and any wall carrying a load above it needs one."
+      },
+      {
+        "q": "Do I need council approval for a retaining wall?",
+        "a": "Usually over about a metre, in both NSW and Victoria, and the exact trigger height is set by your council rather than being the same statewide. Walls near a boundary or carrying a driveway, shed or pool above them can need approval at any height. Ring the council before ordering materials."
+      },
+      {
+        "q": "How many sleepers do I need for a retaining wall?",
+        "a": "Wall height divided by sleeper height gives the courses, and wall length divided by sleeper length gives the sleepers per course. Multiply them. A 10 metre wall at 900mm from 200mm by 2.4 metre sleepers is five courses of about 4.2, so 21 sleepers."
+      },
+      {
+        "q": "Why does a retaining wall need drainage?",
+        "a": "Because saturated soil is much heavier than drained soil and pushes much harder, and water pressure behind a wall is the usual reason walls fail. Ag pipe at the base, free draining gravel behind, geotextile to stop the gravel silting up, and an outlet that actually goes somewhere."
+      }
+    ]
+  },
+  {
+    "slug": "rainwater-tank-calculator",
+    "title": "Rainwater tank calculator",
+    "description": "Work out how much rainwater a roof collects in a year, how long it covers a household, and what tank size carries you through an inland dry run.",
+    "standfirst": "Roof area and rainfall in, litres and a tank size out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "One millimetre of rain falling on one square metre of roof is one litre of water. That single fact is the whole calculation, and it is the one most people have never been told.\n\n## The sum\n\nRoof area in square metres times annual rainfall in millimetres gives you litres. A 200 square metre roof under 600mm of rain a year sees 120,000 litres land on it.\n\nYou will not collect all of it. First flush diverters throw the first few minutes away, gutters overflow in heavy falls, some evaporates off a hot roof in a light shower, and some blows off entirely. Fifteen per cent is a reasonable working loss, which leaves about 102,000 litres.\n\n## Roof area means the footprint\n\nUse the plan area, the outline of the roof looking down at it, not the sloped surface area. Rain falls vertically, so a steep roof and a flat roof with the same footprint catch the same water. Only count the parts that actually drain to the tank. A shed roof plumbed in is real catchment, a verandah that drains to the garden is not.\n\n## Size for the dry spell, not the year\n\nThis is where people get it wrong. The annual total tells you whether the roof can keep up in an average year. It tells you nothing about whether you run out in February.\n\nAcross inland New South Wales and Victoria, a run of two or three months with almost nothing is ordinary. So the tank has to hold enough to bridge the gap, not enough to hold the year's rain. A household using 240 litres a day needs about 21,600 litres to cover ninety days, which is why 22,500 litre tanks are so common on rural blocks.\n\n## Rainfall varies more than the average suggests\n\nThe annual average for a place like Wagga or Wodonga hides a lot. Some years come in well under, and the dry years are exactly the years the tank matters. If the number above is close, size up, because the cost of a bigger tank is small next to the cost of carting water.\n\nYour local council or the Bureau of Meteorology has the long term figures for your postcode, and the median is a more useful number than the mean for this purpose.\n\n## What this does not cover\n\nDrinking water quality, first flush and filtration, pump sizing, and whether a tank is required or subsidised where you are. Requirements differ between New South Wales and Victoria and between councils, and new builds are often covered by separate rules again.",
+    "faqs": [
+      {
+        "q": "How much rainwater can I collect from my roof?",
+        "a": "One millimetre of rain on one square metre of roof is one litre. Multiply your roof footprint in square metres by the annual rainfall in millimetres, then take off about fifteen per cent for first flush, overflow and evaporation. A 200 square metre roof under 600mm collects roughly 102,000 litres a year."
+      },
+      {
+        "q": "Do I use the roof area or the roof footprint?",
+        "a": "The footprint, which is the outline of the roof seen from above. Rain falls vertically, so a steep roof catches no more water than a flat one covering the same ground. Only count the sections that actually drain to the tank."
+      },
+      {
+        "q": "What size rainwater tank do I need?",
+        "a": "Size it to bridge the dry spell rather than to hold the year's rainfall. Inland New South Wales and Victoria regularly go two or three months with almost nothing, so a household using 240 litres a day needs somewhere near 21,600 litres to cover ninety days. That is why 22,500 litre tanks are so common on rural blocks."
+      },
+      {
+        "q": "Is the annual average rainfall a safe number to plan on?",
+        "a": "Not on its own. The average hides considerable variation, and the dry years are precisely the years the tank matters. If the calculation comes out close to your usage, size up. The Bureau of Meteorology holds long term figures by location, and the median is more useful than the mean here."
+      }
+    ]
+  },
+  {
+    "slug": "firewood-calculator",
+    "title": "Firewood calculator",
+    "description": "Work out the real cost per cubic metre of a firewood load from the stacked measurements, compare sellers honestly, and see how long it will last.",
+    "standfirst": "Stack measurements and price in, cost per cubic metre out.",
+    "isApplication": true,
+    "status": "live",
+    "body": "Firewood is the last thing many people buy without a unit. A trailer load, a ute load and a six by four are not measurements, and comparing two sellers who use them is guesswork. Stack it, measure it, and you have a number that means something.\n\n## The sum\n\nStacked volume is length times height times depth. A stack 2.4 metres long, 1.2 high and half a metre deep is 1.44 cubic metres. At $380 that is about $264 a cubic metre, and that is the figure to compare sellers on.\n\n## Stacked and loose are different volumes\n\nThe same wood tipped in a heap measures roughly a third more than it does stacked, because you are measuring the air between the pieces. A seller quoting loose cubic metres and a seller quoting stacked cubic metres are not quoting the same thing, and the gap is large enough to reverse which one is cheaper.\n\nIf you are quoted a volume, ask whether it is stacked or loose. If wood is tipped in your driveway, stack it before you judge it.\n\n## Seasoning matters more than species\n\nWet wood is the most expensive firewood there is. Water in the timber has to be boiled off before the wood will burn properly, and that energy comes out of your heating rather than going into the room. Green or unseasoned wood also builds creosote in the flue, which is a chimney fire risk rather than an inconvenience.\n\nSeasoned wood is lighter than it looks, has checking cracks across the end grain, and knocks together with a sharp sound instead of a dull one. If it hisses at the ends when it burns, it was not ready.\n\n## Your rights\n\nIn both New South Wales and Victoria, firewood is sold by volume and a seller should be able to tell you the quantity you are getting and give you a receipt showing it. If a seller cannot or will not state a volume, that is the answer to whether to buy from them.\n\nThere are also rules about where firewood may be taken from. Commercial firewood must come from authorised sources, and collecting from roadsides, reserves and public land is restricted in both states. Ask where it came from.\n\n## Buy in summer\n\nFirewood is cheapest and driest at the end of summer and dearest in the middle of a cold snap when everyone has run out at once. A season ahead is the cheapest firewood you will ever burn, and it will be properly dry by the time you need it.",
+    "faqs": [
+      {
+        "q": "How do I know if a firewood load is good value?",
+        "a": "Stack it, measure length by height by depth for the volume in cubic metres, and divide the price by that. Cost per stacked cubic metre is the only figure that lets you compare two sellers. A trailer load or a ute load is not a unit of measurement."
+      },
+      {
+        "q": "What is the difference between stacked and loose cubic metres?",
+        "a": "The same wood tipped in a heap measures roughly a third more than it does stacked, because you are also measuring the air between the pieces. Always ask which one a quote refers to, because the difference is big enough to change which seller is actually cheaper."
+      },
+      {
+        "q": "How can I tell whether firewood is properly seasoned?",
+        "a": "Seasoned wood is noticeably lighter than it looks, shows checking cracks across the end grain, and knocks together with a sharp rather than a dull sound. Wood that hisses at the cut ends while burning still holds water, which wastes heat and builds creosote in the flue."
+      },
+      {
+        "q": "Does a firewood seller have to tell me the volume?",
+        "a": "In both New South Wales and Victoria firewood is sold by volume, and a seller should be able to state the quantity and provide a receipt showing it. A seller who will not give you a volume has answered the question of whether to buy from them. There are also rules on where commercial firewood may be sourced, so it is fair to ask."
+      }
+    ]
   }
 ]
