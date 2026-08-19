@@ -102,7 +102,7 @@ const jsonLd = graph([
       </p>
 
       <h2>What we collect</h2>
-      <p>Four things, and nothing else.</p>
+      <p>Five things, and nothing else.</p>
       <ul>
         <li>
           <strong>What you type into a form.</strong> Contact, claim and correction forms
@@ -112,6 +112,17 @@ const jsonLd = graph([
         <li>
           <strong>Enquiries you send to a business.</strong> Your name and contact details,
           and the description of the job.
+        </li>
+        <li>
+          <strong>Images you attach to a form.</strong> A logo and photographs with a claim,
+          or photographs as evidence with a correction. All of these are optional.
+          <br />
+          Before an image leaves your device the site redraws it at a smaller size and
+          re-encodes it, and that process discards the metadata the camera wrote into the
+          file. That matters more than it sounds: a photo taken on a phone outside a shop
+          normally carries the GPS coordinates of where it was taken, and re-encoding
+          removes them. We never receive them. This happens to every photo, including small
+          ones that did not need resizing, for exactly this reason.
         </li>
         <li>
           <strong>Server logs.</strong> Our host records IP address, user agent, the URL
@@ -176,15 +187,26 @@ const jsonLd = graph([
 
       <h2>Third parties we actually use</h2>
       <ul>
-        <li><strong>Netlify</strong>, for hosting and form handling. Standard server logs and form submissions pass through it.</li>
-        <li><strong>Supabase</strong>, for the database, as the directory moves off static data files.</li>
-        <li><strong>Google Maps</strong>, as outbound links only. There is no embedded map on this site, so Google does not receive a request from your browser unless you click through.</li>
-        <li><strong>The Google Places API</strong>, server side, to read published business ratings. It sends business names, not anything about you.</li>
+        <li>
+          <strong>Netlify</strong>, for hosting and form handling. Server logs, form
+          submissions and any image you attach are stored on their infrastructure.
+        </li>
+        <li>
+          <strong>Google Maps</strong>, as outbound links only. There is no embedded map on
+          this site, so Google receives no request from your browser unless you click one.
+        </li>
       </ul>
       <p>
-        Netlify and Supabase both operate infrastructure outside Australia. Where personal
-        information collected here is handled by an overseas recipient, we take reasonable
-        steps to ensure it is handled consistently with the Australian Privacy Principles.
+        That is the whole list today. Two things previously named here, a Supabase database
+        and the Google Places API, are not in use: no personal information reaches either,
+        and this section will say so before that changes rather than after.
+      </p>
+      <p>
+        Netlify is a United States company and stores this data outside Australia, which
+        means an overseas disclosure under Australian Privacy Principle 8. We take
+        reasonable steps to ensure an overseas recipient handles it consistently with the
+        Australian Privacy Principles, and we keep the amount that goes there as small as
+        the site can work with.
       </p>
 
       <h2>Cookies</h2>
@@ -199,6 +221,12 @@ const jsonLd = graph([
         <li><strong>Enquiries:</strong> 24 months, so response time statistics stay honest, then deleted.</li>
         <li><strong>Contact and correction messages:</strong> 24 months.</li>
         <li><strong>Claim records:</strong> for as long as the listing is claimed, plus 12 months.</li>
+        <li>
+          <strong>Images you attach:</strong> a logo or photo for a listing is kept while
+          the listing shows it, and deleted when you ask or when the listing is removed. A
+          photo sent as evidence with a correction is deleted once the correction has been
+          checked, and is never published.
+        </li>
         <li><strong>Server logs:</strong> as long as our host retains them, which is a matter of weeks.</li>
       </ul>
       <p>You can ask for anything of yours to be deleted sooner and we will do it.</p>

@@ -681,6 +681,18 @@ img.logo {
   margin-top: 4px;
 }
 
+.upload-legal {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-40);
+  max-width: 62ch;
+}
+
+.upload-legal a {
+  color: var(--ink-60);
+}
+
 .upload-total {
   margin: 4px 0 12px;
   font-size: 13px;

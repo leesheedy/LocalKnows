@@ -28,6 +28,8 @@
  * things: a business describing itself wants a logo, while somebody reporting
  * a wrong opening time wants to photograph the sign on the door.
  */
+import { url } from '~/lib/repo';
+
 interface Props {
   /** Distinct per form, since two forms can appear in one build. */
   idPrefix: string;
@@ -40,6 +42,8 @@ interface Props {
   photoName?: string;
   photoLabel?: string;
   firstPhotoHint?: string;
+  /** False when the image is evidence for us to check rather than to publish. */
+  publish?: boolean;
 }
 const {
   idPrefix,
@@ -50,6 +54,7 @@ const {
   photoName = 'photo',
   photoLabel = 'Photo',
   firstPhotoHint,
+  publish = true,
 } = Astro.props;
 
 const slots = Array.from({ length: photoSlots }, (_, i) => i + 1);
@@ -108,6 +113,15 @@ const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-
   ))}
 
   <p class="upload-total mono" data-upload-total aria-live="polite"></p>
+
+  <p class="upload-legal">
+    {publish
+      ? 'Send only images you own or have permission to use, and none showing a person who has not agreed to appear. You keep ownership; attaching one lets us publish it on your listing, and we will take it down whenever you ask.'
+      : 'A photo sent here is only used to check the correction. It is not published.'}
+    {' '}Camera metadata, including the location a photo was taken, is stripped on this
+    device before anything is sent. See the <a href={url.privacy()}>privacy policy</a> and
+    {' '}<a href={url.terms()}>terms</a>.
+  </p>
 </fieldset>
 
 <script is:inline define:vars={{ anchorId }}>
@@ -163,11 +177,19 @@ const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-
     }
 
     /**
-     * Draws the image at a reduced size and re-encodes it as JPEG.
-     * Returns the original file whenever shrinking would not help, so a
-     * carefully optimised 40 KB logo is never re-encoded into something worse.
+     * Redraws the image at a sensible size and re-encodes it.
+     *
+     * Re-encoding always happens, even when the file is already small enough
+     * to send as is. Drawing to a canvas and reading it back produces bytes
+     * with no EXIF block, and EXIF on a photo taken outside a shop carries the
+     * GPS coordinates of the person who took it. Somebody sending us a picture
+     * of their own shopfront is not consenting to hand over their location
+     * history, and the few kilobytes an unnecessary re-encode might cost is
+     * not worth weighing against that.
+     *
+     * Logos come back as PNG so transparency survives; photographs as JPEG.
      */
-    function shrink(file, maxEdge) {
+    function shrink(file, maxEdge, kind) {
       if (!/^image\/(jpeg|png|webp)$/.test(file.type)) return Promise.resolve(file);
       if (typeof createImageBitmap !== 'function') return Promise.resolve(file);
 
@@ -188,25 +210,32 @@ const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-
           canvas.height = h;
           var ctx = canvas.getContext('2d');
           if (!ctx) return file;
-          // A white ground, because a transparent PNG re-encoded to JPEG
-          // otherwise fills its transparency with black.
-          ctx.fillStyle = '#ffffff';
-          ctx.fillRect(0, 0, w, h);
+
+          var asPng = kind === 'logo';
+          if (!asPng) {
+            // A white ground, because a transparent PNG re-encoded to JPEG
+            // otherwise fills its transparency with black. Logos keep their
+            // alpha instead, which is the whole reason they go out as PNG.
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, w, h);
+          }
           ctx.drawImage(bmp, 0, 0, w, h);
           if (bmp.close) bmp.close();
 
           return new Promise(function (resolve) {
             canvas.toBlob(
               function (blob) {
-                if (!blob || blob.size >= file.size) return resolve(file);
-                var name = file.name.replace(/\.[^.]+$/, '') + '.jpg';
+                if (!blob) return resolve(file);
+                var ext = asPng ? '.png' : '.jpg';
+                var type = asPng ? 'image/png' : 'image/jpeg';
+                var name = file.name.replace(/\.[^.]+$/, '') + ext;
                 try {
-                  resolve(new File([blob], name, { type: 'image/jpeg' }));
+                  resolve(new File([blob], name, { type: type }));
                 } catch (e) {
                   resolve(file);
                 }
               },
-              'image/jpeg',
+              asPng ? 'image/png' : 'image/jpeg',
               QUALITY,
             );
           });
@@ -260,7 +289,8 @@ const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-
       working++;
 
       var original = file.size;
-      shrink(file, MAX_EDGE[input.getAttribute('data-kind')] || 1600).then(function (out) {
+      var kind = input.getAttribute('data-kind');
+      shrink(file, MAX_EDGE[kind] || 1600, kind).then(function (out) {
         working--;
         var used = out;
         if (out !== file && !replaceFile(input, out)) {
@@ -271,10 +301,10 @@ const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-
         sizes[input.id] = used.size;
 
         if (status) {
-          var shrunk = used.size < original;
-          status.textContent = shrunk
-            ? file.name + ' — ' + human(original) + ' reduced to ' + human(used.size)
-            : file.name + ' — ' + human(used.size);
+          status.textContent =
+            used.size < original
+              ? file.name + ' — ' + human(original) + ' reduced to ' + human(used.size)
+              : file.name + ' — ' + human(used.size) + ', ready to send';
           status.classList.toggle('bad', used.size > REQUEST_CEILING);
         }
         paintTotal();
