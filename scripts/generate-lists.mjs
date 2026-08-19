@@ -327,7 +327,10 @@ function regionLists() {
 
     push({
       slug: slugify(category.name + '-in-the-' + region.name),
-      title: 'Every ' + category.name.toLowerCase() + ' in the ' + region.name,
+      // "Every" takes the singular. Category names are plural, so the obvious
+      // string produced "Every bakeries in the Riverina". The slug keeps the
+      // plural because those URLs are already published.
+      title: 'Every ' + category.nameSingular.toLowerCase() + ' in the ' + region.name,
       intro:
         'All ' + rows.length + ' ' + category.name.toLowerCase() + ' we list across the ' +
         region.name + ', in ' + towns.size + ' towns, grouped by town so it reads as a drive. ' +

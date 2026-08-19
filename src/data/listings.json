@@ -14143,6 +14143,1411 @@
   ]
  },
  {
+  "id": "biz-courabyra-wines",
+  "slug": "courabyra-wines",
+  "name": "Courabyra Wines",
+  "status": "scraped",
+  "vertical": "things_to_do",
+  "categoryIds": [
+   "cat-wineries"
+  ],
+  "description": "A family owned cellar door and vineyard in the foothills of the Snowy Mountains at Tumbarumba, making cold climate wines. Tastings run alongside a seasonal menu of regional produce with indoor and outdoor dining, and the property takes weddings, group functions and special events by arrangement. Vineyard tours, helicopter tours and picnic packages among the vines can be booked, and there is a children's playground.",
+  "phone": "02 6948 2462",
+  "website": "https://www.courabyrawines.com",
+  "addressLine": "805 Courabyra Road",
+  "localityId": "loc-nsw-tumbarumba",
+  "postcode": "2653",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-tumbarumba"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CW",
+  "logoTheme": "e",
+  "attributes": {
+   "tastings": "yes",
+   "meals": "yes",
+   "outdoor_seating": "yes",
+   "function_room": "yes",
+   "playground": "yes",
+   "kid_friendly": "yes",
+   "bookings": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/snowy-mountains/tumbarumba-area/tumbarumba/food-and-drink/courabyra-wines",
+   "https://www.courabyrawines.com"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Courabyra+Wines+Tumbarumba+NSW",
+  "highlights": [
+   "Family owned cold climate vineyard and cellar door",
+   "Tastings with a seasonal regional menu",
+   "Indoor and outdoor dining",
+   "Vineyard tours, helicopter tours and picnics among the vines",
+   "Weddings and group functions by arrangement",
+   "Children's playground"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-ladbroken-distillery-brewhouse",
+  "slug": "ladbroken-distillery-brewhouse",
+  "name": "Ladbroken Distillery Brewhouse",
+  "status": "scraped",
+  "vertical": "pubs_clubs",
+  "categoryIds": [
+   "cat-distilleries"
+  ],
+  "description": "A craft distillery beside a stream on Albury Street in Tumbarumba, making small batch whisky, liqueurs and Eliksir gins shaped by the high country climate. The cellar door, cafe and shop pour tasting flights and craft beer alongside pizza, either in the interior speakeasy or out in the cocktail garden. Open Friday to Sunday, with private appointments by arrangement.",
+  "phone": "0433 571 538",
+  "website": "https://www.ladbroken.com.au",
+  "addressLine": "7 Albury Street",
+  "localityId": "loc-nsw-tumbarumba",
+  "postcode": "2653",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-tumbarumba"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "LD",
+  "logoTheme": "c",
+  "attributes": {
+   "tastings": "yes",
+   "meals": "yes",
+   "outdoor_seating": "yes",
+   "licensed": "yes",
+   "open_sunday": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/snowy-mountains/tumbarumba-area/tumbarumba/food-and-drink/ladbroken-distillery-brewhouse-0",
+   "https://www.ladbroken.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ladbroken+Distillery+Brewhouse+Tumbarumba+NSW",
+  "highlights": [
+   "Small batch whisky, liqueurs and Eliksir gins",
+   "Cellar door, cafe and shop",
+   "Tasting flights, craft beer and pizza",
+   "Interior speakeasy or outdoor cocktail garden",
+   "Open Friday to Sunday, private appointments by arrangement"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-syviers-coffee-house",
+  "slug": "syviers-coffee-house",
+  "name": "Syviers Coffee House",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A cafe on the main street of The Rock serving breakfast, lunch, dinner, coffee and drinks seven days a week. Group bookings and takeaway are both catered for, and the business states it welcomes people with access needs.",
+  "phone": "02 6920 2707",
+  "website": "https://www.syvierscoffeehouse.com.au",
+  "addressLine": "115 Urana Street",
+  "localityId": "loc-nsw-the-rock",
+  "postcode": "2655",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "SC",
+  "logoTheme": "c",
+  "attributes": {
+   "dine_in": "yes",
+   "takeaway": "yes",
+   "breakfast": "yes",
+   "meals": "yes",
+   "open_sunday": "yes",
+   "wheelchair_accessible": "yes",
+   "bookings": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/lockhart/food-and-drink/syviers-coffee-house-0",
+   "https://www.syvierscoffeehouse.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Syviers+Coffee+House+The+Rock+NSW",
+  "highlights": [
+   "On the main street of The Rock",
+   "Breakfast, lunch and dinner seven days",
+   "Group bookings taken",
+   "Takeaway available",
+   "Welcomes people with access needs"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-latte-da-coffee-bar",
+  "slug": "latte-da-coffee-bar",
+  "name": "Latte Da Coffee Bar",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A coffee bar on Green Street in Lockhart doing blackboard specials, gourmet sandwiches made to order, toasted Turkish rolls, pies and sausage rolls. The cake cabinet holds a mix of homemade and sourced cakes and slices, with cold drinks and milkshakes alongside. Pizza runs on Fridays. Pantry items are sourced locally, and there is indoor and outdoor seating as well as takeaway.",
+  "phone": "02 6920 5210",
+  "website": "https://latte-da-coffee-bar.edan.io/",
+  "addressLine": "133 Green Street",
+  "localityId": "loc-nsw-lockhart",
+  "postcode": "2656",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lockhart"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "LD",
+  "logoTheme": "c",
+  "attributes": {
+   "dine_in": "yes",
+   "takeaway": "yes",
+   "outdoor_seating": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/lockhart/food-and-drink/latte-da-coffee-bar",
+   "https://latte-da-coffee-bar.edan.io/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Latte+Da+Coffee+Bar+Lockhart+NSW",
+  "highlights": [
+   "Blackboard specials and gourmet sandwiches made to order",
+   "Toasted Turkish rolls, pies and sausage rolls",
+   "Cake cabinet of homemade and sourced cakes and slices",
+   "Pizza on Fridays",
+   "Locally sourced pantry items",
+   "Indoor and outdoor seating, and takeaway"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-coolamon-perk",
+  "slug": "coolamon-perk",
+  "name": "Coolamon Perk",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A cafe on Cowabbie Street in Coolamon open six days a week for breakfast and lunch, with coffee, cakes, slices, wraps and sandwiches in a relaxed family friendly room.",
+  "phone": "02 6927 2295",
+  "addressLine": "115 Cowabbie Street",
+  "localityId": "loc-nsw-coolamon",
+  "postcode": "2701",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-coolamon"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CP",
+  "logoTheme": "e",
+  "attributes": {
+   "dine_in": "yes",
+   "breakfast": "yes",
+   "kid_friendly": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 64,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/coolamon/food-and-drink/coolamon-perk"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon+Perk+NSW",
+  "highlights": [
+   "Open six days a week",
+   "Breakfast and lunch",
+   "Cakes, slices, wraps and sandwiches",
+   "Relaxed and family friendly"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-quest-griffith",
+  "slug": "quest-griffith",
+  "name": "Quest Griffith",
+  "status": "scraped",
+  "vertical": "stay",
+  "categoryIds": [
+   "cat-hotels",
+   "cat-serviced-apartments"
+  ],
+  "description": "Sixty eight serviced apartments on Railway Street in Griffith, running from studios to three bedroom apartments and suited to both short and long stays. Studios have kitchenettes; one bedroom and larger apartments have full kitchens and laundry facilities.",
+  "phone": "02 6969 2000",
+  "website": "https://www.questapartments.com.au/properties/nsw/griffith/quest-griffith",
+  "addressLine": "53 Railway Street",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "QG",
+  "logoTheme": "b",
+  "attributes": {
+   "family_rooms": "yes",
+   "accommodation": "yes",
+   "parking": "yes",
+   "price_band": "$$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/quest-griffith/",
+   "https://www.questapartments.com.au/properties/nsw/griffith/quest-griffith",
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/griffith/accommodation/quest-griffith-0"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quest+Griffith+NSW",
+  "highlights": [
+   "68 serviced apartments",
+   "Studios through to three bedroom apartments",
+   "Full kitchens and laundry in one bedroom and larger",
+   "Suited to short and long stays",
+   "Studios with kitchenettes",
+   "One, two and three bedroom apartments with full kitchens",
+   "In-apartment laundry facilities",
+   "Central Railway Street location"
+  ],
+  "priceBand": "$$$",
+  "mergedFrom": [
+   "quest-griffith-griffith"
+  ]
+ },
+ {
+  "id": "biz-cafe-2sixty2",
+  "slug": "cafe-2sixty2",
+  "name": "Cafè 2Sixty2",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A family owned cafe on Banna Avenue in central Griffith serving Lavazza coffee alongside an extensive all day menu. Gluten free options are available across the menu.",
+  "phone": "02 6909 1849",
+  "addressLine": "262 Banna Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "C2",
+  "logoTheme": "a",
+  "attributes": {
+   "dine_in": "yes",
+   "gluten_free": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 64,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/cafe-2sixty2/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cafe+2Sixty2+Griffith+NSW",
+  "highlights": [
+   "Family owned cafe on Banna Avenue",
+   "Lavazza coffee",
+   "Extensive all day menu",
+   "Gluten free options available"
+  ]
+ },
+ {
+  "id": "biz-limone-dining",
+  "slug": "limone-dining",
+  "name": "Limone Dining",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A breakfast and lunch room on Banna Avenue built over five years from recycled materials collected across three decades. The menu changes with the season and leans on Riverina produce prepared in the traditions European migrants brought to the district. Coffee, fresh sourdough, takeaway and a pantry counter round it out.",
+  "phone": "02 6962 3777",
+  "website": "https://www.limone.com.au",
+  "addressLine": "482 Banna Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "LD",
+  "logoTheme": "f",
+  "attributes": {
+   "dine_in": "yes",
+   "takeaway": "yes",
+   "breakfast": "yes",
+   "bookings": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/limone-dining/",
+   "https://www.limone.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Limone+Dining+Griffith+NSW",
+  "highlights": [
+   "Menu built around seasonal Riverina produce",
+   "Fitted out over five years from recycled materials",
+   "Breakfast and lunch",
+   "Fresh sourdough and coffee",
+   "Takeaway and pantry counter",
+   "Bookings online, walk ins accepted"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-bellas-cafe-griffith",
+  "slug": "bellas-cafe-griffith",
+  "name": "Bella's Cafe",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A dine in and takeaway cafe in Griffin Plaza, Griffith, making sandwiches, focaccias, burgers, quiches and salads fresh through the day.",
+  "phone": "0412 072 142",
+  "addressLine": "Griffin Plaza",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "BS",
+  "logoTheme": "c",
+  "attributes": {
+   "dine_in": "yes",
+   "takeaway": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 64,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/bellas-cafe/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bellas+Cafe+Griffin+Plaza+Griffith+NSW",
+  "highlights": [
+   "In Griffin Plaza",
+   "Freshly made sandwiches and focaccias",
+   "Burgers, quiches and salads",
+   "Dine in or takeaway"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-kaldi-and-the-dancing-goats",
+  "slug": "kaldi-and-the-dancing-goats",
+  "name": "Kaldi and the Dancing Goats",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A coffee shop inside St Vincent's Private Hospital on Animoo Avenue, Griffith. Orders are taken by phone or text and delivered within the hospital.",
+  "phone": "0436 452 534",
+  "addressLine": "Animoo Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "KA",
+  "logoTheme": "a",
+  "attributes": {
+   "takeaway": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 58,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/kaldi-and-the-dancing-goats/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kaldi+and+the+Dancing+Goats+Griffith+NSW",
+  "highlights": [
+   "Inside St Vincent's Private Hospital",
+   "Orders by phone or text",
+   "Delivery within the hospital"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-zecca-handmade-italian",
+  "slug": "zecca-handmade-italian",
+  "name": "Zecca Handmade Italian",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-italian-restaurants"
+  ],
+  "description": "A regional Italian restaurant in the old Rural Bank building on Banna Avenue, run by three local owners. The menu changes constantly and is made fresh each day from local farmers and producers. Zecca makes the region's only dried artisan pasta, extruded through bronze dies and slow dried in the traditional way from Australian durum semolina, and a gluten free range from Australian chickpea flour.",
+  "phone": "02 6964 4050",
+  "website": "https://www.zeccagriffith.com.au",
+  "addressLine": "239 Banna Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "ZH",
+  "logoTheme": "b",
+  "attributes": {
+   "dine_in": "yes",
+   "gluten_free": "yes",
+   "licensed": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/zecca-handmade-italian/",
+   "https://www.zeccagriffith.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Zecca+Handmade+Italian+Griffith+NSW",
+  "highlights": [
+   "In the historic Rural Bank building on Banna Avenue",
+   "The region's only dried artisan pasta, bronze die extruded and slow dried",
+   "Gluten free pasta made from Australian chickpea flour",
+   "Menu changes daily",
+   "Sources from local farmers and producers"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-la-scala-restaurant-griffith",
+  "slug": "la-scala-restaurant-griffith",
+  "name": "La Scala Restaurant",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-italian-restaurants"
+  ],
+  "description": "An Italian restaurant on Blumer Avenue trading since 1977, built around traditional wood fired pizza and house made pasta, with gelato and desserts made in house. Seasonal local produce turns up regularly on the daily specials, and the wine list runs to cocktails alongside local and imported wine.",
+  "phone": "02 6962 4322",
+  "website": "https://www.lascalarestaurant.com.au",
+  "addressLine": "2-4 Blumer Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "LS",
+  "logoTheme": "f",
+  "attributes": {
+   "dine_in": "yes",
+   "licensed": "yes",
+   "bookings": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/la-scala-restaurant/",
+   "https://www.lascalarestaurant.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=La+Scala+Restaurant+Griffith+NSW",
+  "highlights": [
+   "Trading since 1977",
+   "Traditional wood fired pizza",
+   "House made pasta, gelato and desserts",
+   "Local produce on the daily specials",
+   "Cocktails, local and imported wine",
+   "Bookings recommended"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-bull-and-bell-steakhouse",
+  "slug": "bull-and-bell-steakhouse",
+  "name": "Bull & Bell Steakhouse",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-restaurants"
+  ],
+  "description": "A European style steakhouse on Banna Avenue working to a farm to table brief, sourcing within a 300 kilometre radius and buying direct from Riverina farmers and artisan producers.",
+  "phone": "02 6913 5050",
+  "website": "https://bullnbell.com.au/",
+  "addressLine": "201-207 Banna Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "B&",
+  "logoTheme": "d",
+  "attributes": {
+   "dine_in": "yes",
+   "licensed": "yes",
+   "price_band": "$$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/bull-bell-steakhouse-restaurant/",
+   "https://bullnbell.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bull+and+Bell+Steakhouse+Griffith+NSW",
+  "highlights": [
+   "European style steakhouse on Banna Avenue",
+   "Sources within a 300km radius",
+   "Buys direct from local farmers and artisan producers"
+  ],
+  "priceBand": "$$$"
+ },
+ {
+  "id": "biz-citrus-motel-griffith",
+  "slug": "citrus-motel-griffith",
+  "name": "Citrus Motel",
+  "status": "scraped",
+  "vertical": "stay",
+  "categoryIds": [
+   "cat-motels"
+  ],
+  "description": "A 28 room motel on Jondaryan Avenue in Griffith, positioned close to the centre of town and described by the regional tourism body as comfortable and reasonably priced.",
+  "phone": "02 6962 6233",
+  "addressLine": "71-73 Jondaryan Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CM",
+  "logoTheme": "d",
+  "attributes": {
+   "accommodation": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 50,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/citrus-motel/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Citrus+Motel+Griffith+NSW",
+  "highlights": [
+   "28 rooms",
+   "On Jondaryan Avenue, close to the town centre"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-the-area-hotel-griffith",
+  "slug": "the-area-hotel-griffith",
+  "name": "The Area Hotel",
+  "status": "scraped",
+  "vertical": "stay",
+  "categoryIds": [
+   "cat-hotels"
+  ],
+  "description": "A hotel on Banna Avenue in central Griffith offering budget accommodation with shared facilities.",
+  "phone": "02 6962 1322",
+  "addressLine": "208 Banna Avenue",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "AH",
+  "logoTheme": "b",
+  "attributes": {
+   "accommodation": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 58,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/the-area-hotel/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Area+Hotel+Griffith+NSW",
+  "highlights": [
+   "Budget accommodation",
+   "Shared facilities",
+   "Central Banna Avenue location"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-calabria-family-wines-riverina-cellar-door",
+  "slug": "calabria-family-wines-riverina-cellar-door",
+  "name": "Calabria Family Wines Riverina Cellar Door",
+  "status": "scraped",
+  "vertical": "things_to_do",
+  "categoryIds": [
+   "cat-wineries"
+  ],
+  "description": "The cellar door of a family owned Riverina winery on Brayne Road, with a tasting bar, a self guided museum and a sensory wall. Hot food and platters come from the bar menu. Bookings are required.",
+  "phone": "02 6969 0850",
+  "website": "https://www.calabriawines.com.au/visit-us/riverina/our-experiences",
+  "addressLine": "1283 Brayne Road",
+  "localityId": "loc-nsw-griffith",
+  "postcode": "2680",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-griffith"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CF",
+  "logoTheme": "c",
+  "attributes": {
+   "cellar_door": "yes",
+   "tastings": "yes",
+   "bookings": "yes",
+   "open_sunday": "yes",
+   "meals": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://visitgriffith.com.au/listing/calabria-family-wines-riverina-cellar-door/",
+   "https://www.calabriawines.com.au/visit-us/riverina/our-experiences",
+   "https://www.calabriawines.com.au/visit-us/riverina/cellar-door-tastings"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Calabria+Family+Wines+Griffith+NSW",
+  "highlights": [
+   "Family owned Riverina winery",
+   "Tasting bar, self guided museum and sensory wall",
+   "Hot food and platters from the bar menu",
+   "Bookings required",
+   "Tuscan-style cellar door open seven days",
+   "Classic, premium and Sip and Unwind tasting experiences",
+   "45-minute seated flight of up to eight wines",
+   "Italian bar menu served 11am to 2pm"
+  ],
+  "mergedFrom": [
+   "calabria-family-wines-riverina-cellar-door-griffith"
+  ]
+ },
+ {
+  "id": "biz-terminus-hotel-temora",
+  "slug": "terminus-hotel-temora",
+  "name": "Terminus Hotel Temora",
+  "status": "scraped",
+  "vertical": "pubs_clubs",
+  "categoryIds": [
+   "cat-pubs"
+  ],
+  "description": "A family friendly pub on Crowley Street, just off the main street of Temora, with a bar, a bistro and a beer garden. Accommodation is available in a quiet part of town, and the Bottlemart drive through bottle shop trades seven days.",
+  "phone": "0431 031 299",
+  "website": "https://www.terminushoteltemora.com.au",
+  "addressLine": "136 Crowley Street",
+  "localityId": "loc-nsw-temora",
+  "postcode": "2666",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-temora"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "TH",
+  "logoTheme": "a",
+  "attributes": {
+   "meals": "yes",
+   "accommodation": "yes",
+   "beer_garden": "yes",
+   "wheelchair_accessible": "yes",
+   "family_rooms": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/temora/food-and-drink/terminus-hotel-temora",
+   "https://www.terminushoteltemora.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Terminus+Hotel+Temora+NSW",
+  "highlights": [
+   "Bar, bistro and beer garden",
+   "Accommodation off the main street",
+   "Bottlemart drive through bottle shop, seven days",
+   "Disabled access on request"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-the-roundabout-bakery-temora",
+  "slug": "the-roundabout-bakery-temora",
+  "name": "The Roundabout Bakery",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-bakeries"
+  ],
+  "description": "A family owned bakery on Hoskins Street in Temora baking bread, cakes, pies and sausage rolls daily, with sandwiches, salad rolls and coffee over the counter. Custom cakes and catering for events are made to order.",
+  "phone": "02 6978 0020",
+  "addressLine": "252 Hoskins Street",
+  "localityId": "loc-nsw-temora",
+  "postcode": "2666",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-temora"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "RB",
+  "logoTheme": "c",
+  "attributes": {
+   "takeaway": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 58,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/temora/food-and-drink/the-roundabout-bakery"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Roundabout+Bakery+Temora+NSW",
+  "highlights": [
+   "Family owned",
+   "Bread, cakes, pies and sausage rolls baked daily",
+   "Sandwiches, salad rolls and coffee",
+   "Custom cakes and event catering"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-temora-ex-services-memorial-club-temora",
+  "slug": "temora-ex-services-memorial-club-temora",
+  "name": "Temora Ex-Services Memorial Club",
+  "status": "scraped",
+  "vertical": "pubs_clubs",
+  "categoryIds": [
+   "cat-rsl-clubs"
+  ],
+  "description": "A licensed memorial club on Baker Street in Temora with three bars, the Main Bar, the Cec Macauley Bar and the Frank Matthews Lounge. Dining is at the Gallery Bistro featuring Vinnie's Cuisines, and there are five function rooms for events and meetings plus a bowling green. The club runs raffles, footy tipping, a poker league and entertainment, and a courtesy bus operates Tuesday, Friday and Saturday from 5pm. Two associated motor inns, the Goldtera and Koreela Park, provide accommodation.",
+  "phone": "02 6977 4177",
+  "website": "https://temoraexservices.com.au/",
+  "addressLine": "130 Baker Street",
+  "localityId": "loc-nsw-temora",
+  "postcode": "2666",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-temora"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "TE",
+  "logoTheme": "b",
+  "attributes": {
+   "meals": "yes",
+   "function_room": "yes",
+   "licensed": "yes",
+   "wheelchair_accessible": "yes",
+   "parking": "yes",
+   "price_band": "$$",
+   "dine_in": "yes",
+   "courtesy_bus": "yes",
+   "accommodation": "yes",
+   "live_music": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "10:00",
+    "closes": "23:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "10:00",
+    "closes": "23:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "10:00",
+    "closes": "23:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "10:00",
+    "closes": "23:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "10:00",
+    "closes": "23:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "10:00",
+    "closes": "00:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "10:00",
+    "closes": "00:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 100,
+  "isSample": false,
+  "sources": [
+   "https://temoraexservices.com.au/",
+   "https://temoraexservices.com.au/Entertainment",
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/temora/food-and-drink/temora-ex-services-club",
+   "https://temoraexservices.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Temora+Ex-Services+Memorial+Club+Temora+NSW",
+  "facebook": "https://www.facebook.com/temoraexservices",
+  "highlights": [
+   "Three bars including the Frank Matthews Lounge",
+   "Gallery Bistro serving Vinnie's Cuisines",
+   "Five function rooms",
+   "Bowling green",
+   "Courtesy bus Tuesday, Friday and Saturday from 5pm",
+   "Associated Goldtera and Koreela Park motor inns",
+   "Bistro and bar",
+   "Five multipurpose function rooms"
+  ],
+  "priceBand": "$$",
+  "mergedFrom": [
+   "temora-ex-services-memorial-club"
+  ]
+ },
+ {
+  "id": "biz-coolamon-cheese-co-coolamon",
+  "slug": "coolamon-cheese-co-coolamon",
+  "name": "Coolamon Cheese Co.",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes",
+   "cat-produce-stores"
+  ],
+  "description": "Coolamon Cheese Co. occupies a 1920s co-op building on Coolamon's main street, with a modern cheese factory at the rear designed so visitors can watch the cheese-making and maturation process. The front of house serves cheese with local wine and tasty morsels, and the retail space sells regional produce. It is open every day from 8am to 3pm.",
+  "phone": "02 6927 3757",
+  "website": "https://www.coolamoncheese.com.au/",
+  "addressLine": "87 Cowabbie Street",
+  "localityId": "loc-nsw-coolamon",
+  "postcode": "2701",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-coolamon"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CC",
+  "logoTheme": "b",
+  "attributes": {
+   "tastings": "yes",
+   "outdoor_seating": "yes",
+   "licensed": "yes",
+   "kid_friendly": "yes",
+   "takeaway": "yes",
+   "cellar_door": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "15:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 100,
+  "isSample": false,
+  "sources": [
+   "https://visitwagga.com/discover/eat-drink/product?productId=60d18a1877a7b3d356e367b9",
+   "https://www.coolamoncheese.com.au/pages/contact",
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/coolamon/food-and-drink/coolamon-cheese-co-0",
+   "https://www.coolamoncheese.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-18",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon%20Cheese%20Co.%20Coolamon%20NSW",
+  "facebook": "https://www.facebook.com/coolamoncheese",
+  "instagram": "https://www.instagram.com/coolamoncheese/",
+  "highlights": [
+   "Handcrafted cheese made on site",
+   "Visitors can view the cheese-making process",
+   "Housed in a 1920s co-op building",
+   "Local wine and cheese tastings",
+   "Retail space with regional produce",
+   "Open seven days",
+   "Handcrafted cheese from local Riverina milk",
+   "Cellar door on Cowabbie Street"
+  ],
+  "priceBand": "$$",
+  "mergedFrom": [
+   "coolamon-cheese-co"
+  ]
+ },
+ {
+  "id": "biz-the-station-collective-coolamon",
+  "slug": "the-station-collective-coolamon",
+  "name": "The Station Collective",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A cafe in the heritage railway station on Wade Street, Coolamon, serving coffee and a house made lunch. You can sit on the platform or take it away to picnic.",
+  "phone": "0434 612 905",
+  "website": "https://the-station-collective.square.site/",
+  "addressLine": "Coolamon Railway Station, Wade Street",
+  "localityId": "loc-nsw-coolamon",
+  "postcode": "2701",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-coolamon"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "SC",
+  "logoTheme": "d",
+  "attributes": {
+   "dine_in": "yes",
+   "takeaway": "yes",
+   "outdoor_seating": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/coolamon/food-and-drink/the-station-collective",
+   "https://the-station-collective.square.site/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Station+Collective+Coolamon+NSW",
+  "highlights": [
+   "In the heritage Coolamon railway station",
+   "Coffee and house made lunch",
+   "Seating on the station platform",
+   "Picnic packs to take away"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-lockhart-ex-servicemens-club",
+  "slug": "lockhart-ex-servicemens-club",
+  "name": "Lockhart Ex-Servicemen's Club",
+  "status": "scraped",
+  "vertical": "pubs_clubs",
+  "categoryIds": [
+   "cat-rsl-clubs"
+  ],
+  "description": "A licensed club on Green Street in Lockhart, open seven days, with a Chinese restaurant, barbecue facilities, a gaming room, weekly members draws and free wifi. Large and small function rooms take weddings, celebrations and conferences.",
+  "phone": "02 6920 5291",
+  "website": "https://www.lockhartex-servicemens.com/",
+  "addressLine": "85 Green Street",
+  "localityId": "loc-nsw-lockhart",
+  "postcode": "2656",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lockhart"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "LE",
+  "logoTheme": "b",
+  "attributes": {
+   "licensed": "yes",
+   "meals": "yes",
+   "dine_in": "yes",
+   "price_band": "$",
+   "function_room": "yes",
+   "pokies": "yes",
+   "bbq": "yes",
+   "open_sunday": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/lockhart/food-and-drink/lockhart-ex-servicemens-club",
+   "https://www.lockhartex-servicemens.com/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lockhart+Ex-Servicemens+Club+NSW",
+  "facebook": "https://www.facebook.com/LockhartExies/",
+  "highlights": [
+   "Open seven days",
+   "Chinese restaurant on site",
+   "Barbecue facilities",
+   "Large and small function rooms for hire",
+   "Weekly members draws",
+   "Free wifi",
+   "Open seven days from 10.30am",
+   "Weekly trivia nights"
+  ],
+  "priceBand": "$",
+  "mergedFrom": [
+   "lockhart-ex-servicemens-club-lockhart"
+  ]
+ },
+ {
+  "id": "biz-the-coffee-pedaler-gundagai",
+  "slug": "the-coffee-pedaler-gundagai",
+  "name": "The Coffee Pedaler",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A cafe on Sheridan Street, the main street of Gundagai, pouring Pablo and Rusty's coffee and serving breakfast, lunch, cakes and sweets. There is seating inside and out under umbrellas.",
+  "phone": "02 6903 8186",
+  "website": "https://www.pedaler.coffee/",
+  "addressLine": "218 Sheridan Street",
+  "localityId": "loc-nsw-gundagai",
+  "postcode": "2722",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-gundagai"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "CP",
+  "logoTheme": "c",
+  "attributes": {
+   "dine_in": "yes",
+   "breakfast": "yes",
+   "outdoor_seating": "yes",
+   "takeaway": "yes",
+   "price_band": "$$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/gundagai/food-and-drink/the-coffee-pedaler",
+   "https://www.pedaler.coffee/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Coffee+Pedaler+Gundagai+NSW",
+  "highlights": [
+   "On Sheridan Street, Gundagai's main street",
+   "Pablo and Rusty's coffee",
+   "Breakfast, lunch, cakes and sweets",
+   "Indoor and outdoor seating"
+  ],
+  "priceBand": "$$"
+ },
+ {
+  "id": "biz-gundagai-services-club",
+  "slug": "gundagai-services-club",
+  "name": "Gundagai Services Club",
+  "status": "scraped",
+  "vertical": "pubs_clubs",
+  "categoryIds": [
+   "cat-rsl-clubs"
+  ],
+  "description": "A club on Sheridan Street in Gundagai with a coffee lounge, an all day menu and a Chinese restaurant. Function rooms take birthdays, reunions and community events, and the sporting side runs to an 18 hole golf course, two bowling greens, artificial turf tennis courts and squash courts for hire. TAB, gaming, Club Keno, weekly bingo, live music and sport on the screens fill out the rest.",
+  "phone": "02 6944 1355",
+  "website": "https://gundagaiservicesclub.com.au",
+  "addressLine": "254 Sheridan Street",
+  "localityId": "loc-nsw-gundagai",
+  "postcode": "2722",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-gundagai"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "GS",
+  "logoTheme": "f",
+  "attributes": {
+   "meals": "yes",
+   "function_room": "yes",
+   "licensed": "yes",
+   "pokies": "yes",
+   "tab": "yes",
+   "live_music": "yes",
+   "wheelchair_accessible": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/gundagai/food-and-drink/gundagai-services-club",
+   "https://gundagaiservicesclub.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Gundagai+Services+Club+NSW",
+  "highlights": [
+   "Coffee lounge and all day menu",
+   "Chinese restaurant",
+   "18 hole golf course, two bowling greens",
+   "Tennis and squash courts for hire",
+   "Function rooms for birthdays and reunions",
+   "TAB, Club Keno, weekly bingo and live music"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-the-narrandera-bakery",
+  "slug": "the-narrandera-bakery",
+  "name": "The Narrandera Bakery",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-bakeries"
+  ],
+  "description": "A bakery on East Street in Narrandera, trading since 1998, baking bread and rolls fresh alongside cakes and slices. Pies, pasties and sausage rolls come out daily, with sandwiches made to order, and it is known locally as the home of the beesting.",
+  "phone": "02 6959 3677",
+  "website": "https://www.narrandera.com.au/eat/more-to-love-at-the-narrandera-bakery",
+  "addressLine": "108 East Street",
+  "localityId": "loc-nsw-narrandera",
+  "postcode": "2700",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-narrandera"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "NB",
+  "logoTheme": "c",
+  "attributes": {
+   "takeaway": "yes",
+   "price_band": "$"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 70,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/country-nsw/riverina/narrandera/food-and-drink/the-narrandera-bakery"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The+Narrandera+Bakery+NSW",
+  "highlights": [
+   "Trading since 1998",
+   "Fresh bread and rolls daily",
+   "Pies, pasties and sausage rolls",
+   "Sandwiches made to order",
+   "Known for its beesting"
+  ],
+  "priceBand": "$"
+ },
+ {
+  "id": "biz-nest-cinema-cafe-books",
+  "slug": "nest-cinema-cafe-books",
+  "name": "Nest Cinema Cafe Books",
+  "status": "scraped",
+  "vertical": "eat_drink",
+  "categoryIds": [
+   "cat-cafes"
+  ],
+  "description": "A licensed cafe, a boutique armchair cinema and a bookshop in one building on Winton Street, Tumbarumba, in what was once the Masonic Lodge. The seasonal menu is built from the cafe's own garden and from local orchards, vineyards and farms, and the building now works as a community cultural hub.",
+  "phone": "02 6948 2950",
+  "website": "https://cafe-nest.com",
+  "addressLine": "56 Winton Street",
+  "localityId": "loc-nsw-tumbarumba",
+  "postcode": "2653",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-tumbarumba"
+  ],
+  "serviceAreaInferred": false,
+  "logoText": "NC",
+  "logoTheme": "e",
+  "attributes": {
+   "outdoor_seating": "yes",
+   "licensed": "yes",
+   "kid_friendly": "yes",
+   "live_music": "yes",
+   "function_room": "yes",
+   "takeaway": "yes",
+   "price_band": "$$",
+   "dine_in": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.visitnsw.com/destinations/snowy-mountains/tumbarumba-area/tumbarumba/food-and-drink/nest-cinema-cafe-books",
+   "https://cafe-nest.com",
+   "https://visitwagga.com/discover/eat-drink/product?productId=5caebe46bdbc0ce95a09ac19",
+   "https://cafe-nest.com/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-19",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nest+Cinema+Cafe+Books+Tumbarumba+NSW",
+  "instagram": "https://www.instagram.com/nestcinemacafe",
+  "highlights": [
+   "Licensed cafe, armchair cinema and bookshop in one",
+   "In the former Masonic Lodge on Winton Street",
+   "Seasonal menu from its own garden and local growers",
+   "Gifts and produce alongside the books",
+   "Runs as a community cultural hub",
+   "Licensed cafe with boutique cinema and bookstore",
+   "Seasonal menu from its own food garden",
+   "Cool climate wines, cider and craft beer"
+  ],
+  "priceBand": "$$",
+  "mergedFrom": [
+   "nest-cinema-cafe-books-tumbarumba"
+  ]
+ },
+ {
   "id": "biz-albury-classic-motor-inn",
   "slug": "albury-classic-motor-inn",
   "name": "Albury Classic Motor Inn",
@@ -26682,158 +28087,6 @@
   "priceBand": "$$"
  },
  {
-  "id": "biz-nest-cinema-cafe-books",
-  "slug": "nest-cinema-cafe-books",
-  "name": "Nest Cinema Cafe Books",
-  "status": "scraped",
-  "vertical": "eat_drink",
-  "categoryIds": [
-   "cat-cafes"
-  ],
-  "description": "Nest is a licensed cafe and restaurant, boutique armchair cinema and bookstore in one building on Winton Street, Tumbarumba. The seasonal menu draws on produce from its own food garden and from nearby orchards, vineyards, mountain streams and paddocks, with dishes such as fresh fig pizza and smoked trout salad plus cool climate wines, cider and craft beer. Guests can eat in the gardens, inside the licensed cafe or in the cinema while watching a film. The historic building was originally a Masonic Lodge.",
-  "phone": "02 6948 2950",
-  "website": "https://cafe-nest.com/",
-  "addressLine": "56 Winton Street",
-  "localityId": "loc-nsw-tumbarumba",
-  "postcode": "2653",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-tumbarumba"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "NC",
-  "logoTheme": "e",
-  "attributes": {
-   "outdoor_seating": "yes",
-   "licensed": "yes",
-   "kid_friendly": "yes",
-   "live_music": "yes",
-   "function_room": "yes",
-   "takeaway": "yes",
-   "price_band": "$$"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 88,
-  "isSample": false,
-  "sources": [
-   "https://visitwagga.com/discover/eat-drink/product?productId=5caebe46bdbc0ce95a09ac19",
-   "https://cafe-nest.com/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nest%20Cinema%20Cafe%20Books%20Tumbarumba%20NSW",
-  "instagram": "https://www.instagram.com/nestcinemacafe",
-  "highlights": [
-   "Licensed cafe with boutique cinema and bookstore",
-   "Seasonal menu from its own food garden",
-   "Cool climate wines, cider and craft beer",
-   "Dine in the gardens, cafe or cinema",
-   "Live music and year-round events",
-   "Housed in a former Masonic Lodge"
-  ],
-  "priceBand": "$$"
- },
- {
-  "id": "biz-coolamon-cheese-co",
-  "slug": "coolamon-cheese-co",
-  "name": "Coolamon Cheese Co.",
-  "status": "scraped",
-  "vertical": "eat_drink",
-  "categoryIds": [
-   "cat-cafes"
-  ],
-  "description": "Coolamon Cheese Co. occupies a 1920s co-op building on Coolamon's main street, with a modern cheese factory at the rear designed so visitors can watch the cheese-making and maturation process. The front of house serves cheese with local wine and tasty morsels, and the retail space sells regional produce. It is open every day from 8am to 3pm.",
-  "phone": "02 6927 3757",
-  "website": "https://www.coolamoncheese.com.au/",
-  "addressLine": "87 Cowabbie Street",
-  "localityId": "loc-nsw-coolamon",
-  "postcode": "2701",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-coolamon"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "CC",
-  "logoTheme": "a",
-  "attributes": {
-   "outdoor_seating": "yes",
-   "licensed": "yes",
-   "kid_friendly": "yes",
-   "takeaway": "yes",
-   "tastings": "yes",
-   "cellar_door": "yes",
-   "price_band": "$$"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 0,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 1,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "08:00",
-    "closes": "15:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 100,
-  "isSample": false,
-  "sources": [
-   "https://visitwagga.com/discover/eat-drink/product?productId=60d18a1877a7b3d356e367b9",
-   "https://www.coolamoncheese.com.au/pages/contact"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon%20Cheese%20Co.%20Coolamon%20NSW",
-  "facebook": "https://www.facebook.com/coolamoncheese",
-  "instagram": "https://www.instagram.com/coolamoncheese/",
-  "highlights": [
-   "Handcrafted cheese made on site",
-   "Visitors can view the cheese-making process",
-   "Housed in a 1920s co-op building",
-   "Local wine and cheese tastings",
-   "Retail space with regional produce",
-   "Open seven days"
-  ],
-  "priceBand": "$$"
- },
- {
   "id": "biz-romanos-hotel",
   "slug": "romanos-hotel",
   "name": "Romano's Hotel",
@@ -28917,104 +30170,6 @@
   "priceBand": "$$"
  },
  {
-  "id": "biz-temora-ex-services-memorial-club",
-  "slug": "temora-ex-services-memorial-club",
-  "name": "Temora Ex-Services Memorial Club",
-  "status": "scraped",
-  "vertical": "pubs_clubs",
-  "categoryIds": [
-   "cat-rsl-clubs"
-  ],
-  "description": "A licensed memorial club on Baker Street in Temora with three bars, the Main Bar, the Cec Macauley Bar and the Frank Matthews Lounge. Dining is at the Gallery Bistro featuring Vinnie's Cuisines, and there are five function rooms for events and meetings plus a bowling green. The club runs raffles, footy tipping, a poker league and entertainment, and a courtesy bus operates Tuesday, Friday and Saturday from 5pm. Two associated motor inns, the Goldtera and Koreela Park, provide accommodation.",
-  "phone": "02 6977 4177",
-  "website": "https://temoraexservices.com.au/",
-  "addressLine": "130 Baker Street",
-  "localityId": "loc-nsw-temora",
-  "postcode": "2666",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-temora"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "TE",
-  "logoTheme": "a",
-  "attributes": {
-   "licensed": "yes",
-   "meals": "yes",
-   "dine_in": "yes",
-   "courtesy_bus": "yes",
-   "function_room": "yes",
-   "accommodation": "yes",
-   "live_music": "yes",
-   "price_band": "$$"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 0,
-    "opens": "10:00",
-    "closes": "23:00",
-    "closed": false
-   },
-   {
-    "day": 1,
-    "opens": "10:00",
-    "closes": "23:30",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "10:00",
-    "closes": "23:30",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "10:00",
-    "closes": "23:30",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "10:00",
-    "closes": "23:30",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "10:00",
-    "closes": "00:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "10:00",
-    "closes": "00:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 100,
-  "isSample": false,
-  "sources": [
-   "https://temoraexservices.com.au/",
-   "https://temoraexservices.com.au/Entertainment"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Temora+Ex-Services+Memorial+Club+Temora+NSW",
-  "facebook": "https://www.facebook.com/temoraexservices",
-  "highlights": [
-   "Three bars including the Frank Matthews Lounge",
-   "Gallery Bistro serving Vinnie's Cuisines",
-   "Five function rooms",
-   "Bowling green",
-   "Courtesy bus Tuesday, Friday and Saturday from 5pm",
-   "Associated Goldtera and Koreela Park motor inns"
-  ],
-  "priceBand": "$$"
- },
- {
   "id": "biz-narrandera-ex-servicemens-club",
   "slug": "narrandera-ex-servicemens-club",
   "name": "Narrandera Ex-Servicemen's Club",
@@ -29163,55 +30318,6 @@
    "Pub accommodation"
   ],
   "priceBand": "$$"
- },
- {
-  "id": "biz-lockhart-ex-servicemens-club",
-  "slug": "lockhart-ex-servicemens-club",
-  "name": "Lockhart Ex-Servicemen's Club",
-  "status": "scraped",
-  "vertical": "pubs_clubs",
-  "categoryIds": [
-   "cat-rsl-clubs"
-  ],
-  "description": "A community club on Green Street in Lockhart, open seven days from 10.30am until late. Food and beverage service runs from published menus, and the club holds weekly trivia nights. Thursday raffles sell from 6pm and are drawn at 7.30pm with a members draw between 6pm and 8pm, and Sunday raffles sell from 11am and are drawn at 1pm.",
-  "phone": "02 6920 5291",
-  "website": "https://www.lockhartex-servicemens.com/",
-  "addressLine": "87 Green Street",
-  "localityId": "loc-nsw-lockhart",
-  "postcode": "2656",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-lockhart"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "LE",
-  "logoTheme": "b",
-  "attributes": {
-   "licensed": "yes",
-   "meals": "yes",
-   "dine_in": "yes",
-   "price_band": "$"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 88,
-  "isSample": false,
-  "sources": [
-   "https://www.lockhartex-servicemens.com/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Lockhart+Ex-Servicemen%27s+Club+Lockhart+NSW",
-  "facebook": "https://www.facebook.com/LockhartExies/",
-  "highlights": [
-   "Open seven days from 10.30am",
-   "Weekly trivia nights",
-   "Thursday raffles and members cash draw",
-   "Sunday raffles drawn at 1pm",
-   "Club menu for meals"
-  ],
-  "priceBand": "$"
  },
  {
   "id": "biz-the-rock-memorial-bowling-club",
@@ -33287,50 +34393,6 @@
   ]
  },
  {
-  "id": "biz-quest-griffith",
-  "slug": "quest-griffith",
-  "name": "Quest Griffith",
-  "status": "scraped",
-  "vertical": "stay",
-  "categoryIds": [
-   "cat-serviced-apartments"
-  ],
-  "description": "A complex of 68 serviced apartments on Railway Street in central Griffith. Studio apartments come with kitchenettes, while the one, two and three bedroom apartments have full kitchens and laundry facilities. The property is aimed at families, groups and business travellers on extended stays.",
-  "phone": "02 6969 2000",
-  "website": "https://www.questapartments.com.au/properties/nsw/griffith",
-  "addressLine": "53 Railway Street",
-  "localityId": "loc-nsw-griffith",
-  "postcode": "2680",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-griffith"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "QG",
-  "logoTheme": "b",
-  "attributes": {
-   "family_rooms": "yes"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 70,
-  "isSample": false,
-  "sources": [
-   "https://www.visitnsw.com/destinations/country-nsw/riverina/griffith/accommodation/quest-griffith-0"
-  ],
-  "confidence": "medium",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quest+Griffith+Griffith+NSW",
-  "highlights": [
-   "68 serviced apartments",
-   "Studios with kitchenettes",
-   "One, two and three bedroom apartments with full kitchens",
-   "In-apartment laundry facilities",
-   "Central Railway Street location"
-  ]
- },
- {
   "id": "biz-the-leeton-heritage-motor-inn",
   "slug": "the-leeton-heritage-motor-inn",
   "name": "The Leeton Heritage Motor Inn",
@@ -35652,53 +36714,6 @@
    "Wheelchair access into the pools",
    "Lawned surrounds with barbecues and picnic spots",
    "Skywalk with views over Lake Talbot"
-  ]
- },
- {
-  "id": "biz-calabria-family-wines-riverina-cellar-door",
-  "slug": "calabria-family-wines-riverina-cellar-door",
-  "name": "Calabria Family Wines Riverina Cellar Door",
-  "status": "scraped",
-  "vertical": "things_to_do",
-  "categoryIds": [
-   "cat-wineries"
-  ],
-  "description": "The Calabria Family Wines Riverina cellar door is a Tuscan-style tasting room at Griffith, open seven days. It offers classic and premium wine flights, a 45-minute seated tasting of up to eight wines at the cellar door bar poured in Spiegelau glasses with a light platter, and a Sip and Unwind session. An Italian bar menu with antipasto, arancini and focaccia is served between 11am and 2pm, and the site includes a winery museum and an interactive sensory wall. Bookings are strongly recommended and walk-ins are taken if time permits.",
-  "website": "https://www.calabriawines.com.au/visit-us/riverina",
-  "addressLine": "1283 Brayne Road",
-  "localityId": "loc-nsw-griffith",
-  "postcode": "2680",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-griffith"
-  ],
-  "serviceAreaInferred": false,
-  "logoText": "CF",
-  "logoTheme": "c",
-  "attributes": {
-   "cellar_door": "yes",
-   "tastings": "yes",
-   "bookings": "yes",
-   "open_sunday": "yes"
-  },
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 72,
-  "isSample": false,
-  "sources": [
-   "https://www.calabriawines.com.au/visit-us/riverina/cellar-door-tastings",
-   "https://visitgriffith.com.au/listing/calabria-family-wines-riverina-cellar-door/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Calabria%20Family%20Wines%20Riverina%20Cellar%20Door%20Griffith%20NSW",
-  "highlights": [
-   "Tuscan-style cellar door open seven days",
-   "Classic, premium and Sip and Unwind tasting experiences",
-   "45-minute seated flight of up to eight wines",
-   "Italian bar menu served 11am to 2pm",
-   "Winery museum and interactive sensory wall"
   ]
  },
  {

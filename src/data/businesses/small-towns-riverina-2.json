@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Courabyra Wines",
+    "slug": "courabyra-wines",
+    "categorySlug": "wineries",
+    "vertical": "things_to_do",
+    "localityName": "Tumbarumba",
+    "state": "NSW",
+    "addressLine": "805 Courabyra Road",
+    "suburb": "Tumbarumba",
+    "postcode": "2653",
+    "phone": "02 6948 2462",
+    "website": "https://www.courabyrawines.com",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Courabyra+Wines+Tumbarumba+NSW",
+    "description": "A family owned cellar door and vineyard in the foothills of the Snowy Mountains at Tumbarumba, making cold climate wines. Tastings run alongside a seasonal menu of regional produce with indoor and outdoor dining, and the property takes weddings, group functions and special events by arrangement. Vineyard tours, helicopter tours and picnic packages among the vines can be booked, and there is a children's playground.",
+    "highlights": [
+      "Family owned cold climate vineyard and cellar door",
+      "Tastings with a seasonal regional menu",
+      "Indoor and outdoor dining",
+      "Vineyard tours, helicopter tours and picnics among the vines",
+      "Weddings and group functions by arrangement",
+      "Children's playground"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "tastings": "yes",
+      "meals": "yes",
+      "outdoor_seating": "yes",
+      "function_room": "yes",
+      "playground": "yes",
+      "kid_friendly": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/snowy-mountains/tumbarumba-area/tumbarumba/food-and-drink/courabyra-wines",
+      "https://www.courabyrawines.com"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-19"
+  },
+  {
+    "name": "Ladbroken Distillery Brewhouse",
+    "slug": "ladbroken-distillery-brewhouse",
+    "categorySlug": "distilleries",
+    "vertical": "pubs_clubs",
+    "localityName": "Tumbarumba",
+    "state": "NSW",
+    "addressLine": "7 Albury Street",
+    "suburb": "Tumbarumba",
+    "postcode": "2653",
+    "phone": "0433 571 538",
+    "website": "https://www.ladbroken.com.au",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ladbroken+Distillery+Brewhouse+Tumbarumba+NSW",
+    "description": "A craft distillery beside a stream on Albury Street in Tumbarumba, making small batch whisky, liqueurs and Eliksir gins shaped by the high country climate. The cellar door, cafe and shop pour tasting flights and craft beer alongside pizza, either in the interior speakeasy or out in the cocktail garden. Open Friday to Sunday, with private appointments by arrangement.",
+    "highlights": [
+      "Small batch whisky, liqueurs and Eliksir gins",
+      "Cellar door, cafe and shop",
+      "Tasting flights, craft beer and pizza",
+      "Interior speakeasy or outdoor cocktail garden",
+      "Open Friday to Sunday, private appointments by arrangement"
+    ],
+    "priceBand": "$$",
+    "attributes": {
+      "tastings": "yes",
+      "meals": "yes",
+      "outdoor_seating": "yes",
+      "licensed": "yes",
+      "open_sunday": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/snowy-mountains/tumbarumba-area/tumbarumba/food-and-drink/ladbroken-distillery-brewhouse-0",
+      "https://www.ladbroken.com.au"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-19"
+  },
+  {
+    "name": "Syviers Coffee House",
+    "slug": "syviers-coffee-house",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "The Rock",
+    "state": "NSW",
+    "addressLine": "115 Urana Street",
+    "suburb": "The Rock",
+    "postcode": "2655",
+    "phone": "02 6920 2707",
+    "website": "https://www.syvierscoffeehouse.com.au",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Syviers+Coffee+House+The+Rock+NSW",
+    "description": "A cafe on the main street of The Rock serving breakfast, lunch, dinner, coffee and drinks seven days a week. Group bookings and takeaway are both catered for, and the business states it welcomes people with access needs.",
+    "highlights": [
+      "On the main street of The Rock",
+      "Breakfast, lunch and dinner seven days",
+      "Group bookings taken",
+      "Takeaway available",
+      "Welcomes people with access needs"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "breakfast": "yes",
+      "meals": "yes",
+      "open_sunday": "yes",
+      "wheelchair_accessible": "yes",
+      "bookings": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/lockhart/food-and-drink/syviers-coffee-house-0",
+      "https://www.syvierscoffeehouse.com.au"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-19"
+  },
+  {
+    "name": "Latte Da Coffee Bar",
+    "slug": "latte-da-coffee-bar",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Lockhart",
+    "state": "NSW",
+    "addressLine": "133 Green Street",
+    "suburb": "Lockhart",
+    "postcode": "2656",
+    "phone": "02 6920 5210",
+    "website": "https://latte-da-coffee-bar.edan.io/",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Latte+Da+Coffee+Bar+Lockhart+NSW",
+    "description": "A coffee bar on Green Street in Lockhart doing blackboard specials, gourmet sandwiches made to order, toasted Turkish rolls, pies and sausage rolls. The cake cabinet holds a mix of homemade and sourced cakes and slices, with cold drinks and milkshakes alongside. Pizza runs on Fridays. Pantry items are sourced locally, and there is indoor and outdoor seating as well as takeaway.",
+    "highlights": [
+      "Blackboard specials and gourmet sandwiches made to order",
+      "Toasted Turkish rolls, pies and sausage rolls",
+      "Cake cabinet of homemade and sourced cakes and slices",
+      "Pizza on Fridays",
+      "Locally sourced pantry items",
+      "Indoor and outdoor seating, and takeaway"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "dine_in": "yes",
+      "takeaway": "yes",
+      "outdoor_seating": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/lockhart/food-and-drink/latte-da-coffee-bar",
+      "https://latte-da-coffee-bar.edan.io/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-19"
+  },
+  {
+    "name": "Coolamon Perk",
+    "slug": "coolamon-perk",
+    "categorySlug": "cafes",
+    "vertical": "eat_drink",
+    "localityName": "Coolamon",
+    "state": "NSW",
+    "addressLine": "115 Cowabbie Street",
+    "suburb": "Coolamon",
+    "postcode": "2701",
+    "phone": "02 6927 2295",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Coolamon+Perk+NSW",
+    "description": "A cafe on Cowabbie Street in Coolamon open six days a week for breakfast and lunch, with coffee, cakes, slices, wraps and sandwiches in a relaxed family friendly room.",
+    "highlights": [
+      "Open six days a week",
+      "Breakfast and lunch",
+      "Cakes, slices, wraps and sandwiches",
+      "Relaxed and family friendly"
+    ],
+    "priceBand": "$",
+    "attributes": {
+      "dine_in": "yes",
+      "breakfast": "yes",
+      "kid_friendly": "yes"
+    },
+    "sources": [
+      "https://www.visitnsw.com/destinations/country-nsw/riverina/coolamon/food-and-drink/coolamon-perk"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-19"
+  },
+  {
+    "name": "Quest Griffith",
+    "slug": "quest-griffith",
+    "categorySlug": "hotels",
+    "vertical": "stay",
+    "localityName": "Griffith",
+    "state": "NSW",
+    "addressLine": "53 Railway Street",
+    "suburb": "Griffith",
+    "postcode": "2680",
+    "phone": "02 6969 2000",
+    "website": "https://www.questapartments.com.au/properties/nsw/griffith/quest-griffith",
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Quest+Griffith+NSW",
+    "description": "Sixty eight serviced apartments on Railway Street in Griffith, running from studios to three bedroom apartments and suited to both short and long stays. Studios have kitchenettes; one bedroom and larger apartments have full kitchens and laundry facilities.",
+    "highlights": [
+      "68 serviced apartments",
+      "Studios through to three bedroom apartments",
+      "Full kitchens and laundry in one bedroom and larger",
+      "Suited to short and long stays"
+    ],
+    "priceBand": "$$$",
+    "attributes": {
+      "accommodation": "yes",
+      "family_rooms": "yes",
+      "parking": "yes"
+    },
+    "sources": [
+      "https://visitgriffith.com.au/listing/quest-griffith/",
+      "https://www.questapartments.com.au/properties/nsw/griffith/quest-griffith"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-19"
+  }
+]

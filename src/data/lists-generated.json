@@ -314,6 +314,53 @@
     "reviewedAt": "2026-08-19"
   },
   {
+    "slug": "bakeries-in-the-riverina",
+    "title": "Every bakery in the Riverina",
+    "intro": "All 8 bakeries we list across the Riverina, in 7 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "localitySlug": "albury",
+    "state": "NSW",
+    "regionSlug": "riverina",
+    "categorySlug": "bakeries",
+    "items": [
+      {
+        "listingSlug": "beechworth-bakery-albury",
+        "blurb": "Ned Kelly pie and the Beesting. Cakes, pastries, pies, breads and rolls. Open seven days. $."
+      },
+      {
+        "listingSlug": "valentines-bakehouse",
+        "blurb": "Artisan sourdough baked daily. Sandwiches, fresh lunches and homemade cakes. $."
+      },
+      {
+        "listingSlug": "lake-village-bakery",
+        "blurb": "Bakery and cafe. Takeaway available. $."
+      },
+      {
+        "listingSlug": "the-narrandera-bakery",
+        "blurb": "Trading since 1998. Fresh bread and rolls daily. $."
+      },
+      {
+        "listingSlug": "crust-and-crumb-bakery",
+        "blurb": "Slow-fermented naturally leavened sourdough. Certified sustainable Australian flour. Closed Sundays. $."
+      },
+      {
+        "listingSlug": "the-roundabout-bakery-temora",
+        "blurb": "Family owned. Bread, cakes, pies and sausage rolls baked daily. $."
+      },
+      {
+        "listingSlug": "quinty-bakehouse",
+        "blurb": "Cooked breakfast and lunch menu. Sourdough, cobbs and baguettes. $."
+      },
+      {
+        "listingSlug": "artisan-baker-so-french-so-fresh",
+        "blurb": "French-owned boulangerie and patisserie. Sourdough and French-style breads. $."
+      }
+    ],
+    "author": "LocalsKnow",
+    "method": "compiled",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19"
+  },
+  {
     "slug": "baylis-street-wagga-wagga",
     "title": "What is on Baylis Street, Wagga Wagga",
     "intro": "Everything we list with an address on Baylis Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 19 places across 5 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
@@ -404,8 +451,8 @@
   },
   {
     "slug": "cafes-in-the-riverina",
-    "title": "Every cafes in the Riverina",
-    "intro": "All 22 cafes we list across the Riverina, in 8 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "title": "Every cafe in the Riverina",
+    "intro": "All 30 cafes we list across the Riverina, in 11 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -444,8 +491,32 @@
         "blurb": "Gourmet sandwiches, hot finger food and house-made baked goods. Social enterprise run by AlburyCity for young people aged 12-24. Closed Sundays. $."
       },
       {
-        "listingSlug": "coolamon-cheese-co",
+        "listingSlug": "coolamon-cheese-co-coolamon",
         "blurb": "Retail space with regional produce. Handcrafted cheese made on site. Open seven days. $$."
+      },
+      {
+        "listingSlug": "the-station-collective-coolamon",
+        "blurb": "In the heritage Coolamon railway station. Coffee and house made lunch. $."
+      },
+      {
+        "listingSlug": "coolamon-perk",
+        "blurb": "Open six days a week. Breakfast and lunch. $."
+      },
+      {
+        "listingSlug": "limone-dining",
+        "blurb": "Menu built around seasonal Riverina produce. Takeaway and pantry counter. $$."
+      },
+      {
+        "listingSlug": "cafe-2sixty2",
+        "blurb": "Extensive all day menu. Family owned cafe on Banna Avenue."
+      },
+      {
+        "listingSlug": "bellas-cafe-griffith",
+        "blurb": "In Griffin Plaza. Freshly made sandwiches and focaccias. $."
+      },
+      {
+        "listingSlug": "kaldi-and-the-dancing-goats",
+        "blurb": "Inside St Vincent's Private Hospital. Orders by phone or text. $."
       },
       {
         "listingSlug": "the-ten-mile",
@@ -466,6 +537,14 @@
       {
         "listingSlug": "red-brik-caffe",
         "blurb": "Open seven days, 8am to 2pm. All-day breakfast plus lunch and cakes. $$."
+      },
+      {
+        "listingSlug": "latte-da-coffee-bar",
+        "blurb": "Pizza on Fridays. Blackboard specials and gourmet sandwiches made to order. $."
+      },
+      {
+        "listingSlug": "syviers-coffee-house",
+        "blurb": "On the main street of The Rock. Breakfast, lunch and dinner seven days. $."
       },
       {
         "listingSlug": "the-gardens-wagga",
@@ -1239,6 +1318,61 @@
     "reviewedAt": "2026-08-19"
   },
   {
+    "slug": "hotels-in-the-riverina",
+    "title": "Every hotel in the Riverina",
+    "intro": "All 10 hotels we list across the Riverina, in 3 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "localitySlug": "glenfield-park",
+    "state": "NSW",
+    "regionSlug": "riverina",
+    "categorySlug": "hotels",
+    "items": [
+      {
+        "listingSlug": "quality-hotel-rules-club-wagga",
+        "blurb": "79 units including four accessible rooms. Directly connected to the Rules Club."
+      },
+      {
+        "listingSlug": "quest-griffith",
+        "blurb": "Full kitchens and laundry in one bedroom and larger. Studios with kitchenettes. $$$."
+      },
+      {
+        "listingSlug": "the-area-hotel-griffith",
+        "blurb": "Budget accommodation. Shared facilities. $."
+      },
+      {
+        "listingSlug": "mantra-pavilion-hotel-wagga-wagga",
+        "blurb": "109-foot fabric roof over the hotel. Rooms with marble bathrooms and spas."
+      },
+      {
+        "listingSlug": "st-hugh-hotel",
+        "blurb": "Signature, Family, Accessible and Luxury rooms. Custom king beds and smart TVs."
+      },
+      {
+        "listingSlug": "the-charles-boutique-hotel-and-dining",
+        "blurb": "Tasting menu and a la carte using Riverina produce. Boutique king rooms, suites and self-contained apartments. $$$."
+      },
+      {
+        "listingSlug": "the-riverine-club",
+        "blurb": "13 guest rooms in the Wagga CBD. Some rooms with river-view balconies."
+      },
+      {
+        "listingSlug": "mercure-wagga-wagga",
+        "blurb": "86 hotel rooms and self-contained apartments. One Morgan Street restaurant and bar."
+      },
+      {
+        "listingSlug": "international-hotel-wagga-wagga",
+        "blurb": "81 hotel rooms and suites. Pinnacle's Restaurant and Bar on site."
+      },
+      {
+        "listingSlug": "townhouse-hotel-wagga",
+        "blurb": "Central Morgan Street location. Oakroom Restaurant and Bar on site."
+      }
+    ],
+    "author": "LocalsKnow",
+    "method": "compiled",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19"
+  },
+  {
     "slug": "kincaid-street-wagga-wagga",
     "title": "What is on Kincaid Street, Wagga Wagga",
     "intro": "Everything we list with an address on Kincaid Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 6 places across 4 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
@@ -1672,7 +1806,7 @@
   },
   {
     "slug": "mechanics-in-the-riverina",
-    "title": "Every mechanics in the Riverina",
+    "title": "Every mechanic in the Riverina",
     "intro": "All 14 mechanics we list across the Riverina, in 7 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
@@ -1792,8 +1926,8 @@
   },
   {
     "slug": "motels-in-the-riverina",
-    "title": "Every motels in the Riverina",
-    "intro": "All 19 motels we list across the Riverina, in 9 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "title": "Every motel in the Riverina",
+    "intro": "All 20 motels we list across the Riverina, in 10 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -1830,6 +1964,10 @@
       {
         "listingSlug": "hume-country-motor-inn",
         "blurb": "Swimming pool and BBQ area. Children's play area. $$."
+      },
+      {
+        "listingSlug": "citrus-motel-griffith",
+        "blurb": "28 rooms. On Jondaryan Avenue, close to the town centre. $."
       },
       {
         "listingSlug": "seven-inn",
@@ -1883,7 +2021,7 @@
   },
   {
     "slug": "museums-in-the-riverina",
-    "title": "Every museums in the Riverina",
+    "title": "Every museum in the Riverina",
     "intro": "All 9 museums we list across the Riverina, in 7 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
@@ -2049,7 +2187,7 @@
   {
     "slug": "oldest-businesses-in-the-riverina",
     "title": "The oldest businesses still trading in the Riverina",
-    "intro": "56 businesses across 14 towns of the Riverina that publish the year they started, oldest first, running from 1851 to 2024. The list is only as old as what each business says about itself, so a pub that has poured beer since the gold rush but never prints a date is not here. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "58 businesses across 16 towns of the Riverina that publish the year they started, oldest first, running from 1851 to 2024. The list is only as old as what each business says about itself, so a pub that has poured beer since the gold rush but never prints a date is not here. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -2139,6 +2277,10 @@
         "blurb": "Since 1977, in Albury. Plays Friday nights from 8pm. Meets at Albury High School, Kiewa Street."
       },
       {
+        "listingSlug": "la-scala-restaurant-griffith",
+        "blurb": "Since 1977, in Griffith. Traditional wood fired pizza. House made pasta, gelato and desserts."
+      },
+      {
         "listingSlug": "nail-can-hill",
         "blurb": "Since 1977, in West Albury. Free access to 1200 hectares of bushland. About 29km of mountain bike singletrack across roughly 70 tracks."
       },
@@ -2189,6 +2331,10 @@
       {
         "listingSlug": "indian-tandoori-restaurant-albury",
         "blurb": "Since 1998, in Albury. North Indian and Goan cuisine. Tandoor baked meats and breads. Open seven days."
+      },
+      {
+        "listingSlug": "the-narrandera-bakery",
+        "blurb": "Since 1998, in Narrandera. Fresh bread and rolls daily. Pies, pasties and sausage rolls."
       },
       {
         "listingSlug": "trail-st-cafe",
@@ -2746,7 +2892,7 @@
   },
   {
     "slug": "plumbers-in-the-riverina",
-    "title": "Every plumbers in the Riverina",
+    "title": "Every plumber in the Riverina",
     "intro": "All 9 plumbers we list across the Riverina, in 5 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
@@ -2797,7 +2943,7 @@
   },
   {
     "slug": "pubs-in-the-ovens-murray",
-    "title": "Every pubs in the Ovens Murray",
+    "title": "Every pub in the Ovens Murray",
     "intro": "All 9 pubs we list across the Ovens Murray, in 5 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "beechworth",
     "state": "VIC",
@@ -2848,8 +2994,8 @@
   },
   {
     "slug": "pubs-in-the-riverina",
-    "title": "Every pubs in the Riverina",
-    "intro": "All 31 pubs we list across the Riverina, in 13 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "title": "Every pub in the Riverina",
+    "intro": "All 32 pubs we list across the Riverina, in 14 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -2924,6 +3070,10 @@
         "blurb": "Courtyard, dining room and betting lounge. Drive-through bottle shop. Open seven days. $$."
       },
       {
+        "listingSlug": "terminus-hotel-temora",
+        "blurb": "Bar, bistro and beer garden. Accommodation off the main street. $$."
+      },
+      {
         "listingSlug": "kinross-woolshed",
         "blurb": "Set in a converted woolshed. Sports bar and gaming lounge."
       },
@@ -2978,6 +3128,69 @@
       {
         "listingSlug": "black-swan-hotel",
         "blurb": "Bar and light meals. Country pub at North Wagga Wagga. Open seven days. $."
+      }
+    ],
+    "author": "LocalsKnow",
+    "method": "compiled",
+    "publishedAt": "2026-08-19",
+    "reviewedAt": "2026-08-19"
+  },
+  {
+    "slug": "restaurants-in-the-riverina",
+    "title": "Every restaurant in the Riverina",
+    "intro": "All 12 restaurants we list across the Riverina, in 3 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "localitySlug": "albury",
+    "state": "NSW",
+    "regionSlug": "riverina",
+    "categorySlug": "restaurants",
+    "items": [
+      {
+        "listingSlug": "din-dins",
+        "blurb": "Asian fusion menu. Panda Room private function space with its own bar. Closed Sundays. $$."
+      },
+      {
+        "listingSlug": "aida-mediterranean-cuisine-and-bar",
+        "blurb": "Mediterranean menu built for sharing. Outdoor charcoal grill. Open 5 days including Sunday. $$."
+      },
+      {
+        "listingSlug": "level-one-wine-bar",
+        "blurb": "Seasonal menu by head chef Matt King. Over 300 wines on the wall-of-wine. $$$."
+      },
+      {
+        "listingSlug": "canvas-eatery",
+        "blurb": "Seasonal Riverina and Murray produce. Behind Murray Art Museum Albury. $$."
+      },
+      {
+        "listingSlug": "argos-albury",
+        "blurb": "Modern Greek cooking. Wood-fired charcoal oven. $$."
+      },
+      {
+        "listingSlug": "bull-and-bell-steakhouse",
+        "blurb": "Buys direct from local farmers and artisan producers. European style steakhouse on Banna Avenue. $$$."
+      },
+      {
+        "listingSlug": "astor-bar-and-grill",
+        "blurb": "Pub classics and pizzas. Pizzas from the bar outside restaurant hours. Closed Sundays. $$."
+      },
+      {
+        "listingSlug": "magpies-nest-restaurant",
+        "blurb": "Set-priced, regularly changing menu. Stone stable building from the 1860s. $$$."
+      },
+      {
+        "listingSlug": "the-oakroom-kitchen-and-bar",
+        "blurb": "Seasonal menu using local ingredients. Restaurant inside the Townhouse Hotel. $$$."
+      },
+      {
+        "listingSlug": "the-charles-dining-room",
+        "blurb": "Three-course and five-course tasting menus. A la carte menu Tuesday to Thursday. $$$."
+      },
+      {
+        "listingSlug": "pinnacles-restaurant-and-bar",
+        "blurb": "Seasonal menus using Riverina produce. Restaurant at the International Hotel Wagga Wagga. $$."
+      },
+      {
+        "listingSlug": "mr-lawrence",
+        "blurb": "Chef's tasting menu at night. Coffee and hotcakes in the morning. $$$."
       }
     ],
     "author": "LocalsKnow",
@@ -3159,7 +3372,7 @@
   },
   {
     "slug": "swimming-spots-in-the-riverina",
-    "title": "Every swimming spots in the Riverina",
+    "title": "Every swimming spot in the Riverina",
     "intro": "All 8 swimming spots we list across the Riverina, in 6 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
@@ -3550,7 +3763,7 @@
   },
   {
     "slug": "wineries-in-the-ovens-murray",
-    "title": "Every wineries in the Ovens Murray",
+    "title": "Every winery in the Ovens Murray",
     "intro": "All 19 wineries we list across the Ovens Murray, in 3 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "beechworth",
     "state": "VIC",
