@@ -217,8 +217,16 @@ Two things are deliberately NOT automated, and both are load bearing:
 - **Publishing scraped businesses.** `scripts/scrape.mjs` writes to an inbox and a
   person promotes them. An unreviewed scraped row is how a directory fills up with
   businesses that closed in 2019, which is the reason nobody trusts the incumbents.
-- **Curated lists.** They are meant to be opinionated and human. A generated
-  "best of" is a ranking with the judgement taken out, and it earns no links.
+- **Generated "best of" rankings.** A ranked list with the judgement taken out
+  earns no links and deserves none. This rule was once written more broadly, as
+  "no generated lists at all", and it has been narrowed deliberately rather than
+  quietly: compiled lists now exist, but not one of them ranks anything. They
+  order by street number, by founding year, by closing time or by town, they
+  print the rule that selected them, and they are labelled compiled and kept in
+  a separate file from the lists a person wrote. The thing the original rule was
+  protecting, which is that a reader can tell human judgement from arithmetic,
+  is protected by the label rather than by the absence. See "Curated lists"
+  below.
 
 ```bash
 npm run refresh     # regenerate, rebuild, verify. What CI runs.
@@ -384,3 +392,31 @@ modern phone photo can breach on a rural connection, so
 are sent — 1600px on the long edge for a photo, 800px for a logo. It writes the
 smaller file back into the input rather than posting over fetch, so the form
 keeps its ordinary native submission.
+
+## Curated lists
+
+Two kinds, in two files, and the difference is printed on every page.
+
+`src/data/lists.json` holds lists a person wrote: they chose the entries and
+wrote the notes, and they carry a byline. **Nothing generates into this file.**
+
+`src/data/lists-generated.json` is written by `npm run lists` and is safe to
+delete and rebuild. Each compiled list prints the rule it was compiled by, the
+same way the hidden gems page does, and every note under an entry is assembled
+from the highlights already recorded against that listing during research.
+Nothing is invented; the only editorial act is choosing which of a business's
+facts are relevant to a given list, which is why the same cafe reads differently
+on a Sunday list and on a step free list.
+
+A compiled list only exists where it is a shape no other page has. Locality x
+category is a money page, category x attribute is a modifier page, and the five
+cross category cuts are theme pages. What is left is a street, a day out in
+order, a category across a region, a cross vertical attribute cut, the businesses
+that publish a founding year, what is open late, and free things to do across a
+region. A compiled list also stands down when a hand written list already covers
+the same ground, which is why there is no compiled Dean Street list.
+
+`npm run build` fails if a list references a listing that does not exist or has
+been suspended, lists the same business twice, has fewer than five entries, or
+if a generated list is not marked `compiled` — because the index page tells
+readers which lists a person wrote, and that has to stay true.
