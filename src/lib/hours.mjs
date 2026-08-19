@@ -17,6 +17,15 @@
  * closed day. A close at or before the open means the session runs past
  * midnight, which is ordinary for a pub: "660-60" is eleven in the morning
  * until one the next morning.
+ *
+ * A day can have more than one session, joined with a plus:
+ *
+ *   "720-900+1020-1260"
+ *
+ * That is lunch and dinner with the afternoon shut in between, and it is what
+ * 14 of the listings actually publish. The first version of this took only the
+ * first session of each day, which reported every one of those restaurants as
+ * closed all evening.
  */
 
 /** Minutes from midnight for a "HH:MM" string, or null if unparseable. */
@@ -39,12 +48,15 @@ export function toMinutes(t) {
  */
 export function encodeHours(hours) {
   const week = [0, 1, 2, 3, 4, 5, 6].map((day) => {
-    const h = (hours ?? []).find((x) => x.day === day);
-    if (!h || h.closed) return '';
-    const open = toMinutes(h.opens);
-    const close = toMinutes(h.closes);
-    if (open === null || close === null) return '';
-    return open + '-' + close;
+    const sessions = (hours ?? [])
+      .filter((x) => x.day === day && !x.closed)
+      .map((x) => {
+        const open = toMinutes(x.opens);
+        const close = toMinutes(x.closes);
+        return open === null || close === null ? null : open + '-' + close;
+      })
+      .filter(Boolean);
+    return sessions.join('+');
   });
   // Every slot empty means the business publishes nothing, which the filter
   // has to be able to tell apart from "closed right now".
@@ -63,28 +75,31 @@ export function isOpenAt(encoded, now) {
   const mins = now.getHours() * 60 + now.getMinutes();
   const parts = encoded.split(',');
 
-  const slot = (d) => {
-    const raw = parts[d];
-    if (!raw) return null;
-    const [a, b] = raw.split('-');
-    const open = Number(a);
-    const close = Number(b);
-    return isFinite(open) && isFinite(close) ? { open, close } : null;
-  };
+  const slots = (d) =>
+    (parts[d] || '')
+      .split('+')
+      .filter(Boolean)
+      .map((raw) => {
+        const [a, b] = raw.split('-');
+        const open = Number(a);
+        const close = Number(b);
+        return isFinite(open) && isFinite(close) ? { open, close } : null;
+      })
+      .filter(Boolean);
 
-  const today = slot(day);
-  if (today) {
-    if (today.close > today.open) {
-      if (mins >= today.open && mins < today.close) return true;
-    } else if (mins >= today.open) {
+  for (const s of slots(day)) {
+    if (s.close > s.open) {
+      if (mins >= s.open && mins < s.close) return true;
+    } else if (mins >= s.open) {
       // Runs past midnight, so it is open from the opening time to the end of
       // the day. The tail lands on tomorrow, handled below.
       return true;
     }
   }
 
-  const yesterday = slot((day + 6) % 7);
-  if (yesterday && yesterday.close <= yesterday.open && mins < yesterday.close) return true;
+  for (const s of slots((day + 6) % 7)) {
+    if (s.close <= s.open && mins < s.close) return true;
+  }
 
   return false;
 }

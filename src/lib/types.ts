@@ -278,10 +278,25 @@ export interface CuratedList {
   intro: string;
   localitySlug: string;
   state: StateCode;
-  categorySlug: string;
+  /**
+   * Optional, because a list is not always about one category. A street or a
+   * day out deliberately crosses several.
+   */
+  categorySlug?: string;
+  /** Set when the list spans a whole region rather than sitting in one town. */
+  regionSlug?: string;
   author: string;
   publishedAt: string;
   reviewedAt: string;
+  /**
+   * How the list was made. 'written' means a person chose the entries and
+   * wrote the notes; 'compiled' means a stated rule selected them and the
+   * notes were assembled from facts already recorded against each listing.
+   * The distinction is printed on the page, because the lists index claims
+   * its lists are written by a person and that has to stay true of the ones
+   * that say so.
+   */
+  method?: 'written' | 'compiled';
   items: { listingSlug: string; blurb: string }[];
 }
 

@@ -28,6 +28,7 @@ const REQUIRED = [
   'tools.json',
   'events.json',
   'lists.json',
+  'lists-generated.json',
 ];
 
 for (const f of REQUIRED) {
@@ -57,6 +58,7 @@ const events = read('events.json');
 const tools = read('tools.json');
 const wire = read('wire.json');
 const lists = read('lists.json');
+const listsGenerated = read('lists-generated.json');
 
 const regions = [...geo.NSW.regions, ...geo.VIC.regions];
 const localities = [...geo.NSW.localities, ...geo.VIC.localities];
@@ -218,6 +220,76 @@ for (const t of tools) {
   if (!['live', 'planned'].includes(t.status)) fail('tool ' + t.slug + ' has an invalid status');
 }
 
+// ---------------------------------------------------------------- lists
+{
+  // Compiled lists are written by scripts/generate-lists.mjs from the listing
+  // data, which means they go stale the moment a listing is renamed or
+  // removed. A list pointing at a business that no longer exists renders as a
+  // shorter list with no warning, so it fails the build instead.
+  const listingSlugs = new Set(listings.map((l) => l.slug));
+  const suspended = new Set(listings.filter((l) => l.status === 'suspended').map((l) => l.slug));
+  const localitySlugs = new Set(localities.map((l) => l.slug));
+  const categorySlugs = new Set(categories.map((c) => c.slug));
+  const regionSlugs = new Set(regions.map((r) => r.slug));
+
+  const all = [...lists, ...listsGenerated];
+  const seenSlug = new Map();
+
+  for (const l of all) {
+    const where = 'list ' + l.slug;
+
+    if (seenSlug.has(l.slug)) fail(where + ' is defined twice');
+    seenSlug.set(l.slug, true);
+
+    if (!l.localitySlug || !localitySlugs.has(l.localitySlug)) {
+      fail(where + ' points at an unknown locality: ' + l.localitySlug);
+    }
+    if (l.categorySlug && !categorySlugs.has(l.categorySlug)) {
+      fail(where + ' points at an unknown category: ' + l.categorySlug);
+    }
+    if (l.regionSlug && !regionSlugs.has(l.regionSlug)) {
+      fail(where + ' points at an unknown region: ' + l.regionSlug);
+    }
+    if (!l.items || l.items.length < 5) {
+      fail(where + ' has fewer than five entries, which is not a list');
+    }
+
+    const seenItem = new Set();
+    for (const item of l.items ?? []) {
+      if (!listingSlugs.has(item.listingSlug)) {
+        fail(where + ' references a listing that does not exist: ' + item.listingSlug);
+      } else if (suspended.has(item.listingSlug)) {
+        fail(where + ' references a suspended listing: ' + item.listingSlug);
+      }
+      if (seenItem.has(item.listingSlug)) {
+        fail(where + ' lists ' + item.listingSlug + ' twice');
+      }
+      seenItem.add(item.listingSlug);
+
+      // An entry with nothing to say about it is filler. The generator drops
+      // those rather than padding them, so one arriving here is a bug.
+      const blurb = String(item.blurb ?? '').trim();
+      if (blurb.length < 20) {
+        fail(where + ': ' + item.listingSlug + ' has no usable note');
+      }
+    }
+  }
+
+  // The lists index tells the reader which lists a person wrote. That claim
+  // only holds while every compiled list is labelled as one.
+  for (const l of listsGenerated) {
+    if (l.method !== 'compiled') fail('list ' + l.slug + ' is generated but not marked compiled');
+  }
+  for (const l of lists) {
+    if (l.method === 'compiled') fail('hand written list ' + l.slug + ' is marked compiled');
+  }
+
+  console.log(
+    '  lists        ' + lists.length + ' written, ' + listsGenerated.length + ' compiled, ' +
+      all.reduce((t, l) => t + (l.items?.length ?? 0), 0) + ' entries',
+  );
+}
+
 // ---------------------------------------------------------------- coverage
 
 const withListings = new Set(listings.map((l) => l.localityId));
@@ -325,7 +397,7 @@ console.log('  listings     ' + listings.length);
   console.log('  imagery      ' + logos + ' logos, ' + photos + ' photos');
 }
 
-console.log('  guides       ' + guides.length + '   wire ' + wire.length + '   tools ' + tools.length + '   events ' + events.length + '   lists ' + lists.length);
+console.log('  guides       ' + guides.length + '   wire ' + wire.length + '   tools ' + tools.length + '   events ' + events.length);
 
 if (warnings.length) {
   console.log('');

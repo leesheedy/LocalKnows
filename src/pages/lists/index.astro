@@ -30,6 +30,8 @@ import {
 const canonicalPath = url.lists();
 
 const rows = curatedLists.slice().sort((a, b) => b.reviewedAt.localeCompare(a.reviewedAt));
+const written = rows.filter((l) => l.method !== 'compiled');
+const compiled = rows.filter((l) => l.method === 'compiled');
 const lastReviewed = rows[0]?.reviewedAt;
 
 const byState = (['NSW', 'VIC'] as StateCode[]).map((code) => ({
@@ -41,7 +43,7 @@ const byState = (['NSW', 'VIC'] as StateCode[]).map((code) => ({
 const h1 = 'Curated lists';
 const pageTitle = 'Curated lists of NSW and Victorian businesses';
 const description =
-  'Lists written and ranked by a person, not sorted by a score. Each one names its author, shows the date it was last reviewed, and says why every entry is on it.';
+  'Lists that cut across the directory: a street end to end, a day out in order, a category across a whole region. Each one says whether a person wrote it or a stated rule compiled it.';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -82,12 +84,16 @@ const jsonLd = graph([
       <p class="eyebrow mono">Editorial</p>
       <h1>{h1}</h1>
       <p class="standfirst">
-        Every list here is written and ranked by a person, carries that person's name and
-        shows the date it was last reviewed. Businesses that make a list tend to link to
-        it without being asked, which is most of the reason these pages exist.
+        Lists cut across the directory in ways a category page cannot: a street from one
+        end to the other, a day out in the order you would do it, a category across a whole
+        region. Some are written and ranked by a person and carry that person's name. The
+        rest are compiled by a rule, and each of those prints the rule it was compiled by.
+        Every list says which it is at the top, because the difference matters.
       </p>
       <div class="headmeta">
         <span>{rows.length} {rows.length === 1 ? 'list' : 'lists'}</span>
+        <span>&middot; {written.length} written by hand</span>
+        <span>&middot; {compiled.length} compiled by rule</span>
         {lastReviewed && (
           <span>
             &middot; Last review <time datetime={lastReviewed}>{humanDate(lastReviewed)}</time>

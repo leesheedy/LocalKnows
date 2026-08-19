@@ -24,7 +24,8 @@
     "refresh": "node scripts/generate-wire.mjs && node scripts/ingest-businesses.mjs && npm run build && npm run verify",
     "smoke": "node scripts/smoke.mjs",
     "test": "node scripts/selftest.mjs",
-    "audit": "node scripts/audit-seo.mjs"
+    "audit": "node scripts/audit-seo.mjs",
+    "lists": "node scripts/generate-lists.mjs"
   },
   "dependencies": {
     "astro": "^5.18.2"

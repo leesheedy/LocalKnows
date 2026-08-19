@@ -93,16 +93,20 @@ const description =
   <div class="wrap">
     <div class="pagehead">
       <p class="eyebrow mono">
-        Curated list &middot; {locality?.name ?? list.localitySlug}, {list.state}
+        {list.method === 'compiled' ? 'Compiled list' : 'Curated list'}
+        {' '}&middot; {locality?.name ?? list.localitySlug}, {list.state}
       </p>
       <h1>{list.title}</h1>
       <p class="mono" style="color:var(--wattle-ink);margin:14px 0 0">
-        By {list.author} &middot; last reviewed{' '}
+        {list.method === 'compiled' ? 'Compiled by' : 'By'} {list.author} &middot; last reviewed{' '}
         <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
       </p>
       <p class="standfirst">{list.intro}</p>
       <div class="headmeta">
-        <span>{entries.length} {entries.length === 1 ? 'business' : 'businesses'}, ranked</span>
+        <span>
+          {entries.length} {entries.length === 1 ? 'business' : 'businesses'}
+          {list.method === 'compiled' ? '' : ', ranked'}
+        </span>
         <span>
           &middot; Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
         </span>

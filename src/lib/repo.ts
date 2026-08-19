@@ -33,6 +33,7 @@ import wireRaw from '../data/wire.json';
 import toolsRaw from '../data/tools.json';
 import eventsRaw from '../data/events.json';
 import listsRaw from '../data/lists.json';
+import listsGeneratedRaw from '../data/lists-generated.json';
 import communityRaw from '../data/community.json';
 
 // ------------------------------------------------------------------ load
@@ -57,7 +58,15 @@ export const guides: Guide[] = guidesRaw as unknown as Guide[];
 export const wire: WireArticle[] = wireRaw as unknown as WireArticle[];
 export const tools: ToolPage[] = toolsRaw as unknown as ToolPage[];
 export const events: EventRecord[] = eventsRaw as unknown as EventRecord[];
-export const curatedLists: CuratedList[] = listsRaw as unknown as CuratedList[];
+/**
+ * Hand written lists first, then the compiled ones. Two files rather than one
+ * because scripts/generate-lists.mjs rewrites its own output on every run and
+ * must never be able to touch a list somebody wrote.
+ */
+export const curatedLists: CuratedList[] = [
+  ...(listsRaw as unknown as CuratedList[]).map((l) => ({ method: 'written' as const, ...l })),
+  ...(listsGeneratedRaw as unknown as CuratedList[]),
+];
 
 // ------------------------------------------------------------------ indexes
 

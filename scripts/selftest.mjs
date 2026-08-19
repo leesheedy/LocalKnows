@@ -653,6 +653,19 @@ if (fs.existsSync(path.join(DATA, 'community.json'))) {
   eq('pub open Sunday 00:30, still Saturday night', isOpenAt(pub, at(0, 0, 30)), true);
   eq('pub shut Monday night', isOpenAt(pub, at(1, 23, 0)), false);
 
+  // A restaurant with lunch and dinner and the afternoon shut between them.
+  // The first version of the encoder kept only the first session of each day,
+  // which reported every such place as closed all evening.
+  const split = encodeHours([
+    { day: 3, opens: '12:00', closes: '15:00' },
+    { day: 3, opens: '17:00', closes: '21:00' },
+  ]);
+  eq('two sessions in a day encode with a plus', split, ',,,720-900+1020-1260,,,');
+  eq('open during lunch', isOpenAt(split, at(3, 13, 0)), true);
+  eq('shut in the afternoon gap', isOpenAt(split, at(3, 16, 0)), false);
+  eq('open again for dinner', isOpenAt(split, at(3, 18, 0)), true);
+  eq('shut after dinner', isOpenAt(split, at(3, 22, 0)), false);
+
   // Closing exactly at midnight is written as 0, which is also "less than the
   // open time", so it must not leak into the following morning.
   const tillMidnight = encodeHours([{ day: 0, opens: '11:00', closes: '00:00' }]);
@@ -669,10 +682,14 @@ if (fs.existsSync(path.join(DATA, 'community.json'))) {
       const enc = encodeHours(l.hours);
       if (!enc) continue;
       withHours++;
-      for (const slot of enc.split(',')) {
-        if (!slot) continue;
-        const [o, c] = slot.split('-').map(Number);
-        if (!isFinite(o) || !isFinite(c) || o < 0 || o > 1439 || c < 0 || c > 1439) bad++;
+      for (const day of enc.split(',')) {
+        if (!day) continue;
+        // A day can hold several sessions joined with a plus.
+        for (const slot of day.split('+')) {
+          if (!slot) continue;
+          const [o, c] = slot.split('-').map(Number);
+          if (!isFinite(o) || !isFinite(c) || o < 0 || o > 1439 || c < 0 || c > 1439) bad++;
+        }
       }
     }
     eq('every encoded opening time is a valid minute of the day', bad, 0);
