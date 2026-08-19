@@ -9,7 +9,8 @@ import {
   STATES,
   getRegion,
   activeCategoriesInLocality,
-  hasGuidePages,
+  hasTownGuide,
+  hasHiddenGems,
   themesFor,
   listingsInLocality,
   neighboursOf,
@@ -23,7 +24,7 @@ import Base from '~/layouts/Base.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { hubSummary, otherStateLabel, n } from '~/lib/copy';
+import { hubSummary, otherStateLabel, n, plural } from '~/lib/copy';
 import { humanDate, shortDate } from '~/lib/build';
 import {
   graph,
@@ -74,7 +75,7 @@ const h1 = 'Businesses in ' + locality.name + ', ' + locality.state;
 const description = (() => {
   let out =
     n(rows.length) +
-    ' businesses and places in ' +
+    plural(rows.length, ' business or place in ', ' businesses and places in ') +
     locality.name +
     ' ' +
     locality.state +
@@ -82,7 +83,7 @@ const description = (() => {
     locality.postcode +
     ', across ' +
     active.length +
-    ' categories.';
+    plural(active.length, ' category.', ' categories.');
   const extras = [
     travelIn ? travelIn + ' of them travel in from nearby towns.' : '',
     verified > 0 ? verified + ' verified.' : '',
@@ -109,7 +110,7 @@ const faqs = [
       n(rows.length) +
       ' across ' +
       active.length +
-      ' categories, of which ' +
+      plural(active.length, ' category, of which ', ' categories, of which ') +
       verified +
       ' have been verified. ' +
       (travelIn ? travelIn + ' of them are based in a nearby town and travel in to work here.' : ''),
@@ -158,8 +159,8 @@ const jsonLd = graph([
       <h1>{h1}</h1>
       <p class="standfirst">{locality.blurb}</p>
       <div class="headmeta">
-        <span>{n(rows.length)} listings</span>
-        <span>&middot; {active.length} categories</span>
+        <span>{n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
+        <span>&middot; {active.length} {plural(active.length, 'category', 'categories')}</span>
         {verified > 0 && <span>&middot; {verified} verified</span>}
         <span>&middot; Checked {buildDate}</span>
       </div>
@@ -173,18 +174,22 @@ const jsonLd = graph([
       </nav>
     )}
 
-    {hasGuidePages(locality.id) && (
+    {(hasTownGuide(locality.id) || hasHiddenGems(locality.id)) && (
       <div class="guidecta">
-        <a href={url.locality(locality) + 'new-in-town/'}>
-          <span class="mono">Just moved here</span>
-          <strong>New in {locality.name}? Start here</strong>
-          <span class="sub">Where to eat, what is on, which clubs to join, and which state's rules apply.</span>
-        </a>
-        <a href={url.locality(locality) + 'hidden-gems/'}>
-          <span class="mono">Off the obvious list</span>
-          <strong>Hidden gems in {locality.name}</strong>
-          <span class="sub">The free ones, the clubs and the independents that a normal search will not show you.</span>
-        </a>
+        {hasTownGuide(locality.id) && (
+          <a href={url.locality(locality) + 'new-in-town/'}>
+            <span class="mono">Just moved here</span>
+            <strong>New in {locality.name}? Start here</strong>
+            <span class="sub">Where to eat, what is on, which clubs to join, and which state's rules apply.</span>
+          </a>
+        )}
+        {hasHiddenGems(locality.id) && (
+          <a href={url.locality(locality) + 'hidden-gems/'}>
+            <span class="mono">Off the obvious list</span>
+            <strong>Hidden gems in {locality.name}</strong>
+            <span class="sub">The free ones, the clubs and the independents that a normal search will not show you.</span>
+          </a>
+        )}
       </div>
     )}
 
@@ -196,8 +201,8 @@ const jsonLd = graph([
     ) : (
       <>
         <div class="statgrid">
-          <div><b>{n(rows.length)}</b><span>listings</span></div>
-          <div><b>{active.length}</b><span>categories</span></div>
+          <div><b>{n(rows.length)}</b><span>{plural(rows.length, 'listing', 'listings')}</span></div>
+          <div><b>{active.length}</b><span>{plural(active.length, 'category', 'categories')}</span></div>
           {verified > 0 && <div><b>{verified}</b><span>verified</span></div>}
           {travelIn > 0 && <div><b>{travelIn}</b><span>travel in</span></div>}
           <div><b>{locality.postcode}</b><span>postcode</span></div>
@@ -214,7 +219,7 @@ const jsonLd = graph([
             <h2>{group.vertical.name} in {locality.name}</h2>
             <p>{group.vertical.blurb}</p>
           </div>
-          <span class="mono" style="color:var(--ink-40)">{group.items.length} categories</span>
+          <span class="mono" style="color:var(--ink-40)">{group.items.length} {plural(group.items.length, 'category', 'categories')}</span>
         </div>
         <div class="cats">
           {group.items.map((a) => (

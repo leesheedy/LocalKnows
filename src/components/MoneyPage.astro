@@ -98,7 +98,7 @@ const faqs = [
       'We list ' +
       stats.listingCount +
       ' ' +
-      category.name.toLowerCase() +
+      (stats.listingCount === 1 ? category.nameSingular.toLowerCase() : category.name.toLowerCase()) +
       ' covering ' +
       locality.name +
       ', ' +
@@ -147,10 +147,15 @@ const faqs = [
         {
           q: 'Which ' + category.name.toLowerCase() + ' in ' + locality.name + ' open on Saturdays?',
           a:
-            stats.openSaturdayCount +
-            ' of the ' +
-            stats.listingCount +
-            ' listings on this page publish Saturday hours. Each card shows the days that business trades, and the full week is on its own page.',
+            // "1 of the 1 listings" appeared on 265 pages. Where the page has
+            // a single listing there is no "of the" to state at all.
+            (stats.listingCount === 1
+              ? 'The one business on this page publishes Saturday hours.'
+              : stats.openSaturdayCount +
+                ' of the ' +
+                stats.listingCount +
+                ' listings on this page publish Saturday hours.') +
+            ' Each card shows the days that business trades, and the full week is on its own page.',
         },
       ]
     : []),

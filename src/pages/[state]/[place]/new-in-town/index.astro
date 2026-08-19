@@ -17,8 +17,10 @@ import ListingCard from '~/components/ListingCard.astro';
 import {
   url,
   STATES,
-  guidePageLocalities,
-  hasGuidePages,
+  townGuideLocalities,
+  hasTownGuide,
+  hasHiddenGems,
+  townProfile,
   listingsInLocality,
   listingsBasedIn,
   activeCategoriesInLocality,
@@ -33,7 +35,7 @@ import {
   categories as allCategories,
 } from '~/lib/repo';
 import type { Locality } from '~/lib/types';
-import { n, otherStateLabel } from '~/lib/copy';
+import { n, plural, otherStateLabel } from '~/lib/copy';
 import { BUILD_DATE, shortDate } from '~/lib/build';
 import {
   graph,
@@ -49,12 +51,15 @@ import {
 } from '~/lib/seo';
 
 export async function getStaticPaths() {
-  // Only where there is enough to say. See hasGuidePages().
-  return guidePageLocalities()
-    .map((locality) => ({
-      params: { state: STATES[locality.state].slug, place: locality.slug },
-      props: { locality },
-    }));
+  // Every live locality, not just the dozen large enough to fill a list of
+  // cards. A village of nine hundred people still has a state, a council, a
+  // postcode, a set of businesses actually based in it and a town people drive
+  // to for the rest — which is what somebody who has just moved there is
+  // asking about, and none of it is shared with the next town along.
+  return townGuideLocalities().map((locality) => ({
+    params: { state: STATES[locality.state].slug, place: locality.slug },
+    props: { locality },
+  }));
 }
 
 const { locality } = Astro.props as { locality: Locality };
@@ -62,19 +67,39 @@ const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const canonicalPath = url.locality(locality) + 'new-in-town/';
 
+const profile = townProfile(locality);
 const rows = listingsInLocality(locality.id);
-const based = listingsBasedIn(locality.id);
+const based = profile.based;
+const hub = profile.hub;
+const council = profile.community.find((c) => c.type === 'council');
 const active = activeCategoriesInLocality(locality.id);
+
+/*
+ * Sections are built from categories with a business BASED here, not from
+ * everything that covers the town.
+ *
+ * Measured before changing it: two small Wagga suburbs shared 38% of their
+ * prose, and the largest cause was that "where to eat" was derived from
+ * coverage. Every suburb of one city therefore inherited the same category
+ * list, so the pages agreed with each other because they were both really
+ * describing the parent city.
+ *
+ * Where a vertical has nothing based here the section does not fall back to
+ * the parent's list. It says so in one line and links to the hub, which is
+ * both the honest answer and the one that keeps the pages distinct.
+ */
+const basedByVertical = (v: string) =>
+  profile.basedCategories.filter((a) => a.category.vertical === v);
 const byVertical = (v: string) => active.filter((a) => a.category.vertical === v);
 
-const eat = byVertical('eat_drink').slice(0, 8);
-const drink = byVertical('pubs_clubs').slice(0, 6);
-const doing = byVertical('things_to_do').slice(0, 8);
-const clubs = byVertical('clubs_hobbies');
-const trades = byVertical('trades').slice(0, 12);
-const stay = byVertical('stay').slice(0, 4);
+const eat = basedByVertical('eat_drink').slice(0, 8);
+const drink = basedByVertical('pubs_clubs').slice(0, 6);
+const doing = basedByVertical('things_to_do').slice(0, 8);
+const clubs = basedByVertical('clubs_hobbies');
+const trades = basedByVertical('trades').slice(0, 12);
+const stay = basedByVertical('stay').slice(0, 4);
 
-const freeThings = rows
+const freeThings = based
   .filter((l) => l.vertical === 'things_to_do' && l.attributes?.free_entry === 'yes')
   .slice(0, 4);
 
@@ -82,8 +107,8 @@ const events = eventsInLocality(locality.slug)
   .filter((e) => e.startDate.slice(0, 10) >= BUILD_DATE)
   .slice(0, 5);
 const lists = listsForLocality(locality.slug);
-const nearby = neighboursOf(locality, 10);
-const community = communityFor(locality.slug);
+const nearby = profile.neighbours;
+const community = profile.community;
 const acrossBorder = nearby.filter((x) => x.crossesBorder).slice(0, 4);
 
 const clubCount = clubs.reduce((t, c) => t + c.count, 0);
@@ -191,7 +216,8 @@ const section = (
 ---
 
 <Base
-  kind="locality"
+  kind="townGuide"
+  basedCount={profile.based.length}
   title={'New in ' + locality.name + ', ' + locality.state + '? Start here'}
   description={description}
   canonicalPath={canonicalPath}
@@ -207,13 +233,13 @@ const section = (
       <h1>{h1}</h1>
       <p class="standfirst">
         Everything a new arrival actually asks in the first month, answered from the
-        {' '}{n(rows.length)} businesses, clubs and places we list here. No sponsored
+        {' '}{n(rows.length)} {plural(rows.length, 'business, club or place', 'businesses, clubs and places')} we list here. No sponsored
         entries, nothing paid for.
       </p>
       <div class="headmeta">
-        <span>{n(rows.length)} listings</span>
-        <span>&middot; {active.length} categories</span>
-        {clubCount > 0 && <span>&middot; {clubCount} clubs and groups</span>}
+        <span>{n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
+        <span>&middot; {active.length} {plural(active.length, 'category', 'categories')}</span>
+        {clubCount > 0 && <span>&middot; {clubCount} {plural(clubCount, 'club or group', 'clubs and groups')}</span>}
         <span>&middot; Checked {BUILD_DATE}</span>
       </div>
     </div>
@@ -221,29 +247,157 @@ const section = (
     <section class="prose" style="margin-top:30px">
       <h2>First, the thing people get wrong</h2>
       <p>{locality.blurb}</p>
+      {profile.bordersOtherState ? (
+        <>
+          <p>
+            {locality.name} is in <strong>{state.name}</strong>, postcode {locality.postcode},
+            and {profile.neighbours.filter((nb) => nb.crossesBorder).length} of the towns
+            people here use day to day are in {other}. That is why this matters more in
+            {' '}{locality.name} than it does most places: the state a job is done in decides
+            which trade licence applies, which public holiday calendar sets the penalty rate,
+            and which regulator hears a complaint.
+          </p>
+          <p>
+            If you are hiring anyone, the <a href="/tools/border-check/">border check</a>
+            {' '}tells you which state's rules apply to an address, and the
+            {' '}<a href="/tools/licence-check/">licence check</a> opens the right register.
+          </p>
+        </>
+      ) : (
+        <p>
+          {locality.name} is in <strong>{state.name}</strong>, postcode {locality.postcode},
+          and far enough from the Murray that the border rules rarely come up. If you do hire
+          somebody from the Victorian side, the <a href="/tools/licence-check/">licence check</a>
+          {' '}opens the right register.
+        </p>
+      )}
+    </section>
+
+    <section class="prose" style="margin-top:26px">
+      <h2>The shape of the place</h2>
       <p>
-        {locality.name} is in <strong>{state.name}</strong>, postcode {locality.postcode}.
-        That matters more here than it does most places. The state a job is done in decides
-        which trade licence applies, which public holiday calendar sets the penalty rate,
-        and which regulator hears a complaint. {other} is close enough that people routinely
-        assume the rules travel with them. They do not.
-      </p>
-      <p>
-        If you are hiring anyone, the <a href="/tools/border-check/">border check</a> tells
-        you which state's rules apply to an address, and the
-        {' '}<a href="/tools/licence-check/">licence check</a> opens the right register.
+        {hub
+          ? locality.name + ' runs on ' + hub.locality.name + ' for anything it does not have itself, and the drive is about ' + Math.round(hub.distanceKm) + ' kilometres. '
+          : locality.name + ' is the town the surrounding district drives into, not the other way round. '}
+        These are the facts that decide who you ring and where you go, rather than the ones a
+        tourism page leads with.
       </p>
     </section>
+
+    <div class="table-scroll">
+      <table class="factstable">
+        <tbody>
+          <tr>
+            <th scope="row">State and postcode</th>
+            <td>{state.name}, {locality.postcode}</td>
+          </tr>
+          <tr>
+            <th scope="row">Local council</th>
+            <td>
+              {council ? (
+                <a href={council.url} rel="nofollow noopener" target="_blank">{council.name}</a>
+              ) : (
+                <span class="muted">Not recorded yet</span>
+              )}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Population</th>
+            <td>about {n(locality.population ?? 0)}</td>
+          </tr>
+          <tr>
+            <th scope="row">Businesses based here</th>
+            <td>
+              {n(based.length)}
+              {profile.basedCategories.length > 0 && (
+                <> across {profile.basedCategories.length}{' '}
+                {profile.basedCategories.length === 1 ? 'category' : 'categories'}</>
+              )}
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Businesses that travel in</th>
+            <td>{n(profile.visiting.length)}</td>
+          </tr>
+          {hub ? (
+            <tr>
+              <th scope="row">Nearest larger centre</th>
+              <td>
+                <a href={url.locality(hub.locality)}>{hub.locality.name}</a>,
+                about {Math.round(hub.distanceKm)}km
+                {hub.crossesBorder && <> &mdash; and over the border in {STATES[hub.locality.state].name}</>}
+              </td>
+            </tr>
+          ) : (
+            <tr>
+              <th scope="row">Nearest larger centre</th>
+              <td>None within an hour. {locality.name} is where the district comes.</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
 
     <div class="statgrid">
       <div><b>{state.code}</b><span>state</span></div>
       <div><b>{locality.postcode}</b><span>postcode</span></div>
-      <div><b>{n(based.length)}</b><span>businesses based here</span></div>
+      <div><b>{n(based.length)}</b><span>{plural(based.length, 'business based here', 'businesses based here')}</span></div>
       <div><b>{n(rows.length - based.length)}</b><span>that travel in</span></div>
-      {clubCount > 0 && <div><b>{clubCount}</b><span>clubs and groups</span></div>}
+      {clubCount > 0 && <div><b>{clubCount}</b><span>{plural(clubCount, 'club or group', 'clubs and groups')}</span></div>}
       {events.length > 0 && <div><b>{events.length}</b><span>events coming up</span></div>}
     </div>
   </div>
+
+  {hub && profile.goToHubFor.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>What you will drive to {hub.locality.name} for</h2>
+          <p>
+            Nowhere this size has everything, and pretending otherwise wastes a trip.
+            These are trades and services with nobody based in {locality.name}, where the
+            nearest choice is the {Math.round(hub.distanceKm)}km into {hub.locality.name}.
+            {hub.crossesBorder && (
+              <> That drive crosses into {STATES[hub.locality.state].name}, so a licence
+              held there may not cover work back home &mdash; the{' '}
+              <a href="/tools/licence-check/">licence check</a> settles it.</>
+            )}
+          </p>
+        </div>
+        <div class="cats">
+          {profile.goToHubFor.map((c) => (
+            <a class="cat" href={url.localityCategory(hub.locality, c)}>
+              <strong>{c.name}</strong>
+              <span class="n mono">in {hub.locality.name}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {profile.basedCategories.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>What is actually based in {locality.name}</h2>
+          <p>
+            Not businesses that cover {locality.name} from somewhere else &mdash; these have
+            an address here. For a small town this is the part worth knowing, because it is
+            the difference between a trade you can walk to and one you wait a week for.
+          </p>
+        </div>
+        <div class="cats">
+          {profile.basedCategories.map((c) => (
+            <a class="cat" href={url.localityCategory(locality, c.category)}>
+              <strong>{c.category.name}</strong>
+              <span class="n mono">{c.count} based here</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {clubs.length > 0 && (
     <section class="sec">
@@ -274,8 +428,19 @@ const section = (
       <div class="wrap">
         <div class="sec-head">
           <h2>Where to eat and drink</h2>
-          <p>Work through it rather than eating at the same place for a year.</p>
+          <p>
+            {eat.length + drink.length > 0
+              ? 'Places with an address in ' + locality.name + ' rather than ones that deliver to it. Work through them rather than eating at the same place for a year.'
+              : 'Nothing to eat or drink is based in ' + locality.name + ' yet.'}
+          </p>
         </div>
+        {eat.length + drink.length === 0 && hub && (
+          <p>
+            <a class="btn" href={url.locality(hub.locality)}>
+              Where to eat in {hub.locality.name}, {Math.round(hub.distanceKm)}km away
+            </a>
+          </p>
+        )}
         <div class="linkgrid">
           {eat.length > 0 && <div><h3>Eat</h3><ul>{eat.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
           {drink.length > 0 && <div><h3>Pubs and clubs</h3><ul>{drink.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
@@ -296,9 +461,11 @@ const section = (
               know whether you are staying.
             </p>
           </div>
-          <a class="btn btn-ghost btn-sm" href={url.locality(locality) + 'hidden-gems/'}>
-            The less obvious ones
-          </a>
+          {hasHiddenGems(locality.id) && (
+            <a class="btn btn-ghost btn-sm" href={url.locality(locality) + 'hidden-gems/'}>
+              The less obvious ones
+            </a>
+          )}
         </div>
         <div class="cats">
           {doing.map((c) => (
@@ -323,10 +490,11 @@ const section = (
         <div class="sec-head">
           <h2>Where locals actually post what is on</h2>
           <p>
-            Half of what happens in a regional town never reaches a website. It goes on a
-            council page or a community group and nowhere else. These are the ones worth
-            following, and every URL here was read off the organisation's own site rather
-            than guessed from its name.
+            Half of what happens in {locality.name} never reaches a website. It goes on a
+            council page or a community group and nowhere else. These {community.length}
+            {' '}cover {locality.name}
+            {council ? ', starting with ' + council.name : ''}, and every URL was read off
+            the organisation's own site rather than guessed from its name.
           </p>
         </div>
         <div class="cards cards-2">
@@ -395,10 +563,18 @@ const section = (
       <div class="sec-head">
         <h2>When something breaks</h2>
         <p>
-          You will need a plumber or a sparky before you need anything else on this page.
-          Every listing shows where its details came from and when they were last read.
+          {trades.length > 0
+            ? 'Trades with a yard or an office in ' + locality.name + '. Every listing shows where its details came from and when they were last read.'
+            : 'No trade is based in ' + locality.name + ' itself, which is normal for somewhere this size. ' + n(profile.visiting.length) + ' cover it from nearby, and they are on the town page with the distance they travel.'}
         </p>
       </div>
+      {trades.length === 0 && (
+        <p>
+          <a class="btn" href={url.locality(locality)}>
+            The {n(profile.visiting.length)} {plural(profile.visiting.length, 'business that covers', 'businesses that cover')} {locality.name}
+          </a>
+        </p>
+      )}
       <div class="cats">
         {trades.map((c) => (
           <a class="cat" href={url.localityCategory(locality, c.category)}>
@@ -439,7 +615,9 @@ const section = (
       {
         heading: 'Useful either way',
         links: [
-          { href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name },
+          ...(hasHiddenGems(locality.id)
+            ? [{ href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name }]
+            : []),
           { href: '/tools/public-holidays/', label: 'Which public holidays differ' },
           { href: '/tools/border-check/', label: 'Which state, which rules' },
           { href: url.guides(), label: 'Guides' },

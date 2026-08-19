@@ -242,8 +242,8 @@ const jsonLd = graph([
 
     <div class="statgrid">
       <div><b>{n(rows.length)}</b><span>listed</span></div>
-      <div><b>{nsw.length}</b><span>towns live in NSW</span></div>
-      <div><b>{vic.length}</b><span>towns live in VIC</span></div>
+      <div><b>{nsw.length}</b><span>{plural(nsw.length, 'town', 'towns')} live in NSW</span></div>
+      <div><b>{vic.length}</b><span>{plural(vic.length, 'town', 'towns')} live in VIC</span></div>
       <div><b>{verified}</b><span>verified</span></div>
       {hasEmergencyAttribute && (
         <div><b>{emergency}</b><span>after hours</span></div>
@@ -431,12 +431,12 @@ const jsonLd = graph([
           {
             href: url.state('NSW'),
             label: 'Everything in ' + STATES.NSW.name,
-            note: nsw.length > 0 ? nsw.length + ' towns' : undefined,
+            note: nsw.length > 0 ? nsw.length + ' ' + plural(nsw.length, 'town', 'towns') : undefined,
           },
           {
             href: url.state('VIC'),
             label: 'Everything in ' + STATES.VIC.name,
-            note: vic.length > 0 ? vic.length + ' towns' : undefined,
+            note: vic.length > 0 ? vic.length + ' ' + plural(vic.length, 'town', 'towns') : undefined,
             cross: true,
           },
           { href: url.categoryIndex(), label: 'Every category' },

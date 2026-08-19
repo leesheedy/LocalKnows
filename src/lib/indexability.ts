@@ -16,6 +16,7 @@ export type PageKind =
   | 'state'
   | 'region'
   | 'locality'
+  | 'townGuide'
   | 'localityCategory'
   | 'modifier'
   | 'listing'
@@ -56,6 +57,13 @@ export interface IndexInput {
   basedCount?: number;
 }
 
+/**
+ * A town guide is indexed once this many businesses are based in the town.
+ * Below it the page is mostly furniture, which is the same number that used to
+ * decide whether the page was built at all.
+ */
+const TOWN_GUIDE_INDEX_FLOOR = 5;
+
 const NOINDEX_FOLLOW = (reason: string, priority = 0): IndexDecision => ({
   index: false,
   follow: true,
@@ -87,6 +95,28 @@ export function decide(input: IndexInput): IndexDecision {
       return listingCount > 0
         ? { index: true, follow: true, inSitemap: true, priority: 0.8, reason: 'locality with listings' }
         : NOINDEX_FOLLOW('locality has no listings yet');
+
+    /*
+     * "New in town" and "hidden gems" now exist for every live locality,
+     * because the questions they answer — which council, which state, what is
+     * actually based here, where you drive for the rest — have a different
+     * answer in every town however small.
+     *
+     * Existing and being indexed are separate decisions. Measured on the built
+     * output, the prose of two one-business suburbs is only about 15% identical,
+     * but there is so little of it that page furniture dominates the rest. That
+     * is thin, not duplicated, and thin pages are better kept out of the index
+     * and left as crawl paths than either published into it or withheld from
+     * the people who want them.
+     */
+    case 'townGuide':
+      return (input.basedCount ?? 0) >= TOWN_GUIDE_INDEX_FLOOR
+        ? { index: true, follow: true, inSitemap: true, priority: 0.6, reason: 'town guide with enough of its own' }
+        : NOINDEX_FOLLOW(
+            'fewer than ' +
+              TOWN_GUIDE_INDEX_FLOOR +
+              ' businesses based here, so the page is thin however true it is',
+          );
 
     case 'localityCategory':
       if (listingCount < POLICY.minListingsToIndex) {

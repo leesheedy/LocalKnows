@@ -28,7 +28,8 @@ import {
   getCategory,
   getRegion,
   neighboursOf,
-  hasGuidePages,
+  hasTownGuide,
+  hasHiddenGems,
   hasLocalityEvents,
 } from '~/lib/repo';
 import { THEMES } from '~/lib/themes';
@@ -198,11 +199,11 @@ const jsonLd = graph([
             href: url.locality(locality) + t.slug + '/',
             label: t.title(locality.name),
           })),
-          ...(hasGuidePages(locality.id)
-            ? [
-                { href: url.locality(locality) + 'new-in-town/', label: 'New in ' + locality.name + '? Start here' },
-                { href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name },
-              ]
+          ...(hasTownGuide(locality.id)
+            ? [{ href: url.locality(locality) + 'new-in-town/', label: 'New in ' + locality.name + '? Start here' }]
+            : []),
+          ...(hasHiddenGems(locality.id)
+            ? [{ href: url.locality(locality) + 'hidden-gems/', label: 'Hidden gems in ' + locality.name }]
             : []),
           { href: url.locality(locality), label: 'Everything in ' + locality.name },
           ...(hasLocalityEvents(locality.slug)

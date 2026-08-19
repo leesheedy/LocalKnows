@@ -547,6 +547,41 @@ img.logo {
  * attribute, keeping every runtime-touched rule in one global file is the
  * convention that stopped this breaking once already.
  */
+/*
+ * The orientation table on a town guide. Same bones as .hourstable, but the
+ * left column carries a label rather than a day, so it needs room to breathe.
+ */
+.factstable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0 8px;
+  font-size: 15px;
+}
+
+.factstable th,
+.factstable td {
+  text-align: left;
+  padding: 11px 14px 11px 0;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.factstable th {
+  font-weight: 500;
+  color: var(--ink-60);
+  white-space: nowrap;
+  padding-right: 26px;
+}
+
+.factstable tr:last-child th,
+.factstable tr:last-child td {
+  border-bottom: 0;
+}
+
+.muted {
+  color: var(--ink-40);
+}
+
 .upload {
   border: 1px solid var(--line);
   border-radius: var(--r);

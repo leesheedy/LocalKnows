@@ -141,7 +141,18 @@ export function statSummary(
   stats: LocalityCategoryStats,
 ): string {
   const bits: string[] = [
-    stats.listingCount + ' ' + category.name.toLowerCase() + ' in ' + locality.name + ' ' + locality.state,
+    stats.listingCount +
+      ' ' +
+      // A category name is plural, so a page with one listing otherwise reads
+      // "1 art galleries". statSentences above already picks the right noun;
+      // this line did not.
+      (stats.listingCount === 1
+        ? category.nameSingular.toLowerCase()
+        : category.name.toLowerCase()) +
+      ' in ' +
+      locality.name +
+      ' ' +
+      locality.state,
   ];
   if (stats.licencedCount) bits.push(stats.licencedCount + ' with a checked licence');
   if (stats.openSaturdayCount) bits.push(stats.openSaturdayCount + ' open Saturdays');

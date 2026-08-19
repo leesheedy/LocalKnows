@@ -1,6 +1,6 @@
 ---
 /**
- * Logo and photo upload, for the claim and verified forms.
+ * Image upload, shared by the claim, verified and correction forms.
  *
  * Netlify Forms imposes two limits that between them decide this whole design:
  * the entire form request must be under 8 MB, and file uploads time out after
@@ -21,67 +21,98 @@
  * submissions. Swapping in an AJAX post to gain a progress bar would put the
  * only working path on the site at risk for cosmetics.
  *
- * Netlify supports one file per field, so there are four discrete fields
- * rather than a single multiple input.
+ * Netlify supports one file per field, so the slots are discrete fields rather
+ * than a single multiple input.
+ *
+ * The slots are configurable because the three forms are asking for different
+ * things: a business describing itself wants a logo, while somebody reporting
+ * a wrong opening time wants to photograph the sign on the door.
  */
 interface Props {
   /** Distinct per form, since two forms can appear in one build. */
   idPrefix: string;
   photoSlots?: number;
+  /** A logo slot only makes sense when a business is describing itself. */
+  logoSlot?: boolean;
+  legend?: string;
+  intro?: string;
+  /** Field name stem. "evidence" reads better than "photo" in a correction. */
+  photoName?: string;
+  photoLabel?: string;
+  firstPhotoHint?: string;
 }
-const { idPrefix, photoSlots = 3 } = Astro.props;
+const {
+  idPrefix,
+  photoSlots = 3,
+  logoSlot = true,
+  legend = 'Logo and photos (optional)',
+  intro,
+  photoName = 'photo',
+  photoLabel = 'Photo',
+  firstPhotoHint,
+} = Astro.props;
 
 const slots = Array.from({ length: photoSlots }, (_, i) => i + 1);
+
+// The script anchors on whichever field is guaranteed to exist.
+const anchorId = logoSlot ? idPrefix + '-logo' : idPrefix + '-' + photoName + '-1';
 ---
 
 <fieldset class="upload" data-upload>
-  <legend class="mono">Logo and photos (optional)</legend>
+  <legend class="mono">{legend}</legend>
   <p class="upload-intro">
-    Send your logo and up to {photoSlots} photos and we will put them on the listing when
-    the claim is approved. Large photos are shrunk on this device before sending, so a
-    picture straight off a phone is fine and nothing is uploaded at full size.
+    {intro ??
+      'Send your logo and up to ' +
+        photoSlots +
+        ' photos and we will put them on the listing when the claim is approved.'}
+    {' '}Large images are shrunk on this device before sending, so a picture straight off a
+    phone is fine and nothing is uploaded at full size.
   </p>
 
-  <div class="upload-row">
-    <label class="mono upload-label" for={idPrefix + '-logo'}>Logo</label>
-    <input
-      id={idPrefix + '-logo'}
-      name="logo"
-      type="file"
-      accept="image/png,image/jpeg,image/webp,image/svg+xml"
-      data-upload-input
-      data-kind="logo"
-    />
-    <p class="upload-status" data-status-for={idPrefix + '-logo'} aria-live="polite"></p>
-    <span class="upload-hint">PNG, JPEG, WebP or SVG. A square version works best.</span>
-  </div>
+  {logoSlot && (
+    <div class="upload-row">
+      <label class="mono upload-label" for={idPrefix + '-logo'}>Logo</label>
+      <input
+        id={idPrefix + '-logo'}
+        name="logo"
+        type="file"
+        accept="image/png,image/jpeg,image/webp,image/svg+xml"
+        data-upload-input
+        data-kind="logo"
+      />
+      <p class="upload-status" data-status-for={idPrefix + '-logo'} aria-live="polite"></p>
+      <span class="upload-hint">PNG, JPEG, WebP or SVG. A square version works best.</span>
+    </div>
+  )}
 
   {slots.map((i) => (
     <div class="upload-row">
-      <label class="mono upload-label" for={idPrefix + '-photo-' + i}>Photo {i}</label>
+      <label class="mono upload-label" for={idPrefix + '-' + photoName + '-' + i}>
+        {photoLabel} {i}
+      </label>
       <input
-        id={idPrefix + '-photo-' + i}
-        name={'photo_' + i}
+        id={idPrefix + '-' + photoName + '-' + i}
+        name={photoName + '_' + i}
         type="file"
         accept="image/png,image/jpeg,image/webp"
         data-upload-input
         data-kind="photo"
       />
-      <p class="upload-status" data-status-for={idPrefix + '-photo-' + i} aria-live="polite"></p>
-      {i === 1 && (
-        <span class="upload-hint">
-          The shopfront or the thing people recognise. This one leads the page.
-        </span>
-      )}
+      <p
+        class="upload-status"
+        data-status-for={idPrefix + '-' + photoName + '-' + i}
+        aria-live="polite"
+      ></p>
+      {i === 1 && firstPhotoHint && <span class="upload-hint">{firstPhotoHint}</span>}
     </div>
   ))}
 
   <p class="upload-total mono" data-upload-total aria-live="polite"></p>
 </fieldset>
 
-<script is:inline define:vars={{ idPrefix }}>
+<script is:inline define:vars={{ anchorId }}>
   (function () {
-    var scope = document.getElementById(idPrefix + '-logo');
+    var scope = document.getElementById(anchorId);
     if (!scope) return;
     var root = scope.closest('[data-upload]');
     if (!root) return;

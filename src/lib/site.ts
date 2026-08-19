@@ -162,13 +162,6 @@ export const POLICY = {
    */
   minBasedToGoLive: 1,
   /**
-   * A "new in town" or "hidden gems" guide needs a town, not a postcode. Below
-   * this many businesses actually based there, the page is assembled almost
-   * entirely from the next town's listings and is a duplicate of that town's
-   * guide wearing a different H1.
-   */
-  minBasedForGuidePages: 5,
-  /**
    * A themed page needs at least one qualifying business based in the town.
    * /nsw/west-albury/with-kids/ was five listings, all five of them Albury's,
    * which is a copy of the Albury page and nothing else.

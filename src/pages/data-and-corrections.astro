@@ -13,6 +13,7 @@ import { url, STATES, listings } from '~/lib/repo';
 import { SITE } from '~/lib/site';
 import { n } from '~/lib/copy';
 import { BUILD_DATE, humanDate } from '~/lib/build';
+import UploadFields from '~/components/UploadFields.astro';
 import {
   graph,
   organisationNode,
@@ -223,7 +224,7 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
         <span class="mono">Fixed in five business days</span>
       </div>
       <div class="panel-body">
-        <form name="correction" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="correction" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data">
           <input type="hidden" name="form-name" value="correction" />
           <input type="hidden" name="subject" value="LocalsKnow correction report" />
           <p hidden>
@@ -232,7 +233,7 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
 
           <p style={row}>
             <label class="mono" style={lbl} for="f-url">Listing URL</label>
-            <input style={inp} id="f-url" name="listing_url" type="url" placeholder="https://localknows.au/nsw/albury/plumbers/..." required />
+            <input style={inp} id="f-url" name="listing_url" type="url" placeholder="https://localsknow.com.au/nsw/albury/plumbers/..." required />
             <span style={hint}>Copy it from the address bar of the page that is wrong.</span>
           </p>
 
@@ -260,6 +261,17 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
             <input style={inp} id="f-email" name="email" type="email" autocomplete="email" />
             <span style={hint}>Only used to tell you what happened. Leave it out if you prefer.</span>
           </p>
+
+          <UploadFields
+            idPrefix="correction"
+            logoSlot={false}
+            photoSlots={2}
+            photoName="evidence"
+            photoLabel="Photo"
+            legend="Photo evidence (optional)"
+            intro="A photo settles most corrections faster than anything else: the sign on the door, the new hours in the window, the sticker with the new phone number."
+            firstPhotoHint="Anything showing the correct detail. It is only used to check the change and is not published."
+          />
 
           <p style="margin:0">
             <button class="btn btn-river" type="submit">Send correction</button>

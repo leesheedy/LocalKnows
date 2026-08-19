@@ -178,7 +178,7 @@ const jsonLd = graph([
 
     <div class="statgrid">
       <div><b>{cats.length}</b><span>categories</span></div>
-      <div><b>{n(rows.length)}</b><span>listings</span></div>
+      <div><b>{n(rows.length)}</b><span>{plural(rows.length, 'listing', 'listings')}</span></div>
       <div><b>{nswTowns}</b><span>towns live in NSW</span></div>
       <div><b>{vicTowns}</b><span>towns live in VIC</span></div>
       <div><b>{verified}</b><span>verified</span></div>

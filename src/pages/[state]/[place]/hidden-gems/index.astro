@@ -11,9 +11,15 @@
  *   - specialty and independent retail, which loses to the chains on every query
  *   - anything in a category with fewer than four listings, because a thin
  *     category never ranks and so its entries are effectively invisible
+ *   - in a small town, the only one of its kind, which is the single most
+ *     useful thing to know about a village and the thing no directory says
  *
- * The page says all of that in the standfirst. A "hidden gems" list that will
- * not explain how it chose is an advertorial.
+ * The rules live in hiddenGemsIn() rather than here, so the route, the links
+ * to it and this page cannot disagree about which towns have one.
+ *
+ * Everything is drawn from businesses actually based in the town. Drawing from
+ * everything that merely covers it produced, for a suburb, a page of the next
+ * town's businesses under a different heading.
  */
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
@@ -22,18 +28,16 @@ import ListingCard from '~/components/ListingCard.astro';
 import {
   url,
   STATES,
-  guidePageLocalities,
-  hasGuidePages,
-  listingsInLocality,
-  listingsInCategory,
-  activeCategoriesInLocality,
+  hiddenGemLocalities,
+  hiddenGemsIn,
+  hasHiddenGems,
+  townProfile,
   getRegion,
-  getCategory,
   neighboursOf,
   hasLocalityEvents,
 } from '~/lib/repo';
-import type { Listing, Locality } from '~/lib/types';
-import { n } from '~/lib/copy';
+import type { Locality } from '~/lib/types';
+import { n, plural } from '~/lib/copy';
 import { BUILD_DATE } from '~/lib/build';
 import {
   graph,
@@ -50,12 +54,14 @@ import {
 } from '~/lib/seo';
 
 export async function getStaticPaths() {
-  // Only where there is enough to say. See hasGuidePages().
-  return guidePageLocalities()
-    .map((locality) => ({
-      params: { state: STATES[locality.state].slug, place: locality.slug },
-      props: { locality },
-    }));
+  // Every town with at least one qualifying place, which is 47 of the 48 live
+  // ones. Not every live town: a "hidden gems" page listing nothing is worse
+  // than no page, and the soft page redirect in postbuild sends the remainder
+  // to their town hub rather than a 404.
+  return hiddenGemLocalities().map((locality) => ({
+    params: { state: STATES[locality.state].slug, place: locality.slug },
+    props: { locality },
+  }));
 }
 
 const { locality } = Astro.props as { locality: Locality };
@@ -63,52 +69,40 @@ const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const canonicalPath = url.locality(locality) + 'hidden-gems/';
 
-const rows = listingsInLocality(locality.id);
+const profile = townProfile(locality);
+const picked = hiddenGemsIn(locality.id);
+const hub = profile.hub;
 
-const isFree = (l: Listing) => l.attributes?.free_entry === 'yes';
-const isClub = (l: Listing) => l.vertical === 'clubs_hobbies';
-const isSmallCategory = (l: Listing) => listingsInCategory(l.categoryIds[0]).length < 4;
-const isSpecialtyRetail = (l: Listing) => {
-  const c = getCategory(l.categoryIds[0]);
-  if (!c || c.vertical !== 'trades') return false;
-  return /shops?$|stores?$|butchers|greengrocers|delis|florists|nurseries|jewellers|op-shops|produce|bookshops/.test(c.slug);
+// Grouped so the page reads as a set of arguments rather than one long list.
+// The group a gem lands in is its stated reason, so the grouping and the
+// selection cannot disagree.
+const REASON_GROUPS = [
+  'Free, so nobody advertises it',
+  'A club, and clubs are invisible on every other directory',
+  'Independent retail, which loses every search to the chains',
+  'In a category too small to rank, so it never surfaces',
+  'The only one of its kind based in town',
+];
+const GROUP_HEADINGS: Record<string, string> = {
+  'Free, so nobody advertises it': 'Free, and nobody is advertising it',
+  'A club, and clubs are invisible on every other directory': 'Clubs and groups',
+  'Independent retail, which loses every search to the chains': 'Independent and specialty',
+  'In a category too small to rank, so it never surfaces': 'One of a kind here',
+  'The only one of its kind based in town': 'The only one in town',
 };
+const groups = REASON_GROUPS.map((reason) => ({
+  key: GROUP_HEADINGS[reason],
+  items: picked.filter((g) => g.reason === reason),
+})).filter((g) => g.items.length > 0);
 
-const reasonFor = (l: Listing): string | null => {
-  if (isFree(l)) return 'Free, so nobody advertises it';
-  if (isClub(l)) return 'A club, and clubs are invisible on every other directory';
-  if (isSpecialtyRetail(l)) return 'Independent retail, which loses every search to the chains';
-  if (isSmallCategory(l)) return 'In a category too small to rank, so it never surfaces';
-  return null;
-};
-
-const picked = rows
-  .map((l) => ({ listing: l, reason: reasonFor(l) }))
-  .filter((x): x is { listing: Listing; reason: string } => Boolean(x.reason))
-  .sort((a, b) => b.listing.qualityScore - a.listing.qualityScore);
-
-// Group so the page reads as four arguments rather than one long list.
-const groups = [
-  { key: 'Free, and nobody is advertising it', items: picked.filter((x) => isFree(x.listing)) },
-  { key: 'Clubs and groups', items: picked.filter((x) => isClub(x.listing) && !isFree(x.listing)) },
-  {
-    key: 'Independent and specialty',
-    items: picked.filter((x) => isSpecialtyRetail(x.listing) && !isClub(x.listing) && !isFree(x.listing)),
-  },
-  {
-    key: 'One of a kind here',
-    items: picked.filter(
-      (x) => isSmallCategory(x.listing) && !isFree(x.listing) && !isClub(x.listing) && !isSpecialtyRetail(x.listing),
-    ),
-  },
-].filter((g) => g.items.length > 0);
-
-const nearby = neighboursOf(locality, 10).filter((nb) => hasGuidePages(nb.locality.id)).slice(0, 6);
+const nearby = neighboursOf(locality, 10).filter((nb) => hasHiddenGems(nb.locality.id)).slice(0, 6);
 
 const h1 = 'Hidden gems in ' + locality.name;
 const description =
   n(picked.length) +
-  ' places in ' +
+  ' ' +
+  plural(picked.length, 'place', 'places') +
+  ' in ' +
   locality.name +
   ' ' +
   locality.state +
@@ -129,7 +123,7 @@ const faqs = [
   },
   {
     q: 'How were these chosen?',
-    a: 'Four rules, applied to everything we list for ' + locality.name + '. Free public places, because nobody promotes what they cannot charge for. Community clubs, because almost no directory lists them. Independent and specialty retail, because it loses every search to a chain. And anything in a category with fewer than four listings, because a category that thin never ranks, so its entries are effectively invisible.',
+    a: 'Five rules, applied to every business based in ' + locality.name + '. Free public places, because nobody promotes what they cannot charge for. Community clubs, because almost no directory lists them. Independent and specialty retail, because it loses every search to a chain. Anything in a category with fewer than four listings, because a category that thin never ranks, so its entries are effectively invisible. And in a small town, the only one of its kind. Note the word based: a business that merely drives here is on the town page, but it is not one of the gems of the town itself.',
   },
   {
     q: 'Did anyone pay to be on this list?',
@@ -164,7 +158,8 @@ const jsonLd = graph([
 ---
 
 <Base
-  kind="locality"
+  kind="townGuide"
+  basedCount={profile.based.length}
   title={'Hidden gems in ' + locality.name + ', ' + locality.state}
   description={description}
   canonicalPath={canonicalPath}
@@ -180,13 +175,14 @@ const jsonLd = graph([
       <h1>{h1}</h1>
       <p class="standfirst">
         Not our favourites, because we have not been to them. These are the
-        {' '}{n(picked.length)} places in {locality.name} that an ordinary search will not
-        put in front of you, picked by four rules that are written out below rather than
-        left to taste.
+        {' '}{n(picked.length)} {plural(picked.length, 'place', 'places')} in {locality.name} that an ordinary search will not
+        put in front of you, picked by five rules that are written out below rather than
+        left to taste. Every one of them is based in {locality.name}, not merely willing to
+        drive here.
       </p>
       <div class="headmeta">
-        <span>{n(picked.length)} places</span>
-        <span>&middot; {groups.length} reasons they are missed</span>
+        <span>{n(picked.length)} {plural(picked.length, 'place', 'places')}</span>
+        <span>&middot; {groups.length} {plural(groups.length, 'reason it is missed', 'reasons they are missed')}</span>
         <span>&middot; Checked {BUILD_DATE}</span>
       </div>
     </div>
@@ -195,9 +191,11 @@ const jsonLd = graph([
       <strong>How this list was made.</strong> Free public places, because nobody promotes
       what they cannot charge for. Community clubs, because almost no directory lists them
       at all. Independent and specialty retail, because it loses every search to a chain.
-      And anything in a category with fewer than four listings, because a category that
-      thin never ranks, so what is in it is effectively invisible. Nothing here was paid
-      for and nothing here is a review.
+      Anything in a category with fewer than four listings, because a category that thin
+      never ranks, so what is in it is effectively invisible. And in a town this size, the
+      only one of its kind, which is the thing you most want to know about a village and
+      the thing no directory tells you. Nothing here was paid for and nothing here is a
+      review.
     </div>
   </div>
 
@@ -223,6 +221,30 @@ const jsonLd = graph([
         </div>
       </section>
     ))
+  )}
+
+  {hub && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Further afield</h2>
+          <p>
+            {picked.length < 4
+              ? locality.name + ' is small, so this list is short by nature rather than by neglect. '
+              : ''}
+            The nearest larger centre is {hub.locality.name}, about {Math.round(hub.distanceKm)}km
+            away{hub.crossesBorder ? ' and across the border' : ''}. Its gems are listed
+            separately rather than folded in here, because a page that quietly borrows the
+            next town's businesses stops being about this town at all.
+          </p>
+        </div>
+        <p>
+          <a class="btn" href={url.locality(hub.locality) + 'hidden-gems/'}>
+            Hidden gems in {hub.locality.name}
+          </a>
+        </p>
+      </div>
+    </section>
   )}
 
   <div class="wrap">

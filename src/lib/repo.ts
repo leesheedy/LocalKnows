@@ -20,7 +20,7 @@ import type {
   WireArticle,
 } from './types';
 import { POLICY, STATES } from './site';
-import { nearestLocalities, type Neighbour } from './geo';
+import { nearestLocalities, distanceKm, type Neighbour } from './geo';
 import { path } from './slug';
 import { THEMES } from './themes';
 
@@ -562,23 +562,6 @@ export function pageExists(href: string): boolean {
 const LIVE_IDS = new Set(liveLocalities().map((l) => l.id));
 export const isLiveLocality = (localityId: string): boolean => LIVE_IDS.has(localityId);
 
-/**
- * Localities substantial enough for a "new in town" and a "hidden gems" page.
- *
- * A town with four listings does not need an orientation guide, it needs more
- * listings. Same predicate used by the routes and by everything that links to
- * them, for the same reason as isLiveLocality.
- */
-export const hasGuidePages = (localityId: string): boolean =>
-  listingsInLocality(localityId).length >= 12 &&
-  activeCategoriesInLocality(localityId).length >= 6 &&
-  // Coverage is not the same as content. A suburb reaches twelve listings on
-  // the strength of trades that drive through it, and a guide built from those
-  // is a copy of the next town's guide. It needs businesses of its own.
-  listingsBasedIn(localityId).length >= POLICY.minBasedForGuidePages;
-
-export const guidePageLocalities = () => liveLocalities().filter((l) => hasGuidePages(l.id));
-
 /** Does /state/place/events/ get built for this locality? */
 export const hasLocalityEvents = (localitySlug: string): boolean =>
   eventsInLocality(localitySlug).length > 0;
@@ -640,7 +623,7 @@ export const COMMUNITY_TYPE_LABEL: Record<CommunityLink['type'], string> = {
 /**
  * Which themed pages exist for a locality.
  *
- * Same shape as isLiveLocality and hasGuidePages, and here for the same reason:
+ * Same shape as isLiveLocality and hasTownGuide, and here for the same reason:
  * the route decides existence by a threshold, so anything that links to one has
  * to ask the same question rather than assume.
  */
@@ -664,3 +647,226 @@ export function listingsForTheme(localityId: string, themeSlug: string): Listing
     .filter((l) => theme.matches(l, categoryById.get(l.categoryIds[0])))
     .sort((a, b) => b.qualityScore - a.qualityScore);
 }
+
+/**
+ * Everything that makes one town different from the next.
+ *
+ * The "new in town" and "hidden gems" pages used to be built for twelve
+ * localities only, because the earlier versions were assembled from
+ * listingsInLocality() — which includes every tradesperson who merely drives
+ * through — and for a suburb that produced a page identical to the town next
+ * door's. /nsw/west-albury/with-kids/ was five listings and all five were
+ * Albury's. The gate was the honest fix at the time.
+ *
+ * The gate is not needed once the pages stop being lists of borrowed listings.
+ * A town is distinguishable from its neighbour by things that are true of it
+ * and nothing else: which businesses are actually based there, which council
+ * runs it, how far it is to the place people drive for everything else, and
+ * what they drive there for. All of that is per town, so all of it is here, in
+ * one function that both pages read, rather than each page deciding for itself.
+ */
+export interface TownHub {
+  locality: Locality;
+  distanceKm: number;
+  crossesBorder: boolean;
+  basedCount: number;
+}
+
+export interface TownProfile {
+  locality: Locality;
+  region?: Region;
+  /** Businesses with an address here. The part that is genuinely this town. */
+  based: Listing[];
+  /** Businesses that travel here but are based elsewhere. */
+  visiting: Listing[];
+  basedCategories: { category: Category; count: number }[];
+  /**
+   * The bigger place people go for what is not here. Absent for the towns that
+   * are themselves the destination, which is how a page knows not to say
+   * "for everything else, drive to...".
+   */
+  hub?: TownHub;
+  /** Categories the hub has and this town does not. What you drive there for. */
+  goToHubFor: Category[];
+  neighbours: Neighbour[];
+  community: CommunityLink[];
+  events: EventRecord[];
+  lists: CuratedList[];
+  /** True when a nearby town people use daily is in the other state. */
+  bordersOtherState: boolean;
+}
+
+/**
+ * The hub is chosen on population and tier, never on how many listings we hold.
+ *
+ * The first version of this ranked by our own listing count and produced advice
+ * that was confidently wrong. Rutherglen carries 22 listings because its
+ * wineries were researched hard, so a town of 2,600 was being named as the
+ * regional centre for its neighbours. Wangaratta is a tier 1 city of 19,500
+ * with 2 listings, so it was being told to send its residents to Rutherglen.
+ *
+ * Listing counts measure how far our research has got. Population and tier are
+ * facts about the place. Only the second kind belongs in a sentence telling
+ * somebody where to drive, or the site's advice silently changes every time we
+ * ingest another town.
+ *
+ * Tier is ranked before distance so a genuine centre wins over a nearer
+ * suburb: Jindera is sent to Albury and not to Lavington, which is closer but
+ * is part of Albury anyway.
+ */
+const HUB_POPULATION_MULTIPLE = 2.5;
+const HUB_POPULATION_FLOOR = 5000;
+const HUB_MAX_KM = 60;
+
+function hubFor(locality: Locality): TownHub | undefined {
+  // Enough bigger to be worth the drive. Without the multiple, Wodonga at
+  // 43,000 would be named as the hub for Wangaratta at 19,500, and Wangaratta
+  // is nobody's satellite.
+  const need = Math.max(HUB_POPULATION_FLOOR, (locality.population ?? 0) * HUB_POPULATION_MULTIPLE);
+
+  const best = liveLocalities()
+    .filter((l) => l.id !== locality.id && l.tier <= 2 && (l.population ?? 0) >= need)
+    .map((l) => ({ locality: l, distanceKm: distanceKm(locality, l) }))
+    .filter((c) => c.distanceKm <= HUB_MAX_KM)
+    .sort((a, b) => a.locality.tier - b.locality.tier || a.distanceKm - b.distanceKm)[0];
+
+  if (!best) return undefined;
+  return {
+    locality: best.locality,
+    distanceKm: best.distanceKm,
+    crossesBorder: best.locality.state !== locality.state,
+    basedCount: listingsBasedIn(best.locality.id).length,
+  };
+}
+
+export function townProfile(locality: Locality): TownProfile {
+  const based = listingsBasedIn(locality.id).sort((a, b) => b.qualityScore - a.qualityScore);
+  const basedIds = new Set(based.map((l) => l.id));
+  const visiting = listingsInLocality(locality.id)
+    .filter((l) => !basedIds.has(l.id))
+    .sort((a, b) => b.qualityScore - a.qualityScore);
+
+  const counts = new Map<string, number>();
+  for (const l of based) {
+    const primary = l.categoryIds[0];
+    if (primary) counts.set(primary, (counts.get(primary) ?? 0) + 1);
+  }
+  const basedCategories = categories
+    .filter((c) => counts.has(c.id))
+    .map((c) => ({ category: c, count: counts.get(c.id) as number }))
+    .sort((a, b) => b.count - a.count || a.category.sortOrder - b.category.sortOrder);
+
+  const hub = hubFor(locality);
+
+  // Categories the hub has and this town does not, most useful first. Capped,
+  // because a list of forty things you cannot get locally reads as an insult
+  // to the town rather than as help.
+  const hereCats = new Set(basedCategories.map((c) => c.category.id));
+  const goToHubFor = hub
+    ? Array.from(
+        new Map(
+          listingsBasedIn(hub.locality.id)
+            .map((l) => categoryById.get(l.categoryIds[0]))
+            .filter((c): c is Category => Boolean(c) && !hereCats.has((c as Category).id))
+            .map((c) => [c.id, c]),
+        ).values(),
+      )
+        .sort((a, b) => a.sortOrder - b.sortOrder)
+        .slice(0, 10)
+    : [];
+
+  const neighbours = neighboursOf(locality, 8);
+
+  return {
+    locality,
+    region: getRegion(locality.regionId),
+    based,
+    visiting,
+    basedCategories,
+    hub,
+    goToHubFor,
+    neighbours,
+    community: communityFor(locality.slug),
+    events: eventsInLocality(locality.slug),
+    lists: listsForLocality(locality.slug),
+    bordersOtherState: neighbours.some((nb) => nb.crossesBorder),
+  };
+}
+
+/**
+ * Localities that get a "new in town" and "hidden gems" page: every live one.
+ *
+ * Deliberately not hasGuidePages(). Those pages are now built from what is
+ * true of the town rather than from listings borrowed off its neighbour, so
+ * the duplication that justified the narrower gate cannot happen: the cards
+ * are businesses based here, and everywhere else is linked to rather than
+ * copied in.
+ */
+export const townGuideLocalities = () => liveLocalities();
+
+export const hasTownGuide = (localityId: string): boolean => isLiveLocality(localityId);
+
+/**
+ * Hidden gems: the rules, in one place.
+ *
+ * The page prints these rules in its standfirst, and a "hidden gems" list that
+ * will not say how it chose is an advertorial. So the rules live here rather
+ * than in the template, which also means the route, the links pointing at it
+ * and the page itself all answer "does this town have gems" identically.
+ *
+ * Everything is judged on businesses actually BASED in the town. The earlier
+ * version drew from listingsInLocality(), which includes every tradesperson
+ * who drives through, and the result for a suburb was a page of the next
+ * town's businesses under a different heading.
+ */
+export interface Gem {
+  listing: Listing;
+  reason: string;
+}
+
+/**
+ * Below this many businesses based in a town, being the only one of your kind
+ * is a fact about the town. Above it, it is a fact about our category tree,
+ * and every sole trader in Albury would qualify.
+ */
+const GEM_SMALL_TOWN = 15;
+
+const gemIsFree = (l: Listing) => l.attributes?.free_entry === 'yes';
+const gemIsClub = (l: Listing) => l.vertical === 'clubs_hobbies';
+const gemIsThinCategory = (l: Listing) => listingsInCategory(l.categoryIds[0]).length < 4;
+const gemIsIndependentRetail = (l: Listing) => {
+  const c = categoryById.get(l.categoryIds[0]);
+  if (!c || c.vertical !== 'trades') return false;
+  return /shops?$|stores?$|butchers|greengrocers|delis|florists|nurseries|jewellers|op-shops|produce|bookshops/.test(
+    c.slug,
+  );
+};
+
+export function hiddenGemsIn(localityId: string): Gem[] {
+  const here = listingsBasedIn(localityId);
+  const smallTown = here.length < GEM_SMALL_TOWN;
+
+  const soleOfItsKind = (l: Listing) =>
+    smallTown && here.filter((x) => x.categoryIds[0] === l.categoryIds[0]).length === 1;
+
+  return here
+    .map((listing) => {
+      // Order matters: the first rule that fits is the one shown, so the most
+      // specific reason wins rather than whichever happens to be checked last.
+      let reason: string | null = null;
+      if (gemIsFree(listing)) reason = 'Free, so nobody advertises it';
+      else if (gemIsClub(listing)) reason = 'A club, and clubs are invisible on every other directory';
+      else if (gemIsIndependentRetail(listing))
+        reason = 'Independent retail, which loses every search to the chains';
+      else if (gemIsThinCategory(listing))
+        reason = 'In a category too small to rank, so it never surfaces';
+      else if (soleOfItsKind(listing)) reason = 'The only one of its kind based in town';
+      return reason ? { listing, reason } : null;
+    })
+    .filter((g): g is Gem => g !== null)
+    .sort((a, b) => b.listing.qualityScore - a.listing.qualityScore);
+}
+
+export const hasHiddenGems = (localityId: string): boolean => hiddenGemsIn(localityId).length > 0;
+
+export const hiddenGemLocalities = () => liveLocalities().filter((l) => hasHiddenGems(l.id));

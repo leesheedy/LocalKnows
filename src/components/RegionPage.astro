@@ -19,7 +19,7 @@ import {
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { n } from '~/lib/copy';
+import { n, plural } from '~/lib/copy';
 import {
   graph,
   organisationNode,
@@ -136,7 +136,7 @@ const jsonLd = graph([
       <p class="standfirst">{region.blurb}</p>
       <div class="headmeta">
         <span>{places.length} towns</span>
-        <span>&middot; {n(totalListings)} listings</span>
+        <span>&middot; {n(totalListings)} {plural(totalListings, 'listing', 'listings')}</span>
         <span>&middot; Checked {buildDate}</span>
       </div>
     </div>
