@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="LocalsKnow">
   <rect width="64" height="64" rx="10" fill="#1F6B5C"/>
-  <path d="M32 13c-7.2 0-13 5.8-13 13 0 9.8 13 25 13 25s13-15.2 13-25c0-7.2-5.8-13-13-13z" fill="#E8B21F"/>
-  <circle cx="32" cy="26" r="5.2" fill="#1F6B5C"/>
+  <path d="M32 7c-9.9 0-18 8.1-18 18 0 13.7 18 32 18 32s18-18.3 18-32c0-9.9-8.1-18-18-18z" fill="#E8B21F"/>
+  <circle cx="32" cy="25" r="7.2" fill="#1F6B5C"/>
 </svg>

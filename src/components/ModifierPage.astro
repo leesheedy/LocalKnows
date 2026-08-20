@@ -137,7 +137,7 @@ const jsonLd = graph([
 
   <div class="wrap" style="padding-top:26px">
     <div class="cards">
-      {listings.map((l) => <ListingCard listing={l} context={locality} category={category} />)}
+      {listings.map((l) => <ListingCard listing={l} context={locality} category={category} headingLevel={2} />)}
     </div>
     <Faq faqs={faqs} />
   </div>

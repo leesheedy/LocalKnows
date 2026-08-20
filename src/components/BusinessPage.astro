@@ -26,7 +26,7 @@ import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import { outboundRel } from '~/lib/indexability';
-import { description as fitDescription } from '~/lib/seo';
+import { description as fitDescription, firstSentence } from '~/lib/seo';
 import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
 import { listingMedia } from '~/lib/media';
 import { humanDate } from '~/lib/build';
@@ -239,7 +239,7 @@ const faqs = [
  * complete sentence on every listing instead of an ellipsis on six hundred.
  */
 const description = (() => {
-  const first = listing.description.split(/(?<=\.)\s+/)[0] ?? listing.description;
+  const first = firstSentence(listing.description);
   let out = first.length > 158 ? fitDescription(listing.description) : first;
   const extras = [
     listing.addressLine ? listing.addressLine + ', ' + locality.name + ' ' + locality.state + ' ' + listing.postcode + '.' : '',
@@ -252,6 +252,24 @@ const description = (() => {
   }
   return out;
 })();
+
+/**
+ * Titles, longest first, for Base to choose from.
+ *
+ * "Business name — Category in Town STATE" is the title worth having and it fits
+ * for about half the directory. For the other half something has to go, and the
+ * order it goes in matters: the state is the least useful word on the line
+ * because the town already implies it, and the town is often inside the business
+ * name anyway ("Albury & District Historical Society"). The category is the last
+ * thing to drop, because it is the phrase people search with.
+ */
+const titleLadder = [
+  listing.name + ' — ' + category.nameSingular + ' in ' + locality.name + ' ' + locality.state,
+  listing.name + ' — ' + category.nameSingular + ' in ' + locality.name,
+  listing.name + ' — ' + category.nameSingular,
+  listing.name + ' — ' + locality.name + ' ' + locality.state,
+  listing.name,
+];
 
 const jsonLd = graph([
   organisationNode(),
@@ -272,13 +290,15 @@ const jsonLd = graph([
 
 <Base
   kind="listing"
-  title={listing.name + ' — ' + category.nameSingular + ' in ' + locality.name + ' ' + locality.state}
+  title={titleLadder[0]}
+  titleAlt={titleLadder.slice(1)}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
   jsonLd={jsonLd}
   qualityScore={listing.qualityScore}
   ogImage={media.social ? media.social.src : ogForVertical(listing.vertical)}
+  ogImageSize={media.social ? { width: media.social.width, height: media.social.height } : undefined}
   ogType="article"
   modifiedAt={listing.lastCheckedAt}
 >

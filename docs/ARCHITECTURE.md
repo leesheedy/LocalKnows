@@ -141,7 +141,7 @@ exactly the kind of thing an AI answer engine quotes with attribution.
 Then: FAQ block with FAQPage schema, drawn from real questions asked through the site.
 Then: internal links to nearby localities, related categories, and the region hub.
 
-Indexation rule: noindex, follow if fewer than 5 listings. Flip to index automatically
+Indexation rule: noindex, follow if fewer than 3 listings. Flip to index automatically
 once the count crosses the threshold. Never delete, never 404 a page that once ranked.
 
 ### Listing detail page

@@ -106,7 +106,7 @@ tag, sitemap membership and priority together. They cannot disagree.
 
 | Page | Rule |
 |---|---|
-| Locality x category | `noindex, follow` below 5 listings, flips automatically above it |
+| Locality x category | `noindex, follow` below 3 listings, flips automatically above it |
 | Modifier page | Not generated at all below 5 listings. Never a 200 with an empty state. |
 | Listing | `noindex, follow` below a quality score of 40 |
 | Locality with no listings | `noindex, follow` |

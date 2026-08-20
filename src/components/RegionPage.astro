@@ -21,6 +21,7 @@ import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import { n, plural } from '~/lib/copy';
 import {
+  compose,
   graph,
   organisationNode,
   websiteNode,
@@ -73,16 +74,24 @@ const topCategories = [...catCounts.values()].sort((a, b) => b.count - a.count).
 const siblings = regionsInState(region.state).filter((r) => r.id !== region.id);
 
 const h1 = region.name + ', ' + state.name;
-const description =
+/**
+ * Counts first, then as much of the region blurb as fits.
+ *
+ * This took `region.blurb.slice(0, 80)`, which is a cut at a fixed offset and so
+ * landed mid word ("climb from the Murrumbidgee at Gundagai up"). compose adds
+ * whole sentences of the blurb instead and stops when the next one will not fit.
+ */
+const description = compose(
   n(totalListings) +
-  ' businesses across ' +
-  withListings.length +
-  ' towns in the ' +
-  region.name +
-  ' region of ' +
-  state.name +
-  '. ' +
-  region.blurb.slice(0, 80);
+    ' businesses across ' +
+    withListings.length +
+    ' towns in the ' +
+    region.name +
+    ' region of ' +
+    state.name +
+    '.',
+  region.blurb,
+);
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },

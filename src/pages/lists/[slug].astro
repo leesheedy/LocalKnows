@@ -21,7 +21,7 @@ import {
 import Base from '~/layouts/Base.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import { humanDate } from '~/lib/build';
-import { listGraph, type Crumb } from '~/lib/seo';
+import { listGraph, description as fitDescription, headlineStem, type Crumb } from '~/lib/seo';
 
 export async function getStaticPaths() {
   return curatedLists.map((list) => ({
@@ -75,13 +75,20 @@ const otherLists = curatedLists
   .slice(0, 6)
   .map((x) => x.list);
 
-const description =
-  list.intro.length > 155 ? list.intro.slice(0, 152).trimEnd() + '…' : list.intro;
+/**
+ * The intro is written for the top of the page, so it runs to several sentences
+ * and has to be clipped for the snippet. It was being cut at 152 characters flat,
+ * which put an ellipsis mid word on sixty five of the sixty six lists — including
+ * one that overran the budget by a single character. fitDescription stops on the
+ * last sentence or clause that fits instead.
+ */
+const description = fitDescription(list.intro);
 ---
 
 <Base
   kind="list"
   title={list.title}
+  titleAlt={[headlineStem(list.title)]}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}

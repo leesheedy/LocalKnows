@@ -17,6 +17,7 @@ import { formatTime } from '~/lib/copy';
 import { BUILD_DATE, humanDate, shortDate } from '~/lib/build';
 import {
   abs,
+  compose,
   graph,
   organisationNode,
   websiteNode,
@@ -99,17 +100,31 @@ const nextUp = events
   .slice(0, 6);
 
 const where = locality ? locality.name + ' ' + e.state : e.state;
-const description =
+
+/**
+ * Where, when, what it costs, then as much of the event's own copy as fits.
+ *
+ * The blurb used to be concatenated whole and clipped afterwards, which put the
+ * ellipsis inside the sentence that says what the event actually is. compose
+ * adds the blurb a sentence at a time and stops on a full stop.
+ *
+ * The town is dropped when the venue name already contains it. "West Wodonga
+ * Recreation Reserve, West Wodonga VIC" says the town twice and spends seventeen
+ * characters doing it, which was the difference between the blurb fitting and
+ * being cut.
+ */
+const venueSaysTown = Boolean(locality) && e.venueName.includes(locality!.name);
+const placed = venueSaysTown ? e.venueName + ' ' + e.state : e.venueName + ', ' + where;
+const description = compose(
   e.eventType +
-  ' at ' +
-  e.venueName +
-  ', ' +
-  where +
-  ' on ' +
-  humanDate(e.startDate) +
-  '. ' +
-  (e.isFree ? 'Free entry. ' : cost !== 'Not published' ? cost + '. ' : '') +
-  e.description;
+    ' at ' +
+    placed +
+    ' on ' +
+    humanDate(e.startDate) +
+    '.' +
+    (e.isFree ? ' Free entry.' : cost !== 'Not published' ? ' ' + cost + '.' : ''),
+  e.description,
+);
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },

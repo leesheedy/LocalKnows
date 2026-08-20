@@ -420,11 +420,13 @@
   gap: 14px;
   align-items: flex-start;
 }
+.card-top h2,
 .card-top h3 {
   font-size: 18px;
   letter-spacing: -0.02em;
   padding-right: 52px;
 }
+.card-top h2 a::after,
 .card-top h3 a::after {
   content: '';
   position: absolute;
@@ -1486,6 +1488,7 @@ img.logo {
   box-shadow: var(--shadow-card);
   border-color: var(--line-strong);
 }
+.tool h2,
 .tool h3 {
   font-size: 16.5px;
   letter-spacing: -0.02em;
@@ -1591,12 +1594,14 @@ img.logo {
   display: block;
   margin-bottom: 5px;
 }
+.stack h2,
 .stack h3 {
   font-size: 16px;
   letter-spacing: -0.02em;
   font-weight: 600;
   font-family: var(--font-body);
 }
+.stack a:hover h2,
 .stack a:hover h3 {
   color: var(--river);
 }
@@ -1826,6 +1831,7 @@ img.logo {
     padding-top: 20px;
     border-top: 1px solid var(--line);
   }
+  .tw-result h2,
   .tw-result h3 {
     font-size: 16px;
     margin-bottom: 12px;

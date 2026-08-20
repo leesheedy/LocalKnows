@@ -3,6 +3,7 @@ import type { Category, Listing, Locality } from '~/lib/types';
 import { url, averageRating, getCategory, getLocality } from '~/lib/repo';
 import { formatTime, dayShort } from '~/lib/copy';
 import { listingMedia } from '~/lib/media';
+import { description as fitDescription } from '~/lib/seo';
 
 interface Props {
   listing: Listing;
@@ -10,8 +11,19 @@ interface Props {
   context?: Locality;
   category?: Category;
   showState?: boolean;
+  /**
+   * Heading level for the business name. 2 where the grid is the page's own
+   * content and sits straight under the h1; 3 where it is a "nearby" or
+   * "similar" block underneath a section heading of its own.
+   *
+   * Cards were always h3, which on every money page produced h1 followed by
+   * h3 with no h2 between them. Thirty pages announced a level of structure
+   * that was not there, which is what a screen reader navigates by.
+   */
+  headingLevel?: 2 | 3;
 }
-const { listing, context, category, showState = true } = Astro.props;
+const { listing, context, category, showState = true, headingLevel = 3 } = Astro.props;
+const Heading = ('h' + headingLevel) as 'h2' | 'h3';
 
 const home = getLocality(listing.localityId);
 const primary = category ?? getCategory(listing.categoryIds[0]);
@@ -41,7 +53,7 @@ const media = listingMedia(listing);
       </span>
     )}
     <div style="min-width:0">
-      <h3><a href={url.listing(listing)}>{listing.name}</a></h3>
+      <Heading><a href={url.listing(listing)}>{listing.name}</a></Heading>
       <p class="cat-line">
         {primary?.name}
         {home && <> &middot; {home.name}</>}
@@ -72,7 +84,7 @@ const media = listingMedia(listing);
     {listing.priceBand && <span>{listing.priceBand}</span>}
   </div>
 
-  <p class="desc">{listing.description.length > 155 ? listing.description.slice(0, 152).trimEnd() + '…' : listing.description}</p>
+  <p class="desc">{fitDescription(listing.description, 155)}</p>
 
   {travelsIn && (
     <p class="mono" style="color:var(--wattle-ink);margin:-6px 0 12px">

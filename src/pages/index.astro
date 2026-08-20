@@ -83,10 +83,17 @@ const homeSuburbOptions = (['NSW', 'VIC'] as const).map((code) => ({
     .sort((a, b) => a.locality.name.localeCompare(b.locality.name)),
 }));
 
+/**
+ * The one snippet on the site that has to earn a click against Google Maps, so
+ * it spends its characters on the two facts a reader cannot get there: the size
+ * of the directory and the fact that service areas ignore the state line. The
+ * previous wording ran to 171 characters and was being cut at "and…", which
+ * dropped the differentiator and kept the ellipsis.
+ */
 const description =
-  'Find trades, cafes, pubs, places to stay and things to do across New South Wales and Victoria. ' +
+  'Trades, cafes, pubs, places to stay and things to do across New South Wales and Victoria. ' +
   n(listings.length) +
-  ' listings, service areas that cross the border, and sources on every page.';
+  ' listings, with service areas that cross the border.';
 
 const faqs = [
   {

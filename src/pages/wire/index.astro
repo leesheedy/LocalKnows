@@ -98,7 +98,7 @@ const jsonLd = graph([
             <li>
               <a href={url.wireArticle(w)}>
                 <time datetime={w.publishedAt}>{shortDate(w.publishedAt)}</time>
-                <h3>{w.title}</h3>
+                <h2>{w.title}</h2>
                 <p>{w.description}</p>
                 <p class="mono" style="color:var(--ink-40)">
                   {w.author} &middot; {w.state === 'both' ? 'NSW and Victoria' : STATES[w.state].name}

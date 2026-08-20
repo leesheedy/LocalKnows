@@ -1,6 +1,6 @@
 {
-  "name": "LocalKnows",
-  "short_name": "LocalKnows",
+  "name": "LocalsKnow",
+  "short_name": "LocalsKnow",
   "description": "Business and places directory for New South Wales and Victoria",
   "start_url": "/",
   "scope": "/",

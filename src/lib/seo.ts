@@ -421,7 +421,7 @@ export function listGraph(
     webPageNode({
       pageUrl,
       title: list.title,
-      description: list.intro.slice(0, 300),
+      description: description(list.intro, 300),
       crumbs,
       datePublished: list.publishedAt,
       dateModified: list.reviewedAt,
@@ -429,7 +429,7 @@ export function listGraph(
     articleNode({
       pageUrl,
       headline: list.title,
-      description: list.intro.slice(0, 300),
+      description: description(list.intro, 300),
       author: list.author,
       datePublished: list.publishedAt,
       dateModified: list.reviewedAt,
@@ -501,14 +501,103 @@ export function graph(nodes: unknown[]) {
   return { '@context': 'https://schema.org', '@graph': nodes.filter(Boolean) };
 }
 
-/** Title guard. Long titles get rewritten by Google, which loses the keyword. */
-export function title(main: string, withBrand = true): string {
+/**
+ * Title guard, written as a ladder rather than as a truncation.
+ *
+ * Long titles get rewritten by Google, and a hard cut is the worst way to get
+ * under the limit: "Johnsons MME Accountants and Advisors — Accountant in
+ * Albury…" spends its last eight characters on an ellipsis and throws away the
+ * word the page is trying to rank for. So a page may pass several candidates,
+ * most informative first, and the first one that fits wins.
+ *
+ * The brand suffix is garnish. A candidate that keeps the category but loses
+ * " | LocalsKnow" beats a shorter one that keeps the brand, because on a
+ * directory the category and the town are the words a reader is scanning for
+ * and the brand is already shown beside the favicon.
+ */
+export function title(main: string | string[], withBrand = true): string {
   const brand = ' | ' + SITE.name;
   const budget = 62;
-  if (!withBrand) return main.slice(0, budget);
-  if (main.length + brand.length <= budget) return main + brand;
-  return main.length <= budget ? main : main.slice(0, budget - 1).trimEnd() + '…';
+  const ladder = (Array.isArray(main) ? main : [main])
+    .map((s) => (s ?? '').replace(/\s+/g, ' ').trim())
+    .filter(Boolean);
+  if (!ladder.length) return SITE.name;
+
+  for (const c of ladder) {
+    if (withBrand && c.length + brand.length <= budget) return c + brand;
+    if (c.length <= budget) return c;
+  }
+
+  // Every rung overflowed, which means the shortest one is a single long name.
+  // Cut it at a word boundary: mid word is unreadable, and it is the name that
+  // is long rather than the template, so there is nothing left to drop.
+  const shortest = ladder[ladder.length - 1];
+  const cut = shortest.slice(0, budget - 1);
+  const space = cut.lastIndexOf(' ');
+  return (space > budget / 2 ? cut.slice(0, space) : cut).replace(/[\s,;:—–-]+$/, '') + '…';
 }
+
+/**
+ * Abbreviations whose full stop does not end a sentence, plus initials.
+ *
+ * The trailing `\b[A-Z]\.` catches "D.N." and "L.J.", where the word boundary
+ * sits between the previous full stop and the letter.
+ */
+const ABBREVIATION =
+  /(?:\b(?:Co|Pty|Ltd|Inc|Corp|St|Mt|Mr|Mrs|Ms|Dr|Prof|Rd|Ave|Hwy|No|Est|Dept|approx|vs)|\b[A-Z])\.$/;
+
+/**
+ * The opening sentence, with the full stops that are not sentence endings left
+ * alone.
+ *
+ * Splitting on "full stop then space" turned five listings into snippets reading
+ * "D.N. Phone 02 6024 5321." and "Mr. Phone 02 6921 6666." — the business name,
+ * a phone number and nothing else, because the name is an abbreviation and the
+ * splitter took it for the end of the sentence.
+ *
+ * Two tests rescue them. A real sentence starts with a capital or a digit, so a
+ * fragment continuing in lower case ("Co. occupies a 1920s co-op building") is
+ * not a new one. And a known abbreviation or a single initial before the stop is
+ * never an ending, whatever follows it.
+ */
+export function firstSentence(text: string): string {
+  const clean = text.replace(/\s+/g, ' ').trim();
+  const parts = clean.split(/(?<=[.!?])\s+/);
+  let out = '';
+  for (let i = 0; i < parts.length; i++) {
+    out = out ? out + ' ' + parts[i] : parts[i];
+    const next = parts[i + 1];
+    if (!next) break;
+    if (!/^["'(‘“A-Z0-9]/.test(next)) continue;
+    if (ABBREVIATION.test(out)) continue;
+    break;
+  }
+  return out;
+}
+
+/**
+ * The half of an editorial headline that can stand on its own.
+ *
+ * "Every cellar door in Rutherglen, and what each one actually offers" is a good
+ * headline and two characters too long for a result. Everything from the first
+ * comma or colon is the elaboration, so dropping it leaves a title that is still
+ * true and still says what the page is. Returns the headline unchanged when the
+ * stem would be too short to be worth having.
+ */
+export function headlineStem(headline: string): string {
+  const stem = headline.split(/[,:—–]/)[0].trim();
+  return stem.length >= 24 ? stem : headline;
+}
+
+/**
+ * Words that must not be the last thing before an ellipsis.
+ *
+ * A snippet ending "…meet on the second Monday of each month at the…" reads as
+ * a broken page. The same snippet with the dangling preposition removed reads
+ * as one that was simply too long for the box, which is what happened.
+ */
+const DANGLING =
+  /(?:\s+(?:a|an|the|and|or|of|in|on|at|to|for|with|from|by|as|but|that|which|who|whose|is|are|was|were|has|have|had|its|it|their|this|these|those|into|over|under|up|out|near|between|through|across|plus|including|includes))+$/i;
 
 /**
  * Descriptions, clipped where a reader would not notice.
@@ -532,8 +621,63 @@ export function description(text: string, max = 158): string {
   // an ellipsis.
   if (lastStop >= 110) return window.slice(0, lastStop + 1).trim();
 
+  // No sentence ends inside the budget, so close the last complete clause and
+  // punctuate it. A hundred and six listing snippets were ending "…mediums,
+  // brushes, easels…", which reads as a page that failed to load rather than a
+  // description that ran long; cut one clause earlier and closed, the same
+  // sentence reads as though it were written that length.
+  const clause = Math.max(
+    window.lastIndexOf(', '),
+    window.lastIndexOf('; '),
+    window.lastIndexOf(' — '),
+    window.lastIndexOf(' – '),
+    window.lastIndexOf(': '),
+  );
+  if (clause >= 100) return window.slice(0, clause).replace(/[\s,;:—–-]+$/, '') + '.';
+
+  // No clause either, so take a shorter complete sentence over a longer broken
+  // one. The floor above is about not wasting the budget; this one is about the
+  // fact that a 94 character sentence that ends is worth more in a result than
+  // a 153 character one that stops at "if you are planning a trip a…".
+  if (lastStop >= 80) return window.slice(0, lastStop + 1).trim();
+
+  // Last resort. Cut on a word, then drop any trailing article or preposition
+  // so the ellipsis follows something the reader can hold on to.
   const cut = clean.slice(0, max - 1);
-  return cut.slice(0, cut.lastIndexOf(' ')).replace(/[,.;:]$/, '') + '…';
+  const word = cut.slice(0, cut.lastIndexOf(' '));
+  return word.replace(DANGLING, '').replace(/[,.;:]$/, '') + '…';
+}
+
+/**
+ * A snippet assembled from a lead and a body, one whole sentence at a time.
+ *
+ * Pages that concatenate a template ("Sport at the showground on 17 October.")
+ * with prose written for the page body used to overflow and then get cut, which
+ * put the ellipsis in the middle of the only interesting half. Sentences are
+ * added while they fit, and if not one of them does, the body is clipped by
+ * `description` instead of being dropped.
+ */
+export function compose(lead: string, body: string, max = 158): string {
+  const head = lead.replace(/\s+/g, ' ').trim();
+  const sentences = body
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(/(?<=[.!?])\s+/)
+    .filter(Boolean);
+
+  let out = head;
+  for (const s of sentences) {
+    if ((out + ' ' + s).length > max) break;
+    out = out ? out + ' ' + s : s;
+  }
+  if (out !== head) return out;
+
+  // Not one sentence of the body fits. If the lead already reads as a finished
+  // snippet, stop there rather than reaching for half a sentence: the lead is
+  // the part carrying the facts a searcher is checking. Only a lead too short to
+  // stand alone is worth clipping the body onto.
+  if (/[.!?]$/.test(head) && head.length >= 70) return head;
+  return description(head ? head + ' ' + body : body, max);
 }
 
 /**

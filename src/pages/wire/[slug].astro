@@ -14,7 +14,7 @@ import Base from '~/layouts/Base.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import { renderMarkdown } from '~/lib/markdown';
 import { humanDate, shortDate } from '~/lib/build';
-import { wireGraph, type Crumb } from '~/lib/seo';
+import { wireGraph, headlineStem, type Crumb } from '~/lib/seo';
 
 export async function getStaticPaths() {
   return wire.map((w) => ({ params: { slug: w.slug }, props: { w } }));
@@ -65,6 +65,7 @@ const jsonLd = wireGraph(w, crumbs);
 <Base
   kind="wire"
   title={w.title}
+  titleAlt={[headlineStem(w.title)]}
   description={w.description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}

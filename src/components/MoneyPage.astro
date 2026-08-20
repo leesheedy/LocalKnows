@@ -253,7 +253,7 @@ const jsonLd = graph([
     {listings.length > 0 ? (
       <div class="cards">
         {listings.map((l) => (
-          <ListingCard listing={l} context={locality} category={category} />
+          <ListingCard listing={l} context={locality} category={category} headingLevel={2} />
         ))}
       </div>
     ) : (

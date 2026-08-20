@@ -32,7 +32,7 @@ const lastReviewed = rows[0]?.reviewedAt;
 const h1 = 'Guides';
 const pageTitle = 'Guides to hiring local in NSW and Victoria';
 const description =
-  'Guides on hiring trades, checking licences and buying local across New South Wales and Victoria. Every one carries a named author and the date it was last reviewed.';
+  'Guides on hiring trades, checking licences and buying local across New South Wales and Victoria. Each one has a named author and a review date.';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -120,7 +120,7 @@ const jsonLd = graph([
             <article class="card">
               <div class="card-top">
                 <div style="min-width:0">
-                  <h3><a href={url.guide(g)}>{g.title}</a></h3>
+                  <h2><a href={url.guide(g)}>{g.title}</a></h2>
                   <p class="cat-line">{g.author} &middot; {g.authorRole}</p>
                 </div>
               </div>

@@ -127,6 +127,7 @@ const jsonLd = graph([
 <Base
   kind="localityCategory"
   title={theme.metaTitle(locality.name, state.name)}
+  titleAlt={[theme.metaTitle(locality.name, locality.state), h1]}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -170,7 +171,7 @@ const jsonLd = graph([
     : (
         <div class="wrap" style="padding-top:24px">
           <div class="cards">
-            {matched.map((l) => <ListingCard listing={l} context={locality} />)}
+            {matched.map((l) => <ListingCard listing={l} context={locality} headingLevel={2} />)}
           </div>
         </div>
       )}

@@ -383,6 +383,18 @@ const headers = `/*
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
+/brand/*
+  Cache-Control: public, max-age=604800
+
+/og/*
+  Cache-Control: public, max-age=604800
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/favicon.svg
+  Cache-Control: public, max-age=604800
+
 /sitemap*.xml
   Cache-Control: public, max-age=3600
   Content-Type: application/xml; charset=utf-8

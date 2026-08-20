@@ -142,8 +142,22 @@ export const PLANS = {
  * internal link graph together. That coupling is deliberate.
  */
 export const POLICY = {
-  /** Locality x category pages below this count are noindex, follow. */
-  minListingsToIndex: 5,
+  /**
+   * Locality x category pages below this count are noindex, follow.
+   *
+   * Three, not five. At five, 38 of the 1,516 locality x category pages were
+   * indexed and 1,478 were held back, which meant the highest intent pages on
+   * the site — the ones that answer "plumbers in Wagga Wagga" — were almost all
+   * invisible. Three named businesses with addresses, phone numbers and hours is
+   * a real comparison set and a real answer to that query.
+   *
+   * It stops at three deliberately. The 273 two-listing and 1,113 one-listing
+   * pages stay out: a page holding one business is a worse version of that
+   * business's own page, and eleven hundred of them is a pattern rather than an
+   * oversight. They keep their links and flip to indexed on their own as
+   * listings are added.
+   */
+  minListingsToIndex: 3,
   /** Modifier pages below this count are not generated at all. */
   minListingsForModifierPage: 5,
   /** Listings below this quality score are noindex, follow. */

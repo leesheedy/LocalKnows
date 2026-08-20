@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "node scripts/selftest.mjs && node scripts/preflight.mjs && astro build && node scripts/postbuild.mjs",
+    "build": "node scripts/selftest.mjs && node scripts/preflight.mjs && node scripts/favicon.mjs && astro build && node scripts/postbuild.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "verify": "node scripts/verify-build.mjs",
@@ -25,7 +25,8 @@
     "smoke": "node scripts/smoke.mjs",
     "test": "node scripts/selftest.mjs",
     "audit": "node scripts/audit-seo.mjs",
-    "lists": "node scripts/generate-lists.mjs"
+    "lists": "node scripts/generate-lists.mjs",
+    "favicon": "node scripts/favicon.mjs"
   },
   "dependencies": {
     "astro": "^5.18.2"
