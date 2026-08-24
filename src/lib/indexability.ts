@@ -64,6 +64,9 @@ export interface IndexInput {
  */
 const TOWN_GUIDE_INDEX_FLOOR = 5;
 
+/** Upcoming events a calendar needs before it is worth indexing as a calendar. */
+const EVENT_INDEX_FLOOR = 3;
+
 const NOINDEX_FOLLOW = (reason: string, priority = 0): IndexDecision => ({
   index: false,
   follow: true,
@@ -152,9 +155,23 @@ export function decide(input: IndexInput): IndexDecision {
       return { index: true, follow: true, inSitemap: true, priority: 0.6, reason: 'listing detail' };
 
     case 'categoryIndex':
-    case 'category':
     case 'vertical':
       return { index: true, follow: true, inSitemap: true, priority: 0.7, reason: 'category hub' };
+
+    /*
+     * A category hub with nothing in it says so on its own face: "Nothing listed
+     * in this category yet." That sentence is the page telling you it should not
+     * be in an index. Forty three of them were, and the taxonomy is meant to run
+     * ahead of the data, so this will keep happening every time a category is
+     * defined before it is filled. The page is still worth having and still
+     * worth crawling, because it carries the definition, the synonyms and the
+     * link to add the first business, and it flips to indexed the build after
+     * somebody does.
+     */
+    case 'category':
+      return listingCount > 0
+        ? { index: true, follow: true, inSitemap: true, priority: 0.7, reason: 'category hub' }
+        : NOINDEX_FOLLOW('category defined but nothing listed in it yet');
 
     case 'guide':
     case 'tool':
@@ -171,8 +188,23 @@ export function decide(input: IndexInput): IndexDecision {
         ? NOINDEX_FOLLOW('event has passed, page kept with a pointer to the next one')
         : { index: true, follow: true, inSitemap: true, priority: 0.5, reason: 'upcoming event' };
 
+    /*
+     * A town calendar holding one event is a page about one event, and the
+     * event already has its own page. Eighteen of the nineteen town calendars
+     * were sitting in the index under 300 words, all of them furniture around a
+     * single row, which is the same thinness the town guide floor exists to
+     * catch. Three upcoming events is a calendar. Below that the page stays,
+     * keeps its links to the events and to the town, and stays out of the index
+     * until the town fills it. Callers pass listingCount as the number of
+     * UPCOMING events, so a calendar comes back on its own the build after a
+     * third one is added.
+     */
     case 'eventIndex':
-      return { index: true, follow: true, inSitemap: true, priority: 0.6, reason: 'events index' };
+      return listingCount >= EVENT_INDEX_FLOOR
+        ? { index: true, follow: true, inSitemap: true, priority: 0.6, reason: 'events index' }
+        : NOINDEX_FOLLOW(
+            'fewer than ' + EVENT_INDEX_FLOOR + ' upcoming events, so the calendar is furniture around a row',
+          );
 
     case 'static':
       return { index: true, follow: true, inSitemap: true, priority: 0.3, reason: 'policy and about pages' };

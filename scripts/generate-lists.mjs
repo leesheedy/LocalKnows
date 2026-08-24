@@ -358,7 +358,7 @@ const CUTS = [
     key: 'function_room',
     angle: 'venue',
     slug: 'function-rooms-and-venues-in',
-    title: (t) => 'Where to hold it in ' + t + ': function rooms and venues',
+    title: (t) => 'Function rooms and venues in ' + t,
     why: 'Every place in TOWN we list with a function room or a space for a group, whichever kind of business it is. Pubs, clubs, wineries and restaurants all end up on the same shortlist when somebody is organising a wake, a birthday or a committee meeting, and no single category page shows you all of them at once.',
   },
   {
@@ -494,7 +494,7 @@ function establishedLists() {
 
     push({
       slug: slugify('oldest-businesses-in-the-' + region.name),
-      title: 'The oldest businesses still trading in the ' + region.name,
+      title: 'The oldest businesses in the ' + region.name,
       intro:
         ordered.length + ' businesses across ' + towns.size + ' towns of the ' + region.name +
         ' that publish the year they started, oldest first, running from ' + ordered[0].year +

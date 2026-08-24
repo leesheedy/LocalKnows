@@ -127,6 +127,84 @@ const RESERVED = new Set([
   'verified',
 ]);
 
+/**
+ * schema.org types that actually exist.
+ *
+ * The rule "if you are not sure a type exists, use LocalBusiness" was written in
+ * the README and enforced by nobody, which is how a taxonomy of 214 categories
+ * ends up one plausible-sounding invention away from emitting a type that no
+ * consumer recognises across every listing in that category. There is no
+ * MortgageBroker, no Physiotherapist and no DrivingSchool in schema.org, and all
+ * three read as though there should be.
+ *
+ * The list is deliberately generous: it holds every type this directory could
+ * reasonably want, and adding a real one that is missing is a one line change.
+ * What it will not let through is a type nobody checked.
+ */
+const SCHEMA_TYPES = new Set([
+  // roots
+  'Thing', 'Organization', 'Place', 'LocalBusiness', 'Product', 'Service',
+  // Organization
+  'NGO', 'SportsOrganization', 'SportsTeam', 'PerformingGroup', 'MusicGroup',
+  'DanceGroup', 'TheaterGroup', 'EducationalOrganization', 'School',
+  'CollegeOrUniversity', 'Preschool', 'MedicalOrganization',
+  'NewsMediaOrganization', 'ResearchOrganization', 'Project', 'Consortium',
+  'LibrarySystem', 'FundingScheme', 'GovernmentOrganization',
+  // LocalBusiness direct
+  'AnimalShelter', 'ArchiveOrganization', 'AutomotiveBusiness', 'ChildCare',
+  'Dentist', 'DryCleaningOrLaundry', 'EmergencyService', 'EmploymentAgency',
+  'EntertainmentBusiness', 'FinancialService', 'FoodEstablishment',
+  'GovernmentOffice', 'HealthAndBeautyBusiness', 'HomeAndConstructionBusiness',
+  'InternetCafe', 'LegalService', 'Library', 'LodgingBusiness',
+  'MedicalBusiness', 'ProfessionalService', 'RadioStation', 'RealEstateAgent',
+  'RecyclingCenter', 'SelfStorage', 'ShoppingCenter', 'SportsActivityLocation',
+  'Store', 'TelevisionStation', 'TouristInformationCenter', 'TravelAgency',
+  // automotive
+  'AutoBodyShop', 'AutoDealer', 'AutoPartsStore', 'AutoRental', 'AutoRepair',
+  'AutoWash', 'GasStation', 'MotorcycleDealer', 'MotorcycleRepair',
+  // food and drink
+  'Bakery', 'BarOrPub', 'Brewery', 'CafeOrCoffeeShop', 'Distillery',
+  'FastFoodRestaurant', 'IceCreamShop', 'Restaurant', 'Winery',
+  // entertainment
+  'AdultEntertainment', 'AmusementPark', 'ArtGallery', 'Casino', 'ComedyClub',
+  'MovieTheater', 'NightClub',
+  // health and beauty
+  'BeautySalon', 'DaySpa', 'HairSalon', 'HealthClub', 'NailSalon',
+  'TattooParlor',
+  // home and construction
+  'Electrician', 'GeneralContractor', 'HVACBusiness', 'HousePainter',
+  'Locksmith', 'MovingCompany', 'Plumber', 'RoofingContractor',
+  // lodging
+  'BedAndBreakfast', 'Campground', 'Hostel', 'Hotel', 'Motel', 'Resort',
+  'Apartment', 'Accommodation', 'House', 'SingleFamilyResidence',
+  'CampingPitch', 'VacationRental',
+  // medical
+  'CommunityHealth', 'Dermatology', 'DietNutrition', 'Emergency', 'Geriatric',
+  'Gynecologic', 'MedicalClinic', 'Midwifery', 'Nursing', 'Obstetric',
+  'Oncologic', 'Optician', 'Optometric', 'Otolaryngologic', 'Pediatric',
+  'Pharmacy', 'Physician', 'Physiotherapy', 'PlasticSurgery', 'Podiatric',
+  'PrimaryCare', 'Psychiatric', 'PublicHealth', 'VeterinaryCare',
+  // financial and legal
+  'AccountingService', 'AutomatedTeller', 'BankOrCreditUnion', 'InsuranceAgency',
+  'Attorney', 'Notary',
+  // sport
+  'BowlingAlley', 'ExerciseGym', 'GolfCourse', 'PublicSwimmingPool',
+  'SkiResort', 'SportsClub', 'StadiumOrArena', 'TennisComplex',
+  // retail
+  'BikeStore', 'BookStore', 'ClothingStore', 'ComputerStore',
+  'ConvenienceStore', 'DepartmentStore', 'ElectronicsStore', 'Florist',
+  'FurnitureStore', 'GardenStore', 'GroceryStore', 'HardwareStore',
+  'HobbyShop', 'HomeGoodsStore', 'JewelryStore', 'LiquorStore',
+  'MensClothingStore', 'MobilePhoneStore', 'MovieRentalStore', 'MusicStore',
+  'OfficeEquipmentStore', 'OutletStore', 'PawnShop', 'PetStore', 'ShoeStore',
+  'SportingGoodsStore', 'TireShop', 'ToyStore', 'WholesaleStore',
+  // places
+  'Park', 'TouristAttraction', 'TouristDestination', 'Museum', 'Aquarium',
+  'Zoo', 'LandmarksOrHistoricalBuildings', 'BodyOfWater', 'Beach', 'Lake',
+  'River', 'Mountain', 'CivicStructure', 'PlaceOfWorship', 'Cemetery',
+  'Campground', 'Playground', 'Bridge', 'Winery',
+]);
+
 for (const c of categories) {
   if (catBySlug.has(c.slug)) fail('duplicate category slug: ' + c.slug);
   if (catById.has(c.id)) fail('duplicate category id: ' + c.id);
@@ -134,6 +212,16 @@ for (const c of categories) {
   // /nsw/albury/events/ is a real route. A category called "events" would eat it.
   if (RESERVED.has(c.slug)) fail('category slug "' + c.slug + '" collides with a reserved route segment');
   if (!c.schemaType) fail('category ' + c.slug + ' has no schemaType');
+  else if (!SCHEMA_TYPES.has(c.schemaType)) {
+    fail(
+      'category ' +
+        c.slug +
+        ' uses "' +
+        c.schemaType +
+        '", which is not a schema.org type. Use the nearest real parent, or LocalBusiness. ' +
+        'If the type does exist and is missing here, add it to SCHEMA_TYPES.',
+    );
+  }
   catBySlug.set(c.slug, c);
   catById.set(c.id, c);
 }

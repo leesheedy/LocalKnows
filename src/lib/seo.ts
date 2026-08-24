@@ -517,7 +517,19 @@ export function graph(nodes: unknown[]) {
  */
 export function title(main: string | string[], withBrand = true): string {
   const brand = ' | ' + SITE.name;
-  const budget = 62;
+  /*
+   * Sixty, not sixty two.
+   *
+   * Two is not a rounding error here, it is 98 pages. The audit flags a title
+   * over 60 and the ladder allowed 62, so every page that landed on 61 or 62
+   * passed the generator and failed the report, which is the worst of both:
+   * nobody fixes it because the build is green, and Google rewrites the title
+   * anyway. Sixty is the conventional proxy for the ~600px the SERP gives a
+   * title, and it costs nothing, because dropping a rung is free. The longest
+   * business name in the data is 49 characters, so the bottom rung of every
+   * ladder still fits and no title is ever truncated to get here.
+   */
+  const budget = 60;
   const ladder = (Array.isArray(main) ? main : [main])
     .map((s) => (s ?? '').replace(/\s+/g, ' ').trim())
     .filter(Boolean);

@@ -430,6 +430,41 @@ for (const row of out) {
   mergedPairs.push(drop.slug + ' -> ' + keep.slug);
 }
 
+/*
+ * Re-derive the inferred service area after merging.
+ *
+ * The merge unions two records' service areas, which is right when the areas
+ * were stated and wrong when they were inferred. Two records for one business
+ * filed under Wagga Wagga and under Gumly Gumly union into a listing whose home
+ * is Wagga and whose service area contains a tier 4 hamlet the inference rule
+ * would never have reached, plus same town neighbours the 12km floor exists to
+ * exclude. Three of those appeared the first time a research pass found
+ * businesses that were already listed under another category, and `npm test`
+ * caught all three.
+ *
+ * So an inferred area is recomputed from the surviving locality by the same
+ * function that produced it in the first place, rather than being patched here.
+ * Anything a business actually stated is untouched, because that is not inferred.
+ */
+for (const row of merged) {
+  if (!row.serviceAreaInferred) continue;
+  const home = localities.find((l) => l.id === row.localityId);
+  if (!home) continue;
+  const radius = SERVICE_RADIUS_KM[row.vertical] ?? 0;
+  const ids = [home.id];
+  if (radius > 0) {
+    const near = localities
+      .filter((other) => other.id !== home.id)
+      .map((other) => ({ other, km: distanceKm(home, other) }))
+      .filter((x) => reachable(home, x.other, x.km, radius))
+      .sort((a, b) => a.km - b.km)
+      .slice(0, MAX_INFERRED_AREAS);
+    for (const { other } of near) ids.push(other.id);
+  }
+  row.serviceAreaIds = ids;
+  row.serviceAreaInferred = ids.length > 1;
+}
+
 out.length = 0;
 out.push(...merged);
 

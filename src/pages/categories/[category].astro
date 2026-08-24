@@ -377,7 +377,13 @@ const jsonLd = graph([
   <div class="wrap">
     <section class="prose" style="margin-top:34px;max-width:var(--measure)">
       <h2>How this category is built</h2>
-      <p>{category.description}</p>
+      {/*
+        The category description used to be repeated here, having already run as
+        the standfirst four hundred pixels up the page. On 214 indexable pages
+        that is the same paragraph twice under a heading promising to explain
+        something it had already said. The section is about the mechanics, so it
+        is left to be about the mechanics.
+      */}
       <p>
         A {nounSingular} appears in every town it services, not only the town it is
         registered in. That is why the town counts on this page add up to more than

@@ -1,0 +1,4865 @@
+[
+  {
+    "name": "Border Off Road 4x4 Accessories",
+    "slug": "border-off-road-4x4-accessories",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Border Off Road 4x4 Accessories sells and fits four-wheel drive gear from Bennu Circuit in Albury. Stock includes front and rear bull bars, sports lids and canopies, winches, LED lighting, suspension, drawer systems, long range fuel and water tanks and seat covers, drawn from brands such as Rhino 4x4, Carryboy, Dometic, Hema and Uniden.",
+    "highlights": [
+      "Front and rear bull bars, sports lids and canopies",
+      "Winches, LED lighting and recovery equipment",
+      "Drawer systems, long range fuel tanks and water tanks",
+      "Stocks Rhino 4x4, Carryboy, Dometic, Hema and Uniden products",
+      "Open Monday to Friday 08:00-17:30"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "http://www.borderoffroad4x4.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3a Bennu Circuit",
+    "phone": "02 6049 3050",
+    "website": "http://www.borderoffroad4x4.com.au/",
+    "email": "sales@borderoffroad4x4.com.au",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Bockman Batteries",
+    "slug": "bockman-batteries",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Bockman Batteries supplies batteries for cars, trucks, tractors, boats, motorcycles, scooters and lawn mowers from Hume Street in Albury, including AGM, deep cycle and marine types. Battery specialists onsite run full diagnostic tests to establish whether a battery needs replacing or charging. The business also stocks engine oils, coolant, marine and motorcycle fluids, and offers fitting and delivery.",
+    "highlights": [
+      "AGM, deep cycle, marine, car, truck, motorbike and scooter batteries",
+      "Full diagnostic battery testing carried out onsite",
+      "Battery installation and delivery available",
+      "Engine oils, coolant, marine and motorcycle fluids stocked",
+      "Open Saturday mornings 08:00-12:30"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.bockmanbatteries.com.au/",
+      "https://www.bockmanbatteries.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "551-555 Hume Street",
+    "phone": "02 6021 3615",
+    "website": "https://www.bockmanbatteries.com.au/",
+    "email": "staff@bockmans.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "delivery": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Michael Parker Marine",
+    "slug": "michael-parker-marine",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Marine dealer and workshop at 4 Erica Court, Albury, servicing the Albury, Wodonga, Riverina and North East Victoria boating community for around 40 years. It is the local dealer for Horizon aluminium boats and for Tohatsu outboards, including four-stroke and TLDI models, and services and repairs outboards of all brands and models.",
+    "highlights": [
+      "Local dealer for Horizon aluminium boats",
+      "Tohatsu outboard dealer, covering four-stroke and TLDI engines",
+      "Marine service and repairs to all brands and models",
+      "New and used boat sales",
+      "Around 40 years servicing Albury, Wodonga, the Riverina and North East Victoria"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://michaelparkermarine.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "4 Erica Court",
+    "phone": "0418 578 805",
+    "website": "https://michaelparkermarine.com.au/",
+    "email": "info@michaelparkermarine.com.au"
+  },
+  {
+    "name": "Albury Mazda",
+    "slug": "albury-mazda",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Albury Mazda is the franchised Mazda dealership at 609 Hume Street, Albury, selling new Mazda models and pre-owned vehicles. Its workshop services all makes and models, and the dealership also handles genuine parts and accessories, fleet, finance, roadside assistance and warranty work.",
+    "highlights": [
+      "Franchised Mazda new vehicle dealer at 609 Hume Street, Albury",
+      "Workshop services all makes and models, not just Mazda",
+      "Parts and accessories department open Monday to Friday",
+      "Sales open Saturday mornings 09:00-13:00",
+      "Finance, fleet management and roadside assistance offered"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.alburymazda.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "609 Hume Street",
+    "phone": "(02) 6041 0810",
+    "website": "https://www.alburymazda.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Baker Motors",
+    "slug": "baker-motors",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Baker Motors is a family-owned multi-franchise dealership at 490 Young Street, Albury, selling and servicing Honda, Hyundai, Mercedes-Benz, Mitsubishi, Peugeot, Subaru and Foton vehicles. Sales, service and parts all operate from the Young Street site, and the group runs a separate Hyundai service department at 44 High Street, Wodonga.",
+    "highlights": [
+      "Authorised dealer for Honda, Hyundai, Mercedes-Benz, Mitsubishi, Peugeot, Subaru and Foton",
+      "Sales, service and parts departments all at 490 Young Street, Albury",
+      "Separate Hyundai service department at 44 High Street, Wodonga",
+      "Trades as Baker Mitsubishi for its Mitsubishi franchise",
+      "New and used vehicle sales, plus finance and fleet leasing"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.bakermotors.com.au/",
+      "https://www.bakermotors.com.au/contact-us",
+      "https://www.bakermitsubishi.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "490 Young Street",
+    "phone": "(02) 6041 8400",
+    "website": "https://www.bakermotors.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Engine Master",
+    "slug": "engine-master",
+    "categorySlug": "engine-reconditioning",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Performance engine business on Fallon Street, Albury, in the performance industry since 1988. Runs a machine shop, builds custom engines, and sells crate engines rated from around 290hp to over 800hp along with performance parts covering ignition, fuel delivery, cooling, exhaust, brake, suspension and transmission components.",
+    "highlights": [
+      "Machine shop services",
+      "Custom engine building",
+      "Crate engines from around 290hp to over 800hp",
+      "Performance parts retail across ignition, fuel delivery, cooling, exhaust, brake and suspension components",
+      "Transmission and drivetrain components stocked",
+      "In the performance industry since 1988"
+    ],
+    "hours": [],
+    "sources": [
+      "https://enginemaster.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "32 Fallon Street",
+    "phone": "02 6025 5666",
+    "website": "https://enginemaster.com.au/",
+    "email": "sales@enginemaster.com.au",
+    "attributes": {
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Hamblin Hire",
+    "slug": "hamblin-hire",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Locally owned hire yard at 707 Drome Street, Albury, operating since 1978 and servicing Albury, Wodonga and the surrounding district. Hire stock covers access and lifting equipment, air compressors, compaction gear, concrete and masonry tools, electrical and fastening tools, generators and lighting, earthmoving plant, floor cleaning equipment and garden machinery.",
+    "highlights": [
+      "Locally owned and operated since 1978",
+      "Access and lifting equipment, earthmoving plant and compaction gear",
+      "Concrete and masonry tools, power tools and hand tools",
+      "Generators, power and lighting equipment",
+      "Floor and carpet cleaning and extraction equipment",
+      "Open Monday to Friday 7am to 5pm and Saturday 7.30am to 12pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.hamblinhire.com.au/",
+      "https://www.hamblinhire.com.au/locations/equipment-hire-wodonga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "707 Drome Street",
+    "phone": "(02) 6041 1666",
+    "website": "https://www.hamblinhire.com.au/",
+    "email": "hire@hamblinhire.com.au",
+    "attributes": {
+      "hire_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Steeltech Engineering",
+    "slug": "steeltech-engineering-albury",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Engineering and fabrication workshop at 33 Bennu Circuit, Albury working in mild steel, stainless steel and aluminium. Services cover CNC profile cutting, sheet metal fabrication, press forming, roll bending, complex press work, certified welding and mechanical assembly, along with onsite maintenance and labour hire.",
+    "highlights": [
+      "CNC profile cutting on a Kinetic 2500 HD Hypertherm plasma cutter",
+      "Cuts aluminium and stainless to 50mm, steel to 65mm, and oxy-fuel to 200mm",
+      "Maximum cutting size 3200mm x 6300mm",
+      "Press forming, roll bending, certified welding and mechanical assembly",
+      "Onsite maintenance and labour hire available"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.steeltechengineering.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "33 Bennu Circuit",
+    "phone": "02 6043 3582",
+    "website": "https://www.steeltechengineering.com.au/",
+    "email": "steeltecheng@bigpond.com",
+    "attributes": {
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Mobile Mechanics In Motion",
+    "slug": "mobile-mechanics-in-motion",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Mobile mechanical service covering Albury, Wodonga and the surrounding suburbs, working on vehicles at the customer's home or workplace. Published work includes logbook servicing, pink slips, brake repairs, cooling system repairs, engine services, transmission service and repair, fault code diagnosis, breakdown assistance, and steering, suspension and driveline repairs.",
+    "highlights": [
+      "Comes to the customer across Albury, Lavington, Hamilton Valley, Springdale Heights, Glenroy, Ettamogah, Table Top, Jindera, Thurgoona, Wodonga, Bandiana, Killara, Bonegilla, Baranduda, Leneva, Ebden and Huon Creek",
+      "Logbook servicing and pink slips",
+      "Steering, suspension and driveline repairs done mobile",
+      "Fault code diagnosis and breakdown assistance",
+      "Albury/Wodonga work is done by Hayden and Kalin, described as having over 30 years of experience between them from NRMA, dealerships and small workshops"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://mobilemechanicsinmotion.com/albury-wodonga-mobile-mechanic/",
+      "https://mobilemechanicsinmotion.com/about-us/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0420 851 706",
+    "website": "https://mobilemechanicsinmotion.com/albury-wodonga-mobile-mechanic/",
+    "email": "ben@mobilemechanicsinmotion.com",
+    "attributes": {
+      "mobile_service": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Blacklocks Lavington",
+    "slug": "blacklocks-motorcycles",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Blacklocks Motorcycles is the motorcycle and powersports arm of the Blacklocks group, trading from 418 Swift Street, Albury. The group lists Honda, BMW Motorrad, Aprilia, Moto Guzzi, Vespa, Piaggio, Ural and Polaris among its franchises, covering road bikes, scooters and side-by-sides. Polaris Albury operates from the same Swift Street address.",
+    "highlights": [
+      "Motorcycle and powersports dealership at 418 Swift Street, Albury",
+      "Group franchise list includes Honda, BMW Motorrad, Aprilia, Moto Guzzi, Vespa, Piaggio and Ural",
+      "Polaris Albury operates from the same Swift Street site",
+      "Open Saturday mornings 09:00-12:30",
+      "Part of the Blacklocks group, which the site says has served Albury-Wodonga for over 100 years"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.blacklocks.com.au/dealerships",
+      "https://www.blacklocks.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "418 Swift Street",
+    "phone": "02 6049 5500",
+    "website": "https://www.blacklocks.com.au/dealerships",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "finance_available": "yes",
+      "european_parts": "yes"
+    }
+  },
+  {
+    "name": "Buzz's Bikes & Bits",
+    "slug": "buzzs-bikes-and-bits",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Buzz's Bikes & Bits is a motorcycle shop at 439 Townsend Street, Albury and an authorised reseller for Sherco motorcycles and CFMOTO ATVs and UTVs, also carrying Stark Future bikes and KTM e-bikes. Its workshop services popular brands and it runs a tyre fitting station, alongside parts, accessories and protective clothing sales.",
+    "highlights": [
+      "Authorised reseller for Sherco motorcycles and CFMOTO ATVs and UTVs",
+      "Also stocks Stark Future bikes and KTM e-bikes",
+      "Workshop servicing for popular motorcycle brands",
+      "On-site tyre fitting station",
+      "Sells spare parts, accessories and protective riding clothing",
+      "Motorcycle finance available through Australian Motorcycle Finance"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.motorcyclesalburywodonga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "439 Townsend Street",
+    "phone": "(02) 6021 4392",
+    "website": "https://www.motorcyclesalburywodonga.com.au/",
+    "email": "bbuzzsbi@bigpond.net.au",
+    "attributes": {
+      "new_parts": "yes",
+      "finance_available": "yes"
+    }
+  },
+  {
+    "name": "Whitehouse Motorcycles",
+    "slug": "whitehouse-motorcycles-albury",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Whitehouse Motorcycles is a motorcycle dealership at 523-531 Young Street, Albury holding the Yamaha, Kawasaki, Suzuki, Triumph and Husqvarna franchises. Its site says it has been helping riders across Albury Wodonga and the Border region since 1970. It also stocks pre-owned motorcycles and side-by-side vehicles, and runs servicing, parts, tyres and riding gear.",
+    "highlights": [
+      "Franchised dealer for Yamaha, Kawasaki, Suzuki, Triumph and Husqvarna",
+      "Selling motorcycles in the Albury Wodonga and Border region since 1970",
+      "Stocks pre-owned motorcycles and side-by-side vehicles",
+      "On-site servicing plus parts, accessories, tyres and riding gear",
+      "Finance through Yamaha, Kawasaki and Suzuki, and Yamaha insurance",
+      "Open Saturday mornings 09:00-13:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.whitehousemotorcycles.com.au/",
+      "https://www.whitehousemotorcycles.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "523-531 Young Street",
+    "phone": "02 6021 7588",
+    "website": "https://www.whitehousemotorcycles.com.au/",
+    "email": "info@whitehousemotorcycles.com.au",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "japanese_parts": "yes"
+    }
+  },
+  {
+    "name": "Albury Engineering and Mower Service",
+    "slug": "albury-engineering-and-mower-service",
+    "categorySlug": "small-engine-repairs",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Albury Engineering and Mower Service Pty Ltd trades from 208 Borella Road in Albury. It appears on Scag Power Equipment's official dealer register as an authorised Scag dealer, which covers the sale and service of Scag commercial mowers. No trading hours are published on that register.",
+    "highlights": [
+      "Listed on Scag Power Equipment's official dealer register as an authorised dealer",
+      "Sells and services Scag commercial mowers",
+      "Trades from 208 Borella Road, Albury"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.scag.com/dealer-details/albury-engineering-and-mower-service-albury/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "208 Borella Road",
+    "phone": "1300 722 428"
+  },
+  {
+    "name": "Murrayfab Engineering",
+    "slug": "murrayfab-engineering",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Murrayfab Engineering supplies trailers, custom trailers and trailer parts from 862 Knight Road, Albury, and says it has twenty years in the trailer and trailer parts industry. Stock covers box, single and tandem axle, tipper, car carrier, tradies, stock and motorbike trailers, along with axles, brakes, cages and chains.",
+    "highlights": [
+      "Trailers, custom trailers and trailer parts supplied from Knight Road, Albury",
+      "Twenty years in the trailer and trailer parts industry, per the business's site",
+      "Range includes box, single and tandem axle, tipper, car carrier, tradies and stock trailers",
+      "Stocks trailer components including axles, brakes, cages and chains",
+      "Also distributes GripSport bike racks and Mucktrucks material handlers",
+      "Supplies across Victoria, the ACT and NSW"
+    ],
+    "hours": [],
+    "sources": [
+      "https://murrayfab.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "862 Knight Road",
+    "phone": "(02) 6040 4688",
+    "website": "https://murrayfab.com.au/",
+    "email": "info@murrayfab.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "delivery": "yes"
+    }
+  },
+  {
+    "name": "TJM Wagga Wagga",
+    "slug": "tjm-wagga-wagga-ashmont",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "description": "TJM Wagga Wagga stocks and installs a full range of 4x4 accessories from its Rabaul Place workshop at Ashmont. The range covers bull bars, suspension, canopies, roof racks and platforms, tow bars and rear protection, exterior accessories and recovery gear, with installation carried out in-house so the vehicle does not need to go elsewhere for fitting.",
+    "highlights": [
+      "Bull bars, suspension and canopies supplied and installed in-house",
+      "Roof racks and roof platforms stocked",
+      "Tow bars and rear protection fitted",
+      "Recovery gear and exterior accessories",
+      "Open Saturday mornings 09:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.tjmwaggawagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3 Rabaul Place",
+    "phone": "02 5954 9955",
+    "website": "https://www.tjmwaggawagga.com.au/",
+    "email": "sales@tjmwaggawagga.com.au",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "COD Automotive",
+    "slug": "cod-automotive-ashmont",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "Ashmont",
+    "state": "NSW",
+    "suburb": "Ashmont",
+    "postcode": "2650",
+    "description": "Mechanical workshop at 3/218 Urana Street, Ashmont handling registration checks for Wagga Wagga drivers. It issues pink slips through eSafety checks and pre-registration inspections for light vehicles and 4WDs, examining brakes, tyres, suspension, lights, steering and exhaust on vehicles more than five years old.",
+    "highlights": [
+      "eSafety checks and pink slip issuing for light vehicles and 4WDs",
+      "Pre-registration inspections available",
+      "Inspection covers brakes, tyres, suspension, lights, steering and exhaust",
+      "Open Monday to Friday 7.30am to 6pm and Saturday mornings 8am to 12pm",
+      "Also contactable on 0409 927 905"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.codautomotive.com.au/rego-checks"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3/218 Urana Street",
+    "phone": "(02) 6925 1593",
+    "website": "https://www.codautomotive.com.au/",
+    "email": "codautomotive@outlook.com",
+    "attributes": {
+      "open_saturday": "yes",
+      "four_wd_parts": "yes"
+    }
+  },
+  {
+    "name": "Mower City Albury",
+    "slug": "mower-city-albury",
+    "categorySlug": "small-engine-repairs",
+    "vertical": "trades",
+    "localityName": "East Albury",
+    "state": "NSW",
+    "suburb": "East Albury",
+    "postcode": "2640",
+    "description": "Mower City Albury sells, services and repairs outdoor power equipment from Borella Road in East Albury. Brands stocked include STIHL, Cub Cadet, Rover, Victa, Atom and Briggs & Stratton, alongside arborist and forestry gear such as Silky saws, Gransfors Bruk axes, Petzl climbing equipment and Clogger and SIP protective clothing. Spare parts are held in store.",
+    "highlights": [
+      "Sells, services and repairs mowers, chainsaws and outdoor power equipment",
+      "Stocks STIHL, Cub Cadet, Rover, Victa, Atom and Briggs & Stratton",
+      "Arborist gear including Silky saws, Petzl equipment and Gransfors Bruk axes",
+      "Spare parts and expert advice available in store",
+      "Open Saturday mornings 08:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.mowercityalbury.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "180 Borella Road",
+    "phone": "02 6023 5526",
+    "website": "https://www.mowercityalbury.com.au/",
+    "email": "info@mowercityalbury.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Wagga Caravan Centre",
+    "slug": "wagga-caravan-centre",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Gumly Gumly",
+    "state": "NSW",
+    "suburb": "Gumly Gumly",
+    "postcode": "2650",
+    "description": "Family-run caravan dealership and repair workshop on the Sturt Highway at Gumly Gumly, selling Supreme and Leader caravans, Cub Campers and Goldstream RV. The workshop states more than 40 years in caravan repairs and covers general servicing, modifications, trailer servicing, leak detection, off-grid electrical work, and authorised warranty and insurance repairs on all major caravan brands.",
+    "highlights": [
+      "Over 40 years of experience in caravan repairs, as stated on the site",
+      "Authorised by leading insurers to carry out warranty and insurance repairs on all major brands",
+      "General caravan servicing, modifications and trailer maintenance and servicing",
+      "Off-grid electrical systems and leak detection work",
+      "New and used caravan sales covering Supreme, Leader, Cub Campers and Goldstream RV",
+      "Parts and accessories including Cruisemaster, Truma, Clearview mirrors, GripSport and myCOOLMAN"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggacaravans.com.au/",
+      "https://www.waggacaravans.com.au/service"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "(02) 6922 8307",
+    "website": "https://www.waggacaravans.com.au/",
+    "email": "sales@waggacaravans.com.au",
+    "attributes": {
+      "open_saturday": "yes",
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Wagga Motorcycles",
+    "slug": "wagga-motorcycles-gumly-gumly",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Gumly Gumly",
+    "state": "NSW",
+    "suburb": "Gumly Gumly",
+    "postcode": "2652",
+    "description": "Motorcycle and side-by-side dealership on the Sturt Highway at Gumly Gumly, just east of Wagga Wagga, stocking KTM, Kawasaki, Honda and Polaris. The showroom carries road bikes, LAMS-approved learner models, cruisers, dirt bikes, kids' fun bikes and side-by-sides, backed by a workshop for service and repairs plus spare parts and accessories.",
+    "highlights": [
+      "Dealer for KTM, Kawasaki, Honda and Polaris",
+      "Stock covers road bikes, LAMS learner-approved models, cruisers, dirt bikes and kids' fun bikes",
+      "Polaris side-by-side utility vehicles sold alongside motorcycles",
+      "Workshop handles servicing and repairs",
+      "Spare parts and riding accessories sold over the counter",
+      "Open Saturday mornings 8:30am to 1:00pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://waggamotorcycles.com.au/",
+      "https://waggamotorcycles.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3871 Sturt Highway",
+    "phone": "(02) 6922 7777",
+    "website": "https://waggamotorcycles.com.au/",
+    "attributes": {
+      "open_saturday": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "RivSteel Wagga Sheds & Trailers",
+    "slug": "rivsteel",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Gumly Gumly",
+    "state": "NSW",
+    "suburb": "Gumly Gumly",
+    "postcode": "2652",
+    "description": "Steel fabricator on the Sturt Highway at Gumly Gumly that designs and builds trailers and sheds to customer specification. The trailer range spans single and tandem axle, hot dipped galvanised, tradesman, enclosed, motorbike, car, hydraulic tipper, plant, flat top, skel, stock and lawn mower trailers, sold with a two-year structural warranty.",
+    "highlights": [
+      "Trailers built to customer specification as well as standard single and tandem axle models",
+      "Range includes hot dipped galvanised, tradesman, enclosed, tipper, plant, flat top, skel and stock trailers",
+      "Also designs and builds machinery sheds, skillion sheds, carports, garages and barns",
+      "Sheds built with BlueScope, Colorbond, Stramit and ShedSafe materials",
+      "Two-year structural warranty and finance options offered",
+      "Dealer network spanning 16 Australian locations"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.rivsteel.com.au/",
+      "https://www.rivsteel.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "(02) 6922 8108",
+    "website": "https://www.rivsteel.com.au/",
+    "attributes": {
+      "finance_available": "yes"
+    }
+  },
+  {
+    "name": "A Plus Automotive Electrical",
+    "slug": "a-plus-automotive-electrical-lavington",
+    "categorySlug": "auto-air-conditioning",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Auto electrical and air conditioning workshop on Wagga Road, Lavington. Carries out auto air conditioning repairs, regassing and part replacement, along with auto electrical work on cars, caravans, boats, trucks, machinery and tractors. The workshop also supplies automotive batteries and auto accessories.",
+    "highlights": [
+      "Auto air conditioning repairs, regassing and part replacement",
+      "ARC licence AU25582",
+      "NSW motor vehicle repairer licence MRVL47948",
+      "Auto electrical work on trucks, machinery and tractors",
+      "Caravan and marine electrical work",
+      "Supplies automotive batteries and auto accessories"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.aplusautomotiveelectrical.com.au/auto-air-conditioning"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "447A Wagga Road",
+    "phone": "02 6040 2544",
+    "website": "https://www.aplusautomotiveelectrical.com.au/auto-air-conditioning",
+    "email": "aplusautoelectrical@hotmail.com",
+    "attributes": {
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Blacklocks Lavington",
+    "slug": "blacklocks-lavington",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Blacklocks Lavington is the group's multi-franchise dealership at 587 Wagga Road, Lavington, holding BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo on the one site. It sells new, demonstrator and used vehicles and runs service and parts departments, with the wider Blacklocks group also operating Ford, Ram, truck and motorcycle sites across the border.",
+    "highlights": [
+      "Six new vehicle franchises on one Wagga Road site: BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo",
+      "Trades as Albury BMW and Chery Albury for those franchises at the same address",
+      "Open Saturday mornings 09:00-12:30",
+      "Part of the Blacklocks group, which also runs Ford, Ram, Isuzu Trucks and motorcycle dealerships",
+      "Group site states more than 200 used vehicles in stock"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.blacklocks.com.au/dealerships",
+      "https://www.blacklocks.com.au/",
+      "https://www.alburychery.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "587 Wagga Road",
+    "phone": "(02) 6049 5500",
+    "website": "https://www.blacklocks.com.au/dealerships",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "european_parts": "yes"
+    }
+  },
+  {
+    "name": "Border Marine Centre",
+    "slug": "border-marine-centre",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Stacer boat dealer on Wagga Road at Lavington that also runs a caravan and trailer service division. Work covers caravan servicing, wheel bearing checks, suspension upgrades, chassis inspections, gas compliance and safety checks, water system servicing, 12V and 240V repairs, solar fitting, leak testing, and welding repairs to frames and cladding. Horse floats, camper trailers, box trailers and boat trailers are also serviced.",
+    "highlights": [
+      "Caravan and trailer service division alongside the Stacer boat dealership",
+      "Gas system compliance and safety checks, and water system servicing",
+      "Suspension repairs and upgrades, chassis inspections and wheel bearing checks",
+      "12V and 240V system work, solar panel installation and electronic upgrades",
+      "Welding repairs to structural and frame damage, plus composite and clad exterior repairs",
+      "Horse float, camper trailer, box trailer and boat trailer servicing"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.bordermarinecentre.com.au/caravan-trailer",
+      "https://www.bordermarinecentre.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "474 Wagga Road",
+    "phone": "02 6040 9999",
+    "website": "https://www.bordermarinecentre.com.au/",
+    "email": "sales@bordermarinecentre.com.au"
+  },
+  {
+    "name": "Jayco Albury Wodonga",
+    "slug": "jayco-albury-wodonga",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Jayco Albury Wodonga is a Jayco dealership and RV service centre on Travelstop Way, Lavington, just off the Hume. It sells new and used caravans, pop-tops, camper trailers and horse floats, and its workshop covers annual servicing, major insurance work, auto electrical, and fitting of solar panels, air conditioners, gas and diesel heaters, fridges, awnings and ALKO ESC.",
+    "highlights": [
+      "Jayco dealership selling new and used caravans, pop-tops, camper trailers and horse floats",
+      "Service centre handles annual servicing, major insurance work and auto electrical",
+      "Fits solar panels, air conditioners, gas and diesel heaters, fridges, awnings and ALKO ESC",
+      "Workshop set up for caravans, campers, pop-tops, motorhomes, boats and horse floats",
+      "Parts and accessories showroom on site",
+      "Site states the dealership is open six days a week except NSW public holidays"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.jaycoaw.com.au/",
+      "https://www.jaycoaw.com.au/about-us",
+      "https://www.jaycoaw.com.au/service-centre"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "5 Travelstop Way",
+    "website": "https://www.jaycoaw.com.au/",
+    "attributes": {
+      "new_parts": "yes",
+      "finance_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Barneys Rubble",
+    "slug": "barneys-rubble",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Sand, soil and gravel supply yard at 534 Urana Road, Lavington that also runs a hire counter. Alongside landscaping materials the business hires out trailers, sand and soil compactors, cement mixers, wheelbarrows and general tools for home and trade jobs across the Albury and Wodonga area.",
+    "highlights": [
+      "Hire counter for trailers, compactors, cement mixers and wheelbarrows",
+      "General tool hire for home and trade jobs",
+      "Sand, soil and gravel supplies from the same Lavington yard",
+      "Open Monday to Friday 7.30am to 5pm and Saturday 8am to 4pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://barneysrubblealbury.com.au/services/hire-equipment/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "534 Urana Road",
+    "phone": "02 6025 1735",
+    "website": "https://barneysrubblealbury.com.au/",
+    "attributes": {
+      "hire_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Bertoli Farm Machinery",
+    "slug": "bertoli-farm-machinery-albury",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Bertoli Farm Machinery's Albury branch operates from 520 Dallinger Road, Lavington, selling and servicing agricultural and industrial machinery. Brands carried include Massey Ferguson, Fendt, Kubota agricultural and construction equipment, Hardi spray gear and John Berends implements. The head office is at Shepparton with a further branch at Benalla.",
+    "highlights": [
+      "Dealer for Massey Ferguson, Fendt and Kubota agricultural and construction equipment",
+      "Also carries Hardi spray equipment and John Berends implements",
+      "Branch at 520 Dallinger Road, Lavington with its own parts and service email",
+      "Open Saturday mornings 09:00-12:00, closed Sundays and public holidays",
+      "Site notes seasonal after-hours availability at this branch",
+      "Part of a group with branches at Shepparton and Benalla"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.bertolis.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "520 Dallinger Road",
+    "phone": "(02) 6025 5390",
+    "website": "https://www.bertolis.com.au/",
+    "email": "adminne@bertolis.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Hutcheon & Pearce",
+    "slug": "hutcheon-and-pearce-albury",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Hutcheon & Pearce is the John Deere dealership serving Albury from 222 Travelstop Way, Lavington, handling agricultural machinery sales, parts and service. The branch works with hay, livestock, dairy, horticulture, viticulture and cotton operations, and stocks compact and utility tractors, mowers, construction equipment and implements.",
+    "highlights": [
+      "Authorised John Deere dealer covering the Albury district",
+      "Machinery sales, parts and service from the one Travelstop Way site",
+      "Stocks compact and utility tractors, mowers and construction equipment",
+      "Supports hay, livestock, dairy, horticulture, viticulture and cotton operations",
+      "Open Saturday mornings 08:00-12:00",
+      "Branch email alburyadmin@hutcheonandpearce.com.au"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.hutcheonandpearce.com.au/locations/albury/",
+      "https://www.hutcheonandpearce.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "222 Travelstop Way",
+    "phone": "(02) 6058 6800",
+    "website": "https://www.hutcheonandpearce.com.au/locations/albury/",
+    "email": "alburyadmin@hutcheonandpearce.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Fast Fuel Motorcycles",
+    "slug": "fast-fuel-motorcycles-lavington",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Fast Fuel Motorcycles is a Royal Enfield dealer at 389 Wagga Road, Lavington that also services and repairs all makes and models, including Harley-Davidson. It supplies and fits parts, accessories and tyres, arranges finance and insurance, and will collect bikes for a call-out fee, with after-hours drop-off and pick-up available.",
+    "highlights": [
+      "Royal Enfield dealer with showroom at 389 Wagga Road, Lavington",
+      "Servicing and repairs for all makes and models, including Harley-Davidson",
+      "Supplies and fits parts, accessories and tyres",
+      "Motorcycle pick-up service available for a call-out fee",
+      "After-hours service drop-off and pick-up",
+      "Open Saturday mornings 09:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.fastfuelmotorcycles.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "389 Wagga Road",
+    "phone": "0439 090 657",
+    "website": "https://www.fastfuelmotorcycles.com.au/",
+    "email": "lincoln@fastfuelmotorcycles.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "finance_available": "yes",
+      "open_saturday": "yes",
+      "mobile_service": "yes"
+    }
+  },
+  {
+    "name": "Albury Wodonga Trailers",
+    "slug": "albury-wodonga-trailers",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Albury Wodonga Trailers is a trailer dealership at 11a Catherine Crescent, Lavington, open by appointment. It is a dealer for Brian James, Coastmac and Apex, selling box and cage trailers, plant and machinery transporters, car carriers, flat tops, hydraulic tippers, water carts and fire-fighting units, plus rolling chassis, parts and servicing.",
+    "highlights": [
+      "Dealer for Brian James, Coastmac and Apex trailers",
+      "Stocks box and cage trailers from 6x4 to 10x5",
+      "Plant and machinery transporters and car carriers, including Brian James models",
+      "Hydraulic tipper trailers, flat tops, water carts and fire-fighting units",
+      "Rolling chassis platforms and custom builds available",
+      "Parts and servicing offered; viewing by appointment only"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.alburywodongatrailers.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "11a Catherine Crescent",
+    "phone": "0488 550 279",
+    "website": "https://www.alburywodongatrailers.com.au/",
+    "attributes": {
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Perfect Trailers",
+    "slug": "perfect-trailers",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Perfect Trailers manufactures and sells trailers from 449 Wagga Road on the Albury-Lavington boundary. The range covers box, cage, tandem, tradesman top, tipper, car carrier, bike, camper and lawn mowing trailers, and the business designs and builds custom trailers to a customer's own specification, with a 15-month warranty on its products.",
+    "highlights": [
+      "Trailer manufacturer and seller on Wagga Road, Lavington",
+      "Range includes box, cage, tandem, tradesman top, tipper and car carrier trailers",
+      "Also builds bike, camper and lawn mowing trailers",
+      "Custom trailers designed and built to customer specification",
+      "15-month warranty stated on products",
+      "Toll free enquiry line on 1800 456 321"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.perfecttrailers.com.au/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "449 Wagga Road",
+    "phone": "0488 800 045",
+    "website": "https://www.perfecttrailers.com.au/",
+    "email": "perfecttrailers2641@gmail.com",
+    "attributes": {
+      "warranty_on_parts": "yes"
+    }
+  },
+  {
+    "name": "Trailer & Trailers Albury-Wodonga",
+    "slug": "trailer-and-trailers-albury-wodonga",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Trailer & Trailers Albury-Wodonga sells Australian-made trailers from 437 Wagga Road, Lavington and says it has been trading for over 30 years. Stock covers box, cage, tradesman, van, stock crate, hydraulic tipper, car carrier, bike, golf buggy, ATV, flat-top and plant and machinery trailers, and the business also builds custom trailers to order.",
+    "highlights": [
+      "Australian-made trailers sold from 437 Wagga Road, Lavington",
+      "Over 30 years trading, per the business's own site",
+      "Range covers box, cage, tradesman, van, stock crate, tipper, car carrier and plant trailers",
+      "Custom-built trailers made to order",
+      "Advertises a 2% price beat and no deposit required",
+      "One-year structural warranty on trailers; open Saturday mornings"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.trailertrailersalbury.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "437 Wagga Road",
+    "phone": "02 6025 5071",
+    "website": "https://www.trailertrailersalbury.com.au/",
+    "attributes": {
+      "open_saturday": "yes",
+      "warranty_on_parts": "yes"
+    }
+  },
+  {
+    "name": "Border Power Steering Service",
+    "slug": "border-power-steering-service",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "Lavington",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Power steering repair specialist at 388 Griffith Road, Lavington that is also set up as a NSW Government authorised safety check station. Staff carry out eSafety checks, or pink slips, on cars and light vehicles, examining brakes, tyres, steering, suspension, seatbelts and lights ahead of registration renewal.",
+    "highlights": [
+      "NSW Government authorised safety checks (pink slips) for cars and light vehicles",
+      "Inspection covers brakes, tyres, steering, suspension, seatbelts and lights",
+      "Power steering repair specialists based on Griffith Road, Lavington",
+      "Open Monday to Friday 8am to 5pm, closed weekends"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.borderpowersteering.com.au/NSW-govenment-safety-check"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "388 Griffith Road",
+    "phone": "02 6025 1322",
+    "website": "https://www.borderpowersteering.com.au/",
+    "email": "bps388@outlook.com"
+  },
+  {
+    "name": "Kennards Hire Albury",
+    "slug": "kennards-hire-albury",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "North Albury",
+    "state": "NSW",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "description": "Kennards Hire branch at 67 Union Road, North Albury, on the site that previously traded as Skylift Hire & Rentals before joining the Kennards network. The branch hires vehicles, earthmoving plant, access equipment, ladders and scaffold, saws, pumps, landscaping gear, lifting and materials handling equipment, tools, and cleaning and floor care machines.",
+    "highlights": [
+      "Operates from the former Skylift Hire & Rentals site on Union Road",
+      "Vehicles, earthmoving plant and access equipment",
+      "Ladders, scaffold, saws and pumps",
+      "Landscaping gear and lifting and materials handling equipment",
+      "Own branch phone line and email for local bookings",
+      "Open Monday to Friday 7am to 5pm and Saturday 7am to 12pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.kennards.com.au/branch/albury",
+      "https://www.kennards.com.au/welcome-customers/skylift-albury"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "67 Union Road",
+    "phone": "02 6022 3100",
+    "website": "https://www.kennards.com.au/branch/albury",
+    "email": "albury@kennards.com.au",
+    "attributes": {
+      "hire_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Go Automotive",
+    "slug": "go-automotive-north-albury",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "North Albury",
+    "state": "NSW",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "description": "Albury business trading as Go Automotive, based at 897 Calimo Street, North Albury and holding motor vehicle repairer licence MVRL 53896. As well as workshop work it runs a mobile roadworthy service, issuing eSafety check certificates for light vehicles, cars, trucks, caravans and trailers, and carrying out AUVIS safety and identity checks. Callout fees apply to mobile jobs.",
+    "highlights": [
+      "Motor vehicle repairer licence MVRL 53896",
+      "Mobile roadworthy service issuing eSafety check certificates at the customer's location",
+      "eSafety checks covering light vehicles, cars, trucks, caravans and trailers",
+      "AUVIS (blue slip) safety and identity checks",
+      "Callout fees apply for the mobile inspection service"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.goautomotive.com.au/roadworthy-albury.html"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "897 Calimo Street",
+    "phone": "02 6025 8177",
+    "website": "https://www.goautomotive.com.au/",
+    "attributes": {
+      "mobile_service": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Regal Automotive",
+    "slug": "regal-automotive",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "North Albury",
+    "state": "NSW",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "description": "Licensed NSW inspection station at 4/856 Leslie Drive, North Albury issuing eSafety checks, or pink slips, for registration renewal. A licensed examiner checks brakes, tyres, steering, suspension, seatbelts and lights. The station's authorisation covers cars and light vehicles only, not trailers, caravans or motorcycles.",
+    "highlights": [
+      "Licensed NSW inspection station, licence number S11222",
+      "eSafety check (pink slip) inspections for registration renewal",
+      "Authorisation covers cars and light vehicles only, not trailers, caravans or motorcycles",
+      "Open Monday to Friday 9am to 5pm, with weekends by appointment"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.regalautomotive.com.au/services/pink-slip-esafety-check"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "4/856 Leslie Drive",
+    "phone": "02 7245 2811",
+    "website": "https://www.regalautomotive.com.au/",
+    "email": "regalautomotivealbury@gmail.com"
+  },
+  {
+    "name": "ARB Albury",
+    "slug": "arb-albury",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "ARB Albury is the ARB 4x4 Accessories branch serving the Albury Wodonga district, trading from Wodonga Place in South Albury. The store carries the ARB product range and its staff advise on setting a vehicle up for the way the owner intends to use it, with the Murray River and the Victorian High Country both within easy reach.",
+    "highlights": [
+      "ARB 4x4 Accessories branch trading at 308-316 Wodonga Place, South Albury",
+      "Carries the ARB range of 4x4 accessories and equipment",
+      "Staff advise on setting up a vehicle for its intended use"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.arb.com.au/arb-stores/arb-albury"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "308-316 Wodonga Place",
+    "website": "https://www.arb.com.au/arb-stores/arb-albury",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "TJM Albury Pty Ltd",
+    "slug": "tjm-albury",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "TJM Albury supplies and fits 4x4 accessories from its Townsend Street workshop in South Albury. The range covers bull bars, side and rear vehicle protection, tow bars, roof racks, canopies and storage solutions, along with suspension work including GVM lifts. Accessories bought here are installed onsite rather than sent elsewhere.",
+    "highlights": [
+      "Bull bars, rear protection and tow bars supplied and fitted onsite",
+      "Suspension upgrades including GVM lifts",
+      "Canopies, roof racks and vehicle storage systems",
+      "Camping gear stocked alongside 4x4 accessories",
+      "Open Saturday mornings 08:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.tjmalbury.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "319 Townsend Street",
+    "phone": "02 6021 5544",
+    "website": "https://www.tjmalbury.com.au/",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Hagan's Auto Electrical & Airconditioning",
+    "slug": "hagans-auto-electrical-airconditioning-south-albury",
+    "categorySlug": "auto-air-conditioning",
+    "vertical": "trades",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "South Albury branch of an auto electrical and air conditioning business, with its own workshop on Nurigong Street and its own phone line and email. Handles auto electrical and air conditioning repairs across cars, bikes, trailers, caravans, agricultural equipment, ATVs, forklifts, trucks, buses and mining machinery.",
+    "highlights": [
+      "Automotive air conditioning service and repair",
+      "24/7 breakdown service",
+      "Works on trucks, buses, forklifts, agricultural equipment and mining machinery",
+      "Caravan, trailer and ATV electrical work",
+      "VACC member",
+      "Companion branch at Wodonga"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.hagansauto.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "547 Nurigong Street",
+    "phone": "02 6041 4511",
+    "website": "https://www.hagansauto.com.au/",
+    "email": "albury@hagansauto.com.au",
+    "attributes": {
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Albury Brake & Clutch Centre",
+    "slug": "albury-brake-and-clutch-centre",
+    "categorySlug": "brake-and-clutch",
+    "vertical": "trades",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "Brake and clutch specialist on Kiewa Street, South Albury, established in 1994. Published work covers brake repairs, clutch repairs, 4WD brake upgrades and logbook servicing, and the business also supplies automotive parts from a range of brake, clutch and driveline brands.",
+    "highlights": [
+      "Established in 1994",
+      "Brake repairs and clutch repairs",
+      "4WD brake upgrades",
+      "Logbook servicing",
+      "Supplies automotive parts including DBA, Brembo, Exedy, Bendix, Aisin, GSP, Powerdrive, BrakeBonders, 555 and Basco"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://alburybrakeandclutch.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "288 Kiewa Street",
+    "phone": "(02) 6041 4733",
+    "website": "https://alburybrakeandclutch.com.au/",
+    "email": "alburybrakeclutch@bigpond.com",
+    "attributes": {
+      "new_parts": "yes",
+      "four_wd_parts": "yes"
+    }
+  },
+  {
+    "name": "Bartlett Automotive",
+    "slug": "bartlett-automotive-south-albury",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "South Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "Workshop at 521 Nurigong Street, South Albury carrying out NSW eSafety checks, or pink slips, on vehicles more than five years old. Inspections cover tyres, body condition, electrical components, engine, suspension, exhaust and driveline, seatbelts, fluid leaks and brake efficiency, with the report lodged electronically and a hard copy given to the owner.",
+    "highlights": [
+      "NSW eSafety check (pink slip) inspections for vehicles over five years old",
+      "Inspection report lodged electronically, plus a hard copy for the owner's records",
+      "Certificates stated as current for 42 days from the date of issue",
+      "Vehicles needing repairs are given 14 days to complete work before a secondary inspection",
+      "Open Monday to Friday 8.30am to 5pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://bartlettauto.com.au/pages/nsw-esafety-check"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "521 Nurigong Street",
+    "phone": "02 6041 3999",
+    "website": "https://bartlettauto.com.au/",
+    "email": "info@bartlettauto.com.au"
+  },
+  {
+    "name": "Riverina 4WD",
+    "slug": "riverina-4wd-wagga-wagga",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Riverina 4WD sells and fits four-wheel drive and vehicle accessories from Dobney Avenue in Wagga Wagga, with an onsite workshop handling everything from bull bars to roof racks. Stock spans suspension, winches, drawer systems, driving lights, canopies, dual battery systems, long range fuel tanks, roof top tents, tow bars and underbody protection.",
+    "highlights": [
+      "Onsite workshop fits bull bars, roof racks and suspension",
+      "Stocks Tough Dog, Outback Armour, Rhino Rack, MSA 4x4 and Lightforce",
+      "Drawer systems, dual battery systems and long range fuel tanks",
+      "Canopies, roof top tents and car fridges",
+      "Open Saturday mornings 09:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://riverina4wd.com.au/",
+      "https://riverina4wd.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "1 Dobney Avenue",
+    "phone": "02 6925 4770",
+    "website": "https://riverina4wd.com.au/",
+    "email": "rodney@riverina4wd.com.au",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "RivPower Wagga Batteries",
+    "slug": "rivpower-wagga-batteries",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "RivPower Wagga Batteries is the Marshall Batteries store for Wagga Wagga, operating from Chaston Street. It carries car, 4WD, truck, motorcycle, marine, caravan and agricultural batteries, and runs a mobile service that delivers and fits batteries roadside, at home, at work, on the farm or at the river. The store also acts as a battery collection centre for recycling.",
+    "highlights": [
+      "Marshall Batteries store covering Wagga Wagga",
+      "Car, 4WD, truck, motorcycle, marine, caravan and agricultural batteries",
+      "Mobile battery delivery and fitting roadside, at home, at work or on farm",
+      "24/7 mobile roadside battery service on 1300 627 742",
+      "Operates as a battery collection centre for recycling",
+      "Open weekends 09:00-17:30"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.marshallbatteries.com.au/stores/rivpower-wagga-batteries/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "66 Chaston Street",
+    "phone": "1300 465 537",
+    "website": "https://www.marshallbatteries.com.au/stores/rivpower-wagga-batteries/",
+    "attributes": {
+      "new_parts": "yes",
+      "mobile_service": "yes",
+      "delivery": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Riverina Marine Centre",
+    "slug": "riverina-marine-centre",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2652",
+    "description": "Boat dealership and service centre at 3871 Sturt Highway, Wagga Wagga. It sells Quintrex and Yellowfin boats, Camero ski boats, Move boat trailers and Yamaha outboards from 2.5 to 450 horsepower. The workshop services all engine brands, and the business also sells parts, accessories, watersports gear, trolling motors and fishfinders.",
+    "highlights": [
+      "Quintrex, Yellowfin and Camero ski boat dealer",
+      "Yamaha outboards from 2.5 to 450 horsepower",
+      "Move boat trailers",
+      "Servicing for all engine brands",
+      "Parts, accessories, trolling motors and fishfinders sold in store and online",
+      "Boat finance and insurance arranged"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://riverinamarinecentre.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3871 Sturt Highway",
+    "phone": "02 6922 8444",
+    "website": "https://riverinamarinecentre.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "open_saturday": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Wagga Boating Services",
+    "slug": "wagga-boating-services",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "description": "Marine dealership and service centre at 7-9 Nesbitt Street, East Wagga Wagga. It sells Stacer and Matrix boats, Mercury and Suzuki outboards and sterndrives, and Dunbier and Stacer trailers, in new and used stock. The workshop services and repairs all engine types, and the business arranges Mercury Finance and Club Marine insurance.",
+    "highlights": [
+      "Stacer and Matrix boat dealer",
+      "Mercury and Suzuki engine sales and servicing",
+      "Dunbier and Stacer trailer sales",
+      "Service and repair for all engine types",
+      "Mercury Finance and Club Marine insurance arranged",
+      "Open Monday to Friday 8.30am to 5.30pm and Saturday mornings"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggaboatingservices.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "7-9 Nesbitt Street",
+    "phone": "(02) 6921 2972",
+    "website": "https://www.waggaboatingservices.com.au/",
+    "facebook": "https://www.facebook.com/gavincasemarineservices/",
+    "attributes": {
+      "finance_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Hillis Ford",
+    "slug": "hillis-ford",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Franchised Ford dealership at 41 Hammond Avenue, Wagga Wagga, operating within the Australian Automotive Group network. The site covers new and used Ford sales, a service department and a genuine parts counter, and shares the Hammond Avenue premises with the group's Geely franchise.",
+    "highlights": [
+      "Authorised Ford dealership offering sales, service and parts",
+      "Located on Hammond Avenue, Wagga Wagga",
+      "Shares the site with Geely Riverina on the same phone number",
+      "Part of the Australian Automotive Group dealership network"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.aag.com.au/wagga-wagga/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "41 Hammond Avenue",
+    "phone": "(02) 6923 1100",
+    "attributes": {
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Jupiter Motors",
+    "slug": "jupiter-motors",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Subaru, Mazda and RAM dealership on Urana Street selling new, demonstrator and used vehicles. Separate sales, service and parts contact lines are published, with a workshop handling scheduled servicing, a genuine parts department on (02) 6933 0820, and finance arranged through the dealership.",
+    "highlights": [
+      "Franchised dealer for Subaru, Mazda and RAM",
+      "New, demonstrator and used vehicle sales from the Urana Street site",
+      "Genuine parts department on a separate line, (02) 6933 0820",
+      "Service department and finance handled in house"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.jupitermotors.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "221 Urana Street",
+    "phone": "(02) 6933 0800",
+    "website": "https://www.jupitermotors.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "japanese_parts": "yes"
+    }
+  },
+  {
+    "name": "Riverina BMW",
+    "slug": "riverina-bmw",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "description": "Franchised BMW dealership on Mason Street in East Wagga Wagga, run within the Australian Automotive Group's Riverina dealership network. The site covers new and used BMW sales together with a service department and a genuine BMW parts counter for owners across the Riverina.",
+    "highlights": [
+      "Authorised BMW dealership offering sales, service and parts",
+      "Stand-alone site at 15 Mason Street, East Wagga Wagga",
+      "Part of the Australian Automotive Group dealership network",
+      "Dealership line on (02) 6923 1144"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.aag.com.au/wagga-wagga/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "15 Mason Street",
+    "phone": "(02) 6923 1144",
+    "attributes": {
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "european_parts": "yes"
+    }
+  },
+  {
+    "name": "Riverina Nissan",
+    "slug": "riverina-nissan",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Franchised Nissan dealership at the 42-50 Dobney Avenue motor group site in Wagga Wagga, operating within the Australian Automotive Group network. It handles new, demonstrator and used Nissan sales, with a service department and a genuine Nissan parts counter on the same premises.",
+    "highlights": [
+      "Authorised Nissan sales, service and parts dealership",
+      "Located at the 42-50 Dobney Avenue multi-franchise motor group site",
+      "Part of the Australian Automotive Group dealership network",
+      "Direct dealership line on (02) 6932 6611"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.aag.com.au/wagga-wagga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "42-50 Dobney Avenue",
+    "phone": "(02) 6932 6611",
+    "website": "https://www.riverinanissan.com.au/",
+    "attributes": {
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "japanese_parts": "yes"
+    }
+  },
+  {
+    "name": "Thomas Bros Group",
+    "slug": "thomas-bros-group",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Multi-franchise dealership on Dobney Avenue selling new, demonstrator and used vehicles across Toyota, Mitsubishi, MG, GWM Haval and LDV, with a second yard at Cootamundra. The Wagga site also runs a service workshop, a genuine parts and accessories counter, trade-in appraisals and in-house finance and pre-approval.",
+    "highlights": [
+      "New, demonstrator and used vehicle sales across Toyota, Mitsubishi, MG, GWM Haval and LDV",
+      "Service workshop and genuine parts and accessories counter on site",
+      "Finance and finance pre-approval arranged through the dealership",
+      "Trade-in appraisals offered against new and used stock",
+      "Second branch at Cootamundra on (02) 6942 1888",
+      "Open Saturday mornings 8:30am to 1:00pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:30",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.thomasbros.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "65 Dobney Avenue",
+    "phone": "(02) 6926 0500",
+    "website": "https://www.thomasbros.com.au/",
+    "attributes": {
+      "open_saturday": "yes",
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Wagga Motors Suzuki",
+    "slug": "wagga-motors-suzuki",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Franchised Suzuki dealership on Pearson Street handling new, demonstrator and used Suzuki sales across the Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny ranges. The site also covers Suzuki genuine servicing, fleet sales, parts and accessories, warranty work, roadside assistance and finance.",
+    "highlights": [
+      "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny",
+      "Suzuki genuine service department, with a service line on 1300 054 555",
+      "Parts department on (02) 6933 0175",
+      "Fleet sales and finance handled through the dealership",
+      "Warranty, roadside assistance and navigation map updates offered"
+    ],
+    "hours": [],
+    "sources": [
+      "https://waggamotorssuzuki.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "23 Pearson Street",
+    "phone": "(02) 6933 0100",
+    "website": "https://waggamotorssuzuki.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "japanese_parts": "yes"
+    }
+  },
+  {
+    "name": "Wagga Motors Suzuki",
+    "slug": "wagga-motors",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Long-standing Dobney Avenue dealership holding franchises for Hyundai, Isuzu, Mercedes-Benz and Mercedes vans, Suzuki, Honda, Chery and Omoda Jaecoo, plus GMSV specialty vehicles and Holden servicing. New and used sales sit alongside a parts counter, a service workshop with vehicle entry via Chaston Street, finance and leasing, and car care work such as window tinting.",
+    "highlights": [
+      "Franchises include Hyundai, Isuzu, Mercedes-Benz, Mercedes vans, Suzuki, Honda, Chery and Omoda Jaecoo",
+      "Service vehicle entry is via Chaston Street rather than the Dobney Avenue showroom",
+      "Genuine spare parts department open Monday to Friday 8:00am to 5:00pm",
+      "Finance and leasing arranged in house",
+      "Car care services including Permagard and window tinting",
+      "Truck sales, service and parts by appointment on Saturdays"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggamotors.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "32 Dobney Avenue",
+    "phone": "(02) 6933 0100",
+    "website": "https://www.waggamotors.com.au/",
+    "attributes": {
+      "open_saturday": "yes",
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "truck_parts": "yes"
+    }
+  },
+  {
+    "name": "City RV",
+    "slug": "city-rv",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Caravan and motorhome dealership on Edward Street, Wagga Wagga, part of the JB Group. It sells JB Caravans, New Age caravans and campervans, Traveller caravans and JB motorhomes, and as an authorised JB Group agent carries out warranty repairs, servicing and maintenance, insurance claim repairs and assessments, plus parts, accessories and finance.",
+    "highlights": [
+      "Authorised JB Group agent for warranty repairs on JB Caravans",
+      "Caravan servicing and maintenance carried out on site",
+      "Insurance claim repairs and damage assessments handled in house",
+      "Authorised New Age Caravans dealer for the Riverina",
+      "Parts and accessories sold from the Edward Street yard",
+      "Finance arranged through National Leisure Finance and insurance quotes through CIL"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://cityrv.com.au/",
+      "https://cityrv.com.au/contact/",
+      "https://newagecaravans.com.au/dealers/city-rv-wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "365 Edward Street",
+    "phone": "02 5954 9549",
+    "website": "https://cityrv.com.au/",
+    "email": "jordan@cityrv.com.au",
+    "attributes": {
+      "open_saturday": "yes",
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "ConX Hire",
+    "slug": "conx-hire",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "description": "Hire yard at 238 Hammond Avenue, East Wagga Wagga supplying the construction and earthmoving trades. Hire stock covers earthmoving plant, access equipment, compaction gear, concrete equipment and concrete products, landscaping equipment, scaffolding, and cleaning and floor care machines.",
+    "highlights": [
+      "Earthmoving and access equipment for construction work",
+      "Compaction gear, concrete equipment and concrete products",
+      "Scaffolding and landscaping equipment",
+      "Cleaning and floor care machines",
+      "Open Monday to Friday 7am to 5pm and Saturday 7am to 12pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.conxhire.com.au/locations/wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "238 Hammond Avenue",
+    "phone": "(02) 6932 0415",
+    "website": "https://www.conxhire.com.au/locations/wagga-wagga",
+    "attributes": {
+      "hire_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Kennards Hire Wagga Wagga",
+    "slug": "kennards-hire-wagga-wagga",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Kennards Hire branch at 30 Edward Street, Wagga Wagga, with its own counter and local phone line. The branch hires earthmoving plant, access equipment, site equipment, lifting and materials handling gear, vehicles, trailers, traffic equipment, generators, lighting, and heating, ventilation and cooling units.",
+    "highlights": [
+      "Earthmoving plant and access equipment hire",
+      "Lifting and materials handling gear, vehicles and trailers",
+      "Generators, lighting and traffic equipment",
+      "Heating, ventilation and cooling units",
+      "Open Monday to Friday 7am to 5pm and Saturday 7am to 12pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.kennards.com.au/branch/wagga-wagga"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "30 Edward Street",
+    "phone": "(02) 6938 4500",
+    "website": "https://www.kennards.com.au/branch/wagga-wagga",
+    "attributes": {
+      "hire_available": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Intersales",
+    "slug": "intersales",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Case IH and New Holland machinery dealership on Hammond Avenue, Wagga Wagga, one of four branches alongside Temora, Griffith and Wodonga. It deals in new and used tractors, headers and broadacre equipment and carries lines including MacDon, Horsch, Croplands, Kverneland, McHale and Polaris, with parts, pre-season servicing and a seven-day breakdown service.",
+    "highlights": [
+      "Case IH and New Holland dealership for the Wagga Wagga district",
+      "New and used tractors, headers and other farm equipment sold",
+      "Breakdown service available seven days a week",
+      "Additional lines include MacDon, Horsch, Croplands, Kverneland, McHale, Vicon and Polaris",
+      "Pre-season servicing, parts and fleet management support offered",
+      "Sister branches at Temora, Griffith and Wodonga"
+    ],
+    "hours": [],
+    "sources": [
+      "https://intersales.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "270 Hammond Avenue",
+    "phone": "(02) 6921 5515",
+    "website": "https://intersales.com.au/",
+    "attributes": {
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "mobile_service": "yes"
+    }
+  },
+  {
+    "name": "JGW Harvest & Tillage Support",
+    "slug": "jgw-harvest-and-tillage-support",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Family owned agricultural machinery dealership trading as JGW Harvest & Tillage Support, with branches at Wagga Wagga and Cowra. The Wagga yard on Pearson Street is the local Fendt and Massey Ferguson dealer and lists new and used tractors and harvest machinery for sale through the dealership's own inventory site.",
+    "highlights": [
+      "Fendt and Massey Ferguson dealership serving the Wagga Wagga district",
+      "Family owned business with branches at Wagga Wagga and Cowra",
+      "New and used tractors and harvest machinery listed on the dealership's own inventory site",
+      "Yard located at 38 Pearson Street, Wagga Wagga"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.jgw.sitedynamic.com.au/new-machines/for-sale/fendt/718-g6-power-plus/2023/2945209",
+      "https://jgwharvest.com.au/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "38 Pearson Street",
+    "phone": "(02) 6925 0427",
+    "website": "https://jgwharvest.com.au/"
+  },
+  {
+    "name": "Absolute Steel Fabrication & Welding",
+    "slug": "absolute-steel-fabrication-and-welding",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "East Wagga Wagga",
+    "postcode": "2650",
+    "description": "Steel fabrication business at 15 Tarcoola Road, East Wagga Wagga doing structural steel fabrication and erection for industrial, commercial, civil and residential projects. Work also covers stainless steel fabrication, shed construction, and welding and mobile repairs, with a 24/7 emergency service for urgent breakdowns.",
+    "highlights": [
+      "Structural steel fabrication and erection for industrial and commercial projects",
+      "Stainless steel fabrication",
+      "Welding and mobile repairs carried out away from the workshop",
+      "24/7 emergency service for urgent repairs",
+      "Shed construction"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.absolutesteelfabandwelding.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "15 Tarcoola Road",
+    "phone": "0467 596 240",
+    "website": "https://www.absolutesteelfabandwelding.com.au/",
+    "attributes": {
+      "mobile_service": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Wagga Stainless Steel",
+    "slug": "wagga-stainless-steel",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Commercial stainless steel fabricator at 8 Mortimer Place, Wagga Wagga serving the Riverina. The workshop makes commercial sinks, exhaust canopies, preparation benches, flues and splashbacks, and handrail and balustrading, and does detailed and general sheet metal work along with laser cutting, all fabricated to customer specification.",
+    "highlights": [
+      "Commercial kitchen stainless: sinks, exhaust canopies and preparation benches",
+      "Flues and splashbacks",
+      "Handrail and balustrading fabrication",
+      "Laser cutting and detailed sheet metal work",
+      "Custom fabrication to specification; technicians trained and certified"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggastainlesssteel.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "8 Mortimer Place",
+    "phone": "(02) 6925 5255",
+    "website": "https://www.waggastainlesssteel.com.au/",
+    "email": "admin@waggastainlesssteel.com.au"
+  },
+  {
+    "name": "MJM Motorcycles",
+    "slug": "mjm-motorcycles",
+    "categorySlug": "motorcycle-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Motorcycle dealership on Hammond Avenue in Wagga Wagga. It appears on YCF Australia's official dealer register as an authorised dealer for the YCF range of pit bikes and junior off-road motorcycles, with sales and stock enquiries taken by phone or email at the Hammond Avenue premises.",
+    "highlights": [
+      "Listed as an authorised dealer on YCF Australia's dealer register",
+      "Supplies YCF pit bikes and junior off-road motorcycles",
+      "Yard located at 96 Hammond Avenue, Wagga Wagga",
+      "Direct contact by phone on 02 6921 9109 or by email"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.ycf-riding.com.au/d/mjn-motorcycles/53"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "96 Hammond Avenue",
+    "phone": "02 6921 9109",
+    "email": "mjmmotorcycles@yahoo.com"
+  },
+  {
+    "name": "Riverina Mower World",
+    "slug": "riverina-mower-world",
+    "categorySlug": "small-engine-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Riverina Mower World sells and services lawn mowers and outdoor power equipment from Dobney Avenue in Wagga Wagga. Brands stocked include Stihl, Masport, Atom, Gravely and Can-Am, and its mechanics handle mower servicing and garden equipment repairs. Spare parts and accessories are held in store, and machines are assembled, fuelled and test started before leaving the showroom.",
+    "highlights": [
+      "Mower servicing and garden equipment repairs by in-house mechanics",
+      "Stocks Stihl, Masport, Atom, Gravely and Can-Am",
+      "Spare parts and accessories held in store",
+      "Machines assembled, fuelled and test started before leaving the showroom",
+      "Open Saturday 08:00-13:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://riverinamowerworld.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "14 Dobney Avenue",
+    "phone": "02 6925 1031",
+    "website": "https://riverinamowerworld.com.au/",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Trailer Trailers Wagga Wagga",
+    "slug": "trailer-trailers-wagga-wagga",
+    "categorySlug": "trailer-sales",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Trailer yard on Hammond Avenue selling Australian-built single and tandem axle trailers made with Australian steel. The range covers box, cage and hot dipped galvanised trailers, tradesman and enclosed van trailers, car carriers, hydraulic tippers, plant and flat-top trailers, livestock, motorbike, ATV, golf buggy and garden trailers, with aluminium toolboxes also sold.",
+    "highlights": [
+      "100% Australian built trailers made with Australian steel, as stated on the site",
+      "Single and tandem axle box, cage and galvanised trailers held in stock",
+      "Specialist trailers including hydraulic tippers, car carriers, plant, livestock and motorbike trailers",
+      "Aluminium toolboxes sold alongside the trailer range",
+      "Finance available and custom quotes offered"
+    ],
+    "hours": [],
+    "sources": [
+      "https://trailertrailerswaggawagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "116-118 Hammond Avenue",
+    "phone": "02 6921 3973",
+    "website": "https://trailertrailerswaggawagga.com.au/",
+    "attributes": {
+      "finance_available": "yes"
+    }
+  },
+  {
+    "name": "Nixons Wagga",
+    "slug": "nixons-wagga",
+    "categorySlug": "truck-and-trailer-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Nixons Wagga is a transport engineering and spare parts business on Hammond Avenue, Wagga Wagga. It supplies replacement parts for hoists, cylinders, truck cranes, tailgate loaders, turntables and axles as well as trailer parts, along with PTO pumps, power packs, tipper kits, solenoids and seal kits. The workshop also builds flat top and tipping bodies and pig and dog trailers, modifies truck chassis and repairs hydraulic hoist barrels and tailshafts.",
+    "highlights": [
+      "Replacement parts for hoists, cylinders, truck cranes and tailgate loaders",
+      "Turntable, axle and trailer parts stocked",
+      "PTO pumps, power packs, tipper kits and seal kits supplied",
+      "Builds flat top and tipping bodies and pig and dog trailers",
+      "Truck chassis modification and towbar fitting",
+      "Hydraulic hoist barrel and tailshaft manufacture and repair"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.nixons.com.au/",
+      "https://www.nixons.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "254 Hammond Avenue",
+    "phone": "02 6921 6011",
+    "website": "https://www.nixons.com.au/",
+    "attributes": {
+      "truck_parts": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Wagga Trucks",
+    "slug": "wagga-trucks",
+    "categorySlug": "truck-and-trailer-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Wagga Trucks runs an on-site parts department on Hammond Avenue in Wagga Wagga, stocking genuine parts for Volvo, Mack, UD and Hino trucks and for Freighter Group trailers, plus aftermarket and OEM parts for other truck makes and models. The dealership also carries out truck servicing and repairs and operates a 24 hour breakdown service.",
+    "highlights": [
+      "Genuine parts for Volvo, Mack, UD and Hino trucks",
+      "Freighter Group trailer parts stocked",
+      "Aftermarket and OEM parts for other truck makes and models",
+      "Full on-site parts department",
+      "24 hour breakdown service",
+      "Open Saturday mornings 07:30-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.waggatrucks.com.au/service-and-parts",
+      "https://www.waggatrucks.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "280 Hammond Avenue",
+    "phone": "02 6921 2263",
+    "website": "https://www.waggatrucks.com.au/",
+    "email": "reception@waggatrucks.com.au",
+    "attributes": {
+      "truck_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Whitlock Automotive",
+    "slug": "whitlock-automotive-wagga-wagga",
+    "categorySlug": "vehicle-inspections",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Automotive workshop at 37 Bardo Lane, Wagga Wagga operating as an Authorised Inspection Scheme station. It carries out eSafety checks, commonly called pink slips, as the mechanical inspection required before registration renewal, alongside its general vehicle servicing work.",
+    "highlights": [
+      "Authorised Inspection Scheme (AIS) station for NSW eSafety checks",
+      "Pink slip mechanical inspections carried out at the Bardo Lane workshop",
+      "General vehicle servicing offered alongside inspections"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.whitlockautomotive.com.au/servicing"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "37 Bardo Lane",
+    "phone": "(02) 6921 2641",
+    "website": "https://www.whitlockautomotive.com.au/",
+    "email": "Mail@whitlockautomotive.com"
+  },
+  {
+    "name": "Dewar's Performance Engines",
+    "slug": "dewars-performance-engines",
+    "categorySlug": "engine-reconditioning",
+    "vertical": "trades",
+    "localityName": "Baranduda",
+    "state": "VIC",
+    "suburb": "Baranduda",
+    "postcode": "3691",
+    "description": "Locally owned, family operated engine reconditioning workshop and machine shop at Baranduda, with more than 40 years in the trade. Services include engine reconditioning and rebuilds, cylinder boring and honing, line boring, crankshaft and camshaft regrinding, cylinder head reconditioning, engine balancing, injector pump reconditioning and dyno testing and tuning.",
+    "highlights": [
+      "Complete engine reconditioning and rebuilds",
+      "Engine block boring and honing, and line boring",
+      "Crankshaft regrinding and crack testing",
+      "Camshaft regrinding and linishing",
+      "Sunnen pin honing from 16mm to 100mm",
+      "Dyno testing and tuning, plus injector pump reconditioning"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://dewarsengines.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "12 Baranduda Drive",
+    "phone": "(02) 6020 9111",
+    "website": "https://dewarsengines.com.au/"
+  },
+  {
+    "name": "Gricey's Workshop Automotive Specialist",
+    "slug": "griceys-workshop",
+    "categorySlug": "auto-air-conditioning",
+    "vertical": "trades",
+    "localityName": "West Wodonga",
+    "state": "VIC",
+    "suburb": "West Wodonga",
+    "postcode": "3690",
+    "description": "Workshop on Trafalgar Street, West Wodonga, trading since 2013 with Arctick certified technicians. Alongside air conditioning service and repair it covers radiators and cooling systems, transmission inspections, maintenance and repairs, exhaust work, engine diagnostics and repairs, brakes, tyres, suspension and logbook servicing.",
+    "highlights": [
+      "Arctick certified technicians for air conditioning system service and repair",
+      "Radiator and cooling system work",
+      "Transmission inspections, maintenance and repairs, from fluid flushes to part replacements",
+      "Exhaust work, brake repairs, tyre services and suspension",
+      "VACC member accredited",
+      "Engine diagnostics and repairs, and logbook servicing"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.griceysworkshop.com.au/",
+      "https://www.griceysworkshop.com.au/transmission"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "8 Trafalgar Street",
+    "phone": "0467 566 912",
+    "website": "https://www.griceysworkshop.com.au/",
+    "email": "griceysworkshop@gmail.com"
+  },
+  {
+    "name": "Twin City Truck Centre",
+    "slug": "twin-city-truck-centre",
+    "categorySlug": "truck-and-trailer-parts",
+    "vertical": "trades",
+    "localityName": "West Wodonga",
+    "state": "VIC",
+    "suburb": "West Wodonga",
+    "postcode": "3691",
+    "description": "Twin City Truck Centre is the Kenworth and DAF dealership for the Albury Wodonga district, on McKoy Street in West Wodonga. Its parts department supplies genuine DAF and PACCAR parts and truck accessories covering engine and transmission components, brakes, suspension and electrical systems. The site also handles new and used truck sales, rental and leasing, plus servicing, maintenance and repairs.",
+    "highlights": [
+      "Parts department stocking genuine DAF and PACCAR parts",
+      "Engine, transmission, brake, suspension and electrical components",
+      "Kenworth and DAF dealership for the Albury Wodonga district",
+      "Truck servicing, maintenance and repairs carried out onsite",
+      "Parts counter open Saturday mornings 08:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://twincitytruckcentre.com.au/",
+      "https://www.twincitytruckcentre.com.au/contact/",
+      "https://www.kenworthdafwodonga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "255 McKoy Street",
+    "phone": "02 6049 8888",
+    "website": "https://twincitytruckcentre.com.au/",
+    "email": "enquiry@twincitytruckcentre.com.au",
+    "attributes": {
+      "truck_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Get Off Road 4x4",
+    "slug": "get-off-road-4x4",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Get Off Road 4x4 is a Wodonga four-wheel drive and camping equipment retailer with its own fitting workshop on Osburn Street. An authorised Ironman 4x4 dealer, it stocks bull bars, canopies, side steps and rails, roof racks, dual battery systems, long range fuel and water tanks, recovery kits and suspension, and carries out suspension repairs and replacement.",
+    "highlights": [
+      "Authorised Ironman 4x4 dealer",
+      "Onsite workshop fits bull bars, canopies, UHF radios and dual battery systems",
+      "Suspension repairs and replacement",
+      "Camping equipment stocked alongside 4x4 accessories",
+      "Open Saturday mornings 09:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.getoffroad4x4.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "9 Osburn Street",
+    "phone": "02 6024 3888",
+    "website": "https://www.getoffroad4x4.com.au/",
+    "email": "sales@getoffroad4x4.com.au",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Wodonga Spring Works",
+    "slug": "wodonga-spring-works-wodonga",
+    "categorySlug": "4wd-accessories",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wodonga Spring Works is a suspension shop on High Street, Wodonga supplying and fitting coil springs, leaf springs, torsion bars, shock absorbers and steering dampers. It handles GVM, GCM and lift kits for most four-wheel drives, and also carries bull bars, rear bars, light bars, driving lights, winches, recovery equipment, trailer parts, and caravan and motorhome suspension.",
+    "highlights": [
+      "Coil springs, leaf springs, torsion bars and shock absorbers supplied and fitted",
+      "GVM, GCM and lift kits for most 4x4 vehicles",
+      "Bull bars, rear bars, light bars and winches stocked",
+      "Caravan and motorhome shock absorbers and springs",
+      "Trailer parts stocked"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://wodongaspringworks.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "19-21 High Street",
+    "phone": "02 6024 1464",
+    "website": "https://wodongaspringworks.com.au/",
+    "attributes": {
+      "four_wd_parts": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Maddock Motors - Wodonga Auto Air",
+    "slug": "maddock-motors-wodonga-auto-air",
+    "categorySlug": "auto-air-conditioning",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Workshop on Queen Street, Wodonga, trading since 2009 and specialising in car air conditioning alongside general mechanical servicing. Work includes air conditioning regas, air conditioning diagnostics and leak testing, supply and fitting of A/C hoses and components, logbook servicing and general maintenance.",
+    "highlights": [
+      "Car air conditioning repairs and regas",
+      "Auto air conditioning diagnostics and leak testing",
+      "Supplies and fits auto A/C hoses, components and parts",
+      "ARC licence AU22424",
+      "VACC member and Penrite product partner",
+      "Logbook servicing and general servicing and maintenance"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.maddockmotors.com.au/",
+      "https://www.maddockmotors.com.au/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "26 Queen Street",
+    "phone": "02 6024 7888",
+    "website": "https://www.maddockmotors.com.au/",
+    "email": "maddockmotors@bigpond.com",
+    "attributes": {
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Universal Upholstery",
+    "slug": "universal-upholstery",
+    "categorySlug": "auto-upholstery",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Motor trimmer and upholsterer at 15 Mint Street, Wodonga, trading since 1995. The workshop retrims automotive seats, headlinings, door trims, dashes and motorbike seats on virtually any make or model, including classics, muscle cars, utes and 4WDs, and also makes soft tops, vinyl roofs, cockpit tonneaus, ute canopies, marine upholstery and caravan interiors.",
+    "highlights": [
+      "Automotive retrimming: seats, headlinings, door trims, dashes and moulded carpets",
+      "Motorbike seat recovering and full leather conversions",
+      "Soft tops, vinyl roofs, cockpit tonneaus and ute canopies",
+      "Marine upholstery, canvas and PVC work, shade sails",
+      "Caravan and motorhome interiors, plus furniture reupholstery",
+      "Works with original and reproduction fabrics, vinyl and leather; trading since 1995"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:15",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.universal-upholstery.com.au/contact",
+      "https://www.universal-upholstery.com.au/automotive-upholstery"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "15 Mint Street",
+    "phone": "02 6056 4599",
+    "website": "https://www.universal-upholstery.com.au/",
+    "email": "info@universal-upholstery.com.au",
+    "facebook": "https://www.facebook.com/universalupholstery/"
+  },
+  {
+    "name": "A Grade Oils & Batteries",
+    "slug": "a-grade-oils-and-batteries",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "A Grade Oils & Batteries operates from Thomas Mitchell Drive in Wodonga, supplying vehicle batteries from leading brands along with motor oils, lubricants and AdBlue. The business delivers across the Albury Wodonga region and further afield to Wangaratta, Benalla, Wagga Wagga, Yackandandah and Myrtleford, and states free delivery to all areas of Wodonga, Wangaratta and Albury.",
+    "highlights": [
+      "Vehicle batteries from leading brands stocked",
+      "Motor oils, lubricants and AdBlue supplied",
+      "Free delivery to all areas throughout Wodonga, Wangaratta and Albury",
+      "Delivers to Benalla, Wagga Wagga, Yackandandah and Myrtleford",
+      "Open Monday to Friday 08:00-16:30"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.agradeoilsbatteries.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "77B Thomas Mitchell Drive",
+    "phone": "02 6056 3030",
+    "website": "https://www.agradeoilsbatteries.com.au/",
+    "attributes": {
+      "new_parts": "yes",
+      "delivery": "yes"
+    }
+  },
+  {
+    "name": "McRae Boats",
+    "slug": "mcrae-boats",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Family owned and operated dealership at 159-161 Melbourne Road, Wodonga that has served Albury-Wodonga and surrounding districts for more than 30 years. It stocks new Bennington boats along with demonstrator and used stock, and handles servicing, parts, finance, and assistance for customers wanting to sell an existing boat.",
+    "highlights": [
+      "New Bennington boat dealer, plus demonstrator and used boats",
+      "Servicing and parts departments on site",
+      "Finance options available",
+      "Assistance for customers selling their existing boat",
+      "Family owned and operated, serving Albury-Wodonga for more than 30 years"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.mcraeboats.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "(02) 6051 5577",
+    "website": "https://www.mcraeboats.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Wodonga Brake & Clutch",
+    "slug": "wodonga-brake-and-clutch",
+    "categorySlug": "brake-and-clutch",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Brake and clutch workshop on Hovell Street, Wodonga, handling brake and clutch repairs for all makes and models. Brake and flywheel machining is done in house, brake hoses are manufactured on site, and the workshop stocks brake and clutch parts including trailer brake components.",
+    "highlights": [
+      "Brake and flywheel machining carried out in the workshop",
+      "Brake hose manufacturing on site",
+      "Stocks rotors, brake pads, drums, brake shoes, wear sensors, cylinders, boosters and hardware kits",
+      "Stocks clutch kits, dual and single mass flywheels, clutch hydraulics, forks, pivot balls and release bearings",
+      "Trailer brake parts to suit hydraulic, electric and mechanical setups",
+      "Works on all makes and models"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.wodongabrakeandclutch.com.au/contact",
+      "https://www.wodongabrakeandclutch.com.au/brake-clutch"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "8-12 Hovell Street",
+    "phone": "(02) 6024 7155",
+    "website": "https://www.wodongabrakeandclutch.com.au/",
+    "attributes": {
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Blacklocks Ford Wodonga",
+    "slug": "blacklocks-ford-wodonga",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Ford franchise dealership at 190 Melbourne Road in Wodonga, run by the Blacklocks group, with separate direct lines for sales, service and parts on the one site. It sells new, demonstrator and used Ford vehicles and carries used stock from other makes, and the group also runs Isuzu and Iveco truck sales further along Melbourne Road.",
+    "highlights": [
+      "Authorised Ford new and demonstrator sales at 190 Melbourne Road, Wodonga",
+      "Dedicated Ford parts counter on (02) 6057 8731",
+      "Service workshop on (02) 6057 8732, open weekdays from 08:00",
+      "Sales open Saturday mornings until 12:00",
+      "Part of the Blacklocks group, which also runs Isuzu and Iveco truck sales on Melbourne Road"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://blacklocks.com.au/dealerships/",
+      "https://blacklocks.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "190 Melbourne Road",
+    "phone": "(02) 6057 8777",
+    "website": "https://blacklocks.com.au/",
+    "attributes": {
+      "open_saturday": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Blacklocks Ford Wodonga",
+    "slug": "blacklocks-ford",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Blacklocks Ford is the Ford dealership at 190 Melbourne Road, Wodonga, selling new, demonstrator and used vehicles. Separate parts and service departments run from the same address. The dealership offers finance, warranty and insurance products, accessory fitting, trade-ins and remote vehicle walkarounds by video call.",
+    "highlights": [
+      "Franchised Ford dealer at 190 Melbourne Road, Wodonga",
+      "Dedicated parts department on (02) 6057 8731 and service on (02) 6057 8732",
+      "Sales open Saturday mornings 09:00-12:00",
+      "Offers online vehicle demonstrations by Skype or FaceTime",
+      "Finance, warranty and insurance products plus accessory fitting"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.blacklocksford.com.au/",
+      "https://www.blacklocks.com.au/dealerships"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "(02) 6057 8777",
+    "website": "https://www.blacklocksford.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Boulevard Motors",
+    "slug": "boulevard-motors",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Boulevard Motors is a used vehicle dealership at 159-161 Melbourne Road, Wodonga that concentrates on 4WDs and SUVs. Established in 1999, it is locally owned and offers finance including applications from self-employed buyers, with stock covered by AWN Advantage three-year warranty. Sunday visits are by appointment.",
+    "highlights": [
+      "Used vehicle yard specialising in 4WD and SUV stock",
+      "Locally owned and operating since 1999",
+      "Finance available, with approvals generally within 24 hours",
+      "Finance options for self-employed applicants",
+      "Vehicles come with AWN Advantage three-year warranty",
+      "Open Sunday by appointment only"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.boulevardmotors.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "159-161 Melbourne Road",
+    "phone": "(02) 6051 5511",
+    "website": "https://www.boulevardmotors.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "four_wd_parts": "yes"
+    }
+  },
+  {
+    "name": "Jacob Toyota",
+    "slug": "jacob-toyota",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Jacob Toyota is the Toyota dealership for the Albury-Wodonga region, with its sales showroom at 175 Melbourne Road, Wodonga and a separate service and parts centre at 404 Griffith Road, Lavington. It sells new Toyotas, Toyota Certified pre-owned stock and other used vehicles, and offers finance, insurance and fleet services.",
+    "highlights": [
+      "Franchised Toyota dealer with showroom at 175 Melbourne Road, Wodonga",
+      "Separate service and parts centre at 404 Griffith Road, Lavington on (02) 6057 1000",
+      "Sells Toyota Certified pre-owned as well as general used vehicles",
+      "Sales department open Saturday mornings",
+      "Finance, insurance and fleet services available"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.jacobtoyota.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "175 Melbourne Road",
+    "phone": "(02) 6055 9999",
+    "website": "https://www.jacobtoyota.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "japanese_parts": "yes"
+    }
+  },
+  {
+    "name": "McRae Motors",
+    "slug": "mcrae-motors",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "McRae Motors is a Wodonga dealership on Melbourne Road holding the Kia, Nissan, LDV, GMSV and Renault franchises, and also servicing Holden and HSV vehicles. It sells new, demonstrator and used cars and runs sales, service and parts from the one address. The same business operates McRae Boats and the Boulevard Motors used car yard.",
+    "highlights": [
+      "Franchised dealer for Kia, Nissan, LDV, GMSV and Renault",
+      "Continues to service Holden and HSV vehicles",
+      "Sales, service and parts all at 182 Melbourne Road, Wodonga",
+      "New, demonstrator and used vehicle stock, with trade-ins accepted",
+      "Related businesses McRae Boats (Malibu and Axis) and Boulevard Motors"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.mcraemotors.com.au/",
+      "https://www.mcraemotors.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "182 Melbourne Road",
+    "phone": "(02) 6051 5555",
+    "website": "https://www.mcraemotors.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes"
+    }
+  },
+  {
+    "name": "Wodonga Car World",
+    "slug": "wodonga-car-world",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wodonga Car World is a family-owned dealership on High Street, Wodonga that has supplied new and used vehicles to Albury-Wodonga since 1983. It holds the Mahindra, MG and Fiat franchises, sells new and used Avida motorhomes, and runs its own service and parts departments on site.",
+    "highlights": [
+      "Family-owned dealership supplying the Albury-Wodonga area since 1983",
+      "New vehicle franchises for Mahindra, MG and Fiat",
+      "Sells new and used Avida motorhomes alongside cars",
+      "Separate service department on (02) 6055 8500",
+      "Sales open Saturday mornings; finance and trade-ins handled in house"
+    ],
+    "hours": [
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.carworld.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "56-60 High Street",
+    "phone": "02 6055 8555",
+    "website": "https://www.carworld.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Shimmers Carwash",
+    "slug": "shimmers-carwash",
+    "categorySlug": "car-wash",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Self-service and automatic car wash on Victoria Cross Parade at Whitebox Rise in Wodonga. The site has a touch-free automatic bay, a soft-cloth automatic bay and four self-service wash bays, plus vacuum and fragrance facilities. The bays are open around the clock, with staff on site during the day.",
+    "highlights": [
+      "Touch-free automatic wash bay and soft-cloth automatic wash bay on the one site",
+      "Four self-service wash bays",
+      "Vacuum and fragrance facilities available",
+      "Open 24 hours a day, seven days a week; attended daily from 9am to 5pm"
+    ],
+    "hours": [],
+    "sources": [
+      "http://www.shimmerscarwash.com.au/",
+      "https://www.facebook.com/shimmerscarwash/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Victoria Cross Parade",
+    "website": "http://www.shimmerscarwash.com.au/",
+    "facebook": "https://www.facebook.com/shimmerscarwash/",
+    "attributes": {
+      "self_serve": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Albury Wodonga Caravan Repairs",
+    "slug": "albury-wodonga-caravan-repairs",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Albury Wodonga Caravan Repairs is a workshop at Unit 1, 6 Premier Close, Wodonga specialising in caravan insurance work and general caravan repairs. The site says owner Rob has more than 20 years in the trade in the Albury Wodonga area, and that the team advises customers on how to save time and money rather than only fixing the immediate fault.",
+    "highlights": [
+      "Caravan insurance repair work is a stated specialty",
+      "General caravan repairs and maintenance",
+      "Owner Rob has over 20 years experience in the Albury Wodonga area",
+      "Workshop at Unit 1, 6 Premier Close, Wodonga",
+      "Open Monday to Friday 08:30-16:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://alburywodongacaravanrepairs.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Unit 1, 6 Premier Close",
+    "phone": "(02) 6024 5100",
+    "website": "https://alburywodongacaravanrepairs.com.au/",
+    "email": "a.w.caravanrepairs@bigpond.com"
+  },
+  {
+    "name": "RV World",
+    "slug": "rv-world",
+    "categorySlug": "caravan-repairs",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "RV World is a family-owned caravan and motorhome dealership and service centre at 1a Watson Street, Wodonga, carrying Crusader Caravans, Dreamhaven and Avida motorhomes. Its workshop covers general servicing, warranty work, insurance repairs and accessory installation, and it sells parts and accessories and takes trade-ins and consignments.",
+    "highlights": [
+      "Showroom and service centre at 1a Watson Street, Wodonga",
+      "Dealer for Crusader Caravans, Dreamhaven and Avida motorhomes",
+      "Workshop handles general servicing, warranty work and insurance repairs",
+      "Accessory installation, plus parts and accessories sales",
+      "Trade-in and consignment selling accepted",
+      "Family-owned, with a second operation in Canberra"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "13:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.rvworld.com.au/",
+      "https://www.rvworld.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "1a Watson Street",
+    "phone": "(02) 6024 4222",
+    "website": "https://www.rvworld.com.au/",
+    "email": "info@awrvworld.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "warranty_on_parts": "yes"
+    }
+  },
+  {
+    "name": "Redi2Hire",
+    "slug": "redi2hire",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Equipment hire business at 193 Melbourne Road, Wodonga supplying trades and DIY customers across Wodonga, Albury and surrounding regions. The fleet includes access equipment such as knuckle booms, excavation equipment and tipper trucks, and the business also handles sales, parts and service alongside the hire side.",
+    "highlights": [
+      "Access equipment including knuckle booms",
+      "Excavation equipment and tipper truck hire",
+      "Sales, parts and service offered alongside the hire fleet",
+      "Serves trades and DIY customers in Wodonga, Albury and surrounding regions"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.redi2hire.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "193 Melbourne Road",
+    "phone": "02 6024 2292",
+    "website": "https://www.redi2hire.com.au/",
+    "attributes": {
+      "hire_available": "yes"
+    }
+  },
+  {
+    "name": "Intersales Albury Wodonga",
+    "slug": "intersales-albury-wodonga",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Intersales Albury Wodonga is an agricultural machinery dealership at 233 McKoy Street, Wodonga. It is a Case IH and New Holland dealer and stocks more than 25 machinery brands, including balers, harvesters and hay equipment. The branch handles equipment sales, parts supply and pre-season maintenance, and is part of a group with branches at Temora, Wagga Wagga and Griffith.",
+    "highlights": [
+      "Case IH and New Holland dealer for the Albury-Wodonga area",
+      "Stocks over 25 machinery brands, including balers, harvesters and hay equipment",
+      "Parts supply and pre-season maintenance handled at the branch",
+      "Site lists Braud, Gianni Ferrari and Toro among brands carried at this branch",
+      "Open Saturday mornings 08:00-12:00",
+      "Group branches also at Temora, Wagga Wagga and Griffith"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.intersales.com.au/Albury-Wodonga",
+      "https://www.intersales.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "233 McKoy Street",
+    "phone": "(02) 6059 7100",
+    "website": "https://www.intersales.com.au/Albury-Wodonga",
+    "email": "admin.aw@intersales.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Wodonga Pumps and Mowers",
+    "slug": "wodonga-pumps-and-mowers-wodonga",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wodonga Pumps and Mowers, formerly Flower Macklan, sells and services farm machinery, pumps, sprayers and mowers from 18 High Street, Wodonga. Farm machinery stock covers slashers, mulchers, power harrows, rotary hoes, hay rakes, grader blades, post hole diggers, cultivators, rippers, disc ploughs and bale handling gear, mainly from Silvan and John Berends.",
+    "highlights": [
+      "Farm machinery implements: slashers, mulchers, power harrows, rotary hoes and hay rakes",
+      "Also stocks grader blades, post hole diggers, cultivators, rippers and disc ploughs",
+      "Carries Silvan and John Berends Implements ranges",
+      "Staff will travel to the farm to advise on machinery selection",
+      "Also sells and services pumps, sprayers, ride-on mowers and chainsaws",
+      "Open Saturday mornings 09:00-12:00"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://wodongapumpsandmowers.com.au/",
+      "https://wodongapumpsandmowers.com.au/farm-machinery/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "18 High Street",
+    "phone": "(02) 6056 1633",
+    "website": "https://wodongapumpsandmowers.com.au/",
+    "email": "info@wpam.com.au",
+    "attributes": {
+      "new_parts": "yes",
+      "open_saturday": "yes",
+      "on_site_service": "yes",
+      "mobile_service": "yes"
+    }
+  },
+  {
+    "name": "MGK Engineering",
+    "slug": "mgk-engineering",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "General engineering and metal fabrication business at 5 Premier Close, Wodonga. It fabricates and installs stainless steel, mild steel and aluminium components, with a particular line in stainless steel fabrication for the food industry, plus steel fabrication and welding, mechanical installation, design drafting and project management.",
+    "highlights": [
+      "Stainless steel fabrication for the food industry",
+      "Steel fabrication and welding in stainless, mild steel and aluminium",
+      "Mechanical installation and general engineering",
+      "Design drafting and project management handled in-house",
+      "Also contactable on 0429 499 495"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.mgkeng.com/",
+      "https://www.mgkeng.com/contact"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "5 Premier Close",
+    "phone": "(02) 6024 4633",
+    "website": "https://www.mgkeng.com/"
+  },
+  {
+    "name": "Worx Fabrication",
+    "slug": "worx-fabrication-wodonga",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Engineering and fabrication workshop operating in Wodonga since 2010 out of a large commercial shed centrally in the town. The business does heavy fabrication including logging equipment, excavators, truck bodies, water tanks and trailers, and takes on custom jobs, repairs and onsite welding and maintenance for heavy machinery and construction plant.",
+    "highlights": [
+      "Heavy fabrication for logging equipment, excavators, truck bodies, water tanks and trailers",
+      "Onsite welding, fabrication and maintenance for heavy machinery and construction plant",
+      "135 tonne press and 6mm guillotine in the workshop",
+      "High definition CNC plasma cutting in mild steel, stainless steel and aluminium",
+      "Operating in Wodonga since 2010"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.worxfabrication.com.au/about",
+      "https://www.worxfabrication.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "02 6024 3164",
+    "website": "https://www.worxfabrication.com.au/",
+    "attributes": {
+      "on_site_service": "yes"
+    }
+  },
+  {
+    "name": "Wyatt Mechanical",
+    "slug": "wyatt-mechanical-wodonga",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wodonga diesel mechanical business operating from a workshop in Chisholm Court and running a mobile repair service that travels to the vehicle. Published work covers heavy vehicle and truck repairs, earthmoving and machinery repairs, hydraulic hose repairs and servicing, and ECU diesel remapping.",
+    "highlights": [
+      "Mobile repair service that travels to the vehicle",
+      "Heavy vehicle and truck repairs",
+      "Earthmoving and machinery repairs",
+      "Hydraulic hose repairs and servicing",
+      "ECU diesel remapping",
+      "Open Saturday mornings from 6:00am"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "06:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.wyattmechanical.com.au/mobile-diesel-mechanic"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "2 Chisholm Court",
+    "phone": "0458 651 637",
+    "website": "https://www.wyattmechanical.com.au/mobile-diesel-mechanic",
+    "attributes": {
+      "mobile_service": "yes",
+      "on_site_service": "yes",
+      "open_saturday": "yes"
+    }
+  },
+  {
+    "name": "Natrad Albury/Wodonga",
+    "slug": "natrad-albury-wodonga-wodonga",
+    "categorySlug": "radiator-repairs",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Radiator and vehicle cooling specialist on Huon Street, Wodonga, with over 40 years in the radiator industry. Handles radiator servicing and repair, intercooler repairs and air conditioning servicing for passenger cars through to trucks and heavy equipment, with five staff at the site.",
+    "highlights": [
+      "Radiator servicing and repair for passenger cars through to trucks and heavy equipment",
+      "Intercooler repairs",
+      "Automotive air conditioning servicing, with a qualified air conditioning technician (AU 03523)",
+      "Over 40 years in the radiator industry",
+      "Part of the Natrad network, which offers a manufacturer-supported three-year nationwide warranty",
+      "Five staff working at this location"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://natrad.com.au/stores/albury/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "20 Huon Street",
+    "phone": "(02) 6056 2433",
+    "website": "https://natrad.com.au/stores/albury/",
+    "attributes": {
+      "warranty_on_parts": "yes"
+    }
+  },
+  {
+    "name": "O'Neill's Autos",
+    "slug": "oneills-autos-wodonga",
+    "categorySlug": "transmission-specialists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wodonga workshop on Thomas Mitchell Drive with a dedicated transmission service covering automatic transmission servicing, partial repairs, overhauls and exchange transmissions, supported by diagnostic checks. The workshop also handles general and 4X4 mechanical work, brakes and clutches, suspension, batteries, air conditioning, logbook servicing and pre-purchase inspections.",
+    "highlights": [
+      "Automatic transmission servicing, overhauls and exchange transmissions",
+      "Partial transmission repairs and transmission diagnostic checks",
+      "Arctick accredited for air conditioning work",
+      "VACC member",
+      "Brake, clutch and suspension work",
+      "Pre-purchase inspections and logbook servicing"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.oneillsautos.com.au/transmission"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "96 Thomas Mitchell Drive",
+    "phone": "02 6024 5640",
+    "website": "https://www.oneillsautos.com.au/transmission",
+    "email": "admin@oneillsautos.com.au"
+  }
+]
