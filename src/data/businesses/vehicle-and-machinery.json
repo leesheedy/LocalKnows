@@ -493,7 +493,7 @@
     }
   },
   {
-    "name": "Blacklocks Lavington",
+    "name": "Blacklocks Motorcycles",
     "slug": "blacklocks-motorcycles",
     "categorySlug": "motorcycle-dealers",
     "vertical": "trades",
@@ -1998,7 +1998,7 @@
     }
   },
   {
-    "name": "TJM Albury Pty Ltd",
+    "name": "TJM Albury",
     "slug": "tjm-albury",
     "categorySlug": "4wd-accessories",
     "vertical": "trades",
@@ -2704,40 +2704,7 @@
     }
   },
   {
-    "name": "Wagga Motors Suzuki",
-    "slug": "wagga-motors-suzuki",
-    "categorySlug": "car-dealers",
-    "vertical": "trades",
-    "localityName": "Wagga Wagga",
-    "state": "NSW",
-    "suburb": "Wagga Wagga",
-    "postcode": "2650",
-    "description": "Franchised Suzuki dealership on Pearson Street handling new, demonstrator and used Suzuki sales across the Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny ranges. The site also covers Suzuki genuine servicing, fleet sales, parts and accessories, warranty work, roadside assistance and finance.",
-    "highlights": [
-      "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny",
-      "Suzuki genuine service department, with a service line on 1300 054 555",
-      "Parts department on (02) 6933 0175",
-      "Fleet sales and finance handled through the dealership",
-      "Warranty, roadside assistance and navigation map updates offered"
-    ],
-    "hours": [],
-    "sources": [
-      "https://waggamotorssuzuki.com.au/"
-    ],
-    "confidence": "high",
-    "lastCheckedAt": "2026-08-25",
-    "addressLine": "23 Pearson Street",
-    "phone": "(02) 6933 0100",
-    "website": "https://waggamotorssuzuki.com.au/",
-    "attributes": {
-      "finance_available": "yes",
-      "new_parts": "yes",
-      "on_site_service": "yes",
-      "japanese_parts": "yes"
-    }
-  },
-  {
-    "name": "Wagga Motors Suzuki",
+    "name": "Wagga Motors",
     "slug": "wagga-motors",
     "categorySlug": "car-dealers",
     "vertical": "trades",
@@ -2776,6 +2743,39 @@
       "new_parts": "yes",
       "on_site_service": "yes",
       "truck_parts": "yes"
+    }
+  },
+  {
+    "name": "Wagga Motors Suzuki",
+    "slug": "wagga-motors-suzuki",
+    "categorySlug": "car-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Franchised Suzuki dealership on Pearson Street handling new, demonstrator and used Suzuki sales across the Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny ranges. The site also covers Suzuki genuine servicing, fleet sales, parts and accessories, warranty work, roadside assistance and finance.",
+    "highlights": [
+      "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny",
+      "Suzuki genuine service department, with a service line on 1300 054 555",
+      "Parts department on (02) 6933 0175",
+      "Fleet sales and finance handled through the dealership",
+      "Warranty, roadside assistance and navigation map updates offered"
+    ],
+    "hours": [],
+    "sources": [
+      "https://waggamotorssuzuki.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "23 Pearson Street",
+    "phone": "(02) 6933 0100",
+    "website": "https://waggamotorssuzuki.com.au/",
+    "attributes": {
+      "finance_available": "yes",
+      "new_parts": "yes",
+      "on_site_service": "yes",
+      "japanese_parts": "yes"
     }
   },
   {

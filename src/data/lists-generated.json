@@ -585,6 +585,61 @@
     "reviewedAt": "2026-08-24"
   },
   {
+    "slug": "car-dealers-in-the-riverina",
+    "title": "Every car dealer in the Riverina",
+    "intro": "All 10 car dealers we list across the Riverina, in 3 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "localitySlug": "albury",
+    "state": "NSW",
+    "regionSlug": "riverina",
+    "categorySlug": "car-dealers",
+    "items": [
+      {
+        "listingSlug": "albury-mazda",
+        "blurb": "Franchised Mazda new vehicle dealer at 609 Hume Street, Albury. Workshop services all makes and models, not just Mazda."
+      },
+      {
+        "listingSlug": "baker-motors",
+        "blurb": "Authorised dealer for Honda, Hyundai, Mercedes-Benz, Mitsubishi, Peugeot, Subaru and Foton. Sales, service and parts departments all at 490 Young Street, Albury."
+      },
+      {
+        "listingSlug": "blacklocks-lavington",
+        "blurb": "Six new vehicle franchises on one Wagga Road site: BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo. Trades as Albury BMW and Chery Albury for those franchises at the same address."
+      },
+      {
+        "listingSlug": "thomas-bros-group",
+        "blurb": "Service workshop and genuine parts and accessories counter on site. New, demonstrator and used vehicle sales across Toyota, Mitsubishi, MG, GWM Haval and LDV."
+      },
+      {
+        "listingSlug": "wagga-motors",
+        "blurb": "Franchises include Hyundai, Isuzu, Mercedes-Benz, Mercedes vans, Suzuki, Honda, Chery and Omoda Jaecoo. Service vehicle entry is via Chaston Street rather than the Dobney Avenue showroom."
+      },
+      {
+        "listingSlug": "jupiter-motors",
+        "blurb": "Franchised dealer for Subaru, Mazda and RAM. New, demonstrator and used vehicle sales from the Urana Street site."
+      },
+      {
+        "listingSlug": "riverina-nissan",
+        "blurb": "Authorised Nissan sales, service and parts dealership. Located at the 42-50 Dobney Avenue multi-franchise motor group site."
+      },
+      {
+        "listingSlug": "wagga-motors-suzuki",
+        "blurb": "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny. Suzuki genuine service department, with a service line on 1300 054 555."
+      },
+      {
+        "listingSlug": "hillis-ford",
+        "blurb": "Authorised Ford dealership offering sales, service and parts. Located on Hammond Avenue, Wagga Wagga."
+      },
+      {
+        "listingSlug": "riverina-bmw",
+        "blurb": "Authorised BMW dealership offering sales, service and parts. Stand-alone site at 15 Mason Street, East Wagga Wagga."
+      }
+    ],
+    "author": "LocalsKnow",
+    "method": "compiled",
+    "publishedAt": "2026-08-24",
+    "reviewedAt": "2026-08-24"
+  },
+  {
     "slug": "edward-street-wagga-wagga",
     "title": "What is on Edward Street, Wagga Wagga",
     "intro": "Everything we list with an address on Edward Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 10 places across 4 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
@@ -3680,7 +3735,7 @@
   {
     "slug": "wagga-road-lavington",
     "title": "What is on Wagga Road, Lavington",
-    "intro": "Everything we list with an address on Wagga Road in Lavington, NSW, walked end to end in street number order rather than sorted by rating. 13 places across 3 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Wagga Road in Lavington, NSW, walked end to end in street number order rather than sorted by rating. 14 places across 3 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "lavington",
     "state": "NSW",
     "items": [
@@ -3735,6 +3790,10 @@
       {
         "listingSlug": "albury-holiday-park",
         "blurb": "Swimming pool and playground. Self-contained cabins. Open seven days."
+      },
+      {
+        "listingSlug": "blacklocks-lavington",
+        "blurb": "Six new vehicle franchises on one Wagga Road site: BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo. Trades as Albury BMW and Chery Albury for those franchises at the same address."
       }
     ],
     "author": "LocalsKnow",

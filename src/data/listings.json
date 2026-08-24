@@ -26966,12 +26966,11 @@
  {
   "id": "biz-blacklocks-motorcycles",
   "slug": "blacklocks-motorcycles",
-  "name": "Blacklocks Lavington",
+  "name": "Blacklocks Motorcycles",
   "status": "scraped",
   "vertical": "trades",
   "categoryIds": [
-   "cat-motorcycle-dealers",
-   "cat-car-dealers"
+   "cat-motorcycle-dealers"
   ],
   "description": "Blacklocks Motorcycles is the motorcycle and powersports arm of the Blacklocks group, trading from 418 Swift Street, Albury. The group lists Honda, BMW Motorrad, Aprilia, Moto Guzzi, Vespa, Piaggio, Ural and Polaris among its franchises, covering road bikes, scooters and side-by-sides. Polaris Albury operates from the same Swift Street address.",
   "phone": "02 6049 5500",
@@ -26993,12 +26992,12 @@
    "loc-vic-chiltern"
   ],
   "serviceAreaInferred": true,
-  "logoText": "BL",
+  "logoText": "BM",
   "logoTheme": "d",
   "attributes": {
-   "finance_available": "yes",
    "new_parts": "yes",
    "open_saturday": "yes",
+   "finance_available": "yes",
    "european_parts": "yes"
   },
   "licences": [],
@@ -27045,24 +27044,17 @@
   "isSample": false,
   "sources": [
    "https://www.blacklocks.com.au/dealerships",
-   "https://www.blacklocks.com.au/",
-   "https://www.alburychery.com.au/"
+   "https://www.blacklocks.com.au/"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blacklocks%20Lavington%20Albury%20NSW",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blacklocks%20Motorcycles%20Albury%20NSW",
   "highlights": [
    "Motorcycle and powersports dealership at 418 Swift Street, Albury",
    "Group franchise list includes Honda, BMW Motorrad, Aprilia, Moto Guzzi, Vespa, Piaggio and Ural",
    "Polaris Albury operates from the same Swift Street site",
    "Open Saturday mornings 09:00-12:30",
-   "Part of the Blacklocks group, which the site says has served Albury-Wodonga for over 100 years",
-   "Six new vehicle franchises on one Wagga Road site: BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo",
-   "Trades as Albury BMW and Chery Albury for those franchises at the same address",
-   "Part of the Blacklocks group, which also runs Ford, Ram, Isuzu Trucks and motorcycle dealerships"
-  ],
-  "mergedFrom": [
-   "blacklocks-lavington"
+   "Part of the Blacklocks group, which the site says has served Albury-Wodonga for over 100 years"
   ]
  },
  {
@@ -27742,6 +27734,99 @@
   ],
   "mergedFrom": [
    "rivsteel"
+  ]
+ },
+ {
+  "id": "biz-blacklocks-lavington",
+  "slug": "blacklocks-lavington",
+  "name": "Blacklocks Lavington",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-car-dealers"
+  ],
+  "description": "Blacklocks Lavington is the group's multi-franchise dealership at 587 Wagga Road, Lavington, holding BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo on the one site. It sells new, demonstrator and used vehicles and runs service and parts departments, with the wider Blacklocks group also operating Ford, Ram, truck and motorcycle sites across the border.",
+  "phone": "(02) 6049 5500",
+  "website": "https://www.blacklocks.com.au/dealerships",
+  "addressLine": "587 Wagga Road",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-nsw-walla-walla",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BL",
+  "logoTheme": "b",
+  "attributes": {
+   "finance_available": "yes",
+   "new_parts": "yes",
+   "open_saturday": "yes",
+   "european_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "12:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.blacklocks.com.au/dealerships",
+   "https://www.blacklocks.com.au/",
+   "https://www.alburychery.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Blacklocks%20Lavington%20Lavington%20NSW",
+  "highlights": [
+   "Six new vehicle franchises on one Wagga Road site: BMW, Isuzu UTE, Suzuki, GWM, Chery and Omoda Jaecoo",
+   "Trades as Albury BMW and Chery Albury for those franchises at the same address",
+   "Open Saturday mornings 09:00-12:30",
+   "Part of the Blacklocks group, which also runs Ford, Ram, Isuzu Trucks and motorcycle dealerships",
+   "Group site states more than 200 used vehicles in stock"
   ]
  },
  {
@@ -28654,7 +28739,7 @@
  {
   "id": "biz-tjm-albury",
   "slug": "tjm-albury",
-  "name": "TJM Albury Pty Ltd",
+  "name": "TJM Albury",
   "status": "scraped",
   "vertical": "trades",
   "categoryIds": [
@@ -28735,7 +28820,7 @@
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TJM%20Albury%20Pty%20Ltd%20South%20Albury%20NSW",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TJM%20Albury%20South%20Albury%20NSW",
   "highlights": [
    "Bull bars, rear protection and tow bars supplied and fitted onsite",
    "Suspension upgrades including GVM lifts",
@@ -29460,7 +29545,7 @@
  {
   "id": "biz-wagga-motors",
   "slug": "wagga-motors",
-  "name": "Wagga Motors Suzuki",
+  "name": "Wagga Motors",
   "status": "scraped",
   "vertical": "trades",
   "categoryIds": [
@@ -29481,11 +29566,10 @@
   "logoText": "WM",
   "logoTheme": "d",
   "attributes": {
+   "open_saturday": "yes",
    "finance_available": "yes",
    "new_parts": "yes",
    "on_site_service": "yes",
-   "japanese_parts": "yes",
-   "open_saturday": "yes",
    "truck_parts": "yes"
   },
   "licences": [],
@@ -29501,24 +29585,66 @@
   "qualityScore": 86,
   "isSample": false,
   "sources": [
-   "https://www.waggamotors.com.au/",
-   "https://waggamotorssuzuki.com.au/"
+   "https://www.waggamotors.com.au/"
   ],
   "confidence": "high",
   "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Motors%20Suzuki%20Wagga%20Wagga%20NSW",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Motors%20Wagga%20Wagga%20NSW",
   "highlights": [
    "Franchises include Hyundai, Isuzu, Mercedes-Benz, Mercedes vans, Suzuki, Honda, Chery and Omoda Jaecoo",
    "Service vehicle entry is via Chaston Street rather than the Dobney Avenue showroom",
    "Genuine spare parts department open Monday to Friday 8:00am to 5:00pm",
    "Finance and leasing arranged in house",
    "Car care services including Permagard and window tinting",
-   "Truck sales, service and parts by appointment on Saturdays",
-   "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny",
-   "Suzuki genuine service department, with a service line on 1300 054 555"
+   "Truck sales, service and parts by appointment on Saturdays"
+  ]
+ },
+ {
+  "id": "biz-wagga-motors-suzuki",
+  "slug": "wagga-motors-suzuki",
+  "name": "Wagga Motors Suzuki",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-car-dealers"
   ],
-  "mergedFrom": [
-   "wagga-motors-suzuki"
+  "description": "Franchised Suzuki dealership on Pearson Street handling new, demonstrator and used Suzuki sales across the Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny ranges. The site also covers Suzuki genuine servicing, fleet sales, parts and accessories, warranty work, roadside assistance and finance.",
+  "phone": "(02) 6933 0100",
+  "website": "https://waggamotorssuzuki.com.au/",
+  "addressLine": "23 Pearson Street",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WM",
+  "logoTheme": "d",
+  "attributes": {
+   "finance_available": "yes",
+   "new_parts": "yes",
+   "on_site_service": "yes",
+   "japanese_parts": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 80,
+  "isSample": false,
+  "sources": [
+   "https://waggamotorssuzuki.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Motors%20Suzuki%20Wagga%20Wagga%20NSW",
+  "highlights": [
+   "Authorised Suzuki dealership covering Swift, Ignis, Fronx, Vitara, S-Cross, e-Vitara and Jimny",
+   "Suzuki genuine service department, with a service line on 1300 054 555",
+   "Parts department on (02) 6933 0175",
+   "Fleet sales and finance handled through the dealership",
+   "Warranty, roadside assistance and navigation map updates offered"
   ]
  },
  {
