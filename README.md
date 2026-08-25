@@ -110,7 +110,18 @@ tag, sitemap membership and priority together. They cannot disagree.
 | Modifier page | Not generated at all below 5 listings. Never a 200 with an empty state. |
 | Listing | `noindex, follow` below a quality score of 40 |
 | Locality with no listings | `noindex, follow` |
+| Town guide | `noindex, follow` below 5 businesses based in the town |
+| Town calendar | `noindex, follow` below 3 upcoming events |
+| Category hub | `noindex, follow` while nothing is listed in it |
 | Search, filters | Always `noindex, follow` |
+
+The last two are the same argument as the first. A town calendar holding one
+event is a page about one event, and that event already has its own page. A
+category hub with nothing in it says "Nothing listed in this category yet" on its
+own face, which is the page telling you it should not be in an index. The
+taxonomy is meant to run ahead of the data, so a category will always be defined
+before it is filled, and both kinds of page flip to indexed on their own the
+build after somebody fills them.
 
 Nothing is ever deleted or 404ed. A thin page goes `noindex, follow` and keeps
 its links.
@@ -176,12 +187,17 @@ you, and none of them block anything that is already working.
 | 2 | **Confirm the Verified price.** `PLANS.verified.price` is set to an indicative $29 a month. It is a business decision, not a code one. | `src/lib/site.ts` |
 | 3 | **Flip `PLANS.live` when Stripe is connected.** Until then `/verified/` says on its face that it is not open, and collects interest instead of money. | `src/lib/site.ts` |
 | 4 | **Add `GOOGLE_MAPS_API_KEY`** if you want real star ratings. Without it every listing links to its Google profile instead, which is the intended fallback and not a failure. | Netlify env, GitHub secret |
-| 5 | **Add `INDEXNOW_KEY`** to ping Bing and friends on every refresh. Generate one with `node -e "console.log(require('crypto').randomBytes(16).toString('hex'))"`. | GitHub secret |
+| 5 | **Add `INDEXNOW_KEY`** as a repository secret, set to `21221edf9f463bfa6c3b2ad8a0eee2d8`. The key is generated, `public/21221edf9f463bfa6c3b2ad8a0eee2d8.txt` is committed and serving, and the first ping submitted 1,287 URLs successfully. The env var is all that is missing, and without it the weekly refresh skips the ping. The key is not a secret: IndexNow requires it to be publicly readable at the site root, which is the point of the file. | GitHub secret |
 | 6 | **`pip install crawl4ai && crawl4ai-setup`** on whichever machine runs the town expansion scraper. | Local |
 | 7 | **Extend `src/data/community.json`.** Eleven verified entries cover most towns via their council and regional paper. To add more, open the organisation's own site and copy the URL out of its footer. Never construct one from a name: `facebook.com/<TownName>` may belong to somebody else. `npm test` checks every entry resolves to real localities and records its source. | Local |
 
-Also worth doing once: verify the domain in Google Search Console and submit
-`https://localsknow.com.au/sitemap.xml`.
+The one thing above all of these: **verify the domain in Google Search Console
+and submit `https://localsknow.com.au/sitemap.xml`.** Google does not participate
+in IndexNow, so the ping that now works reaches Bing, Yandex and the rest and
+reaches Google not at all. Everything else on this list makes the site better.
+This one is the difference between 1,300 indexable pages being found in weeks and
+being found whenever a crawler happens past. It cannot be done from the repo
+because it needs a login.
 
 ### A naming thing
 
@@ -242,7 +258,7 @@ npm run indexnow    # tell Bing and friends what changed
 Three commands, three different jobs, and the build runs the first two.
 
 ```bash
-npm test      # 93 hand worked assertions. Arithmetic, dates, data invariants.
+npm test      # 182 hand worked assertions. Arithmetic, dates, data invariants.
 npm run verify   # crawls dist: dead links, duplicate canonicals, sitemap agreement
 npm run audit    # on page SEO report: descriptions, titles, thin pages, schema
 npm run smoke    # checks every URL in the DEPLOYED sitemap returns 200
@@ -274,6 +290,24 @@ that decides whether a page exists lives in `src/lib/repo.ts`, and everything
 that links to that page asks it.** `isLiveLocality`, `hasGuidePages`,
 `hasLocalityEvents`, `themesFor`, `pageExists`. Never re-derive one at a call
 site. `npm run verify` catches it when you do, which is what it is for.
+
+There is a second class, and it is the same shape one level down: **a rule that
+produced a value must be the thing that produces it again after a merge.** The
+ingest used to union two records' service areas, which is right when the areas
+were stated and wrong when they were inferred, because merging a Wagga Wagga
+record with a Gumly Gumly one produced coverage the inference rule would never
+have generated. It now re-derives an inferred area from the surviving locality
+using the same function that produced it the first time. `npm test` is what
+caught it, and the assertion that caught it is still there.
+
+The third is not a bug in this code so much as a hole in it that was open for a
+year: **a schema.org type that does not exist looks exactly like one that does.**
+There is no `MortgageBroker`, no `Physiotherapist` and no `DrivingSchool`, and
+all three read as though there should be. A wrong type lands on every listing in
+the category, which is hundreds of pages, and nothing renders differently, so
+nothing tells you. `scripts/preflight.mjs` now holds a list of the types that are
+real and fails the build on anything else. If a type genuinely exists and is
+missing from the list, add it to the list; that is the cheap half of the trade.
 
 ---
 
