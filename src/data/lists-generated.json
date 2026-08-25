@@ -396,40 +396,40 @@
     "categorySlug": "auto-parts",
     "items": [
       {
-        "listingSlug": "wests-tractor-parts",
-        "blurb": "Third generation business servicing Albury-Wodonga and the national farming community for over 40 years. Supplies aftermarket tractor parts and accessories for Ford, Massey Ferguson, John Deere, Case IH, Deutz and other brands."
+        "listingSlug": "pedders-albury",
+        "blurb": "Operated by Albury Wodonga Suspension & Brakes Pty Ltd under licence MVRL60119. Stocks suspension, brakes, lift kits, GVM upgrades, towing, performance and steering and chassis parts."
       },
       {
         "listingSlug": "napa-auto-parts-albury",
-        "blurb": "Albury branch of the NAPA Auto Parts network. Listed with its own street address and direct phone number on napaparts.com.au."
+        "blurb": "Albury branch of the NAPA Auto Parts network, listed on NAPA's own locations page. Supplies specialist automotive aftermarket parts to mechanical workshops and trade customers."
+      },
+      {
+        "listingSlug": "wests-tractor-parts",
+        "blurb": "Third generation business servicing Albury Wodonga and the national farming community for over 40 years. Supplies aftermarket tractor parts for Ford, Fordson, Massey Ferguson, Fiat, Chamberlain, David Brown, Nuffield, John Deere, Deutz and Case International."
       },
       {
         "listingSlug": "tyre-master-albury",
-        "blurb": "Sells both new and used tyres, plus wheels from leading manufacturers. Family owned and operated."
+        "blurb": "Sells both new and second-hand tyres, plus wheels. Local family owned and operated."
       },
       {
         "listingSlug": "burson-auto-parts-albury",
-        "blurb": "Burson's Albury branch, physically located on Wagga Road, Lavington. Supplies automotive replacement parts, workshop equipment and accessories."
-      },
-      {
-        "listingSlug": "albury-auto-paints",
-        "blurb": "Supplies automotive paints and abrasives to the trade and public. PPG paint stockist with colour matching service."
+        "blurb": "Burson's Albury branch, physically located on Wagga Road, Lavington. Listed on Burson's own store finder with its own phone line and branch email."
       },
       {
         "listingSlug": "tjm-albury-south-albury",
-        "blurb": "Sells and fits 4x4 protection, touring and camping equipment. Stocks TJM Airtec plus Darche, MSA 4x4, Aeroklas and Clearview Accessories."
+        "blurb": "Sells and fits 4x4 protection, touring and camping equipment. Stocks TJM Airtec, TJM Canopies and TJM XGS plus Darche, MSA 4x4, Aeroklas, Clearview and HSP Vehicle Accessories."
       },
       {
-        "listingSlug": "pedders-albury",
-        "blurb": "Trades as Albury Wodonga Suspension & Brakes Pty Ltd under licence MVRL60119. Supplies suspension, brakes, lift kits, GVM upgrades, towing, steering and driveline parts."
+        "listingSlug": "albury-auto-paints",
+        "blurb": "Describes itself as your local supplier of automotive paints and abrasives for over 30 years. PPG Paint dealer with a colour matching service."
       },
       {
         "listingSlug": "autobarn-wagga-wagga",
-        "blurb": "Car parts, accessories and 4WD touring accessories. In-store fitting of batteries, wipers, headlights, roof racks and seat covers."
+        "blurb": "Car parts, accessories and 4WD and touring accessories. In-store fitment of batteries, wipers, headlight and bonnet protectors, seat covers and roof racks."
       },
       {
         "listingSlug": "noel-comerfords-auto-parts-accessories",
-        "blurb": "Drive-through service counter. Filters, brake pads, coil springs, shock absorbers, spark plugs and paints."
+        "blurb": "Filters, brake pads, coil springs, shock absorbers, spark plugs and automotive paints. Accessories including seat covers, floor mats, car carpet and antennas."
       }
     ],
     "author": "LocalsKnow",
@@ -994,7 +994,7 @@
       },
       {
         "listingSlug": "noel-comerfords-auto-parts-accessories",
-        "blurb": "Filters, brake pads, coil springs, shock absorbers, spark plugs and paints. Accessories including seat covers, floor mats, car carpet and antennas."
+        "blurb": "Filters, brake pads, coil springs, shock absorbers, spark plugs and automotive paints. Accessories including seat covers, floor mats, car carpet and antennas."
       }
     ],
     "author": "LocalsKnow",
@@ -1830,7 +1830,7 @@
       },
       {
         "listingSlug": "jappo-donks-tyres-wheels-batteries",
-        "blurb": "Supplies, fits and balances tyres. Brands include Maxxis, Continental, Falken, Sumitomo and Hankook."
+        "blurb": "Tyres for passenger cars, 4WDs, light trucks, trailers and tractors. Brands include Maxxis, Continental, Falken, Sumitomo and Hankook."
       },
       {
         "listingSlug": "henris-wodonga-bakery",
@@ -2205,7 +2205,7 @@
       },
       {
         "listingSlug": "wagga-car-wreckers",
-        "blurb": "Since 1972. Late-model passenger cars, 4WDs and light commercial vehicles. Minimum three-month parts warranty, with Gold and Platinum cover running six months."
+        "blurb": "Since 1972. Dismantles late model passenger vehicles, 4WDs and light commercial vehicles. Minimum 3-month parts warranty; Gold 6 months parts, Platinum 6 months parts and labour."
       },
       {
         "listingSlug": "wagga-showerscreens-and-glass-wagga-wagga",
@@ -2355,7 +2355,7 @@
       },
       {
         "listingSlug": "opposite-lock-wodonga",
-        "blurb": "Since 1975. 4x4 accessories including winches, towbars, rooftop tents and awnings. Suspension upgrades and snorkel fitting."
+        "blurb": "Since 1975. 4x4 accessories and 4x4 modifications. Mechanical repairs and pre-trip inspections."
       },
       {
         "listingSlug": "signs-by-knight",
@@ -2363,7 +2363,7 @@
       },
       {
         "listingSlug": "ross-performance-parts",
-        "blurb": "Since 1981. Manufactures engine components including harmonic dampers. Also makes triggering systems and oil system components."
+        "blurb": "Since 1981. Parts listed for makes including Ford, Nissan, Subaru, Toyota and BMW. Harmonic dampers, trigger kits and oil system components."
       },
       {
         "listingSlug": "wodonga-car-world",
@@ -2886,7 +2886,7 @@
       },
       {
         "listingSlug": "napa-auto-parts-albury",
-        "blurb": "Albury branch of the NAPA Auto Parts network. Listed with its own street address and direct phone number on napaparts.com.au."
+        "blurb": "Albury branch of the NAPA Auto Parts network, listed on NAPA's own locations page. Supplies specialist automotive aftermarket parts to mechanical workshops and trade customers."
       },
       {
         "listingSlug": "north-east-bin-hire",
@@ -3038,7 +3038,7 @@
       },
       {
         "listingSlug": "opposite-lock-wodonga",
-        "blurb": "Since 1975, in Wodonga. 4x4 accessories including winches, towbars, rooftop tents and awnings. Suspension upgrades and snorkel fitting."
+        "blurb": "Since 1975, in Wodonga. 4x4 accessories and 4x4 modifications. Mechanical repairs and pre-trip inspections."
       },
       {
         "listingSlug": "signs-by-knight",
@@ -3046,7 +3046,7 @@
       },
       {
         "listingSlug": "ross-performance-parts",
-        "blurb": "Since 1981, in Wodonga. Manufactures engine components including harmonic dampers. Also makes triggering systems and oil system components."
+        "blurb": "Since 1981, in Wodonga. Parts listed for makes including Ford, Nissan, Subaru, Toyota and BMW. Harmonic dampers, trigger kits and oil system components."
       },
       {
         "listingSlug": "wodonga-car-world",
@@ -3244,7 +3244,7 @@
       },
       {
         "listingSlug": "wagga-car-wreckers",
-        "blurb": "Since 1972, in Wagga Wagga. Late-model passenger cars, 4WDs and light commercial vehicles. Minimum three-month parts warranty, with Gold and Platinum cover running six months."
+        "blurb": "Since 1972, in Wagga Wagga. Dismantles late model passenger vehicles, 4WDs and light commercial vehicles. Minimum 3-month parts warranty; Gold 6 months parts, Platinum 6 months parts and labour."
       },
       {
         "listingSlug": "wagga-showerscreens-and-glass-wagga-wagga",
@@ -4811,11 +4811,11 @@
       },
       {
         "listingSlug": "marshall-batteries-wodonga",
-        "blurb": "Batteries for cars, 4WDs, commercial vehicles, marine, tractors, motorcycles and caravans. Fitting includes an electrical system check and calibration to the vehicle."
+        "blurb": "Batteries for passenger, commercial, 4WD, marine, agricultural and motorcycle use. Mobile battery replacement and fitting with an electrical system check."
       },
       {
         "listingSlug": "opposite-lock-wodonga",
-        "blurb": "4x4 accessories including winches, towbars, rooftop tents and awnings. Suspension upgrades and snorkel fitting."
+        "blurb": "4x4 accessories and 4x4 modifications. Mechanical repairs and pre-trip inspections."
       },
       {
         "listingSlug": "opposite-lock-albury-wodonga",
@@ -4987,7 +4987,7 @@
       },
       {
         "listingSlug": "burson-auto-parts-albury",
-        "blurb": "Burson's Albury branch, physically located on Wagga Road, Lavington. Supplies automotive replacement parts, workshop equipment and accessories."
+        "blurb": "Burson's Albury branch, physically located on Wagga Road, Lavington. Listed on Burson's own store finder with its own phone line and branch email."
       },
       {
         "listingSlug": "albury-classic-motor-inn",
