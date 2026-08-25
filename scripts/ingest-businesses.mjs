@@ -153,6 +153,21 @@ if (!exists(BIZ)) {
   process.exit(1);
 }
 
+/**
+ * The slugs that are already published.
+ *
+ * Read before listings.json is overwritten, because a URL that has shipped is
+ * not ours to move. See the "keep the published slug" step after the merge.
+ */
+const publishedSlugs = new Set();
+try {
+  for (const l of JSON.parse(fs.readFileSync(path.join(DATA, 'listings.json'), 'utf8'))) {
+    publishedSlugs.add(l.slug);
+  }
+} catch {
+  // First run, or the file is not there yet. Nothing has been published.
+}
+
 const files = fs.readdirSync(BIZ).filter((f) => f.endsWith('.json'));
 const raw = [];
 for (const f of files) {
@@ -364,7 +379,23 @@ for (const r of raw) {
  * The merge keeps the more complete record and unions the categories, so the
  * business gets one page and appears under both.
  */
-const fold = (name) => name.toLowerCase().replace(/[^a-z0-9]+/g, '');
+/**
+ * Fold a trading name for comparison.
+ *
+ * The leading article goes, because whether a business writes "The Full Cycle"
+ * or "Full Cycle" depends on which page of its own site you read, and two
+ * research passes landed on different answers three times: Full Cycle Albury,
+ * The Butter Factory Cafe and The Finishing Touch Wangaratta each arrived twice
+ * and each pair shared a phone number. Without this they become two URLs with
+ * the same H1, the same address and the same phone, which is the duplicate
+ * content this merge exists to prevent. `initials()` above already strips it for
+ * the logo tile, so the two were disagreeing about what a name is.
+ */
+const fold = (name) =>
+  name
+    .toLowerCase()
+    .replace(/^(?:the|a)\s+/, '')
+    .replace(/[^a-z0-9]+/g, '');
 const completeness = (r) =>
   [r.addressLine, r.phone, r.website, r.description, r.hours?.length, r.highlights?.length]
     .filter(Boolean).length + (r.confidence === 'high' ? 2 : 0);
@@ -428,6 +459,40 @@ for (const row of out) {
   // simply stop resolving.
   keep.mergedFrom = [...new Set([...(keep.mergedFrom || []), ...(drop.mergedFrom || []), drop.slug])];
   mergedPairs.push(drop.slug + ' -> ' + keep.slug);
+}
+
+/*
+ * Keep the slug that has already been published.
+ *
+ * The merge keeps whichever record says more, and a freshly researched record
+ * almost always says more than the one already in the file. That is right for
+ * the content and wrong for the URL: it renamed Bridge Road Brewers from
+ * /bridge-road-brewers-beechworth/ to /bridge-road-brewers-beechworth-2/ simply
+ * because a third record with the same name turned up, and it renamed Eldorado
+ * Road to the longer trading name on its cellar door page. Both were live URLs.
+ * A hand written list pointing at them failed the build, which is the cheap way
+ * to find out; the expensive way is a ranking page quietly becoming a redirect.
+ *
+ * `mergedFrom` already carries every slug that was folded in, so if one of them
+ * was published, that is the URL this business has and the new one is the alias.
+ * A 301 is what this does when a business genuinely has to move. It is not a
+ * substitute for not moving it.
+ */
+{
+  const taken = new Set(merged.map((r) => r.slug));
+  let restored = 0;
+  for (const row of merged) {
+    if (publishedSlugs.has(row.slug)) continue;
+    const older = (row.mergedFrom || []).find((s) => publishedSlugs.has(s) && !taken.has(s));
+    if (!older) continue;
+    taken.delete(row.slug);
+    taken.add(older);
+    row.mergedFrom = [...new Set([...(row.mergedFrom || []).filter((s) => s !== older), row.slug])];
+    row.slug = older;
+    row.id = 'biz-' + older;
+    restored++;
+  }
+  if (restored) console.log('  kept ' + restored + ' published slug' + (restored === 1 ? '' : 's') + ' through a merge');
 }
 
 /*

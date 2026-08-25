@@ -97,6 +97,19 @@ const groups = REASON_GROUPS.map((reason) => ({
 
 const nearby = neighboursOf(locality, 10).filter((nb) => hasHiddenGems(nb.locality.id)).slice(0, 6);
 
+/*
+ * The hub button has to ask the same question the nearby list asks.
+ *
+ * The nearby list filters on hasHiddenGems and the "Further afield" button did
+ * not, so the moment Shepparton arrived with fifty one listings and not one of
+ * them qualifying as a gem, Mooroopna linked to a page that was never built.
+ * This is the bug class in the README, for the sixth time: a predicate deciding
+ * whether a page exists lives in repo.ts and everything that links to that page
+ * asks it. The prose about the nearest larger centre is still worth keeping when
+ * that centre has no page, so it is the link that is conditional, not the block.
+ */
+const hubHasGems = Boolean(hub && hasHiddenGems(hub.locality.id));
+
 const h1 = 'Hidden gems in ' + locality.name;
 const description =
   n(picked.length) +
@@ -233,14 +246,18 @@ const jsonLd = graph([
               ? locality.name + ' is small, so this list is short by nature rather than by neglect. '
               : ''}
             The nearest larger centre is {hub.locality.name}, about {Math.round(hub.distanceKm)}km
-            away{hub.crossesBorder ? ' and across the border' : ''}. Its gems are listed
-            separately rather than folded in here, because a page that quietly borrows the
-            next town's businesses stops being about this town at all.
+            away{hub.crossesBorder ? ' and across the border' : ''}.{' '}
+            {hubHasGems
+              ? "Its gems are listed separately rather than folded in here, because a page that quietly borrows the next town's businesses stops being about this town at all."
+              : 'Nothing there has qualified for a list like this one yet, so there is nowhere to send you but its town page.'}
           </p>
         </div>
         <p>
-          <a class="btn" href={url.locality(hub.locality) + 'hidden-gems/'}>
-            Hidden gems in {hub.locality.name}
+          <a
+            class="btn"
+            href={hubHasGems ? url.locality(hub.locality) + 'hidden-gems/' : url.locality(hub.locality)}
+          >
+            {hubHasGems ? 'Hidden gems in ' + hub.locality.name : 'Everything in ' + hub.locality.name}
           </a>
         </p>
       </div>
