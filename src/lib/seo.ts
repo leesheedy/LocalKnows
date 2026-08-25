@@ -612,6 +612,19 @@ const DANGLING =
   /(?:\s+(?:a|an|the|and|or|of|in|on|at|to|for|with|from|by|as|but|that|which|who|whose|is|are|was|were|has|have|had|its|it|their|this|these|those|into|over|under|up|out|near|between|through|across|plus|including|includes))+$/i;
 
 /**
+ * A quantifier left holding nothing.
+ *
+ * "servicing Albury-Wodonga and surrounding districts with over 30…" stops on a
+ * number whose noun is on the other side of the cut, and a number with no unit
+ * reads as a page that broke rather than a sentence that ran long. The
+ * preposition list above cannot catch it, because the last word is a digit and
+ * the preposition is one word further back. Stripping the quantifier as well
+ * leaves "…and surrounding districts…", which is merely truncated.
+ */
+const DANGLING_QUANTIFIER =
+  /\s+(?:over|about|around|nearly|almost|more\s+than|less\s+than|up\s+to|at\s+least|some|only|just|another|a\s+further)?\s*[\d][\d,.]*$/i;
+
+/**
  * Descriptions, clipped where a reader would not notice.
  *
  * Order of preference: it already fits, then the last full sentence inside the
@@ -657,7 +670,10 @@ export function description(text: string, max = 158): string {
   // so the ellipsis follows something the reader can hold on to.
   const cut = clean.slice(0, max - 1);
   const word = cut.slice(0, cut.lastIndexOf(' '));
-  return word.replace(DANGLING, '').replace(/[,.;:]$/, '') + '…';
+  return word
+    .replace(DANGLING_QUANTIFIER, '')
+    .replace(DANGLING, '')
+    .replace(/[,.;:]$/, '') + '…';
 }
 
 /**

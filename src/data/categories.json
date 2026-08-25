@@ -1410,7 +1410,7 @@
       "name": "Men's Sheds",
       "nameSingular": "Men's Shed",
       "slug": "mens-sheds",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Workshops where blokes meet to build things, repair things and talk while they do it, usually two or three mornings a week. The movement started in Australia and now runs to several hundred sheds across NSW and Victoria under the Australian Men's Shed Association. Membership is a small annual fee, the tools and the tea are provided, and the isolation and health angle is the real point.",
       "synonyms": [
         "mens shed near me",
@@ -1446,7 +1446,7 @@
       "name": "Garden Clubs",
       "nameSingular": "Garden Club",
       "slug": "garden-clubs",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Monthly meetings, guest speakers, plant swaps, garden visits and an annual show with a schedule everyone argues over. A regional club knows exactly what survives a frost hollow in the Southern Highlands or a Riverina February, which no online guide gets right. Membership is usually under 50 dollars a year and visitors can generally sit in on a meeting before joining.",
       "synonyms": [
         "garden club near me",
@@ -1518,7 +1518,7 @@
       "name": "Lions and Rotary Clubs",
       "nameSingular": "Service Club",
       "slug": "lions-and-rotary",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Service clubs raising money for local causes, running the barbecue at every community event and funding what councils will not. Rotary, Lions and Apex branches across regional NSW and Victoria are often the reason a town has a playground, a defibrillator or a scholarship. Meetings are usually fortnightly over a meal and visitors are welcome with no commitment attached.",
       "synonyms": [
         "rotary club near me",
@@ -1536,7 +1536,7 @@
       "name": "CWA Branches",
       "nameSingular": "CWA Branch",
       "slug": "cwa-branches",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Country Women's Association branches, which do a great deal more than the scones they are known for. The CWA runs drought and disaster relief, lobbies on rural health and education, and holds the oldest continuous women's network in country Australia. Branches meet monthly, membership is inexpensive, and handicraft, cookery and international study groups sit under most of them.",
       "synonyms": [
         "cwa near me",
@@ -1554,7 +1554,7 @@
       "name": "Model Railway Clubs",
       "nameSingular": "Model Railway Club",
       "slug": "model-railway-clubs",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Layout building, running nights, exhibitions and the scale and gauge arguments that come with them. Clubs across NSW and Victoria keep permanent layouts in halls and sheds, and the annual exhibitions pull crowds that surprise anyone who has never been to one. Visitors are almost always welcome on a running night, which is the best way to work out whether it suits you.",
       "synonyms": [
         "model railway club near me",
@@ -1590,7 +1590,7 @@
       "name": "Radio Clubs",
       "nameSingular": "Radio Club",
       "slug": "radio-clubs",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Amateur radio clubs running nets, contests, field days and the courses that lead to a callsign. Amateur qualifications are assessed under arrangements overseen by the ACMA, and clubs deliver most of the training and testing. In regional areas the emergency communications role is genuine, because HF still works when the mobile tower does not.",
       "synonyms": [
         "amateur radio club near me",
@@ -1608,7 +1608,7 @@
       "name": "Quilting and Craft Groups",
       "nameSingular": "Craft Group",
       "slug": "quilting-and-craft-groups",
-      "schemaType": "Organization",
+      "schemaType": "NGO",
       "description": "Patchwork circles, quilting guilds, spinners and weavers, knitting groups and craft mornings held in halls and libraries. Work out of regional groups fills the pavilions at agricultural shows and goes out as charity quilts after fires and floods. Most meet weekly or fortnightly, charge a few dollars towards the room and will teach a beginner from scratch.",
       "synonyms": [
         "quilting group near me",
@@ -2787,10 +2787,17 @@
       "name": "Model Aero Clubs",
       "nameSingular": "Model Aero Club",
       "slug": "model-aero-clubs",
-      "schemaType": "Organization",
-      "description": "Model Aero Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "schemaType": "NGO",
+      "description": "Radio controlled aircraft flown from a club field, usually a leased paddock out of town with a mown strip and a pit area. Most clubs affiliate with the national model aeronautical body, because that membership is what carries the insurance a field operates under and what a landholder asks to see. Flying is weather dependent and mornings are the calm part of the day here. Nearly all of them run a come and try day where somebody experienced flies with you on a trainer.",
+      "synonyms": [
+        "model aero club near me",
+        "rc plane club",
+        "radio controlled aircraft",
+        "learn to fly rc planes",
+        "model flying field",
+        "drone and model aircraft rules"
+      ],
+      "sortOrder": 730,
       "_auto": true
     },
     {
@@ -2799,10 +2806,17 @@
       "name": "Camera Clubs",
       "nameSingular": "Camera Club",
       "slug": "camera-clubs",
-      "schemaType": "Organization",
-      "description": "Camera Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "schemaType": "NGO",
+      "description": "Monthly meetings built around a set subject, a print and a digital section, and an outside judge who says what is wrong with your photograph in front of everybody. That last part is the whole point and it is why people improve. Regional clubs have the advantage on landscape work, with the Murray, the alpine country and a lot of sky within an hour of most towns. Visitors are normally welcome at a meeting or two before joining.",
+      "synonyms": [
+        "camera club near me",
+        "photography club",
+        "learn photography locally",
+        "photography competition",
+        "photo club meeting",
+        "photography for beginners"
+      ],
+      "sortOrder": 731,
       "_auto": true
     },
     {
@@ -2811,10 +2825,17 @@
       "name": "Landcare Groups",
       "nameSingular": "Landcare Group",
       "slug": "landcare-groups",
-      "schemaType": "Organization",
-      "description": "Landcare Groups listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "schemaType": "NGO",
+      "description": "Volunteer groups doing revegetation, weed control, erosion work and river bank repair, usually on a catchment or a single creek. Work happens at working bees, and the plants and the fencing normally come from a grant the group applied for rather than from a budget. Willow and blackberry along the Murray tributaries take up more of the year than anything else. New volunteers are put on a shovel the first morning and taught the rest as they go.",
+      "synonyms": [
+        "landcare group near me",
+        "volunteer tree planting",
+        "weed control volunteers",
+        "river restoration volunteering",
+        "community environment group",
+        "landcare working bee"
+      ],
+      "sortOrder": 732,
       "_auto": true
     },
     {
@@ -2824,9 +2845,16 @@
       "nameSingular": "Theatre Company",
       "slug": "theatre-companies",
       "schemaType": "PerformingGroup",
-      "description": "Theatre Companies listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Amateur companies putting on two or three productions a year in a town hall, a school hall or a restored picture theatre. Auditions are open and the harder roles to fill are backstage rather than on it, so lighting, sound and set building are the fastest way in. Country seasons are short, often a single weekend plus a matinee, because the venue is booked for something else the week after. A company that owns its own lighting rig is a company that will still be going in ten years.",
+      "synonyms": [
+        "theatre company near me",
+        "community theatre auditions",
+        "amateur dramatics",
+        "local musical auditions",
+        "join a theatre group",
+        "backstage volunteers theatre"
+      ],
+      "sortOrder": 733,
       "_auto": true
     },
     {
@@ -2836,9 +2864,16 @@
       "nameSingular": "Choir",
       "slug": "choirs",
       "schemaType": "MusicGroup",
-      "description": "Choirs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Community choirs rehearsing weekly and singing at local events, markets, aged care homes and carols. Most do not audition and most do not require you to read music, which is worth knowing because that assumption keeps more people away than anything else. Parts are learned by ear from a recording between rehearsals. Numbers rise and fall with the term calendar, so the start of a term is the easy time to join.",
+      "synonyms": [
+        "choir near me",
+        "community choir no audition",
+        "join a choir",
+        "singing group",
+        "choir rehearsal times",
+        "learn to sing in a group"
+      ],
+      "sortOrder": 734,
       "_auto": true
     },
     {
@@ -2848,9 +2883,16 @@
       "nameSingular": "Dog Club",
       "slug": "dog-clubs",
       "schemaType": "SportsClub",
-      "description": "Dog Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Obedience classes, agility, rally and trialling, run on a club ground on a weekend morning by instructors who are volunteers. Puppy and beginner classes fill first and often run in intakes rather than continuously, so the waiting list is the thing to ask about. Vaccination certificates are checked before a dog sets foot on the ground. Country clubs also draw working dog owners, which is a different training problem to a suburban pet.",
+      "synonyms": [
+        "dog training club near me",
+        "puppy school",
+        "dog obedience classes",
+        "dog agility training",
+        "kennel club",
+        "how much are dog training classes"
+      ],
+      "sortOrder": 735,
       "_auto": true
     },
     {
@@ -2860,9 +2902,16 @@
       "nameSingular": "Hockey Club",
       "slug": "hockey-clubs",
       "schemaType": "SportsClub",
-      "description": "Hockey Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Winter competition, juniors through to masters, played on a synthetic pitch. The pitch is the whole story in this sport: a district either has one or it does not, and where there is one every club in the region plays on it, which is why fixtures cluster on a single ground and why travel is longer than for football. Sticks and shin pads can usually be borrowed for a first season. Coaches and managers crossing the border need a working with children clearance in each state, because the two schemes are separate.",
+      "synonyms": [
+        "hockey club near me",
+        "junior hockey registration",
+        "field hockey",
+        "learn to play hockey",
+        "hockey season start",
+        "hockey club fees"
+      ],
+      "sortOrder": 736,
       "_auto": true
     },
     {
@@ -2872,9 +2921,16 @@
       "nameSingular": "Athletics Club",
       "slug": "athletics-clubs",
       "schemaType": "SportsClub",
-      "description": "Athletics Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Little Athletics through summer on a Friday night or Saturday morning, and senior cross country and road running through winter. The two are usually different clubs sharing one track. Country clubs run on parent rostering, so joining means taking a turn at a timing gate or a long jump pit, and it is better to know that in advance. A grass track is normal out here and it changes the times, so a personal best set at home is not the same number as one set on synthetic.",
+      "synonyms": [
+        "little athletics near me",
+        "athletics club",
+        "junior athletics registration",
+        "cross country running club",
+        "kids running club",
+        "athletics season dates"
+      ],
+      "sortOrder": 737,
       "_auto": true
     },
     {
@@ -2884,9 +2940,16 @@
       "nameSingular": "Soccer Club",
       "slug": "soccer-clubs",
       "schemaType": "SportsClub",
-      "description": "Soccer Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Winter football, juniors from about five years old through to seniors, with summer futsal or a social competition filling the off season at many clubs. It has grown faster than any other winter code in the border towns and the constraint is grounds and referees rather than players. Registration opens in the new year and closes earlier than people expect. Coaches and volunteers who cover both sides of the river need a working with children clearance in each state, because the two schemes do not recognise each other.",
+      "synonyms": [
+        "soccer club near me",
+        "junior soccer registration",
+        "football club for kids",
+        "how much is junior soccer",
+        "summer futsal",
+        "soccer trials"
+      ],
+      "sortOrder": 738,
       "_auto": true
     },
     {
@@ -2896,9 +2959,16 @@
       "nameSingular": "Basketball Club",
       "slug": "basketball-clubs",
       "schemaType": "SportsClub",
-      "description": "Basketball Clubs listed across the New South Wales and Victoria border corridor, with contact details read from each business’s own published sources.",
-      "synonyms": [],
-      "sortOrder": 900,
+      "description": "Domestic competition on weeknights and representative sides on weekends, run out of an indoor stadium. Court time is the limit on this sport in a country town, which is why domestic games start at half past four and finish close to ten, and why a new team can be told to wait a season. Representative basketball means real travel, with a weekend in Melbourne or Sydney several times a year and the cost that comes with it. Referees are mostly teenagers being taught on the job, which is worth remembering from the sideline.",
+      "synonyms": [
+        "basketball club near me",
+        "domestic basketball",
+        "junior basketball registration",
+        "basketball stadium",
+        "representative basketball",
+        "aussie hoops"
+      ],
+      "sortOrder": 739,
       "_auto": true
     },
     {
