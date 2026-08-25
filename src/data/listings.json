@@ -1,5 +1,2048 @@
 [
  {
+  "id": "biz-napa-auto-parts-albury",
+  "slug": "napa-auto-parts-albury",
+  "name": "NAPA Auto Parts Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "NAPA Auto Parts branch at 130 North Street, Albury. NAPA runs more than 60 branches across Australia and New Zealand supplying replacement automotive parts, and the Albury branch is listed on the company's own locations page with its own street address and direct phone line.",
+  "phone": "02 6041 4443",
+  "website": "https://www.napaparts.com.au/locations",
+  "addressLine": "130 North Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "NA",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://www.napaparts.com.au/locations",
+   "https://www.napaparts.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NAPA%20Auto%20Parts%20Albury%20Albury%20NSW",
+  "highlights": [
+   "Albury branch of the NAPA Auto Parts network",
+   "Listed with its own street address and direct phone number on napaparts.com.au",
+   "NAPA operates over 60 locations nationwide with a branch in every state",
+   "Supplies replacement automotive parts"
+  ]
+ },
+ {
+  "id": "biz-wests-tractor-parts",
+  "slug": "wests-tractor-parts",
+  "name": "West's Tractor Parts",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Third-generation tractor parts business on Schubach Street, Albury, trading for more than 40 years. Supplies aftermarket parts and accessories for Ford, Massey Ferguson, John Deere, Case IH, Deutz and other makes, sources parts for both current and vintage machinery, and carries out tractor repairs and servicing.",
+  "phone": "(02) 6021 5471",
+  "website": "https://weststractorparts.com.au/",
+  "addressLine": "290 Schubach Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WS",
+  "logoTheme": "e",
+  "attributes": {
+   "new_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 86,
+  "isSample": false,
+  "sources": [
+   "https://weststractorparts.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=West's%20Tractor%20Parts%20Albury%20NSW",
+  "highlights": [
+   "Third generation business servicing Albury-Wodonga and the national farming community for over 40 years",
+   "Supplies aftermarket tractor parts and accessories for Ford, Massey Ferguson, John Deere, Case IH, Deutz and other brands",
+   "Can fix, replace or repair rare parts for older makes and models as well as servicing current equipment",
+   "Run by Bob and David West",
+   "Open weekdays 8:30am to 5:30pm"
+  ]
+ },
+ {
+  "id": "biz-sims-metal-albury",
+  "slug": "sims-metal-albury",
+  "name": "Sims Metal Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-scrap-metal-recyclers"
+  ],
+  "description": "Scrap metal recycling yard on Panmure Street, Albury, operated by Sims Metal. Buys ferrous and non-ferrous scrap from individuals and from businesses of all sizes, including copper, steel, iron, aluminium, brass, lead, zinc and nickel, and supplies roll-off containers for larger metal collections.",
+  "phone": "02 6021 5608",
+  "website": "https://www.simsmm.com.au/locations/albury-new-south-wales/",
+  "addressLine": "445 Panmure Street",
+  "localityId": "loc-nsw-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-nsw-jindera",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-vic-yackandandah",
+   "loc-vic-tallangatta",
+   "loc-vic-chiltern"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "SM",
+  "logoTheme": "b",
+  "attributes": {
+   "accepts_scrap_metal": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "07:30",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:30",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:30",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:30",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:30",
+    "closes": "16:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 86,
+  "isSample": false,
+  "sources": [
+   "https://www.simsmm.com.au/locations/albury-new-south-wales/",
+   "https://www.simsmm.com.au/locations/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sims%20Metal%20Albury%20Albury%20NSW",
+  "highlights": [
+   "Buys scrap metal from individuals and from businesses of all sizes in the South Albury region",
+   "Accepts both ferrous and non-ferrous metals, including copper, steel, iron, aluminium, brass, lead, zinc and nickel",
+   "Roll-off containers available for scrap metal collection",
+   "Open weekdays 7:30am to 4:00pm, closed weekends",
+   "Part of the Sims Metal recycling network"
+  ]
+ },
+ {
+  "id": "biz-tyre-master-albury",
+  "slug": "tyre-master-albury",
+  "name": "Tyre Master Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Family-owned tyre and wheel shop on Drome Street, East Albury, selling new and used tyres along with wheels from leading manufacturers. Fits, balances and rotates tyres, repairs punctures, does brake work and wheel alignments, and price-matches across the Albury-Wodonga region.",
+  "phone": "02 6041 2551",
+  "email": "tyremasteralbury@gmail.com",
+  "website": "https://tyremasteralbury.com.au/",
+  "localityId": "loc-nsw-east-albury",
+  "postcode": "2640",
+  "isMobile": true,
+  "serviceAreaIds": [
+   "loc-nsw-east-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-tallangatta",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "TM",
+  "logoTheme": "e",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 82,
+  "isSample": false,
+  "sources": [
+   "https://tyremasteralbury.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tyre%20Master%20Albury%20East%20Albury%20NSW",
+  "highlights": [
+   "Sells both new and used tyres, plus wheels from leading manufacturers",
+   "Family owned and operated",
+   "Does wheel alignments, brake repairs, puncture repairs and tyre rotation and balancing",
+   "Says it has the only zero ground clearance wheel alignment hoist in Albury-Wodonga",
+   "Price matches on products across Albury-Wodonga and surrounds",
+   "Open Saturday mornings"
+  ]
+ },
+ {
+  "id": "biz-twin-city-auto-dismantlers",
+  "slug": "twin-city-auto-dismantlers",
+  "name": "Twin City Auto Dismantlers",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-wreckers"
+  ],
+  "description": "Auto dismantler on Drome Street, East Albury, wrecking sedans, hatchbacks, SUVs, utes, vans and some commercial vehicles from 1990 models onward, including Toyota, Ford, Holden and Nissan. Sells tested second-hand engines, gearboxes, radiators, panels and electrical parts, arranges courier or freight delivery, collects unwanted vehicles, and recycles scrap metal and catalytic converters.",
+  "phone": "(02) 6041 2550",
+  "website": "https://www.twincityautodismantlers.com.au/",
+  "addressLine": "711 Drome Street",
+  "localityId": "loc-nsw-east-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-east-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-tallangatta",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "TC",
+  "logoTheme": "e",
+  "attributes": {
+   "licensed_recycler": "yes",
+   "accepts_scrap_metal": "yes",
+   "delivery": "yes",
+   "warranty_on_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.twincityautodismantlers.com.au/",
+   "https://www.twincityautodismantlers.com.au/about",
+   "https://www.twincityautodismantlers.com.au/contact",
+   "https://www.twincityautodismantlers.com.au/car-parts"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Twin%20City%20Auto%20Dismantlers%20East%20Albury%20NSW",
+  "highlights": [
+   "Supplying used car parts in Albury and Wodonga for more than 20 years",
+   "Displays Motor Dealers Licence MD 034625 and Scrap Merchant Licence SM 0101",
+   "Wrecks all makes and models, with stock going back to 1990 vehicles",
+   "Delivers most parts bought from the yard by courier or freight, with fees based on weight, size and destination",
+   "Says all used parts are tested for performance and safety and that many carry a limited warranty",
+   "Also collects unwanted vehicles and recycles scrap metal and catalytic converters"
+  ]
+ },
+ {
+  "id": "biz-burson-auto-parts-albury",
+  "slug": "burson-auto-parts-albury",
+  "name": "Burson Auto Parts Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Burson Auto Parts trade store at 403 Wagga Road, Lavington, listed on Burson's own store finder as its Albury branch. Burson supplies automotive replacement parts, workshop equipment and accessories to mechanical workshops and retail customers through a national branch network. Open weekdays and Saturday mornings.",
+  "phone": "(02) 6025 4433",
+  "email": "albury@burson.com.au",
+  "website": "https://www.burson.com.au/find-a-store",
+  "addressLine": "403 Wagga Road",
+  "localityId": "loc-nsw-lavington",
+  "postcode": "2641",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-lavington",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-vic-barnawartha",
+   "loc-nsw-howlong",
+   "loc-nsw-walla-walla",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BA",
+  "logoTheme": "d",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.burson.com.au/find-a-store"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Burson%20Auto%20Parts%20Albury%20Lavington%20NSW",
+  "highlights": [
+   "Burson's Albury branch, physically located on Wagga Road, Lavington",
+   "Supplies automotive replacement parts, workshop equipment and accessories",
+   "Direct branch phone line and branch email address",
+   "Open weekdays 8am to 5pm and Saturday 8am to 12pm"
+  ]
+ },
+ {
+  "id": "biz-albury-auto-paints",
+  "slug": "albury-auto-paints",
+  "name": "Albury Auto Paints",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Automotive paint and abrasives supplier on Townsend Street, South Albury, also serving Wodonga and Shepparton. Stocks PPG paint with colour matching for cars, motorcycles, trucks, trailers and agricultural machinery, plus 3M accessories, polishes and compounds, masking tape, aerosols and spray guns.",
+  "phone": "(02) 6021 1063",
+  "email": "aap@alburyautopaints.com",
+  "website": "https://alburyautopaints.com/",
+  "addressLine": "331B Townsend Street",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong",
+   "loc-vic-chiltern",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AA",
+  "logoTheme": "a",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "16:30",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://alburyautopaints.com/",
+   "https://alburyautopaints.com/contact"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Albury%20Auto%20Paints%20South%20Albury%20NSW",
+  "highlights": [
+   "Supplies automotive paints and abrasives to the trade and public",
+   "PPG paint stockist with colour matching service",
+   "Matches paint for cars, motorcycles, trucks, trailers and agricultural machinery",
+   "Also stocks 3M accessories, polishes, compounds, masking tape, spray cans and spray guns",
+   "Opens Saturday mornings as well as weekdays"
+  ]
+ },
+ {
+  "id": "biz-pedders-albury",
+  "slug": "pedders-albury",
+  "name": "Pedders Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Pedders suspension and brake store on Nurigong Street, South Albury, trading as Albury Wodonga Suspension & Brakes Pty Ltd. Supplies and fits suspension, brakes, lift kits, GVM upgrades, towing gear, steering, driveline components and bushes, and runs brake, steering and suspension inspections and wheel alignments.",
+  "email": "albury@pedders.com.au",
+  "website": "https://www.pedders.com.au/store/au/nsw/albury",
+  "addressLine": "Unit 1/566 Nurigong Street",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong",
+   "loc-vic-chiltern",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "PA",
+  "logoTheme": "e",
+  "attributes": {
+   "new_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 66,
+  "isSample": false,
+  "sources": [
+   "https://www.pedders.com.au/store/au/nsw/albury",
+   "https://www.pedders.com.au/stores/",
+   "https://evcoauto.com.au/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Pedders%20Albury%20South%20Albury%20NSW",
+  "highlights": [
+   "Trades as Albury Wodonga Suspension & Brakes Pty Ltd under licence MVRL60119",
+   "Supplies suspension, brakes, lift kits, GVM upgrades, towing, steering and driveline parts",
+   "Offers a $28 brakes, steering and suspension check and a $75 tow and load assessment",
+   "Does wheel alignments on site",
+   "Also serves Wodonga, Table Top, Bungowannah and Ettamogah"
+  ]
+ },
+ {
+  "id": "biz-tjm-albury-south-albury",
+  "slug": "tjm-albury-south-albury",
+  "name": "TJM Albury",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts",
+   "cat-4wd-accessories"
+  ],
+  "description": "TJM branch on Townsend Street, South Albury, selling and fitting 4x4 and touring accessories: bull bars, side and rear protection, tow bars, roof racks, rooftop tents, canopies, storage systems, vehicle recovery gear, dual battery systems and suspension upgrades. Fitting is carried out on site by the branch's own certified technicians.",
+  "phone": "(02) 6021 5544",
+  "website": "https://www.tjmalbury.com.au/",
+  "addressLine": "319 Townsend Street",
+  "localityId": "loc-nsw-south-albury",
+  "postcode": "2640",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-south-albury",
+   "loc-vic-wodonga",
+   "loc-vic-west-wodonga",
+   "loc-vic-baranduda",
+   "loc-nsw-jindera",
+   "loc-vic-barnawartha",
+   "loc-vic-yackandandah",
+   "loc-nsw-howlong",
+   "loc-vic-chiltern",
+   "loc-vic-tallangatta"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "TA",
+  "logoTheme": "a",
+  "attributes": {
+   "four_wd_parts": "yes",
+   "new_parts": "yes",
+   "open_saturday": "yes",
+   "on_site_service": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.tjmalbury.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TJM%20Albury%20South%20Albury%20NSW",
+  "highlights": [
+   "Sells and fits 4x4 protection, touring and camping equipment",
+   "Stocks TJM Airtec plus Darche, MSA 4x4, Aeroklas and Clearview Accessories",
+   "All products installed on site by certified technicians",
+   "Open weekdays 8am to 5pm and Saturday mornings",
+   "Bull bars, rear protection and tow bars supplied and fitted onsite",
+   "Suspension upgrades including GVM lifts",
+   "Canopies, roof racks and vehicle storage systems",
+   "Camping gear stocked alongside 4x4 accessories"
+  ],
+  "mergedFrom": [
+   "tjm-albury"
+  ]
+ },
+ {
+  "id": "biz-autobarn-wagga-wagga",
+  "slug": "autobarn-wagga-wagga",
+  "name": "Autobarn Wagga Wagga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Autobarn's Wagga Wagga store sells car parts, accessories and 4WD touring gear from 53 Berry Street, which the chain describes as a pop-up location while a new store is built. Staff fit batteries, wipers, headlights, lighting, bonnet protectors, seat covers, roof racks and audio-visual gear in store. It trades seven days a week.",
+  "phone": "(02) 6931 9455",
+  "email": "sales@waggawagga.autobarn.com.au",
+  "website": "https://autobarn.com.au/ab/store/wagga-wagga",
+  "addressLine": "53 Berry St",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AW",
+  "logoTheme": "f",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes",
+   "four_wd_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "09:00",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://autobarn.com.au/ab/store/wagga-wagga"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Autobarn%20Wagga%20Wagga%20Wagga%20Wagga%20NSW",
+  "highlights": [
+   "Car parts, accessories and 4WD touring accessories",
+   "In-store fitting of batteries, wipers, headlights, roof racks and seat covers",
+   "Open seven days, including Sunday 9am-4pm",
+   "Trading from a pop-up location at 53 Berry St while a new store is built"
+  ]
+ },
+ {
+  "id": "biz-noel-comerfords-auto-parts-accessories",
+  "slug": "noel-comerfords-auto-parts-accessories",
+  "name": "Noel Comerford's Auto Parts & Accessories",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Noel Comerford's Auto Parts & Accessories is a parts and accessories retailer on Edward Street in central Wagga Wagga, trading online as Noel's Pit Stop. It stocks oil, air and fuel filters, brake pads, coil springs, shock absorbers, spark plugs, pumps and paints, plus seat covers, floor mats, car carpet, antennas and detailing products. A drive-through counter serves customers at the shop.",
+  "phone": "02 6925 3777",
+  "email": "sales@noelsautoparts.com.au",
+  "website": "https://noelsautoparts.com.au",
+  "addressLine": "366 Edward Street",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "NC",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://noelsautoparts.com.au"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Noel%20Comerford's%20Auto%20Parts%20%26%20Accessories%20Wagga%20Wagga%20NSW",
+  "highlights": [
+   "Filters, brake pads, coil springs, shock absorbers, spark plugs and paints",
+   "Accessories including seat covers, floor mats, car carpet and antennas",
+   "Drive-through service counter",
+   "Open Saturday mornings 9am-12pm"
+  ]
+ },
+ {
+  "id": "biz-cleanaway-wagga-wagga-depot",
+  "slug": "cleanaway-wagga-wagga-depot",
+  "name": "Cleanaway Wagga Wagga Depot",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-scrap-metal-recyclers"
+  ],
+  "description": "Cleanaway runs its Wagga Wagga depot from Schiller Street, covering solid waste collection, cardboard and comingled recycling, secure document bins and liquid waste including grease trap, septic and oily water. It supplies skip bins and hook lift bins from 3 to 30 cubic metres, and operates an automated Return and Earn container depot. It is open weekdays only.",
+  "phone": "(02) 5908 4400",
+  "website": "https://www.cleanaway.com.au/location/wagga-wagga/",
+  "addressLine": "9 Schiller Street",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "CW",
+  "logoTheme": "d",
+  "attributes": {},
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 86,
+  "isSample": false,
+  "sources": [
+   "https://www.cleanaway.com.au/location/wagga-wagga/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cleanaway%20Wagga%20Wagga%20Depot%20Wagga%20Wagga%20NSW",
+  "highlights": [
+   "Skip bins and hook lift bins from 3 to 30 cubic metres",
+   "Cardboard and comingled recycling collection",
+   "Automated Return and Earn container deposit depot",
+   "Liquid waste services including grease trap, septic and oily water",
+   "Open Monday to Friday 8.30am-5pm, closed weekends"
+  ]
+ },
+ {
+  "id": "biz-jjs-waste-and-recycling-wagga-wagga",
+  "slug": "jjs-waste-and-recycling-wagga-wagga",
+  "name": "JJ's Waste & Recycling Wagga Wagga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-scrap-metal-recyclers"
+  ],
+  "description": "JJ's Waste & Recycling runs its Wagga Wagga depot from Blaxland Road in East Wagga Wagga, one of the depots the national waste and recycling operator lists across every state and territory. The depot publishes its own phone line and email address and is the local contact point for the company's waste collection and recycling services in Wagga Wagga and the surrounding district.",
+  "phone": "02 5942 6100",
+  "email": "admin.wagga@jjswaste.com.au",
+  "website": "https://jjswaste.com.au/depot-locations/",
+  "addressLine": "6 Blaxland Rd",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "JS",
+  "logoTheme": "c",
+  "attributes": {},
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://jjswaste.com.au/depot-locations/",
+   "https://www.jjswaste.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=JJ's%20Waste%20%26%20Recycling%20Wagga%20Wagga%20Wagga%20Wagga%20NSW",
+  "highlights": [
+   "Wagga Wagga depot at 6 Blaxland Rd, East Wagga Wagga",
+   "Direct depot phone line and email address published",
+   "Part of a waste and recycling network operating in every Australian state and territory"
+  ]
+ },
+ {
+  "id": "biz-kurrajong-recycling-wagga-wagga",
+  "slug": "kurrajong-recycling-wagga-wagga",
+  "name": "Kurrajong Recycling",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-scrap-metal-recyclers",
+   "cat-rubbish-removal"
+  ],
+  "description": "Kurrajong Recycling is a community-operated recycling plant on Lord Baden Powell Drive in Wagga Wagga. It processes kerbside and drop-off recycling, runs a weighbridge, crushes glass and handles Container Deposit Scheme returns. It sells recovered plastics, glass, cardboard, paper, metal, steel and aluminium, and also collects business cardboard and office paper, destroys documents securely and takes e-waste such as TVs, computers and printers.",
+  "phone": "(02) 6925 5004",
+  "website": "https://www.kurrajong.com.au/recycling/",
+  "addressLine": "131 Lord Baden Powell Drive",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "KR",
+  "logoTheme": "d",
+  "attributes": {
+   "accepts_scrap_metal": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://www.kurrajong.com.au/recycling/",
+   "https://www.kurrajong.com.au/recycling",
+   "https://kurrajong.com.au/businesses/recycling/",
+   "https://www.localsearch.com.au/find/rubbish-removal/wagga-wagga-nsw-2650"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kurrajong%20Recycling%20Wagga%20Wagga%20NSW",
+  "facebook": "https://www.facebook.com/kurrajongwaratah",
+  "instagram": "https://www.instagram.com/kurrajongwaratah/",
+  "highlights": [
+   "Recycling plant with an on-site weighbridge",
+   "Sells recovered metal, steel and aluminium",
+   "Container Deposit Scheme processing and glass crushing",
+   "Business cardboard pick-up and office paper collection",
+   "Secure document destruction and e-waste drop-off",
+   "Household and business recycling drop-off",
+   "E-waste recycling",
+   "Business cardboard and office paper collections"
+  ],
+  "mergedFrom": [
+   "kurrajong-recycling"
+  ]
+ },
+ {
+  "id": "biz-wagga-car-wreckers",
+  "slug": "wagga-car-wreckers",
+  "name": "Wagga Car Wreckers",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-wreckers"
+  ],
+  "description": "Wagga Car Wreckers has dismantled vehicles in Wagga Wagga since 1972, from a yard on Kooringal Road in East Wagga Wagga. It strips late-model passenger cars, 4WDs and light commercial vehicles and supplies inspected used parts to smash and mechanical repairers as well as DIY customers. Parts it does not hold are sourced through a network of more than 150 wrecking yards nationwide, and used parts carry a minimum three-month warranty.",
+  "phone": "02 6921 3371",
+  "email": "sales@waggacarwreckers.com.au",
+  "website": "https://waggacarwreckers.com.au",
+  "addressLine": "20 Kooringal Rd",
+  "localityId": "loc-nsw-wagga-wagga",
+  "postcode": "2650",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-nsw-wagga-wagga",
+   "loc-nsw-the-rock"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "WC",
+  "logoTheme": "c",
+  "attributes": {
+   "warranty_on_parts": "yes",
+   "nationwide_parts_search": "yes",
+   "four_wd_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 96,
+  "isSample": false,
+  "sources": [
+   "https://waggacarwreckers.com.au/contact-us/",
+   "https://waggacarwreckers.com.au/about-us/",
+   "https://waggacarwreckers.com.au/warranties/",
+   "https://waggacarwreckers.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Wagga%20Car%20Wreckers%20Wagga%20Wagga%20NSW",
+  "facebook": "https://www.facebook.com/waggacarwreckers1",
+  "highlights": [
+   "Dismantling vehicles in Wagga Wagga since 1972",
+   "Late-model passenger cars, 4WDs and light commercial vehicles",
+   "Minimum three-month parts warranty, with Gold and Platinum cover running six months",
+   "Sources parts it does not stock through 150+ wrecking yards nationwide",
+   "Open Monday to Friday 8am-5pm, closed weekends"
+  ]
+ },
+ {
+  "id": "biz-a-grade-oils-batteries",
+  "slug": "a-grade-oils-batteries",
+  "name": "A Grade Oils & Batteries",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts",
+   "cat-battery-specialists"
+  ],
+  "description": "Battery and lubricant supplier on Thomas Mitchell Drive, Wodonga. Supplies batteries for cars, trucks and boats along with motor oils, lubricants and AdBlue, and delivers to Albury-Wodonga and surrounds. Old batteries can be brought into the shop for disposal.",
+  "phone": "02 6056 3030",
+  "website": "https://www.agradeoilsbatteries.com.au/",
+  "addressLine": "77B Thomas Mitchell Drive",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "GO",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes",
+   "delivery": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "16:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "closed": true
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.agradeoilsbatteries.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Grade%20Oils%20%26%20Batteries%20Wodonga%20VIC",
+  "highlights": [
+   "Batteries for cars, trucks and boats",
+   "Motor oils and lubricants, plus AdBlue",
+   "Free delivery throughout Wodonga, Wangaratta and Albury",
+   "Takes old batteries in-store and disposes of them responsibly",
+   "Weekday trading 08:00-16:30, closed weekends",
+   "Vehicle batteries from leading brands stocked",
+   "Motor oils, lubricants and AdBlue supplied",
+   "Free delivery to all areas throughout Wodonga, Wangaratta and Albury"
+  ],
+  "mergedFrom": [
+   "a-grade-oils-and-batteries"
+  ]
+ },
+ {
+  "id": "biz-all-digger-parts",
+  "slug": "all-digger-parts",
+  "name": "All Digger Parts",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Parts supplier on Kane Road, Wodonga, dealing in ground engaging tools and undercarriage components for earthmoving machinery. Stocks bucket teeth, pins, locks and retainers, ripper boots, cutting edges, grader blades, wear strips, rubber tracks, track rollers, chains, shoes, idlers and sprockets, plus oils and lubricants including Atlantic Oil.",
+  "phone": "02 6056 8656",
+  "email": "alldiggerparts@gmail.com",
+  "website": "https://www.alldiggerparts.com.au/",
+  "addressLine": "6 Kane Road",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "AD",
+  "logoTheme": "e",
+  "attributes": {
+   "new_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "closed": true
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 86,
+  "isSample": false,
+  "sources": [
+   "https://www.alldiggerparts.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=All%20Digger%20Parts%20Wodonga%20VIC",
+  "highlights": [
+   "Ground engaging tools: bucket teeth, pins, locks and retainers",
+   "Ripper boots, cutting edges, grader blades and wear strips",
+   "Undercarriage parts: rubber tracks, rollers, chains, shoes, idlers and sprockets",
+   "Stocks Atlantic Oil lubricants, plus engine, transmission, gear and hydraulic oils",
+   "Over 25 years in the earthmoving industry",
+   "Opens 07:00 weekdays"
+  ]
+ },
+ {
+  "id": "biz-burson-auto-parts-wodonga",
+  "slug": "burson-auto-parts-wodonga",
+  "name": "Burson Auto Parts Wodonga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Wodonga branch of the Burson Auto Parts network, on Queen Street. The branch is listed on Burson's own store finder with its own phone line and email address.",
+  "phone": "(02) 6062 2130",
+  "email": "wodonga@burson.com.au",
+  "website": "https://www.burson.com.au/",
+  "addressLine": "Factory 1/28 Queen Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "BA",
+  "logoTheme": "d",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.burson.com.au/find-a-store"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Burson%20Auto%20Parts%20Wodonga%20Wodonga%20VIC",
+  "highlights": [
+   "Branch of the Burson Auto Parts network",
+   "Listed at Factory 1/28 Queen Street, Wodonga VIC 3690",
+   "Branch email wodonga@burson.com.au",
+   "Open Saturday mornings 08:00-12:00",
+   "Weekday trading 08:00-17:00"
+  ]
+ },
+ {
+  "id": "biz-get-off-road-4x4-wodonga",
+  "slug": "get-off-road-4x4-wodonga",
+  "name": "Get Off Road 4x4",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts",
+   "cat-4wd-accessories"
+  ],
+  "description": "Four-wheel-drive accessory shop and fitting workshop on Osburn Street, Wodonga, and an authorised Ironman 4x4 dealer. Stocks bull bars, canopies, side steps, recovery gear, suspension components, dual battery systems, UHF radios and camping gear, and fits accessories on site.",
+  "phone": "02 6024 3888",
+  "email": "sales@getoffroad4x4.com.au",
+  "website": "https://www.getoffroad4x4.com.au/",
+  "addressLine": "9 Osburn Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "GO",
+  "logoTheme": "f",
+  "attributes": {
+   "four_wd_parts": "yes",
+   "new_parts": "yes",
+   "open_saturday": "yes",
+   "on_site_service": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.getoffroad4x4.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Get%20Off%20Road%204x4%20Wodonga%20VIC",
+  "highlights": [
+   "Authorised Ironman 4x4 dealer, stocks Rhino roof racks",
+   "Bull bars, canopies, side steps and recovery equipment",
+   "Suspension repairs and replacement",
+   "Fits UHF radios and dual battery systems",
+   "Camping gear stocked alongside accessories",
+   "Open Saturday mornings 09:00-12:00",
+   "Authorised Ironman 4x4 dealer",
+   "Onsite workshop fits bull bars, canopies, UHF radios and dual battery systems"
+  ],
+  "mergedFrom": [
+   "get-off-road-4x4"
+  ]
+ },
+ {
+  "id": "biz-jappo-donks-tyres-wheels-batteries",
+  "slug": "jappo-donks-tyres-wheels-batteries",
+  "name": "Jappo Donks Tyres Wheels Batteries",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Tyre, wheel and battery shop on Hovell Street, Wodonga, which also carries out general servicing and mechanical repairs. Supplies, fits and balances tyres, with brands including Maxxis, Continental, Falken, Sumitomo, Hankook, Laufenn, Kinforest and Imperial.",
+  "phone": "02 6056 2144",
+  "email": "zac@jappodonkstyres.com.au",
+  "website": "https://www.jappodonkstyres.com.au/",
+  "addressLine": "48 Hovell Street",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "JD",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.jappodonkstyres.com.au/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Jappo%20Donks%20Tyres%20Wheels%20Batteries%20Wodonga%20VIC",
+  "highlights": [
+   "Supplies, fits and balances tyres",
+   "Brands include Maxxis, Continental, Falken, Sumitomo and Hankook",
+   "Also stocks wheels and batteries",
+   "General servicing and mechanical repairs with mechanics on site",
+   "Open Saturday mornings 08:00-12:00"
+  ]
+ },
+ {
+  "id": "biz-marshall-batteries-wodonga",
+  "slug": "marshall-batteries-wodonga",
+  "name": "Marshall Batteries Wodonga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Marshall Batteries branch on Thomas Mitchell Drive, Wodonga. Stocks batteries for passenger cars, 4WDs, commercial vehicles, marine, tractors, motorcycles and caravans, and fits replacements with an electrical system check and calibration to the vehicle. A roadside service covers flat batteries, tyre changes, fuel delivery and lockouts.",
+  "phone": "1300 627 742",
+  "website": "https://www.marshallbatteries.com.au/stores/marshall-batteries-wodonga/",
+  "addressLine": "79B Thomas Mitchell Drive",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "MB",
+  "logoTheme": "f",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes",
+   "warranty_on_parts": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:30",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "09:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.marshallbatteries.com.au/stores/marshall-batteries-wodonga/"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Marshall%20Batteries%20Wodonga%20Wodonga%20VIC",
+  "highlights": [
+   "Batteries for cars, 4WDs, commercial vehicles, marine, tractors, motorcycles and caravans",
+   "Fitting includes an electrical system check and calibration to the vehicle",
+   "Roadside service for flat batteries, tyre changes, fuel delivery and lockouts",
+   "Nationwide warranty on batteries sold",
+   "Open Saturday mornings 09:00-12:00"
+  ]
+ },
+ {
+  "id": "biz-opposite-lock-wodonga",
+  "slug": "opposite-lock-wodonga",
+  "name": "Opposite Lock Wodonga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Opposite Lock branded 4WD accessory shop and workshop on Thomas Mitchell Drive, Wodonga. Supplies and fits winches, towbars, suspension upgrades, snorkels, rooftop tents and awnings, and also does mechanical repairs and maintenance, pre-trip inspections, diesel ECU remapping and LPG work.",
+  "phone": "(02) 6056 4414",
+  "website": "https://www.oppositelockalburywodonga.com.au/",
+  "addressLine": "87 Thomas Mitchell Drive",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "OL",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes",
+   "four_wd_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "closed": true
+   },
+   {
+    "day": 1,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "07:00",
+    "closes": "17:00",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "07:00",
+    "closes": "12:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 92,
+  "isSample": false,
+  "sources": [
+   "https://www.oppositelockalburywodonga.com.au/",
+   "https://www.oppositelockalburywodonga.com.au/contact"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Opposite%20Lock%20Wodonga%20Wodonga%20VIC",
+  "highlights": [
+   "4x4 accessories including winches, towbars, rooftop tents and awnings",
+   "Suspension upgrades and snorkel fitting",
+   "Mechanical repairs, maintenance and pre-trip inspections",
+   "LPG conversions, repairs and servicing via Wodonga Autogas & 4WD Centre",
+   "Family owned, established 1975",
+   "Opens 07:00 weekdays and Saturday mornings"
+  ]
+ },
+ {
+  "id": "biz-repco-wodonga",
+  "slug": "repco-wodonga",
+  "name": "Repco Wodonga",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Repco's Wodonga store on Elgin Boulevard, part of the national aftermarket parts chain. The store page publishes weekday, Saturday and Sunday trading hours.",
+  "phone": "02 6024 3322",
+  "website": "https://www.repco.com.au/store/Repco_Wodonga",
+  "addressLine": "Unit 2/68 Elgin Boulevard",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "RW",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes",
+   "open_saturday": "yes"
+  },
+  "licences": [],
+  "hours": [
+   {
+    "day": 0,
+    "opens": "09:00",
+    "closes": "16:00",
+    "closed": false
+   },
+   {
+    "day": 1,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 2,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 3,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 4,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 5,
+    "opens": "08:00",
+    "closes": "17:30",
+    "closed": false
+   },
+   {
+    "day": 6,
+    "opens": "08:00",
+    "closes": "17:00",
+    "closed": false
+   }
+  ],
+  "reviews": [],
+  "qualityScore": 84,
+  "isSample": false,
+  "sources": [
+   "https://www.repco.com.au/store/Repco_Wodonga"
+  ],
+  "confidence": "medium",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Repco%20Wodonga%20Wodonga%20VIC",
+  "highlights": [
+   "Wodonga store of the Repco aftermarket parts chain",
+   "Located at Unit 2/68 Elgin Boulevard, Wodonga VIC 3690",
+   "Open seven days, including Sunday 09:00-16:00",
+   "Saturday trading 08:00-17:00",
+   "Weekdays open until 17:30"
+  ]
+ },
+ {
+  "id": "biz-ross-performance-parts",
+  "slug": "ross-performance-parts",
+  "name": "Ross Performance Parts",
+  "status": "scraped",
+  "vertical": "trades",
+  "categoryIds": [
+   "cat-auto-parts"
+  ],
+  "description": "Engine component manufacturer based on Moloney Drive in Wodonga, supplying engine components since 1981. Its range covers harmonic dampers, triggering systems and oil system components, sold through its own online store.",
+  "phone": "+61 2 6059 7705",
+  "email": "sales@rossperformanceparts.com",
+  "website": "https://www.rossperformanceparts.com/",
+  "addressLine": "2/5 Moloney Drive",
+  "localityId": "loc-vic-wodonga",
+  "postcode": "3690",
+  "isMobile": false,
+  "serviceAreaIds": [
+   "loc-vic-wodonga",
+   "loc-nsw-south-albury",
+   "loc-nsw-west-albury",
+   "loc-nsw-albury",
+   "loc-nsw-east-albury",
+   "loc-nsw-glenroy",
+   "loc-nsw-north-albury",
+   "loc-nsw-hamilton-valley",
+   "loc-nsw-lavington",
+   "loc-nsw-springdale-heights",
+   "loc-nsw-thurgoona"
+  ],
+  "serviceAreaInferred": true,
+  "logoText": "RP",
+  "logoTheme": "c",
+  "attributes": {
+   "new_parts": "yes"
+  },
+  "licences": [],
+  "hours": [],
+  "reviews": [],
+  "qualityScore": 74,
+  "isSample": false,
+  "sources": [
+   "https://www.rossperformanceparts.com/"
+  ],
+  "confidence": "high",
+  "lastCheckedAt": "2026-08-25",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ross%20Performance%20Parts%20Wodonga%20VIC",
+  "highlights": [
+   "Manufactures engine components including harmonic dampers",
+   "Also makes triggering systems and oil system components",
+   "Supplying engine components since 1981",
+   "Based at 2/5 Moloney Drive, Wodonga VIC 3690",
+   "Sells through its own online store"
+  ]
+ },
+ {
   "id": "biz-albury-wodonga-sailing-club",
   "slug": "albury-wodonga-sailing-club",
   "name": "Albury Wodonga Sailing Club",
@@ -28737,99 +30780,6 @@
   ]
  },
  {
-  "id": "biz-tjm-albury",
-  "slug": "tjm-albury",
-  "name": "TJM Albury",
-  "status": "scraped",
-  "vertical": "trades",
-  "categoryIds": [
-   "cat-4wd-accessories"
-  ],
-  "description": "TJM Albury supplies and fits 4x4 accessories from its Townsend Street workshop in South Albury. The range covers bull bars, side and rear vehicle protection, tow bars, roof racks, canopies and storage solutions, along with suspension work including GVM lifts. Accessories bought here are installed onsite rather than sent elsewhere.",
-  "phone": "02 6021 5544",
-  "website": "https://www.tjmalbury.com.au/",
-  "addressLine": "319 Townsend Street",
-  "localityId": "loc-nsw-south-albury",
-  "postcode": "2640",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-south-albury",
-   "loc-vic-wodonga",
-   "loc-vic-west-wodonga",
-   "loc-vic-baranduda",
-   "loc-nsw-jindera",
-   "loc-vic-barnawartha",
-   "loc-vic-yackandandah",
-   "loc-nsw-howlong",
-   "loc-vic-chiltern",
-   "loc-vic-tallangatta"
-  ],
-  "serviceAreaInferred": true,
-  "logoText": "TA",
-  "logoTheme": "e",
-  "attributes": {
-   "four_wd_parts": "yes",
-   "new_parts": "yes",
-   "open_saturday": "yes",
-   "on_site_service": "yes"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 1,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "08:00",
-    "closes": "12:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 92,
-  "isSample": false,
-  "sources": [
-   "https://www.tjmalbury.com.au/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=TJM%20Albury%20South%20Albury%20NSW",
-  "highlights": [
-   "Bull bars, rear protection and tow bars supplied and fitted onsite",
-   "Suspension upgrades including GVM lifts",
-   "Canopies, roof racks and vehicle storage systems",
-   "Camping gear stocked alongside 4x4 accessories",
-   "Open Saturday mornings 08:00-12:00"
-  ]
- },
- {
   "id": "biz-albury-brake-and-clutch-centre",
   "slug": "albury-brake-and-clutch-centre",
   "name": "Albury Brake & Clutch Centre",
@@ -30685,101 +32635,6 @@
   ]
  },
  {
-  "id": "biz-get-off-road-4x4",
-  "slug": "get-off-road-4x4",
-  "name": "Get Off Road 4x4",
-  "status": "scraped",
-  "vertical": "trades",
-  "categoryIds": [
-   "cat-4wd-accessories"
-  ],
-  "description": "Get Off Road 4x4 is a Wodonga four-wheel drive and camping equipment retailer with its own fitting workshop on Osburn Street. An authorised Ironman 4x4 dealer, it stocks bull bars, canopies, side steps and rails, roof racks, dual battery systems, long range fuel and water tanks, recovery kits and suspension, and carries out suspension repairs and replacement.",
-  "phone": "02 6024 3888",
-  "email": "sales@getoffroad4x4.com.au",
-  "website": "https://www.getoffroad4x4.com.au/",
-  "addressLine": "9 Osburn Street",
-  "localityId": "loc-vic-wodonga",
-  "postcode": "3690",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-vic-wodonga",
-   "loc-nsw-south-albury",
-   "loc-nsw-west-albury",
-   "loc-nsw-albury",
-   "loc-nsw-east-albury",
-   "loc-nsw-glenroy",
-   "loc-nsw-north-albury",
-   "loc-nsw-hamilton-valley",
-   "loc-nsw-lavington",
-   "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona"
-  ],
-  "serviceAreaInferred": true,
-  "logoText": "GO",
-  "logoTheme": "f",
-  "attributes": {
-   "four_wd_parts": "yes",
-   "new_parts": "yes",
-   "open_saturday": "yes",
-   "on_site_service": "yes"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 1,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "08:00",
-    "closes": "17:00",
-    "closed": false
-   },
-   {
-    "day": 6,
-    "opens": "09:00",
-    "closes": "12:00",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 92,
-  "isSample": false,
-  "sources": [
-   "https://www.getoffroad4x4.com.au/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Get%20Off%20Road%204x4%20Wodonga%20VIC",
-  "highlights": [
-   "Authorised Ironman 4x4 dealer",
-   "Onsite workshop fits bull bars, canopies, UHF radios and dual battery systems",
-   "Suspension repairs and replacement",
-   "Camping equipment stocked alongside 4x4 accessories",
-   "Open Saturday mornings 09:00-12:00"
-  ]
- },
- {
   "id": "biz-maddock-motors-wodonga-auto-air",
   "slug": "maddock-motors-wodonga-auto-air",
   "name": "Maddock Motors - Wodonga Auto Air",
@@ -30952,92 +32807,6 @@
    "Marine upholstery, canvas and PVC work, shade sails",
    "Caravan and motorhome interiors, plus furniture reupholstery",
    "Works with original and reproduction fabrics, vinyl and leather; trading since 1995"
-  ]
- },
- {
-  "id": "biz-a-grade-oils-and-batteries",
-  "slug": "a-grade-oils-and-batteries",
-  "name": "A Grade Oils & Batteries",
-  "status": "scraped",
-  "vertical": "trades",
-  "categoryIds": [
-   "cat-battery-specialists"
-  ],
-  "description": "A Grade Oils & Batteries operates from Thomas Mitchell Drive in Wodonga, supplying vehicle batteries from leading brands along with motor oils, lubricants and AdBlue. The business delivers across the Albury Wodonga region and further afield to Wangaratta, Benalla, Wagga Wagga, Yackandandah and Myrtleford, and states free delivery to all areas of Wodonga, Wangaratta and Albury.",
-  "phone": "02 6056 3030",
-  "website": "https://www.agradeoilsbatteries.com.au/",
-  "addressLine": "77B Thomas Mitchell Drive",
-  "localityId": "loc-vic-wodonga",
-  "postcode": "3690",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-vic-wodonga",
-   "loc-nsw-south-albury",
-   "loc-nsw-west-albury",
-   "loc-nsw-albury",
-   "loc-nsw-east-albury",
-   "loc-nsw-glenroy",
-   "loc-nsw-north-albury",
-   "loc-nsw-hamilton-valley",
-   "loc-nsw-lavington",
-   "loc-nsw-springdale-heights",
-   "loc-nsw-thurgoona"
-  ],
-  "serviceAreaInferred": true,
-  "logoText": "GO",
-  "logoTheme": "a",
-  "attributes": {
-   "new_parts": "yes",
-   "delivery": "yes"
-  },
-  "licences": [],
-  "hours": [
-   {
-    "day": 1,
-    "opens": "08:00",
-    "closes": "16:30",
-    "closed": false
-   },
-   {
-    "day": 2,
-    "opens": "08:00",
-    "closes": "16:30",
-    "closed": false
-   },
-   {
-    "day": 3,
-    "opens": "08:00",
-    "closes": "16:30",
-    "closed": false
-   },
-   {
-    "day": 4,
-    "opens": "08:00",
-    "closes": "16:30",
-    "closed": false
-   },
-   {
-    "day": 5,
-    "opens": "08:00",
-    "closes": "16:30",
-    "closed": false
-   }
-  ],
-  "reviews": [],
-  "qualityScore": 92,
-  "isSample": false,
-  "sources": [
-   "https://www.agradeoilsbatteries.com.au/"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-25",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=A%20Grade%20Oils%20%26%20Batteries%20Wodonga%20VIC",
-  "highlights": [
-   "Vehicle batteries from leading brands stocked",
-   "Motor oils, lubricants and AdBlue supplied",
-   "Free delivery to all areas throughout Wodonga, Wangaratta and Albury",
-   "Delivers to Benalla, Wagga Wagga, Yackandandah and Myrtleford",
-   "Open Monday to Friday 08:00-16:30"
   ]
  },
  {
@@ -46246,53 +48015,6 @@
    "Portable toilet and sanitary bin services",
    "Land clearing, earthmoving and concrete crushing",
    "Cooking oil and motor oil recycling"
-  ]
- },
- {
-  "id": "biz-kurrajong-recycling",
-  "slug": "kurrajong-recycling",
-  "name": "Kurrajong Recycling",
-  "status": "scraped",
-  "vertical": "trades",
-  "categoryIds": [
-   "cat-rubbish-removal"
-  ],
-  "description": "Recycling operation on Lord Baden Powell Drive taking household and business drop-offs of cardboard, mixed recycling and e-waste including TVs, computers and printers. It runs business cardboard and office paper collections, secure document pick-up, destruction and shredding, Container Deposit Scheme processing and glass processing, and sells recovered plastics, glass, cardboard, paper and metal. Site tours and recycling workshops are also offered.",
-  "phone": "02 6925 5004",
-  "website": "https://kurrajong.com.au/businesses/recycling/",
-  "addressLine": "131 Lord Baden Powell Drive",
-  "localityId": "loc-nsw-wagga-wagga",
-  "postcode": "2650",
-  "isMobile": false,
-  "serviceAreaIds": [
-   "loc-nsw-wagga-wagga",
-   "loc-nsw-the-rock"
-  ],
-  "serviceAreaInferred": true,
-  "logoText": "KR",
-  "logoTheme": "b",
-  "attributes": {},
-  "licences": [],
-  "hours": [],
-  "reviews": [],
-  "qualityScore": 82,
-  "isSample": false,
-  "sources": [
-   "https://kurrajong.com.au/businesses/recycling/",
-   "https://www.localsearch.com.au/find/rubbish-removal/wagga-wagga-nsw-2650"
-  ],
-  "confidence": "high",
-  "lastCheckedAt": "2026-08-18",
-  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kurrajong+Recycling+Wagga+Wagga+NSW",
-  "facebook": "https://www.facebook.com/kurrajongwaratah",
-  "instagram": "https://www.instagram.com/kurrajongwaratah/",
-  "highlights": [
-   "Household and business recycling drop-off",
-   "E-waste recycling",
-   "Business cardboard and office paper collections",
-   "Secure document destruction and shredding",
-   "Container Deposit Scheme processing",
-   "Site tours and recycling workshops"
   ]
  },
  {
