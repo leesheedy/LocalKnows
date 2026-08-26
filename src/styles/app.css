@@ -830,6 +830,48 @@ img.logo {
   font-size: 12.5px;
 }
 
+/*
+ * The one number on the home page that is an argument rather than a size.
+ *
+ * It sat fifth in a row of six, between "localities mapped" and "verified",
+ * where it read as more inventory. Counting businesses whose service area
+ * crosses the state line is the only figure on the page that cannot be produced
+ * without modelling service area apart from address, which is the whole reason
+ * this site exists, so it is set on its own against the wattle rule and given a
+ * sentence instead of a caption.
+ */
+.crossnote {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 30px 0 0;
+  padding: 16px 18px 16px 20px;
+  max-width: 50ch;
+  background: var(--river-10);
+  border-left: 3px solid var(--wattle);
+  border-radius: 0 var(--r) var(--r) 0;
+}
+.crossnote b {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--river-dark);
+}
+.crossnote span {
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: var(--ink-80);
+}
+@media (max-width: 560px) {
+  .crossnote {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
 .statgrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

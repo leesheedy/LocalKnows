@@ -133,11 +133,12 @@ const jsonLd = graph([
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow mono">New South Wales &amp; Victoria &middot; independent</p>
-      <h1>The directory that <em>ignores the river</em>.</h1>
+      <h1>The border is not the middle of the <em>river</em>.</h1>
       <p class="sub">
-        Every other directory treats the state line as a wall. A Lavington plumber who
-        works in Wodonga is invisible on half the searches they should own. We store
-        service area separately from address, so they are not.
+        It runs along the top of the southern bank, so the whole Murray sits in New
+        South Wales. Every other directory draws it as a wall, which is how a Lavington
+        plumber who works in Wodonga goes missing from half the searches they should
+        own. Not here.
       </p>
 
       <form class="search" action={url.search()} method="get" role="search">
@@ -188,12 +189,28 @@ const jsonLd = graph([
         </div>
       )}
 
-      <div class="statgrid" style="margin-top:34px">
+      {/*
+        The cross border count is pulled out of the row it used to sit fifth in.
+        Every other number here is a size, and a size is something any directory
+        can print. This one is the only figure on the page that could not exist
+        without modelling service area apart from address, so it is the argument
+        rather than a statistic, and it gets the wattle rule and a full sentence.
+      */}
+      {crossBorder > 0 && (
+        <p class="crossnote">
+          <b>{crossBorder}</b>
+          <span>
+            businesses here work on both sides of the river. Every one of them is
+            listed on both sides of it.
+          </span>
+        </p>
+      )}
+
+      <div class="statgrid" style="margin-top:22px">
         <div><b>{n(listings.length)}</b><span>listings</span></div>
         <div><b>{liveNsw.length + liveVic.length}</b><span>towns live</span></div>
         <div><b>{n(localities.length)}</b><span>localities mapped</span></div>
         <div><b>{categories.length}</b><span>categories</span></div>
-        {crossBorder > 0 && <div><b>{crossBorder}</b><span>cross the border</span></div>}
         {verified > 0 && <div><b>{verified}</b><span>verified</span></div>}
       </div>
     </div>
