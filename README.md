@@ -191,13 +191,27 @@ you, and none of them block anything that is already working.
 | 6 | **`pip install crawl4ai && crawl4ai-setup`** on whichever machine runs the town expansion scraper. | Local |
 | 7 | **Extend `src/data/community.json`.** Eleven verified entries cover most towns via their council and regional paper. To add more, open the organisation's own site and copy the URL out of its footer. Never construct one from a name: `facebook.com/<TownName>` may belong to somebody else. `npm test` checks every entry resolves to real localities and records its source. | Local |
 
-The one thing above all of these: **verify the domain in Google Search Console
-and submit `https://localsknow.com.au/sitemap.xml`.** Google does not participate
-in IndexNow, so the ping that now works reaches Bing, Yandex and the rest and
-reaches Google not at all. Everything else on this list makes the site better.
-This one is the difference between 1,300 indexable pages being found in weeks and
-being found whenever a crawler happens past. It cannot be done from the repo
-because it needs a login.
+**Google Search Console is verified and the sitemap is submitted, 26 August 2026.**
+The index and all nine child sitemaps were submitted. Google does not participate
+in IndexNow, so until this was done the ping reached Bing, Yandex and the rest and
+reached Google not at all.
+
+Nothing more needs doing there, but two things are worth knowing when reading the
+coverage report over the next month.
+
+**Discovery is not indexing.** 1,693 URLs will be found within days and indexed
+over weeks. A directory is exactly the kind of site Google indexes selectively, so
+expect a large "Crawled, currently not indexed" bucket and do not read it as a
+fault. The pages that sit there longest will be the thinnest, and the honest
+answer to a thin page here has always been another listing on it rather than
+another attempt to get it indexed.
+
+**Watch the money pages, not the total.** The number that matters is how many
+`/state/town/category/` pages are indexed, because those are the ones answering
+"plumbers in Wagga Wagga". Every one of them was gated at three listings for this
+reason. If a batch of them lands in "Discovered, currently not indexed", the fix
+is coverage in that town, and `POLICY.minListingsToIndex` in `src/lib/site.ts` is
+the dial that decides which ones are offered at all.
 
 ### A naming thing
 
