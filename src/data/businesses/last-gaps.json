@@ -1,0 +1,3105 @@
+[
+  {
+    "name": "Bockman Batteries",
+    "slug": "bockman-batteries",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Battery supplier and fitter on Hume Street in Albury. The business sells and installs batteries for cars, trucks, motorcycles, scooters, boats, tractors, lawn mowers and toys, and also supplies engine oils, coolant, marine oils, synthetic oils and motorcycle fluids. Battery testing and diagnostics are offered.",
+    "highlights": [
+      "States it was established in 1905 and describes itself as the longest running battery shop in Albury Wodonga",
+      "Batteries for cars, trucks, motorcycles, scooters, boats, tractors, lawn mowers and toys",
+      "Also supplies engine oils, coolant, marine oils, synthetic oils and motorcycle fluids",
+      "Battery testing and diagnostics available",
+      "Service agent for Delkor, ACDelco, Fullriver, Motobatt and Federal Batteries",
+      "Open Monday to Friday 8am-5.30pm and Saturday mornings to 12.30pm"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.bockmanbatteries.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "551-555 Hume Street",
+    "phone": "02 6021 3615",
+    "website": "https://www.bockmanbatteries.com.au/",
+    "email": "staff@bockmans.com.au"
+  },
+  {
+    "name": "Lavington Auto Electrical",
+    "slug": "lavington-auto-electrical",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Auto electrical workshop on Union Road in Lavington that sells and fits vehicle batteries alongside its wider auto electrical work. The workshop repairs alternators and starter motors, services and regasses vehicle air conditioning, carries out electrical repairs on agricultural equipment, and fits accessories such as cruise control and reverse cameras.",
+    "highlights": [
+      "Battery sales and fitting",
+      "Alternator and starter motor repairs, fault finding and advanced diagnostics",
+      "Vehicle air conditioning repairs and regassing",
+      "Electrical repairs for agricultural equipment",
+      "Fits accessories including cruise control, reverse cameras and security systems",
+      "Mobile service within a 150km radius"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "15:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://www.lavingtonautoelectrical.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "516 Union Road",
+    "phone": "02 6040 3033",
+    "website": "https://www.lavingtonautoelectrical.com.au/"
+  },
+  {
+    "name": "Border Marine Centre",
+    "slug": "border-marine-centre",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2640",
+    "description": "Marine dealership and workshop on Wagga Road in Lavington selling new and used boats and handling repairs, maintenance and customisation. The workshop covers jet ski servicing, fibreglass repairs, aluminium welding, upholstery and vessel electrical work, plus trailer repairs and pre-purchase inspections, and it sells parts and accessories.",
+    "highlights": [
+      "Sells new and used boats, with finance and insurance available",
+      "Boat repairs, maintenance and customisation",
+      "Trailer repairs and pre-purchase inspections",
+      "Jet ski servicing, fibreglass repairs and aluminium welding",
+      "Upholstery and vessel electrical work",
+      "Open Monday to Friday 8am-5pm; Saturday by appointment only"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.bordermarinecentre.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "474 Wagga Road",
+    "phone": "02 6040 9999",
+    "website": "https://www.bordermarinecentre.com.au/",
+    "email": "bordermarine@westnet.com.au"
+  },
+  {
+    "name": "Michael Parker Marine",
+    "slug": "michael-parker-marine",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Albury marine workshop and boat dealer at Erica Court that services and repairs boats of all brands and models. It sells new and used Horizon aluminium boats and Tohatsu outboard motors alongside general boat servicing and repair work.",
+    "highlights": [
+      "Marine service and repairs to all brands and models",
+      "Dealer for Horizon Aluminium Boats, new and used",
+      "Sells Tohatsu outboard motors",
+      "Open Monday to Friday 8am to 5pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.michaelparkermarine.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "4 Erica Court",
+    "phone": "0418 578 805",
+    "website": "https://www.michaelparkermarine.com.au/",
+    "email": "info@michaelparkermarine.com.au"
+  },
+  {
+    "name": "Albury Brewhouse",
+    "slug": "albury-brewhouse",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Brewpub at 618 Dean Street in central Albury that brews craft beer on site and serves food alongside it. Exclusive Brewhouse Ales are poured at the bar and available on beer paddles, with premium wines and spirits also stocked. An all-day menu runs from noon, with separate lunch and dinner services.",
+    "highlights": [
+      "Describes itself as brewing craft beers onsite",
+      "Exclusive Brewhouse Ales served at the bar, with any four available on a beer paddle",
+      "Bar also stocks premium wines and spirits",
+      "All-day menu from noon, lunch 12pm-2.30pm and dinner 5.30pm-9pm",
+      "Open Wednesday to Sunday, 12pm to 10pm",
+      "Hosts musicians playing modern acoustic music"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "12:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "12:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "12:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "12:00",
+        "closes": "22:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "12:00",
+        "closes": "22:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.alburybrewhouse.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "618 Dean Street",
+    "phone": "02 6057 2300",
+    "website": "https://www.alburybrewhouse.com.au/",
+    "email": "info@commercialclubalbury.com.au"
+  },
+  {
+    "name": "The Thirsty Devil Brewery",
+    "slug": "thirsty-devil-brewery",
+    "categorySlug": "breweries",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "Craft brewery and bar in South Albury brewing six core beers on site: a Pale Ale, an IPA, a Red Ale, a mid-strength ale, a Porter and a Ginger Beer. The venue has dog-friendly beer gardens, runs brewery tours by prior booking, and holds regular live music, trivia, open mic and jam nights. The Hungry Devil food van trades during peak times.",
+    "highlights": [
+      "Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%)",
+      "Hungry Devil food van operates daily during peak lunch and dinner times, with gluten-free options",
+      "Dogs welcome in the beer gardens, on a lead at all times",
+      "Brewery tours on request, booked in advance, minimum five people, $30 per person including a paddle",
+      "Regular events including Hoppy Hour, live music, trivia night, open mic and jam night",
+      "Open Wednesday to Friday from 4pm and Saturday and Sunday from 12pm"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "closed": true
+      },
+      {
+        "day": 2,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://www.thethirstydevil.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "289 Townsend Street",
+    "phone": "02 6021 1112",
+    "website": "https://www.thethirstydevil.com.au/",
+    "email": "admin@thethirstydevil.com.au"
+  },
+  {
+    "name": "EBA Hire",
+    "slug": "eba-hire",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "description": "North Albury transport, logistics and amenities hire business stating over 30 years of experience in the transport, construction and event hire industry and describing itself as 100% Australian owned and operated. Its fleet includes tilt trays, crane trucks, side loaders, prime movers and trailers, with container transport and local and interstate freight, and it hires out portable toilets, showers, mobile coolrooms and hand wash stations.",
+    "highlights": [
+      "States over 30 years experience in the transport, construction and event hire industry",
+      "Describes itself as 100% Australian owned and operated",
+      "Fleet of tilt trays, crane trucks, side loaders, prime movers and trailers",
+      "Container transport and local and interstate freight",
+      "Portable toilet, shower and hand wash station hire",
+      "Mobile coolroom and freezer hire"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.ebahire.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "48 Fallon Street",
+    "phone": "0412 561 858",
+    "website": "https://www.ebahire.com.au/"
+  },
+  {
+    "name": "Hamblin Hire",
+    "slug": "hamblin-hire",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Equipment hire yard on Drome Street in Albury, hiring to locals across Albury and surrounds since 1978. The hire range covers access and lifting equipment, air compressors, compaction equipment, concrete tools, earthmoving equipment, generators, landscaping machinery, extraction tools and power tools.",
+    "highlights": [
+      "Hiring to Albury and surrounds since 1978",
+      "Access and lifting equipment and air compressors",
+      "Compaction equipment and concrete tools",
+      "Earthmoving equipment and landscaping machinery",
+      "Generators, extraction tools and power tools",
+      "Open Monday to Friday 7am-5pm and Saturday 7.30am-12pm"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.hamblinhire.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "707 Drome Street",
+    "phone": "02 6041 1666",
+    "website": "https://www.hamblinhire.com.au/",
+    "email": "hire@hamblinhire.com.au"
+  },
+  {
+    "name": "Albury & District Historical Society Inc",
+    "slug": "albury-district-historical-society",
+    "categorySlug": "historical-societies",
+    "vertical": "clubs_hobbies",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Volunteer historical society whose stated aims are to collect, investigate, research, record, preserve, exhibit, facilitate, discuss and publish material relevant to the region's heritage. It runs a program of monthly meetings, research and publications, and carries out paid historical research for enquirers.",
+    "highlights": [
+      "Meets on the second Wednesday of the month (except January), usually at the Commercial Club Albury, from 7.30pm",
+      "Its folk museum collection, transferred to the City of Albury in 2003, is the foundation of the Bungambrawatha: Stories of Albury exhibition at the Albury LibraryMuseum",
+      "Runs an ongoing program of meetings, research and publications on regional heritage",
+      "Carries out historical research for enquirers at $25 per hour",
+      "Postal address is PO Box 822, Albury NSW 2640",
+      "Maintains a Facebook page and a YouTube channel of local history content"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.alburyhistory.org.au/",
+      "https://www.alburyhistory.org.au/meetings/",
+      "https://www.alburyhistory.org.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "02 6021 3671",
+    "website": "https://www.alburyhistory.org.au/",
+    "email": "alburyhistory@bigpond.com",
+    "facebook": "https://www.facebook.com/Albury.DHS/",
+    "attributes": {
+      "Meetings": "Second Wednesday of the month (except January), 7.30pm, usually at the Commercial Club Albury",
+      "Postal address": "PO Box 822, Albury NSW 2640",
+      "Research fee": "$25 per hour",
+      "Phone contact": "Secretary, Mrs Helen Livsey"
+    }
+  },
+  {
+    "name": "Leif & Lawns",
+    "slug": "leif-and-lawns",
+    "categorySlug": "lawn-mowing",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Lawn and garden maintenance business servicing Albury, Wodonga, Thurgoona and surrounding areas. Work includes lawn mowing, hedge pruning, tree lopping, weed management and weeding, slashing and fuel reduction, edging and whipper snippering, gutter cleaning, rubbish removal and shed clean outs, and garden design, with indicative starting prices published for each service.",
+    "highlights": [
+      "Services Albury, Wodonga, Thurgoona and surrounding areas",
+      "Lawn mowing advertised from $25 and hedge pruning from $40",
+      "Tree lopping advertised from $100",
+      "Weed management from $35, weeding from $45, slashing and fuel reduction from $50",
+      "Gutter cleaning from $50, rubbish removal and shed clean outs from $35",
+      "Edging and whipper snippering from $25, plus garden design"
+    ],
+    "hours": [],
+    "sources": [
+      "https://leifandlawns.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0404 629 791",
+    "website": "https://leifandlawns.com.au/"
+  },
+  {
+    "name": "Stevens Corporate Gardening",
+    "slug": "stevens-corporate-gardening",
+    "categorySlug": "lawn-mowing",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Gardening and landscape maintenance business working across Albury Wodonga and nearby areas. Services include regular scheduled and one-off lawn mowing, garden maintenance with pruning, weeding and weed spray, hedge maintenance and tree works, soft landscaping such as garden beds, turf, edging and pathways, and large scale garden rejuvenation.",
+    "highlights": [
+      "Lawn mowing on regular schedules and as one-off services",
+      "Garden maintenance including pruning, weeding and weed spray",
+      "Hedge maintenance, pruning and tree works",
+      "Soft landscaping: garden beds, turf, edging and pathways",
+      "Lawn care including broadleaf weed spraying, fertiliser, top dressing, overseeding and de-thatching",
+      "Online booking available through ServiceM8"
+    ],
+    "hours": [],
+    "sources": [
+      "https://scgardening.com.au/",
+      "https://sites.google.com/scgardening.com.au/stevens-corporate-gardening"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0437 827 500",
+    "website": "https://scgardening.com.au/"
+  },
+  {
+    "name": "Genesis Automotive Services",
+    "slug": "genesis-automotive-services",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Automotive business established in 2020 that started as a mobile service from the back of a ute providing battery replacements and electrical services across Albury and surrounds, before expanding into a workshop at Lavington. Work covers mechanical servicing, auto electrical, air conditioning, battery replacement, brake repairs, registration inspections, roadside assistance, caravan repairs and 4WD accessory fitting.",
+    "highlights": [
+      "Established in 2020, starting as a mobile service from the back of a ute",
+      "Services Albury and surrounds from a workshop at Lavington",
+      "Mechanical servicing, auto electrical and auto air conditioning work",
+      "Battery replacement, brake repairs and registration inspections",
+      "Roadside assistance, caravan repairs and 4WD accessory fitting",
+      "Open Monday to Friday 8.30am-5.30pm, Saturday by appointment"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.genesisauto.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "22 Conrad Place",
+    "phone": "0493 109 126",
+    "website": "https://www.genesisauto.com.au/",
+    "email": "admin@genesisauto.com.au"
+  },
+  {
+    "name": "Go Automotive",
+    "slug": "go-automotive-albury",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "North Albury",
+    "postcode": "2640",
+    "description": "North Albury motor vehicle repair and servicing business that runs a fully licensed and insured mobile mechanic service alongside its workshop, completing repairs at a customer's house or at the roadside as well as in the shop. It also issues roadworthy certificates and eSafety checks for light vehicles, cars, trucks, caravans and trailers.",
+    "highlights": [
+      "Fully licensed and insured mobile mechanic service",
+      "Repairs completed at a customer's house or roadside",
+      "Workshop at 897 Calimo Street, North Albury",
+      "Roadworthy certificates and eSafety checks for light vehicles, cars, trucks, caravans and trailers",
+      "Mobile EFTPOS payment facility",
+      "Licence No. MVRL 53896"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.goautomotive.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "897 Calimo Street",
+    "phone": "02 6025 8177",
+    "website": "https://www.goautomotive.com.au/"
+  },
+  {
+    "name": "Truck-Eez On Site Truck Repairs",
+    "slug": "truck-eez-on-site-truck-repairs",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "South Albury",
+    "postcode": "2640",
+    "description": "South Albury truck servicing and parts business offering on-site repairs under the line \"Convenience at your Door Step\". It repairs trucks and trailers, specialises in transport refrigeration and truck air conditioning, and reconditions, repairs, replaces and services truck parts and equipment.",
+    "highlights": [
+      "On-site truck servicing, promoted as \"Convenience at your Door Step\"",
+      "Specialises in transport refrigeration and truck air conditioning repairs",
+      "Truck and trailer repairs",
+      "Reconditioning, repair, replacement and servicing of truck parts and equipment",
+      "Based at 455 Atkins Street, South Albury"
+    ],
+    "hours": [],
+    "sources": [
+      "https://truckeez.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "455 Atkins Street",
+    "phone": "0412 252 533",
+    "website": "https://truckeez.com/",
+    "email": "patrick@truckeez.com"
+  },
+  {
+    "name": "Albury Swim Centre",
+    "slug": "albury-swim-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "AlburyCity's main public aquatic centre, on Wodonga Place near the Murray River foreshore, managed by Aligned Leisure as part of Albury Wodonga Aquatics. It holds an eight lane 50m heated pool, a six lane 25m heated pool, a covered babies pool and a waterslide. A kiosk, BBQ area, family change rooms, disabled facilities and swim retail sales are on site.",
+    "highlights": [
+      "Eight lane 50m heated pool and a six lane 25m heated pool",
+      "Covered babies pool and a waterslide",
+      "Kiosk, BBQ area and swim retail sales on site",
+      "Family change rooms and disabled facilities",
+      "Lifeguards on duty; managed by Aligned Leisure on behalf of AlburyCity",
+      "Council pathways run from Hovell Tree Park to the Albury Swim Centre"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/sport-and-recreation/swimming-pools",
+      "https://alburywodongaaquatics.com.au/albury-swim-centre/",
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/albury-riverside-precinct"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "441 Wodonga Place",
+    "phone": "02 6021 3011",
+    "website": "https://alburywodongaaquatics.com.au/albury-swim-centre/"
+  },
+  {
+    "name": "Lavington Swim Centre",
+    "slug": "lavington-swim-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Lavington",
+    "postcode": "2641",
+    "description": "Seasonal outdoor public pool on Moore Street, Lavington, operated by Aligned Leisure as part of Albury Wodonga Aquatics and open between October and April. It has a seven lane 50m outdoor heated pool along with a diving pool, a toddlers pool and a program pool, plus a playground, BBQ area and kiosk.",
+    "highlights": [
+      "Seven lane 50m outdoor heated pool",
+      "Separate diving pool, toddlers pool and program pool",
+      "Operates as a seasonal pool, open between the months of October and April",
+      "Playground, BBQ area and kiosk with food and drinks on site",
+      "Lifeguards on duty; managed by Aligned Leisure on behalf of AlburyCity",
+      "Swim accessory sales on site"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/sport-and-recreation/swimming-pools",
+      "https://alburywodongaaquatics.com.au/lavington-swim-centre/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Moore Street",
+    "phone": "02 6025 1034",
+    "website": "https://alburywodongaaquatics.com.au/lavington-swim-centre/"
+  },
+  {
+    "name": "Noreuil Park Foreshore",
+    "slug": "noreuil-park-foreshore",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Albury",
+    "state": "NSW",
+    "suburb": "Albury",
+    "postcode": "2640",
+    "description": "Council-managed riverside parkland on the Murray River in central Albury. AlburyCity describes Noreuil Park as a hub of activity, particularly in the warmer months, with places for swimming, playing, running, relaxing and catching up with friends. It sits within the Albury Riverside Precinct and is listed among the city's play spaces.",
+    "highlights": [
+      "Riverside parkland on the Murray River in central Albury",
+      "AlburyCity describes it as a hub of activity in the warmer months, with places for swimming, playing, running, relaxing and catching up with friends",
+      "Listed by AlburyCity among its play spaces, located in Albury Central, with bench seating",
+      "Part of the Albury Riverside Precinct, which runs pathways from Hovell Tree Park to the Albury Swim Centre",
+      "Free public open space managed by AlburyCity"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/albury-riverside-precinct",
+      "https://www.alburycity.nsw.gov.au/leisure/parks-and-public-spaces/play-spaces"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25"
+  },
+  {
+    "name": "All Things Off Road",
+    "slug": "all-things-off-road",
+    "categorySlug": "auto-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A 4X4 and accessories shop on Pearson Street in the Wagga Wagga automotive strip, trading alongside Peter Van Wel Automotive. It stocks four-wheel drive, caravan and trailer parts and carries out vehicle servicing and repairs from the same workshop.",
+    "highlights": [
+      "Stocks ARB, Bushranger, Rhino-Rack, Coast to Coast and Ultra Vision Lighting products",
+      "Carries caravan parts, trailer parts and general 4X4 accessories",
+      "Shares the site with Peter Van Wel Automotive, which opened in 1984",
+      "Servicing and repairs handled in-house alongside parts sales",
+      "Open Monday to Friday, closed weekends"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://allthingsoffroadwagga.com/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "1/33 Pearson St",
+    "phone": "02 6925 2000",
+    "website": "https://allthingsoffroadwagga.com/",
+    "email": "sales@allthingsoffroad.com.au",
+    "facebook": "https://www.facebook.com/allthingsoffroadwagga/",
+    "instagram": "https://www.instagram.com/allthingsoffroad33/"
+  },
+  {
+    "name": "Noel Comerford's Auto Parts & Accessories",
+    "slug": "noel-comerfords-auto-parts",
+    "categorySlug": "auto-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A long-running automotive parts distributor and importer on Edward Street, Wagga Wagga. It carries filters, brake pads, coil springs, shock absorbers, spark plugs, ignition leads, water and fuel pumps, automotive paints and car care items, and runs a drive-thru order collection window.",
+    "highlights": [
+      "Locally Australian owned family business established in 1978",
+      "Operates the Noel's Pit Stop drive-thru, with entry via Pearson Street",
+      "Stocks Rare Spares, Narva electrical, Norton abrasives and Classic Carlectables",
+      "Range covers filters, brake pads, shock absorbers, coil springs and automotive paints",
+      "Large orders can be phoned ahead for drive-thru collection"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.noelsautoparts.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "366 Edward Street",
+    "phone": "02 6925 3777",
+    "website": "https://www.noelsautoparts.com.au/",
+    "facebook": "https://www.facebook.com/noelsautoparts/"
+  },
+  {
+    "name": "Riverina Adventure Sports",
+    "slug": "riverina-adventure-sports",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "description": "A water sports and adventure store on Lake Albert Road, trading under the Riverina Ski Sports name. It stocks towed water sports gear for boat owners, including wakeboards, water skis, wakesurf and wakeskate boards, kneeboards, ropes and inflatable craft.",
+    "highlights": [
+      "Stocks wakeboards, wakeboard bindings, wakeskates and wakesurf boards",
+      "Carries combo water skis, kneeboards and multi-position boards",
+      "Sells tow ropes and pumps for towed water sports",
+      "Also stocks inflatable kayaks and inflatable stand-up paddleboards",
+      "Open seven days, including Sunday afternoons"
+    ],
+    "hours": [],
+    "sources": [
+      "https://riverinaskisports.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Shop 10, 11-15 Lake Albert Road",
+    "phone": "02 6921 2495",
+    "website": "https://riverinaskisports.com.au/"
+  },
+  {
+    "name": "Wagga Boat Licence",
+    "slug": "wagga-boat-licence",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A boat and personal watercraft licence training provider running courses in Wagga Wagga. It delivers practical boat training and knowledge testing for the NSW general boat driving licence and the PWC (jetski) licence, with courses held weekly.",
+    "highlights": [
+      "Runs courses for the NSW general boat driving licence and the PWC jetski licence",
+      "Courses are held locally in Wagga Wagga rather than requiring travel across NSW",
+      "Training is delivered by Sailingworld Pty Ltd trading as Boating Licence Course, RTO 91229",
+      "Approved by NSW Maritime for practical boat training and knowledge testing",
+      "Publishes a proof of identity fact sheet, boating logbook and student information pack"
+    ],
+    "hours": [],
+    "sources": [
+      "https://waggaboatlicence.com.au/",
+      "https://waggaboatlicence.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Cnr Kincaid St & Dobbs St",
+    "phone": "0468 565 494",
+    "website": "https://waggaboatlicence.com.au/"
+  },
+  {
+    "name": "Knights Deli",
+    "slug": "knights-deli",
+    "categorySlug": "butchers",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A delicatessen and food providore on Fitzmaurice Street selling fresh meats and smallgoods alongside cheese, antipasto, salads, pies and pantry goods. It also builds grazing boxes, platters and hampers, and takes catering orders for functions.",
+    "highlights": [
+      "Meat counter covers beef, chicken, pork, ham, bacon, turkey and sliced smallgoods",
+      "Grazing boxes and platters made to order, from two-person to 8-10 person sizes",
+      "Stocks regional producers including Holbrook Paddock Eggs and Hampden Bridge Hams",
+      "Catering range includes sandwiches, finger food, roasts, salads and cheese wheel cakes",
+      "Order online for in-store pick up, with local delivery available"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "16:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://knightsriverina.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "183 Fitzmaurice Street",
+    "phone": "02 6921 3725",
+    "website": "https://knightsriverina.com.au/",
+    "email": "admin@knightsriverina.com.au",
+    "facebook": "https://www.facebook.com/KnightsRiverina/",
+    "instagram": "https://www.instagram.com/knightsriverina/"
+  },
+  {
+    "name": "South City Quality Meats",
+    "slug": "south-city-quality-meats",
+    "categorySlug": "butchers",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A butcher shop in the Southcity Shopping Centre on Tanda Place. Products are made fresh in store each day by its own staff, and the range covers beef, lamb, pork, chicken, sausages, kebabs, crumbed lines and meat packs, with online ordering available.",
+    "highlights": [
+      "Open seven days a week from the Southcity Shopping Centre",
+      "Free home delivery on orders over $50",
+      "Products made fresh in store daily by shop staff",
+      "Online store covers beef, lamb, pork, chicken, sausages, kebabs and meat packs",
+      "Stocks Wagyu beef lines including burger patties"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "08:30",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "19:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "18:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.scqmeats.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Shop 1, 1-7 Tanda Place, Southcity Shopping Centre",
+    "phone": "02 6931 6650",
+    "website": "https://www.scqmeats.com.au/",
+    "email": "info@scqmeats.com.au",
+    "facebook": "https://www.facebook.com/southcityqualitymeats/"
+  },
+  {
+    "name": "Custom Car Care Wagga",
+    "slug": "custom-car-care-wagga",
+    "categorySlug": "car-detailing",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A detailing workshop on Dobney Avenue specialising in paint correction and ceramic coating as well as general car detailing. Work is priced in packages covering detailing, paint correction and long-term paint protection.",
+    "highlights": [
+      "Established in 2003",
+      "Applies Modesta ceramic coating systems for paint protection",
+      "Offers paint correction as a separate priced package",
+      "Detailing, correction and coating packages each published with pricing",
+      "Open Monday to Friday, Saturday by appointment"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://customcarcarewagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "6/73 Dobney Ave",
+    "phone": "02 6925 4741",
+    "website": "https://customcarcarewagga.com.au/",
+    "email": "info@customcarcarewagga.com.au"
+  },
+  {
+    "name": "Highway Image",
+    "slug": "highway-image",
+    "categorySlug": "car-detailing",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A vehicle appearance and protection business on Chaston Street, Wagga Wagga. It handles automotive window tinting, paint protection and commercial window tinting, and provides aftercare instructions with its tinting work.",
+    "highlights": [
+      "Automotive window tinting is the core service",
+      "Also applies paint protection to vehicles",
+      "Carries out commercial window tinting as well as automotive work",
+      "Offers free consultations and assessments before booking",
+      "Window tinting jobs come with aftercare instructions and ongoing support"
+    ],
+    "hours": [],
+    "sources": [
+      "https://highwayimage.com.au/",
+      "https://highwayimage.com.au/contact-us/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "2/57 Chaston St",
+    "phone": "02 6971 9292",
+    "website": "https://highwayimage.com.au/",
+    "email": "info@highwayimage.com.au"
+  },
+  {
+    "name": "LTS Equipment Wagga Wagga",
+    "slug": "lts-equipment-wagga-wagga",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A forklift and materials handling branch on Hammond Avenue, Wagga Wagga. It hires and sells forklifts and elevating work platforms, along with access equipment, cleaning equipment, attachments and pallet racking.",
+    "highlights": [
+      "Forklift hire and elevating work platform hire available",
+      "Also sells new and used forklifts and access equipment",
+      "Stocks attachments, accessories and forklift tyres",
+      "Supplies cleaning equipment and pallet racking",
+      "One of five branches, alongside Albury, Bendigo, Echuca/Moama and Shepparton"
+    ],
+    "hours": [],
+    "sources": [
+      "https://ltsequipment.com.au/",
+      "https://ltsequipment.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "123 Hammond Avenue",
+    "phone": "02 6921 4810",
+    "website": "https://ltsequipment.com.au/"
+  },
+  {
+    "name": "Riverina Crane Services",
+    "slug": "riverina-crane-services",
+    "categorySlug": "equipment-hire",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A locally owned crane hire company on Moorong Street, Wagga Wagga. It runs a mobile crane fleet ranging from small pick-and-carry machines up to a 300 tonne unit, and offers free project evaluations for lifts.",
+    "highlights": [
+      "Locally owned and now run by the second generation of the family",
+      "States it has one of the largest mobile crane fleets in regional NSW",
+      "Fleet includes a 300t Grove crane and a range of Liebherr cranes, down to a 3t machine",
+      "Office open weekdays with crews available 24/7",
+      "Free project evaluation offered before a job is quoted"
+    ],
+    "hours": [],
+    "sources": [
+      "https://riverinacraneservices.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "29-31 Moorong St",
+    "phone": "02 6921 6577",
+    "website": "https://riverinacraneservices.com.au/"
+  },
+  {
+    "name": "Hutcheon & Pearce Wagga Wagga",
+    "slug": "hutcheon-and-pearce-wagga-wagga",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A John Deere agricultural machinery dealership on Moorong Street, Wagga Wagga. The branch handles machinery sales, parts and service, covering utility and compact tractors through to harvest equipment, and offers precision agriculture support.",
+    "highlights": [
+      "Authorised John Deere dealership branch",
+      "Sells utility tractors, compact tractors and harvest-ready equipment",
+      "Parts and service departments operate from the same site",
+      "Precision agriculture products and support offered",
+      "Open Saturday mornings as well as weekdays"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.hutcheonandpearce.com.au/locations/wagga-wagga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "57 Moorong Street",
+    "phone": "02 6933 7900",
+    "website": "https://www.hutcheonandpearce.com.au/locations/wagga-wagga/",
+    "email": "waggaadmin@hutcheonandpearce.com.au"
+  },
+  {
+    "name": "Landaco Equipment",
+    "slug": "landaco-equipment",
+    "categorySlug": "farm-machinery-dealers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A fertiliser spreader specialist on Wentworth Street, Wagga Wagga. It supplies Australian-made linkage and trailing spreaders along with manure spreaders, and also lists used spreaders and product brochures on its own site.",
+    "highlights": [
+      "Supplies Australian made fertiliser spreaders",
+      "Range covers Agrispread linkage and Agrispread trailing spreaders",
+      "Also stocks Maxispread trailing units and Bunning manure spreaders",
+      "Used spreaders listed alongside new machines",
+      "Freecall line on 1800 358 600 in addition to the local number"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "16:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://landaco.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "7 Wentworth St",
+    "phone": "02 6931 9888",
+    "website": "https://landaco.com.au/"
+  },
+  {
+    "name": "Wagga City Golf Club",
+    "slug": "wagga-city-golf-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Moorong",
+    "postcode": "2650",
+    "description": "An 18-hole golf course about five minutes west of the Wagga Wagga CBD, off the Sturt Highway. The course suits players of all abilities and runs through bushland with a range of flora and fauna, and the club has a pro shop, lessons and memberships.",
+    "highlights": [
+      "18-hole course located five minutes west of the Wagga Wagga CBD off the Sturt Highway",
+      "Feature hole is the 9th, where water comes into play with bunkers guarding the green",
+      "Pro shop stocks TaylorMade, Titleist, Wilson, FootJoy and MGI",
+      "Fitting studio equipped with video analysis systems and a launch monitor",
+      "Public bookings and memberships both available through the club"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.waggagolf.com.au/",
+      "https://www.waggagolf.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "5 McNickle Rd",
+    "phone": "02 6931 6275",
+    "website": "https://www.waggagolf.com.au/"
+  },
+  {
+    "name": "Wagga Wagga Country Club",
+    "slug": "wagga-wagga-country-club",
+    "categorySlug": "golf-clubs",
+    "vertical": "pubs_clubs",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A golf club set along the banks of Lake Albert with an 18-hole championship course, a clubhouse and an eatery. The grounds and clubhouse are also used for weddings and functions, and the club runs memberships and a pro shop.",
+    "highlights": [
+      "18-hole championship course on the banks of Lake Albert",
+      "Clubhouse and eatery on site",
+      "Popular venue for weddings and functions",
+      "Pro shop, honour boards and local rules published by the club",
+      "Membership includes access to reciprocal clubs"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wwcc.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Plumpton Rd",
+    "phone": "02 6922 6444",
+    "website": "https://wwcc.com.au/",
+    "email": "admin@wwcc.com.au"
+  },
+  {
+    "name": "Irvin Day Hair",
+    "slug": "irvin-day-hair",
+    "categorySlug": "hairdressers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A hair salon on Forsyth Street in central Wagga Wagga offering cutting, colouring and styling. The salon works with a team of stylists and also takes wedding and bridal hair bookings.",
+    "highlights": [
+      "Salon states it specialises in bobs, blondes and balayage",
+      "Services grouped as cutting, colouring and styling",
+      "Separate wedding and bridal hair service",
+      "Late trading until 8pm on Wednesdays and Thursdays",
+      "Online booking available through the salon's website"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "closed": true
+      },
+      {
+        "day": 2,
+        "opens": "09:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "20:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "20:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "14:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://irvindayhair.com.au/",
+      "https://irvindayhair.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "82 Forsyth Street",
+    "phone": "02 6921 6692",
+    "website": "https://irvindayhair.com.au/",
+    "email": "hello@irvindayhair.com.au",
+    "facebook": "https://www.facebook.com/IrvinDayHair/",
+    "instagram": "https://www.instagram.com/irvindayhair/"
+  },
+  {
+    "name": "Plush Hairdressing",
+    "slug": "plush-hairdressing",
+    "categorySlug": "hairdressers",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "An appointment-only hair salon on Trail Street in the Wagga Wagga CBD. Services cover cutting, colouring, styling and treatments, along with specialist services and bridal styling, and the salon sells gift cards and memberships.",
+    "highlights": [
+      "Bookings are by appointment only",
+      "Service list covers cutting, colouring, styling and treatments",
+      "Separate bridal styling service offered",
+      "Late trading until 8pm Tuesday through Thursday",
+      "Sells gift cards and salon memberships"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "closed": true
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "20:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "09:00",
+        "closes": "20:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "09:00",
+        "closes": "20:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "09:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://plushhairdressing.com.au/",
+      "https://plushhairdressing.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "9 Trail Street",
+    "website": "https://plushhairdressing.com.au/",
+    "facebook": "https://www.facebook.com/plushhairdressingwaggawagga/",
+    "instagram": "https://www.instagram.com/plushhairdressing/"
+  },
+  {
+    "name": "Indian Rasoi Wagga Wagga",
+    "slug": "indian-rasoi-wagga-wagga",
+    "categorySlug": "indian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Mount Austin",
+    "postcode": "2650",
+    "description": "An Indian restaurant and takeaway on Fernleigh Road at Mount Austin in Wagga Wagga. It is one of a small group of stores run under the Indian Rasoi name, with online ordering available alongside dine-in and takeaway.",
+    "highlights": [
+      "Located on Fernleigh Road, Mount Austin, in Wagga Wagga",
+      "Operates as both a restaurant and a takeaway",
+      "One of three Indian Rasoi stores, alongside Albury and Northbridge",
+      "Online ordering available through the group's own website",
+      "Opens for dinner daily, with lunch service midweek"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.indianrasoi.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "66 Fernleigh Road",
+    "phone": "02 6925 7336",
+    "website": "https://www.indianrasoi.com.au/",
+    "facebook": "https://www.facebook.com/indianrasoiwagga/"
+  },
+  {
+    "name": "Indian Tavern Tandoori",
+    "slug": "indian-tavern-tandoori",
+    "categorySlug": "indian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A long-established Indian restaurant on Peter Street serving tandoori and curry dishes for dine-in and takeaway. It trades evenings only, Tuesday through Sunday, and takes bookings and orders by phone.",
+    "highlights": [
+      "Serves tandoori and curry dishes for dine-in and takeaway",
+      "Restaurant describes itself as Wagga Wagga's only multi award winning Indian restaurant",
+      "Its own site states it has been serving for over 32 years",
+      "Evening trade only, Tuesday to Sunday",
+      "Closed Mondays until further notice per the restaurant's own notice"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "17:30",
+        "closes": "20:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "closed": true
+      },
+      {
+        "day": 2,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "17:30",
+        "closes": "21:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://indiantavern.com.au/",
+      "https://indiantavern.com.au/contact.php"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "81 Peter Street",
+    "phone": "02 6921 3121",
+    "website": "https://indiantavern.com.au/"
+  },
+  {
+    "name": "Namaste Indian Cuisine",
+    "slug": "namaste-indian-cuisine",
+    "categorySlug": "indian-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A family-style Indian restaurant on Edward Street, Wagga Wagga. It serves dine-in meals as well as takeaway and home delivery, opens seven days from mid-afternoon, and is bring-your-own for alcohol.",
+    "highlights": [
+      "Open seven days a week from 3pm to 9:30pm",
+      "Bring your own alcohol venue",
+      "Dine-in, takeaway and home delivery all available",
+      "Online ordering and table reservations through its own site",
+      "Located on Edward Street in Wagga Wagga"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 1,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "15:00",
+        "closes": "21:30",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.namastewaggawagga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "5/345 Edward St",
+    "phone": "02 6900 1269",
+    "website": "https://www.namastewaggawagga.com.au/",
+    "facebook": "https://www.facebook.com/Namastewagga/"
+  },
+  {
+    "name": "Countrywide Engineering",
+    "slug": "countrywide-engineering",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "An engineering and metal fabrication workshop on Blaxland Road, Wagga Wagga. It covers design and manufacturing, welding, steel processing, repairs and building work, and manufactures its own product lines for agriculture, telecommunications and airports.",
+    "highlights": [
+      "Services listed as design and manufacturing, repairs, welding, steel processing and building",
+      "Manufactures sheep feeders and other agricultural equipment",
+      "Produces telco and pole line hardware",
+      "Builds airport handling equipment",
+      "Also fabricates sheds, warehouses, custom stairs, rails, access walkways and maintenance platforms"
+    ],
+    "hours": [],
+    "sources": [
+      "https://countrywideengineering.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "10-12 Blaxland Rd",
+    "phone": "02 6923 0800",
+    "website": "https://countrywideengineering.com.au/",
+    "email": "tom@cweng.com.au"
+  },
+  {
+    "name": "Rambler Welding Industries",
+    "slug": "rambler-welding-industries",
+    "categorySlug": "metal-fabrication",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Bomen",
+    "postcode": "2650",
+    "description": "A structural steel fabrication and welding company at Bomen in Wagga Wagga's industrial area. It services commercial and industrial construction clients across NSW, ACT and Queensland, and does its own 3D modelling and steel detailing.",
+    "highlights": [
+      "Structural steel fabrication for commercial and industrial construction",
+      "Works across NSW, ACT and Queensland from its Bomen workshop",
+      "ISO 9001:2015 certified",
+      "Holds contractor licence number 235403C",
+      "In-house 3D BIM and drafting, including steel and tilt-up panel detailing",
+      "Local projects listed include the Wagga Wagga PCYC and the CSU Riverina Playhouse"
+    ],
+    "hours": [],
+    "sources": [
+      "https://ramblerwelding.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "39 Lewington Street",
+    "phone": "02 6921 3062",
+    "website": "https://ramblerwelding.com.au/",
+    "email": "inquiries@ramblerwelding.com.au"
+  },
+  {
+    "name": "Marrambidya Wetland",
+    "slug": "marrambidya-wetland",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A 20 hectare wetland reserve on Narrung Street alongside the Murrumbidgee River, a few minutes from the Wagga Wagga city centre. Built on former sewage treatment ponds, it is now habitat for birds, frogs, fish, reptiles and mammals, and is open free of charge year round.",
+    "highlights": [
+      "20 hectare reserve alongside the Murrumbidgee River",
+      "Transformed from the disused treatment ponds of the Narrung Street Sewage Treatment Plant",
+      "Officially opened on 3 June 2016 after five years of planning and construction",
+      "Habitat for migratory and non-migratory birds, water insects, frogs, fish, reptiles and the locally threatened Squirrel Glider",
+      "Named 'Marrambidya' to reflect the traditional Wiradjuri name for the Murrumbidgee River",
+      "Reachable on foot via the Wiradjuri Walking Track from Wiradjuri Reserve or Gobba Beach; vehicle entry from Narrung Street"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/marrambidya-wetland"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "100 Narrung Street",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/marrambidya-wetland"
+  },
+  {
+    "name": "Victory Memorial Gardens",
+    "slug": "victory-memorial-gardens",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A public garden of about 2 hectares in the heart of Wagga Wagga, on the corner of Baylis and Morrow Streets along the banks of the Wollundry Lagoon. It holds sculptured garden beds, lawns, a memorial fountain and a playground, and is a common lunch and wedding spot.",
+    "highlights": [
+      "Established in 1925 as a tribute to those who fought and died in the First World War",
+      "Set on approximately 2 hectares on the banks of the Wollundry Lagoon",
+      "Contains The Cenotaph and memorials to the First and Second World Wars and the Vietnam War",
+      "Playground and duck feeding make it popular with families",
+      "Anzac Avenue runs alongside the Gardens from Beckwith Street bridge along The Esplanade, Ivan Jack Drive and Morrow Street",
+      "Frequently used for weddings, with lawns, gardens and a lagoon backdrop"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/victory-memorial-gardens"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Corner Baylis and Morrow Streets",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/victory-memorial-gardens"
+  },
+  {
+    "name": "Wagga Wagga Botanic Gardens",
+    "slug": "wagga-wagga-botanic-gardens",
+    "categorySlug": "parks-and-gardens",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A 22 acre botanic garden at the base of Willans Hill in Wagga Wagga, run by the city council. The site takes in formal garden areas, playgrounds and picnic areas, a miniature railway and the Tree Chapel, and adjoins the council's zoo and aviary.",
+    "highlights": [
+      "Set over 22 acres at the base of Willans Hill",
+      "Home to the Willans Hill Miniature Railway",
+      "Includes playgrounds and picnic areas",
+      "Features the Tree Chapel among its garden areas",
+      "Adjoins the Wagga Wagga Zoo & Aviary, which includes a large free-flight aviary",
+      "Council publishes a downloadable Botanic Gardens and Zoo guide"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/botanic-gardens",
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Willans Hill",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/botanic-gardens"
+  },
+  {
+    "name": "O'Briens Removals & Storage",
+    "slug": "obriens-removals-and-storage",
+    "categorySlug": "removalists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A family-owned furniture removals and storage company operating from a depot on Lawson Street in Wagga Wagga. It handles home, office and factory moves locally and interstate, plus overseas relocation, back loading, packing services and containerised storage.",
+    "highlights": [
+      "NSW depot on Lawson Street, Wagga Wagga, with a second depot at Mornington in Victoria",
+      "Family owned with over 30 years experience",
+      "Handles home moves, office moves, factory and commercial moves",
+      "Offers back loading, packing supplies and a packing service",
+      "Storage options include containerised, mobile pods, commercial and record storage"
+    ],
+    "hours": [],
+    "sources": [
+      "https://obrienremovals.com.au/",
+      "https://obrienremovals.com.au/contact/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Factory 8/3-7 Lawson Street",
+    "phone": "02 6922 3290",
+    "website": "https://obrienremovals.com.au/",
+    "facebook": "https://www.facebook.com/obrienremovals/",
+    "instagram": "https://www.instagram.com/obriensremovals/"
+  },
+  {
+    "name": "Ron's Removals",
+    "slug": "rons-removals",
+    "categorySlug": "removalists",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A family-owned removals and storage business working out of Wagga Wagga. It covers local and interstate moves, office relocations, secure storage, pre-packing, local deliveries around Wagga and flat pack assembly, and quotes in person or over the phone.",
+    "highlights": [
+      "Locally operated and family owned for over 30 years",
+      "Handles both local and interstate moves",
+      "Pre-pack service available for customers short on time",
+      "Secure storage offered between moves or long term",
+      "Local deliveries around Wagga plus flat pack assembly"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.ronsremovals.com/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0412 520 514",
+    "website": "https://www.ronsremovals.com/",
+    "email": "ronsremovalsnstorage@gmail.com"
+  },
+  {
+    "name": "Lake Albert",
+    "slug": "lake-albert",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "description": "A lake on the southern edge of Wagga Wagga used for swimming, boating, fishing and other water-based activities. Two public boat ramps give access to the water, and the surrounding reserves hold playgrounds, barbecue shelters and a walking circuit.",
+    "highlights": [
+      "Used for swimming, boating, fishing and other water-based activities",
+      "Two public boat ramps: one at Bosley Park on the western shore and one at Apex Park on the eastern side",
+      "A 5.5 kilometre walking track circles the lake",
+      "Apex Park has a large adventure playground plus a fenced, shaded toddler playground",
+      "Free barbecues, picnic shelters and table settings around the lake",
+      "Council publishes Lake Albert water quality readings"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/lake-albert"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/lake-albert"
+  },
+  {
+    "name": "Oasis Aquatic Centre",
+    "slug": "oasis-aquatic-centre",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "Wagga Wagga's council-run public swimming complex on Morgan Street, operating as part of Wagga Leisure. It has an outdoor 50 metre competition pool, an indoor 25 metre pool and a children's leisure area, alongside a swim school, gym and group fitness programs.",
+    "highlights": [
+      "Owned and managed by Wagga Wagga City Council",
+      "50 metre, 10 lane outdoor pool built to FINA standard, solar heated, 1.2m to 2.05m deep",
+      "10 lane indoor 25 metre pool with public lap lanes",
+      "Toddler leisure area with two large mushroom fountains, a waterfall and air jets",
+      "Turbo Pool creates a river-like flowing water effect",
+      "Runs the Oasis Swim School plus aqua aerobics and gym programs"
+    ],
+    "hours": [],
+    "sources": [
+      "https://oasiswagga.com/",
+      "https://waggaleisure.com.au/swim/pools-and-facilities"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "50 Morgan St",
+    "phone": "02 6926 9390",
+    "website": "https://oasiswagga.com/",
+    "email": "contact@waggaleisure.com.au"
+  },
+  {
+    "name": "Wagga Beach",
+    "slug": "wagga-beach",
+    "categorySlug": "swimming-spots",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A sandy river beach on the Murrumbidgee about five minutes from the Wagga Wagga CBD. It has direct river access for swimming and paddling, shady grassed areas, sheltered barbecues, seating and a large playground, and sits on the route of the Wiradjuri Walking Track.",
+    "highlights": [
+      "Sandy beach with direct access to the Murrumbidgee River for swimming in warmer months",
+      "Kayaks and canoes can be launched from the beach",
+      "Shady grassed areas, sheltered barbecues, seating and a playground on site",
+      "Riverside Adventure Playground includes flying foxes, climbing structures and accessible features",
+      "Sits on the Wiradjuri Walking Track, so it works as a rest stop or starting point",
+      "Council advises wearing a life vest when entering the river"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/wagga-beach"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Riverside Precinct, Murrumbidgee River",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/wagga-beach"
+  },
+  {
+    "name": "Tammy's Thai Kitchen",
+    "slug": "tammys-thai-kitchen",
+    "categorySlug": "thai-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Kooringal",
+    "postcode": "2650",
+    "description": "A modern Thai restaurant in Kooringal Mall on Lake Albert Road, opposite the post office. It serves lunch and dinner seven days a week for dine-in, takeaway and home delivery, with separate lunch and dinner menus.",
+    "highlights": [
+      "Located in Kooringal Mall, opposite the Australia Post office",
+      "Open seven days for both lunch and dinner",
+      "Dine-in, takeaway and home delivery all available",
+      "Separate lunch and dinner menus published online",
+      "Minimum order and fees apply to delivery"
+    ],
+    "hours": [],
+    "sources": [
+      "https://tammysthaikitchen.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Shop 43, 269 Lake Albert Road, Kooringal Mall",
+    "phone": "1300 826 697",
+    "website": "https://tammysthaikitchen.com.au/",
+    "email": "info@tammysthaikitchen.com.au",
+    "facebook": "https://www.facebook.com/tammysthaikitchen/",
+    "instagram": "https://www.instagram.com/tammysthaikitchen/"
+  },
+  {
+    "name": "Thaigga",
+    "slug": "thaigga",
+    "categorySlug": "thai-restaurants",
+    "vertical": "eat_drink",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A Thai fusion restaurant on Fitzmaurice Street in the Wagga Wagga CBD. The menu mixes traditional Thai dishes with the kitchen's own twist on the favourites, and the dining room has an open kitchen where meals are prepared in view.",
+    "highlights": [
+      "Thai fusion menu combining traditional dishes and the kitchen's own versions",
+      "Open kitchen so diners can watch meals being prepared",
+      "Fully licensed with local and international beers, wines and spirits",
+      "Online table bookings and online ordering available",
+      "Closed Mondays; lunch and dinner service the rest of the week"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://thaigga.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "107 Fitzmaurice St",
+    "phone": "02 6971 7371",
+    "website": "https://thaigga.com.au/",
+    "email": "info@thaigga.com.au"
+  },
+  {
+    "name": "Kendall's Tree Service",
+    "slug": "kendalls-tree-service",
+    "categorySlug": "tree-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A Wagga Wagga tree service that states it specialises in large problem trees. Work covers full tree removal, strategic reductions, trimming and pruning, stump grinding and general tree care, with an emergency callout service and free quotes.",
+    "highlights": [
+      "States it specialises in large, difficult problem trees",
+      "Services include full tree removal, strategic reductions and tree felling",
+      "Stump grinding offered after removal",
+      "Trimming, pruning and general tree care available",
+      "Free quotes and on-site inspections can be booked; emergency service offered"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.kendallstreeservice.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0439 755 507",
+    "website": "https://www.kendallstreeservice.com.au/",
+    "email": "markkendall1@hotmail.com",
+    "facebook": "https://www.facebook.com/KendallsTreeService/"
+  },
+  {
+    "name": "Riverina Tree Fellas",
+    "slug": "riverina-tree-fellas",
+    "categorySlug": "tree-services",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Gobbagombalin",
+    "postcode": "2650",
+    "description": "An arborist business based at Gobbagombalin in Wagga Wagga's north. It carries out tree removals, felling, pruning and canopy management, hedging, stump grinding and disease and pest management, and runs a round-the-clock emergency tree removal service.",
+    "highlights": [
+      "Fully qualified arborists working across Wagga Wagga",
+      "Services span tree removals, felling, pruning and canopy management",
+      "Hedging and stump grinding also offered",
+      "Disease and pest management available as a separate service",
+      "24/7 emergency tree removal outside normal trading hours"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://riverinatreefellas.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "phone": "0422 087 573",
+    "website": "https://riverinatreefellas.com.au/",
+    "email": "riverinatreefellas@gmail.com"
+  },
+  {
+    "name": "MaxiPARTS Wagga Wagga",
+    "slug": "maxiparts-wagga-wagga",
+    "categorySlug": "truck-and-trailer-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A commercial truck and trailer parts branch on Hammond Avenue in Wagga Wagga's transport strip. It is one of five MaxiPARTS stores in New South Wales and supplies parts to truck and trailer operators from a walk-in counter.",
+    "highlights": [
+      "Supplies commercial truck and trailer parts",
+      "Located on Hammond Avenue, Wagga Wagga's main heavy vehicle strip",
+      "One of five MaxiPARTS branches in NSW",
+      "Parent business publishes an online parts catalogue",
+      "Branch listed with its own direct phone line"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.maxiparts.com.au/storelocator/nsw"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "150 Hammond Avenue",
+    "phone": "02 6921 6044",
+    "website": "https://www.maxiparts.com.au/"
+  },
+  {
+    "name": "Wagga Trucks",
+    "slug": "wagga-trucks",
+    "categorySlug": "truck-and-trailer-parts",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A truck dealership on Hammond Avenue running its own spare parts and service departments. It sells new and used trucks and trailers and supplies parts nationally, with a dedicated spare parts phone line separate from the sales office.",
+    "highlights": [
+      "Dedicated spare parts line on 02 6921 2263",
+      "Sells new and used trucks as well as trailers",
+      "Service department operates on its own line, 02 5942 4444",
+      "Product support available 24 hours",
+      "A second branch opened at Queanbeyan in 2026"
+    ],
+    "hours": [
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "07:30",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://waggatrucks.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "280 Hammond Ave",
+    "phone": "02 6921 2263",
+    "website": "https://waggatrucks.com.au/",
+    "email": "reception@waggatrucks.com.au"
+  },
+  {
+    "name": "O'Reilly Trucks",
+    "slug": "oreilly-trucks",
+    "categorySlug": "truck-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A heavy vehicle workshop on Say Street, Wagga Wagga, carrying out truck and trailer repairs and scheduled servicing to operators' maintenance requirements. It runs a separate parts department with its own phone line.",
+    "highlights": [
+      "Carries out truck and trailer repairs and servicing to maintenance schedules",
+      "Works across the Penske, Scania, MAN Truck & Bus and Dennis Eagle brands",
+      "Separate parts line on 02 5999 0999",
+      "Open Saturday mornings as well as weekdays",
+      "Publishes assistance numbers for roadside and NTI support"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.oreillytruckrepairs.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "2-4 Say St",
+    "phone": "02 5999 0900",
+    "website": "https://www.oreillytruckrepairs.com.au/",
+    "facebook": "https://www.facebook.com/OReillyTrucks/"
+  },
+  {
+    "name": "Royans Wagga Wagga",
+    "slug": "royans-wagga-wagga",
+    "categorySlug": "truck-repairs",
+    "vertical": "trades",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A heavy vehicle accident repair branch on Copland Street handling truck and trailer smash repairs for transport operators and fleets across the Riverina. Work ranges from minor accident damage through to structural restoration and vehicle refinishing.",
+    "highlights": [
+      "Specialises in heavy vehicle accident repairs for trucks and trailers",
+      "Services listed include paint and refinishing, chassis alignment and bus and coach repairs",
+      "Motor vehicle repairer licence number MVRL 5399",
+      "24/7 accident response line operates outside branch hours",
+      "Supports transport operators and fleet managers across the Riverina"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://royans.com.au/branch/wagga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "340 Copland St",
+    "phone": "02 6931 8888",
+    "website": "https://royans.com.au/branch/wagga/"
+  },
+  {
+    "name": "Lake Albert Walkway",
+    "slug": "lake-albert-walkway",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Lake Albert",
+    "postcode": "2650",
+    "description": "A 5.5 kilometre sealed track making a complete circuit of Lake Albert on Wagga Wagga's southern edge. Its flat grade and sealed surface suit walkers, joggers and cyclists of most fitness and mobility levels, and outdoor fitness stations are spaced along the eastern side.",
+    "highlights": [
+      "5.5 kilometre track completing a full circuit of Lake Albert",
+      "Constant flat grade and well sealed surface, suited to all fitness and mobility levels",
+      "Used by walkers, joggers and cyclists",
+      "Eight outdoor fitness stations set across four locations near Apex Park, over about 800m",
+      "Dog friendly, with dogs required to be on a lead",
+      "Apex Park and Bosley Memorial Park on the route have amenities, barbecues and playgrounds"
+    ],
+    "hours": [],
+    "sources": [
+      "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/lake-albert"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "website": "https://wagga.nsw.gov.au/parks-and-recreation/parks-beaches-lakes/lake-albert"
+  },
+  {
+    "name": "Pomingalarna Reserve",
+    "slug": "pomingalarna-reserve",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A bushland reserve about 10 minutes from the Wagga Wagga CBD on the city's western outskirts, with roughly 13 kilometres of marked trails. The uneven sloping terrain suits walkers, runners and mountain bikers, and the higher points give views over the city.",
+    "highlights": [
+      "Bushland reserve roughly 10 minutes from the CBD, with about 13km of trails",
+      "Four marked trails at varying levels of difficulty",
+      "Unsealed surfaces with moderate gradients, rated easy to intermediate",
+      "Open to walking, running, cycling, mountain biking and horse riding, with pets on leads",
+      "3.6km trail starts at the western car park; the 7km and 13km trails start at the eastern car park",
+      "Home to the Multisport Cycling Complex, with a criterium track, BMX track, jump and pump tracks and a velodrome"
+    ],
+    "hours": [],
+    "sources": [
+      "https://visitwagga.com/discover/seendo/trails/pomingalarna-reserve"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "website": "https://visitwagga.com/discover/seendo/trails/pomingalarna-reserve"
+  },
+  {
+    "name": "Wiradjuri Trail",
+    "slug": "wiradjuri-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wagga Wagga",
+    "state": "NSW",
+    "suburb": "Wagga Wagga",
+    "postcode": "2650",
+    "description": "A 42 kilometre loop around Wagga Wagga taking in river banks, hilltops and bushland reserves. The surface mixes sealed and unsealed paths with some rough sections and shared roads, and it connects most of the city's other trails. Walkers can join it at various points.",
+    "highlights": [
+      "42 kilometre loop circling the city, with various start and finish points",
+      "Surface is a mix of sealed, unsealed, rough paths and shared roads",
+      "Graded flat to moderate gradients, rated intermediate to advanced",
+      "Suitable for walking, running, cycling and BMX, with pets welcome on leads",
+      "Passes the Murrumbidgee River, Wagga Beach, Wiradjuri Reserve, Marrambidya Wetland, Flowerdale Lagoon, Pomingalarna Reserve and Lake Albert",
+      "A GPX file of the route can be downloaded from the Visit Wagga site"
+    ],
+    "hours": [],
+    "sources": [
+      "https://visitwagga.com/discover/seendo/trails/wiradjuritrail",
+      "https://wagga.nsw.gov.au/parks-and-recreation/recreation/walking-and-cycling-trails"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "website": "https://visitwagga.com/discover/seendo/trails/wiradjuritrail"
+  },
+  {
+    "name": "A Grade Oils & Batteries",
+    "slug": "a-grade-oils-and-batteries",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "A Grade Oils & Batteries supplies automotive, industrial and commercial batteries along with oils, lubricants and AdBlue from 77B Thomas Mitchell Drive, Wodonga. It delivers through Albury-Wodonga and surrounding areas and takes back used batteries for recycling.",
+    "highlights": [
+      "Automotive, industrial and commercial batteries, including car, boat and truck batteries",
+      "Motor oils, lubricants and AdBlue diesel exhaust fluid",
+      "Delivery throughout Albury-Wodonga and surrounding areas",
+      "Battery recycling service",
+      "Open weekdays 8am to 4.30pm, closed weekends",
+      "Second contact number listed as 0497 843 393"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://agradeoilsbatteries.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "77B Thomas Mitchell Drive",
+    "phone": "02 6056 3030",
+    "website": "https://agradeoilsbatteries.com.au/"
+  },
+  {
+    "name": "Marshall Batteries Wodonga",
+    "slug": "marshall-batteries-wodonga",
+    "categorySlug": "battery-specialists",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Marshall Batteries Wodonga is a battery supply and fitting outlet at 79B Thomas Mitchell Drive. It stocks batteries for passenger and commercial vehicles, 4WDs, motorcycles, marine and agricultural use, and offers mobile battery replacement and roadside assistance through the Wodonga region.",
+    "highlights": [
+      "Batteries for passenger vehicles, commercial vehicles, 4WDs, motorcycles, marine and agricultural use",
+      "Mobile battery replacement service through the Wodonga region",
+      "Roadside assistance including tyre changes, emergency fuel delivery and vehicle unlocking",
+      "Nationwide warranty on batteries supplied",
+      "Open Monday to Friday 8.30am-5pm and Saturday 9am-12pm"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.marshallbatteries.com.au/stores/marshall-batteries-wodonga/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "79B Thomas Mitchell Drive",
+    "phone": "1300 627 742",
+    "website": "https://www.marshallbatteries.com.au/stores/marshall-batteries-wodonga/"
+  },
+  {
+    "name": "Leigh Martin Marine",
+    "slug": "leigh-martin-marine",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Leigh Martin Marine is a boat dealership and service centre at 59-61 Thomas Mitchell Drive, Wodonga. It sells new and used Quintrex boats, Mercury outboards, sterndrives and inboards and Dunbier trailers, services and maintains engines, and stocks parts, electric motors and navigation electronics.",
+    "highlights": [
+      "Quintrex dealer selling new and used boats",
+      "Mercury outboard, sterndrive and inboard sales",
+      "Servicing and maintenance for all engines",
+      "Stocks Humminbird, Lowrance, MotorGuide and Minn Kota electronics and electric motors",
+      "Dunbier trailers, Lone Star products, parts and accessories",
+      "Open Monday to Friday 8.30am-5pm and Saturday 9am-12pm"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:30",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "09:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.leighmartinmarine.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "59-61 Thomas Mitchell Drive",
+    "phone": "02 6024 6555",
+    "website": "https://www.leighmartinmarine.com.au/"
+  },
+  {
+    "name": "Twin City Auto & Marine",
+    "slug": "twin-city-auto-and-marine",
+    "categorySlug": "boat-and-marine-services",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Twin City Auto & Marine is a workshop at 332 Beechworth Road, Wodonga, working on boats, cars and trailers. It covers mechanical repairs from basic servicing through to engine rebuilding and reconditioning, supply and fitting of new and reconditioned engines, electrical installation and diagnostics, trailer repairs and in-house welding.",
+    "highlights": [
+      "Mechanical repairs from basic servicing to engine rebuilding and reconditioning for all makes and models",
+      "Supply and fitting of new and reconditioned engines",
+      "Electrical installations and electrical diagnostics",
+      "Trailer repairs from wheel bearings and lights to new tyres",
+      "In-house welding and light to medium fabrication in mild steel, stainless steel and aluminium",
+      "Pick up and drop off service, or a car or boat serviced at the customer's own home"
+    ],
+    "hours": [],
+    "sources": [
+      "https://twincityautomarine.com.au/contact",
+      "https://twincityautomarine.com.au/services"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "332 Beechworth Road",
+    "phone": "0420 716 393",
+    "website": "https://twincityautomarine.com.au/",
+    "email": "Ben@twincityautomarine.com.au"
+  },
+  {
+    "name": "Gricey's Workshop Automotive Specialist",
+    "slug": "griceys-workshop-automotive-specialist",
+    "categorySlug": "brake-and-clutch",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Gricey's Workshop is an automotive repairer at 8 Trafalgar St, West Wodonga. Its listed work covers brake repairs, diagnostics, logbook servicing, tyres and suspension, radiator and cooling, air conditioning, and transmission and exhaust repair.",
+    "highlights": [
+      "Brake repairs",
+      "Diagnostics and logbook servicing",
+      "Tyres, suspension, radiator and cooling system work",
+      "Transmission and exhaust repair",
+      "Arctick certified technicians and VACC member",
+      "Payment options include Afterpay, Humm, Zip Pay and ZipMoney"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:00",
+        "closes": "17:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "closed": true
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://griceysworkshop.com.au/"
+    ],
+    "confidence": "medium",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "8 Trafalgar Street, West Wodonga",
+    "phone": "0467 566 912",
+    "website": "https://griceysworkshop.com.au/",
+    "email": "griceysworkshop@gmail.com"
+  },
+  {
+    "name": "O'Neill's Autos",
+    "slug": "oneills-autos",
+    "categorySlug": "brake-and-clutch",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "O'Neill's Autos has serviced vehicles in Wodonga for more than 40 years from 96 Thomas Mitchell Drive. Its work covers brake and clutch maintenance, transmission repairs and gearbox replacement, logbook servicing, suspension, air conditioning, power steering, battery replacement and pre-purchase inspections.",
+    "highlights": [
+      "Brake and clutch maintenance",
+      "Transmission repairs and gearbox replacements",
+      "Logbook servicing and general vehicle repairs",
+      "Pre-purchase vehicle inspections, vehicle modifications and tyre fitting",
+      "4X4 mechanical work, suspension repairs and upgrades",
+      "Trading in Wodonga for more than 40 years"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "07:30",
+        "closes": "16:30",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "closed": true
+      }
+    ],
+    "sources": [
+      "https://www.oneillsautos.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "96 Thomas Mitchell Drive",
+    "phone": "02 6024 5640",
+    "website": "https://www.oneillsautos.com.au/",
+    "email": "admin@oneillsautos.com.au"
+  },
+  {
+    "name": "Tyrepower Wodonga",
+    "slug": "tyrepower-wodonga",
+    "categorySlug": "brake-and-clutch",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Tyrepower Wodonga is a tyre and mechanical store at 3 Watson Street, with a separate Truck & Ag Centre at 2 Moulder Court. Alongside tyre supply and fitting it handles brakes and rotor discs, wheel alignment and balancing, suspension repairs and lifts, steering, logbook servicing and roadworthy inspections.",
+    "highlights": [
+      "Brakes and rotor discs",
+      "Wheel alignment including camber and castor kits, wheel balancing, steering and suspension repairs and lifts",
+      "Purchase, fitment and puncture repair of passenger, 4WD, caravan, trailer, truck, agricultural, industrial and mower tyres",
+      "General log book mechanical servicing and repairs, including roadworthy inspections",
+      "Second site at 2 Moulder Court, Wodonga, for truck and agricultural work (02 6056 1403)",
+      "Mobile tyre service, on-site farm service and after-hours service"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "08:00",
+        "closes": "17:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "08:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.tyrepowerwodonga.com.au/",
+      "https://www.tyrepowerwodonga.com.au/contact-us"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "3 Watson Street",
+    "phone": "02 6056 1500",
+    "website": "https://www.tyrepowerwodonga.com.au/"
+  },
+  {
+    "name": "Wyatt Mechanical",
+    "slug": "wyatt-mechanical",
+    "categorySlug": "mobile-mechanics",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Wyatt Mechanical Pty Ltd is a Wodonga heavy diesel workshop at 2 Chisholm Court that also runs a mobile service vehicle. It repairs heavy vehicles, trucks and earthmoving machinery, and handles brakes, transmission, clutch, cooling systems, fuel injection, exhausts, diagnostics and auto electrical work.",
+    "highlights": [
+      "Mobile service vehicle brings repairs directly to the customer",
+      "Heavy vehicle, truck, earthmoving and machinery repairs",
+      "Hydraulic hose repairs and services",
+      "ECU diesel remapping",
+      "Brakes, transmission, clutch, routine servicing, cooling, fuel injection, diagnostics, exhausts and auto electrical work",
+      "Open Monday to Friday 6am-6pm and Saturday 6am-12pm"
+    ],
+    "hours": [
+      {
+        "day": 0,
+        "closed": true
+      },
+      {
+        "day": 1,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 2,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 3,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 4,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 5,
+        "opens": "06:00",
+        "closes": "18:00",
+        "closed": false
+      },
+      {
+        "day": 6,
+        "opens": "06:00",
+        "closes": "12:00",
+        "closed": false
+      }
+    ],
+    "sources": [
+      "https://www.wyattmechanical.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "2 Chisholm Court",
+    "phone": "0458 651 637",
+    "website": "https://www.wyattmechanical.com.au/"
+  },
+  {
+    "name": "Grealy Motors",
+    "slug": "grealy-motors-and-towing-service",
+    "categorySlug": "towing-services",
+    "vertical": "trades",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "Grealy Motors is a workshop and towing operator at 12 Reid Street, Wodonga. It runs modern tilt tray tow trucks able to carry up to 24 tonne for 24/7 towing and roadside assistance, and its workshop covers logbook servicing, brakes, cooling systems, air conditioning, tyres and roadworthy inspections.",
+    "highlights": [
+      "24/7 towing and roadside assistance",
+      "Modern tilt tray tow trucks capable of transporting up to 24 tonne",
+      "Breakdown towing across Australia and accident towing in Victoria",
+      "VicRoads licensed vehicle tester performing roadworthy inspections for light vehicles",
+      "RACV roadside assistance",
+      "Workshop covers logbook servicing, brakes, air conditioning, cooling systems, tyres and wheel alignment, motorcycle repairs and minor smash repairs"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.grealymotors.com.au/"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "12 Reid Street",
+    "phone": "02 6024 1155",
+    "website": "https://www.grealymotors.com.au/",
+    "email": "admin@grealymotors.com.au"
+  },
+  {
+    "name": "Gateway Island Trail",
+    "slug": "gateway-island-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "The Gateway Island Trail is a 4.3km sealed loop along the Murray River and Wodonga Creek, with the trailhead behind The Lincoln at 64 Lincoln Causeway on Gateway Island. It runs through a natural landscape of gum trees and takes in sculptural works by local Aboriginal artists interpreting how the river supported First Nations hunting and food gathering.",
+    "highlights": [
+      "4.3km sealed trail along the Murray River and Wodonga Creek",
+      "Trailhead behind The Lincoln, 64 Lincoln Causeway, Gateway Island, accessible from Gateway Village",
+      "Sculptural works from local Aboriginal artists along the loop",
+      "Natural landscape of gum trees where platypus, wallabies, antechinus, water rats, kangaroos, bats, spoonbills and wedge-tailed eagles have been recorded",
+      "Interprets the river's role in First Nations hunting and food gathering, including Murray Cod fishing and bush tucker",
+      "A4 trail map available to download from Wodonga Council"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Gateway-Island-Trail"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Trailhead behind The Lincoln, 64 Lincoln Causeway, Gateway Island",
+    "website": "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/Gateway-Island-Trail"
+  },
+  {
+    "name": "High Country Rail Trail",
+    "slug": "high-country-rail-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "The High Country Rail Trail runs 81km from Wodonga to Shelley along a former railway line, surfaced in fine gravel and sealed sections. The Wodonga end starts at 2 Mill St, with a central access point in Reid St near the bowling club, and the first 5km to the Kiewa Valley Hwy is hot-mix asphalt suited to a wide range of users.",
+    "highlights": [
+      "81km rail trail from Wodonga to Shelley, at 781m once Victoria's highest railway station",
+      "Wodonga trailheads at 2 Mill St and Reid St near the bowling club",
+      "First 5km from Wodonga has a smooth hot-mix asphalt surface suitable for a wide range of users",
+      "Shared path passes the Wodonga Racecourse and the old Wodonga Station area, now known as Junction Place",
+      "Further east the trail crosses the 600m Sandy Creek Bridge",
+      "Rail Trails Australia reports the Bullioh to Shelley section damaged in the 2026 bushfires, with Wodonga to Bullioh via Tallangatta open"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.railtrails.org.au/trails/high-country-rail-trail"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Western trailhead 2 Mill St; central Wodonga access from Reid St, near the bowling club",
+    "website": "https://www.railtrails.org.au/trails/high-country-rail-trail"
+  },
+  {
+    "name": "The Crossing Place Trail",
+    "slug": "the-crossing-place-trail",
+    "categorySlug": "walking-trails",
+    "vertical": "things_to_do",
+    "localityName": "Wodonga",
+    "state": "VIC",
+    "suburb": "Wodonga",
+    "postcode": "3690",
+    "description": "The Crossing Place Trail is a 5.1 kilometre loop at Gateway Lakes on Gateway Island in Wodonga, near where Bungambrawatha Creek and Oddies Creek historically met the Murray River. Interpretive stops cover traditional crossing places, the story of Yarre the Mailman, a scar tree, and the importance of the billabong environment to Aboriginal and Torres Strait Islander peoples.",
+    "highlights": [
+      "5.1 kilometre loop at Gateway Lakes on Gateway Island",
+      "Sculptural works from local Aboriginal artists along the route",
+      "Interpretive stops cover the story of Yarre the Mailman and a scar tree",
+      "Interprets the importance of the billabong environment to Aboriginal and Torres Strait Islander peoples",
+      "Wildlife recorded includes platypus, dunnarts, antechinus, water rats, wedge-tailed eagles and black-billed spoonbills",
+      "A4 trail map available to download from Wodonga Council"
+    ],
+    "hours": [],
+    "sources": [
+      "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/The-Crossing-Place-Trail"
+    ],
+    "confidence": "high",
+    "lastCheckedAt": "2026-08-25",
+    "addressLine": "Gateway Lakes, Gateway Island",
+    "website": "https://www.wodonga.vic.gov.au/Activities-Attractions/See-and-do/The-Crossing-Place-Trail"
+  }
+]

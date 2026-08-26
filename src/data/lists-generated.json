@@ -27,12 +27,12 @@
         "blurb": "Free admission. Permanent exhibition 'Crossing Place: A Story of Albury'. Open seven days."
       },
       {
-        "listingSlug": "albury-brewhouse",
-        "blurb": "All day menu from 12 noon, with lunch 12pm-2:30pm and dinner 5:30pm-9pm. Craft beers brewed on site at 618 Dean Street. Open 5 days including Sunday."
-      },
-      {
         "listingSlug": "regent-cinemas-albury",
         "blurb": "Gold Class cinemas with reclining armchairs and waiter service. RMAX, the largest screen in regional Australia, with 4K laser projection."
+      },
+      {
+        "listingSlug": "albury-brewhouse",
+        "blurb": "All-day menu from noon, lunch 12pm-2.30pm and dinner 5.30pm-9pm. All day menu from 12 noon, with lunch 12pm-2:30pm and dinner 5:30pm-9pm. Open 5 days including Sunday."
       },
       {
         "listingSlug": "cafe-musette",
@@ -57,8 +57,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-beechworth",
@@ -102,8 +102,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-rutherglen",
@@ -151,8 +151,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-shepparton",
@@ -212,8 +212,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-wagga-wagga",
@@ -255,8 +255,8 @@
         "blurb": "Pub classics and pizzas. Pizzas from the bar outside restaurant hours. Closed Sundays. $$."
       },
       {
-        "listingSlug": "indian-tavern-tandoori",
-        "blurb": "Cuisine from all regions of India, ranging from hot to mild. Fully licensed and BYO, bottled wine only. Open 6 days including Sunday. $$."
+        "listingSlug": "knights-deli-wagga-wagga",
+        "blurb": "Meat counter covers beef, chicken, pork, ham, bacon, turkey and sliced smallgoods. Stocks regional producers including Holbrook Paddock Eggs and Hampden Bridge Hams. Closed Sundays. $$."
       },
       {
         "listingSlug": "victoria-hotel-wagga-wagga",
@@ -273,8 +273,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-wangaratta",
@@ -322,8 +322,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "a-day-in-wodonga",
@@ -383,13 +383,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "auto-parts-stores-in-the-riverina",
     "title": "Every auto parts store in the Riverina",
-    "intro": "All 9 auto parts stores we list across the Riverina, in 5 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "All 10 auto parts stores we list across the Riverina, in 5 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -430,12 +430,16 @@
       {
         "listingSlug": "noel-comerfords-auto-parts-accessories",
         "blurb": "Filters, brake pads, coil springs, shock absorbers, spark plugs and automotive paints. Accessories including seat covers, floor mats, car carpet and antennas."
+      },
+      {
+        "listingSlug": "all-things-off-road",
+        "blurb": "Stocks ARB, Bushranger, Rhino-Rack, Coast to Coast and Ultra Vision Lighting products. Carries caravan parts, trailer parts and general 4X4 accessories."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "bakeries-in-the-ovens-murray",
@@ -489,8 +493,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "bakeries-in-the-riverina",
@@ -544,8 +548,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "banna-avenue-griffith",
@@ -585,8 +589,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "baylis-street-wagga-wagga",
@@ -674,13 +678,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "beechworth-road-wodonga",
     "title": "What is on Beechworth Road, Wodonga",
-    "intro": "Everything we list with an address on Beechworth Road in Wodonga, VIC, walked end to end in street number order rather than sorted by rating. 7 places across 2 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Beechworth Road in Wodonga, VIC, walked end to end in street number order rather than sorted by rating. 8 places across 2 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wodonga",
     "state": "VIC",
     "items": [
@@ -709,14 +713,18 @@
         "blurb": "Preventative and restorative dentistry. Fillings, extractions and root canals."
       },
       {
+        "listingSlug": "twin-city-auto-and-marine",
+        "blurb": "Mechanical repairs from basic servicing to engine rebuilding and reconditioning for all makes and models. Supply and fitting of new and reconditioned engines."
+      },
+      {
         "listingSlug": "phaboonchai-thai-restaurant",
         "blurb": "Established 2014. Stir fries, curries and rice dishes. Open 6 days including Sunday."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "cafes-in-the-riverina",
@@ -850,8 +858,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "car-dealers-in-the-riverina",
@@ -905,8 +913,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "david-street-albury",
@@ -942,8 +950,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "edward-street-wagga-wagga",
@@ -999,13 +1007,60 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
+  },
+  {
+    "slug": "equipment-hire-in-the-riverina",
+    "title": "Every equipment hire yard in the Riverina",
+    "intro": "All 8 equipment hire we list across the Riverina, in 4 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "localitySlug": "albury",
+    "state": "NSW",
+    "regionSlug": "riverina",
+    "categorySlug": "equipment-hire",
+    "items": [
+      {
+        "listingSlug": "eba-hire",
+        "blurb": "States over 30 years experience in the transport, construction and event hire industry. Describes itself as 100% Australian owned and operated."
+      },
+      {
+        "listingSlug": "hamblin-hire",
+        "blurb": "Hiring to Albury and surrounds since 1978. Access and lifting equipment and air compressors."
+      },
+      {
+        "listingSlug": "barneys-rubble",
+        "blurb": "Hire counter for trailers, compactors, cement mixers and wheelbarrows. General tool hire for home and trade jobs."
+      },
+      {
+        "listingSlug": "kennards-hire-albury",
+        "blurb": "Operates from the former Skylift Hire & Rentals site on Union Road. Vehicles, earthmoving plant and access equipment."
+      },
+      {
+        "listingSlug": "conx-hire",
+        "blurb": "Earthmoving and access equipment for construction work. Compaction gear, concrete equipment and concrete products."
+      },
+      {
+        "listingSlug": "kennards-hire-wagga-wagga",
+        "blurb": "Earthmoving plant and access equipment hire. Lifting and materials handling gear, vehicles and trailers."
+      },
+      {
+        "listingSlug": "lts-equipment-wagga-wagga",
+        "blurb": "Forklift hire and elevating work platform hire available. Also sells new and used forklifts and access equipment."
+      },
+      {
+        "listingSlug": "riverina-crane-services",
+        "blurb": "Locally owned and now run by the second generation of the family. States it has one of the largest mobile crane fleets in regional NSW."
+      }
+    ],
+    "author": "LocalsKnow",
+    "method": "compiled",
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "fitzmaurice-street-wagga-wagga",
     "title": "What is on Fitzmaurice Street, Wagga Wagga",
-    "intro": "Everything we list with an address on Fitzmaurice Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 18 places across 4 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Fitzmaurice Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 17 places across 4 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "items": [
@@ -1034,10 +1089,6 @@
         "blurb": "Road, mountain, BMX and kids bikes. Merida, Cervelo, Specialized, Trek and Cannondale."
       },
       {
-        "listingSlug": "thaigga",
-        "blurb": "Modern Thai fusion and traditional dishes. Open kitchen."
-      },
-      {
         "listingSlug": "quickprint-wagga",
         "blurb": "Business stationery and business cards. Wedding and event printing."
       },
@@ -1063,7 +1114,7 @@
       },
       {
         "listingSlug": "knights-deli-wagga-wagga",
-        "blurb": "Delicatessen and food providore. Large artisan cheese range. Closed Sundays."
+        "blurb": "Meat counter covers beef, chicken, pork, ham, bacon, turkey and sliced smallgoods. Grazing boxes and platters made to order, from two-person to 8-10 person sizes. Closed Sundays."
       },
       {
         "listingSlug": "mr-lawrence",
@@ -1084,8 +1135,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "ford-street-beechworth",
@@ -1125,8 +1176,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "free-things-to-do-in-the-ovens-murray",
@@ -1166,15 +1217,15 @@
       },
       {
         "listingSlug": "gateway-island-trail",
-        "blurb": "Free 4.3km sealed loop suitable for walking and cycling. Sculptural works by local Aboriginal artists."
+        "blurb": "4.3km sealed trail along the Murray River and Wodonga Creek. Trailhead behind The Lincoln, 64 Lincoln Causeway, Gateway Island, accessible from Gateway Village."
+      },
+      {
+        "listingSlug": "high-country-rail-trail",
+        "blurb": "81km rail trail from Wodonga to Shelley, at 781m once Victoria's highest railway station. Wodonga trailheads at 2 Mill St and Reid St near the bowling club."
       },
       {
         "listingSlug": "belvoir-park",
         "blurb": "Two playgrounds including an all abilities carousel and liberty swing. Free parkland with a lake and walking track."
-      },
-      {
-        "listingSlug": "high-country-rail-trail",
-        "blurb": "81km from Wodonga to Shelley via Tallangatta. Sealed near Wodonga, gravel in the upper sections."
       },
       {
         "listingSlug": "yackandandah-gorge-scenic-walk",
@@ -1183,8 +1234,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "free-things-to-do-in-the-riverina",
@@ -1211,12 +1262,12 @@
         "blurb": "Free public reserve with views over Albury and the region. Albury and District War Memorial, unveiled Anzac Day 1925."
       },
       {
-        "listingSlug": "wonga-wetlands",
-        "blurb": "Free entry. Seven lagoons across 80 hectares of Murray River floodplain."
-      },
-      {
         "listingSlug": "noreuil-park-foreshore",
         "blurb": "Fenced children's playground. Free riverside park a short walk from the Albury CBD."
+      },
+      {
+        "listingSlug": "wonga-wetlands",
+        "blurb": "Free entry. Seven lagoons across 80 hectares of Murray River floodplain."
       },
       {
         "listingSlug": "wagirra-trail-and-yindyamarra-sculpture-walk",
@@ -1231,7 +1282,7 @@
         "blurb": "Free reserve with ridgeline views of Lake Hume and the Kiewa Valley. Linked to Mungabareena Reserve by the Hume and Hovell Walking Track."
       },
       {
-        "listingSlug": "lake-albert",
+        "listingSlug": "lake-albert-lake-albert",
         "blurb": "Playground with fenced area for small children. 5.5 km circuit walking and cycling track."
       },
       {
@@ -1259,12 +1310,12 @@
         "blurb": "Large destination playground for all ages and abilities. Sandy beach on the Murrumbidgee River."
       },
       {
-        "listingSlug": "wagga-wagga-botanic-gardens",
-        "blurb": "Children's adventure playground. Mini zoo and free flight aviary."
-      },
-      {
         "listingSlug": "marrambidya-wetland",
         "blurb": "Two kilometres of Grade 2 walking tracks. Bird hides and an elevated viewing platform."
+      },
+      {
+        "listingSlug": "wagga-wagga-botanic-gardens",
+        "blurb": "Children's adventure playground. Includes playgrounds and picnic areas."
       },
       {
         "listingSlug": "pomingalarna-reserve",
@@ -1272,11 +1323,11 @@
       },
       {
         "listingSlug": "victory-memorial-gardens",
-        "blurb": "Established 1925 as a First World War memorial. Designed by Thomas Kerr."
+        "blurb": "Playground and duck feeding make it popular with families. Established in 1925 as a tribute to those who fought and died in the First World War."
       },
       {
         "listingSlug": "wiradjuri-trail",
-        "blurb": "About 42 km of walking and cycling trail. 12.1 km Wollundry Loop section."
+        "blurb": "42 kilometre loop circling the city, with various start and finish points. Surface is a mix of sealed, unsealed, rough paths and shared roads."
       },
       {
         "listingSlug": "nail-can-hill",
@@ -1289,8 +1340,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "function-rooms-and-venues-in-albury",
@@ -1336,10 +1387,6 @@
         "blurb": "Functions. Beer garden. Closed Sundays."
       },
       {
-        "listingSlug": "albury-brewhouse",
-        "blurb": "Two dedicated event spaces for functions and celebrations. Craft beers brewed on site at 618 Dean Street. Open 5 days including Sunday."
-      },
-      {
         "listingSlug": "albury-tigers",
         "blurb": "Grounds and rooms on Wodonga Place in central Albury. Bar and function rooms on site."
       },
@@ -1356,12 +1403,16 @@
         "blurb": "Retro-styled hotel bar and dining room. Function venue."
       },
       {
-        "listingSlug": "the-thirsty-devil-brewery-south-albury",
-        "blurb": "Function spaces for 30 to 100 guests, or 150 plus for the full venue. Six core beers brewed on site: pale ale, IPA, red ale, mid strength ale, porter and ginger beer."
+        "listingSlug": "albury-brewhouse",
+        "blurb": "Describes itself as brewing craft beers onsite. Exclusive Brewhouse Ales served at the bar, with any four available on a beer paddle. Open 5 days including Sunday."
       },
       {
         "listingSlug": "hume-country-motor-inn",
         "blurb": "Family rooms and a large family unit. Conference facilities."
+      },
+      {
+        "listingSlug": "the-thirsty-devil-brewery-south-albury",
+        "blurb": "Brewery tours on request, booked in advance, minimum five people, $30 per person including a paddle. Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%)."
       },
       {
         "listingSlug": "public-house-albury",
@@ -1374,8 +1425,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "function-rooms-and-venues-in-wagga-wagga",
@@ -1482,7 +1533,7 @@
       },
       {
         "listingSlug": "wagga-wagga-country-club",
-        "blurb": "A popular choice for weddings and functions. 18-hole championship course welcoming members and guests."
+        "blurb": "Popular venue for weddings and functions. 18-hole championship course on the banks of Lake Albert."
       },
       {
         "listingSlug": "giuseppes-restaurant-and-bar",
@@ -1491,8 +1542,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "function-rooms-and-venues-in-wodonga",
@@ -1540,13 +1591,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "hammond-avenue-wagga-wagga",
     "title": "What is on Hammond Avenue, Wagga Wagga",
-    "intro": "Everything we list with an address on Hammond Avenue in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 14 places across 5 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Hammond Avenue in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 15 places across 5 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "items": [
@@ -1583,8 +1634,16 @@
         "blurb": "Drive-through coffee. Roasts its own signature blend."
       },
       {
+        "listingSlug": "lts-equipment-wagga-wagga",
+        "blurb": "Forklift hire and elevating work platform hire available. Also sells new and used forklifts and access equipment."
+      },
+      {
         "listingSlug": "burgess-earthmoving",
         "blurb": "Civil earthworks and subdivisions. Contract works and plant hire."
+      },
+      {
+        "listingSlug": "maxiparts-wagga-wagga",
+        "blurb": "Supplies commercial truck and trailer parts. Located on Hammond Avenue, Wagga Wagga's main heavy vehicle strip."
       },
       {
         "listingSlug": "conx-hire",
@@ -1599,18 +1658,14 @@
         "blurb": "Case IH and New Holland dealership for the Wagga Wagga district. New and used tractors, headers and other farm equipment sold."
       },
       {
-        "listingSlug": "wagga-trucks",
-        "blurb": "Genuine parts for Volvo, Mack, UD and Hino trucks. Freighter Group trailer parts stocked."
-      },
-      {
         "listingSlug": "cafe-phoenix",
         "blurb": "Cafe on Hammond Avenue. Outdoor seating."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "high-street-wodonga",
@@ -1702,8 +1757,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "high-street-yackandandah",
@@ -1751,8 +1806,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "hotels-in-the-riverina",
@@ -1810,8 +1865,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "hovell-street-wodonga",
@@ -1847,8 +1902,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "kincaid-street-wagga-wagga",
@@ -1888,8 +1943,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "live-music-in-albury",
@@ -1916,17 +1971,17 @@
       },
       {
         "listingSlug": "albury-brewhouse",
-        "blurb": "Hosts musicians playing modern acoustic music. Craft beers brewed on site at 618 Dean Street. Open 5 days including Sunday."
+        "blurb": "Hosts musicians playing modern acoustic music. Describes itself as brewing craft beers onsite. Open 5 days including Sunday."
       },
       {
         "listingSlug": "the-thirsty-devil-brewery-south-albury",
-        "blurb": "Hoppy Hour Wednesday to Friday 4-6pm, plus trivia, live music and open mic nights. Six core beers brewed on site: pale ale, IPA, red ale, mid strength ale, porter and ginger beer."
+        "blurb": "Regular events including Hoppy Hour, live music, trivia night, open mic and jam night. Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%)."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "live-music-in-wagga-wagga",
@@ -1962,13 +2017,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-albury",
     "title": "The long established businesses of Albury",
-    "intro": "The 24 businesses in Albury, NSW, that publish the year they started, oldest first. The earliest is Star Hotel, trading since 1874. Only businesses that state a date themselves are here: nothing is inferred from an old building or an old sounding name, because that is the one fact this list is entirely about. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "The 26 businesses in Albury, NSW, that publish the year they started, oldest first. The earliest is Star Hotel, trading since 1874. Only businesses that state a date themselves are here: nothing is inferred from an old building or an old sounding name, because that is the one fact this list is entirely about. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "items": [
@@ -1979,6 +2034,10 @@
       {
         "listingSlug": "albury-tigers",
         "blurb": "Since 1876. Plays in the Ovens & Murray Football Netball League. Grounds and rooms on Wodonga Place in central Albury."
+      },
+      {
+        "listingSlug": "bockman-batteries",
+        "blurb": "Since 1905. Batteries for cars, trucks, motorcycles, scooters, boats, tractors, lawn mowers and toys. Also supplies engine oils, coolant, marine oils, synthetic oils and motorcycle fluids."
       },
       {
         "listingSlug": "hockey-albury-wodonga",
@@ -1998,7 +2057,7 @@
       },
       {
         "listingSlug": "hamblin-hire",
-        "blurb": "Since 1978. Access and lifting equipment, earthmoving plant and compaction gear. Concrete and masonry tools, power tools and hand tools."
+        "blurb": "Since 1978. Access and lifting equipment and air compressors. Compaction equipment and concrete tools."
       },
       {
         "listingSlug": "brad-andrews-landscaping",
@@ -2065,14 +2124,18 @@
         "blurb": "Since 2018. Woodfired pizza and handmade pasta. Breakfast served daily."
       },
       {
+        "listingSlug": "genesis-automotive-services",
+        "blurb": "Since 2020. Services Albury and surrounds from a workshop at Lavington. Mechanical servicing, auto electrical and auto air conditioning work."
+      },
+      {
         "listingSlug": "murray-concert-choir",
         "blurb": "Since 2022. Rehearses Mondays 7.30pm to 9.30pm at St David's Uniting Church. A learning choir open to new singers."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-shepparton",
@@ -2124,8 +2187,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-south-albury",
@@ -2169,8 +2232,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-wagga-wagga",
@@ -2197,7 +2260,7 @@
       },
       {
         "listingSlug": "victory-memorial-gardens",
-        "blurb": "Since 1925. Designed by Thomas Kerr. On the banks of Wollundry Lagoon in the CBD."
+        "blurb": "Since 1925. Set on approximately 2 hectares on the banks of the Wollundry Lagoon. Contains The Cenotaph and memorials to the First and Second World Wars and the Vietnam War."
       },
       {
         "listingSlug": "glassons-body-works",
@@ -2220,6 +2283,10 @@
         "blurb": "Since 1976. Extensive beer garden with kids playground. Bistro lunch and dinner daily. Open seven days."
       },
       {
+        "listingSlug": "noel-comerfords-auto-parts-accessories",
+        "blurb": "Since 1978. Filters, brake pads, coil springs, shock absorbers, spark plugs and automotive paints. Accessories including seat covers, floor mats, car carpet and antennas."
+      },
+      {
         "listingSlug": "d-and-s-taber-electrical",
         "blurb": "Since 1981. Residential and commercial electrical work. Solar installation."
       },
@@ -2236,16 +2303,16 @@
         "blurb": "Since 1983. Collision repairs and panel beating. Custom resprays and paintless dent repairs."
       },
       {
+        "listingSlug": "all-things-off-road",
+        "blurb": "Since 1984. Stocks ARB, Bushranger, Rhino-Rack, Coast to Coast and Ultra Vision Lighting products. Carries caravan parts, trailer parts and general 4X4 accessories."
+      },
+      {
         "listingSlug": "diamonds-on-baylis-jewellers",
         "blurb": "Since 1984. Handcrafted rings and custom design. On-site repairs, resizing and stone resetting."
       },
       {
         "listingSlug": "crown-computers",
         "blurb": "Since 1995. Custom gaming and graphics PC builds. PC, notebook and laptop repairs."
-      },
-      {
-        "listingSlug": "riverina-tree-fellas",
-        "blurb": "Since 1999. Tree removals and tree felling. Pruning, hedging and canopy management."
       },
       {
         "listingSlug": "trail-st-cafe",
@@ -2257,15 +2324,11 @@
       },
       {
         "listingSlug": "custom-car-care-wagga",
-        "blurb": "Since 2003. Paint correction. Modesta ceramic coating specialist."
+        "blurb": "Since 2003. Applies Modesta ceramic coating systems for paint protection. Offers paint correction as a separate priced package."
       },
       {
         "listingSlug": "freedom-pools-and-spas-riverina",
         "blurb": "Since 2003. Fibreglass and concrete pools. Plunge pools and self-cleaning pools."
-      },
-      {
-        "listingSlug": "oreilly-trucks",
-        "blurb": "Since 2010. Truck repairs and servicing. Scania R&M warranty program."
       },
       {
         "listingSlug": "table-and-graze",
@@ -2274,8 +2337,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-wangaratta",
@@ -2315,8 +2378,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "long-established-businesses-in-wodonga",
@@ -2420,8 +2483,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "main-street-rutherglen",
@@ -2461,60 +2524,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
-  },
-  {
-    "slug": "mechanics-in-the-ovens-murray",
-    "title": "Every mechanic in the Ovens Murray",
-    "intro": "All 8 mechanics we list across the Ovens Murray, in 3 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
-    "localitySlug": "wangaratta",
-    "state": "VIC",
-    "regionSlug": "ovens-murray",
-    "categorySlug": "mechanics",
-    "items": [
-      {
-        "listingSlug": "custom-creations-paint-panel",
-        "blurb": "Private and insurance work welcome. Restoration of classic cars."
-      },
-      {
-        "listingSlug": "wangaratta-4wd-centre",
-        "blurb": "VACC accredited service and repairs centre. Local ARB 4x4 stockist."
-      },
-      {
-        "listingSlug": "wangaratta-automotive-centre",
-        "blurb": "Open Monday to Saturday, 8am to 5:30pm. Log book servicing."
-      },
-      {
-        "listingSlug": "a1-tyrepower-wangaratta",
-        "blurb": "Tyres for passenger, commercial, truck, agricultural and ATV use. Wheel alignments, balancing and alloy wheel repairs."
-      },
-      {
-        "listingSlug": "wangaratta-accident-repair-specialists",
-        "blurb": "Accident repairs for all makes and models, including heavy vehicles. Panel shop and paint facilities on site."
-      },
-      {
-        "listingSlug": "griceys-workshop-automotive-specialist",
-        "blurb": "Engine repair and diagnostics. Manual and automatic transmission service."
-      },
-      {
-        "listingSlug": "oneills-autos",
-        "blurb": "4x4 and diesel mechanical work. Pre-purchase vehicle inspections."
-      },
-      {
-        "listingSlug": "natrad-albury-wodonga",
-        "blurb": "Radiator repair and replacement. Intercooler and cooling system work."
-      }
-    ],
-    "author": "LocalsKnow",
-    "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "mechanics-in-the-riverina",
     "title": "Every mechanic in the Riverina",
-    "intro": "All 12 mechanics we list across the Riverina, in 7 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "All 11 mechanics we list across the Riverina, in 6 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -2545,10 +2561,6 @@
         "blurb": "General and logbook servicing. NSW roadworthy certificates."
       },
       {
-        "listingSlug": "go-automotive",
-        "blurb": "Mobile breakdown mechanic service. Roadside assistance."
-      },
-      {
         "listingSlug": "bartlett-automotive",
         "blurb": "Trading since 2004. European luxury car and EV servicing."
       },
@@ -2571,8 +2583,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "melbourne-road-wodonga",
@@ -2620,13 +2632,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "morgan-street-wagga-wagga",
     "title": "What is on Morgan Street, Wagga Wagga",
-    "intro": "Everything we list with an address on Morgan Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 10 places across 4 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Morgan Street in Wagga Wagga, NSW, walked end to end in street number order rather than sorted by rating. 9 places across 3 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "items": [
@@ -2641,10 +2653,6 @@
       {
         "listingSlug": "hurst-homes",
         "blurb": "New homes, house and land packages and custom designs. Display home and selection centre."
-      },
-      {
-        "listingSlug": "oasis-aquatic-centre",
-        "blurb": "Indoor 25 m pool and outdoor 50 m pool. Diving pool with springboards and a 5 m platform."
       },
       {
         "listingSlug": "townhouse-hotel-wagga",
@@ -2673,8 +2681,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "motels-in-the-ovens-murray",
@@ -2724,8 +2732,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "motels-in-the-riverina",
@@ -2819,8 +2827,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "museums-in-the-riverina",
@@ -2870,8 +2878,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "north-street-albury",
@@ -2911,8 +2919,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "oldest-businesses-in-the-goulburn-valley",
@@ -2969,8 +2977,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "oldest-businesses-in-the-ovens-murray",
@@ -3147,13 +3155,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "oldest-businesses-in-the-riverina",
     "title": "The oldest businesses in the Riverina",
-    "intro": "72 businesses across 17 towns of the Riverina that publish the year they started, oldest first, running from 1851 to 2024. The list is only as old as what each business says about itself, so a pub that has poured beer since the gold rush but never prints a date is not here. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "74 businesses across 17 towns of the Riverina that publish the year they started, oldest first, running from 1851 to 2024. The list is only as old as what each business says about itself, so a pub that has poured beer since the gold rush but never prints a date is not here. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -3191,12 +3199,16 @@
         "blurb": "Since 1899, in Jindera. Competes in the Hume Football Netball League. Auskick through to senior football."
       },
       {
+        "listingSlug": "bockman-batteries",
+        "blurb": "Since 1905, in Albury. Batteries for cars, trucks, motorcycles, scooters, boats, tractors, lawn mowers and toys. Also supplies engine oils, coolant, marine oils, synthetic oils and motorcycle fluids."
+      },
+      {
         "listingSlug": "farrell-lusher-solicitors",
         "blurb": "Since 1910, in Wagga Wagga. Family law, divorce and parenting matters. Criminal law, AVOs and driving offences."
       },
       {
         "listingSlug": "victory-memorial-gardens",
-        "blurb": "Since 1925, in Wagga Wagga. Designed by Thomas Kerr. On the banks of Wollundry Lagoon in the CBD."
+        "blurb": "Since 1925, in Wagga Wagga. Set on approximately 2 hectares on the banks of the Wollundry Lagoon. Contains The Cenotaph and memorials to the First and Second World Wars and the Vietnam War."
       },
       {
         "listingSlug": "the-area-hotel-griffith",
@@ -3271,8 +3283,12 @@
         "blurb": "Since 1977, in West Albury. Free access to 1200 hectares of bushland. About 29km of mountain bike singletrack across roughly 70 tracks."
       },
       {
+        "listingSlug": "noel-comerfords-auto-parts-accessories",
+        "blurb": "Since 1978, in Wagga Wagga. Filters, brake pads, coil springs, shock absorbers, spark plugs and automotive paints. Accessories including seat covers, floor mats, car carpet and antennas."
+      },
+      {
         "listingSlug": "hamblin-hire",
-        "blurb": "Since 1978, in Albury. Access and lifting equipment, earthmoving plant and compaction gear. Concrete and masonry tools, power tools and hand tools."
+        "blurb": "Since 1978, in Albury. Access and lifting equipment and air compressors. Compaction equipment and concrete tools."
       },
       {
         "listingSlug": "d-and-s-taber-electrical",
@@ -3289,6 +3305,10 @@
       {
         "listingSlug": "craig-glasson-smash-repairs",
         "blurb": "Since 1983, in Wagga Wagga. Collision repairs and panel beating. Custom resprays and paintless dent repairs."
+      },
+      {
+        "listingSlug": "all-things-off-road",
+        "blurb": "Since 1984, in Wagga Wagga. Stocks ARB, Bushranger, Rhino-Rack, Coast to Coast and Ultra Vision Lighting products. Carries caravan parts, trailer parts and general 4X4 accessories."
       },
       {
         "listingSlug": "diamonds-on-baylis-jewellers",
@@ -3343,10 +3363,6 @@
         "blurb": "Since 1998, in Narrandera. Fresh bread and rolls daily. Pies, pasties and sausage rolls."
       },
       {
-        "listingSlug": "riverina-tree-fellas",
-        "blurb": "Since 1999, in Wagga Wagga. Tree removals and tree felling. Pruning, hedging and canopy management."
-      },
-      {
         "listingSlug": "trail-st-cafe",
         "blurb": "Since 1999, in Wagga Wagga. Coffee roasted by Premium Coffee Roasters. Breakfast and brunch menu."
       },
@@ -3360,7 +3376,7 @@
       },
       {
         "listingSlug": "custom-car-care-wagga",
-        "blurb": "Since 2003, in Wagga Wagga. Paint correction. Modesta ceramic coating specialist."
+        "blurb": "Since 2003, in Wagga Wagga. Applies Modesta ceramic coating systems for paint protection. Offers paint correction as a separate priced package."
       },
       {
         "listingSlug": "freedom-pools-and-spas-riverina",
@@ -3393,10 +3409,6 @@
       {
         "listingSlug": "gjh-cabinets",
         "blurb": "Since 2010, in Albury. Workshop at 234 North Street, North Albury NSW 2640. Kitchen design and storage solutions."
-      },
-      {
-        "listingSlug": "oreilly-trucks",
-        "blurb": "Since 2010, in Wagga Wagga. Truck repairs and servicing. Scania R&M warranty program."
       },
       {
         "listingSlug": "platform-9-coffee-roasters",
@@ -3439,6 +3451,10 @@
         "blurb": "Since 2019, in Lavington. Royal Enfield dealer. Harley-Davidson servicing specialty."
       },
       {
+        "listingSlug": "genesis-automotive-services",
+        "blurb": "Since 2020, in Albury. Services Albury and surrounds from a workshop at Lavington. Mechanical servicing, auto electrical and auto air conditioning work."
+      },
+      {
         "listingSlug": "murray-concert-choir",
         "blurb": "Since 2022, in Albury. Rehearses Mondays 7.30pm to 9.30pm at St David's Uniting Church. A learning choir open to new singers."
       },
@@ -3449,8 +3465,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "olive-street-albury",
@@ -3494,8 +3510,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-late-in-albury",
@@ -3529,12 +3545,12 @@
         "blurb": "Trading since 2009. Traditional Thai curries and specialties. Open 5 days including Sunday. $$."
       },
       {
-        "listingSlug": "beer-deluxe-albury",
-        "blurb": "Pub classics kitchen. Beer garden. Closed Sundays."
+        "listingSlug": "albury-brewhouse",
+        "blurb": "All-day menu from noon, lunch 12pm-2.30pm and dinner 5.30pm-9pm. All day menu from 12 noon, with lunch 12pm-2:30pm and dinner 5:30pm-9pm. Open 5 days including Sunday."
       },
       {
-        "listingSlug": "albury-brewhouse",
-        "blurb": "All day menu from 12 noon, with lunch 12pm-2:30pm and dinner 5:30pm-9pm. Craft beers brewed on site at 618 Dean Street. Open 5 days including Sunday."
+        "listingSlug": "beer-deluxe-albury",
+        "blurb": "Pub classics kitchen. Beer garden. Closed Sundays."
       },
       {
         "listingSlug": "thai-lotus",
@@ -3575,8 +3591,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-late-in-shepparton",
@@ -3616,13 +3632,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-late-in-wagga-wagga",
     "title": "Open late in Wagga Wagga",
-    "intro": "The 15 places in Wagga Wagga, NSW, that publish a closing time of 8pm or later, latest closing first. Regional towns shut early and the kitchen usually stops well before the bar does, so this is the list worth having at seven o clock on a weeknight. Times are as published; ring ahead if it matters, because a kitchen closing early on a quiet night is normal. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "The 17 places in Wagga Wagga, NSW, that publish a closing time of 8pm or later, latest closing first. Regional towns shut early and the kitchen usually stops well before the bar does, so this is the list worth having at seven o clock on a weeknight. Times are as published; ring ahead if it matters, because a kitchen closing early on a quiet night is normal. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wagga-wagga",
     "state": "NSW",
     "items": [
@@ -3672,15 +3688,23 @@
       },
       {
         "listingSlug": "indian-tavern-tandoori",
-        "blurb": "Cuisine from all regions of India, ranging from hot to mild. Fully licensed and BYO, bottled wine only. Open 6 days including Sunday. $$."
+        "blurb": "Serves tandoori and curry dishes for dine-in and takeaway. Restaurant describes itself as Wagga Wagga's only multi award winning Indian restaurant. Open 6 days including Sunday. $$."
+      },
+      {
+        "listingSlug": "namaste-indian-cuisine",
+        "blurb": "Open seven days a week from 3pm to 9:30pm. Bring your own alcohol venue."
       },
       {
         "listingSlug": "astor-bar-and-grill",
         "blurb": "Pub classics and pizzas. Pizzas from the bar outside restaurant hours. Closed Sundays. $$."
       },
       {
+        "listingSlug": "irvin-day-hair",
+        "blurb": "Salon states it specialises in bobs, blondes and balayage. Services grouped as cutting, colouring and styling."
+      },
+      {
         "listingSlug": "plush-hairdressing",
-        "blurb": "Cutting and bespoke colour. Hair and scalp analysis with natural herbal infusions."
+        "blurb": "Bookings are by appointment only. Service list covers cutting, colouring, styling and treatments."
       },
       {
         "listingSlug": "lulu-and-kit-haircutters",
@@ -3689,8 +3713,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-late-in-wodonga",
@@ -3746,8 +3770,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-albury",
@@ -3801,10 +3825,6 @@
         "blurb": "Open seven days from 6.30am, closed public holidays. Shopfront at 10 Schuter Avenue in Thurgoona Plaza."
       },
       {
-        "listingSlug": "albury-brewhouse",
-        "blurb": "Open Wednesday to Sunday, 12pm to 10pm. Craft beers brewed on site at 618 Dean Street."
-      },
-      {
         "listingSlug": "andrew-harper-painting-and-decorating",
         "blurb": "Based at 4/554 Thurgoona Street, Albury NSW 2640. Site states more than 20 years in operation."
       },
@@ -3813,8 +3833,8 @@
         "blurb": "Tacos, enchiladas, fajitas and burritos. Fully licensed, no BYO."
       },
       {
-        "listingSlug": "the-thirsty-devil-brewery-south-albury",
-        "blurb": "Six core beers brewed on site: pale ale, IPA, red ale, mid strength ale, porter and ginger beer. Food served from the Hungry Devil food van, with gluten free selections."
+        "listingSlug": "albury-brewhouse",
+        "blurb": "Open Wednesday to Sunday, 12pm to 10pm. Describes itself as brewing craft beers onsite."
       },
       {
         "listingSlug": "vanilla-pod-pizza-pasta-bar-albury",
@@ -3827,6 +3847,10 @@
       {
         "listingSlug": "jones-street-take-away",
         "blurb": "Open Sunday mornings. Fish battered fresh, not pre-battered."
+      },
+      {
+        "listingSlug": "the-thirsty-devil-brewery-south-albury",
+        "blurb": "Open Wednesday to Friday from 4pm and Saturday and Sunday from 12pm. Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%)."
       },
       {
         "listingSlug": "twin-cities-glass",
@@ -3847,8 +3871,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-rutherglen",
@@ -3912,8 +3936,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-shepparton",
@@ -3969,8 +3993,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-wagga-wagga",
@@ -4004,10 +4028,6 @@
         "blurb": "Open seven days, 7am to 5pm. Glass, security doors and screens."
       },
       {
-        "listingSlug": "indian-tavern-tandoori",
-        "blurb": "Dinner service from 5:30pm Tuesday to Sunday. Cuisine from all regions of India, ranging from hot to mild. Open 6 days including Sunday."
-      },
-      {
         "listingSlug": "flip-out-wagga-wagga",
         "blurb": "Open seven days. Trampolines, foam pits and Olympic trampolines."
       },
@@ -4016,8 +4036,12 @@
         "blurb": "Open seven days, including Saturday and Sunday mornings. Vaccinations including flu, COVID-19, shingles, meningococcal, hepatitis A/B, HPV, typhoid and whooping cough."
       },
       {
+        "listingSlug": "indian-tavern-tandoori",
+        "blurb": "Evening trade only, Tuesday to Sunday. Serves tandoori and curry dishes for dine-in and takeaway. Open 6 days including Sunday."
+      },
+      {
         "listingSlug": "thaigga",
-        "blurb": "Modern Thai fusion and traditional dishes. Open kitchen."
+        "blurb": "Thai fusion menu combining traditional dishes and the kitchen's own versions. Open kitchen so diners can watch meals being prepared."
       },
       {
         "listingSlug": "union-club-hotel",
@@ -4034,8 +4058,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-wangaratta",
@@ -4079,8 +4103,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-wodonga",
@@ -4140,8 +4164,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "open-on-a-sunday-in-yackandandah",
@@ -4177,8 +4201,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "plumbers-in-the-riverina",
@@ -4232,8 +4256,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "pubs-in-the-ovens-murray",
@@ -4295,8 +4319,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "pubs-in-the-riverina",
@@ -4430,8 +4454,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "restaurants-in-the-ovens-murray",
@@ -4493,8 +4517,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "restaurants-in-the-riverina",
@@ -4556,8 +4580,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "smollett-street-albury",
@@ -4593,8 +4617,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "step-free-access-in-albury",
@@ -4616,22 +4640,22 @@
         "blurb": "Free admission. Permanent exhibition 'Crossing Place: A Story of Albury'. Open seven days."
       },
       {
-        "listingSlug": "the-thirsty-devil-brewery-south-albury",
-        "blurb": "Six core beers brewed on site: pale ale, IPA, red ale, mid strength ale, porter and ginger beer. Food served from the Hungry Devil food van, with gluten free selections."
-      },
-      {
         "listingSlug": "the-cottage-motor-inn",
         "blurb": "One and two bedroom ground floor apartments. 10 minute walk to Dean Street."
       },
       {
         "listingSlug": "albury-botanic-gardens",
         "blurb": "Accessible parking and toilets. Free entry, open daily from 6:30am to sunset."
+      },
+      {
+        "listingSlug": "the-thirsty-devil-brewery-south-albury",
+        "blurb": "Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%). Hungry Devil food van operates daily during peak lunch and dinner times, with gluten-free options."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "step-free-access-in-wagga-wagga",
@@ -4665,10 +4689,6 @@
         "blurb": "Wheelchair accessible with support for vision and hearing loss. National Art Glass Gallery and the National Art Glass Collection."
       },
       {
-        "listingSlug": "oasis-aquatic-centre",
-        "blurb": "Indoor 25 m pool and outdoor 50 m pool. Diving pool with springboards and a 5 m platform."
-      },
-      {
         "listingSlug": "mercure-wagga-wagga",
         "blurb": "86 hotel rooms and self-contained apartments. One Morgan Street restaurant and bar."
       },
@@ -4693,14 +4713,18 @@
         "blurb": "Wheelchair accessible with vision and hearing support. Six screens in the Wagga CBD."
       },
       {
+        "listingSlug": "oasis-aquatic-centre",
+        "blurb": "Owned and managed by Wagga Wagga City Council. 50 metre, 10 lane outdoor pool built to FINA standard, solar heated, 1.2m to 2.05m deep."
+      },
+      {
         "listingSlug": "civic-apartments",
         "blurb": "Two-bedroom accessible suite with accessible bathroom and washing machine. Studio through to two-bedroom accessible suites."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "step-free-access-in-wodonga",
@@ -4732,13 +4756,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "swimming-spots-in-the-riverina",
     "title": "Every swimming spot in the Riverina",
-    "intro": "All 8 swimming spots we list across the Riverina, in 6 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "All 10 swimming spots we list across the Riverina, in 5 towns, grouped by town so it reads as a drive. The town pages are too narrow if you are planning a trip and the site wide category page is too broad, and the region is the level people actually search at. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "albury",
     "state": "NSW",
     "regionSlug": "riverina",
@@ -4746,19 +4770,19 @@
     "items": [
       {
         "listingSlug": "albury-swim-centre",
-        "blurb": "Outdoor 50 metre pools with lifeguards on duty. Waterslides."
+        "blurb": "Eight lane 50m heated pool and a six lane 25m heated pool. Covered babies pool and a waterslide."
+      },
+      {
+        "listingSlug": "lavington-swim-centre",
+        "blurb": "Playground, BBQ area and kiosk with food and drinks on site. Seven lane 50m outdoor heated pool."
       },
       {
         "listingSlug": "lake-hume",
         "blurb": "About 20km east of the Albury CBD. Dam completed in 1936."
       },
       {
-        "listingSlug": "lake-albert",
+        "listingSlug": "lake-albert-lake-albert",
         "blurb": "5.5 km circuit walking and cycling track. Eight outdoor fitness stations on the eastern side."
-      },
-      {
-        "listingSlug": "lavington-swim-centre",
-        "blurb": "Seasonal outdoor pool open over summer. Swimming programs and low cost aqua exercise classes."
       },
       {
         "listingSlug": "lake-talbot-water-park",
@@ -4774,18 +4798,26 @@
       },
       {
         "listingSlug": "oasis-aquatic-centre",
-        "blurb": "Indoor 25 m pool and outdoor 50 m pool. Diving pool with springboards and a 5 m platform."
+        "blurb": "Owned and managed by Wagga Wagga City Council. 50 metre, 10 lane outdoor pool built to FINA standard, solar heated, 1.2m to 2.05m deep."
+      },
+      {
+        "listingSlug": "wagga-beach",
+        "blurb": "Sandy beach with direct access to the Murrumbidgee River for swimming in warmer months. Kayaks and canoes can be launched from the beach."
+      },
+      {
+        "listingSlug": "lake-albert",
+        "blurb": "Used for swimming, boating, fishing and other water-based activities. Two public boat ramps: one at Bosley Park on the western shore and one at Apex Park on the eastern side."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "thomas-mitchell-drive-wodonga",
     "title": "What is on Thomas Mitchell Drive, Wodonga",
-    "intro": "Everything we list with an address on Thomas Mitchell Drive in Wodonga, VIC, walked end to end in street number order rather than sorted by rating. 9 places across 2 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Thomas Mitchell Drive in Wodonga, VIC, walked end to end in street number order rather than sorted by rating. 10 places across 2 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "wodonga",
     "state": "VIC",
     "items": [
@@ -4800,6 +4832,10 @@
       {
         "listingSlug": "dn-bishop-and-co",
         "blurb": "Commercial construction electrical work. Certificates of electrical safety."
+      },
+      {
+        "listingSlug": "leigh-martin-marine",
+        "blurb": "Quintrex dealer selling new and used boats. Mercury outboard, sterndrive and inboard sales."
       },
       {
         "listingSlug": "a-grade-oils-batteries",
@@ -4823,13 +4859,13 @@
       },
       {
         "listingSlug": "oneills-autos",
-        "blurb": "4x4 and diesel mechanical work. Pre-purchase vehicle inspections."
+        "blurb": "Brake and clutch maintenance. Transmission repairs and gearbox replacements."
       }
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "townsend-street-albury",
@@ -4840,7 +4876,7 @@
     "items": [
       {
         "listingSlug": "the-thirsty-devil-brewery-south-albury",
-        "blurb": "Six core beers brewed on site: pale ale, IPA, red ale, mid strength ale, porter and ginger beer. Food served from the Hungry Devil food van, with gluten free selections."
+        "blurb": "Six core beers brewed on site: Pale Ale (5.6%), IPA (5.6%), Red Ale (5.5%), Mid Strength Ale (3.5%), Porter (5.5%) and Ginger Beer (5%). Hungry Devil food van operates daily during peak lunch and dinner times, with gluten-free options."
       },
       {
         "listingSlug": "farben-painting-and-decorating",
@@ -4869,8 +4905,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "trail-street-wagga-wagga",
@@ -4881,7 +4917,7 @@
     "items": [
       {
         "listingSlug": "plush-hairdressing",
-        "blurb": "Cutting and bespoke colour. Hair and scalp analysis with natural herbal infusions."
+        "blurb": "Bookings are by appointment only. Service list covers cutting, colouring, styling and treatments."
       },
       {
         "listingSlug": "shumack-dental-and-implants",
@@ -4910,8 +4946,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "urana-road-lavington",
@@ -4951,13 +4987,13 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "wagga-road-lavington",
     "title": "What is on Wagga Road, Lavington",
-    "intro": "Everything we list with an address on Wagga Road in Lavington, NSW, walked end to end in street number order rather than sorted by rating. 15 places across 3 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
+    "intro": "Everything we list with an address on Wagga Road in Lavington, NSW, walked end to end in street number order rather than sorted by rating. 14 places across 3 kinds of business. A street is how people actually describe where they are going, and it is the one grouping a directory organised by suburb and category cannot show you. This list is compiled by a rule rather than written by hand, and the rule is stated above. The note under each entry is assembled from the facts recorded against that business during research, taken from what it publishes about itself. Nothing here is a review, nobody paid to be included, and the order is not a ranking.",
     "localitySlug": "lavington",
     "state": "NSW",
     "items": [
@@ -5010,10 +5046,6 @@
         "blurb": "Trailer manufacturer and seller on Wagga Road, Lavington. Range includes box, cage, tandem, tradesman top, tipper and car carrier trailers."
       },
       {
-        "listingSlug": "border-marine-centre",
-        "blurb": "Caravan and trailer service division alongside the Stacer boat dealership. Gas system compliance and safety checks, and water system servicing."
-      },
-      {
         "listingSlug": "albury-holiday-park",
         "blurb": "Swimming pool and playground. Self-contained cabins. Open seven days."
       },
@@ -5024,8 +5056,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "where-to-stay-in-albury",
@@ -5077,8 +5109,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "where-to-stay-in-beechworth",
@@ -5114,8 +5146,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "where-to-stay-in-rutherglen",
@@ -5147,8 +5179,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "where-to-stay-in-wagga-wagga",
@@ -5200,8 +5232,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "where-to-stay-in-wodonga",
@@ -5241,8 +5273,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "wineries-in-the-ovens-murray",
@@ -5344,8 +5376,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "wyndham-street-shepparton",
@@ -5389,8 +5421,8 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   },
   {
     "slug": "young-street-albury",
@@ -5434,7 +5466,7 @@
     ],
     "author": "LocalsKnow",
     "method": "compiled",
-    "publishedAt": "2026-08-25",
-    "reviewedAt": "2026-08-25"
+    "publishedAt": "2026-08-26",
+    "reviewedAt": "2026-08-26"
   }
 ]

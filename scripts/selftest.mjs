@@ -379,6 +379,23 @@ if (fs.existsSync(path.join(DATA, 'listings.json'))) {
   const badScore = listings.filter((l) => l.qualityScore < 0 || l.qualityScore > 100);
   eq('every quality score is between 0 and 100', badScore.length, 0);
 
+  /*
+   * Declared here rather than below, because the duplicate check uses it too.
+   *
+   * It sat under the service area assertion, which is forty lines further down,
+   * and const is not hoisted. The duplicate check only reaches it when two
+   * listings already share a folded name, which had never happened, so the
+   * temporal dead zone sat there harmlessly until a research pass finally
+   * produced a name collision and the whole suite died on line 401 instead of
+   * reporting a failure.
+   */
+  const kmBetween = (a, b) => {
+    const R = 6371, tr = Math.PI / 180;
+    const dLat = (b.lat - a.lat) * tr, dLng = (b.lng - a.lng) * tr;
+    const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLng / 2) ** 2 * Math.cos(a.lat * tr) * Math.cos(b.lat * tr);
+    return 2 * R * Math.asin(Math.sqrt(h));
+  };
+
   // One business, one page. The same venue arriving from two research clusters
   // produced two URLs with the same H1 and the same address, which is the exact
   // duplicate content this site is otherwise careful about.
@@ -408,12 +425,6 @@ if (fs.existsSync(path.join(DATA, 'listings.json'))) {
 
   // Inference rule: same state and under 12km should never appear as an
   // inferred service area, because that is the same town.
-  const kmBetween = (a, b) => {
-    const R = 6371, tr = Math.PI / 180;
-    const dLat = (b.lat - a.lat) * tr, dLng = (b.lng - a.lng) * tr;
-    const h = Math.sin(dLat / 2) ** 2 + Math.sin(dLng / 2) ** 2 * Math.cos(a.lat * tr) * Math.cos(b.lat * tr);
-    return 2 * R * Math.asin(Math.sqrt(h));
-  };
   let violations = 0;
   for (const l of listings) {
     if (!l.serviceAreaInferred) continue;
