@@ -28,6 +28,11 @@ export default defineConfig({
   vite: {
     build: {
       assetsInlineLimit: 2048,
+      // Keep the browser floor Vite 6 shipped with (Safari 14 / iOS 14).
+      // Vite 8 defaults to Safari 16.4 and rewrites max-width media queries
+      // into range syntax, which older iPhones ignore entirely.
+      target: ['edge88', 'firefox78', 'chrome87', 'safari14'],
+      cssTarget: ['edge88', 'firefox78', 'chrome87', 'safari14'],
     },
   },
 });

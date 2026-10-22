@@ -5,7 +5,7 @@
   "type": "module",
   "description": "Independent business and places directory for New South Wales and Victoria",
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=22.22.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -29,10 +29,10 @@
     "favicon": "node scripts/favicon.mjs"
   },
   "dependencies": {
-    "astro": "^5.18.2"
+    "astro": "^7.4.1"
   },
   "devDependencies": {
-    "sharp": "^0.35.3",
+    "sharp": "^0.35.5",
     "typescript": "^5.9.2"
   }
 }
