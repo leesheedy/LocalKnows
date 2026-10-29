@@ -21,14 +21,20 @@ import type {
   StateCode,
   WireArticle,
 } from './types';
-import { SITE, STATES } from './site';
-import { averageRating, url } from './repo';
+import { SITE, STATES, VERTICALS, BRAND_PROFILES } from './site';
+import { averageRating, coveredRegions, url } from './repo';
 import { listingMedia } from './media';
 
 export const abs = (p: string): string => new URL(p, SITE.url).toString();
 
+/**
+ * Stable identifiers. The spelling is British on purpose and has been live
+ * since August; an @id is a name other graphs may already point at, so it is
+ * never "corrected".
+ */
 const ORG_ID = abs('/') + '#organisation';
 const SITE_ID = abs('/') + '#website';
+const LOGO_ID = abs('/') + '#logo';
 
 export interface Crumb {
   name: string;
@@ -37,35 +43,101 @@ export interface Crumb {
 
 // ------------------------------------------------------------------ site wide
 
-export function organisationNode() {
+/**
+ * Automatrix, the business behind the site.
+ *
+ * The @id is the one automatrix.au uses for itself, so a crawler reading both
+ * sites joins them into one company. Every property is copied from what that
+ * site publishes about itself; see SITE.publisher.
+ */
+export function publisherNode() {
+  const p = SITE.publisher;
   return {
+    '@type': 'Organization',
+    '@id': p.id,
+    name: p.brand,
+    alternateName: p.name,
+    legalName: p.legalName,
+    url: p.url + '/',
+    email: p.email,
+    identifier: { '@type': 'PropertyValue', propertyID: 'ABN', value: p.abn },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: p.address.locality,
+      addressRegion: p.address.region,
+      postalCode: p.address.postcode,
+      addressCountry: p.address.country,
+    },
+    sameAs: [...p.sameAs],
+  };
+}
+
+const KNOWS_ABOUT: Record<string, string> = {
+  trades: 'Trades and services',
+  eat_drink: 'Cafes, bakeries, restaurants and takeaway',
+  pubs_clubs: 'Pubs and clubs',
+  stay: 'Motels, cabins, campgrounds and farm stays',
+  things_to_do: 'Parks, wineries, galleries and days out',
+  clubs_hobbies: 'Sporting clubs, hobby groups and community organisations',
+};
+
+/**
+ * LocalsKnow as an entity.
+ *
+ * Google could not find the site for its own name, because "localsknow" reads
+ * as the phrase "locals know". What fixes that over time is a consistent,
+ * checkable description of one thing: the spellings it goes by, who publishes
+ * it, where it covers and how to reach it. Coverage is the regions that have a
+ * live town, read from the data on every build, so the graph never claims a
+ * region the site has no pages for. sameAs is only emitted once BRAND_PROFILES
+ * holds a real profile.
+ */
+export function organisationNode() {
+  const node: Record<string, unknown> = {
     '@type': 'Organization',
     '@id': ORG_ID,
     name: SITE.name,
+    alternateName: [...SITE.alternateNames],
     url: abs('/'),
-    description:
-      'An independent business and places directory for New South Wales and Victoria, built around service areas rather than state borders.',
+    description: SITE.description,
     logo: {
       '@type': 'ImageObject',
-      '@id': abs('/') + '#logo',
-      url: abs('/brand/localknows-logo.png'),
-      width: 512,
-      height: 512,
+      '@id': LOGO_ID,
+      url: abs(SITE.logo.path),
+      contentUrl: abs(SITE.logo.path),
+      width: SITE.logo.width,
+      height: SITE.logo.height,
       caption: SITE.name,
     },
-    image: { '@id': abs('/') + '#logo' },
+    image: { '@id': LOGO_ID },
     email: SITE.email,
-    areaServed: [
-      { '@type': 'State', name: 'New South Wales' },
-      { '@type': 'State', name: 'Victoria' },
+    foundingDate: SITE.foundingDate,
+    areaServed: coveredRegions().map((r) => ({
+      '@type': 'AdministrativeArea',
+      name: r.name,
+      url: abs(url.region(r)),
+      containedInPlace: { '@type': 'State', name: STATES[r.state].name },
+    })),
+    // The six verticals, in the words a person would use for each.
+    knowsAbout: [
+      'Local businesses in New South Wales and Victoria',
+      ...VERTICALS.map((v) => KNOWS_ABOUT[v.key] ?? v.name),
+      'Businesses that work across the New South Wales and Victoria border',
     ],
-    parentOrganization: {
-      '@type': 'Organization',
-      name: SITE.publisher.name,
-      url: SITE.publisher.url,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: SITE.email,
+      url: abs(url.contact()),
+      areaServed: 'AU',
+      availableLanguage: SITE.language,
     },
+    parentOrganization: publisherNode(),
     publishingPrinciples: abs(url.editorialPolicy()),
+    correctionsPolicy: abs(url.dataPolicy()),
   };
+  if (BRAND_PROFILES.length) node.sameAs = [...BRAND_PROFILES];
+  return node;
 }
 
 export function websiteNode() {
@@ -74,9 +146,12 @@ export function websiteNode() {
     '@id': SITE_ID,
     url: abs('/'),
     name: SITE.name,
+    // Read by Google's site name system, which is what labels every result.
+    alternateName: [...SITE.alternateNames],
     description: SITE.tagline,
     inLanguage: SITE.language,
     publisher: { '@id': ORG_ID },
+    copyrightHolder: { '@id': ORG_ID },
     potentialAction: {
       '@type': 'SearchAction',
       target: {
@@ -109,6 +184,12 @@ export function webPageNode(opts: {
   type?: string;
   datePublished?: string;
   dateModified?: string;
+  /**
+   * The page's "In short" paragraph, verbatim. schema.org's CreativeWork
+   * abstract, and the line postbuild lifts into llms.txt, so an answer engine
+   * reads the same summary a person reads at the top of the page.
+   */
+  abstract?: string;
 }) {
   const node: Record<string, unknown> = {
     '@type': opts.type ?? 'WebPage',
@@ -119,7 +200,9 @@ export function webPageNode(opts: {
     isPartOf: { '@id': SITE_ID },
     inLanguage: SITE.language,
     about: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
   };
+  if (opts.abstract) node.abstract = opts.abstract;
   if (opts.crumbs?.length) node.breadcrumb = { '@id': abs(opts.pageUrl) + '#breadcrumb' };
   if (opts.datePublished) node.datePublished = opts.datePublished;
   if (opts.dateModified) node.dateModified = opts.dateModified;
@@ -311,12 +394,18 @@ export function itemListNode(opts: {
   pageUrl: string;
   name: string;
   items: { url: string; name: string }[];
+  /**
+   * The size of the whole list when this page shows part of it. schema.org
+   * defines numberOfItems as applying to the full list under pagination, so a
+   * page 1 showing 20 of 26 says 26.
+   */
+  numberOfItems?: number;
 }) {
   return {
     '@type': 'ItemList',
     '@id': abs(opts.pageUrl) + '#listings',
     name: opts.name,
-    numberOfItems: opts.items.length,
+    numberOfItems: opts.numberOfItems ?? opts.items.length,
     itemListOrder: 'https://schema.org/ItemListOrderDescending',
     itemListElement: opts.items.map((it, i) => ({
       '@type': 'ListItem',
