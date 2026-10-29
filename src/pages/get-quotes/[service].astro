@@ -1,0 +1,211 @@
+---
+/**
+ * One quote page per service: /get-quotes/solar/ and the rest.
+ *
+ * The form is the first thing on the page, beside three plain sentences about
+ * what happens to the request. Below it the page earns its place in an index
+ * with things a person comparing quotes can use: the local businesses that do
+ * the work, in the directory's own order, what to check before signing, and
+ * the town pages for the category.
+ */
+import Base from '~/layouts/Base.astro';
+import QuoteForm from '~/components/QuoteForm.astro';
+import ListingCard from '~/components/ListingCard.astro';
+import Faq from '~/components/Faq.astro';
+import { url, liveLocalities, getCategoryBySlug, listingsInLocalityCategory, pageExists, STATES } from '~/lib/repo';
+import { QUOTE_SERVICES, QUOTE_GROUPS, type QuoteService } from '~/lib/quote-services';
+import { quoteListings, quotePrimaryCount } from '~/lib/quotes';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import { graph, organisationNode, websiteNode, breadcrumbNode, webPageNode, faqNode, type Crumb } from '~/lib/seo';
+
+export function getStaticPaths() {
+  return QUOTE_SERVICES.map((service) => ({ params: { service: service.slug }, props: { service } }));
+}
+
+interface Props {
+  service: QuoteService;
+}
+const { service } = Astro.props;
+const canonicalPath = url.quote(service);
+
+const businesses = quoteListings(service);
+const featured = businesses.slice(0, 6);
+const primary = getCategoryBySlug(service.categorySlugs[0]);
+const primaryCount = quotePrimaryCount(service);
+
+// Town pages for the main category, biggest first, only where the page is built.
+const townLinks = primary
+  ? liveLocalities()
+      .map((l) => ({ l, count: listingsInLocalityCategory(l.id, primary.id).length }))
+      .filter((t) => t.count > 0 && pageExists(url.localityCategory(t.l, primary)))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 12)
+  : [];
+
+const others = QUOTE_SERVICES.filter((s) => s.slug !== service.slug);
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Get quotes', href: url.quotes() },
+  { name: service.label, href: canonicalPath },
+];
+
+const description = `${service.intro} Free, no account, about a minute.`;
+
+const faqs = [
+  {
+    q: `How much does it cost to get ${service.label.toLowerCase()} quotes?`,
+    a: 'Nothing. The form is free to use and there is no account to make. You only pay a business if you decide to go ahead with their quote.',
+  },
+  {
+    q: 'Who gets my details?',
+    a: `LocalsKnow, and up to three local ${service.who} who cover your town and can do the job. Your details are not published, not sold to a list, and not passed to anyone for a different job.`,
+  },
+  {
+    q: 'How are the businesses chosen?',
+    a: 'From the directory, in its own order: whether the business covers your town, then how close it is, then how complete and checked its profile is. A payment cannot move a business up that order.',
+  },
+  {
+    q: 'Do I have to accept a quote?',
+    a: 'No. Compare them, ask questions, and go with whoever suits you, or nobody. If you would rather not be contacted any more, tell the business or reply to us and we will pass it on.',
+  },
+  {
+    q: 'Which areas does this cover?',
+    a: `Towns on both sides of the Murray, from Albury and Wodonga out to Wagga Wagga, Shepparton, Wangaratta and the towns around them. ${n(liveLocalities().length)} towns have listings today, and the form will still take a request from further out.`,
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: service.h1, description, crumbs, dateModified: BUILD_DATE }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title={service.title}
+  titleAlt={[service.h1]}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <section class="qhero">
+    <div class="wrap qhero-grid">
+      <div class="qhero-copy">
+        <p class="eyebrow mono">Free quote matching &middot; {STATES.NSW.code} &amp; {STATES.VIC.code}</p>
+        <h1>{service.h1}</h1>
+        <p class="qhero-intro">{service.intro}</p>
+        <ul class="qhero-points">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+            <span><b>Businesses that come to you.</b> Matched on the towns they actually service, on both sides of the border.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span><b>Checked where it counts.</b> Licences are checked against the state register before a business is called verified.</span>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            <span><b>Free, and no obligation.</b> Compare up to three quotes and pick whoever suits you, or nobody.</span>
+          </li>
+        </ul>
+        {primaryCount > 0 && (
+          <p class="qhero-proof mono">{n(primaryCount)} {primary?.name.toLowerCase()} listed</p>
+        )}
+      </div>
+      <div class="qhero-form">
+        <QuoteForm service={service} />
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How it works</h2>
+      </div>
+      <ol class="qsteps">
+        <li><b>1</b><h3>Tell us about the job</h3><p>A few taps. What you need, where it is, and roughly when and how much.</p></li>
+        <li><b>2</b><h3>We match local {service.who}</h3><p>Up to three who cover your town and do this kind of work. You see who they are straight away.</p></li>
+        <li><b>3</b><h3>Compare and choose</h3><p>They contact you with a quote. You decide, with no pressure from us.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  {featured.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head row">
+          <div>
+            <h2>Local {service.who}</h2>
+            <p>From the directory, in its usual order. Nobody pays to be here or to be higher up.</p>
+          </div>
+          {primary && <a class="btn btn-ghost btn-sm" href={url.category(primary)}>All {primary.name.toLowerCase()}</a>}
+        </div>
+        <div class="cards">
+          {featured.map((l) => <ListingCard listing={l} />)}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="sec">
+    <div class="wrap qsplit">
+      <div>
+        <div class="sec-head">
+          <h2>Before you sign anything</h2>
+          <p>Worth asking whoever you get a quote from. None of it costs anything to check.</p>
+        </div>
+        <ol class="qtips">
+          {service.tips.map((t) => <li>{t}</li>)}
+        </ol>
+      </div>
+      {townLinks.length > 0 && primary && (
+        <div>
+          <div class="sec-head">
+            <h2>{primary.name} by town</h2>
+            <p>Every business in the category, town by town, with hours and service areas.</p>
+          </div>
+          <ul class="qtowns">
+            {townLinks.map(({ l, count }) => (
+              <li>
+                <a href={url.localityCategory(l, primary)}>
+                  <span>{primary.name} in {l.name}</span>
+                  <span class="mono">{l.state} &middot; {count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading={`${service.label} quotes, answered`} />
+  </div>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Other quotes we can match</h2>
+      </div>
+      <div class="qservices qservices-sm">
+        {others.map((s) => (
+          <a class="qservice" href={url.quote(s)}>
+            <span class="qservice-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
+            </span>
+            <span class="qservice-text"><strong>{s.label}</strong><span>{QUOTE_GROUPS[s.group]}</span></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

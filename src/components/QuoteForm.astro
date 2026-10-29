@@ -1,0 +1,473 @@
+---
+/**
+ * The quote request form.
+ *
+ * One Netlify form, `quote`, with the same field names on every service page,
+ * because Netlify only keeps fields it saw in the built HTML. The service's own
+ * questions ride in q1 to q4 and are also folded into `answers` as readable
+ * question and answer pairs, so the CRM never has to know which service asked
+ * what.
+ *
+ * Without JavaScript it is one long form that posts to /thanks/. With it, it is
+ * one question per screen, picks advance on their own, and the last step posts
+ * in the background and swaps the form for the businesses that cover the town.
+ * Those recommendations are worked out here from build time data, in the
+ * directory's own order, and the same list is sent with the request so whoever
+ * handles the lead sees exactly what the person saw.
+ */
+import type { Locality } from '~/lib/types';
+import { url } from '~/lib/repo';
+import { TIMEFRAMES, CONTACT_PREFS, BEST_TIMES, type QuoteService } from '~/lib/quote-services';
+import { quotePlaces, quoteCandidates } from '~/lib/quotes';
+
+interface Props {
+  service: QuoteService;
+  /** Prefills the town when the form sits on a town's page. */
+  locality?: Locality;
+  /** Heading level for the form title. */
+  headingLevel?: 2 | 3;
+}
+const { service, locality, headingLevel = 2 } = Astro.props;
+const Heading = ('h' + headingLevel) as 'h2' | 'h3';
+
+const places = quotePlaces();
+const candidates = quoteCandidates(service);
+const data = {
+  places,
+  candidates,
+  bands: Object.fromEntries(service.budget.bands.map((b) => [b.label, b.mid])),
+  label: service.label,
+  who: service.who,
+};
+const placeLabel = (p: (typeof places)[number]) => `${p[0]} ${p[1]} ${p[2]}`;
+const prefill = locality ? `${locality.name} ${locality.state} ${locality.postcode}` : '';
+const listId = 'qf-places-' + service.slug;
+const total = service.questions.length + 4;
+const id = (s: string) => `qf-${service.slug}-${s}`;
+---
+
+<div class="qf" data-quote-form>
+  <div class="qf-head">
+    <span class="qf-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={service.icon} /></svg>
+    </span>
+    <div class="qf-titles">
+      <Heading class="qf-title">Get up to 3 quotes</Heading>
+      <p class="qf-kicker">{service.label} &middot; free, about a minute</p>
+    </div>
+  </div>
+  <div class="qf-progress" aria-hidden="true"><span style={`width:${Math.round(100 / total)}%`}></span></div>
+
+  <form
+    name="quote"
+    method="POST"
+    action={url.thanks()}
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    class="qf-form"
+    novalidate
+  >
+    <input type="hidden" name="form-name" value="quote" />
+    <input type="hidden" name="subject" value={'LocalsKnow quote request: ' + service.label} />
+    <input type="hidden" name="service" value={service.slug} />
+    <input type="hidden" name="service_label" value={service.label} />
+    <input type="hidden" name="answers" value="" />
+    <input type="hidden" name="locality" value="" />
+    <input type="hidden" name="locality_label" value="" />
+    <input type="hidden" name="state" value="" />
+    <input type="hidden" name="postcode" value="" />
+    <input type="hidden" name="est_value" value="" />
+    <input type="hidden" name="property_type" value="" />
+    <input type="hidden" name="ownership" value="" />
+    <input type="hidden" name="recommended" value="" />
+    <input type="hidden" name="page_url" value="" />
+    <p hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+    <div class="qf-nav">
+      <button type="button" class="qf-back" data-qf-back hidden>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        Back
+      </button>
+      <span class="qf-count mono" data-qf-count aria-live="polite"></span>
+    </div>
+
+    {service.questions.map((q) => (
+      <fieldset class="qf-step" data-q={q.q} data-key={q.key ?? ''} data-auto data-required>
+        <legend class="qf-legend">{q.q}</legend>
+        <div class="qf-options">
+          {q.options.map((o) => (
+            <label class="qf-opt">
+              <input type="radio" name={q.id} value={o} />
+              <span class="qf-dot" aria-hidden="true"></span>
+              <span class="qf-opt-text">{o}</span>
+            </label>
+          ))}
+        </div>
+        <p class="qf-err" role="alert" hidden>Pick the closest one. It does not have to be exact.</p>
+      </fieldset>
+    ))}
+
+    <fieldset class="qf-step" data-step="where">
+      <legend class="qf-legend">Where is the job?</legend>
+      <label class="qf-label" for={id('town')}>Town, suburb or postcode</label>
+      <div class="qf-input-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <input
+          class="qf-input"
+          id={id('town')}
+          name="town"
+          type="text"
+          list={listId}
+          value={prefill}
+          autocomplete="address-level2"
+          placeholder="e.g. Wodonga or 3690"
+          required
+        />
+      </div>
+      <datalist id={listId}>
+        {places.map((p) => <option value={placeLabel(p)} />)}
+      </datalist>
+      <p class="qf-hint">We use it to find businesses that actually travel to you.</p>
+      <p class="qf-err" role="alert" hidden>Type the town or postcode so we can match local businesses.</p>
+      <button type="button" class="btn btn-river qf-next" data-qf-next>Continue</button>
+    </fieldset>
+
+    <fieldset class="qf-step" data-step="when" data-required-groups="timeframe budget">
+      <legend class="qf-legend">When, and roughly how much?</legend>
+      <p class="qf-sub">When would you like it done?</p>
+      <div class="qf-chips">
+        {TIMEFRAMES.map((t) => (
+          <label class="qf-chip"><input type="radio" name="timeframe" value={t} /><span>{t}</span></label>
+        ))}
+      </div>
+      <p class="qf-sub">{service.budget.q}</p>
+      <div class="qf-chips">
+        {service.budget.bands.map((b) => (
+          <label class="qf-chip"><input type="radio" name="budget" value={b.label} /><span>{b.label}</span></label>
+        ))}
+      </div>
+      <p class="qf-err" role="alert" hidden>Pick a time and a budget range. "Not sure" is a fine answer.</p>
+      <button type="button" class="btn btn-river qf-next" data-qf-next>Continue</button>
+    </fieldset>
+
+    <fieldset class="qf-step" data-step="details">
+      <legend class="qf-legend">Anything they should know?</legend>
+      <label class="qf-label" for={id('details')}>Optional, but it gets you a better first quote</label>
+      <textarea class="qf-input qf-textarea" id={id('details')} name="details" rows="4" maxlength="1500" placeholder={service.detailsHint}></textarea>
+      <button type="button" class="btn btn-river qf-next" data-qf-next>Continue</button>
+    </fieldset>
+
+    <fieldset class="qf-step" data-step="contact" data-required-groups="contact_pref">
+      <legend class="qf-legend">Where should they reach you?</legend>
+      <div class="qf-grid">
+        <div>
+          <label class="qf-label" for={id('name')}>Your name</label>
+          <input class="qf-input" id={id('name')} name="name" type="text" autocomplete="name" required maxlength="120" />
+        </div>
+        <div>
+          <label class="qf-label" for={id('phone')}>Mobile or phone</label>
+          <input class="qf-input" id={id('phone')} name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\-]{8,20}" maxlength="20" />
+        </div>
+        <div class="qf-span">
+          <label class="qf-label" for={id('email')}>Email <span class="qf-optional">optional</span></label>
+          <input class="qf-input" id={id('email')} name="email" type="email" autocomplete="email" maxlength="160" />
+        </div>
+      </div>
+      <p class="qf-sub">Best way to reach you</p>
+      <div class="qf-chips">
+        {CONTACT_PREFS.map((c, i) => (
+          <label class="qf-chip"><input type="radio" name="contact_pref" value={c} checked={i === 0} /><span>{c}</span></label>
+        ))}
+      </div>
+      <p class="qf-sub">Best time</p>
+      <div class="qf-chips">
+        {BEST_TIMES.map((t, i) => (
+          <label class="qf-chip"><input type="radio" name="best_time" value={t} checked={i === BEST_TIMES.length - 1} /><span>{t}</span></label>
+        ))}
+      </div>
+      <label class="qf-consent">
+        <input type="checkbox" name="consent" value="yes" required />
+        <span>
+          LocalsKnow can pass my request to up to three local businesses so they can contact me
+          about this job. LocalsKnow may be paid by a business for an introduction; that never
+          changes the order of listings. <a href={url.privacy() + '#quote-requests'}>Privacy</a>
+        </span>
+      </label>
+      <p class="qf-err" role="alert" hidden>Add your name and a phone number, and tick the box so we can pass your request on.</p>
+      <button type="submit" class="btn btn-gold qf-submit" data-qf-submit>
+        Get my quotes
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+      </button>
+      <p class="qf-fine">Free for you. No account, no spam, and your details only go to businesses for this job.</p>
+    </fieldset>
+  </form>
+
+  <div class="qf-done" data-qf-done hidden tabindex="-1">
+    <div class="qf-done-head">
+      <span class="qf-tick" aria-hidden="true">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg>
+      </span>
+      <div>
+        <p class="qf-done-title" data-qf-done-title>Request sent</p>
+        <p class="qf-done-sub" data-qf-done-sub></p>
+      </div>
+    </div>
+    <div data-qf-recs-wrap hidden>
+      <p class="mono qf-recs-label" data-qf-recs-label></p>
+      <ol class="qf-recs" data-qf-recs></ol>
+    </div>
+    <div class="qf-next-steps">
+      <p><b>What happens next.</b> We pass your request to up to three {service.who} who cover your area. They contact you directly by your preferred method, and you compare their quotes. Nobody can buy a better position in this list.</p>
+    </div>
+    <template data-qf-rec-tpl>
+      <li class="qf-rec">
+        <div class="qf-rec-main">
+          <a class="qf-rec-name" href=""></a>
+          <span class="qf-rec-verified" hidden>Verified licence</span>
+          <span class="qf-rec-meta"></span>
+        </div>
+        <div class="qf-rec-actions">
+          <a class="btn btn-sm btn-ghost qf-rec-call" href="">Call</a>
+          <a class="btn btn-sm qf-rec-view" href="">View</a>
+        </div>
+      </li>
+    </template>
+  </div>
+
+  <div class="qf-fail" data-qf-fail hidden role="alert">
+    <p><b>That did not send.</b> Check your connection and try again, or email the details to
+    <a href="mailto:hello@localsknow.com.au">hello@localsknow.com.au</a>.</p>
+    <button type="button" class="btn btn-sm btn-ghost" data-qf-retry>Try again</button>
+  </div>
+
+  <script type="application/json" data-qf-data set:html={JSON.stringify(data)} is:inline></script>
+</div>
+
+<script>
+  type Place = [string, string, string, number, number];
+  interface Candidate { n: string; u: string; p: string; t: string; s: string; la: number; lo: number; q: number; v: 0 | 1; c: number; a: number[] }
+  interface Data { places: Place[]; candidates: Candidate[]; bands: Record<string, number>; label: string; who: string }
+
+  const km = (la1: number, lo1: number, la2: number, lo2: number) => {
+    const r = (d: number) => (d * Math.PI) / 180;
+    const a = Math.sin(r(la2 - la1) / 2) ** 2 + Math.cos(r(la1)) * Math.cos(r(la2)) * Math.sin(r(lo2 - lo1) / 2) ** 2;
+    return 12742 * Math.asin(Math.sqrt(a));
+  };
+
+  function findPlace(places: Place[], text: string): number {
+    const t = text.trim().toLowerCase().replace(/\s+/g, ' ');
+    if (!t) return -1;
+    const pc = t.match(/\b([23]\d{3})\b/)?.[1];
+    const name = t.replace(/\b(nsw|vic|victoria|new south wales)\b/g, '').replace(/\b[23]\d{3}\b/g, '').trim();
+    const full = (p: Place) => `${p[0]} ${p[1]} ${p[2]}`.toLowerCase();
+    let i = places.findIndex((p) => full(p) === t);
+    if (i < 0 && name) i = places.findIndex((p) => p[0].toLowerCase() === name && (!pc || p[2] === pc));
+    if (i < 0 && name) i = places.findIndex((p) => p[0].toLowerCase() === name);
+    if (i < 0 && pc) i = places.findIndex((p) => p[2] === pc);
+    if (i < 0 && name.length > 2) i = places.findIndex((p) => p[0].toLowerCase().startsWith(name));
+    return i;
+  }
+
+  function recommend(d: Data, place: number) {
+    if (place < 0) return [];
+    const [, , , la, lo] = d.places[place];
+    // Covers the town, then specialist before generalist, then nearest, then
+    // profile quality. The same business listed twice (one phone number, or one
+    // name written two ways) is only recommended once.
+    const key = (s: string) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
+    const seen = new Set<string>();
+    return d.candidates
+      .map((c) => ({ c, covers: c.a.includes(place), dist: km(la, lo, c.la, c.lo) }))
+      .filter((x) => x.covers || x.dist <= 120)
+      .sort((x, y) => Number(y.covers) - Number(x.covers) || x.c.c - y.c.c || x.dist - y.dist || y.c.q - x.c.q)
+      .filter(({ c }) => {
+        const ids = [key(c.n), c.p.replace(/[^0-9]/g, '')].filter((v) => v.length > 5);
+        if (ids.some((v) => seen.has(v))) return false;
+        ids.forEach((v) => seen.add(v));
+        return true;
+      })
+      .slice(0, 5);
+  }
+
+  function init(root: HTMLElement) {
+    const form = root.querySelector('form') as HTMLFormElement;
+    const data = JSON.parse((root.querySelector('[data-qf-data]') as HTMLElement).textContent || '{}') as Data;
+    const steps = Array.from(form.querySelectorAll<HTMLFieldSetElement>('.qf-step'));
+    const bar = root.querySelector('.qf-progress span') as HTMLElement;
+    const count = root.querySelector('[data-qf-count]') as HTMLElement;
+    const back = root.querySelector('[data-qf-back]') as HTMLButtonElement;
+    const set = (name: string, value: string) => {
+      const el = form.elements.namedItem(name) as HTMLInputElement | null;
+      if (el) el.value = value;
+    };
+    let at = 0;
+
+    root.classList.add('qf-on');
+
+    const town = form.elements.namedItem('town') as HTMLInputElement;
+    const hash = location.hash.match(/town=([^&]+)/);
+    if (hash && !town.value) town.value = decodeURIComponent(hash[1]).replace(/-/g, ' ');
+
+    function show(n: number, focus = true) {
+      at = Math.max(0, Math.min(n, steps.length - 1));
+      steps.forEach((s, k) => (s.hidden = k !== at));
+      back.hidden = at === 0;
+      count.textContent = `Step ${at + 1} of ${steps.length}`;
+      bar.style.width = `${Math.round(((at + 1) / steps.length) * 100)}%`;
+      if (focus) {
+        const first = steps[at].querySelector<HTMLElement>('input:checked, input:not([type=hidden]), textarea');
+        (first ?? steps[at]).focus({ preventScroll: true });
+        const top = root.getBoundingClientRect().top;
+        if (top < 0 || top > window.innerHeight * 0.6) root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function valid(step: HTMLFieldSetElement): boolean {
+      const err = step.querySelector<HTMLElement>('.qf-err');
+      let ok = true;
+      if (step.hasAttribute('data-required') && !step.querySelector('input[type=radio]:checked')) ok = false;
+      for (const g of (step.dataset.requiredGroups || '').split(' ').filter(Boolean)) {
+        if (!step.querySelector(`input[name="${g}"]:checked`)) ok = false;
+      }
+      step.querySelectorAll<HTMLInputElement>('input[required], textarea[required]').forEach((el) => {
+        const good = el.type === 'checkbox' ? el.checked : el.value.trim() !== '' && el.checkValidity();
+        if (good) el.removeAttribute('aria-invalid');
+        else el.setAttribute('aria-invalid', 'true');
+        if (!good) ok = false;
+      });
+      if (err) err.hidden = ok;
+      return ok;
+    }
+
+    form.addEventListener('change', (e) => {
+      const input = e.target as HTMLInputElement;
+      const step = input.closest('.qf-step') as HTMLFieldSetElement | null;
+      if (!step) return;
+      const err = step.querySelector<HTMLElement>('.qf-err');
+      if (err && !err.hidden) valid(step);
+      if (input.type === 'radio' && step.hasAttribute('data-auto') && steps.indexOf(step) === at) {
+        window.setTimeout(() => show(at + 1), 220);
+      }
+    });
+    form.addEventListener('keydown', (e) => {
+      const t = e.target as HTMLElement;
+      if (e.key === 'Enter' && t.tagName === 'INPUT' && (t as HTMLInputElement).type !== 'submit') {
+        const step = steps[at];
+        if (step.querySelector('[data-qf-submit]')) return;
+        e.preventDefault();
+        if (valid(step)) show(at + 1);
+      }
+    });
+    root.querySelectorAll<HTMLButtonElement>('[data-qf-next]').forEach((b) =>
+      b.addEventListener('click', () => {
+        if (valid(steps[at])) show(at + 1);
+      }),
+    );
+    back.addEventListener('click', () => show(at - 1));
+
+    function fill() {
+      const answers = steps
+        .filter((s) => s.dataset.q)
+        .map((s) => {
+          const picked = s.querySelector<HTMLInputElement>('input:checked');
+          if (picked && s.dataset.key) set(s.dataset.key, picked.value);
+          return { q: s.dataset.q, a: picked?.value ?? '' };
+        });
+      set('answers', JSON.stringify(answers));
+      const place = findPlace(data.places, town.value);
+      if (place >= 0) {
+        const p = data.places[place];
+        set('locality_label', p[0]);
+        set('state', p[1]);
+        set('postcode', p[2]);
+        set('locality', p[0].toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
+      } else {
+        set('locality_label', town.value.trim());
+      }
+      const budget = (form.querySelector('input[name="budget"]:checked') as HTMLInputElement | null)?.value ?? '';
+      const mid = data.bands[budget];
+      set('est_value', mid ? String(mid) : '');
+      const recs = recommend(data, place);
+      set(
+        'recommended',
+        JSON.stringify(recs.map(({ c, dist }) => ({ name: c.n, url: new URL(c.u, location.origin).href, phone: c.p, town: c.t, km: Math.round(dist) }))),
+      );
+      set('page_url', location.href);
+      const where = place >= 0 ? ` in ${data.places[place][0]}` : '';
+      set('subject', `LocalsKnow quote request: ${data.label}${where}`);
+      return { place, recs };
+    }
+
+    function done(name: string, place: number, recs: ReturnType<typeof recommend>) {
+      const box = root.querySelector('[data-qf-done]') as HTMLElement;
+      const first = name.trim().split(/\s+/)[0];
+      (root.querySelector('[data-qf-done-title]') as HTMLElement).textContent = first ? `Thanks ${first}, request sent` : 'Request sent';
+      const townName = place >= 0 ? data.places[place][0] : 'your area';
+      (root.querySelector('[data-qf-done-sub]') as HTMLElement).textContent =
+        `We have your ${data.label.toLowerCase()} request for ${townName}.`;
+      if (recs.length) {
+        const list = root.querySelector('[data-qf-recs]') as HTMLOListElement;
+        const tpl = root.querySelector('[data-qf-rec-tpl]') as HTMLTemplateElement;
+        list.replaceChildren();
+        for (const { c, covers, dist } of recs) {
+          const li = (tpl.content.cloneNode(true) as DocumentFragment).firstElementChild as HTMLElement;
+          const a = li.querySelector('.qf-rec-name') as HTMLAnchorElement;
+          a.textContent = c.n;
+          a.href = c.u;
+          (li.querySelector('.qf-rec-verified') as HTMLElement).hidden = !c.v;
+          const away = c.t === townName ? `Based in ${c.t}` : `${c.t} ${c.s}, ${Math.max(1, Math.round(dist))} km away`;
+          (li.querySelector('.qf-rec-meta') as HTMLElement).textContent = covers ? `${away} · covers ${townName}` : away;
+          const call = li.querySelector('.qf-rec-call') as HTMLAnchorElement;
+          if (c.p) call.href = 'tel:' + c.p.replace(/[^0-9+]/g, '');
+          else call.remove();
+          (li.querySelector('.qf-rec-view') as HTMLAnchorElement).href = c.u;
+          list.append(li);
+        }
+        (root.querySelector('[data-qf-recs-label]') as HTMLElement).textContent =
+          `Local ${data.who} near ${townName}`;
+        (root.querySelector('[data-qf-recs-wrap]') as HTMLElement).hidden = false;
+      }
+      form.hidden = true;
+      (root.querySelector('.qf-progress') as HTMLElement).hidden = true;
+      box.hidden = false;
+      box.focus({ preventScroll: true });
+      box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    let sending = false;
+    async function send() {
+      if (sending) return;
+      const last = steps[steps.length - 1];
+      if (!valid(last)) return;
+      sending = true;
+      const btn = root.querySelector('[data-qf-submit]') as HTMLButtonElement;
+      btn.disabled = true;
+      btn.classList.add('is-busy');
+      const fail = root.querySelector('[data-qf-fail]') as HTMLElement;
+      fail.hidden = true;
+      const { place, recs } = fill();
+      try {
+        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+        if (!res.ok) throw new Error(String(res.status));
+        done((form.elements.namedItem('name') as HTMLInputElement).value, place, recs);
+      } catch {
+        fail.hidden = false;
+      } finally {
+        sending = false;
+        btn.disabled = false;
+        btn.classList.remove('is-busy');
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      send();
+    });
+    root.querySelector('[data-qf-retry]')?.addEventListener('click', send);
+
+    show(0, false);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-quote-form]').forEach(init);
+</script>

@@ -27,6 +27,8 @@ import DataBlock from '~/components/DataBlock.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import Pager from '~/components/Pager.astro';
+import QuoteCta from '~/components/QuoteCta.astro';
+import { quoteServiceForCategorySlug } from '~/lib/quote-services';
 import {
   moneyPageTitle,
   moneyPageDescription,
@@ -60,6 +62,7 @@ interface Props {
 }
 
 const { locality, category, listings, stats, page, totalPages, buildDate } = Astro.props;
+const quoteService = quoteServiceForCategorySlug(category.slug);
 
 const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
@@ -268,6 +271,8 @@ const jsonLd = graph([
       total={totalPages}
       hrefFor={(p: number) => url.localityCategoryPage(locality, category, p)}
     />
+
+    {quoteService && <QuoteCta service={quoteService} locality={locality} />}
   </div>
 
   {page === 1 && (

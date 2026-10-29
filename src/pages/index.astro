@@ -18,6 +18,8 @@ import {
   liveLocalities,
 } from '~/lib/repo';
 import { VERTICALS, SITE } from '~/lib/site';
+import { getQuoteService } from '~/lib/quote-services';
+import { quotePrimaryCount } from '~/lib/quotes';
 import Base from '~/layouts/Base.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import Faq from '~/components/Faq.astro';
@@ -55,6 +57,21 @@ const crossBorder = listings.filter((l) => {
     return a && a.state !== home.state;
   });
 }).length;
+
+// The biggest towns on each side, named in the eyebrow so the first line of the
+// page says where this is before it says anything else.
+const heroTowns = [liveNsw[0], liveVic[0], liveNsw[1], liveVic[1]]
+  .filter(Boolean)
+  .map((t) => t.locality.name)
+  .filter((name, i, all) => all.indexOf(name) === i);
+
+// The high value jobs the quote form handles, in the order people ask for them.
+const heroServices = ['solar', 'builder', 'renovation', 'roofing', 'air-conditioning', 'home-loan']
+  .map((s) => getQuoteService(s))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s));
+const bigJobs = ['solar', 'battery', 'builder', 'renovation', 'roofing', 'air-conditioning', 'landscaping', 'pool', 'home-loan', 'selling']
+  .map((s) => getQuoteService(s))
+  .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
 // The flagship locality. Everything starts here and the homepage should say so.
 const flagship = liveNsw[0]?.locality;
@@ -124,7 +141,8 @@ const jsonLd = graph([
 
 <Base
   kind="home"
-  title="Business directory for NSW and Victoria"
+  title="Local business directory for Albury, Wodonga and the NSW and Victoria border"
+  titleAlt={['Local business directory for Albury, Wodonga and the border', 'Business directory for NSW and Victoria']}
   description={description}
   canonicalPath={canonicalPath}
   jsonLd={jsonLd}
@@ -132,13 +150,13 @@ const jsonLd = graph([
 >
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow mono">New South Wales &amp; Victoria &middot; independent</p>
-      <h1>The border is not the middle of the <em>river</em>.</h1>
+      <p class="eyebrow mono">{heroTowns.join(' · ')} &middot; and {liveNsw.length + liveVic.length - heroTowns.length} more towns</p>
+      <h1>Find a local you can check, on <em>both sides</em> of the river.</h1>
       <p class="sub">
-        It runs along the top of the southern bank, so the whole Murray sits in New
-        South Wales. Every other directory draws it as a wall, which is how a Lavington
-        plumber who works in Wodonga goes missing from half the searches they should
-        own. Not here.
+        LocalsKnow is an independent directory of {n(listings.length)} businesses across the
+        New South Wales and Victoria border. Every listing shows where its facts came from,
+        licences are checked against the state registers, and nobody can pay to be higher
+        up the list.
       </p>
 
       <form class="search" action={url.search()} method="get" role="search">
@@ -189,6 +207,19 @@ const jsonLd = graph([
         </div>
       )}
 
+      <div class="home-quotes">
+        <p class="home-quotes-label"><b>Planning a bigger job?</b> Get up to three local quotes:</p>
+        <div class="home-quotes-row">
+          {heroServices.map((s) => (
+            <a class="home-quote" href={url.quote(s)}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={s.icon} /></svg>
+              {s.label}
+            </a>
+          ))}
+          <a class="home-quote home-quote-all" href={url.quotes()}>All quotes</a>
+        </div>
+      </div>
+
       {/*
         The cross border count is pulled out of the row it used to sit fifth in.
         Every other number here is a size, and a size is something any directory
@@ -216,8 +247,51 @@ const jsonLd = graph([
     </div>
   </section>
 
+  <section class="bigjobs">
+    <div class="wrap">
+      <div class="bigjobs-head">
+        <div>
+          <p class="mono bigjobs-eyebrow">Free quote matching</p>
+          <h2>Big job coming up? Tell us once, get three quotes.</h2>
+          <p>
+            Answer a few quick questions and we pass your request to up to three local businesses
+            that cover your town. You see who they are straight away, and nobody pays to be first.
+          </p>
+        </div>
+        <a class="btn btn-gold" href={url.quotes()}>See every service</a>
+      </div>
+      <div class="qservices bigjobs-grid">
+        {bigJobs.map((s) => {
+          const count = quotePrimaryCount(s);
+          return (
+            <a class="qservice" href={url.quote(s)}>
+              <span class="qservice-icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
+              </span>
+              <span class="qservice-text">
+                <strong>{s.label}</strong>
+                <span>{count > 0 ? `${n(count)} local ${s.who}` : `Local ${s.who}`}</span>
+              </span>
+              <svg class="qservice-go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
   <section class="sec">
     <div class="wrap">
+      <div class="border-story">
+        <p class="mono" style="color:var(--river);margin:0 0 12px">Why the border matters</p>
+        <p class="border-story-big">The border is not the middle of the <em>river</em>.</p>
+        <p>
+          It runs along the top of the southern bank, so the whole Murray sits in New South Wales.
+          Every other directory draws it as a wall, which is how a Lavington plumber who works in
+          Wodonga goes missing from half the searches they should own. Here, a business is listed
+          in every town it actually services, on both sides.
+        </p>
+      </div>
       <div class="sec-head row">
         <div>
           <h2>Both sides of the Murray</h2>
@@ -283,7 +357,7 @@ const jsonLd = graph([
         {VERTICALS.map((v) => {
           const count = categories.filter((c) => c.vertical === v.key).length;
           return (
-            <a class="cat" href={url.categoryIndex()}>
+            <a class="cat" href={url.vertical(v.slug)}>
               <strong>{v.name}</strong>
               <span class="n mono">{count} categories</span>
             </a>

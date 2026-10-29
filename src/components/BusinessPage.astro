@@ -25,6 +25,8 @@ import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import ListingCard from '~/components/ListingCard.astro';
+import QuoteCta from '~/components/QuoteCta.astro';
+import { quoteServiceForCategorySlug } from '~/lib/quote-services';
 import { outboundRel } from '~/lib/indexability';
 import { description as fitDescription, firstSentence } from '~/lib/seo';
 import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
@@ -51,6 +53,7 @@ interface Props {
 const { listing, locality, category, buildDate } = Astro.props;
 
 const media = listingMedia(listing);
+const quoteService = quoteServiceForCategorySlug(category.slug);
 const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const canonicalPath = url.listing(listing);
@@ -629,6 +632,8 @@ const jsonLd = graph([
             </p>
           </div>
         </section>
+
+        {quoteService && <QuoteCta service={quoteService} locality={locality} variant="side" />}
 
         <section class="panel">
           <div class="panel-head"><h2>Own this business?</h2></div>

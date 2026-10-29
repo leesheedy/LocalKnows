@@ -1,0 +1,125 @@
+---
+/**
+ * The "get quotes" banner for category, town and listing pages.
+ *
+ * It links to the service's quote page rather than embedding the form, so a
+ * money page stays a list of businesses first. The town rides in the fragment,
+ * which the form reads to prefill itself and which never reaches a crawler as
+ * a separate URL.
+ */
+import type { Locality } from '~/lib/types';
+import { url } from '~/lib/repo';
+import type { QuoteService } from '~/lib/quote-services';
+
+interface Props {
+  service: QuoteService;
+  locality?: Locality;
+  /** 'band' is full width under a list; 'side' fits a listing page sidebar. */
+  variant?: 'band' | 'side';
+}
+const { service, locality, variant = 'band' } = Astro.props;
+const where = locality ? ` in ${locality.name}` : '';
+const href = url.quote(service) + (locality ? `#town=${encodeURIComponent(locality.name + ' ' + locality.state + ' ' + locality.postcode)}` : '');
+---
+
+{variant === 'side' ? (
+  <section class="qcta-side">
+    <p class="mono qcta-eyebrow">Free quote matching</p>
+    <h2>Want more than one quote?</h2>
+    <p>Tell us about the job once and up to three local {service.who} who cover your town get back to you.</p>
+    <a class="btn btn-gold btn-block" href={href}>Get up to 3 quotes</a>
+  </section>
+) : (
+  <aside class="qcta" aria-label={'Get ' + service.label.toLowerCase() + ' quotes'}>
+    <span class="qcta-icon" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={service.icon} /></svg>
+    </span>
+    <div class="qcta-text">
+      <p class="qcta-hook">{service.hook}</p>
+      <p class="qcta-body">
+        Answer a few quick questions and up to three local {service.who}{where} get back to you
+        with a quote. Free, about a minute.
+      </p>
+    </div>
+    <a class="btn btn-gold qcta-btn" href={href}>
+      Get up to 3 quotes
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+    </a>
+  </aside>
+)}
+
+<style is:global>
+  .qcta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 22px;
+    margin: 26px 0;
+    border-radius: 14px;
+    background: linear-gradient(120deg, var(--river-dark), var(--river));
+    color: var(--paper);
+    box-shadow: var(--shadow-card);
+  }
+  .qcta-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: grid;
+    place-items: center;
+    background: rgba(239, 237, 228, 0.13);
+    color: var(--wattle);
+    flex: none;
+  }
+  .qcta-text {
+    flex: 1;
+    min-width: 0;
+  }
+  .qcta-hook {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 21px;
+    letter-spacing: -0.02em;
+    margin: 0 0 2px;
+  }
+  .qcta-body {
+    margin: 0;
+    font-size: 14.5px;
+    color: rgba(239, 237, 228, 0.82);
+    max-width: 62ch;
+  }
+  .qcta-btn {
+    flex: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+  }
+  @media (max-width: 720px) {
+    .qcta {
+      flex-wrap: wrap;
+    }
+    .qcta-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .qcta-side {
+    background: linear-gradient(160deg, var(--river-dark), var(--river));
+    color: var(--paper);
+    border-radius: var(--r-lg);
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+  .qcta-side h2 {
+    font-size: 19px;
+    color: var(--paper);
+    margin: 0 0 6px;
+  }
+  .qcta-side p {
+    font-size: 14px;
+    color: rgba(239, 237, 228, 0.82);
+    margin: 0 0 14px;
+  }
+  .qcta-eyebrow {
+    color: var(--wattle) !important;
+    margin: 0 0 8px !important;
+  }
+</style>

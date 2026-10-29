@@ -23,6 +23,7 @@ import { POLICY, STATES } from './site';
 import { nearestLocalities, distanceKm, type Neighbour } from './geo';
 import { path } from './slug';
 import { THEMES } from './themes';
+import { getQuoteService, type QuoteService } from './quote-services';
 
 import geoNsw from '../data/geo-nsw.json';
 import geoVic from '../data/geo-vic.json';
@@ -453,6 +454,9 @@ export const url = {
   sitemapPage: () => path('sitemap'),
   verified: () => path('verified'),
   thanks: () => path('thanks'),
+  quotes: () => path('get-quotes'),
+  leadsForBusiness: () => path('leads-for-business'),
+  quote: (s: QuoteService) => path('get-quotes', s.slug),
 };
 
 export { STATES, POLICY };
@@ -478,6 +482,8 @@ const STATIC_PAGES = new Set<string>([
   '/wire/',
   '/tools/',
   '/events/',
+  '/get-quotes/',
+  '/leads-for-business/',
   '/nsw/',
   '/vic/',
 ]);
@@ -555,6 +561,8 @@ export function pageExists(href: string): boolean {
       return parts.length === 2 && events.some((e) => e.slug === parts[1]);
     case 'business':
       return parts.length === 2 && listingBySlug.has(parts[1]);
+    case 'get-quotes':
+      return parts.length === 2 && Boolean(getQuoteService(parts[1]));
 
     default:
       return false;

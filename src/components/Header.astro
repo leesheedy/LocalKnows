@@ -8,6 +8,7 @@ const on = (p: string) => (here === p || (p !== '/' && here.startsWith(p)) ? 'pa
   <div class="wrap util-in">
     <span class="hide-s">Independent. Free to list. Both sides of the border.</span>
     <span class="right">
+      <a class="hide-s" href={url.leadsForBusiness()}>Leads for business</a>
       <a class="hide-s" href={url.claim()}>Claim a listing</a>
       <a href={url.verified()}>Get verified</a>
       <a href={url.tools()}>Free tools</a>
@@ -34,5 +35,6 @@ const on = (p: string) => (here === p || (p !== '/' && here.startsWith(p)) ? 'pa
       <a class="nav-wide" href={url.wire()} aria-current={on('/wire/')}>The wire</a>
       <a href={url.search()} aria-current={on('/search/')}>Search</a>
     </nav>
+    <a class="btn btn-gold btn-sm bar-cta" href={url.quotes()} aria-current={on('/get-quotes/')}>Get quotes</a>
   </div>
 </header>

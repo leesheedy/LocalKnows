@@ -1,0 +1,136 @@
+---
+/**
+ * /get-quotes/: every kind of job the quote form can match, grouped.
+ *
+ * Each card goes to the service's own page, where the form asks that service's
+ * questions. One generic form for everything would ask a solar customer about
+ * bedrooms and a seller about roof pitch, which is how forms get abandoned.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import { url, liveLocalities } from '~/lib/repo';
+import { QUOTE_GROUPS, type QuoteGroup } from '~/lib/quote-services';
+import { servicesByGroup, quotePrimaryCount } from '~/lib/quotes';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import { graph, organisationNode, websiteNode, breadcrumbNode, webPageNode, faqNode, type Crumb } from '~/lib/seo';
+
+const canonicalPath = url.quotes();
+const groups = servicesByGroup();
+const towns = liveLocalities().length;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Get quotes', href: canonicalPath },
+];
+
+const description =
+  'Get up to three quotes from local businesses on both sides of the Murray: solar, builders, renovations, roofing, air conditioning, landscaping, mortgage brokers, agents and trades. Free, about a minute.';
+
+const faqs = [
+  {
+    q: 'Is it really free?',
+    a: 'Yes, for the person asking. There is no account and no charge. Some businesses pay LocalsKnow for introductions, and that is the only way money is involved. It never changes the order businesses appear in.',
+  },
+  {
+    q: 'How many businesses will contact me?',
+    a: 'Up to three, all of them businesses that cover your town and do the kind of work you asked about. You see who they are as soon as you send the request.',
+  },
+  {
+    q: 'What if nobody covers my town?',
+    a: 'Send the request anyway. We will tell you if we cannot find anyone, rather than passing it to a business that does not actually travel to you.',
+  },
+  {
+    q: 'Is this the same as the directory listings?',
+    a: 'The businesses come from the same directory, in the same order. The quote form just saves you ringing around to explain the same job three times.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: 'Get quotes from local businesses', description, crumbs, dateModified: BUILD_DATE }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="Get quotes from local businesses, Albury, Wodonga and the border"
+  titleAlt={['Get quotes from local businesses']}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <section class="qhub-hero">
+    <div class="wrap">
+      <p class="eyebrow mono">Free quote matching &middot; both sides of the Murray</p>
+      <h1>Tell us the job once. Get up to three local quotes.</h1>
+      <p class="sub">
+        Pick what you need, answer a few quick questions, and we pass it to local businesses that
+        cover your town. Free, no account, about a minute.
+      </p>
+      <div class="qhub-proof">
+        <span><b>{n(towns)}</b> towns covered</span>
+        <span><b>3</b> quotes, at most</span>
+        <span><b>$0</b> to ask</span>
+      </div>
+    </div>
+  </section>
+
+  {groups.map(([group, services]) => (
+    <section class="sec sec-tight">
+      <div class="wrap">
+        <h2 class="qgroup-title">{QUOTE_GROUPS[group as QuoteGroup]}</h2>
+        <div class="qservices">
+          {services.map((s) => {
+            const count = quotePrimaryCount(s);
+            return (
+              <a class="qservice" href={url.quote(s)}>
+                <span class="qservice-icon" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d={s.icon} /></svg>
+                </span>
+                <span class="qservice-text">
+                  <strong>{s.label}</strong>
+                  <span>{count > 0 ? `${n(count)} local ${s.who}` : `Local ${s.who}`}</span>
+                </span>
+                <svg class="qservice-go" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2>How it works</h2></div>
+      <ol class="qsteps">
+        <li><b>1</b><h3>Pick the job</h3><p>Choose a service above and answer a few questions. Most take under a minute.</p></li>
+        <li><b>2</b><h3>We match locals</h3><p>Up to three businesses that service your town and do that work. You see them straight away.</p></li>
+        <li><b>3</b><h3>Compare quotes</h3><p>They contact you. You choose, or you choose nobody. No pressure from us.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="Getting quotes, answered" />
+  </div>
+
+  <section class="claim-band">
+    <div class="wrap claim-in">
+      <div>
+        <h2>Run a local business?</h2>
+        <p>Claim your free listing to make sure the details are right, and to be in line for quote requests in the towns you cover.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-gold" href={url.claim()}>Claim your listing</a>
+        <a class="btn btn-ghost" href={url.leadsForBusiness()} style="color:var(--paper);border-color:rgba(239,237,228,.3)">Buy quote leads</a>
+      </div>
+    </div>
+  </section>
+</Base>
