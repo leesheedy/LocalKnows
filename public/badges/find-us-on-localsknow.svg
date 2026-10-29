@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="184" height="58" viewBox="0 0 184 58" role="img" aria-label="Find us on LocalsKnow">
+  <rect x="0.75" y="0.75" width="182.5" height="56.5" rx="12" fill="#FFFDF8" stroke="#1F6B5C" stroke-width="1.5"/>
+  <g transform="translate(15 15) scale(1.25)">
+    <path d="M8.5 0C3.8 0 0 3.8 0 8.5 0 15 8.5 22 8.5 22S17 15 17 8.5C17 3.8 13.2 0 8.5 0z" fill="#E8B21F"/>
+    <circle cx="8.5" cy="8.4" r="3.4" fill="#FFFDF8"/>
+  </g>
+  <text x="48" y="23" textLength="80" lengthAdjust="spacingAndGlyphs" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.2" fill="#4B5A53">FIND US ON</text>
+  <text x="47" y="44" textLength="118" lengthAdjust="spacingAndGlyphs" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="800" letter-spacing="-0.6"><tspan fill="#1F6B5C">Locals</tspan><tspan fill="#8A6500">Know</tspan></text>
+</svg>

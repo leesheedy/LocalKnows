@@ -146,7 +146,8 @@ for (const file of htmlFiles) {
 
     // A business photo whose file did not ship is a broken image on a page
     // built to look credible, so it is an error rather than a warning.
-    if (!allFiles.has(path.join(DIST, src.split('?')[0]))) {
+    // allFiles holds site paths ("/badges/x.svg"), the same shape as src.
+    if (!allFiles.has(decodeURI(src.split('?')[0]))) {
       errors.push(p + ' references a missing image: ' + src);
     }
 

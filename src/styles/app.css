@@ -3553,3 +3553,222 @@ img.logo {
     align-items: flex-start;
   }
 }
+
+/* ---------------------------------------------------------------- website badge */
+.bdg-hero {
+  padding: clamp(36px, 5vw, 64px) 0 clamp(28px, 4vw, 48px);
+  background: radial-gradient(900px 420px at 88% -10%, rgba(232, 178, 31, 0.2), transparent 60%);
+}
+.bdg-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.bdg-eyebrow {
+  color: var(--river);
+  margin: 0 0 14px;
+}
+.bdg-hero h1 {
+  font-size: clamp(32px, 4.6vw, 54px);
+  max-width: 18ch;
+}
+.bdg-sub {
+  font-size: clamp(16px, 1.6vw, 18.5px);
+  color: var(--ink-60);
+  max-width: 54ch;
+  margin: 18px 0 22px;
+}
+.bdg-steps-mini {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bdg-steps-mini li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 8px;
+  border-radius: 100px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  font-size: 14px;
+}
+.bdg-steps-mini b {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--wattle);
+  font-size: 12.5px;
+}
+.bdg-hero-badges {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  padding: 28px;
+  border-radius: 18px;
+  background: linear-gradient(150deg, var(--river-dark), var(--river));
+  box-shadow: var(--shadow-pop);
+  transform: rotate(1.5deg);
+}
+.bdg-hero-badges img {
+  width: min(276px, 100%);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.22));
+}
+@media (max-width: 820px) {
+  .bdg-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .bdg-hero-badges {
+    transform: none;
+  }
+}
+.bdg-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 920px) {
+  .bdg-tool {
+    grid-template-columns: 1fr;
+  }
+}
+.bdg-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: var(--shadow-card);
+}
+.bdg-card h2 {
+  font-size: clamp(22px, 2.6vw, 28px);
+  margin-bottom: 6px;
+}
+.bdg-claim {
+  border: 1.5px solid var(--wattle);
+  background: linear-gradient(180deg, #fff8e3, var(--white) 140px);
+}
+.bdg-claim-sub {
+  color: var(--ink-60);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+.bdg-styles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bdg-style {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px 10px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--ink-60);
+  transition: 0.15s;
+}
+.bdg-style-light {
+  background: var(--paper-2);
+}
+.bdg-style-dark {
+  background: #e4e1d6;
+}
+.bdg-style input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.bdg-style:has(input:checked) {
+  border-color: var(--river);
+  box-shadow: 0 0 0 3px rgba(31, 107, 92, 0.15);
+  color: var(--river);
+  font-weight: 600;
+}
+.bdg-style:has(input:focus-visible) {
+  outline: 2.5px solid var(--river);
+  outline-offset: 2px;
+}
+.bdg-code {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.5;
+  min-height: 110px;
+  resize: vertical;
+  background: var(--paper-2);
+  word-break: break-all;
+}
+.bdg-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  margin-top: 12px;
+}
+.bdg-preview-label {
+  color: var(--ink-40);
+  margin-left: auto;
+}
+.bdg-preview img {
+  display: block;
+}
+.bdg-h3 {
+  font-size: 17px;
+  margin: 26px 0 10px;
+}
+.bdg-where {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+  font-size: 14.5px;
+  color: var(--ink-60);
+}
+.bdg-where b {
+  color: var(--ink);
+  margin-right: 6px;
+}
+.bdg-more {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.bdg-more > div {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+}
+.bdg-more h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.bdg-more p {
+  color: var(--ink-60);
+}
+@media (max-width: 700px) {
+  .bdg-more {
+    grid-template-columns: 1fr;
+  }
+}
+.lfb-offer .lfb-offer-badge {
+  grid-column: 1 / -1;
+  border: 1.5px solid var(--wattle);
+  background: linear-gradient(120deg, #fff6dc, var(--white));
+}
+.lfb-offer-badge a {
+  color: var(--river);
+  text-decoration: underline;
+  font-weight: 600;
+}

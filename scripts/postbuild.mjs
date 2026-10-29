@@ -563,6 +563,10 @@ const headers = `/*
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
 
+/badges/*
+  Cache-Control: public, max-age=86400
+  Access-Control-Allow-Origin: *
+
 /brand/*
   Cache-Control: public, max-age=604800
 

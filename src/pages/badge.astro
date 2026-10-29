@@ -1,0 +1,305 @@
+---
+/**
+ * /badge/: the "Find us on LocalsKnow" badge for a business's own website.
+ *
+ * The deal is one sentence: put the badge on your site and we send you a quote
+ * request at no cost. The badge is a plain link and an image, no script, so it
+ * works on any website builder and passes as an ordinary followed link. It
+ * points at the business's own listing when we know it, which is the page a
+ * customer clicking it actually wants.
+ *
+ * Without JavaScript the textarea holds a working snippet that points at the
+ * home page. With it, pasting a listing link rewrites the snippet, and
+ * #listing=<url> in the address (the claim email links that way) prefills it.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import { url } from '~/lib/repo';
+import { SITE } from '~/lib/site';
+import { LEAD_OFFER } from '~/lib/quote-services';
+import { BUILD_DATE } from '~/lib/build';
+import { graph, organisationNode, websiteNode, breadcrumbNode, webPageNode, faqNode, type Crumb } from '~/lib/seo';
+
+const canonicalPath = url.badge();
+const origin = SITE.url.replace(/\/$/, '');
+const badges = [
+  { id: 'light', label: 'Light', file: '/badges/find-us-on-localsknow.svg' },
+  { id: 'dark', label: 'Dark', file: '/badges/find-us-on-localsknow-dark.svg' },
+];
+const snippet = (href: string, img: string) =>
+  `<a href="${href}" title="Find us on LocalsKnow" target="_blank" rel="noopener"><img src="${origin}${img}" alt="Find us on LocalsKnow" width="184" height="58" style="border:0;max-width:100%;height:auto"></a>`;
+const defaultSnippet = snippet(origin + '/', badges[0].file);
+
+const freeLead = LEAD_OFFER.badgeFreeLeads === 1 ? 'a quote request' : `${LEAD_OFFER.badgeFreeLeads} quote requests`;
+const h1 = 'Put LocalsKnow on your website. Get a lead at no cost.';
+const description = `Add the free "Find us on LocalsKnow" badge to your business website and we will send you ${freeLead} for your service and area at no cost at all. Copy, paste, done.`;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Website badge', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'What does the free lead cost?',
+    a: `Nothing. Put the badge on your website, tell us where it is, and the next quote request we match to your service and towns goes to you at no cost. There is no card, no sign-up and nothing to buy afterwards.`,
+  },
+  {
+    q: 'Where should the badge go?',
+    a: 'Anywhere a visitor can see it: the footer, the contact page or the about page all work. It needs to stay as it is, an ordinary link to LocalsKnow, for as long as you want the free lead.',
+  },
+  {
+    q: 'How do I add it?',
+    a: 'Copy the code and paste it into an HTML or embed block. On WordPress that is a Custom HTML block, on Wix an Embed HTML element, on Squarespace a Code block, and on Shopify the theme footer. If someone else looks after your website, send them this page.',
+  },
+  {
+    q: 'What if there are no quote requests in my area yet?',
+    a: 'Your free lead waits until one comes in for your service and towns. We do not send something that is not a real request just to tick it off.',
+  },
+  {
+    q: 'Does the badge change where my listing appears?',
+    a: 'No. Directory order comes from how complete and checked a listing is, never from badges, links or payment.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, dateModified: BUILD_DATE }),
+  faqNode(faqs, canonicalPath),
+]);
+---
+
+<Base
+  kind="static"
+  title="Free LocalsKnow website badge, and a lead at no cost"
+  titleAlt={['Free LocalsKnow website badge']}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <section class="bdg-hero">
+    <div class="wrap bdg-hero-grid">
+      <div>
+        <p class="mono bdg-eyebrow">For business owners &middot; free</p>
+        <h1>{h1}</h1>
+        <p class="bdg-sub">
+          Add the "Find us on LocalsKnow" badge to your business website, tell us where it is, and
+          we send you {freeLead} for your service and area. No card, no sign-up, no catch.
+        </p>
+        <ol class="bdg-steps-mini">
+          <li><b>1</b> Copy the code below</li>
+          <li><b>2</b> Paste it on your website</li>
+          <li><b>3</b> Tell us the page, get your free lead</li>
+        </ol>
+      </div>
+      <div class="bdg-hero-badges" aria-hidden="true">
+        <img src={badges[0].file} alt="" width="276" height="87" />
+        <img src={badges[1].file} alt="" width="276" height="87" />
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-badge-tool>
+    <div class="wrap bdg-tool">
+      <div class="bdg-card">
+        <h2>1. Get your badge code</h2>
+
+        <p class="qf-sub">Pick a style</p>
+        <div class="bdg-styles">
+          {badges.map((b, i) => (
+            <label class={'bdg-style bdg-style-' + b.id}>
+              <input type="radio" name="badge-style" value={b.file} checked={i === 0} />
+              <img src={b.file} alt={'Find us on LocalsKnow, ' + b.label.toLowerCase()} width="184" height="58" />
+              <span>{b.label}</span>
+            </label>
+          ))}
+        </div>
+
+        <label class="qf-label" for="bdg-listing" style="margin-top:18px">Your LocalsKnow listing link <span class="qf-optional">optional, but better</span></label>
+        <input class="qf-input" id="bdg-listing" type="url" inputmode="url" placeholder="https://localsknow.com.au/nsw/albury/plumbers/your-business/" />
+        <p class="qf-hint" data-bdg-hint>Linking to your own listing sends customers straight to your details. Leave it blank to link to the home page.</p>
+
+        <label class="qf-label" for="bdg-code" style="margin-top:18px">Your code</label>
+        <textarea class="qf-input bdg-code" id="bdg-code" rows="4" readonly spellcheck="false">{defaultSnippet}</textarea>
+        <div class="bdg-actions">
+          <button type="button" class="btn btn-river" data-bdg-copy>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg>
+            <span data-bdg-copy-label>Copy code</span>
+          </button>
+          <span class="bdg-preview-label mono">Preview</span>
+          <span class="bdg-preview" data-bdg-preview set:html={defaultSnippet.replace(origin + '/badges/', '/badges/')}></span>
+        </div>
+
+        <h3 class="bdg-h3">Where to paste it</h3>
+        <ul class="bdg-where">
+          <li><b>WordPress</b> Add a Custom HTML block to your footer or contact page.</li>
+          <li><b>Wix</b> Add &rarr; Embed code &rarr; Embed HTML.</li>
+          <li><b>Squarespace</b> Add a Code block.</li>
+          <li><b>Shopify</b> Online Store &rarr; Themes &rarr; Edit code, footer section.</li>
+          <li><b>Someone else runs your site?</b> Send them this page.</li>
+        </ul>
+      </div>
+
+      <div class="bdg-card bdg-claim" id="tell-us">
+        <h2>2. Tell us it is up</h2>
+        <p class="bdg-claim-sub">We check the page, then your free lead is the next quote request we match to your service and towns.</p>
+        <form name="badge" method="POST" action={url.thanks()} data-netlify="true" netlify-honeypot="bot-field" novalidate data-bdg-form>
+          <input type="hidden" name="form-name" value="badge" />
+          <input type="hidden" name="subject" value="LocalsKnow badge added: free lead" />
+          <p hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <div class="qf-grid">
+            <div class="qf-span">
+              <label class="qf-label" for="bdg-business">Business name</label>
+              <input class="qf-input" id="bdg-business" name="business" type="text" autocomplete="organization" required maxlength="160" />
+            </div>
+            <div>
+              <label class="qf-label" for="bdg-name">Your name</label>
+              <input class="qf-input" id="bdg-name" name="name" type="text" autocomplete="name" required maxlength="120" />
+            </div>
+            <div>
+              <label class="qf-label" for="bdg-phone">Mobile</label>
+              <input class="qf-input" id="bdg-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\-]{8,20}" maxlength="20" />
+            </div>
+            <div class="qf-span">
+              <label class="qf-label" for="bdg-email">Email</label>
+              <input class="qf-input" id="bdg-email" name="email" type="email" autocomplete="email" required maxlength="160" />
+            </div>
+            <div class="qf-span">
+              <label class="qf-label" for="bdg-page">The page the badge is on</label>
+              <input class="qf-input" id="bdg-page" name="badge_page" type="url" required maxlength="300" placeholder="https://yourbusiness.com.au/contact/" />
+            </div>
+            <div class="qf-span">
+              <label class="qf-label" for="bdg-work">The work you want leads for</label>
+              <input class="qf-input" id="bdg-work" name="services" type="text" required maxlength="200" placeholder="e.g. solar and batteries, Albury and Wodonga" />
+            </div>
+          </div>
+          <input type="hidden" name="listing_url" value="" />
+          <p class="qf-err" role="alert" hidden data-bdg-err>Fill in each field so we can find the badge and match your free lead.</p>
+          <button type="submit" class="btn btn-gold qf-submit">Claim my free lead</button>
+          <p class="qf-fine">One free lead per business. It costs nothing and never changes where your listing appears.</p>
+        </form>
+        <div class="lfb-done" hidden tabindex="-1" data-bdg-done>
+          <span class="qf-tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <h3>Thanks, we have it</h3>
+          <p>We will check the badge and send your free lead when the next matching quote request comes in.</p>
+        </div>
+        <div class="qf-fail" hidden data-bdg-fail role="alert">
+          <p><b>That did not send.</b> Try again, or email <a href={'mailto:' + SITE.email}>{SITE.email}</a> with the page the badge is on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap bdg-more">
+      <div>
+        <h2>Want more than one?</h2>
+        <p>
+          Businesses that want quote requests every week can buy them one at a time. No monthly fee,
+          first {LEAD_OFFER.freeLeads} free, bad leads credited.
+        </p>
+        <a class="btn btn-ghost" href={url.leadsForBusiness()}>Leads for business</a>
+      </div>
+      <div>
+        <h2>Not listed yet?</h2>
+        <p>Claiming a listing is free and stays free. Fix the details, add photos and set the towns you travel to.</p>
+        <a class="btn btn-ghost" href={url.claim()}>Claim your listing</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="The badge, answered" />
+  </div>
+</Base>
+
+<script>
+  const ORIGIN = 'https://localsknow.com.au';
+  const root = document.querySelector<HTMLElement>('[data-badge-tool]');
+  if (root) {
+    const input = root.querySelector('#bdg-listing') as HTMLInputElement;
+    const code = root.querySelector('#bdg-code') as HTMLTextAreaElement;
+    const preview = root.querySelector('[data-bdg-preview]') as HTMLElement;
+    const hint = root.querySelector('[data-bdg-hint]') as HTMLElement;
+    const copyBtn = root.querySelector('[data-bdg-copy]') as HTMLButtonElement;
+    const copyLabel = root.querySelector('[data-bdg-copy-label]') as HTMLElement;
+    const form = root.querySelector('[data-bdg-form]') as HTMLFormElement;
+    const hintText = hint.textContent;
+
+    // Only ever link to a LocalsKnow page; anything else falls back to the home page.
+    const listingHref = (raw: string) => {
+      try {
+        const u = new URL(raw.trim());
+        if (u.hostname !== 'localsknow.com.au' && u.hostname !== 'www.localsknow.com.au') return null;
+        return ORIGIN + u.pathname.replace(/[^a-z0-9/_-]/gi, '');
+      } catch {
+        return null;
+      }
+    };
+
+    function render() {
+      const img = (root!.querySelector('input[name="badge-style"]:checked') as HTMLInputElement).value;
+      const typed = input.value.trim();
+      const href = listingHref(typed) ?? ORIGIN + '/';
+      hint.textContent = typed && !listingHref(typed) ? 'That is not a LocalsKnow link, so the badge links to the home page.' : hintText;
+      const html = `<a href="${href}" title="Find us on LocalsKnow" target="_blank" rel="noopener"><img src="${ORIGIN}${img}" alt="Find us on LocalsKnow" width="184" height="58" style="border:0;max-width:100%;height:auto"></a>`;
+      code.value = html;
+      // The preview loads the image from this site, so it shows before a deploy too.
+      preview.innerHTML = html.replace(ORIGIN + '/badges/', '/badges/');
+      (form.elements.namedItem('listing_url') as HTMLInputElement).value = href;
+    }
+
+    const hash = location.hash.match(/listing=([^&]+)/);
+    if (hash) input.value = decodeURIComponent(hash[1]);
+    input.addEventListener('input', render);
+    root.querySelectorAll('input[name="badge-style"]').forEach((r) => r.addEventListener('change', render));
+    render();
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.value);
+      } catch {
+        code.select();
+        document.execCommand('copy');
+      }
+      copyLabel.textContent = 'Copied';
+      window.setTimeout(() => (copyLabel.textContent = 'Copy code'), 2000);
+    });
+    code.addEventListener('focus', () => code.select());
+
+    const err = root.querySelector('[data-bdg-err]') as HTMLElement;
+    const fail = root.querySelector('[data-bdg-fail]') as HTMLElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      let ok = true;
+      form.querySelectorAll<HTMLInputElement>('input[required]').forEach((el) => {
+        const good = el.value.trim() !== '' && el.checkValidity();
+        if (good) el.removeAttribute('aria-invalid');
+        else el.setAttribute('aria-invalid', 'true');
+        if (!good) ok = false;
+      });
+      err.hidden = ok;
+      if (!ok) return;
+      const btn = form.querySelector('button[type=submit]') as HTMLButtonElement;
+      btn.disabled = true;
+      fail.hidden = true;
+      try {
+        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+        if (!res.ok) throw new Error(String(res.status));
+        form.hidden = true;
+        const done = root.querySelector('[data-bdg-done]') as HTMLElement;
+        done.hidden = false;
+        done.focus();
+      } catch {
+        fail.hidden = false;
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  }
+</script>

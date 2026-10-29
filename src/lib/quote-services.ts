@@ -885,4 +885,10 @@ export const LEAD_OFFER = {
   creditDays: 7,
   /** No lead goes to more businesses than this. */
   maxBusinessesPerLead: 3,
+  /**
+   * Leads sent at no cost to a business that puts the LocalsKnow badge on its
+   * own website (/badge/). Separate from freeLeads, and not conditional on
+   * buying anything: the badge is the whole price.
+   */
+  badgeFreeLeads: 1,
 } as const;

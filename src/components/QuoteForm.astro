@@ -189,8 +189,7 @@ const id = (s: string) => `qf-${service.slug}-${s}`;
         <input type="checkbox" name="consent" value="yes" required />
         <span>
           LocalsKnow can pass my request to up to three local businesses so they can contact me
-          about this job. LocalsKnow may be paid by a business for an introduction; that never
-          changes the order of listings. <a href={url.privacy() + '#quote-requests'}>Privacy</a>
+          about this job. <a href={url.terms() + '#quote-requests'}>Terms</a> &middot; <a href={url.privacy() + '#quote-requests'}>Privacy</a>
         </span>
       </label>
       <p class="qf-err" role="alert" hidden>Add your name and a phone number, and tick the box so we can pass your request on.</p>

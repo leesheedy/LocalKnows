@@ -701,6 +701,7 @@ export const url = {
   thanks: () => path('thanks'),
   quotes: () => path('get-quotes'),
   leadsForBusiness: () => path('leads-for-business'),
+  badge: () => path('badge'),
   quote: (s: QuoteService) => path('get-quotes', s.slug),
 };
 
@@ -729,6 +730,7 @@ const STATIC_PAGES = new Set<string>([
   '/events/',
   '/get-quotes/',
   '/leads-for-business/',
+  '/badge/',
   '/nsw/',
   '/vic/',
 ]);

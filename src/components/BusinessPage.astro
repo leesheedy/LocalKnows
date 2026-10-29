@@ -631,6 +631,10 @@ const jsonLd = graph([
               reply to reviews, and see how many people looked you up.
             </p>
             <a class="btn btn-gold btn-block" href={url.claim()}>Claim this listing</a>
+            <p style="margin:12px 0 0;font-size:13.5px;color:var(--ink-60)">
+              Put our badge on your website and get a lead at no cost.
+              <a href={url.badge() + '#listing=' + encodeURIComponent('https://localsknow.com.au' + canonicalPath)} style="color:var(--river);text-decoration:underline">Get the badge</a>
+            </p>
           </div>
         </section>
       </aside>
