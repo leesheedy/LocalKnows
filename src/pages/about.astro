@@ -16,10 +16,13 @@ import {
   categories,
   regions,
   pageWorthyLocalities,
+  liveLocalities,
+  coveredRegions,
+  checkedRange,
   POLICY,
 } from '~/lib/repo';
 import { SITE } from '~/lib/site';
-import { n } from '~/lib/copy';
+import { checkedPhrase, listPhrase, n } from '~/lib/copy';
 import { BUILD_DATE, humanDate } from '~/lib/build';
 import {
   graph,
@@ -40,8 +43,73 @@ const places = pageWorthyLocalities();
 const verified = listings.filter((l) => l.status === 'verified').length;
 const licenceChecked = listings.filter((l) => l.licences.some((x) => x.verificationOk)).length;
 
+/*
+ * The paragraph an answer engine lifts.
+ *
+ * Asked "what is LocalsKnow", a model quotes the first plain sentence it can
+ * find that answers it, so the first paragraph says what, who, where and how,
+ * once each, in sentences that are each true on their own. Every number and
+ * place in it is read from the data on the build: the regions are the ones
+ * with a live town, the towns are the largest live ones by population, and the
+ * checked dates are the listings' own. Nothing here is typed in to go stale.
+ */
+const live = liveLocalities();
+const active = listings.filter((l) => l.status !== 'suspended');
+const covered = coveredRegions();
+const regionsByState = (code: 'NSW' | 'VIC') => covered.filter((r) => r.state === code).map((r) => r.name);
+const regionsOf = (code: 'NSW' | 'VIC', stateName: string) => {
+  const names = regionsByState(code);
+  return names.length
+    ? 'the ' + listPhrase(names) + ' ' + (names.length === 1 ? 'region' : 'regions') + ' of ' + stateName
+    : '';
+};
+const coverage = [regionsOf('NSW', STATES.NSW.name), regionsOf('VIC', STATES.VIC.name)].filter(Boolean);
+const largest = live
+  .slice()
+  .sort((a, b) => (b.population ?? 0) - (a.population ?? 0))
+  .slice(0, 5)
+  .map((l) => l.name);
+const checked = checkedRange(active);
+const publisher = SITE.publisher;
+
+const inShortParts = [
+  SITE.name +
+    ' (localsknow.com.au) is an independent online directory of businesses, clubs and places in the border country of New South Wales and Victoria.',
+  'It is published by ' +
+    publisher.brand +
+    ' (' +
+    publisher.legalName +
+    '), a web and software business based in ' +
+    publisher.address.locality +
+    ' ' +
+    publisher.address.region +
+    ' ' +
+    publisher.address.postcode +
+    '.',
+  'It lists ' +
+    n(active.length) +
+    ' businesses across ' +
+    n(live.length) +
+    ' towns, covering ' +
+    listPhrase(coverage) +
+    (largest.length ? '. The largest towns covered are ' + listPhrase(largest) : '') +
+    '.',
+  'Every listing is compiled from public sources such as the business’s own website and council and tourism listings, shows the URLs its details were read from and the date they were last checked, and leaves blank anything that could not be sourced.',
+  checkedPhrase(checked.checkedFrom, checked.checkedTo)
+    ? 'The listings on the site today were last checked ' + checkedPhrase(checked.checkedFrom, checked.checkedTo) + '.'
+    : '',
+  'Where a business is based and where it works are recorded separately, so a business on one side of the Murray that works on the other appears on both sides.',
+].filter(Boolean);
+const inShort = inShortParts.join(' ');
+
 const description =
-  'LocalsKnow is an independent NSW and Victorian directory built by Automatrix Digital on the Albury Wodonga border. Free listings, checked licences, sourced facts.';
+  'LocalsKnow is an independent directory of ' +
+  n(active.length) +
+  ' businesses in the NSW and Victoria border country, published by ' +
+  publisher.brand +
+  ' of ' +
+  publisher.address.locality +
+  ' NSW, with sources on every listing.';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -50,8 +118,39 @@ const crumbs: Crumb[] = [
 
 const faqs = [
   {
+    q: 'What is LocalsKnow?',
+    a: inShortParts.slice(0, 3).join(' '),
+  },
+  {
+    q: 'Is it LocalsKnow or Locals Know?',
+    a:
+      'The directory’s name is LocalsKnow, one word, and its address is localsknow.com.au. It also gets written as ' +
+      listPhrase(SITE.alternateNames.map((x) => '“' + x + '”')) +
+      '. It is published by ' +
+      publisher.brand +
+      ' in ' +
+      publisher.address.locality +
+      ' ' +
+      publisher.address.region +
+      '.',
+  },
+  {
     q: 'Who owns and runs LocalsKnow?',
-    a: 'Automatrix Digital, a small web and software shop working out of the Albury Wodonga area. Automatrix builds the site, pays the hosting bill and answers the email at ' + SITE.email + '. There is no investor, no media group and no parent directory network above it.',
+    a:
+      publisher.name +
+      ' (' +
+      publisher.legalName +
+      ', ABN ' +
+      publisher.abn +
+      '), a small web and software shop based in ' +
+      publisher.address.locality +
+      ' ' +
+      publisher.address.region +
+      ' ' +
+      publisher.address.postcode +
+      '. Automatrix builds the site, pays the hosting bill and answers the email at ' +
+      SITE.email +
+      '. There is no investor, no media group and no parent directory network above it.',
   },
   {
     q: 'Does it cost anything to be listed?',
@@ -78,6 +177,7 @@ const jsonLd = graph([
     crumbs,
     type: 'AboutPage',
     dateModified: BUILD_DATE,
+    abstract: inShort,
   }),
   faqNode(faqs, canonicalPath),
 ]);
@@ -85,7 +185,8 @@ const jsonLd = graph([
 
 <Base
   kind="static"
-  title="About LocalsKnow, and who runs it"
+  title="About LocalsKnow (localsknow.com.au) and who runs it"
+  titleAlt={['About LocalsKnow, and who runs it']}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -109,14 +210,21 @@ const jsonLd = graph([
     </div>
 
     <div class="prose">
+      <p>{inShort}</p>
       <p>
-        LocalsKnow lists businesses, clubs and places across {STATES.NSW.name} and
-        {STATES.VIC.name}. Trades, cafes, bakeries, pubs, motels, wineries, sporting clubs,
-        hobby groups. Every listing shows the sources its details came from and the date
-        those sources were last read. Nothing on this site is ranked by who paid.
+        It covers trades, cafes, bakeries, pubs, motels, wineries, sporting clubs and hobby
+        groups across {STATES.NSW.name} and {STATES.VIC.name}. Nothing on this site is ranked
+        by who paid.
       </p>
 
-      {SITE.usingSampleData && (
+      {/*
+        Asked of the data as well as SITE.usingSampleData. The flag is still
+        true while every record in listings.json is real (isSample is false on
+        all of them as of October 2026), so the about page, which is the page
+        answer engines quote about the site, was telling them the directory
+        runs on sample data.
+      */}
+      {SITE.usingSampleData && listings.some((l) => l.isSample) && (
         <div class="notice">
           <strong>This build runs on sample data.</strong> Seeded example records ship with
           the repository so that every template renders. Sample records are labelled on the
@@ -274,8 +382,9 @@ const jsonLd = graph([
 
       <h2>Coverage, honestly stated</h2>
       <p>
-        {n(listings.length)} listings across {n(places.length)} localities and
-        {' '}{regions.length} regions today, with {n(verified)} verified. A town goes live
+        {n(active.length)} listings across {n(live.length)} towns with pages, in
+        {' '}{covered.length} of the {regions.length} regions mapped, with {n(verified)} verified.
+        The gazetteer behind it maps {n(places.length)} localities in total. A town goes live
         when it has content on it, not before, so a place with no page yet is a place we have
         not got to. Coverage grows out from the border corridor: Albury Wodonga first, then
         Wagga, Shepparton, Wangaratta, Corowa and Deniliquin, then the larger regional
