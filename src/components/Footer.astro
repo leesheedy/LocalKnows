@@ -17,10 +17,20 @@ const topCategories = categories.slice(0, 8);
             <circle cx="8.5" cy="8.4" r="3.4" fill="#131E19"/>
           </svg><span><b>Locals</b><em>Know</em></span>
         </div>
+        {/*
+          The same three facts on every page, worded the same way as the about
+          page and the Organization node: what the site is, who publishes it,
+          and where they are. Entity recognition is mostly consistency.
+        */}
         <p class="blurb">
-          An independent business and places directory for New South Wales and Victoria.
-          Service areas are modelled separately from addresses, so a business that works
-          across the border shows up on both sides of it.
+          {SITE.name} is an independent directory of businesses and places in the New South
+          Wales and Victoria border country. Service areas are modelled separately from
+          addresses, so a business that works across the border shows up on both sides of it.
+        </p>
+        <p class="blurb">
+          Published by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.brand}</a>,
+          {' '}{SITE.publisher.address.locality} {SITE.publisher.address.region}
+          {' '}{SITE.publisher.address.postcode}.
         </p>
       </div>
       <div>
@@ -49,6 +59,7 @@ const topCategories = categories.slice(0, 8);
           <li><a href={url.wire()}>The wire</a></li>
           <li><a href={url.events()}>Events</a></li>
           <li><a href={url.tools()}>Free tools</a></li>
+          <li><a href={url.quotes()}>Get quotes</a></li>
         </ul>
       </div>
       <div>
@@ -56,6 +67,7 @@ const topCategories = categories.slice(0, 8);
         <ul>
           <li><a href={url.about()}>About</a></li>
           <li><a href={url.claim()}>Claim a listing</a></li>
+          <li><a href={url.leadsForBusiness()}>Leads for business</a></li>
           <li><a href={url.verified()}>Get verified</a></li>
           <li><a href={url.partners()}>Link partners</a></li>
           <li><a href={url.editorialPolicy()}>Editorial policy</a></li>
@@ -65,7 +77,7 @@ const topCategories = categories.slice(0, 8);
       </div>
     </div>
     <div class="foot-base">
-      <span>&copy; {year} {SITE.name}. Built by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.</span>
+      <span>&copy; {year} {SITE.name}, localsknow.com.au. Built by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.</span>
       <span class="right">
         <a href={url.privacy()}>Privacy</a>
         <a href={url.terms()}>Terms</a>

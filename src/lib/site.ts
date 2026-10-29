@@ -7,18 +7,73 @@ import type { StateCode } from './types';
 export const SITE = {
   name: 'LocalsKnow',
   legalName: 'LocalsKnow',
+  /**
+   * The other ways the name gets written.
+   *
+   * Searched as two words, "localsknow" is read as the phrase "locals know" and
+   * the site does not come back for its own name. Google builds the site name
+   * it shows from the WebSite node's name and alternateName, and reconciles an
+   * entity partly on the spellings it is told belong to it, so every spelling a
+   * person actually types goes here and nowhere else.
+   */
+  alternateNames: ['Locals Know', 'LocalsKnow.com.au', 'localsknow'],
   tagline: 'The border directory for New South Wales and Victoria',
+  /** One sentence, used by the Organization node. Says what, where and by whom. */
+  description:
+    'An independent directory of businesses, clubs and places in the New South Wales and Victoria border country, published by Automatrix in Albury NSW. Service areas are recorded separately from addresses, so a business that works across the Murray appears on both sides of it.',
   url: (import.meta.env?.SITE_URL as string) || 'https://localsknow.com.au',
   locale: 'en-AU',
   language: 'en-AU',
+  /**
+   * The month the directory was built, from the repository history: the first
+   * commit is 18 August 2026 and Search Console was verified on the 26th. A
+   * month rather than a day, because the first commit is when the code started
+   * and not a launch anybody announced.
+   */
+  foundingDate: '2026-08',
+  /** An existing file in public/brand, 512 x 512. */
+  logo: { path: '/brand/localknows-logo.png', width: 512, height: 512 },
+  /**
+   * The business that runs the site.
+   *
+   * `name` is the trading name the policy pages already use in prose, so it is
+   * left as it was. Everything else is copied from the Organization node
+   * automatrix.au publishes about itself, including its @id, so the two graphs
+   * describe one company rather than two that happen to share a name. Nothing
+   * here was inferred: if automatrix.au changes, change it here.
+   */
   publisher: {
+    id: 'https://automatrix.au/#organization',
     name: 'Automatrix Digital',
+    brand: 'Automatrix',
+    legalName: 'Automatrix Digital Pty Ltd',
+    abn: '89 700 072 608',
     url: 'https://automatrix.au',
+    email: 'info@automatrix.au',
+    address: { locality: 'Albury', region: 'NSW', postcode: '2640', country: 'AU' },
+    /** The profiles automatrix.au lists in its own sameAs. */
+    sameAs: ['https://www.linkedin.com/company/automatrixau/', 'https://www.instagram.com/automatrix.au/'],
   },
   email: 'hello@localsknow.com.au',
   /** Sample data ships with the repo so every template renders. See /about/. */
   usingSampleData: true,
 } as const;
+
+/**
+ * LocalsKnow's own profiles on other sites, for Organization.sameAs.
+ *
+ * Empty on purpose. sameAs tells a search engine "this other page is us", and
+ * a URL that is not ours, or that does not exist, is worse than none: it either
+ * merges the site with a stranger or points the entity at a 404. There is no
+ * LocalsKnow profile anywhere yet, automatrix.au does not mention the site, and
+ * an online-only directory cannot hold a Google Business Profile.
+ *
+ * TODO(Lee): add each profile here as it is created and goes live, copied from
+ * the browser address bar, e.g. a LinkedIn showcase page under Automatrix, a
+ * Facebook page, or an automatrix.au case study page about LocalsKnow. The
+ * Organization node picks them up on the next build and nothing else changes.
+ */
+export const BRAND_PROFILES: readonly string[] = [];
 
 export const STATES: Record<StateCode, { code: StateCode; name: string; slug: string; timezone: string; blurb: string }> = {
   NSW: {

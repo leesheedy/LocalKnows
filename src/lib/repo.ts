@@ -20,9 +20,11 @@ import type {
   WireArticle,
 } from './types';
 import { POLICY, STATES } from './site';
+import { decide } from './indexability';
 import { nearestLocalities, distanceKm, type Neighbour } from './geo';
 import { path } from './slug';
 import { THEMES } from './themes';
+import { getQuoteService, type QuoteService } from './quote-services';
 
 import geoNsw from '../data/geo-nsw.json';
 import geoVic from '../data/geo-vic.json';
@@ -332,6 +334,20 @@ export interface LocalityCategoryStats {
   emergencyCount: number;
   mobileCount: number;
   medianResponseHours?: number;
+  /** The first three names in page order, for a description that names names. */
+  topNames: string[];
+  /** Earliest and latest lastCheckedAt on the page. ISO dates. */
+  checkedFrom?: string;
+  checkedTo?: string;
+}
+
+/** Earliest and latest last-checked date across some listings. */
+export function checkedRange(rows: Listing[]): { checkedFrom?: string; checkedTo?: string } {
+  const dates = rows
+    .map((l) => (l.lastCheckedAt ?? '').slice(0, 10))
+    .filter(Boolean)
+    .sort();
+  return dates.length ? { checkedFrom: dates[0], checkedTo: dates[dates.length - 1] } : {};
 }
 
 export function localityCategoryStats(
@@ -394,7 +410,237 @@ export function localityCategoryStats(
     emergencyCount: emergency,
     mobileCount: mobile,
     medianResponseHours: responses.length ? responses[Math.floor(responses.length / 2)] : undefined,
+    topNames: rows.slice(0, 3).map((l) => l.name),
+    ...checkedRange(rows),
   };
+}
+
+// ------------------------------------------------------------------ hub stats
+// The town and region equivalent of the data block. Same rule: every number a
+// hub page states about itself is counted here from listing rows, once, so the
+// summary, the at a glance block, the FAQ and the meta description cannot
+// disagree with each other.
+
+const opensOn = (l: Listing, day: number) => l.hours.some((h) => h.day === day && !h.closed);
+
+/** A price band or a published call out fee. Either is a price a reader can compare. */
+const showsPrice = (l: Listing) =>
+  Boolean(l.priceBand) || (Number.isFinite(Number(l.attributes.callout_fee)) && Number(l.attributes.callout_fee) > 0);
+
+function primaryCategoryCounts(rows: Listing[]): { category: Category; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const l of rows) {
+    const c = l.categoryIds[0];
+    if (c) counts.set(c, (counts.get(c) ?? 0) + 1);
+  }
+  return categories
+    .filter((c) => counts.has(c.id))
+    .map((c) => ({ category: c, count: counts.get(c.id) as number }))
+    .sort((a, b) => b.count - a.count || a.category.sortOrder - b.category.sortOrder);
+}
+
+export interface LocalityStats {
+  /** Everything on the town page: based here or servicing here. */
+  listingCount: number;
+  categoryCount: number;
+  basedCount: number;
+  /** Based elsewhere and covering this town. */
+  travelInCount: number;
+  /** Of those, how many cover it on a service area we estimated from distance. */
+  travelInInferredCount: number;
+  /** Based in the other state and covering this town. */
+  crossBorderCount: number;
+  crossBorderInferredCount: number;
+  /** Primary categories of the cross border listings, most common first. */
+  crossBorderCategories: { category: Category; count: number }[];
+  /** Where the cross border listings are based, most common first. */
+  crossBorderHomes: { locality: Locality; count: number }[];
+  openSaturdayCount: number;
+  openSundayCount: number;
+  /** Primary categories of the listings that publish Sunday hours. */
+  sundayCategories: { category: Category; count: number }[];
+  /** Businesses based in the town that publish Sunday hours, strongest profile first. */
+  sundayBased: Listing[];
+  pricedCount: number;
+  /** A licence number is printed on the listing, checked or not. */
+  licencePublishedCount: number;
+  /** A licence we confirmed against a state register. */
+  licenceCheckedCount: number;
+  verifiedCount: number;
+  checkedFrom?: string;
+  checkedTo?: string;
+}
+
+const localityStatsCache = new Map<string, LocalityStats>();
+
+export function localityStats(localityId: string): LocalityStats {
+  const cached = localityStatsCache.get(localityId);
+  if (cached) return cached;
+
+  const locality = localityById.get(localityId);
+  const rows = listingsInLocality(localityId);
+  const travelling = rows.filter((l) => l.localityId !== localityId);
+  const crossing = travelling.filter((l) => {
+    const home = localityById.get(l.localityId);
+    return Boolean(home && locality && home.state !== locality.state);
+  });
+
+  const homes = new Map<string, number>();
+  for (const l of crossing) homes.set(l.localityId, (homes.get(l.localityId) ?? 0) + 1);
+
+  const sunday = rows.filter((l) => opensOn(l, 0));
+
+  const out: LocalityStats = {
+    listingCount: rows.length,
+    categoryCount: activeCategoriesInLocality(localityId).length,
+    basedCount: rows.length - travelling.length,
+    travelInCount: travelling.length,
+    travelInInferredCount: travelling.filter((l) => l.serviceAreaInferred).length,
+    crossBorderCount: crossing.length,
+    crossBorderInferredCount: crossing.filter((l) => l.serviceAreaInferred).length,
+    crossBorderCategories: primaryCategoryCounts(crossing),
+    crossBorderHomes: [...homes.entries()]
+      .map(([id, count]) => ({ locality: localityById.get(id) as Locality, count }))
+      .filter((h) => Boolean(h.locality))
+      .sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name)),
+    openSaturdayCount: rows.filter((l) => opensOn(l, 6)).length,
+    openSundayCount: sunday.length,
+    sundayCategories: primaryCategoryCounts(sunday),
+    sundayBased: sunday.filter((l) => l.localityId === localityId).sort(rank),
+    pricedCount: rows.filter(showsPrice).length,
+    licencePublishedCount: rows.filter((l) => l.licences.length > 0).length,
+    licenceCheckedCount: rows.filter((l) => l.licences.some((x) => x.verificationOk)).length,
+    verifiedCount: rows.filter((l) => l.status === 'verified').length,
+    ...checkedRange(rows),
+  };
+  localityStatsCache.set(localityId, out);
+  return out;
+}
+
+export interface RegionStats {
+  /** Towns in the region that have a page. */
+  liveTowns: Locality[];
+  /** Distinct businesses based in the region's towns. */
+  basedCount: number;
+  /**
+   * Distinct businesses on at least one of the region's town pages. Summing
+   * each town's count instead counts a plumber who covers six towns six times.
+   */
+  listingCount: number;
+  /** Distinct listings per category across the region, most first. */
+  categories: { category: Category; count: number }[];
+  /** Live towns by businesses based there, most first. */
+  townsByBased: { locality: Locality; based: number; listed: number }[];
+  checkedFrom?: string;
+  checkedTo?: string;
+}
+
+const regionStatsCache = new Map<string, RegionStats>();
+
+export function regionStats(regionId: string): RegionStats {
+  const cached = regionStatsCache.get(regionId);
+  if (cached) return cached;
+
+  const towns = localitiesInRegion(regionId).filter((l) => isLiveLocality(l.id));
+  const covering = new Map<string, Listing>();
+  for (const t of towns) for (const l of listingsInLocality(t.id)) covering.set(l.id, l);
+  const rows = [...covering.values()];
+  const townIds = new Set(towns.map((t) => t.id));
+
+  const catCounts = new Map<string, number>();
+  for (const l of rows) for (const c of l.categoryIds) catCounts.set(c, (catCounts.get(c) ?? 0) + 1);
+
+  const out: RegionStats = {
+    liveTowns: towns,
+    basedCount: rows.filter((l) => townIds.has(l.localityId)).length,
+    listingCount: rows.length,
+    categories: categories
+      .filter((c) => catCounts.has(c.id))
+      .map((c) => ({ category: c, count: catCounts.get(c.id) as number }))
+      .sort((a, b) => b.count - a.count || a.category.sortOrder - b.category.sortOrder),
+    townsByBased: towns
+      .map((t) => ({ locality: t, based: listingsBasedIn(t.id).length, listed: listingsInLocality(t.id).length }))
+      .sort((a, b) => b.based - a.based || b.listed - a.listed || a.locality.name.localeCompare(b.locality.name)),
+    ...checkedRange(rows),
+  };
+  regionStatsCache.set(regionId, out);
+  return out;
+}
+
+// ------------------------------------------------------------------ money page links
+
+/**
+ * Is /state/town/category/ in the index?
+ *
+ * Hubs now promote the money pages that are indexed rather than every money
+ * page, because a prominent link to a page that says noindex on its face spends
+ * the hub's weight on nothing. That makes this the sixth predicate of the kind
+ * the README warns about: it asks decide() the exact question MoneyPage asks
+ * it, with the same inputs Base receives, so a hub can never promote a page as
+ * indexed while the page itself says otherwise.
+ */
+export function isIndexedMoneyPage(localityId: string, categoryId: string): boolean {
+  if (!isLiveLocality(localityId)) return false;
+  const listingCount = listingsInLocalityCategory(localityId, categoryId).length;
+  if (!listingCount) return false;
+  return decide({
+    kind: 'localityCategory',
+    listingCount,
+    basedCount: basedCountInLocalityCategory(localityId, categoryId),
+  }).index;
+}
+
+/**
+ * A town's indexed money pages, most listings first. Memoised, because every
+ * category hub asks it of every large town and the answer is fixed per build.
+ */
+const indexedMoneyPagesCache = new Map<string, { category: Category; count: number }[]>();
+export function indexedMoneyPagesIn(localityId: string): { category: Category; count: number }[] {
+  let hit = indexedMoneyPagesCache.get(localityId);
+  if (!hit) {
+    hit = activeCategoriesInLocality(localityId).filter((a) => isIndexedMoneyPage(localityId, a.category.id));
+    indexedMoneyPagesCache.set(localityId, hit);
+  }
+  return hit;
+}
+
+/**
+ * Live towns, largest population first.
+ *
+ * "Biggest" is a fact about the place, the same reasoning hubFor() gives
+ * below: ranking towns by our own listing count would promote whichever town
+ * was researched hardest last week. Only towns with at least one indexed money
+ * page are returned, since the point of asking is to link to one.
+ */
+const largestTownsCache = new Map<string, Locality[]>();
+export function largestTowns(opts: { state?: StateCode; regionId?: string } = {}): Locality[] {
+  const key = (opts.state ?? '') + '/' + (opts.regionId ?? '');
+  let hit = largestTownsCache.get(key);
+  if (!hit) {
+    hit = localities
+      .filter((l) => isLiveLocality(l.id))
+      .filter((l) => (!opts.state || l.state === opts.state) && (!opts.regionId || l.regionId === opts.regionId))
+      .filter((l) => indexedMoneyPagesIn(l.id).length > 0)
+      .sort((a, b) => (b.population ?? 0) - (a.population ?? 0) || a.tier - b.tier || a.name.localeCompare(b.name));
+    largestTownsCache.set(key, hit);
+  }
+  return hit;
+}
+
+/**
+ * Regions with at least one live town, most businesses based there first.
+ * This is the coverage the Organization node and the about page state, so it
+ * moves on its own as towns go live rather than being typed into a sentence.
+ */
+let coveredRegionsMemo: Region[] | undefined;
+export function coveredRegions(): Region[] {
+  if (coveredRegionsMemo) return coveredRegionsMemo;
+  coveredRegionsMemo = regions
+    .map((r) => ({ r, based: regionStats(r.id).basedCount, towns: regionStats(r.id).liveTowns.length }))
+    .filter((x) => x.towns > 0)
+    .sort((a, b) => b.based - a.based || a.r.name.localeCompare(b.r.name))
+    .map((x) => x.r);
+  return coveredRegionsMemo;
 }
 
 // ------------------------------------------------------------------ urls
@@ -453,6 +699,9 @@ export const url = {
   sitemapPage: () => path('sitemap'),
   verified: () => path('verified'),
   thanks: () => path('thanks'),
+  quotes: () => path('get-quotes'),
+  leadsForBusiness: () => path('leads-for-business'),
+  quote: (s: QuoteService) => path('get-quotes', s.slug),
 };
 
 export { STATES, POLICY };
@@ -478,6 +727,8 @@ const STATIC_PAGES = new Set<string>([
   '/wire/',
   '/tools/',
   '/events/',
+  '/get-quotes/',
+  '/leads-for-business/',
   '/nsw/',
   '/vic/',
 ]);
@@ -555,6 +806,8 @@ export function pageExists(href: string): boolean {
       return parts.length === 2 && events.some((e) => e.slug === parts[1]);
     case 'business':
       return parts.length === 2 && listingBySlug.has(parts[1]);
+    case 'get-quotes':
+      return parts.length === 2 && Boolean(getQuoteService(parts[1]));
 
     default:
       return false;

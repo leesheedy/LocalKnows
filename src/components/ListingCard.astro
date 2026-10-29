@@ -65,24 +65,30 @@ const media = listingMedia(listing);
     <span class={'state mono ' + (home.state === 'VIC' ? 'vic' : '')}>{home.state}</span>
   )}
 
-  <div class="meta">
-    {rating ? (
-      <>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="rate">{rating.toFixed(1)}</span>
-        <span>({reviewCount})</span>
-      </>
-    ) : (
-      <span style="color:var(--ink-40)">No ratings collected yet</span>
-    )}
-    {listing.status === 'verified' && (
-      <span class="verif">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        Verified
-      </span>
-    )}
-    {listing.priceBand && <span>{listing.priceBand}</span>}
-  </div>
+  {/*
+    "No ratings collected yet" used to fill this row on nearly every card, which
+    put the same apology in front of every business. A missing rating now just
+    leaves the row to the facts that are there.
+  */}
+  {(rating || listing.status === 'verified' || listing.priceBand || listing.status === 'claimed') && (
+    <div class="meta">
+      {rating && (
+        <>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="rate">{rating.toFixed(1)}</span>
+          <span>({reviewCount})</span>
+        </>
+      )}
+      {listing.status === 'verified' && (
+        <span class="verif">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          Verified
+        </span>
+      )}
+      {listing.status === 'claimed' && <span class="claimed-tag">Owner managed</span>}
+      {listing.priceBand && <span>{listing.priceBand}</span>}
+    </div>
+  )}
 
   <p class="desc">{fitDescription(listing.description, 155)}</p>
 
@@ -103,7 +109,13 @@ const media = listingMedia(listing);
       <span class="shut">Hours not published</span>
     )}
     <span class="right">
-      <a class="btn btn-sm btn-ghost" href={url.listing(listing)}>Details</a>
+      {listing.phone && (
+        <a class="btn btn-sm btn-ghost card-call" href={'tel:' + listing.phone.replace(/[^0-9+]/g, '')} aria-label={'Call ' + listing.name}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+          Call
+        </a>
+      )}
+      <a class="btn btn-sm" href={url.listing(listing)}>Details</a>
     </span>
   </div>
 </article>

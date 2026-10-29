@@ -1,7 +1,7 @@
 /**
  * Postbuild.
  *
- * Sitemaps, robots.txt, llms.txt, redirects and headers are all generated from
+ * Sitemaps, robots.txt, llms.txt, llms-full.txt, redirects and headers are all generated from
  * what actually got built, not from what the data layer thinks got built. The
  * sitemap is assembled by reading the rendered <meta name="robots"> off every
  * page, so a noindex page can never appear in it. That is the one guarantee
@@ -42,7 +42,38 @@ const rx = {
   robots: /<meta name="robots" content="([^"]*)"/i,
   canonical: /<link rel="canonical" href="([^"]*)"/i,
   title: /<title>([^<]*)<\/title>/i,
+  desc: /<meta name="description" content="([^"]*)"/i,
   modified: /"dateModified":"([^"]{10})/,
+  jsonld: /<script type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/i,
+};
+
+const decodeHtml = (t) =>
+  t
+    .replace(/&#(\d+);/g, (_m, d) => String.fromCharCode(Number(d)))
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&#x27;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+
+/**
+ * What a page says about itself, read off the page.
+ *
+ * llms.txt quotes each hub's "In short" from the WebPage node's abstract and
+ * orders money pages by the ItemList's numberOfItems, both as rendered. So the
+ * summary an answer engine reads is the one a person reads at the top of the
+ * page, and llms.txt cannot describe a page differently from how it describes
+ * itself.
+ */
+const readGraph = (html) => {
+  const m = rx.jsonld.exec(html);
+  if (!m) return [];
+  try {
+    const parsed = JSON.parse(m[1]);
+    return parsed['@graph'] ?? [parsed];
+  } catch {
+    return [];
+  }
 };
 
 const entries = [];
@@ -51,13 +82,21 @@ for (const file of pages) {
   const robots = rx.robots.exec(html)?.[1] ?? 'index, follow';
   const canonical = rx.canonical.exec(html)?.[1];
   const urlPath = toUrlPath(file);
+  const indexable = !/noindex/i.test(robots);
+  const nodes = indexable ? readGraph(html) : [];
+  const webpage = nodes.find((n) => typeof n['@id'] === 'string' && n['@id'].endsWith('#webpage'));
+  const itemList = nodes.find((n) => typeof n['@id'] === 'string' && n['@id'].endsWith('#listings'));
   entries.push({
     file,
     urlPath,
     canonical: canonical || SITE + urlPath,
-    indexable: !/noindex/i.test(robots),
+    indexable,
     lastmod: rx.modified.exec(html)?.[1] || BUILD_DATE,
     title: rx.title.exec(html)?.[1] || '',
+    description: decodeHtml(rx.desc.exec(html)?.[1] || ''),
+    abstract: webpage?.abstract || '',
+    items: typeof itemList?.numberOfItems === 'number' ? itemList.numberOfItems : 0,
+    organisation: urlPath === '/about/' ? nodes.find((n) => n['@type'] === 'Organization') : undefined,
   });
 }
 
@@ -222,74 +261,192 @@ fs.writeFileSync(path.join(DIST, 'robots.txt'), robots);
 
 // ---------------------------------------------------------------- llms.txt
 
-const countIn = (prefix) => entries.filter((e) => e.indexable && e.urlPath.startsWith(prefix)).length;
-const topPages = (prefix, n) =>
-  entries
-    .filter((e) => e.indexable && e.urlPath.startsWith(prefix) && e.urlPath.split('/').filter(Boolean).length === 3)
-    .slice(0, n);
+/*
+ * llms.txt and llms-full.txt.
+ *
+ * An answer engine asked "who are the plumbers in Albury" or "what is
+ * LocalsKnow" wants three things from a site it might cite: what the site is
+ * and who stands behind it, how its facts were got and when, and which page
+ * answers which question. This writes all three from the build itself:
+ *
+ *   - the entity facts from the Organization node on /about/, as rendered;
+ *   - the counts and dates from listings.json and the geo files;
+ *   - the page list from pages that rendered as indexable, each quoted by its
+ *     own "In short" (the WebPage abstract) and ordered by its own ItemList.
+ *
+ * Town order is by population, a fact about the place, never by how many
+ * listings we happen to hold. llms.txt is the short version with the pages most
+ * worth citing; llms-full.txt is every indexable hub and money page.
+ */
+const readJson = (rel) => {
+  const p = path.join(ROOT, rel);
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : undefined;
+};
+const geo = [readJson('src/data/geo-nsw.json'), readJson('src/data/geo-vic.json')].filter(Boolean);
+const taxonomy = readJson('src/data/categories.json');
+const allListings = (readJson('src/data/listings.json') ?? []).filter((l) => l.status !== 'suspended');
 
-const llms = `# LocalsKnow
+const localityByPath = new Map();
+const regionByPath = new Map();
+for (const g of geo) {
+  for (const l of g.localities) localityByPath.set('/' + l.state.toLowerCase() + '/' + l.slug + '/', l);
+  for (const r of g.regions) regionByPath.set('/' + r.state.toLowerCase() + '/' + r.slug + '/', r);
+}
+const categorySlugs = new Set((taxonomy?.categories ?? []).map((c) => c.slug));
 
-> An independent business and places directory for New South Wales and Victoria,
-> Australia. Built around service areas rather than state borders, so a business
-> based in New South Wales that works in Victoria appears on both sides of the line.
+const segs = (p) => p.split('/').filter(Boolean);
+const indexed = entries.filter((e) => e.indexable);
+const cleanTitle = (t) => decodeHtml(t).replace(/ \| LocalsKnow$/, '');
+const summaryOf = (e) => e.abstract || e.description;
+const line = (e, label) => '- [' + (label || cleanTitle(e.title)) + '](' + e.canonical + '): ' + summaryOf(e);
 
-## What this site is for
+const townHubs = indexed
+  .filter((e) => segs(e.urlPath).length === 2 && localityByPath.has(e.urlPath))
+  .map((e) => ({ e, locality: localityByPath.get(e.urlPath) }))
+  .sort((a, b) => (b.locality.population ?? 0) - (a.locality.population ?? 0) || a.locality.name.localeCompare(b.locality.name));
+const regionHubs = indexed.filter((e) => segs(e.urlPath).length === 2 && regionByPath.has(e.urlPath));
+const stateHubs = indexed.filter((e) => ['/nsw/', '/vic/'].includes(e.urlPath));
+const moneyPages = indexed.filter((e) => {
+  const s = segs(e.urlPath);
+  return (s[0] === 'nsw' || s[0] === 'vic') && s.length === 3 && categorySlugs.has(s[2]);
+});
+const moneyByTown = new Map();
+for (const e of moneyPages) {
+  const town = '/' + segs(e.urlPath).slice(0, 2).join('/') + '/';
+  const list = moneyByTown.get(town) ?? [];
+  list.push(e);
+  moneyByTown.set(town, list);
+}
+for (const list of moneyByTown.values()) list.sort((a, b) => b.items - a.items || a.urlPath.localeCompare(b.urlPath));
+const categoryHubs = indexed
+  .filter((e) => segs(e.urlPath)[0] === 'categories' && segs(e.urlPath).length === 2)
+  .sort((a, b) => a.urlPath.localeCompare(b.urlPath));
+const editorial = (head) => indexed.filter((e) => segs(e.urlPath)[0] === head && segs(e.urlPath).length === 2);
 
-LocalsKnow lists trades and services, cafes and restaurants, pubs and clubs,
-accommodation, things to do, and community clubs across regional NSW and VIC.
-Coverage starts on the Albury Wodonga border corridor and expands region by region.
+const org = entries.find((e) => e.urlPath === '/about/')?.organisation ?? {};
+const pub = org.parentOrganization ?? {};
+const pubAddress = pub.address
+  ? [pub.address.addressLocality, pub.address.addressRegion, pub.address.postalCode].filter(Boolean).join(' ')
+  : '';
+const regionsCovered = (org.areaServed ?? []).map((a) => a.name + ' (' + (a.containedInPlace?.name ?? '') + ')');
+const checkedDates = allListings.map((l) => (l.lastCheckedAt ?? '').slice(0, 10)).filter(Boolean).sort();
+const fmtDate = (iso) =>
+  new Date(iso + 'T00:00:00Z').toLocaleDateString('en-AU', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+// Same wording as checkedPhrase() in src/lib/copy.ts, so the file reads like the pages.
+const firstChecked = checkedDates[0];
+const lastChecked = checkedDates[checkedDates.length - 1];
+const checkedLine = !checkedDates.length
+  ? ''
+  : firstChecked === lastChecked
+    ? 'on ' + fmtDate(lastChecked)
+    : firstChecked.slice(0, 7) === lastChecked.slice(0, 7)
+      ? 'between ' + Number(firstChecked.slice(8, 10)) + ' and ' + fmtDate(lastChecked)
+      : 'between ' + fmtDate(firstChecked) + ' and ' + fmtDate(lastChecked);
+
+const LEAD_TOWNS = 8;
+const PAGES_PER_TOWN = 8;
+const leadTowns = townHubs.filter((t) => moneyByTown.has(t.e.urlPath)).slice(0, LEAD_TOWNS);
+
+const intro = `# LocalsKnow
+
+> LocalsKnow (localsknow.com.au) is an independent online directory of businesses,
+> clubs and places in the New South Wales and Victoria border country${pub.name ? ', published by ' + pub.name + (pubAddress ? ' of ' + pubAddress : '') : ''}.
+> Where a business is based and where it works are recorded separately, so a business
+> based on one side of the Murray that works on the other appears on both sides.
+
+## In short
+
+- Listings: ${allListings.length.toLocaleString('en-AU')} businesses, on ${townHubs.length} town pages and ${moneyPages.length} town and category pages that are open to search engines.
+${regionsCovered.length ? '- Regions covered: ' + regionsCovered.join(', ') + '.\n' : ''}- Largest towns covered: ${townHubs.slice(0, 6).map((t) => t.locality.name + ' ' + t.locality.state).join(', ')}.
+- Sources: each listing is compiled from public sources, such as the business's own website and council and tourism listings, and its page shows the URLs its details were read from and the date they were last read. Anything that could not be sourced is left blank.
+${checkedLine ? '- Dates: listing details were last read from their sources ' + checkedLine + '. Counts and pages were rebuilt on ' + fmtDate(BUILD_DATE) + '.\n' : ''}- Name: written as one word, LocalsKnow${(org.alternateName ?? []).length ? '. Also written ' + org.alternateName.map((x) => '"' + x + '"').join(', ') : ''}.
 
 ## How to cite this site
 
-Every listing page shows the sources the details were read from and the date they
-were last checked. Statistics on a category page ("18 plumbers in Albury, 6 open
-Saturdays") are computed from the listings on that page, not estimated. When quoting
-a figure, quote the page it came from and the date shown on it.
+Every town and category page opens with an "In short" paragraph and a data block
+counted from the listings on that page ("18 plumbers in Albury, 6 open Saturdays").
+Those figures are counts, not estimates. When quoting one, cite the page it came
+from and the date shown on it, because the numbers move as listings are added.
 
 ## What we do and do not assert
 
 - A licence is only described as verified when it was checked against a public
-  state register, and the page shows the date of that check.
+  state register, and the page shows the date of that check. A licence number read
+  off a business's own material is shown as published, not as checked.
 - Ratings only appear when they were pulled from the Google Places API, with the
   date of the pull. We do not publish a rating we cannot source.
 - A service area marked "estimated" was derived from distance, not stated by the
   business.
 - Paid placement never changes organic ordering and never enters structured data.
+`;
 
-## Structure
+const townSection = (withPages) =>
+  '## Town pages, largest town first\n\n' +
+  townHubs.map((t) => line(t.e, t.locality.name + ', ' + t.locality.state)).join('\n') +
+  '\n' +
+  (withPages
+    ? '\n## Town and category pages, by town\n\n' +
+      townHubs
+        .filter((t) => moneyByTown.has(t.e.urlPath))
+        .map(
+          (t) =>
+            '### ' + t.locality.name + ', ' + t.locality.state + '\n\n' + moneyByTown.get(t.e.urlPath).map((e) => line(e)).join('\n'),
+        )
+        .join('\n\n') +
+      '\n'
+    : '\n## Where to look first\n\nThe fullest pages in the largest towns. Each one lists businesses that work in that\ntown, with contact details, hours where published, and sources.\n\n' +
+      leadTowns
+        .map(
+          (t) =>
+            '### ' +
+            t.locality.name +
+            ', ' +
+            t.locality.state +
+            '\n\n' +
+            moneyByTown
+              .get(t.e.urlPath)
+              .slice(0, PAGES_PER_TOWN)
+              .map((e) => line(e))
+              .join('\n'),
+        )
+        .join('\n\n') +
+      '\n');
 
-- /nsw/ and /vic/ — state hubs
-- /nsw/<region>/ — region hubs
-- /nsw/<locality>/ — locality hubs
-- /nsw/<locality>/<category>/ — the main listing pages, ${countIn('/nsw/') + countIn('/vic/')} pages across both states
-- /nsw/<locality>/<category>/<business>/ — individual business detail
-- /categories/ — the taxonomy, ${countIn('/categories/')} pages
-- /guides/ — editorial guides, each with a named author and a visible review date
-- /lists/ — human written, ranked curated lists
-- /wire/ — original writing about how things work on the border
-- /tools/ — free, ungated tools
-- /events/ — community and business events
+const tail = (full) => `
+## State and region pages
 
-## Key pages
+${[...stateHubs, ...regionHubs].map((e) => line(e)).join('\n')}
 
-${topPages('/nsw/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalsKnow$/, '')).join('\n')}
-${topPages('/vic/', 12).map((e) => '- ' + SITE + e.urlPath + ' — ' + e.title.replace(/ \| LocalsKnow$/, '')).join('\n')}
+## Category pages
+
+${full ? categoryHubs.map((e) => line(e)).join('\n') : '- ' + SITE + '/categories/: every category, ' + categoryHubs.length + ' with listings, each linking to the towns where it is live.'}
+
+## Guides, lists and tools
+
+${[...editorial('guides'), ...editorial('tools')].map((e) => '- [' + cleanTitle(e.title) + '](' + e.canonical + ')').join('\n')}
+- ${SITE}/lists/: curated lists. A list a person wrote is labelled as written; a list compiled by a rule prints the rule.
+- ${SITE}/wire/: data driven articles, every sentence a count over the listings.
 
 ## Machine readable
 
 - Sitemap index: ${SITE}/sitemap.xml
+- Every page carries schema.org JSON-LD in an @graph block. Town and category pages put their "In short" in the WebPage abstract.
 - RSS: ${SITE}/wire/rss.xml
-- Every page carries schema.org JSON-LD in an @graph block.
-
+${full ? '' : '- Full page index with a summary for every town and category page: ' + SITE + '/llms-full.txt\n'}
 ## Contact
 
-Corrections and removals: ${SITE}/data-and-corrections/
-Editorial policy: ${SITE}/editorial-policy/
-
+- About the site and who runs it: ${SITE}/about/
+${org.email ? '- Email: ' + org.email + '\n' : ''}- Contact: ${SITE}/contact/
+- Corrections and removals: ${SITE}/data-and-corrections/
+- Editorial policy: ${SITE}/editorial-policy/
+${pub.name ? '- Publisher: ' + pub.name + (pub.legalName ? ' (' + pub.legalName + ')' : '') + (pubAddress ? ', ' + pubAddress : '') + (pub.url ? ', ' + pub.url : '') + '\n' : ''}
 Last built ${BUILD_DATE}.
 `;
+
+const llms = intro + '\n' + townSection(false) + tail(false);
+const llmsFull = intro + '\n' + townSection(true) + tail(true);
 fs.writeFileSync(path.join(DIST, 'llms.txt'), llms);
+fs.writeFileSync(path.join(DIST, 'llms-full.txt'), llmsFull);
 
 // ---------------------------------------------------------------- redirects
 
@@ -342,11 +499,34 @@ for (const state of ['nsw', 'vic']) {
   }
 }
 
+/**
+ * Full listing URLs that Google holds and that moved.
+ *
+ * The /business/ alias covers a slug, but a listing that changes category or
+ * town changes its full URL too, and Search Console reported these as 404s in
+ * October 2026. Each goes straight to where the listing lives now. The rule
+ * after them catches the next one: any listing shaped path with no file goes
+ * through /business/<slug>/, which resolves the slug or falls back to search.
+ */
+const MOVED_LISTINGS = [
+  ['/vic/beechworth/bars/bridge-road-brewers/', '/vic/beechworth/breweries/bridge-road-brewers-beechworth/'],
+  ['/nsw/albury/bars/the-thirsty-devil-brewery/', '/nsw/albury/breweries/the-thirsty-devil-brewery-south-albury/'],
+  ['/nsw/lake-albert/swimming-spots/lake-albert/', '/nsw/wagga-wagga/swimming-spots/lake-albert/'],
+  ['/nsw/wagga-wagga/takeaway/knights-deli-wagga-wagga/', '/nsw/wagga-wagga/butchers/knights-deli-wagga-wagga/'],
+].filter(([, to]) => fs.existsSync(path.join(DIST, to, 'index.html')));
+const movedRedirects = [
+  ...MOVED_LISTINGS.map(([from, to]) => from + '  ' + to + '  301'),
+  ...['nsw', 'vic'].map((s) => '/' + s + '/:place/:category/:slug/  /business/:slug/  301'),
+];
+
 const redirectFile = [
   '# Generated by scripts/postbuild.mjs. Do not edit by hand.',
   '',
   '# A listing keeps one stable identifier even when it is recategorised.',
   ...redirects,
+  '',
+  '# Listing URLs that moved. The placeholder rules only fire where no file exists.',
+  ...movedRedirects,
   '',
   '# A themed or guide page that fell below its threshold sends you to the town',
   '# rather than a 404. Only fires where no file exists.',
@@ -402,6 +582,10 @@ const headers = `/*
 /llms.txt
   Content-Type: text/plain; charset=utf-8
   Cache-Control: public, max-age=3600
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
 `;
 fs.writeFileSync(path.join(DIST, '_headers'), headers);
 
@@ -416,4 +600,5 @@ console.log('  noindex, follow ' + (entries.length - indexable));
 console.log('  sitemap files   ' + files.length);
 for (const f of files) console.log('    ' + f.name.padEnd(30) + f.count);
 console.log('  redirects       ' + redirects.length);
-console.log('  wrote robots.txt, llms.txt, _redirects, _headers');
+console.log('  llms.txt        ' + Math.round(llms.length / 1024) + 'kb, llms-full.txt ' + Math.round(llmsFull.length / 1024) + 'kb');
+console.log('  wrote robots.txt, llms.txt, llms-full.txt, _redirects, _headers');

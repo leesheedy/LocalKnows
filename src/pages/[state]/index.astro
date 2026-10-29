@@ -13,12 +13,16 @@ import {
   guides as allGuides,
   curatedLists,
   liveLocalities,
+  regionStats,
+  largestTowns,
+  indexedMoneyPagesIn,
+  POLICY,
 } from '~/lib/repo';
 import { VERTICALS } from '~/lib/site';
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { n } from '~/lib/copy';
+import { listPhrase, n } from '~/lib/copy';
 import { BUILD_DATE } from '~/lib/build';
 import {
   graph,
@@ -51,13 +55,31 @@ const withListings = liveLocalities()
   .map((l) => ({ locality: l, count: listingsInLocality(l.id).length }))
   .sort((a, b) => b.count - a.count);
 
-const totalListings = withListings.reduce((t, p) => t + p.count, 0);
+/*
+ * Distinct businesses on the state's town pages. This summed each town's
+ * count, which counts a Wodonga electrician covering eleven towns eleven times
+ * and printed the total as "businesses in Victoria". Same fix as the region
+ * hubs, and the region tiles below read the same distinct count.
+ */
+const totalListings = new Set(withListings.flatMap((p) => listingsInLocality(p.locality.id).map((l) => l.id))).size;
 
 const regionRows = regions.map((r) => {
   const locs = localitiesInRegion(r.id).filter((l) => l.tier !== 4);
-  const count = locs.reduce((t, l) => t + listingsInLocality(l.id).length, 0);
-  return { region: r, towns: locs.length, count };
+  return { region: r, towns: locs.length, count: regionStats(r.id).listingCount };
 });
+
+/*
+ * The state's largest towns and their fullest indexed money pages.
+ *
+ * State hubs are the second strongest pages on the site and linked only to
+ * town hubs and national category hubs, so "cafes in Albury" was three clicks
+ * from here. These are the pages that answer the queries the site exists for,
+ * and indexedMoneyPagesIn() asks decide(), so nothing promoted here is a page
+ * that says noindex.
+ */
+const popular = largestTowns({ state: code })
+  .slice(0, 8)
+  .map((t) => ({ locality: t, pages: indexedMoneyPagesIn(t.id).slice(0, 8) }));
 
 const catCounts = new Map<string, number>();
 for (const { locality } of withListings) {
@@ -80,17 +102,33 @@ const stateGuides = allGuides
 const stateLists = curatedLists.filter((l) => l.state === code).slice(0, 6);
 
 const h1 = 'Business directory for ' + state.name;
-const description =
-  n(totalListings) +
-  ' businesses across ' +
-  withListings.length +
-  ' towns and ' +
-  regions.length +
-  ' regions in ' +
-  state.name +
-  '. Service areas cross the border, so operators from ' +
-  STATES[other].name +
-  ' show up too.';
+const adjective = code === 'NSW' ? 'NSW' : 'Victorian';
+const titleLadder = [
+  adjective + ' business directory: ' + n(totalListings) + ' listed in ' + withListings.length + ' towns',
+  adjective + ' business directory: ' + n(totalListings) + ' listed',
+  h1,
+];
+const bigTowns = popular.slice(0, 3).map((p) => p.locality.name);
+const description = (() => {
+  let out =
+    n(totalListings) +
+    ' businesses across ' +
+    withListings.length +
+    ' towns in ' +
+    state.name +
+    (bigTowns.length ? ', including ' + listPhrase(bigTowns) : '') +
+    '.';
+  for (const tail of [
+    ' Service areas cross the border, so operators from ' + STATES[other].name + ' show up too.',
+    ' Operators from ' + STATES[other].name + ' who work here are listed too.',
+  ]) {
+    if ((out + tail).length <= 158) {
+      out += tail;
+      break;
+    }
+  }
+  return out;
+})();
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -129,7 +167,8 @@ const jsonLd = graph([
 
 <Base
   kind="state"
-  title={h1}
+  title={titleLadder[0]}
+  titleAlt={titleLadder.slice(1)}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -175,6 +214,35 @@ const jsonLd = graph([
       </div>
     </div>
   </section>
+
+  {popular.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Popular searches in {state.name}</h2>
+          <p>
+            The largest towns by population and their fullest pages. Every page linked here lists at least
+            {' '}{POLICY.minListingsToIndex} businesses, at least one of them based in the town.
+          </p>
+        </div>
+        <div class="linkgrid">
+          {popular.map((t) => (
+            <div>
+              <h3><a href={url.locality(t.locality)}>{t.locality.name}</a></h3>
+              <ul>
+                {t.pages.map((p) => (
+                  <li>
+                    <a href={url.localityCategory(t.locality, p.category)}>{p.category.name} in {t.locality.name}</a>
+                    <span style="color:var(--ink-40);font-size:13px"> {n(p.count)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {withListings.length > 0 && (
     <section class="sec">

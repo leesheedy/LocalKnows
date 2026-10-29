@@ -27,8 +27,11 @@ import DataBlock from '~/components/DataBlock.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
 import Pager from '~/components/Pager.astro';
+import QuoteCta from '~/components/QuoteCta.astro';
+import { quoteServiceForCategorySlug } from '~/lib/quote-services';
 import {
   moneyPageTitle,
+  moneyPageTitleLadder,
   moneyPageDescription,
   statSummary,
   otherStateLabel,
@@ -60,13 +63,15 @@ interface Props {
 }
 
 const { locality, category, listings, stats, page, totalPages, buildDate } = Astro.props;
+const quoteService = quoteServiceForCategorySlug(category.slug);
 
 const state = STATES[locality.state];
 const region = getRegion(locality.regionId);
 const otherState = otherStateLabel(locality.state);
 
 const h1 = moneyPageTitle(locality, category);
-const pageSuffix = page > 1 ? ' — page ' + page : '';
+// The <title> carries the counts; the H1 stays the plain name of the page.
+const titleLadder = moneyPageTitleLadder(locality, category, stats, page);
 const canonicalPath = url.localityCategoryPage(locality, category, page);
 
 const crumbs: Crumb[] = [
@@ -185,12 +190,15 @@ const jsonLd = graph([
     crumbs,
     type: 'CollectionPage',
     dateModified: buildDate,
+    // The standfirst, verbatim: the "In short" an answer engine should lift.
+    abstract: statSummary(locality, category, stats),
   }),
   placeNode(locality, region),
   itemListNode({
     pageUrl: canonicalPath,
     name: h1,
     items: listings.map((l) => ({ url: url.listing(l), name: l.name })),
+    numberOfItems: stats.listingCount,
   }),
   // Individual businesses, without ratings, because the reviews are not on this page.
   ...listings
@@ -202,7 +210,8 @@ const jsonLd = graph([
 
 <Base
   kind="localityCategory"
-  title={h1 + pageSuffix}
+  title={titleLadder[0]}
+  titleAlt={titleLadder.slice(1)}
   description={moneyPageDescription(locality, category, stats)}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -268,6 +277,8 @@ const jsonLd = graph([
       total={totalPages}
       hrefFor={(p: number) => url.localityCategoryPage(locality, category, p)}
     />
+
+    {quoteService && <QuoteCta service={quoteService} locality={locality} />}
   </div>
 
   {page === 1 && (

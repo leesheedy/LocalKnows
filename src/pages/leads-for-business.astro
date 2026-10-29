@@ -1,0 +1,364 @@
+---
+/**
+ * /leads-for-business/: for businesses that want the quote requests.
+ *
+ * Pay per lead and nothing else. The offer is set in LEAD_OFFER so the page,
+ * the FAQ and the guarantee can never disagree. It says nothing about volume
+ * it cannot stand behind: the directory is new, so the promise is about what
+ * a lead contains and what happens when one is bad, not how many there are.
+ *
+ * Buying leads has no effect on a business's position in the directory, the
+ * same rule as everywhere else on the site.
+ */
+import Base from '~/layouts/Base.astro';
+import Faq from '~/components/Faq.astro';
+import { url, liveLocalities } from '~/lib/repo';
+import { QUOTE_SERVICES, LEAD_OFFER } from '~/lib/quote-services';
+import { n } from '~/lib/copy';
+import { BUILD_DATE } from '~/lib/build';
+import { graph, organisationNode, websiteNode, breadcrumbNode, webPageNode, faqNode, type Crumb } from '~/lib/seo';
+
+const canonicalPath = url.leadsForBusiness();
+const towns = liveLocalities().length;
+const h1 = 'Local quote requests for your business. Pay per lead, nothing else.';
+const description = `Get quote requests from customers on both sides of the Murray for solar, building, renovations, roofing, air conditioning, landscaping, pools, finance and real estate. No monthly fee, no contract, first ${LEAD_OFFER.freeLeads} leads free, bad leads credited.`;
+
+const crumbs: Crumb[] = [
+  { name: 'Home', href: url.home() },
+  { name: 'Leads for business', href: canonicalPath },
+];
+
+const faqs = [
+  {
+    q: 'How much does a lead cost?',
+    a: 'It depends on the service and the area, and it is agreed with you before a single lead is sent. A lead for a new home costs more than a lead for a split system, because the job is worth more. There is no monthly fee, no joining fee and no minimum spend.',
+  },
+  {
+    q: 'What counts as a bad lead?',
+    a: `A wrong or disconnected number, a person who never asked for a quote, a job outside the towns you chose, a service you told us you do not offer, or a duplicate of a lead you already have. Tell us within ${LEAD_OFFER.creditDays} days and it is credited in full. You do not have to prove it.`,
+  },
+  {
+    q: 'How many other businesses get the same lead?',
+    a: `Never more than ${LEAD_OFFER.maxBusinessesPerLead}, and the customer is told that up front, so nobody is surprised by three calls. Ask about exclusive leads if you want to be the only one in your service and towns.`,
+  },
+  {
+    q: 'How many leads will I get?',
+    a: 'That depends on your service and your towns, and we will tell you honestly what we are seeing in your area before you start. You can cap how many you receive, and you are never charged for a lead you did not get.',
+  },
+  {
+    q: 'Does buying leads move my listing up the directory?',
+    a: 'No. Directory order comes from how complete and checked a profile is, never from payment, and that includes payment for leads. Your free listing stays exactly where it would have been.',
+  },
+  {
+    q: 'How do leads reach me?',
+    a: 'By SMS and email as soon as the customer sends the request, with everything they told us: the job, the town, the budget, the timing, the property and how they want to be contacted. Speed wins quotes, so the first business to call usually gets the job.',
+  },
+  {
+    q: 'Can I stop?',
+    a: 'Any time, with a text or an email. There is no contract to get out of.',
+  },
+];
+
+const jsonLd = graph([
+  organisationNode(),
+  websiteNode(),
+  breadcrumbNode(crumbs, canonicalPath),
+  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, dateModified: BUILD_DATE }),
+  faqNode(faqs, canonicalPath),
+]);
+
+const volumes = ['Up to 5 a month', '5 to 15 a month', '15 to 30 a month', 'As many as you can send'];
+const exclusivity = ['Shared with up to two others', 'Exclusive to me', 'Not sure yet'];
+const jobValues = ['Under $5,000', '$5,000 to $20,000', '$20,000 to $100,000', 'Over $100,000'];
+const caps = ['Under $500', '$500 to $1,500', '$1,500 to $5,000', 'Over $5,000', 'No cap'];
+---
+
+<Base
+  kind="static"
+  title="Leads for local businesses: pay per lead, no monthly fee"
+  titleAlt={['Leads for local businesses, pay per lead']}
+  description={description}
+  canonicalPath={canonicalPath}
+  crumbs={crumbs}
+  jsonLd={jsonLd}
+  modifiedAt={BUILD_DATE}
+>
+  <section class="lfb-hero">
+    <div class="wrap">
+      <p class="mono lfb-eyebrow">For trades and services with jobs worth winning</p>
+      <h1>{h1}</h1>
+      <p class="lfb-sub">
+        People on both sides of the Murray ask LocalsKnow for quotes on solar, building,
+        renovations, roofing, air conditioning, landscaping, pools, finance and real estate. We pass
+        each request to no more than {LEAD_OFFER.maxBusinessesPerLead} businesses that cover the
+        town. You pay for the leads you get, and only those.
+      </p>
+      <div class="lfb-actions">
+        <a class="btn btn-gold lfb-btn" href="#apply">Apply for leads</a>
+        <a class="btn btn-ghost lfb-btn lfb-ghost" href="#guarantee">See the guarantee</a>
+      </div>
+      <ul class="lfb-badges">
+        <li><b>$0</b> monthly fee</li>
+        <li><b>{LEAD_OFFER.freeLeads}</b> leads free to start</li>
+        <li><b>{LEAD_OFFER.creditDays} days</b> to credit a bad lead</li>
+        <li><b>{LEAD_OFFER.maxBusinessesPerLead}</b> businesses per lead, at most</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>The offer, in full</h2>
+        <p>No fine print, because there is nothing to put in it.</p>
+      </div>
+      <div class="lfb-offer">
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3>Pay per lead. That is all.</h3>
+          <p>No monthly fee, no joining fee, no minimum spend and no contract. A price per lead is agreed before anything is sent.</p>
+        </article>
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg></span>
+          <h3>Your first {LEAD_OFFER.freeLeads} leads are free</h3>
+          <p>Judge the quality on real customers before you pay a cent. If they are not worth it, walk away.</p>
+        </article>
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 4.4 3.4 8.2 8 9 4.6-.8 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <h3>Bad lead? Full credit.</h3>
+          <p>Wrong number, wrong area, wrong service, fake or duplicate: tell us within {LEAD_OFFER.creditDays} days and it comes off your bill.</p>
+        </article>
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-3.9 3.1-7 7-7s7 3.1 7 7M17 4.5a3.5 3.5 0 0 1 0 7M22 21c0-3.2-2-5.9-5-6.7"/></svg></span>
+          <h3>Never more than {LEAD_OFFER.maxBusinessesPerLead} of you</h3>
+          <p>Every lead goes to {LEAD_OFFER.maxBusinessesPerLead} businesses at most, and the customer knows it. Exclusive leads are available.</p>
+        </article>
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <h3>Only your towns, only your work</h3>
+          <p>You choose the services and the towns, on either side of the border. Nothing outside them is sent or charged.</p>
+        </article>
+        <article>
+          <span class="lfb-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+          <h3>You set the cap</h3>
+          <p>Choose the most leads you want in a month and we stop there. Pause or stop with one text.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="guarantee">
+    <div class="wrap">
+      <div class="lfb-guarantee">
+        <div class="lfb-seal" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 5v6.5c0 5 3.4 9.4 8 10.5 4.6-1.1 8-5.5 8-10.5V5l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+        </div>
+        <div>
+          <p class="mono" style="color:var(--wattle-ink);margin:0 0 8px">The LocalsKnow lead guarantee</p>
+          <h2>If a lead is no good, you do not pay for it.</h2>
+          <p>
+            Tell us within {LEAD_OFFER.creditDays} days of receiving a lead if the number is wrong or
+            disconnected, the person never asked for a quote, the job is outside your towns, it is a
+            service you do not offer, or it duplicates a lead you already have. We credit it in full.
+            No forms, no proof, no argument. If a lead is credited by mistake now and then, that is a
+            cost we would rather carry than make you chase.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap lfb-split">
+      <div>
+        <div class="sec-head">
+          <h2>What a lead looks like</h2>
+          <p>The questions you would ask on the first call, already answered. Sent the moment the customer presses send.</p>
+        </div>
+        <ul class="lfb-list">
+          <li>The job, in the customer's own picks: what they want, the property, whether they own it</li>
+          <li>The town and postcode, matched to your service area</li>
+          <li>Budget range and timing</li>
+          <li>Name, phone, email, and the way and time they prefer to be contacted</li>
+          <li>Anything else they typed, and consent to be contacted by you</li>
+        </ul>
+      </div>
+      <figure class="lfb-sample" aria-label="An example lead, not a real customer">
+        <figcaption class="mono">Example lead &middot; not a real customer</figcaption>
+        <div class="lfb-sample-head">
+          <b>Solar panels and a battery</b>
+          <span>Wodonga VIC 3690</span>
+        </div>
+        <dl>
+          <div><dt>Budget</dt><dd>$10,000 to $20,000</dd></div>
+          <div><dt>Timing</dt><dd>Within a month</dd></div>
+          <div><dt>Power bill</dt><dd>$600 to $1,000 a quarter</dd></div>
+          <div><dt>Property</dt><dd>House, owner occupied</dd></div>
+          <div><dt>Contact</dt><dd>Phone call, mornings</dd></div>
+          <div><dt>Name</dt><dd><span class="lfb-blur">Sam Customer</span></dd></div>
+          <div><dt>Phone</dt><dd><span class="lfb-blur">0400 000 000</span></dd></div>
+        </dl>
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head"><h2>How it works</h2></div>
+      <ol class="qsteps lfb-steps">
+        <li><b>1</b><h3>Apply</h3><p>Two minutes, below. Tell us your services, your towns and how many leads you could take.</p></li>
+        <li><b>2</b><h3>Agree a price</h3><p>We call you, agree the price per lead and your cap. Nothing is sent before you say yes.</p></li>
+        <li><b>3</b><h3>Get leads</h3><p>By SMS and email, the moment a customer asks. Your first {LEAD_OFFER.freeLeads} are free.</p></li>
+        <li><b>4</b><h3>Pay for what you got</h3><p>Billed only for leads received, minus any credits. Stop whenever you like.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" id="apply">
+    <div class="wrap lfb-apply">
+      <div class="lfb-apply-copy">
+        <h2>Apply for leads</h2>
+        <p>We read every application and call you back to agree services, towns and price. Nothing is sent and nothing is charged until you say yes.</p>
+        <p class="lfb-taking mono">Taking businesses for</p>
+        <div class="lfb-tags">
+          {QUOTE_SERVICES.map((s) => <a class="chip" href={url.quote(s)}>{s.label}</a>)}
+        </div>
+        <p class="lfb-note">Covering {n(towns)} towns on both sides of the Murray, from Albury and Wodonga out to Wagga Wagga, Shepparton and Wangaratta.</p>
+      </div>
+
+      <div class="lfb-formcard" data-lfb>
+        <form name="lead-partner" method="POST" action={url.thanks()} data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="lead-partner" />
+          <input type="hidden" name="subject" value="LocalsKnow lead buyer application" />
+          <input type="hidden" name="services" value="" />
+          <p hidden><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+
+          <div class="qf-grid">
+            <div class="qf-span">
+              <label class="qf-label" for="lp-business">Business name</label>
+              <input class="qf-input" id="lp-business" name="business" type="text" autocomplete="organization" required maxlength="160" />
+            </div>
+            <div>
+              <label class="qf-label" for="lp-name">Your name</label>
+              <input class="qf-input" id="lp-name" name="name" type="text" autocomplete="name" required maxlength="120" />
+            </div>
+            <div>
+              <label class="qf-label" for="lp-role">Your role</label>
+              <input class="qf-input" id="lp-role" name="role" type="text" placeholder="Owner, sales manager" maxlength="80" />
+            </div>
+            <div>
+              <label class="qf-label" for="lp-phone">Mobile</label>
+              <input class="qf-input" id="lp-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 +()\-]{8,20}" maxlength="20" />
+            </div>
+            <div>
+              <label class="qf-label" for="lp-email">Email</label>
+              <input class="qf-input" id="lp-email" name="email" type="email" autocomplete="email" required maxlength="160" />
+            </div>
+            <div class="qf-span">
+              <label class="qf-label" for="lp-website">Website <span class="qf-optional">optional</span></label>
+              <input class="qf-input" id="lp-website" name="website" type="url" placeholder="https://" maxlength="200" />
+            </div>
+          </div>
+
+          <p class="qf-sub">Which jobs do you want? <span class="qf-optional">pick any</span></p>
+          <div class="qf-chips" data-lfb-services>
+            {QUOTE_SERVICES.map((s) => (
+              <label class="qf-chip qf-chip-check"><input type="checkbox" name="services_pick" value={s.label} /><span>{s.label}</span></label>
+            ))}
+          </div>
+
+          <label class="qf-label" for="lp-areas" style="margin-top:16px">Towns or areas you cover</label>
+          <input class="qf-input" id="lp-areas" name="areas" type="text" required maxlength="300" placeholder="e.g. Albury, Wodonga and 50 km around" />
+
+          <p class="qf-sub">How many leads could you take?</p>
+          <div class="qf-chips">
+            {volumes.map((v, i) => <label class="qf-chip"><input type="radio" name="volume" value={v} checked={i === 1} /><span>{v}</span></label>)}
+          </div>
+
+          <p class="qf-sub">Shared or exclusive?</p>
+          <div class="qf-chips">
+            {exclusivity.map((v, i) => <label class="qf-chip"><input type="radio" name="exclusivity" value={v} checked={i === 0} /><span>{v}</span></label>)}
+          </div>
+
+          <p class="qf-sub">Your typical job value</p>
+          <div class="qf-chips">
+            {jobValues.map((v) => <label class="qf-chip"><input type="radio" name="avg_job_value" value={v} /><span>{v}</span></label>)}
+          </div>
+
+          <p class="qf-sub">Most you would spend on leads in a month <span class="qf-optional">a cap, not a fee</span></p>
+          <div class="qf-chips">
+            {caps.map((v) => <label class="qf-chip"><input type="radio" name="monthly_budget" value={v} /><span>{v}</span></label>)}
+          </div>
+
+          <div class="qf-grid" style="margin-top:16px">
+            <div class="qf-span">
+              <label class="qf-label" for="lp-licence">Licence number <span class="qf-optional">optional, if your trade needs one</span></label>
+              <input class="qf-input" id="lp-licence" name="licence" type="text" maxlength="80" />
+            </div>
+            <div class="qf-span">
+              <label class="qf-label" for="lp-notes">Anything else <span class="qf-optional">optional</span></label>
+              <textarea class="qf-input qf-textarea" id="lp-notes" name="notes" rows="3" maxlength="1500" placeholder="Jobs you do not want, best time to call, anything we should know"></textarea>
+            </div>
+          </div>
+
+          <p class="qf-err" role="alert" hidden data-lfb-err>Fill in the business, your name, mobile, email and the towns you cover.</p>
+          <button type="submit" class="btn btn-gold qf-submit">Apply for leads</button>
+          <p class="qf-fine">No monthly fee, no contract. Nothing is sent or charged until you agree a price.</p>
+        </form>
+        <div class="lfb-done" hidden tabindex="-1" data-lfb-done>
+          <span class="qf-tick" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <h3>Application received</h3>
+          <p>Thanks. We will call you to agree your services, towns and price per lead. Your first {LEAD_OFFER.freeLeads} leads are free.</p>
+        </div>
+        <div class="qf-fail" hidden data-lfb-fail role="alert">
+          <p><b>That did not send.</b> Try again, or email <a href="mailto:hello@localsknow.com.au">hello@localsknow.com.au</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <Faq faqs={faqs} heading="Buying leads, answered" />
+  </div>
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-lfb]').forEach((root) => {
+    const form = root.querySelector('form') as HTMLFormElement;
+    const err = root.querySelector('[data-lfb-err]') as HTMLElement;
+    const fail = root.querySelector('[data-lfb-fail]') as HTMLElement;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      let ok = true;
+      form.querySelectorAll<HTMLInputElement>('input[required]').forEach((el) => {
+        const good = el.value.trim() !== '' && el.checkValidity();
+        if (good) el.removeAttribute('aria-invalid');
+        else el.setAttribute('aria-invalid', 'true');
+        if (!good) ok = false;
+      });
+      err.hidden = ok;
+      if (!ok) {
+        form.querySelector<HTMLElement>('[aria-invalid]')?.focus();
+        return;
+      }
+      const picked = Array.from(form.querySelectorAll<HTMLInputElement>('input[name="services_pick"]:checked')).map((c) => c.value);
+      (form.elements.namedItem('services') as HTMLInputElement).value = picked.join(', ');
+      const btn = form.querySelector('button[type=submit]') as HTMLButtonElement;
+      btn.disabled = true;
+      fail.hidden = true;
+      try {
+        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+        const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body });
+        if (!res.ok) throw new Error(String(res.status));
+        form.hidden = true;
+        const done = root.querySelector('[data-lfb-done]') as HTMLElement;
+        done.hidden = false;
+        done.focus();
+      } catch {
+        fail.hidden = false;
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  });
+</script>

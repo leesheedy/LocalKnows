@@ -55,7 +55,7 @@ src/pages/          Routes. Thin. They resolve params and hand off to a componen
 scripts/
   ingest-businesses.mjs  Research records -> typed listings, with scoring
   preflight.mjs          Fails the build on a broken invariant
-  postbuild.mjs          Sitemaps, robots.txt, llms.txt, _redirects, _headers
+  postbuild.mjs          Sitemaps, robots.txt, llms.txt, llms-full.txt, _redirects, _headers
   verify-build.mjs       Crawls dist and asserts the SEO contract
   fetch-places.mjs       Real Google ratings, with a 30 day cache ceiling
   og.mjs                 Open Graph images from SVG
@@ -132,6 +132,40 @@ a sitemap even if the model that generated it thought otherwise.
 
 ---
 
+## Search results and answer engines
+
+Search Console in October 2026 showed most of the town hubs, Albury and Wodonga
+among them, as "crawled, currently not indexed", and the brand name returning
+nothing at all. Almost every query the site ranked for was a business name. So
+four things are now built to be read by a results page or an answer engine, and
+all of them are counted from the data rather than written.
+
+- **Titles answer the query.** A listing's title names the facts the page
+  holds: "Wodonga WAVES, Wodonga VIC: hours, phone & address", and only the
+  facts it holds. A money page carries its counts: "Cafes in Albury NSW (8
+  listed, 7 open Saturday)". Town, region, state and category hubs do the same.
+  The ladders live in `src/lib/copy.ts` and go through `title()` in `seo.ts`.
+- **Every hub says what only its own rows can.** Town and region hubs open with
+  an "In short" paragraph and an at a glance block (biggest categories, based
+  here against travelling in, weekend hours, prices and printed licences, nearby
+  towns, and when the details were last read), and their FAQs are answered by
+  counting. One function per hub, `localityStats()` and `regionStats()` in
+  `repo.ts`, feeds the summary, the block, the FAQ and the meta description, so
+  they cannot disagree. The "In short" is also the WebPage `abstract`. Money
+  pages use their standfirst, `statSummary()`, the same way.
+- **Hubs push the money pages that are indexed.** State, region, category and
+  town hubs link prominently to the money pages in the largest towns, chosen by
+  `isIndexedMoneyPage()`, which asks `decide()` the same question the page does.
+- **One entity.** The Organization node has a stable `@id`, the spellings people
+  type (`SITE.alternateNames`), the regions the site actually covers (read from
+  the data), and Automatrix as `parentOrganization` under the `@id` automatrix.au
+  uses for itself. `llms.txt` is assembled from what the pages say about
+  themselves: the Organization node on `/about/`, each hub's abstract, and each
+  money page's ItemList count. `llms-full.txt` lists every indexable town and
+  category page with its summary.
+
+---
+
 ## What this site will not claim
 
 These are enforced in code, not in a policy document.
@@ -190,6 +224,8 @@ you, and none of them block anything that is already working.
 | 5 | ~~**Add `INDEXNOW_KEY`**~~ **Done, 26 August 2026.** The key is `21221edf9f463bfa6c3b2ad8a0eee2d8`, `public/21221edf9f463bfa6c3b2ad8a0eee2d8.txt` is committed and serving, the repository secret is set, and the last manual ping submitted 1,693 URLs. The weekly refresh pings from here on. The key is not a secret in the security sense: IndexNow requires it to be publicly readable at the site root, which is the point of the file, so rotating it means generating a new one and committing the new file. | Done |
 | 6 | **`pip install crawl4ai && crawl4ai-setup`** on whichever machine runs the town expansion scraper. | Local |
 | 7 | **Extend `src/data/community.json`.** Eleven verified entries cover most towns via their council and regional paper. To add more, open the organisation's own site and copy the URL out of its footer. Never construct one from a name: `facebook.com/<TownName>` may belong to somebody else. `npm test` checks every entry resolves to real localities and records its source. | Local |
+| 8 | **Give LocalsKnow somewhere else to exist, then list it in `BRAND_PROFILES`.** The Organization node emits `sameAs` only from that constant, and it is empty because there is no LocalsKnow profile anywhere yet and automatrix.au does not mention the site. The cheapest strong one is a case study page on automatrix.au that links to localsknow.com.au; a LinkedIn showcase page under Automatrix or a Facebook page also count. Paste each live URL into the array and nothing else changes. Without a Google Business Profile, which an online only directory cannot hold, these are what tell Google that "localsknow" is a thing and not the phrase "locals know". | `src/lib/site.ts` |
+| 9 | **Decide `SITE.usingSampleData`.** It is still `true` though every record in `listings.json` is real. Its only remaining effect was a notice on `/about/` saying the build ran on sample data, which now also checks the data and stays hidden. Set it to `false` when convenient. | `src/lib/site.ts` |
 
 **Google Search Console is verified and the sitemap is submitted, 26 August 2026.**
 The index and all nine child sitemaps were submitted. Google does not participate
@@ -219,6 +255,13 @@ The site content, the repo and the wordmark all say **LocalsKnow**. The domain i
 **localsknow.com.au**. Both are used consistently as they stand and nothing is
 broken by it, but they are two different words and it is worth deciding which one
 is the brand before anybody prints anything.
+
+Searched as one word, "localsknow" is read by Google as the phrase "locals know"
+and the site does not come back for its own name. The structured data now says,
+in one place, that LocalsKnow, Locals Know, LocalsKnow.com.au and localsknow are
+the same thing (`SITE.alternateNames`, used by the Organization and WebSite
+nodes), and the about page and footer say who publishes it and where. That is
+the part the site can do on its own; item 8 above is the part it cannot.
 
 ---
 
@@ -302,7 +345,9 @@ never generated; theme pages linked from eight places and built from none.
 The fix each time is the same and it is worth stating as a rule: **a predicate
 that decides whether a page exists lives in `src/lib/repo.ts`, and everything
 that links to that page asks it.** `isLiveLocality`, `hasGuidePages`,
-`hasLocalityEvents`, `themesFor`, `pageExists`. Never re-derive one at a call
+`hasLocalityEvents`, `themesFor`, `pageExists`, and now `isIndexedMoneyPage`,
+which hubs use to decide which money pages to promote and which calls `decide()`
+itself rather than restating the threshold. Never re-derive one at a call
 site. `npm run verify` catches it when you do, which is what it is for.
 
 There is a second class, and it is the same shape one level down: **a rule that
