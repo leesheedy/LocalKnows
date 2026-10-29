@@ -21,13 +21,16 @@ import {
   modifiersForCategory,
   listingsForModifier,
   guidesForCategory,
+  largestTowns,
+  isIndexedMoneyPage,
+  checkedRange,
 } from '~/lib/repo';
 import { VERTICALS } from '~/lib/site';
 import Base from '~/layouts/Base.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { n, plural } from '~/lib/copy';
+import { checkedPhrase, countOf, counted, listPhrase, n, plural } from '~/lib/copy';
 import { BUILD_DATE } from '~/lib/build';
 import {
   graph,
@@ -104,16 +107,75 @@ const topLocalities = liveLocalities()
   .sort((a, b) => b.count - a.count || a.locality.name.localeCompare(b.locality.name))
   .slice(0, 8);
 
+/*
+ * The category's indexed money pages in the largest towns, by population.
+ *
+ * The state columns further down already link every town, but alphabetically
+ * deep in two columns, and the pages Search Console shows being found are the
+ * ones linked high and plainly. These are the pages that answer "cafes albury"
+ * and "plumber wodonga", so they go first. isIndexedMoneyPage() asks decide(),
+ * so a town whose page is still filling up is left in the columns and kept out
+ * of this row.
+ */
+const biggestTowns = largestTowns()
+  .filter((t) => isIndexedMoneyPage(t.id, category.id))
+  .slice(0, 8)
+  .map((t) => ({ locality: t, count: listingsInLocalityCategory(t.id, category.id).length }));
+
+const satCount = rows.filter((l) => l.hours.some((h) => h.day === 6 && !h.closed)).length;
+const sunCount = rows.filter((l) => l.hours.some((h) => h.day === 0 && !h.closed)).length;
+const checked = checkedRange(rows);
+
+/** The category "In short". Only built when there is something to say. */
+const inShort =
+  places.length > 0
+    ? [
+        'LocalsKnow lists ' +
+          countOf(rows.length, category) +
+          ' across ' +
+          places.length +
+          ' ' +
+          plural(places.length, 'town', 'towns') +
+          ' in New South Wales and Victoria, ' +
+          nsw.length +
+          ' of those towns in NSW and ' +
+          vic.length +
+          ' in Victoria.',
+        places.length >= 2
+          ? 'The most are listed in ' +
+            listPhrase(places.slice(0, 3).map((p) => p.locality.name + ' (' + p.count + ')')) +
+            ', counting every business that covers each town.'
+          : '',
+        satCount || sunCount
+          ? listPhrase(
+              [satCount ? counted(satCount, 'publishes', 'publish') + ' Saturday hours' : '', sunCount ? counted(sunCount, 'publishes', 'publish') + ' Sunday hours' : ''].filter(Boolean),
+            ) + '.'
+          : '',
+        checkedPhrase(checked.checkedFrom, checked.checkedTo)
+          ? 'Listing details were last read from their sources ' + checkedPhrase(checked.checkedFrom, checked.checkedTo) + '.'
+          : '',
+      ]
+        .filter(Boolean)
+        .join(' ')
+    : '';
+
 const h1 = category.name + ' in NSW and Victoria';
+const titleLadder = [
+  category.name + ' in NSW & Victoria (' + n(rows.length) + ' listed, ' + places.length + ' ' + plural(places.length, 'town', 'towns') + ')',
+  category.name + ' in NSW & Victoria (' + n(rows.length) + ' listed)',
+  h1,
+  category.name,
+];
 /**
  * Description, built per category rather than from a shared sentence.
  *
  * The audit found 191 category pages ending on the same clipped boilerplate,
  * which is a near duplicate snippet across a fifth of the indexable site. This
  * leads with the counts, which are the part only this site has, then names the
- * two biggest towns, then spends whatever budget is left on the border line.
+ * biggest towns with their own counts, then weekend trading, then spends
+ * whatever budget is left on the border line.
  */
-const topTwo = places.slice(0, 2).map((x: any) => x.locality.name);
+const topTowns = places.slice(0, 3);
 const description = (() => {
   let out =
     n(rows.length) +
@@ -124,14 +186,21 @@ const description = (() => {
     ' ' +
     plural(places.length, 'town', 'towns') +
     ' in NSW and Victoria';
-  out += topTwo.length ? ', most of them in ' + topTwo.join(' and ') + '.' : '.';
+  if (topTowns.length >= 2) {
+    const named = (k: number) => listPhrase(topTowns.slice(0, k).map((p) => p.locality.name + ' (' + p.count + ')'));
+    const three = out + ', led by ' + named(3) + '.';
+    out = three.length <= 120 ? three : out + ', led by ' + named(2) + '.';
+  } else {
+    out += topTowns.length ? ', in ' + topTowns[0].locality.name + '.' : '.';
+  }
   const extras = [
+    satCount > 0 ? satCount + ' open Saturdays' + (sunCount > 0 ? ', ' + sunCount + ' Sundays.' : '.') : '',
     verified > 0 ? verified + ' verified.' : '',
     'Contact details, hours and the source of every fact.',
     'Service area is held separately from address, so operators who cross the border appear on both sides.',
   ].filter(Boolean);
   for (const e of extras) {
-    if ((out + ' ' + e).length > 155) break;
+    if ((out + ' ' + e).length > 155) continue;
     out += ' ' + e;
   }
   return out;
@@ -203,6 +272,7 @@ const jsonLd = graph([
     crumbs,
     type: 'CollectionPage',
     dateModified: BUILD_DATE,
+    abstract: inShort || undefined,
   }),
   itemListNode({
     pageUrl: canonicalPath,
@@ -218,7 +288,8 @@ const jsonLd = graph([
 
 <Base
   kind="category"
-  title={h1}
+  title={titleLadder[0]}
+  titleAlt={titleLadder.slice(1)}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -254,6 +325,25 @@ const jsonLd = graph([
       <p class="mono" style="color:var(--ink-40);margin-top:20px">
         Also searched as {category.synonyms.join(', ')}
       </p>
+    )}
+
+    {inShort && (
+      <section class="datablock" aria-labelledby="inshort-h">
+        <h2 id="inshort-h">{category.name}, in short</h2>
+        <p>{inShort}</p>
+        {biggestTowns.length > 0 && (
+          <nav class="chips" style="margin-top:14px" aria-label={category.name + ' in the largest towns'}>
+            {biggestTowns.map((t) => (
+              <a class="chip" href={url.localityCategory(t.locality, category)}>
+                {category.name} in {t.locality.name} ({t.count})
+              </a>
+            ))}
+          </nav>
+        )}
+        <p class="asof">
+          Counted on {BUILD_DATE}.{biggestTowns.length > 0 && ' The links go to the largest towns by population with a page of their own for ' + noun + '.'}
+        </p>
+      </section>
     )}
 
     {places.length === 0 && (

@@ -27,7 +27,7 @@ import LinkBlock from '~/components/LinkBlock.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import { outboundRel } from '~/lib/indexability';
 import { description as fitDescription, firstSentence } from '~/lib/seo';
-import { dayName, formatTime, otherStateLabel } from '~/lib/copy';
+import { dayName, formatTime, otherStateLabel, listingDescription, listingTitleLadder } from '~/lib/copy';
 import { listingMedia } from '~/lib/media';
 import { humanDate } from '~/lib/build';
 import {
@@ -238,38 +238,26 @@ const faqs = [
  * only if the whole thing still lands inside the budget. That produces a
  * complete sentence on every listing instead of an ellipsis on six hundred.
  */
-const description = (() => {
-  const first = firstSentence(listing.description);
-  let out = first.length > 158 ? fitDescription(listing.description) : first;
-  const extras = [
-    listing.addressLine ? listing.addressLine + ', ' + locality.name + ' ' + locality.state + ' ' + listing.postcode + '.' : '',
-    listing.phone ? 'Phone ' + listing.phone + '.' : '',
-    'Hours and sources on the page.',
-  ].filter(Boolean);
-  for (const e of extras) {
-    if ((out + ' ' + e).length > 156) break;
-    out += ' ' + e;
-  }
-  return out;
-})();
+/*
+ * Now facts first: what it is and where, the phone, the days it opens, then as
+ * much of the researched description as fits in whole sentences. The title
+ * promises those facts, so the snippet is where they are delivered. Built in
+ * copy.ts, listingDescription().
+ */
+const description = listingDescription(listing, locality, category);
 
 /**
  * Titles, longest first, for Base to choose from.
  *
- * "Business name — Category in Town STATE" is the title worth having and it fits
- * for about half the directory. For the other half something has to go, and the
- * order it goes in matters: the state is the least useful word on the line
- * because the town already implies it, and the town is often inside the business
- * name anyway ("Albury & District Historical Society"). The category is the last
- * thing to drop, because it is the phrase people search with.
+ * Nearly every query this site ranks for is a business name, and the person
+ * typing it wants the hours, the number or the address. So the first rungs say
+ * which of those the page holds ("Wodonga WAVES, Wodonga VIC: hours, phone &
+ * address"), naming only facts the listing has. Underneath, the old "Business
+ * name — Category in Town STATE" ladder, where the state goes first because the
+ * town implies it and the category goes last because it is the phrase people
+ * search with. See listingTitleLadder() in copy.ts.
  */
-const titleLadder = [
-  listing.name + ' — ' + category.nameSingular + ' in ' + locality.name + ' ' + locality.state,
-  listing.name + ' — ' + category.nameSingular + ' in ' + locality.name,
-  listing.name + ' — ' + category.nameSingular,
-  listing.name + ' — ' + locality.name + ' ' + locality.state,
-  listing.name,
-];
+const titleLadder = listingTitleLadder(listing, locality, category);
 
 const jsonLd = graph([
   organisationNode(),
