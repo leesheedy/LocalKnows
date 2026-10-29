@@ -231,9 +231,9 @@ const jsonLd = graph([
       <p class="standfirst">{statSummary(locality, category, stats)}</p>
       <div class="headmeta">
         <span>{n(stats.listingCount)} {stats.listingCount === 1 ? 'listing' : 'listings'}</span>
-        {stats.verifiedCount > 0 && <span>&middot; {stats.verifiedCount} verified</span>}
-        {stats.reviewCount > 0 && <span>&middot; {n(stats.reviewCount)} reviews collected</span>}
-        <span>&middot; Checked {buildDate}</span>
+        {stats.verifiedCount > 0 && <span>{stats.verifiedCount} verified</span>}
+        {stats.reviewCount > 0 && <span>{n(stats.reviewCount)} reviews collected</span>}
+        <span>Checked {buildDate}</span>
       </div>
     </div>
 

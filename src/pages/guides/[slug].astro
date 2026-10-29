@@ -125,21 +125,21 @@ const jsonLd = guideGraph(guide, crumbs);
       <div class="pagehead">
         <p class="eyebrow mono">Guide</p>
         <h1>{guide.title}</h1>
-        <p class="mono" style="color:var(--wattle-ink);margin:14px 0 0">
+        <p class="byline mono">
           Last reviewed <time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time>
         </p>
         <p class="standfirst">{guide.description}</p>
         <div class="headmeta">
           <span>{guide.author}, {guide.authorRole}</span>
           <span>
-            &middot; Published{' '}
+            Published{' '}
             <time datetime={guide.publishedAt}>{humanDate(guide.publishedAt)}</time>
           </span>
           <span>
-            &middot; Reviewed{' '}
+            Reviewed{' '}
             <time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time>
           </span>
-          <span>&middot; {rendered.wordCount} words</span>
+          <span>{rendered.wordCount} words</span>
         </div>
       </div>
 

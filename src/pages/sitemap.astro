@@ -132,7 +132,7 @@ const jsonLd = graph([
       </p>
       <div class="headmeta">
         <span>{n(totalPages)} pages</span>
-        <span>&middot; Built {BUILD_DATE}</span>
+        <span>Built {BUILD_DATE}</span>
       </div>
     </div>
   </div>
@@ -170,7 +170,7 @@ const jsonLd = graph([
               {liveByState[code].map((l) => (
                 <li>
                   <a href={url.locality(l)}>{l.name}</a>
-                  <span style="color:var(--ink-40);font-size:13px"> {listingsInLocality(l.id).length}</span>
+                  <span class="ln-note"> {listingsInLocality(l.id).length}</span>
                 </li>
               ))}
             </ul>
@@ -208,7 +208,7 @@ const jsonLd = graph([
                 .map((c) => (
                   <li>
                     <a href={url.category(c.category)}>{c.category.name}</a>
-                    <span style="color:var(--ink-40);font-size:13px"> {c.count}</span>
+                    <span class="ln-note"> {c.count}</span>
                   </li>
                 ))}
             </ul>
@@ -250,7 +250,7 @@ const jsonLd = graph([
               {row.cats.map((c) => (
                 <li>
                   <a href={url.localityCategory(row.locality, c.category)}>{c.category.name}</a>
-                  <span style="color:var(--ink-40);font-size:13px"> {c.count}</span>
+                  <span class="ln-note"> {c.count}</span>
                 </li>
               ))}
             </ul>
@@ -286,7 +286,7 @@ const jsonLd = graph([
             {tools.map((t) => (
               <li>
                 <a href={url.tool(t)}>{t.title}</a>
-                {t.status === 'planned' && <span style="color:var(--ink-40);font-size:13px"> planned</span>}
+                {t.status === 'planned' && <span class="ln-note"> planned</span>}
               </li>
             ))}
           </ul>

@@ -1,7 +1,6 @@
 ---
 import { url, categories, STATES } from '~/lib/repo';
 import { SITE } from '~/lib/site';
-import { VERTICALS } from '~/lib/site';
 
 const year = 2026;
 // Footer links are capped on purpose. A 200 link footer dilutes every page.
@@ -10,11 +9,11 @@ const topCategories = categories.slice(0, 8);
 <footer class="foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
+      <div class="foot-brand">
         <div class="mark">
-          <svg class="pin" width="17" height="22" viewBox="0 0 17 22" aria-hidden="true">
+          <svg class="pin" width="20" height="26" viewBox="0 0 17 22" aria-hidden="true">
             <path d="M8.5 0C3.8 0 0 3.8 0 8.5 0 15 8.5 22 8.5 22S17 15 17 8.5C17 3.8 13.2 0 8.5 0z" fill="#E8B21F"/>
-            <circle cx="8.5" cy="8.4" r="3.4" fill="#131E19"/>
+            <circle cx="8.5" cy="8.4" r="3.4" fill="#0c2f28"/>
           </svg><span><b>Locals</b><em>Know</em></span>
         </div>
         {/*
@@ -32,6 +31,10 @@ const topCategories = categories.slice(0, 8);
           {' '}{SITE.publisher.address.locality} {SITE.publisher.address.region}
           {' '}{SITE.publisher.address.postcode}.
         </p>
+        <div class="foot-cta">
+          <a class="btn btn-gold btn-sm" href={url.quotes()}>Get quotes</a>
+          <a class="btn btn-sm foot-ghost" href={url.claim()}>Claim a listing</a>
+        </div>
       </div>
       <div>
         <h2>Browse</h2>
@@ -79,6 +82,7 @@ const topCategories = categories.slice(0, 8);
     </div>
     <div class="foot-base">
       <span>&copy; {year} {SITE.name}, localsknow.com.au. Built by <a href={SITE.publisher.url} rel="noopener">{SITE.publisher.name}</a>.</span>
+      <span class="foot-tag">Independent. Free to list. Both sides of the border.</span>
       <span class="right">
         <a href={url.privacy()}>Privacy</a>
         <a href={url.terms()}>Terms</a>

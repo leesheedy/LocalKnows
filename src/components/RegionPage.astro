@@ -216,8 +216,8 @@ const jsonLd = graph([
       <p class="standfirst">{region.blurb}</p>
       <div class="headmeta">
         <span>{places.length} towns</span>
-        <span>&middot; {n(totalListings)} {plural(totalListings, 'listing', 'listings')}</span>
-        <span>&middot; Checked {buildDate}</span>
+        <span>{n(totalListings)} {plural(totalListings, 'listing', 'listings')}</span>
+        <span>Checked {buildDate}</span>
       </div>
     </div>
 
@@ -258,7 +258,7 @@ const jsonLd = graph([
                 {t.pages.map((p) => (
                   <li>
                     <a href={url.localityCategory(t.locality, p.category)}>{p.category.name} in {t.locality.name}</a>
-                    <span style="color:var(--ink-40);font-size:13px"> {n(p.count)}</span>
+                    <span class="ln-note"> {n(p.count)}</span>
                   </li>
                 ))}
               </ul>

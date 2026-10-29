@@ -207,11 +207,11 @@ const jsonLd = graph([
       <div class="headmeta">
         <span>{e.venueName}</span>
         {hub ? (
-          <span>&middot; <a href={url.locality(hub)} style="color:var(--river)">{hub.name}</a> {e.state}</span>
+          <span><a href={url.locality(hub)} style="color:var(--river)">{hub.name}</a> {e.state}</span>
         ) : (
-          <span>&middot; {locality ? locality.name + ' ' + e.state : e.state}</span>
+          <span>{locality ? locality.name + ' ' + e.state : e.state}</span>
         )}
-        <span>&middot; {cost}</span>
+        <span>{cost}</span>
         {isPast && <span class="tag warn">Passed</span>}
       </div>
     </div>

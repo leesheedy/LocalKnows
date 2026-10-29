@@ -16,7 +16,7 @@ const shown = groups.filter((g) => g.links.length > 0);
               {g.links.map((l) => (
                 <li>
                   <a href={l.href} class={l.cross ? 'cross' : undefined}>{l.label}</a>
-                  {l.note && <span style="color:var(--ink-40);font-size:13px"> {l.note}</span>}
+                  {l.note && <span class="ln-note"> {l.note}</span>}
                 </li>
               ))}
             </ul>

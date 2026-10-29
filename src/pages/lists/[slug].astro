@@ -104,7 +104,7 @@ const description = fitDescription(list.intro);
         {' '}&middot; {locality?.name ?? list.localitySlug}, {list.state}
       </p>
       <h1>{list.title}</h1>
-      <p class="mono" style="color:var(--wattle-ink);margin:14px 0 0">
+      <p class="byline mono">
         {list.method === 'compiled' ? 'Compiled by' : 'By'} {list.author} &middot; last reviewed{' '}
         <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
       </p>
@@ -115,14 +115,14 @@ const description = fitDescription(list.intro);
           {list.method === 'compiled' ? '' : ', ranked'}
         </span>
         <span>
-          &middot; Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
+          Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
         </span>
         <span>
-          &middot; Reviewed <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
+          Reviewed <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
         </span>
         {category && locality && (
           <span>
-            &middot; <a href={url.localityCategory(locality, category)} style="color:var(--river)">
+            <a href={url.localityCategory(locality, category)}>
               All {category.name.toLowerCase()} in {locality.name}
             </a>
           </span>
@@ -133,27 +133,22 @@ const description = fitDescription(list.intro);
 
   <div class="wrap" style="padding-top:10px;padding-bottom:20px">
     {entries.length > 0 ? (
-      <ol style="list-style:none;margin:0;padding:0;max-width:820px">
+      <ol class="rlist">
         {entries.map((e, i) => (
-          <li
-            style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:20px;padding:26px 0;border-bottom:1px solid var(--line)"
-          >
-            <span
-              class="mono"
-              style="font-size:30px;letter-spacing:0.02em;line-height:1;color:var(--ink-40)"
-            >
+          <li class="ritem">
+            <span class="rnum">
               {String(i + 1).padStart(2, '0')}
             </span>
-            <div style="min-width:0">
-              <h2 style="font-size:clamp(21px,2.4vw,26px)">
+            <div class="ritem-body">
+              <h2>
                 <a href={url.listing(e.listing)}>{e.listing.name}</a>
               </h2>
-              <p style="color:var(--ink-40);font-size:13.5px;margin:5px 0 12px">
+              <p class="rmeta">
                 {e.primary?.name}
                 {e.home && <> &middot; {e.home.name}, {e.home.state}</>}
                 {e.listing.status === 'verified' && <> &middot; verified</>}
               </p>
-              <p style="color:var(--ink-80);font-size:16px;margin:0 0 12px;max-width:var(--measure)">
+              <p class="rblurb">
                 {e.blurb}
               </p>
               <a class="btn btn-sm btn-ghost" href={url.listing(e.listing)}>See the full listing</a>

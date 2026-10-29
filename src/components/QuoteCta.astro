@@ -54,9 +54,9 @@ const href = url.quote(service) + (locality ? `#town=${encodeURIComponent(locali
     align-items: center;
     gap: 18px;
     padding: 20px 22px;
-    margin: 26px 0;
-    border-radius: 14px;
-    background: linear-gradient(120deg, var(--river-dark), var(--river));
+    margin: 32px 0;
+    border-radius: var(--r-xl);
+    background: linear-gradient(120deg, var(--river-deep), var(--river-dark) 45%, var(--river));
     color: var(--paper);
     box-shadow: var(--shadow-card);
   }
@@ -89,8 +89,8 @@ const href = url.quote(service) + (locality ? `#town=${encodeURIComponent(locali
   }
   .qcta-btn {
     flex: none;
-    padding: 12px 18px;
-    border-radius: 10px;
+    min-height: 48px;
+    padding: 12px 20px;
   }
   @media (max-width: 720px) {
     .qcta {
@@ -104,9 +104,9 @@ const href = url.quote(service) + (locality ? `#town=${encodeURIComponent(locali
   .qcta-side {
     background: linear-gradient(160deg, var(--river-dark), var(--river));
     color: var(--paper);
-    border-radius: var(--r-lg);
-    padding: 18px;
-    margin-bottom: 16px;
+    border-radius: var(--r-xl);
+    padding: 22px;
+    box-shadow: var(--shadow-card);
   }
   .qcta-side h2 {
     font-size: 19px;

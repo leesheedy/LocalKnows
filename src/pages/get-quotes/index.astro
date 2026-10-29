@@ -122,14 +122,16 @@ const jsonLd = graph([
   </div>
 
   <section class="claim-band">
-    <div class="wrap claim-in">
-      <div>
-        <h2>Run a local business?</h2>
-        <p>Claim your free listing to make sure the details are right, and to be in line for quote requests in the towns you cover.</p>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn btn-gold" href={url.claim()}>Claim your listing</a>
-        <a class="btn btn-ghost" href={url.leadsForBusiness()} style="color:var(--paper);border-color:rgba(239,237,228,.3)">Buy quote leads</a>
+    <div class="wrap">
+      <div class="claim-in">
+        <div>
+          <h2>Run a local business?</h2>
+          <p>Claim your free listing to make sure the details are right, and to be in line for quote requests in the towns you cover.</p>
+        </div>
+        <div class="claim-actions">
+          <a class="btn btn-gold btn-lg" href={url.claim()}>Claim your listing</a>
+          <a class="btn btn-lg btn-on-dark" href={url.leadsForBusiness()}>Buy quote leads</a>
+        </div>
       </div>
     </div>
   </section>

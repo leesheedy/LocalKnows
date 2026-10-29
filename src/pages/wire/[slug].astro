@@ -81,9 +81,9 @@ const jsonLd = wireGraph(w, crumbs);
       <p class="standfirst">{w.description}</p>
       <div class="headmeta">
         <span>By {w.author}</span>
-        <span>&middot; <time datetime={w.publishedAt}>{humanDate(w.publishedAt)}</time></span>
-        <span>&middot; {scope}</span>
-        {locality && <span>&middot; <a href={url.locality(locality)} style="color:var(--river)">{locality.name}</a></span>}
+        <span><time datetime={w.publishedAt}>{humanDate(w.publishedAt)}</time></span>
+        <span>{scope}</span>
+        {locality && <span><a href={url.locality(locality)} style="color:var(--river)">{locality.name}</a></span>}
       </div>
     </div>
 

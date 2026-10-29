@@ -142,9 +142,9 @@ const jsonLd = graph([
       </p>
       <div class="headmeta">
         <span>{n(upcoming.length)} coming up</span>
-        {types.length > 0 && <span>&middot; {types.length} {types.length === 1 ? 'kind' : 'kinds'} of event</span>}
-        {freeCount > 0 && <span>&middot; {freeCount} free to attend</span>}
-        <span>&middot; Checked {BUILD_DATE}</span>
+        {types.length > 0 && <span>{types.length} {types.length === 1 ? 'kind' : 'kinds'} of event</span>}
+        {freeCount > 0 && <span>{freeCount} free to attend</span>}
+        <span>Checked {BUILD_DATE}</span>
       </div>
     </div>
   </div>

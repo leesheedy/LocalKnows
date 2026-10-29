@@ -1,7 +1,6 @@
 ---
 import type { Category, Listing, Locality } from '~/lib/types';
 import { url, averageRating, getCategory, getLocality } from '~/lib/repo';
-import { formatTime, dayShort } from '~/lib/copy';
 import { listingMedia } from '~/lib/media';
 import { description as fitDescription } from '~/lib/seo';
 
@@ -34,6 +33,15 @@ const crossesBorder = context && home && home.state !== context.state;
 const openDays = listing.hours.filter((h) => !h.closed);
 const weekend = listing.hours.find((h) => h.day === 6 && !h.closed);
 const media = listingMedia(listing);
+const travelNote = travelsIn
+  ? listing.serviceAreaInferred
+    ? crossesBorder
+      ? 'In range across the border'
+      : 'In range of ' + context!.name
+    : crossesBorder
+      ? 'Crosses the border to ' + context!.name
+      : 'Travels to ' + context!.name
+  : null;
 ---
 <article class="card">
   <div class="card-top">
@@ -52,70 +60,61 @@ const media = listingMedia(listing);
         {listing.logoText}
       </span>
     )}
-    <div style="min-width:0">
+    <div class="card-id">
       <Heading><a href={url.listing(listing)}>{listing.name}</a></Heading>
       <p class="cat-line">
         {primary?.name}
         {home && <> &middot; {home.name}</>}
       </p>
     </div>
+    {showState && home && (
+      <span class={'state' + (home.state === 'VIC' ? ' vic' : '')}>{home.state}</span>
+    )}
   </div>
 
-  {showState && home && (
-    <span class={'state mono ' + (home.state === 'VIC' ? 'vic' : '')}>{home.state}</span>
-  )}
-
   {/*
-    "No ratings collected yet" used to fill this row on nearly every card, which
-    put the same apology in front of every business. A missing rating now just
-    leaves the row to the facts that are there.
+    Key facts, each one read off the listing. A missing rating just leaves the
+    row to the facts that are there rather than apologising on every card.
   */}
-  {(rating || listing.status === 'verified' || listing.priceBand || listing.status === 'claimed') && (
-    <div class="meta">
-      {rating && (
-        <>
-          <span class="star" aria-hidden="true">★</span>
-          <span class="rate">{rating.toFixed(1)}</span>
-          <span>({reviewCount})</span>
-        </>
-      )}
-      {listing.status === 'verified' && (
-        <span class="verif">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          Verified
-        </span>
-      )}
-      {listing.status === 'claimed' && <span class="claimed-tag">Owner managed</span>}
-      {listing.priceBand && <span>{listing.priceBand}</span>}
-    </div>
-  )}
+  <ul class="facts">
+    {rating && (
+      <li class="fact fact-rate">
+        <span class="i i-star" aria-hidden="true"></span>
+        {rating.toFixed(1)} <span>({reviewCount})</span>
+      </li>
+    )}
+    {listing.status === 'verified' && (
+      <li class="fact fact-good">
+        <span class="i i-check" aria-hidden="true"></span>
+        Verified
+      </li>
+    )}
+    {listing.status === 'claimed' && <li class="fact fact-good">Owner managed</li>}
+    {weekend ? (
+      <li class="fact fact-open">Open Saturdays</li>
+    ) : openDays.length ? (
+      <li class="fact">{openDays.length} {openDays.length === 1 ? 'day' : 'days'} a week</li>
+    ) : (
+      <li class="fact fact-muted">Hours not published</li>
+    )}
+    {listing.priceBand && <li class="fact">{listing.priceBand}</li>}
+    {travelNote && (
+      <li class="fact fact-cross">
+        <span class="i i-swap" aria-hidden="true"></span>
+        {travelNote}
+      </li>
+    )}
+  </ul>
 
   <p class="desc">{fitDescription(listing.description, 155)}</p>
 
-  {travelsIn && (
-    <p class="mono" style="color:var(--wattle-ink);margin:-6px 0 12px">
-      {listing.serviceAreaInferred
-        ? (crossesBorder ? 'In range across the border' : 'In range of ' + context!.name)
-        : (crossesBorder ? 'Crosses the border to ' + context!.name : 'Travels to ' + context!.name)}
-    </p>
-  )}
-
   <div class="card-foot">
-    {weekend ? (
-      <span class="open">Open Saturdays</span>
-    ) : openDays.length ? (
-      <span class="shut">{openDays.length} {openDays.length === 1 ? 'day' : 'days'} a week</span>
-    ) : (
-      <span class="shut">Hours not published</span>
+    {listing.phone && (
+      <a class="btn btn-sm btn-ghost card-call" href={'tel:' + listing.phone.replace(/[^0-9+]/g, '')} aria-label={'Call ' + listing.name}>
+        <span class="i i-phone" aria-hidden="true"></span>
+        Call
+      </a>
     )}
-    <span class="right">
-      {listing.phone && (
-        <a class="btn btn-sm btn-ghost card-call" href={'tel:' + listing.phone.replace(/[^0-9+]/g, '')} aria-label={'Call ' + listing.name}>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
-          Call
-        </a>
-      )}
-      <a class="btn btn-sm" href={url.listing(listing)}>Details</a>
-    </span>
+    <a class="btn btn-sm card-more" href={url.listing(listing)} tabindex="-1" aria-hidden="true">Details</a>
   </div>
 </article>
