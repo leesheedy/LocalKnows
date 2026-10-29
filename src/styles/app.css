@@ -243,10 +243,6 @@ main > .sec:last-child {
   font-weight: 600;
   color: var(--ink);
 }
-.nav-drop span {
-  font-size: 13px;
-  color: var(--ink-60);
-}
 
 .bar-search {
   display: inline-flex;
@@ -1040,12 +1036,6 @@ img.logo {
   background: var(--white);
   border: 1px solid var(--line);
 }
-.logo.sm {
-  width: 38px;
-  height: 38px;
-  font-size: 14px;
-  border-radius: 10px;
-}
 .logo.lg {
   width: 88px;
   height: 88px;
@@ -1103,11 +1093,6 @@ img.logo {
 }
 .verif svg {
   flex: none;
-}
-.claimed-tag {
-  color: var(--river);
-  font-weight: 600;
-  font-size: 13px;
 }
 .rate {
   color: var(--ink);
@@ -1346,13 +1331,6 @@ img.logo {
 /* ---------------------------------------------------------------- forms */
 /* The claim, contact and corrections forms. Field names are what Netlify
    registers, so only the presentation lives here. */
-.formcard {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: var(--r-xl);
-  box-shadow: var(--shadow-card);
-  padding: clamp(20px, 3.5vw, 36px);
-}
 .frow {
   margin: 0 0 18px;
 }
@@ -1596,13 +1574,6 @@ select.finput {
   font-size: 17.5px;
   line-height: 1.65;
   color: var(--ink-80);
-}
-.biz-quick {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
 }
 .biz-main {
   grid-area: main;
@@ -2276,6 +2247,7 @@ a.tag:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
   gap: 14px;
+  align-items: start;
 }
 .linkgrid > div {
   background: var(--surface);
@@ -2283,6 +2255,17 @@ a.tag:hover {
   border-radius: var(--r-lg);
   padding: 20px 22px;
   box-shadow: var(--shadow-xs);
+  container-type: inline-size;
+}
+/* A link card wide enough for two columns of links gets them. */
+@container (min-width: 500px) {
+  .linkgrid ul {
+    columns: 2;
+    column-gap: 28px;
+  }
+  .linkgrid li {
+    break-inside: avoid;
+  }
 }
 .datablock .linkgrid {
   display: block;
@@ -3193,7 +3176,7 @@ a.tag:hover {
   font-style: normal;
   color: var(--river);
 }
-.border-story p:last-child {
+.border-story > p:last-child {
   color: var(--ink-60);
   margin: 0;
   font-size: 16.5px;
@@ -3547,23 +3530,40 @@ a.tag:hover {
   .btn-sm,
   .pill,
   .chip,
-  .navtoggle {
+  .navtoggle,
+  a.tag,
+  .headmeta > a,
+  .vtile-links a,
+  .townlist a,
+  .areas li {
     min-height: 44px;
   }
-  .nav-main a,
-  .foot li a,
-  .linkgrid li a,
-  .crumbs a {
-    display: inline-block;
-    padding-block: 6px;
-  }
+  .foot li,
   .linkgrid li,
-  .foot li {
-    margin-bottom: 2px;
+  .toc li,
+  .sources li {
+    margin-bottom: 0;
   }
-  .vtile-links a {
-    min-height: 40px;
+  .nav-main a,
+  .crumbs a,
+  .foot li a,
+  .foot-base a,
+  .linkgrid li a,
+  .toc a,
+  .sources li a,
+  .more,
+  .trust a,
+  .clist a,
+  .ev h3 a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
   }
+}
+.claim-in :focus-visible,
+.qcta :focus-visible,
+.qcta-side :focus-visible {
+  outline-color: var(--wattle);
 }
 
 /* Two doors off the locality hub: one for people who just arrived, one for
@@ -4014,7 +4014,7 @@ a.tag:hover {
   padding: 16px;
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
 }
 .qservice:hover {
@@ -4025,7 +4025,7 @@ a.tag:hover {
 .qservice-icon {
   width: 46px;
   height: 46px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   display: grid;
   place-items: center;
   background: var(--river-10);
@@ -4228,14 +4228,21 @@ a.tag:hover {
 .lfb-btn {
   padding: 13px 20px;
   font-size: 15.5px;
-  border-radius: 10px;
+  border-radius: var(--r);
 }
 .lfb-ghost {
-  color: var(--paper);
-  border-color: rgba(239, 237, 228, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--on-dark);
+  border-color: var(--on-dark-line);
+  box-shadow: none;
 }
 .lfb-ghost:hover {
-  color: var(--ink);
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.lfb-hero :focus-visible {
+  outline-color: var(--wattle);
 }
 .lfb-badges {
   list-style: none;
@@ -4248,7 +4255,7 @@ a.tag:hover {
 }
 .lfb-badges li {
   padding: 14px 16px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   background: rgba(255, 253, 248, 0.07);
   border: 1px solid rgba(239, 237, 228, 0.16);
   font-size: 14px;
@@ -4274,7 +4281,7 @@ a.tag:hover {
 .lfb-offer article {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   padding: 22px;
 }
 .lfb-offer h3 {
@@ -4289,7 +4296,7 @@ a.tag:hover {
 .lfb-ico {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   display: grid;
   place-items: center;
   background: var(--river-10);
@@ -4314,7 +4321,7 @@ a.tag:hover {
   gap: 26px;
   align-items: flex-start;
   padding: clamp(22px, 4vw, 36px);
-  border-radius: 16px;
+  border-radius: var(--r-xl);
   background: linear-gradient(135deg, #fff6dc, var(--white));
   border: 1.5px solid var(--wattle);
 }
@@ -4390,7 +4397,7 @@ a.tag:hover {
   margin: 0;
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   box-shadow: var(--shadow-pop);
   overflow: hidden;
   transform: rotate(-1.2deg);
@@ -4491,7 +4498,7 @@ a.tag:hover {
 .lfb-formcard {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   box-shadow: var(--shadow-pop);
   padding: clamp(18px, 3vw, 28px);
 }
@@ -4528,7 +4535,7 @@ a.tag:hover {
 .qf {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   box-shadow: var(--shadow-pop);
   overflow: hidden;
   scroll-margin-top: 16px;
@@ -4544,7 +4551,7 @@ a.tag:hover {
 .qf-icon {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   display: grid;
   place-items: center;
   background: rgba(239, 237, 228, 0.14);
@@ -4639,7 +4646,7 @@ a.tag:hover {
   gap: 12px;
   padding: 14px 15px;
   border: 1.5px solid var(--line-strong);
-  border-radius: 10px;
+  border-radius: var(--r);
   background: var(--paper-2);
   cursor: pointer;
   font-size: 15px;
@@ -4699,7 +4706,7 @@ a.tag:hover {
   font-size: 16px;
   padding: 13px 14px;
   border: 1.5px solid var(--line-strong);
-  border-radius: 10px;
+  border-radius: var(--r);
   background: var(--white);
   color: var(--ink);
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -4789,7 +4796,7 @@ a.tag:hover {
   align-items: flex-start;
   margin: 18px 0 0;
   padding: 12px 14px;
-  border-radius: 10px;
+  border-radius: var(--r);
   background: var(--paper-2);
   font-size: 13px;
   line-height: 1.45;
@@ -4831,7 +4838,7 @@ a.tag:hover {
   justify-content: center;
   padding: 14px 18px;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: var(--r);
 }
 .qf-submit.is-busy {
   opacity: 0.7;
@@ -4900,7 +4907,7 @@ a.tag:hover {
   justify-content: space-between;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: var(--r);
   background: var(--paper-2);
 }
 .qf-rec-main {
@@ -5016,7 +5023,7 @@ a.tag:hover {
   gap: 16px;
   justify-items: center;
   padding: 28px;
-  border-radius: 18px;
+  border-radius: var(--r-xl);
   background: linear-gradient(150deg, var(--river-dark), var(--river));
   box-shadow: var(--shadow-pop);
   transform: rotate(1.5deg);
@@ -5047,7 +5054,7 @@ a.tag:hover {
 .bdg-card {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   padding: clamp(18px, 3vw, 28px);
   box-shadow: var(--shadow-card);
 }
@@ -5077,7 +5084,7 @@ a.tag:hover {
   gap: 8px;
   padding: 14px 16px 10px;
   border: 1.5px solid var(--line-strong);
-  border-radius: 12px;
+  border-radius: var(--r-lg);
   cursor: pointer;
   font-size: 13px;
   color: var(--ink-60);
@@ -5152,7 +5159,7 @@ a.tag:hover {
 .bdg-more > div {
   background: var(--white);
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: var(--r-lg);
   padding: 24px;
 }
 .bdg-more h2 {
