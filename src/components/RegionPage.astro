@@ -6,20 +6,26 @@
  * from one page. It is a crawl distribution layer first and a landing page
  * second, which is why the link blocks are dense and the prose is short.
  */
-import type { Region } from '~/lib/types';
+import type { Category, Locality, Region } from '~/lib/types';
 import {
   url,
   STATES,
+  POLICY,
   localitiesInRegion,
   listingsInLocality,
-  activeCategoriesInLocality,
+  listingsInLocalityCategory,
   regionsInState,
+  regionStats,
   isLiveLocality,
+  isIndexedMoneyPage,
+  largestTowns,
+  indexedMoneyPagesIn,
 } from '~/lib/repo';
 import Base from '~/layouts/Base.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { n, plural } from '~/lib/copy';
+import { categoryCounts, checkedPhrase, listPhrase, n, plural, regionInShort, regionTitleLadder } from '~/lib/copy';
+import { humanDate } from '~/lib/build';
 import {
   compose,
   graph,
@@ -41,6 +47,7 @@ const { region, buildDate } = Astro.props;
 
 const state = STATES[region.state];
 const canonicalPath = url.region(region);
+const stats = regionStats(region.id);
 
 const places = localitiesInRegion(region.id)
   .map((l) => ({ locality: l, count: isLiveLocality(l.id) ? listingsInLocality(l.id).length : 0 }))
@@ -48,32 +55,40 @@ const places = localitiesInRegion(region.id)
 
 const withListings = places.filter((p) => p.count > 0);
 const notLive = places.filter((p) => p.count === 0);
-const totalListings = places.reduce((t, p) => t + p.count, 0);
+/**
+ * Distinct businesses, not the sum of each town's count.
+ *
+ * This was `places.reduce((t, p) => t + p.count, 0)`, which counted a plumber
+ * covering six towns six times and printed the total as "businesses across the
+ * region". The per town tiles below still show each town's own count, which is
+ * what they are labelled as.
+ */
+const totalListings = stats.listingCount;
 
-// Categories across the whole region, most populous first.
-const catCounts = new Map<string, { name: string; slug: string; count: number; localitySlug: string; localityId: string }>();
-for (const { locality } of places) {
-  for (const a of activeCategoriesInLocality(locality.id)) {
-    const key = a.category.slug;
-    const prev = catCounts.get(key);
-    if (!prev || a.count > prev.count) {
-      catCounts.set(key, {
-        name: a.category.name,
-        slug: a.category.slug,
-        count: (prev?.count ?? 0) + a.count,
-        localitySlug: locality.slug,
-        localityId: locality.id,
-      });
-    } else {
-      prev.count += a.count;
-    }
-  }
-}
-const topCategories = [...catCounts.values()].sort((a, b) => b.count - a.count).slice(0, 24);
+/**
+ * For each of the region's biggest categories, the one money page in the
+ * region worth sending a reader to: the indexed page with the most listings.
+ * Falls back to the national category hub when no town in the region has an
+ * indexed page for it, which is where these tiles linked before.
+ */
+const bestPageFor = (c: Category): { locality: Locality; count: number } | undefined =>
+  stats.liveTowns
+    .filter((t) => isIndexedMoneyPage(t.id, c.id))
+    .map((t) => ({ locality: t, count: listingsInLocalityCategory(t.id, c.id).length }))
+    .sort((a, b) => b.count - a.count || (b.locality.population ?? 0) - (a.locality.population ?? 0))[0];
+
+const topCategories = stats.categories.slice(0, 24).map((a) => ({ ...a, best: bestPageFor(a.category) }));
+
+/** The region's largest towns, each with its biggest indexed money pages. */
+const startHere = largestTowns({ regionId: region.id })
+  .slice(0, 6)
+  .map((t) => ({ locality: t, pages: indexedMoneyPagesIn(t.id).slice(0, 6) }));
 
 const siblings = regionsInState(region.state).filter((r) => r.id !== region.id);
 
 const h1 = region.name + ', ' + state.name;
+const titles = regionTitleLadder(region, stats);
+const inShort = withListings.length > 0 ? regionInShort(region, stats) : '';
 /**
  * Counts first, then as much of the region blurb as fits.
  *
@@ -81,17 +96,24 @@ const h1 = region.name + ', ' + state.name;
  * landed mid word ("climb from the Murrumbidgee at Gundagai up"). compose adds
  * whole sentences of the blurb instead and stops when the next one will not fit.
  */
-const description = compose(
+const leadTowns = stats.townsByBased.filter((t) => t.based > 0).map((t) => t.locality.name + ' (' + n(t.based) + ')');
+const descriptionLead = (k: number) =>
   n(totalListings) +
-    ' businesses across ' +
-    withListings.length +
-    ' towns in the ' +
-    region.name +
-    ' region of ' +
-    state.name +
-    '.',
-  region.blurb,
-);
+  ' ' +
+  plural(totalListings, 'business', 'businesses') +
+  ' across ' +
+  withListings.length +
+  ' ' +
+  plural(withListings.length, 'town', 'towns') +
+  ' in the ' +
+  region.name +
+  ' region of ' +
+  state.name +
+  (k >= 2 ? ', led by ' + listPhrase(leadTowns.slice(0, k)) : '') +
+  '.';
+// Three towns with their counts if they fit, then two, then none.
+const lead = [3, 2, 0].map((k) => descriptionLead(Math.min(k, leadTowns.length))).find((s) => s.length <= 150) ?? descriptionLead(0);
+const description = compose(lead, region.blurb);
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -103,15 +125,63 @@ const faqs = [
   { q: 'Which towns are in the ' + region.name + ' region?', a: places.slice(0, 18).map((p) => p.locality.name).join(', ') + '.' },
   {
     q: 'How many businesses are listed across ' + region.name + '?',
-    a: n(totalListings) + ' at the last count, spread across ' + withListings.length + ' towns. Towns without a listing yet do not get a page until they have content.',
+    a:
+      n(totalListings) +
+      ' distinct ' +
+      plural(totalListings, 'business', 'businesses') +
+      ' on ' +
+      humanDate(buildDate) +
+      ', spread across ' +
+      withListings.length +
+      ' ' +
+      plural(withListings.length, 'town', 'towns') +
+      '. A business that covers several towns is counted once. Towns without a listing yet do not get a page until they have content.',
   },
+  ...(stats.townsByBased.filter((t) => t.based > 0).length >= 2
+    ? [
+        {
+          q: 'Which towns in ' + region.name + ' have the most businesses?',
+          a:
+            'Counting businesses based in each town: ' +
+            listPhrase(
+              stats.townsByBased
+                .filter((t) => t.based > 0)
+                .slice(0, 5)
+                .map((t) => t.locality.name + ' (' + n(t.based) + ')'),
+            ) +
+            '. These counts measure how far the directory has got in each town, not the size of the town.',
+        },
+      ]
+    : []),
+  ...(stats.categories.length >= 2
+    ? [
+        {
+          q: 'What are the most listed categories in ' + region.name + '?',
+          a:
+            categoryCounts(stats.categories, 5)[0].toUpperCase() +
+            categoryCounts(stats.categories, 5).slice(1) +
+            '. ' +
+            (checkedPhrase(stats.checkedFrom, stats.checkedTo)
+              ? 'Listing details were last read from their sources ' + checkedPhrase(stats.checkedFrom, stats.checkedTo) + '.'
+              : ''),
+        },
+      ]
+    : []),
 ];
 
 const jsonLd = graph([
   organisationNode(),
   websiteNode(),
   breadcrumbNode(crumbs, canonicalPath),
-  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: buildDate }),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: buildDate,
+    abstract: inShort || undefined,
+  }),
   {
     '@type': 'AdministrativeArea',
     name: region.name,
@@ -130,7 +200,8 @@ const jsonLd = graph([
 <Base
   kind="region"
   listingCount={totalListings}
-  title={h1}
+  title={titles[0]}
+  titleAlt={titles.slice(1)}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -154,9 +225,49 @@ const jsonLd = graph([
       <div><b>{places.length}</b><span>towns</span></div>
       <div><b>{withListings.length}</b><span>with listings</span></div>
       <div><b>{n(totalListings)}</b><span>businesses</span></div>
-      <div><b>{topCategories.length}</b><span>categories live</span></div>
+      <div><b>{stats.categories.length}</b><span>categories live</span></div>
     </div>
+
+    {inShort && (
+      <section class="datablock" aria-labelledby="glance-h">
+        <h2 id="glance-h">{region.name} at a glance</h2>
+        <p><strong>In short.</strong> {inShort}</p>
+        <p class="asof">
+          Counted from the listings on this region's town pages on {humanDate(buildDate)}. A business that
+          covers several towns is counted once.
+        </p>
+      </section>
+    )}
   </div>
+
+  {startHere.length > 0 && (
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Where to start in {region.name}</h2>
+          <p>
+            The largest towns in the region by population, and their fullest pages. Every page linked here
+            lists at least {POLICY.minListingsToIndex} businesses, at least one of them based in the town.
+          </p>
+        </div>
+        <div class="linkgrid">
+          {startHere.map((t) => (
+            <div>
+              <h3><a href={url.locality(t.locality)}>{t.locality.name}</a></h3>
+              <ul>
+                {t.pages.map((p) => (
+                  <li>
+                    <a href={url.localityCategory(t.locality, p.category)}>{p.category.name} in {t.locality.name}</a>
+                    <span style="color:var(--ink-40);font-size:13px"> {n(p.count)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <section class="sec">
     <div class="wrap">
@@ -196,11 +307,15 @@ const jsonLd = graph([
         <div class="sec-head">
           <h2>What people look for in {region.name}</h2>
         </div>
+        <p style="margin:-8px 0 16px;font-size:14px;color:var(--ink-60)">
+          Each links to the fullest page for it in the region where there is one, and to the category across
+          both states where there is not.
+        </p>
         <div class="cats">
           {topCategories.map((c) => (
-            <a class="cat" href={'/categories/' + c.slug + '/'}>
-              <strong>{c.name}</strong>
-              <span class="n mono">{c.count} across the region</span>
+            <a class="cat" href={c.best ? url.localityCategory(c.best.locality, c.category) : url.category(c.category)}>
+              <strong>{c.category.name}{c.best ? ' in ' + c.best.locality.name : ''}</strong>
+              <span class="n mono">{n(c.count)} across the region</span>
             </a>
           ))}
         </div>
