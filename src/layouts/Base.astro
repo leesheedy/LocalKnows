@@ -149,7 +149,7 @@ const imageType = /\.jpe?g$/i.test(image)
     <meta name="application-name" content={SITE.name} />
     <meta name="apple-mobile-web-app-title" content={SITE.name} />
 
-    <meta name="theme-color" content="#EFEDE4" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#131E19" media="(prefers-color-scheme: dark)" />
     <meta name="format-detection" content="telephone=yes" />
     <meta name="geo.region" content="AU-NSW" />
@@ -193,15 +193,12 @@ const imageType = /\.jpe?g$/i.test(image)
       <slot />
     </main>
     <Footer />
+    {/* Menu and the "For business" disclosure. Written small because it ships on every page. */}
     <script is:inline>
-      // Mobile nav. Nine lines of inline script rather than a framework island.
-      document.addEventListener('click', function (e) {
-        var t = e.target.closest('.navtoggle');
-        if (!t) return;
-        var bar = t.closest('.bar');
-        var open = bar.classList.toggle('open');
-        t.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
+      (function(){var b=document.querySelector(".bar");if(!b)return;var d=b.querySelector(".nav-biz"),t=b.querySelector(".navtoggle");
+      function m(o){b.classList.toggle("open",o);t.setAttribute("aria-expanded",o);if(d)d.open=o}
+      document.addEventListener("click",function(e){if(e.target.closest(".navtoggle"))return m(!b.classList.contains("open"));if(d&&d.open&&!b.classList.contains("open")&&!d.contains(e.target))d.open=false});
+      document.addEventListener("keydown",function(e){if(e.key!=="Escape")return;if(b.classList.contains("open")){m(false);t.focus()}else if(d&&d.open){d.open=false;d.firstElementChild.focus()}})})();
     </script>
   </body>
 </html>

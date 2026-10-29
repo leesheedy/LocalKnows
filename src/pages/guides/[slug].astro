@@ -132,14 +132,14 @@ const jsonLd = guideGraph(guide, crumbs);
         <div class="headmeta">
           <span>{guide.author}, {guide.authorRole}</span>
           <span>
-            &middot; Published{' '}
+            Published{' '}
             <time datetime={guide.publishedAt}>{humanDate(guide.publishedAt)}</time>
           </span>
           <span>
-            &middot; Reviewed{' '}
+            Reviewed{' '}
             <time datetime={guide.reviewedAt}>{humanDate(guide.reviewedAt)}</time>
           </span>
-          <span>&middot; {rendered.wordCount} words</span>
+          <span>{rendered.wordCount} words</span>
         </div>
       </div>
 

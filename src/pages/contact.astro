@@ -49,10 +49,6 @@ const jsonLd = graph([
 
 // No form classes exist in app.css yet, so the field chrome is inline rather
 // than invented. Keep these three strings in sync across the three form pages.
-const row = 'margin:0 0 18px';
-const lbl = 'display:block;color:var(--ink-60);margin-bottom:6px';
-const inp =
-  'width:100%;font:inherit;font-size:15.5px;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--white);color:var(--ink)';
 
 const subjects = [
   'Correction',
@@ -83,8 +79,8 @@ const subjects = [
       </p>
       <div class="headmeta">
         <span>{SITE.email}</span>
-        <span>&middot; Replies within two business days</span>
-        <span>&middot; Page updated {humanDate(BUILD_DATE)}</span>
+        <span>Replies within two business days</span>
+        <span>Page updated {humanDate(BUILD_DATE)}</span>
       </div>
     </div>
 
@@ -159,26 +155,26 @@ const subjects = [
             <label>Leave this field empty: <input name="bot-field" /></label>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="c-name">Your name</label>
-            <input style={inp} id="c-name" name="name" type="text" autocomplete="name" required />
+          <p class="frow">
+            <label class="flabel" for="c-name">Your name</label>
+            <input class="finput" id="c-name" name="name" type="text" autocomplete="name" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="c-email">Email</label>
-            <input style={inp} id="c-email" name="email" type="email" autocomplete="email" required />
+          <p class="frow">
+            <label class="flabel" for="c-email">Email</label>
+            <input class="finput" id="c-email" name="email" type="email" autocomplete="email" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="c-subject">What is this about</label>
-            <select style={inp} id="c-subject" name="subject" required>
+          <p class="frow">
+            <label class="flabel" for="c-subject">What is this about</label>
+            <select class="finput" id="c-subject" name="subject" required>
               {subjects.map((s) => <option value={s}>{s}</option>)}
             </select>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="c-message">Message</label>
-            <textarea style={inp + ';min-height:170px;resize:vertical'} id="c-message" name="message" rows="7" required></textarea>
+          <p class="frow">
+            <label class="flabel" for="c-message">Message</label>
+            <textarea class="finput" style="min-height:170px" id="c-message" name="message" rows="7" required></textarea>
           </p>
 
           <p style="margin:0">

@@ -92,14 +92,14 @@ const jsonLd = graph([
       </p>
       <div class="headmeta">
         <span>{rows.length} {rows.length === 1 ? 'list' : 'lists'}</span>
-        <span>&middot; {written.length} written by hand</span>
-        <span>&middot; {compiled.length} compiled by rule</span>
+        <span>{written.length} written by hand</span>
+        <span>{compiled.length} compiled by rule</span>
         {lastReviewed && (
           <span>
-            &middot; Last review <time datetime={lastReviewed}>{humanDate(lastReviewed)}</time>
+            Last review <time datetime={lastReviewed}>{humanDate(lastReviewed)}</time>
           </span>
         )}
-        <span>&middot; Ordering is an opinion, not a score</span>
+        <span>Ordering is an opinion, not a score</span>
       </div>
     </div>
   </div>

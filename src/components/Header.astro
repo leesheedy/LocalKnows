@@ -3,38 +3,58 @@ import { url } from '~/lib/repo';
 import { SITE } from '~/lib/site';
 const here = Astro.url.pathname;
 const on = (p: string) => (here === p || (p !== '/' && here.startsWith(p)) ? 'page' : undefined);
+
+/*
+ * The business links used to sit in a dark utility strip above the bar. They
+ * now live in one "For business" disclosure, which keeps every link in the
+ * HTML on every page (the crawl graph is unchanged) and gives the bar one row.
+ * On a phone the same links open inside the menu panel. Icons are CSS masks
+ * (.i in app.css) because this markup ships on every page.
+ */
+const business = [
+  { href: url.claim(), label: 'Claim a listing' },
+  { href: url.verified(), label: 'Get verified' },
+  { href: url.leadsForBusiness(), label: 'Leads for business' },
+  { href: url.badge(), label: 'Website badge' },
+  { href: url.tools(), label: 'Free tools' },
+  { href: url.contact(), label: 'Contact' },
+];
 ---
-<div class="util">
-  <div class="wrap util-in">
-    <span class="hide-s">Independent. Free to list. Both sides of the border.</span>
-    <span class="right">
-      <a class="hide-s" href={url.leadsForBusiness()}>Leads for business</a>
-      <a class="hide-s" href={url.claim()}>Claim a listing</a>
-      <a href={url.verified()}>Get verified</a>
-      <a href={url.tools()}>Free tools</a>
-      <a href={url.contact()}>Contact</a>
-    </span>
-  </div>
-</div>
 <header class="bar">
   <div class="wrap bar-in">
     <a class="mark" href={url.home()} aria-label={SITE.name + ' home'}>
-      <svg class="pin" width="17" height="22" viewBox="0 0 17 22" aria-hidden="true">
+      <svg class="pin" width="20" height="26" viewBox="0 0 17 22" aria-hidden="true">
         <path d="M8.5 0C3.8 0 0 3.8 0 8.5 0 15 8.5 22 8.5 22S17 15 17 8.5C17 3.8 13.2 0 8.5 0z" fill="#E8B21F"/>
-        <circle cx="8.5" cy="8.4" r="3.4" fill="#EFEDE4"/>
+        <circle cx="8.5" cy="8.4" r="3.4" fill="#fff"/>
       </svg><span><b>Locals</b><em>Know</em></span>
     </a>
-    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav">Menu</button>
+
     <nav class="nav" id="sitenav" aria-label="Main">
-      <a href={url.state('NSW')} aria-current={on('/nsw/')}>NSW</a>
-      <a href={url.state('VIC')} aria-current={on('/vic/')}>Victoria</a>
-      <a href={url.categoryIndex()} aria-current={on('/categories/')}>Categories</a>
-      <a class="nav-wide" href={url.guides()} aria-current={on('/guides/')}>Guides</a>
-      <a class="nav-wide" href={url.lists()} aria-current={on('/lists/')}>Lists</a>
-      <a class="nav-wide" href={url.events()} aria-current={on('/events/')}>Events</a>
-      <a class="nav-wide" href={url.wire()} aria-current={on('/wire/')}>The wire</a>
-      <a href={url.search()} aria-current={on('/search/')}>Search</a>
+      <div class="nav-main">
+        <a href={url.state('NSW')} aria-current={on('/nsw/')}>NSW</a>
+        <a href={url.state('VIC')} aria-current={on('/vic/')}>Victoria</a>
+        <a href={url.categoryIndex()} aria-current={on('/categories/')}>Categories</a>
+        <a href={url.guides()} aria-current={on('/guides/')}>Guides</a>
+        <a class="nav-wide" href={url.lists()} aria-current={on('/lists/')}>Lists</a>
+        <a href={url.events()} aria-current={on('/events/')}>Events</a>
+        <a class="nav-wide" href={url.wire()} aria-current={on('/wire/')}>The wire</a>
+        <a class="nav-only-s" href={url.search()} aria-current={on('/search/')}>Search</a>
+      </div>
+      <details class="nav-biz">
+        <summary>For business <span class="i i-down" aria-hidden="true"></span></summary>
+        <div class="nav-drop">
+          {business.map((b) => <a href={b.href} aria-current={on(b.href)}><b>{b.label}</b></a>)}
+        </div>
+      </details>
+      <a class="btn btn-gold nav-cta" href={url.quotes()}>Get free quotes</a>
     </nav>
-    <a class="btn btn-gold btn-sm bar-cta" href={url.quotes()} aria-current={on('/get-quotes/')}>Get quotes</a>
+
+    <a class="bar-search" href={url.search()} aria-label="Search the directory" aria-current={on('/search/')}>
+      <span class="i i-search" aria-hidden="true"></span><span>Search</span>
+    </a>
+    <a class="btn btn-gold bar-cta" href={url.quotes()} aria-current={on('/get-quotes/')}>Get quotes</a>
+    <button class="navtoggle" type="button" aria-expanded="false" aria-controls="sitenav">
+      <span class="i i-menu" aria-hidden="true"></span><span class="visually-hidden">Menu</span>
+    </button>
   </div>
 </header>

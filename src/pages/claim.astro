@@ -79,11 +79,6 @@ const jsonLd = graph([
   faqNode(faqs, canonicalPath),
 ]);
 
-const row = 'margin:0 0 18px';
-const lbl = 'display:block;color:var(--ink-60);margin-bottom:6px';
-const inp =
-  'width:100%;font:inherit;font-size:15.5px;padding:11px 13px;border:1px solid var(--line-strong);border-radius:var(--r);background:var(--white);color:var(--ink)';
-const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
 ---
 
 <Base
@@ -105,8 +100,8 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
       </p>
       <div class="headmeta">
         <span>{n(claimed)} claimed</span>
-        <span>&middot; {n(verified)} verified</span>
-        <span>&middot; Claims answered in two business days</span>
+        <span>{n(verified)} verified</span>
+        <span>Claims answered in two business days</span>
       </div>
     </div>
 
@@ -266,53 +261,53 @@ const hint = 'display:block;font-size:13px;color:var(--ink-40);margin-top:5px';
             <label>Leave this field empty: <input name="bot-field" /></label>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-business">Business name</label>
-            <input style={inp} id="k-business" name="business" type="text" autocomplete="organization" required />
+          <p class="frow">
+            <label class="flabel" for="k-business">Business name</label>
+            <input class="finput" id="k-business" name="business" type="text" autocomplete="organization" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-name">Your name</label>
-            <input style={inp} id="k-name" name="name" type="text" autocomplete="name" required />
+          <p class="frow">
+            <label class="flabel" for="k-name">Your name</label>
+            <input class="finput" id="k-name" name="name" type="text" autocomplete="name" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-role">Your role at the business</label>
-            <input style={inp} id="k-role" name="role" type="text" placeholder="Owner, manager, office admin" required />
+          <p class="frow">
+            <label class="flabel" for="k-role">Your role at the business</label>
+            <input class="finput" id="k-role" name="role" type="text" placeholder="Owner, manager, office admin" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-email">Email</label>
-            <input style={inp} id="k-email" name="email" type="email" autocomplete="email" required />
-            <span style={hint}>An address on the business domain is matched fastest.</span>
+          <p class="frow">
+            <label class="flabel" for="k-email">Email</label>
+            <input class="finput" id="k-email" name="email" type="email" autocomplete="email" required />
+            <span class="fhint">An address on the business domain is matched fastest.</span>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-phone">Phone</label>
-            <input style={inp} id="k-phone" name="phone" type="tel" autocomplete="tel" required />
+          <p class="frow">
+            <label class="flabel" for="k-phone">Phone</label>
+            <input class="finput" id="k-phone" name="phone" type="tel" autocomplete="tel" required />
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-listing">Listing URL</label>
-            <input style={inp} id="k-listing" name="listing_url" type="url" placeholder="https://localsknow.com.au/nsw/albury/plumbers/..." required />
-            <span style={hint}>If the listing does not exist yet, put your website here instead.</span>
+          <p class="frow">
+            <label class="flabel" for="k-listing">Listing URL</label>
+            <input class="finput" id="k-listing" name="listing_url" type="url" placeholder="https://localsknow.com.au/nsw/albury/plumbers/..." required />
+            <span class="fhint">If the listing does not exist yet, put your website here instead.</span>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-abn">ABN (optional)</label>
-            <input style={inp} id="k-abn" name="abn" type="text" inputmode="numeric" placeholder="11 digits" />
-            <span style={hint}>Only used to match the trading name on the public ABN register.</span>
+          <p class="frow">
+            <label class="flabel" for="k-abn">ABN (optional)</label>
+            <input class="finput" id="k-abn" name="abn" type="text" inputmode="numeric" placeholder="11 digits" />
+            <span class="fhint">Only used to match the trading name on the public ABN register.</span>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-licence">Licence number (optional)</label>
-            <input style={inp} id="k-licence" name="licence" type="text" placeholder="Number and issuing state" />
-            <span style={hint}>Include this to start verification with the claim.</span>
+          <p class="frow">
+            <label class="flabel" for="k-licence">Licence number (optional)</label>
+            <input class="finput" id="k-licence" name="licence" type="text" placeholder="Number and issuing state" />
+            <span class="fhint">Include this to start verification with the claim.</span>
           </p>
 
-          <p style={row}>
-            <label class="mono" style={lbl} for="k-notes">Anything else we should fix</label>
-            <textarea style={inp + ';min-height:130px;resize:vertical'} id="k-notes" name="notes" rows="5"></textarea>
+          <p class="frow">
+            <label class="flabel" for="k-notes">Anything else we should fix</label>
+            <textarea class="finput" style="min-height:130px" id="k-notes" name="notes" rows="5"></textarea>
           </p>
 
           <UploadFields idPrefix="claim" />

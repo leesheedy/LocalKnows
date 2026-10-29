@@ -79,8 +79,8 @@ const jsonLd = graph([
       </p>
       <div class="headmeta">
         <span>{n(articles.length)} {articles.length === 1 ? 'piece' : 'pieces'}</span>
-        {articles.length > 0 && <span>&middot; Latest {shortDate(latest)}</span>}
-        <span>&middot; <a href={feedPath} style="color:var(--river)">RSS feed</a></span>
+        {articles.length > 0 && <span>Latest {shortDate(latest)}</span>}
+        <span><a href={feedPath} style="color:var(--river)">RSS feed</a></span>
       </div>
     </div>
   </div>

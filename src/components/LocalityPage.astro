@@ -159,9 +159,9 @@ const jsonLd = graph([
       <p class="standfirst">{locality.blurb}</p>
       <div class="headmeta">
         <span>{n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
-        <span>&middot; {active.length} {plural(active.length, 'category', 'categories')}</span>
-        {verified > 0 && <span>&middot; {verified} verified</span>}
-        <span>&middot; Checked {buildDate}</span>
+        <span>{active.length} {plural(active.length, 'category', 'categories')}</span>
+        {verified > 0 && <span>{verified} verified</span>}
+        <span>Checked {buildDate}</span>
       </div>
     </div>
 
@@ -219,7 +219,7 @@ const jsonLd = graph([
                   {glanceCategories.map((a) => (
                     <li>
                       <a href={url.localityCategory(locality, a.category)}>{a.category.name}</a>
-                      <span style="color:var(--ink-40);font-size:13px"> {n(a.count)}</span>
+                      <span class="ln-note"> {n(a.count)}</span>
                     </li>
                   ))}
                 </ul>
@@ -275,7 +275,7 @@ const jsonLd = graph([
                   {nearest.map((nb) => (
                     <li>
                       <a href={url.locality(nb.locality)} class={nb.crossesBorder ? 'cross' : undefined}>{nb.locality.name}</a>
-                      <span style="color:var(--ink-40);font-size:13px">
+                      <span class="ln-note">
                         {' '}{nb.crossesBorder ? nb.locality.state + ', ' : ''}{kmLabel(nb.distanceKm)}
                       </span>
                     </li>
@@ -363,7 +363,7 @@ const jsonLd = graph([
                 {events.map((e) => (
                   <li>
                     <a href={url.event(e)}>{e.title}</a>
-                    <span style="color:var(--ink-40);font-size:13px"> {shortDate(e.startDate.slice(0, 10))}</span>
+                    <span class="ln-note"> {shortDate(e.startDate.slice(0, 10))}</span>
                   </li>
                 ))}
               </ul>

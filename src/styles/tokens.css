@@ -1,40 +1,93 @@
 /*
  * Design tokens.
  *
- * The palette is the Murray: paper for the flats, river green for water,
- * wattle for the one thing on the page that should be looked at. It came out of
- * the original prototype and is kept deliberately, because a directory that
- * looks like every other directory has already lost the trust argument.
+ * The palette is still the Murray: river green for water and for anything you
+ * act on, wattle for the one thing on the page that should be looked at, and a
+ * warm near white for the flats. The 2026 revamp moved the surfaces from paper
+ * to clean white cards on a warm ground, rounded the corners, and replaced most
+ * hairlines with elevation, so the page reads by grouping rather than by rules.
+ *
+ * Text greys are solid colours chosen for contrast, not alpha over a guess at
+ * the background: --ink-40 is the lightest text on the site and still clears
+ * 4.5:1 on both --bg and --surface.
  */
 :root {
-  --paper: #efede4;
-  --paper-2: #f7f6f1;
-  --white: #fffdf8;
+  /* Ground and surfaces */
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #f3f2ed;
+  --surface-3: #eae8e1;
+
+  /* Older names, kept so every rule reads the same token. --paper is both the
+     page ground and the light text colour on dark bands. */
+  --paper: #f6f5f1;
+  --paper-2: #f3f2ed;
+  --white: #ffffff;
+
+  /* Ink */
   --ink: #131e19;
-  --ink-80: rgba(19, 30, 25, 0.82);
-  --ink-60: rgba(19, 30, 25, 0.62);
-  --ink-40: rgba(19, 30, 25, 0.4);
+  --ink-80: #2c3732;
+  --ink-60: #4e5853;
+  --ink-40: #636d67;
+
+  /* River */
   --river: #1f6b5c;
   --river-dark: #134a40;
+  --river-deep: #0c2f28;
   --river-10: rgba(31, 107, 92, 0.09);
+  --river-50: #edf5f2;
+  --river-100: #d5e8e1;
+
+  /* Wattle */
   --wattle: #e8b21f;
+  --wattle-hover: #f3c23a;
   --wattle-ink: #6b4f00;
+  --wattle-50: #fdf6e0;
+  --wattle-100: #f9e7ad;
+
   --gum: #a8b6a0;
-  --clay: #7c1f2e;
-  --line: rgba(19, 30, 25, 0.13);
-  --line-strong: rgba(19, 30, 25, 0.24);
+  --clay: #9a2436;
 
-  --r: 4px;
-  --r-lg: 8px;
-  --pad: clamp(20px, 5vw, 64px);
+  /* Lines are alpha so they sit right on any surface. */
+  --line: rgba(19, 30, 25, 0.09);
+  --line-strong: rgba(19, 30, 25, 0.17);
+
+  /* On dark bands */
+  --on-dark: #f6f5f1;
+  --on-dark-70: rgba(246, 245, 241, 0.74);
+  --on-dark-line: rgba(246, 245, 241, 0.16);
+
+  /* Shape */
+  --r-xs: 6px;
+  --r-sm: 8px;
+  --r: 10px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  /* Elevation */
+  --shadow-xs: 0 1px 2px rgba(19, 30, 25, 0.06);
+  --shadow-sm: 0 1px 2px rgba(19, 30, 25, 0.04), 0 2px 8px rgba(19, 30, 25, 0.05);
+  --shadow-card: 0 1px 2px rgba(19, 30, 25, 0.04), 0 12px 30px -8px rgba(19, 30, 25, 0.14);
+  --shadow-pop: 0 2px 6px rgba(19, 30, 25, 0.05), 0 26px 60px -14px rgba(19, 30, 25, 0.26);
+  --ring: 0 0 0 4px rgba(31, 107, 92, 0.16);
+
+  /* Space and measure */
+  --pad: clamp(16px, 4vw, 40px);
+  --sec-y: clamp(52px, 7vw, 88px);
   --measure: 68ch;
+  --bar-h: 68px;
 
+  /* Type */
   --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
-  --font-body: 'Instrument Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-body: 'Instrument Sans', 'Instrument Fallback', 'Segoe UI', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
+  --fs-hero: clamp(40px, 6.2vw, 72px);
+  --fs-h1: clamp(32px, 4.4vw, 52px);
+  --fs-h2: clamp(25px, 3vw, 36px);
+  --fs-h3: 19px;
 
-  --shadow-card: 0 12px 28px rgba(19, 30, 25, 0.08);
-  --shadow-pop: 0 18px 44px rgba(19, 30, 25, 0.14);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 *,
@@ -46,16 +99,18 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--bar-h) + 16px);
 }
 
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--bg);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
@@ -64,9 +119,9 @@ h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1.1;
   margin: 0;
   text-wrap: balance;
 }
@@ -92,10 +147,18 @@ img {
   height: auto;
 }
 
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
 :focus-visible {
   outline: 2.5px solid var(--river);
-  outline-offset: 3px;
-  border-radius: 2px;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 [hidden] {
@@ -107,21 +170,33 @@ img {
   color: var(--ink);
 }
 
+/*
+ * The small label. It was set in a monospace face for the paper look; it is
+ * now the body face in caps, which keeps the job (a quiet label above a loud
+ * line) without a third font on every page.
+ */
 .mono {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.13em;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
+code,
+kbd,
+pre {
+  font-family: var(--font-mono);
+}
+
 .wrap {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-inline: var(--pad);
 }
 
 .wrap-narrow {
-  max-width: 780px;
+  max-width: 800px;
   margin: 0 auto;
   padding-inline: var(--pad);
 }
@@ -144,7 +219,7 @@ img {
   top: -60px;
   z-index: 999;
   background: var(--ink);
-  color: var(--paper);
+  color: var(--on-dark);
   padding: 12px 18px;
   border-radius: var(--r);
   transition: top 0.15s;
@@ -154,11 +229,15 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
   }
 }

@@ -238,9 +238,9 @@ const section = (
       </p>
       <div class="headmeta">
         <span>{n(rows.length)} {plural(rows.length, 'listing', 'listings')}</span>
-        <span>&middot; {active.length} {plural(active.length, 'category', 'categories')}</span>
-        {clubCount > 0 && <span>&middot; {clubCount} {plural(clubCount, 'club or group', 'clubs and groups')}</span>}
-        <span>&middot; Checked {BUILD_DATE}</span>
+        <span>{active.length} {plural(active.length, 'category', 'categories')}</span>
+        {clubCount > 0 && <span>{clubCount} {plural(clubCount, 'club or group', 'clubs and groups')}</span>}
+        <span>Checked {BUILD_DATE}</span>
       </div>
     </div>
 
@@ -442,8 +442,8 @@ const section = (
           </p>
         )}
         <div class="linkgrid">
-          {eat.length > 0 && <div><h3>Eat</h3><ul>{eat.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
-          {drink.length > 0 && <div><h3>Pubs and clubs</h3><ul>{drink.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span style="color:var(--ink-40);font-size:13px">{c.count}</span></li>))}</ul></div>}
+          {eat.length > 0 && <div><h3>Eat</h3><ul>{eat.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span class="ln-note">{c.count}</span></li>))}</ul></div>}
+          {drink.length > 0 && <div><h3>Pubs and clubs</h3><ul>{drink.map((c) => (<li><a href={url.localityCategory(locality, c.category)}>{c.category.name}</a> <span class="ln-note">{c.count}</span></li>))}</ul></div>}
           {lists.length > 0 && <div><h3>Worked out for you</h3><ul>{lists.map((l) => <li><a href={url.list(l)}>{l.title}</a></li>)}</ul></div>}
         </div>
       </div>

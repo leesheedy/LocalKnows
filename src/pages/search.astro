@@ -247,8 +247,7 @@ const jsonLd = graph([
       <button class="pill pill-clear" type="button" id="lk-reset" hidden>Clear all</button>
       <span class="count" id="lk-count" aria-live="polite" role="status"></span>
     </div>
-    <p class="mono" id="lk-open-note" hidden
-       style="margin:8px 0 0;font-size:13px;color:var(--ink-40)">
+    <p class="fhint" id="lk-open-note" hidden style="margin:0 0 4px">
       Open now can only speak for the businesses that publish their hours. The rest are
       hidden while it is on, not closed.
     </p>
@@ -265,7 +264,7 @@ const jsonLd = graph([
       <p id="lk-empty-msg">Nothing matched.</p>
       <a class="btn btn-ghost" href={url.categoryIndex()}>Browse every category</a>
     </div>
-    <p id="lk-more" class="mono" style="margin-top:18px;color:var(--ink-40)" hidden></p>
+    <p id="lk-more" class="fhint" style="margin-top:18px;text-align:center" hidden></p>
   </div>
 
   <section class="sec">
@@ -297,7 +296,7 @@ const jsonLd = graph([
               {g.items.slice(0, 20).map((s) => (
                 <li>
                   <a href={url.locality(s.locality)}>{s.locality.name}</a>
-                  <span style="color:var(--ink-40);font-size:13px"> {s.count}</span>
+                  <span class="ln-note"> {s.count}</span>
                 </li>
               ))}
             </ul>
@@ -432,11 +431,9 @@ const jsonLd = graph([
             return (
               '<article class="card"><div class="card-top">' +
               '<span class="logo lg-' + theme(r.u) + '" aria-hidden="true">' + esc(initials(r.n)) + '</span>' +
-              '<div style="min-width:0"><h3><a href="' + r.u + '">' + esc(r.n) + '</a></h3>' +
-              '<p class="cat-line">' + esc(r.c) + (r.p ? ' &middot; ' + esc(r.p) : '') + '</p></div></div>' +
-              '<span class="state mono' + (r.s === 'VIC' ? ' vic' : '') + '">' + esc(r.s) + '</span>' +
-              '<div class="card-foot"><span class="right">' +
-              '<a class="btn btn-sm btn-ghost" href="' + r.u + '">Details</a></span></div></article>'
+              '<div class="card-id"><h3><a href="' + r.u + '">' + esc(r.n) + '</a></h3>' +
+              '<p class="cat-line">' + esc(r.c) + (r.p ? ' &middot; ' + esc(r.p) : '') + '</p></div>' +
+              '<span class="state' + (r.s === 'VIC' ? ' vic' : '') + '">' + esc(r.s) + '</span></div></article>'
             );
           })
           .join('');
@@ -545,39 +542,56 @@ const jsonLd = graph([
   <style>
     .searchbar {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) auto;
-      gap: 1px;
-      background: var(--line);
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.8fr) auto;
+      gap: 0;
+      margin-top: 8px;
+      padding: 8px;
+      background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: var(--r);
-      margin-top: 26px;
-      overflow: hidden;
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-card);
     }
     .sb-field {
-      background: var(--white);
-      padding: 11px 16px;
+      position: relative;
+      padding: 9px 16px;
       display: flex;
       flex-direction: column;
-      gap: 3px;
+      gap: 2px;
       min-width: 0;
+      border-radius: var(--r-lg);
+      transition: background-color 0.15s;
+    }
+    .sb-field + .sb-field::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      bottom: 14px;
+      width: 1px;
+      background: var(--line-strong);
     }
     .sb-field label {
-      color: var(--ink-40);
-      font-size: 10px;
+      color: var(--ink-60);
+      font-size: 11px;
     }
     .sb-field input,
     .sb-field select {
       border: 0;
       background: none;
       font: inherit;
-      font-size: 15.5px;
+      font-size: 16px;
       color: var(--ink);
       outline: none;
       width: 100%;
+      min-height: 30px;
       padding: 0;
       appearance: none;
       cursor: pointer;
       text-overflow: ellipsis;
+    }
+    .sb-field select {
+      padding-right: 20px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234e5853' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") right center / 13px no-repeat;
     }
     .sb-field input {
       cursor: text;
@@ -585,20 +599,43 @@ const jsonLd = graph([
     .sb-field input::placeholder {
       color: var(--ink-40);
     }
+    .sb-field:hover {
+      background: var(--surface-2);
+    }
     .sb-field:focus-within {
-      background: var(--paper-2);
+      background: var(--river-50);
     }
     .searchbar .btn {
-      border-radius: 0;
+      min-height: 58px;
       padding-inline: 30px;
-      justify-content: center;
+      border-radius: var(--r-lg);
+      font-size: 16px;
     }
-    @media (max-width: 860px) {
+    #lk-results .card {
+      padding: 16px 18px;
+    }
+    @media (max-width: 960px) {
       .searchbar {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        border-radius: var(--r-lg);
+        padding: 6px;
+      }
+      .sb-grow {
+        grid-column: 1 / -1;
+      }
+      .sb-field + .sb-field::before {
+        display: none;
       }
       .searchbar .btn {
+        grid-column: 1 / -1;
         width: 100%;
+        min-height: 52px;
+        margin-top: 4px;
+      }
+    }
+    @media (max-width: 560px) {
+      .searchbar {
+        grid-template-columns: 1fr;
       }
     }
   </style>

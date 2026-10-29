@@ -115,14 +115,14 @@ const description = fitDescription(list.intro);
           {list.method === 'compiled' ? '' : ', ranked'}
         </span>
         <span>
-          &middot; Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
+          Published <time datetime={list.publishedAt}>{humanDate(list.publishedAt)}</time>
         </span>
         <span>
-          &middot; Reviewed <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
+          Reviewed <time datetime={list.reviewedAt}>{humanDate(list.reviewedAt)}</time>
         </span>
         {category && locality && (
           <span>
-            &middot; <a href={url.localityCategory(locality, category)} style="color:var(--river)">
+            <a href={url.localityCategory(locality, category)} style="color:var(--river)">
               All {category.name.toLowerCase()} in {locality.name}
             </a>
           </span>
