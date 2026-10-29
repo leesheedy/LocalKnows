@@ -2,6 +2,16 @@
 /**
  * Locality hub. The page that has to link to everything below it without
  * turning into a wall of 400 links.
+ *
+ * It also has to be worth indexing in its own right, which for most of 2026 it
+ * was not: Albury, Wodonga, Wangaratta and Beechworth all sat in "crawled,
+ * currently not indexed" with a blurb, a stat row and a grid of category links
+ * that read the same in every town. What makes a town page different from the
+ * next one is what its own rows say, so the top of the page now says it: an
+ * "In short" paragraph, an at a glance block, and FAQs answered by counting.
+ * All of it comes from localityStats() in repo.ts and the sentences from
+ * copy.ts, so the summary, the block, the FAQ and the meta description are one
+ * set of numbers.
  */
 import type { Locality } from '~/lib/types';
 import {
@@ -9,14 +19,15 @@ import {
   STATES,
   getRegion,
   activeCategoriesInLocality,
+  indexedMoneyPagesIn,
   hasTownGuide,
   hasHiddenGems,
   themesFor,
   listingsInLocality,
+  localityStats,
   neighboursOf,
   listsForLocality,
   eventsInLocality,
-  categories as allCategories,
   guides as allGuides,
 } from '~/lib/repo';
 import { VERTICALS } from '~/lib/site';
@@ -24,7 +35,18 @@ import Base from '~/layouts/Base.astro';
 import ListingCard from '~/components/ListingCard.astro';
 import Faq from '~/components/Faq.astro';
 import LinkBlock from '~/components/LinkBlock.astro';
-import { hubSummary, otherStateLabel, n, plural } from '~/lib/copy';
+import {
+  checkedPhrase,
+  counted,
+  kmLabel,
+  otherStateLabel,
+  n,
+  plural,
+  townDescription,
+  townFaqs,
+  townInShort,
+  townTitleLadder,
+} from '~/lib/copy';
 import { humanDate, shortDate } from '~/lib/build';
 import {
   graph,
@@ -51,11 +73,10 @@ const canonicalPath = url.locality(locality);
 
 const rows = listingsInLocality(locality.id);
 const active = activeCategoriesInLocality(locality.id);
-const verified = rows.filter((l) => l.status === 'verified').length;
-const travelIn = rows.filter((l) => l.localityId !== locality.id).length;
-const crossBorder = rows.filter((l) => {
-  return l.localityId !== locality.id;
-}).length;
+const stats = localityStats(locality.id);
+const verified = stats.verifiedCount;
+const travelIn = stats.travelInCount;
+const otherState = otherStateLabel(locality.state);
 
 const byVertical = VERTICALS.map((v) => ({
   vertical: v,
@@ -64,6 +85,10 @@ const byVertical = VERTICALS.map((v) => ({
 
 const featured = rows.slice().sort((a, b) => b.qualityScore - a.qualityScore).slice(0, 6);
 const nearby = neighboursOf(locality, 10);
+// The first six by the site's usual nearby rule, which leans across the border
+// on purpose so Albury reaches Wodonga before its fourth suburb, then shown
+// nearest first because a list of distances out of order reads as a mistake.
+const nearest = nearby.slice(0, 6).sort((a, b) => a.distanceKm - b.distanceKm);
 const themes = themesFor(locality.id);
 const lists = listsForLocality(locality.slug);
 const events = eventsInLocality(locality.slug).filter((e) => e.startDate.slice(0, 10) >= buildDate).slice(0, 5);
@@ -71,30 +96,15 @@ const guides = allGuides
   .filter((g) => g.stateScope === 'both' || (Array.isArray(g.stateScope) && g.stateScope.includes(locality.state)))
   .slice(0, 4);
 
+// The money pages this hub pushes hardest are the ones that are indexed.
+// indexedMoneyPagesIn asks decide(), so the hub cannot promote a noindex page.
+const indexedPages = indexedMoneyPagesIn(locality.id);
+const glanceCategories = (indexedPages.length >= 3 ? indexedPages : active).slice(0, 6);
+
 const h1 = 'Businesses in ' + locality.name + ', ' + locality.state;
-const description = (() => {
-  let out =
-    n(rows.length) +
-    plural(rows.length, ' business or place in ', ' businesses and places in ') +
-    locality.name +
-    ' ' +
-    locality.state +
-    ' ' +
-    locality.postcode +
-    ', across ' +
-    active.length +
-    plural(active.length, ' category.', ' categories.');
-  const extras = [
-    travelIn ? travelIn + ' of them travel in from nearby towns.' : '',
-    verified > 0 ? verified + ' verified.' : '',
-    'Contact details, hours and the source of every fact.',
-  ].filter(Boolean);
-  for (const e of extras) {
-    if ((out + ' ' + e).length > 155) break;
-    out += ' ' + e;
-  }
-  return out;
-})();
+const titles = townTitleLadder(locality, stats);
+const description = townDescription(locality, stats, active);
+const inShort = rows.length > 0 ? townInShort(locality, stats, active) : '';
 
 const crumbs: Crumb[] = [
   { name: 'Home', href: url.home() },
@@ -103,33 +113,21 @@ const crumbs: Crumb[] = [
   { name: locality.name, href: canonicalPath },
 ];
 
-const faqs = [
-  {
-    q: 'How many businesses are listed in ' + locality.name + '?',
-    a:
-      n(rows.length) +
-      ' across ' +
-      active.length +
-      plural(active.length, ' category, of which ', ' categories, of which ') +
-      verified +
-      ' have been verified. ' +
-      (travelIn ? travelIn + ' of them are based in a nearby town and travel in to work here.' : ''),
-  },
-  {
-    q: 'What is ' + locality.name + ' known for?',
-    a: locality.blurb,
-  },
-  {
-    q: 'Is listing a business in ' + locality.name + ' free?',
-    a: 'Yes. Claiming and maintaining a listing costs nothing, and nothing about the free tier is time limited. Paid features exist for enquiry routing and multi location management, and none of them change where a business appears in an ordinary results list.',
-  },
-];
+const faqs = townFaqs({ locality, stats, nearby: nearest, asOf: buildDate });
 
 const jsonLd = graph([
   organisationNode(),
   websiteNode(),
   breadcrumbNode(crumbs, canonicalPath),
-  webPageNode({ pageUrl: canonicalPath, title: h1, description, crumbs, type: 'CollectionPage', dateModified: buildDate }),
+  webPageNode({
+    pageUrl: canonicalPath,
+    title: h1,
+    description,
+    crumbs,
+    type: 'CollectionPage',
+    dateModified: buildDate,
+    abstract: inShort || undefined,
+  }),
   placeNode(locality, region),
   itemListNode({
     pageUrl: canonicalPath,
@@ -142,7 +140,8 @@ const jsonLd = graph([
 
 <Base
   kind="locality"
-  title={h1}
+  title={titles[0]}
+  titleAlt={titles.slice(1)}
   description={description}
   canonicalPath={canonicalPath}
   crumbs={crumbs}
@@ -207,6 +206,101 @@ const jsonLd = graph([
           {travelIn > 0 && <div><b>{travelIn}</b><span>travel in</span></div>}
           <div><b>{locality.postcode}</b><span>postcode</span></div>
         </div>
+
+        <section class="datablock" aria-labelledby="glance-h">
+          <h2 id="glance-h">{locality.name} at a glance</h2>
+          <p><strong>In short.</strong> {inShort}</p>
+
+          <div class="linkgrid" style="margin-top:18px">
+            {glanceCategories.length > 0 && (
+              <div>
+                <h3>{glanceCategories[0].count >= 2 ? 'Biggest categories' : 'Categories'}</h3>
+                <ul>
+                  {glanceCategories.map((a) => (
+                    <li>
+                      <a href={url.localityCategory(locality, a.category)}>{a.category.name}</a>
+                      <span style="color:var(--ink-40);font-size:13px"> {n(a.count)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+            <div>
+              <h3>Based here or travelling in</h3>
+              <ul>
+                <li>{n(stats.basedCount)} based in {locality.name}</li>
+                {stats.travelInCount > 0 && <li>{counted(stats.travelInCount, 'travels', 'travel')} in from nearby towns</li>}
+                {stats.crossBorderCount > 0 && <li>{n(stats.crossBorderCount)} of those from {otherState}</li>}
+                {stats.travelInInferredCount > 0 && (
+                  <li style="color:var(--ink-60);font-size:13.5px">
+                    {n(stats.travelInInferredCount)} on a service area we estimated from distance
+                  </li>
+                )}
+              </ul>
+            </div>
+            <div>
+              <h3>Weekends</h3>
+              <ul>
+                {stats.openSaturdayCount > 0 || stats.openSundayCount > 0 ? (
+                  <>
+                    <li>{counted(stats.openSaturdayCount, 'publishes', 'publish')} Saturday hours</li>
+                    <li>{counted(stats.openSundayCount, 'publishes', 'publish')} Sunday hours</li>
+                  </>
+                ) : (
+                  <li>No weekend hours published yet</li>
+                )}
+              </ul>
+            </div>
+            {(stats.pricedCount > 0 || stats.licencePublishedCount > 0) && (
+              <div>
+                <h3>Prices and licences</h3>
+                <ul>
+                  {stats.pricedCount > 0 && <li>{counted(stats.pricedCount, 'shows', 'show')} a price band or call out fee</li>}
+                  {stats.licencePublishedCount > 0 && (
+                    <li>
+                      {counted(stats.licencePublishedCount, 'prints', 'print') +
+                        ' a trade licence number, ' +
+                        (stats.licenceCheckedCount > 0
+                          ? n(stats.licenceCheckedCount) + ' checked against the register'
+                          : 'shown as published')}
+                    </li>
+                  )}
+                </ul>
+              </div>
+            )}
+            {nearest.length > 0 && (
+              <div>
+                <h3>Nearby towns</h3>
+                <ul>
+                  {nearest.map((nb) => (
+                    <li>
+                      <a href={url.locality(nb.locality)} class={nb.crossesBorder ? 'cross' : undefined}>{nb.locality.name}</a>
+                      <span style="color:var(--ink-40);font-size:13px">
+                        {' '}{nb.crossesBorder ? nb.locality.state + ', ' : ''}{kmLabel(nb.distanceKm)}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <p class="asof">
+            {'Counted from the ' +
+              n(stats.listingCount) +
+              ' ' +
+              plural(stats.listingCount, 'listing', 'listings') +
+              ' for ' +
+              locality.name +
+              ' on ' +
+              humanDate(buildDate) +
+              '.' +
+              (checkedPhrase(stats.checkedFrom, stats.checkedTo)
+                ? ' Their details were last read from the published sources ' + checkedPhrase(stats.checkedFrom, stats.checkedTo) + '.'
+                : '') +
+              (nearest.length ? ' Distances are straight line between town centres.' : '')}
+          </p>
+        </section>
       </>
     )}
   </div>
@@ -289,7 +383,7 @@ const jsonLd = graph([
   )}
 
   <div class="wrap">
-    <Faq faqs={faqs} heading={'About ' + locality.name} />
+    <Faq faqs={faqs} heading={'Questions about ' + locality.name} />
   </div>
 
   <LinkBlock
