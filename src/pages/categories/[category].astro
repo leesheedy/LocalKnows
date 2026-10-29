@@ -322,8 +322,8 @@ const jsonLd = graph([
     </div>
 
     {category.synonyms.length > 0 && (
-      <p class="mono" style="color:var(--ink-40);margin-top:20px">
-        Also searched as {category.synonyms.join(', ')}
+      <p class="synonyms">
+        <span class="mono">Also searched as</span> {category.synonyms.join(', ')}
       </p>
     )}
 
@@ -332,7 +332,7 @@ const jsonLd = graph([
         <h2 id="inshort-h">{category.name}, in short</h2>
         <p>{inShort}</p>
         {biggestTowns.length > 0 && (
-          <nav class="chips" style="margin-top:14px" aria-label={category.name + ' in the largest towns'}>
+          <nav class="chips" aria-label={category.name + ' in the largest towns'}>
             {biggestTowns.map((t) => (
               <a class="chip" href={url.localityCategory(t.locality, category)}>
                 {category.name} in {t.locality.name} ({t.count})
@@ -369,54 +369,42 @@ const jsonLd = graph([
           </div>
         </div>
         <div class="river-split">
-          <div>
-            <p class="mono" style="color:var(--river);margin-bottom:12px">{STATES.NSW.name}</p>
+          <div class="rs-side">
+            <div class="rs-state">
+              <h3>{STATES.NSW.name}</h3>
+              <span class="state">NSW</span>
+            </div>
             {nsw.length > 0 ? (
-              <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+              <ul class="townlist">
                 {nsw.map((p) => (
-                  <li style="margin-bottom:9px;break-inside:avoid">
-                    <a
-                      href={url.localityCategory(p.locality, category)}
-                      style="font-size:14.5px;color:var(--ink-60)"
-                    >
-                      {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
-                    </a>
-                  </li>
+                  <li><a href={url.localityCategory(p.locality, category)}>{p.locality.name} <span>{p.count}</span></a></li>
                 ))}
               </ul>
             ) : (
-              <p style="font-size:14.5px;color:var(--ink-40)">
+              <p class="muted" style="margin:0 0 18px">
                 No {noun} listed in New South Wales yet.
               </p>
             )}
-            <p style="margin-top:16px">
-              <a class="btn btn-ghost btn-sm" href={url.state('NSW')}>All of NSW</a>
-            </p>
+            <a class="btn btn-ghost btn-sm" href={url.state('NSW')}>All of NSW</a>
           </div>
           <div class="river-line"><span class="mono">Murray</span></div>
-          <div>
-            <p class="mono" style="color:var(--wattle-ink);margin-bottom:12px">{STATES.VIC.name}</p>
+          <div class="rs-side">
+            <div class="rs-state">
+              <h3>{STATES.VIC.name}</h3>
+              <span class="state vic">VIC</span>
+            </div>
             {vic.length > 0 ? (
-              <ul style="list-style:none;margin:0;padding:0;columns:2;column-gap:24px">
+              <ul class="townlist">
                 {vic.map((p) => (
-                  <li style="margin-bottom:9px;break-inside:avoid">
-                    <a
-                      href={url.localityCategory(p.locality, category)}
-                      style="font-size:14.5px;color:var(--ink-60)"
-                    >
-                      {p.locality.name} <span class="mono" style="color:var(--ink-40)">{p.count}</span>
-                    </a>
-                  </li>
+                  <li><a href={url.localityCategory(p.locality, category)}>{p.locality.name} <span>{p.count}</span></a></li>
                 ))}
               </ul>
             ) : (
-              <p style="font-size:14.5px;color:var(--ink-40)">
+              <p class="muted" style="margin:0 0 18px">
                 No {noun} listed in Victoria yet.
               </p>
             )}
-            <p style="margin-top:16px">
-              <a class="btn btn-ghost btn-sm" href={url.state('VIC')}>All of Victoria</a>
-            </p>
+            <a class="btn btn-ghost btn-sm" href={url.state('VIC')}>All of Victoria</a>
           </div>
         </div>
       </div>

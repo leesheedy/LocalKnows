@@ -354,8 +354,9 @@ const jsonLd = graph([
       color: var(--ink-80);
     }
     .plan-list.no li::before {
-      content: '×';
-      color: var(--clay);
+      background: #f8e4e7
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239a2436' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M7 7l10 10M17 7 7 17'/%3E%3C/svg%3E")
+        center / 9px no-repeat;
     }
     .formgrid {
       display: grid;

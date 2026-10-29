@@ -178,8 +178,8 @@ const jsonLd = graph([
           </div>
         ) : (
           typeGroups.map((g) => (
-            <div style="margin-top:34px">
-              <h3 id={g.id} style="font-size:20px;scroll-margin-top:80px">{g.type}</h3>
+            <div class="listcard evgroup">
+              <h3 id={g.id} class="evgroup-h">{g.type}</h3>
               {g.items.map((e) => {
                 const loc = localityFor(e);
                 return (
@@ -217,10 +217,11 @@ const jsonLd = graph([
             and a URL that once had links pointing at it should keep working.
           </p>
         </div>
+        <div class="listcard">
         {passed.map((e) => {
           const loc = localityFor(e);
           return (
-            <div class="ev" style="opacity:.72">
+            <div class="ev ev-past">
               <div class="ev-date">
                 <b>{dayNumber(e.startDate)}</b>
                 <span>{monthShort(e.startDate)}</span>
@@ -239,6 +240,7 @@ const jsonLd = graph([
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   )}

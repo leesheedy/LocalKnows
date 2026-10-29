@@ -780,6 +780,7 @@ a.chip:hover {
 }
 /* Filter rows scroll sideways on a phone rather than stacking six deep. */
 @media (max-width: 640px) {
+  .hero .chips,
   nav.chips {
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -788,9 +789,11 @@ a.chip:hover {
     scrollbar-width: none;
     scroll-snap-type: x proximity;
   }
+  .hero .chips::-webkit-scrollbar,
   nav.chips::-webkit-scrollbar {
     display: none;
   }
+  .hero .chips .chip,
   nav.chips .chip {
     flex: none;
     scroll-snap-align: start;
@@ -1192,22 +1195,35 @@ img.logo {
  */
 .factstable {
   width: 100%;
-  border-collapse: collapse;
-  margin: 4px 0 8px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 8px 0 16px;
   font-size: 15px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-xs);
+  overflow: hidden;
 }
 .factstable th,
 .factstable td {
   text-align: left;
-  padding: 12px 14px 12px 0;
+  padding: 13px 18px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
 .factstable th {
+  width: 1%;
   font-weight: 500;
   color: var(--ink-60);
   white-space: nowrap;
-  padding-right: 26px;
+  padding-right: 32px;
+}
+@media (max-width: 560px) {
+  .factstable th {
+    white-space: normal;
+    width: 38%;
+  }
 }
 .factstable tr:last-child th,
 .factstable tr:last-child td {
@@ -1439,6 +1455,9 @@ select.finput {
   border-top: 1px solid var(--line);
   color: var(--ink-60);
   font-size: 13px;
+}
+.datablock .statgrid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 .datablock .statgrid div {
   background: var(--surface-2);
@@ -3219,11 +3238,12 @@ a.tag:hover {
  * get that attribute, so a scoped rule silently does not apply to them.
  */
   .tw {
-    background: var(--white);
+    background: var(--surface);
     border: 1px solid var(--line);
-    border-radius: var(--r);
-    padding: 22px 24px;
-    margin: 26px 0;
+    border-radius: var(--r-xl);
+    box-shadow: var(--shadow-card);
+    padding: clamp(20px, 3vw, 32px);
+    margin: 28px 0;
   }
   .tw-intro {
     margin: 0 0 20px;
@@ -3250,21 +3270,21 @@ a.tag:hover {
   .tw input[type='number'],
   .tw select {
     font: inherit;
-    font-size: 15.5px;
+    font-size: 16px;
     padding: 12px 14px;
-    border: 1px solid var(--line-strong);
+    border: 1.5px solid var(--line-strong);
     border-radius: var(--r);
-    background: var(--paper-2);
+    background: var(--surface);
     color: var(--ink);
     outline: none;
     width: 100%;
-    min-height: 46px;
-    transition: border-color 0.15s, background 0.15s;
+    min-height: 48px;
+    transition: border-color 0.15s, box-shadow 0.15s;
   }
   .tw input:focus,
   .tw select:focus {
     border-color: var(--river);
-    background: var(--white);
+    box-shadow: var(--ring);
   }
   .tw select {
     max-width: 220px;
@@ -3291,13 +3311,13 @@ a.tag:hover {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    border: 1px solid var(--line-strong);
+    border: 1.5px solid var(--line-strong);
     border-radius: var(--r);
     padding: 11px 16px;
     cursor: pointer;
     font-size: 15px;
-    background: var(--paper-2);
-    min-height: 46px;
+    background: var(--surface);
+    min-height: 48px;
     transition: border-color 0.15s, background 0.15s;
   }
   .tw-radio:hover {
@@ -3378,9 +3398,8 @@ a.tag:hover {
     vertical-align: top;
   }
   .tw-table thead th {
-    font-family: var(--font-mono);
-    font-size: 10.5px;
-    letter-spacing: 0.1em;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-40);
     font-weight: 500;
@@ -3469,7 +3488,7 @@ a.tag:hover {
     margin-bottom: 18px;
   }
   .tw-state {
-    font-family: var(--font-mono);
+    font-weight: 700;
     font-size: 12px;
     letter-spacing: 0.1em;
     background: var(--river);
@@ -3660,24 +3679,27 @@ a.tag:hover {
 .tw-money {
   display: flex;
   align-items: stretch;
-  border: 1px solid var(--line-strong);
+  border: 1.5px solid var(--line-strong);
   border-radius: var(--r);
-  background: var(--paper-2);
+  background: var(--surface);
   overflow: hidden;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 .tw-money:focus-within {
   border-color: var(--river);
-  background: var(--white);
+  box-shadow: var(--ring);
+}
+.tw-money input:focus {
+  box-shadow: none;
 }
 .tw-money span {
   display: grid;
   place-items: center;
   padding-inline: 14px;
-  color: var(--ink-40);
-  font-family: var(--font-mono);
+  color: var(--ink-60);
+  font-weight: 600;
   font-size: 14px;
-  background: rgba(19, 30, 25, 0.04);
+  background: var(--surface-2);
   flex: none;
 }
 .tw-money input {
@@ -3973,9 +3995,8 @@ a.tag:hover {
   margin-right: 4px;
 }
 .qgroup-title {
-  font-size: 15px;
-  font-family: var(--font-mono);
-  font-weight: 500;
+  font-size: 13px;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--river);
@@ -5264,4 +5285,120 @@ a.tag:hover {
 .clist .ci .i {
   width: 18px;
   height: 18px;
+}
+
+/* "Also searched as" under a category's numbers: the words people type. */
+.synonyms {
+  margin: 18px 0 0;
+  font-size: 14.5px;
+  color: var(--ink-60);
+}
+.synonyms .mono {
+  margin-right: 6px;
+  color: var(--ink-40);
+}
+
+/* ---------------------------------------------------------------- lists */
+.byline {
+  margin: 14px 0 0;
+  color: var(--wattle-ink);
+}
+.rlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 880px;
+  display: grid;
+  gap: 14px;
+}
+.ritem {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 20px;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-xs);
+}
+.rnum {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--river-50);
+  color: var(--river-dark);
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.ritem:nth-child(-n + 3) .rnum {
+  background: var(--wattle-50);
+  color: var(--wattle-ink);
+}
+.ritem-body {
+  min-width: 0;
+}
+.ritem h2 {
+  font-size: clamp(20px, 2.2vw, 24px);
+}
+.ritem h2 a:hover {
+  color: var(--river);
+}
+.rmeta {
+  margin: 4px 0 10px;
+  font-size: 14px;
+  color: var(--ink-60);
+}
+.rblurb {
+  margin: 0 0 14px;
+  max-width: var(--measure);
+  font-size: 16px;
+  color: var(--ink-80);
+}
+@media (max-width: 560px) {
+  .ritem {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+  }
+  .rnum {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+}
+
+/* ---------------------------------------------------------------- events */
+.evgroup {
+  margin-top: 18px;
+}
+.evgroup-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 0 2px;
+  font-size: 20px;
+}
+.evgroup-h::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wattle);
+}
+.ev-past {
+  opacity: 0.75;
+}
+.ev-past .ev-date {
+  background: var(--surface-2);
+  color: var(--ink-60);
+}
+.stack-by {
+  margin: 6px 0 0 !important;
+  font-size: 13px !important;
+  color: var(--ink-60);
 }
