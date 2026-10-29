@@ -1,8 +1,9 @@
 /**
  * submission-created: Netlify runs this for every verified form submission.
  *
- * It forwards claims, quote requests and lead buyer applications to the
- * Automatrix CRM, where they land in the LocalsKnow section. Netlify Forms
+ * It forwards claims, quote requests, lead buyer applications and badge
+ * free-lead claims to the Automatrix CRM, where they land in the LocalsKnow
+ * section. Netlify Forms
  * keeps its own copy and still emails hello@localsknow.com.au (which forwards
  * to info@automatrix.au), so a CRM outage costs nothing but a manual copy.
  *
@@ -14,7 +15,7 @@
  */
 
 const ENDPOINT = process.env.LOCALSKNOW_INTAKE_URL || 'https://automatrix.au/.netlify/functions/localsknow-intake';
-const FORWARDED = new Set(['claim', 'verified', 'quote', 'lead-partner']);
+const FORWARDED = new Set(['claim', 'verified', 'quote', 'lead-partner', 'badge']);
 const DROP = new Set(['bot-field', 'form-name', 'ip', 'user_agent', 'referrer']);
 
 /** Netlify hands file uploads over as objects. The CRM only wants the URL. */
